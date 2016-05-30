@@ -1,0 +1,35 @@
+# Welcome to Jekyll!
+#
+
+# Site settings
+title: iUAP Design
+description: |
+  企业互联网前端开发入口<br />
+  开放、轻量、自由、生态
+owner: FED
+first_published: 2016  publish
+email: guoyff@yonyou.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+social:
+  twitter: https://twitter.com/<username>
+  github: https://github.com/<username>
+  linkedin-square: https://linkedin.com/in/<username>
+  facebook-official: https://facebook.com/<username>
+  google-plus-square: https://plus.google.com/u/0/+<username>
+  #email: /contact/
+  #stubleupon:
+  #delicious:
+  #pied-piper:
+  #weibo:
+  #slack:
+  #vine:
+  #weixin:
+  #yelp:
+  #skyatlas:
+  #leanpub:
+
+# Build settings
+markdown: kramdown
+#sass:
+#  style: compressed
