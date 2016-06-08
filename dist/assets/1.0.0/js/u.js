@@ -1094,6 +1094,110 @@ function adjustDataType(options) {
 }
 
 u.BaseComponent = BaseComponent;
+"use strict";
+
+var XmlHttp = {
+  get: "get",
+  post: "post",
+  reqCount: 4,
+  createXhr: function createXhr() {
+    var xmlhttp = null;
+    if (window.XMLHttpRequest) {
+      xmlhttp = new XMLHttpRequest();
+    } else {
+      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    return xmlhttp;
+  },
+  ajax: function ajax(_json) {
+    var url = _json["url"];
+    var callback = _json["success"];
+    var async = _json["async"] == undefined ? true : _json["async"];
+    var error = _json["error"];
+    var params = _json["data"] || {};
+    var method = (_json["type"] == undefined ? XmlHttp.post : _json["type"]).toLowerCase();
+    var gzipFlag = params.compressType;
+    url = XmlHttp.serializeUrl(url);
+    params = XmlHttp.serializeParams(params);
+    if (method == XmlHttp.get && params != null) {
+      url += "&" + params;
+      params = null; //如果是get请求,保证最终会执行send(null)
+    }
+
+    var xmlhttp = XmlHttp.createXhr();
+    xmlhttp.open(method, url, async);
+
+    if (method == XmlHttp.post) {
+      xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded;charset=UTF-8");
+    }
+
+    var execount = 0;
+    // 异步
+    if (async) {
+      // readyState 从 1~4发生4次变化
+      xmlhttp.onreadystatechange = function () {
+        execount++;
+        // 等待readyState状态不再变化之后,再执行回调函数
+        //if (execount == XmlHttp.reqCount) {// 火狐下存在问题，修改判断方式
+        if (this.readyState == XmlHttp.reqCount) {
+          XmlHttp.execBack(xmlhttp, callback, error);
+        }
+      };
+      // send方法要在在回调函数之后执行
+      xmlhttp.send(params);
+    } else {
+      // 同步 readyState 直接变为 4
+      // 并且 send 方法要在回调函数之前执行
+      xmlhttp.send(params);
+      XmlHttp.execBack(xmlhttp, callback, error);
+    }
+  },
+  execBack: function execBack(xmlhttp, callback, error) {
+    //if (xmlhttp.readyState == 4
+    if (xmlhttp.status == 200 || xmlhttp.status == 304) {
+      callback(xmlhttp.responseText, xmlhttp.status, xmlhttp);
+    } else {
+      if (error) {
+        error(xmlhttp.responseText, xmlhttp.status, xmlhttp);
+      } else {
+        var errorMsg = "no error callback function!";
+        if (xmlhttp.responseText) {
+          errorMsg = xmlhttp.responseText;
+        }
+        alert(errorMsg);
+        // throw errorMsg;
+      }
+    }
+  },
+  serializeUrl: function serializeUrl(url) {
+    var cache = "cache=" + Math.random();
+    if (url.indexOf("?") > 0) {
+      url += "&" + cache;
+    } else {
+      url += "?" + cache;
+    }
+    return url;
+  },
+  serializeParams: function serializeParams(params) {
+    var ud = undefined;
+    if (ud == params || params == null || params == "") {
+      return null;
+    }
+    if (params.constructor == Object) {
+      var result = "";
+      for (var p in params) {
+        result += p + "=" + encodeURIComponent(params[p]) + "&";
+      }
+      return result.substring(0, result.length - 1);
+    }
+    return params;
+  }
+};
+
+//if ($ && $.ajax)
+//  u.ajax = $.ajax;
+//else
+u.ajax = XmlHttp.ajax;
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
@@ -10696,138 +10800,6 @@ u.compMgr.addDataAdapter(
         adapter: u.CheckboxAdapter,
         name: 'u-checkbox'
     });
-
-//TODO 后续提供
-
-+function($) {
-
-
-	var CheckboxGroupComp = $.InputComp.extend({
-		initialize: function(element, options, viewModel) {
-			var self = this
-			this.pks = [];
-			CheckboxGroupComp.superclass.initialize.apply(this, arguments)
-			this.validType = 'checkboxGroup'
-			var datasource = $.getJSObject(viewModel, options['datasource'])
-			
-			if(!$.isArray(datasource)) return;
-			
-			var checkboxTemplate = $(this.element).children();
-			
-			if(!checkboxTemplate.is(":checkbox"))return;
-			
-			for(var i=0,len = (datasource.length-1);i<len;i++){
-				checkboxTemplate.clone().appendTo(this.element)
-			}
-			
-			var allCheckbox =  $(this.element).children('[type=checkbox]');
-			var allName = $(this.element).children('[data-role=name]');
-			for(var k=0;k<allCheckbox.length;k++){
-				allCheckbox[k].value = datasource[k].pk
-				allName[k].innerHTML = datasource[k].name
-				this.pks.push(datasource[k].pk)
-			}
-			
-	        this.valArr = [];
-			this.create()
-			
-			$(this.element).find(":checkbox").each(function() {
-				$(this).on('click', function() {
-					
-					if(self.valArr.length == 0){
-						if(this.checked){
-							self.valArr.push(this.value)
-						}
-					}else{
-						if(this.checked){
-							var mark = null;
-							for(var i=0;i<self.valArr.length;i++){
-								if(this.value == self.valArr[i]){
-									mark = i;
-								}
-							}
-							
-							if(mark == null){
-								self.valArr.push(this.value)
-							}
-							
-						}else{
-							
-							for(var k=0;k<self.valArr.length;k++){
-								if(this.value == self.valArr[k]){
-									self.valArr.splice(k,1)
-								}
-							}
-							
-						}
-					}
-					//填值
-					self.setValue(self.valArr.toString())
-					
-				})
-			})
-		},
-
-		modelValueChange: function(val) {
-			if (this.slice) return
-			
-           if(val !='' && val != null){
-           	 this.valArr = val.split(',');
-           }
-           
-           this.setValue(val)
-		},
-		setValue: function(val) {
-			this.trueValue = val
-			if(val == '' || val == null){
-				var manualVal = ''
-			}else{
-				manualVal = val.split(',');
-			}
-			
-			var pks = this.pks.slice();
-			for(var k=0;k<pks.length;k++){
-				var pk = pks[k]
-				if(manualVal.indexOf(pk) !== -1){
-					pks.splice(k,1);
-					--k;
-				}
-				
-			}
-			
-			$(this.element).find(":checkbox").each(function() {
-//				for(var i=0;i<manualVal.length;i++){
-//             	    if(this.value == manualVal[i]){
-//             	    	this.checked = true;
-//             	    }
-//             }
-				
-				if(manualVal.indexOf(this.value) !== -1){
-					this.checked = true
-				}
-				
-				if(pks.indexOf(this.value) !== -1){
-					this.checked = false
-				}
-			})
-			this.slice = true
-			this.setModelValue(this.trueValue)
-			this.slice = false
-			this.trigger(CheckboxGroupComp.EVENT_VALUE_CHANGE, this.trueValue)
-		},
-		getValue: function() {
-			return this.trueValue
-		},
-
-		Statics: {
-			compName: 'checkboxGroup'
-		}
-	})
-
-	if ($.compManager)
-		$.compManager.addPlug(CheckboxGroupComp)
-
-}($);
 
 u.ComboboxAdapter = u.BaseAdapter.extend({
     mixins:[u.ValueMixin,u.EnableMixin, u.RequiredMixin, u.ValidateMixin],
