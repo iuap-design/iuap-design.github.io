@@ -2,8 +2,8 @@ var path = require('path');
 
 
 //uui定制
-var customized = require("./custom/customized");
-var down = require("./custom/down");
+var customized = require("./customized");
+var down = require("./down");
 
 module.exports = {
   setRouters: function(router ,ctx){
