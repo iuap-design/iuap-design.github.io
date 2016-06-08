@@ -7,7 +7,34 @@ iUAP Deisgn 的官网
 ## 目录说明
 
 ```
-conf
+
+├─conf 项目配置文件
+├─dist 生产环境资源
+│  ├─pages 页面目录
+│  │  ├─custom
+│  │  └─snippet
+│  ├─static 公共静态资源
+│  │  ├─css
+│  │  │  └─vendor
+│  │  ├─fonts
+│  │  ├─img
+│  │  ├─ionicons
+│  │  └─js
+│  │      ├─libs
+│  │      └─plugins
+│  └─vendor 第三方类库或框架
+├─docs MD文档源码
+├─server web服务目录
+│  └─mailer
+├─snippets 所有的代码片段
+└─src 待构建的源代码
+    ├─compatible
+    ├─core
+    ├─model
+    ├─polyfill
+    ├─ui
+    └─ui-extend
+
 ```
 
 ## 如何开发
