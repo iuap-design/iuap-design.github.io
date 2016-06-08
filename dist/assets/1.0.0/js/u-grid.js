@@ -23,8 +23,8 @@
 		this.init(options, gridComp);
 		this.sortRows();
 	};
-	var gridCompColumn = function(options, gridOptions) {
-		this.init(options, gridOptions)
+	var gridCompColumn = function(options, gridComp) {
+		this.init(options, gridComp);
 	};
 
 	var gridComp = function(ele, options) {
@@ -45,6 +45,7 @@
 			this.$ele = ele;
 			this.initDefault();
 			this.options = $.extend({}, this.defaults, options);
+			this.getBooleanOptions();
 			this.transDefault = {
 				ml_show_column:'显示/隐藏列',
 				ml_clear_set:'清除设置',
@@ -55,7 +56,7 @@
 			this.transMap = $.extend({},this.transDefault,options.transMap);
 			this.gridCompColumnFixedArr = new Array();
 			this.gridCompColumnArr = new Array(); // 存储设置默认值之后的columns对象
-			this.headerHeight = 34; // header区域高度
+			this.headerHeight = 44; // header区域高度
 			this.countContentHeight = true;// 是否计算内容区的高度（是否为流式）
 			this.minColumnWidth = 80; // 最小列宽
 			this.scrollBarHeight = 16; // 滚动条高度
@@ -67,10 +68,24 @@
 			this.columnMenuWidth = 160; // column menu的宽度
 			this.columnMenuHeight = 33; // column menu的高度
 			this.gridCompColumnFixedArr = new Array(); // 存储设置默认值之后的固定列columns对象
-			this.gridCompLevelColumn = new Array(); // 存储多级表头时的多级
-			this.headerHeight = 34 * parseInt(this.options.maxHeaderLevel);
+			this.gridCompLevelColumn = new Array(); // 存储多级表头时的多级 
+			this.headerHeight = 44 * parseInt(this.options.maxHeaderLevel);
 			this.gridCompHiddenLevelColumnArr = new Array(); // 存储自动隐藏时隐藏优先级排序后的column
 			this.treeLeft = 10; // 树表时每一级之间的差值
+		},
+		getBooleanOptions:function(){
+			this.options.cancelFocus = this.getBoolean(this.options.cancelFocus);
+			this.options.showHeader = this.getBoolean(this.options.showHeader);
+			this.options.showNumCol = this.getBoolean(this.options.showNumCol);
+			this.options.multiSelect = this.getBoolean(this.options.multiSelect);
+			this.options.columnMenu = this.getBoolean(this.options.columnMenu);
+			this.options.canDrag = this.getBoolean(this.options.canDrag);
+			this.options.overWidthHiddenColumn = this.getBoolean(this.options.overWidthHiddenColumn);
+			this.options.sortable = this.getBoolean(this.options.sortable);
+			this.options.showSumRow = this.getBoolean(this.options.showSumRow);
+			this.options.canSwap = this.getBoolean(this.options.canSwap);
+			this.options.showTree = this.getBoolean(this.options.showTree);
+			this.options.autoExpand = this.getBoolean(this.options.autoExpand);
 		},
 		/*
 		 * 初始化默认参数
@@ -236,7 +251,7 @@
 			this.gridCompHiddenLevelColumnArr = new Array();  
 		},
 		initGridCompColumnFun: function(columnOptions){
-			var column = new gridCompColumn(columnOptions, this.options);
+			var column = new gridCompColumn(columnOptions, this);
 			column.options.realWidth = column.options.width;
 			this.gridCompColumnArr.push(column);
 			this.initGridCompColumnColumnMenuFun(columnOptions);
@@ -351,13 +366,17 @@
 			if(!this.options.showHeader)
 				headerShowStr = 'style="display:none;"';
 			var htmlStr = '<div class="u-grid-header" id="' + this.options.id + '_header" ' + headerShowStr + '><div class="u-grid-header-wrap" id="' + this.options.id + '_header_wrap" data-role="resizable" ' + wrapStr + '>';
+			htmlStr += '<div class="u-grid-header-columnmenu fa fa-bars"></div>';
 			if (this.options.multiSelect || this.options.showNumCol) {
 				htmlStr += '<div id="' + this.options.id + '_header_left" class="u-grid-header-left" style="width:' + this.leftW + 'px;">';
 				if (this.options.multiSelect) {
 					if(gridBrowser.isIE8){
-						htmlStr += '<div class="u-grid-header-multi-select" style="width:' + this.multiWidth + 'px;"><input class="u-grid-multi-input"   type="checkbox" id="' + this.options.id + '_header_multi_input"></div>'
+						//htmlStr += '<div class="u-grid-header-multi-select" style="width:' + this.multiWidth + 'px;"><input class="u-grid-multi-input"   type="checkbox" id="' + this.options.id + '_header_multi_input"></div>'
+						htmlStr += '<div class="u-grid-header-multi-select" style="width:' + this.multiWidth + 'px;"><span class="u-grid-checkbox-outline" id="' + this.options.id + '_header_multi_input"><span class="u-grid-checkbox-tick-outline"></span></span></div>'
+						
 					}else{
-						htmlStr += '<div class="u-grid-header-multi-select  checkbox check-success" style="width:' + this.multiWidth + 'px;"><input  class="u-grid-multi-input"  type="checkbox" id="' + this.options.id + '_header_multi_input"><label for="' + this.options.id + '_header_multi_input"></label></div>'
+						//htmlStr += '<div class="u-grid-header-multi-select  checkbox check-success" style="width:' + this.multiWidth + 'px;"><input  class="u-grid-multi-input"  type="checkbox" id="' + this.options.id + '_header_multi_input"><label for="' + this.options.id + '_header_multi_input"></label></div>'
+						htmlStr += '<div class="u-grid-header-multi-select  checkbox check-success" style="width:' + this.multiWidth + 'px;"><span class="u-grid-checkbox-outline" id="' + this.options.id + '_header_multi_input"><span class="u-grid-checkbox-tick-outline"></span></span></div>'
 					}
 				}
 				if (this.options.showNumCol) {
@@ -451,12 +470,13 @@
 					colorStype = 'style="color:' + this.options.headerColor + '"';
 				}
 				htmlStr += '<div class="u-grid-header-link" field="' + this.options.field + '" title="' + this.options.title + '" ' + colorStype + '>' + this.options.title + '</div>';
-				if(oThis.options.columnMenu && createFlag != 'fixed'){
+				/*if(oThis.options.columnMenu && createFlag != 'fixed'){
 					// 创建右侧按钮图标
 					htmlStr += '<div class="u-grid-header-columnmenu fa fa-bars " field="' + this.options.field + '" style="display:none;"></div>';
-				}
+				}*/
 				htmlStr += '</div></th>';
 			});
+
 			htmlStr += '</tr>';
 			return htmlStr;
 		},		/*
@@ -481,7 +501,7 @@
 					displayStr = 'display:none;';
 					bottonStr = 'bottom:0px;'
 				}
-				htmlStr += this.createContentSumRow();
+				htmlStr += this.createContentSumRow(bottonStr);
 				if(u.isIOS){
 					displayStr += 'width:0px;';
 				}
@@ -537,9 +557,11 @@
 				tmpcheck = setTimeout(function(){});
 			}
 			if(gridBrowser.isIE8){
-				var	htmlStr = '<div style="width:' + this.multiSelectWidth + 'px;' + displayStr + '" class="u-grid-content-multiSelect " ><input class="u-grid-multi-input" id="checkbox'+tmpcheck+'" type="checkbox" value="1" ></div>'
+				//var	htmlStr = '<div style="width:' + this.multiSelectWidth + 'px;' + displayStr + '" class="u-grid-content-multiSelect " ><input class="u-grid-multi-input" id="checkbox'+tmpcheck+'" type="checkbox" value="1" ></div>'
+				var	htmlStr = '<div style="width:' + this.multiSelectWidth + 'px;' + displayStr + '" class="u-grid-content-multiSelect " ><span class="u-grid-checkbox-outline" id="checkbox'+tmpcheck+'" value="1"><span class="u-grid-checkbox-tick-outline"></span></span></div>'
 			}else{
-				var htmlStr = '<div style="width:' + this.multiSelectWidth + 'px;' + displayStr + '" class="u-grid-content-multiSelect checkbox check-success" ><input class="u-grid-multi-input" id="checkbox'+tmpcheck+'" type="checkbox" value="1" ><label for="checkbox'+tmpcheck+'"></label></div>'
+				//var htmlStr = '<div style="width:' + this.multiSelectWidth + 'px;' + displayStr + '" class="u-grid-content-multiSelect checkbox check-success" ><input class="u-grid-multi-input" id="checkbox'+tmpcheck+'" type="checkbox" value="1" ><label for="checkbox'+tmpcheck+'"></label></div>'
+				var htmlStr = '<div style="width:' + this.multiSelectWidth + 'px;' + displayStr + '" class="u-grid-content-multiSelect checkbox check-success" ><span class="u-grid-checkbox-outline" id="checkbox'+tmpcheck+'" value="1"><span class="u-grid-checkbox-tick-outline"></span></span></div>'
 			}
 			return htmlStr;
 		},
@@ -632,7 +654,7 @@
 				$.each(this.dataSourceObj.rows, function(i) {
 					htmlStr += oThis.createContentOneRow(this,createFlag);
 				});
-				this.createContentRowsSumRow();
+				htmlStr += this.createContentRowsSumRow();
 				htmlStr += '</tbody>';
 			}
 			return htmlStr;
@@ -819,10 +841,13 @@
 			this.initContentDivEventFun();
 			// 全选
 			$('#' + this.options.id + '_header_multi_input').on('click', function(e) {
-				if(this.checked){
-					oThis.setAllRowSelect();
-				}else{
+				if(this.hasChecked){
 					oThis.setAllRowUnSelect();
+					this.hasChecked = false;
+				}else{
+					oThis.setAllRowSelect();
+					this.hasChecked = true;
+					
 				}
 			});
 		},
@@ -833,14 +858,14 @@
 			var oThis = this;
 			// 通过复选框设置选中行
 			$('#' + oThis.options.id + '_content .u-grid-content-left').on('click',function(e){
-				var $input = $(e.target).closest('input');
+				var $input = $(e.target).closest('.u-grid-checkbox-outline');
 				if($input.length > 0){
 					var $div = $($input.parent());
 					var index = $('.u-grid-content-multiSelect',$div.parent()).index($div);
-					if($input[0].checked){
-						oThis.setRowSelect(index);
-					}else{
+					if($input.hasClass('is-checked')){
 						oThis.setRowUnselect(index);
+					}else{
+						oThis.setRowSelect(index);
 					}
 				}
 			});
@@ -1083,7 +1108,7 @@
 						}
 						if(span){
 							var v = $(this.value).attr(field);
-							if(typeof renderType == 'function' || dataType == 'date' || dataType == 'datetime' || dataType == 'integer' || dataType == 'float'){
+							if(typeof renderType == 'function' || dataType == 'Date' || dataType == 'Datetime' || dataType == 'Int' || dataType == 'Float'){
 								span.innerHTML = '';
 								if(typeof renderType == 'function'){
 									v = oThis.getString(v,'');
@@ -1095,22 +1120,22 @@
 									obj.gridCompColumn = gridCompColumn;
 									obj.rowIndex = j;
 									renderType.call(oThis,obj);
-								}else if(dataType == 'date' || dataType == 'datetime'){
+								}else if(dataType == 'Date' || dataType == 'Datetime'){
 									if(v == null || v == undefined || v == 'null' || v == 'undefined' || v == ""){
 										v = "";
 									}
-									if (dataType == 'date'){
+									if (dataType == 'Date'){
 										v = u.dateRender(v);
 									}else{
 										v = u.dateTimeRender(v);
 									}
 									span.innerHTML = v;
 									td.title = v;
-								}else if(dataType == 'integer'){
+								}else if(dataType == 'Int'){
 									v = parseInt(v);
 									span.innerHTML = v;
 									td.title = v;
-								}else if(dataType == 'float'){
+								}else if(dataType == 'Float'){
 									if(precision){
 										var o = {};
 										o.value = v;
@@ -1164,7 +1189,12 @@
 		 */
 		resetScrollLeft:function(){
 			if($('#' + this.options.id + '_content_div')[0]){
-				$('#' + this.options.id + '_content_div')[0].scrollLeft = this.scrollLeft;
+				try{
+					$('#' + this.options.id + '_content_div')[0].scrollLeft = this.scrollLeft;
+				}catch(e){
+
+				}
+				
 			}
 		},
 		/*
@@ -2151,7 +2181,8 @@
 			}else{
 				if(this.showType == 'grid'){
 					var _input = selectDiv.children[0];
-					_input.checked = true;
+					// _input.checked = true;
+					$(_input).addClass('is-checked');
 				}
 			}
 			if(this.showType == 'grid'){
@@ -2219,7 +2250,8 @@
 				}
 			}
 			if(this.options.multiSelect){
-				$('#' + this.options.id + '_content_multiSelect input:eq(' + rowIndex+ ')')[0].checked = false;
+				// $('#' + this.options.id + '_content_multiSelect input:eq(' + rowIndex+ ')')[0].checked = false;
+				$('#' + this.options.id + '_content_multiSelect .u-grid-checkbox-outline:eq(' + rowIndex+ ')').removeClass('is-checked');
 			}
 			var ini = rowIndex;
 			if(this.eidtRowIndex > -1 && this.eidtRowIndex < rowIndex && this.options.editType == 'form'){
@@ -2256,7 +2288,8 @@
 		 * 选中所有行
 		 */
 		setAllRowSelect:function(){
-			$('#' + this.options.id + '_header_multi_input').prop('checked', true)
+			// $('#' + this.options.id + '_header_multi_input').prop('checked', true)
+			$('#' + this.options.id + '_header_multi_input').addClass('is-checked');
 			if(typeof this.options.onBeforeAllRowSelected == 'function'){
 				var obj = {};
 				obj.gridObj = this;
@@ -2285,7 +2318,8 @@
 		 * 反选所有行
 		 */
 		setAllRowUnSelect:function(){
-			$('#' + this.options.id + '_header_multi_input').attr('checked', false)
+			// $('#' + this.options.id + '_header_multi_input').attr('checked', false)
+			$('#' + this.options.id + '_header_multi_input').removeClass('is-checked');
 			if(typeof this.options.onBeforeAllRowUnSelected == 'function'){
 				var obj = {};
 				obj.gridObj = this;
@@ -2525,13 +2559,20 @@
 			if(this.showType == 'grid')
 				return true;
 			return false;
+		},
+		getBoolean:function(value){
+			if(value === 'true' || value === true)
+				return true;
+			return false;
 		}
 	}
 	gridCompColumn.prototype = {
 		/*
 		 * 处理参数
 		 */
-		init:function(options, gridOptions){
+		init:function(options, gridComp){
+			this.gridComp = gridComp;
+			var gridOptions = gridComp.options;
 			this.defaults = {
 					width:200, // 默认宽度为200
 					sortable: true, // 是否可以排序
@@ -2544,7 +2585,7 @@
 					editFormShow:true, // 是否可修改
 					autoExpand:false, // 是否自动扩展列
 					editType:'text', // 编辑类型，支持传入function扩展
-					dataType:'String', // 数据类型,string, date, datetime, integer, float
+					dataType:'String', // 数据类型,String, Date, Datetime, Int, Float
 					//precision:  //精度
 					format:'YYYY-MM-DD hh:mm:ss',
 					//renderType:'', 渲染类型
@@ -2568,6 +2609,7 @@
 			// 树表暂时不支持排序
 			options = this.initTree(options,gridOptions)
 			this.options = $.extend({}, this.defaults, gridDefault, options);
+			this.getBooleanOptions();
 			try{
 				if(typeof this.options.renderType == 'string')
 					this.options.renderType = eval(this.options.renderType)
@@ -2587,7 +2629,18 @@
 		},
 		initTree:function(options){
 			return options;
-		}
+		},
+		getBooleanOptions:function(){
+			this.options.sortable = this.gridComp.getBoolean(this.options.sortable);
+			this.options.canDrag = this.gridComp.getBoolean(this.options.canDrag);
+			this.options.fixed = this.gridComp.getBoolean(this.options.fixed);
+			this.options.visible = this.gridComp.getBoolean(this.options.visible);
+			this.options.canVisible = this.gridComp.getBoolean(this.options.canVisible);
+			this.options.sumCol = this.gridComp.getBoolean(this.options.sumCol);
+			this.options.editable = this.gridComp.getBoolean(this.options.editable);
+			this.options.editFormShow = this.gridComp.getBoolean(this.options.editFormShow);
+			this.options.autoExpand = this.gridComp.getBoolean(this.options.autoExpand);
+		},
 	}
 	dataSource.prototype = {
 		/*
@@ -2693,7 +2746,7 @@
 	
 
 	gridCompProto.initGridCompColumnColumnMenuFun = function(columnOptions){
-		var column1 = new this.gridCompColumn(columnOptions, this.options);
+		var column1 = new this.gridCompColumn(columnOptions, this);
 			column1.options.realWidth = column1.options.width;
 			this.basicGridCompColumnArr.push(column1);
 	};
@@ -2766,10 +2819,10 @@
 					if($(e.target).hasClass('u-grid-header-columnmenu')){
 						//点击的是columnmenu
 						$('#' + oThis.options.id + '_column_menu').css('display','block');
-						var left = eleTh.attrRightTotalWidth - oThis.scrollLeft + oThis.leftW + oThis.fixedWidth - 20;
+						/*var left = eleTh.attrRightTotalWidth - oThis.scrollLeft + oThis.leftW + oThis.fixedWidth - 20;
 						if(left + oThis.columnMenuWidth > oThis.wholeWidth)
-							left = eleTh.attrRightTotalWidth - oThis.scrollLeft + oThis.leftW + oThis.fixedWidth - oThis.columnMenuWidth + 1;
-						$('#' + oThis.options.id + '_column_menu').css('left',left);
+							left = eleTh.attrRightTotalWidth - oThis.scrollLeft + oThis.leftW + oThis.fixedWidth - oThis.columnMenuWidth + 1;*/
+						$('#' + oThis.options.id + '_column_menu').css('right',0);
 						$('#' + oThis.options.id + '_column_menu').css('top',oThis.headerHeight);
 						oThis.ele.createColumnMenuFlag = true;
 					}else{
@@ -3928,55 +3981,59 @@
 					var p = parseInt($el.text())
 					var f = $el.closest('th').attr('field')
 					var st
-					if($el.parent().hasClass("fa-angle-up")) {
+					if($el.parent().hasClass("fa-caret-up")) {
 						st = 'asc'
-					} else if($el.parent().hasClass("fa-angle-down")){
+					} else if($el.parent().hasClass("fa-caret-down")){
 						st = 'desc'
 					}
 					prioArray[p-1] = {field:f, sortType:st}
 				})
 				// 页面调整
-				var $angle
-				if(($angle = $ele.find('.fa-angle-up')).length > 0) {
-					var p = parseInt($angle.find('.u-grid-header-sort-priority').text())
+				/*修改ue将caret调整为caret*/
+				var $caret
+				if(($caret = $ele.find('.fa-caret-up')).length > 0) {
+					var p = parseInt($caret.find('.u-grid-header-sort-priority').text())
 					prioArray[p-1].sortType = 'desc'
-					$angle.removeClass('fa-angle-up').addClass('fa-angle-down')
-				} else if(($angle = $ele.find('.fa-angle-down')).length > 0) {
-					var p = parseInt($angle.find('.u-grid-header-sort-priority').text())
+					$caret.removeClass('fa-caret-up').addClass('fa-caret-down')
+				} else if(($caret = $ele.find('.fa-caret-down')).length > 0) {
+					var p = parseInt($caret.find('.u-grid-header-sort-priority').text())
 					for(var i=p;i<prioArray.length;i++) {
 						var $flag = $('[field='+prioArray[i].field+']').find('.u-grid-header-sort-priority')
 						$flag.text(parseInt($flag.text())-1)
 					}
 					prioArray.splice(p-1,1)
-					$angle.remove()
+					$caret.remove()
 				} else {
 					prioArray.push({field:field, sortType:'asc'})
-					$ele.first().append('<span class="fa fa-angle-up u-grid-header-sort-span" ><span class="u-grid-header-sort-priority">'+prioArray.length+'</span></span>')
+					// $ele.first().append('<span class="fa fa-caret-up u-grid-header-sort-span" ><span class="u-grid-header-sort-priority">'+prioArray.length+'</span></span>')
+					$ele.first().first().append('<span class="fa fa-caret-up u-grid-header-sort-span" ></span>')
 				}
 				// 执行排序逻辑
 				this.dataSourceObj.sortRowsByPrio(prioArray)
 
 			} else {
-				if ($(".fa-angle-up").parent().parent()[0] == ele) { //原来为升序，本次为降序
-					$(".fa-angle-up").remove();
-					$(ele.firstChild)[0].insertAdjacentHTML('beforeEnd','<span class="fa fa-angle-down u-grid-header-sort-span" ><span class="u-grid-header-sort-priority">1</span></span>');
+				if ($(".fa-caret-up").parent().parent().parent()[0] == ele) { //原来为升序，本次为降序
+					$(".fa-caret-up").remove();
+					//$(ele.firstChild)[0].insertAdjacentHTML('beforeEnd','<span class="fa fa-caret-down u-grid-header-sort-span" ><span class="u-grid-header-sort-priority">1</span></span>');
+					$(ele.firstChild.firstChild)[0].insertAdjacentHTML('beforeEnd','<span class="fa fa-caret-down u-grid-header-sort-span" ></span>');
 					if(typeof this.options.onSortFun == 'function'){
 						this.options.onSortFun(field,'asc')
 					}else{
 						this.dataSourceObj.sortRows(field, "asc");
 					}
-				} else if ($(".fa-angle-down").parent().parent()[0] == ele) { //原来为降序，本次为不排序
-					$(".fa-angle-down").remove();
+				} else if ($(".fa-caret-down").parent().parent().parent()[0] == ele) { //原来为降序，本次为不排序
+					$(".fa-caret-down").remove();
 					if(typeof this.options.onSortFun == 'function'){
 						this.options.onSortFun();
 					}else{
 						this.dataSourceObj.sortRows();
 					}
 
-				} else { //本次为升序
-					$(".fa-angle-up").remove();
-					$(".fa-angle-down").remove();
-					$(ele.firstChild)[0].insertAdjacentHTML('beforeEnd','<span class="fa fa-angle-up u-grid-header-sort-span"><span class="u-grid-header-sort-priority">1</span></span>');
+				} else { //本次为升序 
+					$(".fa-caret-up").remove();
+					$(".fa-caret-down").remove();
+					// $(ele.firstChild)[0].insertAdjacentHTML('beforeEnd','<span class="fa fa-caret-up u-grid-header-sort-span"><span class="u-grid-header-sort-priority">1</span></span>');
+					$(ele.firstChild.firstChild)[0].insertAdjacentHTML('beforeEnd','<span class="fa fa-caret-up u-grid-header-sort-span"></span>');
 					if(typeof this.options.onSortFun == 'function'){
 						this.options.onSortFun(field, "desc");
 					}else{
@@ -4174,12 +4231,14 @@
 	var gridComp = $.fn.grid.gridComp,
 		gridCompProto = gridComp.prototype;
 
-	gridCompProto.createContentRowsSumRow = function(){
+	gridCompProto.createContentRowsSumRow = function(createFlag){
+		var htmlStr = '';
 		if(this.options.showSumRow && this.dataSourceObj.rows && this.dataSourceObj.rows.length > 0){
 			htmlStr += this.createSumRow(createFlag);
 		}
+		return htmlStr;
 	};
-	gridCompProto.createContentSumRow = function(){
+	gridCompProto.createContentSumRow = function(bottonStr){
 		var htmlStr = '';
 		if(this.options.showSumRow){
 			htmlStr += '<div class="u-grid-content-left-sum-bottom" id="' + this.options.id + '_content_left_sum_bottom" style="width:' + (this.leftW + this.fixedWidth) + 'px;'+bottonStr+'">';
@@ -4270,7 +4329,12 @@
 				if(this.options.dataType == 'integer' || this.options.dataType == 'float') {
 					contentStyle = 'style="text-align: right;"'
 				}
-				var htmlStr = '<div class="u-grid-content-td-div" ' + contentStyle + '><span value="' + sumValue + '">' + sumValue + '</span></div>';
+				
+				var htmlStr = '<div class="u-grid-content-td-div" ' + contentStyle + '>';
+				if(this.firstColumn){
+					htmlStr += '<div class="u-gird-centent-sum-div"><span>' + oThis.transMap.ml_sum + '</span></div>';
+				}
+					htmlStr += '<span value="' + sumValue + '">' + sumValue + '</span></div>';
 				newCell.insertAdjacentHTML('afterBegin',htmlStr);
 			});
 		}
@@ -4995,292 +5059,13 @@ u.GridAdapter = u.BaseAdapter.extend({
 			if(eType == '')
 					eType = 'string';
 			if(eType == 'string' || eType == 'integer' || eType == 'checkbox' || eType == 'combo' || eType == 'radio' || eType == 'float' || eType == 'currency' || eType == 'datetime'|| eType == 'date' || eType == 'time' || eType == 'url' || eType == 'password' || eType == 'percent'){
-				if(eType == 'string'){
-					compDiv = $('<div><input type="text" class="u-grid-edit-item-string"></div>');
-					if(!options.editType || options.editType =="default" ){
-						compDiv.addClass("eType-input")
-					}
-					eOptions.dataType = 'string';
-					comp = new u.StringAdapter({
-						el:compDiv[0],
-						options:eOptions,
-						model: viewModel
-					});
-					//$.compManager.plugs.string(compDiv.find("input")[0],eOptions,viewModel);
-
-				}else if(eType == 'integer'){
-					compDiv = $('<div><input type="text" class="u-grid-edit-item-integer"></div>');
-					if(!options.editType || options.editType =="default" ){
-						compDiv.addClass("eType-input")
-					}
-					eOptions.dataType = 'integer';
-					comp = new u.IntegerAdapter({
-						el:compDiv[0],
-						options:eOptions,
-						model: viewModel
-					});
-
-					//comp = new $.compManager.plugs.integer(compDiv.find("input")[0],eOptions,viewModel);
-
-				} else if(eType == 'checkbox'){
-					compDiv = $('<div><input id="' + oThis.id + "_edit_field_" + column['field'] + '" type="checkbox" class="u-grid-edit-item-checkbox"></div>');
-					//eOptions.dataType = 'integer';
-					
-					if($.CheckboxComp){
-						comp = new $.CheckboxComp(compDiv.find("input")[0],eOptions,viewModel);
-					}else{
-						comp = new u.CheckboxAdapter({
-							el:compDiv[0],
-							options:eOptions,
-							model: viewModel
-						});
-					}
-					
-
-					//comp = new $.compManager.plugs.check(compDiv.find("input")[0],eOptions,viewModel);
-
-				}else if(eType == 'combo'){
-					// compDiv = $('<div class="input-group  form_date u-grid-edit-item-comb"><div  type="text" class="form-control grid-combox"></div><i class="input-group-addon" ><i class="fa fa-angle-down"></i></i></div>');
-					compDiv = $('<div class="eType-input"><input type="text" class="u-grid-edit-item-float"></div>');
-					//comp = new $.compManager.plugs.combo(compDiv[0],eOptions,viewModel);
-					//comp = new u.Combobox({
-					//	el:compDiv[0],
-					//	options:eOptions,
-					//	model: viewModel
-					//});
-					if($.Combobox){ //兼容旧版本
-						compDiv = $('<div class="input-group  form_date u-grid-edit-item-comb"><div  type="text" class="form-control grid-combox"></div><i class="input-group-addon" ><i class="fa fa-angle-down"></i></i></div>');
-						comp = new $.Combobox(compDiv[0],eOptions,viewModel)
-					}else{
-						comp = new u.ComboboxAdapter({
-							el:compDiv[0],
-							options:eOptions,
-							model: viewModel
-						});
-						if(oThis.gridOptions.customEditPanelClass){
-							if(oThis.gridOptions.customEditPanelClass.indexOf('u-combo-ul') < 0){
-								oThis.gridOptions.customEditPanelClass += ',u-combo-ul';
-							}
-						}else{
-							oThis.gridOptions.customEditPanelClass = 'u-combo-ul';
-						}
-					}
-
-					
-				}else if(eType == 'radio'){
-					if(!options.editType || options.editType =="default" ){
-						compDiv = null;
-						comp = null;
-					}else {
-						compDiv = $('<div class="u-grid-edit-item-radio"><input type="radio" name="identity" /><i data-role="name"></i></div>');
-						//comp = new $.compManager.plugs.radio(compDiv[0],eOptions,viewModel);
-						comp = new u.RadioAdapter({
-							el:compDiv[0],
-							options:eOptions,
-							model: viewModel
-						});
-
-					}
-				}else if(eType == 'float'){
-					compDiv = $('<div><input type="text" class="u-grid-edit-item-float"></div>');
-					if(!options.editType || options.editType =="default" ){
-						compDiv.addClass("eType-input")
-					}
-					//comp = new $.compManager.plugs.float(compDiv.find("input")[0],eOptions,viewModel);
-					eOptions.dataType = 'float';
-					comp = new u.FloatAdapter({
-						el:compDiv[0],
-						options:eOptions,
-						model: viewModel
-					});
-
-				}else if(eType == 'currency'){
-					compDiv = $('<div><input type="text" class="u-grid-edit-item-currency"></div>');
-					if(!options.editType || options.editType =="default" ){
-						compDiv.addClass("eType-input")
-					}
-					//comp = new $.compManager.plugs.currency(compDiv.find("input")[0],eOptions,viewModel);
-					eOptions.dataType = 'currency';
-					comp = new u.CurrencyAdapter({
-						el:compDiv[0],
-						options:eOptions,
-						model: viewModel
-					});
-
-				}else if(eType == 'datetime'){
-					compDiv = $('<div class="input-group u-grid-edit-item-datetime" ><input class="form-control" /><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span></div>');
-					
-					//comp = new $.compManager.plugs.datetime(compDiv[0],eOptions,viewModel);
-					if($.DateTime){
-						comp = new $.DateTime(compDiv[0],eOptions,viewModel);
-					}else{
-						comp = new u.DateTimeAdapter({
-							el:compDiv[0],
-							options:eOptions,
-							model: viewModel
-						});
-						if(oThis.gridOptions.customEditPanelClass){
-							if(oThis.gridOptions.customEditPanelClass.indexOf('u-date-panel') < 0){
-								oThis.gridOptions.customEditPanelClass += ',u-date-panel';
-							}
-						}else{
-							oThis.gridOptions.customEditPanelClass = 'u-date-panel';
-						}
-					}
-
-				}else if(eType == 'date'){
-					compDiv = $('<div class="input-group u-grid-edit-item-date" ><input class="form-control" /><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span></div>');
-					
-					//comp = new $.compManager.plugs.date(compDiv[0],eOptions,viewModel);
-					if($.DateComp){
-						comp = new $.DateComp(compDiv[0],eOptions,viewModel);
-					}else{
-						comp = new u.DateTimeAdapter({
-							el:compDiv[0],
-							options:eOptions,
-							model: viewModel
-						});
-						if(oThis.gridOptions.customEditPanelClass){
-							if(oThis.gridOptions.customEditPanelClass.indexOf('u-date-panel') < 0){
-								oThis.gridOptions.customEditPanelClass += ',u-date-panel';
-							}
-						}else{
-							oThis.gridOptions.customEditPanelClass = 'u-date-panel';
-						}
-					}
-					
-
-				}else if(eType == 'url'){
-					compDiv = $('<div><input type="text" class="u-grid-edit-item-string"></div>');
-					if(!options.editType || options.editType =="default" ){
-						compDiv.addClass("eType-input")
-					}
-					eOptions.dataType = 'url';
-					comp = new u.UrlAdapter({
-						el:compDiv[0],
-						options:eOptions,
-						model: viewModel
-					});
-					//$.compManager.plugs.string(compDiv.find("input")[0],eOptions,viewModel);
-
-				}else if(eType == 'password'){
-					compDiv = $('<div><input type="text" class="u-grid-edit-item-string"><span class="fa fa-eye right-span"></span></div>');
-					if(!options.editType || options.editType =="default" ){
-						compDiv.addClass("eType-input")
-					}
-					eOptions.dataType = 'password';
-					comp = new u.PassWordAdapter({
-						el:compDiv[0],
-						options:eOptions,
-						model: viewModel
-					});
-					//$.compManager.plugs.string(compDiv.find("input")[0],eOptions,viewModel);
-
-				}else if(eType == 'percent'){
-
-					compDiv = $('<div><input type="text" class="u-grid-edit-item-float"></div>');
-					if(!options.editType || options.editType =="default" ){
-						compDiv.addClass("eType-input")
-					}
-					//comp = new $.compManager.plugs.float(compDiv.find("input")[0],eOptions,viewModel);
-					eOptions.dataType = 'precent';
-					comp = new u.PercentAdapter({
-						el:compDiv[0],
-						options:eOptions,
-						model: viewModel
-					});
-				}
-				if (comp && comp.dataAdapter){
-					comp = comp.dataAdapter;
-				}
-				//else if(eType == 'time'){
-				//	compDiv = $('<div class="input-group u-grid-edit-item-date" ><input class="form-control" /><div class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></div></div>');
-				//
-				//	//comp = new $.compManager.plugs.time(compDiv[0],eOptions,viewModel);
-				//}
-
-				oThis.editComponentDiv[column.field] = compDiv;
-				oThis.editComponent[column.field] = comp;
-				
-				 
+				oThis.createDefaultEdit(eType,eOptions,options,viewModel,column);
 				column.editType = function(obj){
 					if(oThis.editComponentDiv[column.field] && oThis.editComponentDiv[column.field][0].childNodes.length > 0){
 					}else{
 						//IE8有问题，所以需要重新创建div,将上面的代码直接拷贝
-						if(eType == 'string'){
-							compDiv = $('<div><input type="text" class="u-grid-edit-item-string"></div>');
-							if(!options.editType || options.editType =="default" ){
-								compDiv.addClass("eType-input")
-							}
-							comp = new $.compManager.plugs.string(compDiv.find("input")[0],eOptions,viewModel);
-
-						}else if(eType == 'integer'){
-							compDiv = $('<div><input type="text" class="u-grid-edit-item-integer"></div>');
-							if(!options.editType || options.editType =="default" ){
-								compDiv.addClass("eType-input")
-							}
-							comp = new $.compManager.plugs.integer(compDiv.find("input")[0],eOptions,viewModel);
-
-						} else if(eType == 'checkbox'){
-							compDiv = $('<div><input id="' + oThis.id + "_edit_field_" + column['field'] + '" type="checkbox" class="u-grid-edit-item-checkbox"></div>');
-							comp = new $.compManager.plugs.check(compDiv.find("input")[0],eOptions,viewModel);
-
-						}else if(eType == 'combo'){
-							compDiv = $('<div class="input-group  form_date u-grid-edit-item-comb"><div  type="text" class="form-control grid-combox"></div><i class="input-group-addon" ><i class="fa fa-angle-down"></i></i></div>');
-							comp = new $.compManager.plugs.combo(compDiv[0],eOptions,viewModel);
-
-						}else if(eType == 'radio'){
-							if(!options.editType || options.editType =="default" ){
-								compDiv = null;
-								comp = null;
-							}else {
-								compDiv = $('<div class="u-grid-edit-item-radio"><input type="radio" name="identity" /><i data-role="name"></i></div>');
-								comp = new $.compManager.plugs.radio(compDiv[0],eOptions,viewModel);
-							}
-						}else if(eType == 'float'){
-							compDiv = $('<div><input type="text" class="u-grid-edit-item-float"></div>');
-							if(!options.editType || options.editType =="default" ){
-								compDiv.addClass("eType-input")
-							}
-							comp = new $.compManager.plugs.float(compDiv.find("input")[0],eOptions,viewModel);
-						}else if(eType == 'currency'){
-							compDiv = $('<div><input type="text" class="u-grid-edit-item-currency"></div>');
-							if(!options.editType || options.editType =="default" ){
-								compDiv.addClass("eType-input")
-							}
-							comp = new $.compManager.plugs.currency(compDiv.find("input")[0],eOptions,viewModel);
-						}else if(eType == 'datetime'){ 
-							compDiv = $('<div class="input-group u-grid-edit-item-datetime" ><input class="form-control" /><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span></div>');
-							eOptions.widgetParent = $("body")
-							comp = new $.compManager.plugs.datetime(compDiv[0],eOptions,viewModel);
-						}else if(eType == 'date'){
-							compDiv = $('<div class="input-group u-grid-edit-item-date" ><input class="form-control" /><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span></div>');
-							eOptions.widgetParent = $("body")
-							comp = new $.compManager.plugs.date(compDiv[0],eOptions,viewModel);
-						}else if(eType == 'time'){
-							compDiv = $('<div class="input-group u-grid-edit-item-date" ><input class="form-control" /><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span></div>');
-							eOptions.widgetParent = $("body")
-							comp = new $.compManager.plugs.time(compDiv[0],eOptions,viewModel);
-						}else if(eType == 'url'){
-							compDiv = $('<div class="input-group u-grid-edit-item-string" ><input class="form-control" /><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span></div>');
-							eOptions.widgetParent = $("body")
-							comp = new $.compManager.plugs.url(compDiv[0],eOptions,viewModel);
-						}else if(eType == 'password'){
-							compDiv = $('<div class="input-group u-grid-edit-item-string" ><input type="text" class="u-grid-edit-item-string"><span class="fa fa-eye right-span"></span></div>');
-							eOptions.widgetParent = $("body")
-							comp = new $.compManager.plugs.password(compDiv[0],eOptions,viewModel);
-						}else if(eType == 'percent'){
-							compDiv = $('<div><input type="text" class="u-grid-edit-item-float"></div>');
-							if(!options.editType || options.editType =="default" ){
-								compDiv.addClass("eType-input")
-							}
-							comp = new $.compManager.plugs.percent(compDiv.find("input")[0],eOptions,viewModel);
-						}
-
-						oThis.editComponentDiv[column.field] = compDiv;
-						oThis.editComponent[column.field] = comp;
+						oThis.createDefaultEdit(eType,eOptions,options,viewModel,column);
 					}
-
 					var comp = oThis.editComponent[column.field]
 					if (!comp){
 						obj.element.focus();
@@ -5330,8 +5115,11 @@ u.GridAdapter = u.BaseAdapter.extend({
 			}else if(rType == 'integerRender'){
 				column.renderType = function(obj){
 					obj.element.innerHTML =  obj.value
+					/*设置header为right*/
+					$('#' + grid.options.id + '_header_table').find('th[field="'+field+'"]').css('text-align', 'right');
 					$(obj.element).css('text-align', 'right')	
-
+					$(obj.element).css('color', '#e33c37')
+					$(obj.element).find('.u-grid-header-link').css('padding-right','3em')
 					// 根据惊道需求增加renderType之后的处理,此处只针对grid.js中的默认render进行处理，非默认通过renderType进行处理
 					if(typeof afterRType == 'function'){
 						afterRType.call(this,obj);
@@ -5360,7 +5148,11 @@ u.GridAdapter = u.BaseAdapter.extend({
 					var masker = new u.NumberMasker(maskerMeta);
 					var svalue = masker.format(formater.format(obj.value)).value
 					obj.element.innerHTML =  svalue
+					/*设置header为right*/
+					$('#' + grid.options.id + '_header_table').find('th[field="'+field+'"]').css('text-align', 'right');
 					$(obj.element).css('text-align', 'right')
+					$(obj.element).css('color', '#e33c37')
+					$(obj.element).find('.u-grid-header-link').css('padding-right','3em')
 					$(obj.element).attr('title', svalue)
 
 					// 根据惊道需求增加renderType之后的处理,此处只针对grid.js中的默认render进行处理，非默认通过renderType进行处理
@@ -5389,8 +5181,12 @@ u.GridAdapter = u.BaseAdapter.extend({
 					var formater = new u.NumberFormater(maskerMeta.precision);
 					var masker = new u.NumberMasker(maskerMeta);
 					var svalue = masker.format(formater.format(obj.value)).value
-					obj.element.innerHTML =  svalue
+					obj.element.innerHTML =  svalue 
+					/*设置header为right*/
+					$('#' + grid.options.id + '_header_table').find('th[field="'+field+'"]').css('text-align', 'right');
 					$(obj.element).css('text-align', 'right')
+					$(obj.element).css('color', '#e33c37')
+					$(obj.element).find('.u-grid-header-link').css('padding-right','3em')
 					$(obj.element).attr('title', svalue)
 
 					// 根据惊道需求增加renderType之后的处理,此处只针对grid.js中的默认render进行处理，非默认通过renderType进行处理
@@ -5769,7 +5565,7 @@ u.GridAdapter = u.BaseAdapter.extend({
 			var field = obj.field;
 			var value = obj.newValue;
 			oThis.grid.updateValueAt(index,field,value);
-			
+			oThis.grid.editClose();
 		});		
 		
 		// 删除行,只考虑viewModel传入grid
@@ -5922,6 +5718,212 @@ u.GridAdapter = u.BaseAdapter.extend({
 	getName: function() {
 		return 'grid'
 	},
+	createDefaultEdit:function(eType,eOptions,options,viewModel,column){
+		var oThis = this;
+		if(eType == 'string'){
+			compDiv = $('<div><input type="text" class="u-grid-edit-item-string"></div>');
+			if(!options.editType || options.editType =="default" ){
+				compDiv.addClass("eType-input")
+			}
+			eOptions.dataType = 'string';
+			comp = new u.StringAdapter({
+				el:compDiv[0],
+				options:eOptions,
+				model: viewModel
+			});
+			//$.compManager.plugs.string(compDiv.find("input")[0],eOptions,viewModel);
+
+		}else if(eType == 'integer'){
+			compDiv = $('<div><input type="text" class="u-grid-edit-item-integer"></div>');
+			if(!options.editType || options.editType =="default" ){
+				compDiv.addClass("eType-input")
+			}
+			eOptions.dataType = 'integer';
+			comp = new u.IntegerAdapter({
+				el:compDiv[0],
+				options:eOptions,
+				model: viewModel
+			});
+
+			//comp = new $.compManager.plugs.integer(compDiv.find("input")[0],eOptions,viewModel);
+
+		} else if(eType == 'checkbox'){
+			compDiv = $('<div><input id="' + oThis.id + "_edit_field_" + column['field'] + '" type="checkbox" class="u-grid-edit-item-checkbox"></div>');
+			//eOptions.dataType = 'integer';
+			
+			if($.CheckboxComp){
+				comp = new $.CheckboxComp(compDiv.find("input")[0],eOptions,viewModel);
+			}else{
+				comp = new u.CheckboxAdapter({
+					el:compDiv[0],
+					options:eOptions,
+					model: viewModel
+				});
+			}
+			
+
+			//comp = new $.compManager.plugs.check(compDiv.find("input")[0],eOptions,viewModel);
+
+		}else if(eType == 'combo'){
+			// compDiv = $('<div class="input-group  form_date u-grid-edit-item-comb"><div  type="text" class="form-control grid-combox"></div><i class="input-group-addon" ><i class="fa fa-angle-down"></i></i></div>');
+			compDiv = $('<div class="eType-input"><input type="text" class="u-grid-edit-item-float"></div>');
+			//comp = new $.compManager.plugs.combo(compDiv[0],eOptions,viewModel);
+			//comp = new u.Combobox({
+			//	el:compDiv[0],
+			//	options:eOptions,
+			//	model: viewModel
+			//});
+			if($.Combobox){ //兼容旧版本
+				compDiv = $('<div class="input-group  form_date u-grid-edit-item-comb"><div  type="text" class="form-control grid-combox"></div><i class="input-group-addon" ><i class="fa fa-angle-down"></i></i></div>');
+				comp = new $.Combobox(compDiv[0],eOptions,viewModel)
+			}else{
+				comp = new u.ComboboxAdapter({
+					el:compDiv[0],
+					options:eOptions,
+					model: viewModel
+				});
+				if(oThis.gridOptions.customEditPanelClass){
+					if(oThis.gridOptions.customEditPanelClass.indexOf('u-combo-ul') < 0){
+						oThis.gridOptions.customEditPanelClass += ',u-combo-ul';
+					}
+				}else{
+					oThis.gridOptions.customEditPanelClass = 'u-combo-ul';
+				}
+			}
+
+			
+		}else if(eType == 'radio'){
+			if(!options.editType || options.editType =="default" ){
+				compDiv = null;
+				comp = null;
+			}else {
+				compDiv = $('<div class="u-grid-edit-item-radio"><input type="radio" name="identity" /><i data-role="name"></i></div>');
+				//comp = new $.compManager.plugs.radio(compDiv[0],eOptions,viewModel);
+				comp = new u.RadioAdapter({
+					el:compDiv[0],
+					options:eOptions,
+					model: viewModel
+				});
+
+			}
+		}else if(eType == 'float'){
+			compDiv = $('<div><input type="text" class="u-grid-edit-item-float"></div>');
+			if(!options.editType || options.editType =="default" ){
+				compDiv.addClass("eType-input")
+			}
+			//comp = new $.compManager.plugs.float(compDiv.find("input")[0],eOptions,viewModel);
+			eOptions.dataType = 'float';
+			comp = new u.FloatAdapter({
+				el:compDiv[0],
+				options:eOptions,
+				model: viewModel
+			});
+
+		}else if(eType == 'currency'){
+			compDiv = $('<div><input type="text" class="u-grid-edit-item-currency"></div>');
+			if(!options.editType || options.editType =="default" ){
+				compDiv.addClass("eType-input")
+			}
+			//comp = new $.compManager.plugs.currency(compDiv.find("input")[0],eOptions,viewModel);
+			eOptions.dataType = 'currency';
+			comp = new u.CurrencyAdapter({
+				el:compDiv[0],
+				options:eOptions,
+				model: viewModel
+			});
+
+		}else if(eType == 'datetime'){
+			compDiv = $('<div class="input-group u-grid-edit-item-datetime" ><input class="form-control" /><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span></div>');
+			
+			//comp = new $.compManager.plugs.datetime(compDiv[0],eOptions,viewModel);
+			if($.DateTime){
+				comp = new $.DateTime(compDiv[0],eOptions,viewModel);
+			}else{
+				comp = new u.DateTimeAdapter({
+					el:compDiv[0],
+					options:eOptions,
+					model: viewModel
+				});
+				if(oThis.gridOptions.customEditPanelClass){
+					if(oThis.gridOptions.customEditPanelClass.indexOf('u-date-panel') < 0){
+						oThis.gridOptions.customEditPanelClass += ',u-date-panel';
+					}
+				}else{
+					oThis.gridOptions.customEditPanelClass = 'u-date-panel';
+				}
+			}
+
+		}else if(eType == 'date'){
+			compDiv = $('<div class="input-group u-grid-edit-item-date" ><input class="form-control" /><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span></div>');
+			
+			//comp = new $.compManager.plugs.date(compDiv[0],eOptions,viewModel);
+			if($.DateComp){
+				comp = new $.DateComp(compDiv[0],eOptions,viewModel);
+			}else{
+				eOptions.type = 'u-date';
+				comp = new u.DateTimeAdapter({
+					el:compDiv[0],
+					options:eOptions,
+					model: viewModel
+				});
+				if(oThis.gridOptions.customEditPanelClass){
+					if(oThis.gridOptions.customEditPanelClass.indexOf('u-date-panel') < 0){
+						oThis.gridOptions.customEditPanelClass += ',u-date-panel';
+					}
+				}else{
+					oThis.gridOptions.customEditPanelClass = 'u-date-panel';
+				}
+			}
+			
+
+		}else if(eType == 'url'){
+			compDiv = $('<div><input type="text" class="u-grid-edit-item-string"></div>');
+			if(!options.editType || options.editType =="default" ){
+				compDiv.addClass("eType-input")
+			}
+			eOptions.dataType = 'url';
+			comp = new u.UrlAdapter({
+				el:compDiv[0],
+				options:eOptions,
+				model: viewModel
+			});
+			//$.compManager.plugs.string(compDiv.find("input")[0],eOptions,viewModel);
+
+		}else if(eType == 'password'){
+			compDiv = $('<div><input type="text" class="u-grid-edit-item-string"><span class="fa fa-eye right-span"></span></div>');
+			if(!options.editType || options.editType =="default" ){
+				compDiv.addClass("eType-input")
+			}
+			eOptions.dataType = 'password';
+			comp = new u.PassWordAdapter({
+				el:compDiv[0],
+				options:eOptions,
+				model: viewModel
+			});
+			//$.compManager.plugs.string(compDiv.find("input")[0],eOptions,viewModel);
+
+		}else if(eType == 'percent'){
+
+			compDiv = $('<div><input type="text" class="u-grid-edit-item-float"></div>');
+			if(!options.editType || options.editType =="default" ){
+				compDiv.addClass("eType-input")
+			}
+			//comp = new $.compManager.plugs.float(compDiv.find("input")[0],eOptions,viewModel);
+			eOptions.dataType = 'precent';
+			comp = new u.PercentAdapter({
+				el:compDiv[0],
+				options:eOptions,
+				model: viewModel
+			});
+		}
+		if (comp && comp.dataAdapter){
+			comp = comp.dataAdapter;
+		}
+
+		oThis.editComponentDiv[column.field] = compDiv;
+		oThis.editComponent[column.field] = comp;
+	},
+	
 	
 	
 	/**
