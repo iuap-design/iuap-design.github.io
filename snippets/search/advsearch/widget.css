@@ -1,0 +1,12 @@
+.search-input{
+  margin: 0 10px;
+}
+
+.search-input > input{
+  height: 30px;
+}
+
+
+.u-button{
+  height: 30px;
+}

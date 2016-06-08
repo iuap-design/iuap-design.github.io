@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../../../vendor/uui/css/u.css">
+</head>
+<body>
+
+
+<div class="" u-meta='{"id":"t1","type":"u-clockpicker","data":"dt1","field":"f1"}'>
+    <input class="u-input"/>
+</div>
+
+<br>
+<br>
+
+<div class="" u-meta='{"id":"t2","type":"u-clockpicker","data":"dt1","field":"f2"}'>
+    <input class="u-input"/>
+</div>
+
+
+
+<script src="../../../vendor/knockout/knockout-3.2.0.debug.js"></script>
+<script src="../../../vendor/uui/js/u-polyfill.js"></script>
+<script src="../../../vendor/uui/js/u.js"></script>
+
+<script>
+    var app, viewModel;
+    viewModel = {
+        dt1: new u.DataTable({
+            meta: {
+                f1: {type:'datetime'},
+                f2: {type:'string'}
+            }
+        }),
+    }
+
+    app = u.createApp({
+        el: 'body',
+        model: viewModel
+    });
+
+    var r = viewModel.dt1.createEmptyRow();
+    r.setValue('f1', "2016-2-7 12:32:34");
+    r.setValue('f2', "12:32:34");
+    viewModel.dt1.setRowSelect(0);
+</script>
+</body>
+</html>

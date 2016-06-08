@@ -1,0 +1,259 @@
+
+@import "../variables";
+
+.u-row {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto 0 auto;
+  align-items: stretch;
+
+  &.u-row-no-spacing {
+    padding: 0;
+  }
+}
+
+.u-col {
+  box-sizing: border-box;
+}
+
+
+.u-col-top {
+  align-self: flex-start;
+}
+
+.u-col-middle {
+  align-self: center;
+}
+
+.u-col-bottom {
+  align-self: flex-end;
+}
+
+.u-col-stretch {
+  align-self: stretch;
+}
+
+.u-row.u-row-no-spacing > .u-col {
+  margin: 0;
+}
+
+// Define order override classes.
+@for $i from 1 through $grid-max-columns {
+  .u-col-order-#{$i} {
+    order: $i;
+  }
+}
+
+
+// Mixins for width calculation.
+@mixin partial-size($size, $columns, $gutter) {
+  width: calc(#{(($size / $columns) * 100)+"%"} - #{$gutter});
+  width: #{(($size / $columns  * 100) - 1)+"%"} \9;
+  display: inline-block \9;
+  .u-row-no-spacing > & {
+    width: #{(($size / $columns) * 100)+"%"};
+  }
+}
+
+@mixin full-size($gutter) {
+  @include partial-size(1, 1, $gutter);
+}
+
+@mixin offset-size($size, $columns, $gutter) {
+  margin-left: calc(#{(($size / $columns) * 100)+"%"} + #{$gutter / 2});
+
+  .u-row.u-row-no-spacing > & {
+    margin-left: #{(($size / $columns) * 100)+"%"};
+  }
+}
+
+
+
+////////// Phone //////////
+
+@media (max-width: $grid-tablet-breakpoint - 1) {
+  .u-row {
+    padding: $grid-phone-margin - ($grid-phone-gutter / 2);
+  }
+
+  .u-col {
+    margin: $grid-phone-gutter / 2;
+    @include partial-size($grid-cell-default-columns, $grid-phone-columns,
+        $grid-phone-gutter);
+  }
+
+  .u-col-hide-phone {
+    display: none !important;
+  }
+
+  // Define order override classes.
+  @for $i from 1 through $grid-max-columns {
+    .u-col-xs-order-#{$i}.u-col-xs-order-#{$i} {
+      order: $i;
+    }
+  }
+
+  // Define partial sizes for columnNumber < totalColumns.
+  @for $i from 1 through ($grid-phone-columns - 1) {
+    .u-col-#{$i},
+    .u-col-xs-#{$i}.u-col-xs-#{$i}.u-col-xs-#{$i}.u-col-xs-#{$i} {
+      @include partial-size($i, $grid-phone-columns, $grid-phone-gutter);
+    }
+  }
+
+  // Define 100% for everything else.
+  @for $i from $grid-phone-columns through $grid-desktop-columns {
+    .u-col-#{$i},
+    .u-col-xs-#{$i}.u-col-xs-#{$i} {
+      @include full-size($grid-phone-gutter);
+    }
+  }
+
+  // Define valid phone offsets.
+  @for $i from 1 through ($grid-phone-columns - 1) {
+    .u-col-offset-#{$i},
+    .u-col-xs-offset-#{$i}.u-col-xs-offset-#{$i} {
+      @include offset-size($i, $grid-phone-columns, $grid-phone-gutter);
+    }
+  }
+}
+
+
+@for $i from 1 through $grid-desktop-columns {
+    .u-col-#{$i},
+    .u-col-sm-#{$i}.u-col-sm-#{$i} {
+      @include partial-size($i, $grid-desktop-columns, $grid-tablet-gutter);
+    }
+  }
+
+////////// Tablet //////////
+
+@media (min-width: $grid-tablet-breakpoint) and (max-width: $grid-desktop-breakpoint - 1) {
+  .u-row {
+    padding: $grid-tablet-margin - ($grid-tablet-gutter / 2);
+  }
+
+  .u-col {
+    margin: $grid-tablet-gutter / 2;
+    @include partial-size($grid-cell-default-columns, $grid-tablet-columns,
+        $grid-tablet-gutter);
+  }
+
+  .u-col-hide-tablet {
+    display: none !important;
+  }
+
+  // Define order override classes.
+  @for $i from 1 through $grid-max-columns {
+    .u-col-sm-order-#{$i}.u-col-sm-order-#{$i} {
+      order: $i;
+    }
+  }
+
+  // Define partial sizes for columnNumber < totalColumns.
+  @for $i from 1 through ($grid-tablet-columns - 1) {
+    .u-col-#{$i},
+    .u-col-sm-#{$i}.u-col-sm-#{$i} {
+      @include partial-size($i, $grid-tablet-columns, $grid-tablet-gutter);
+    }
+  }
+
+  // Define 100% for everything else.
+  @for $i from $grid-tablet-columns through $grid-desktop-columns {
+    .u-col-#{$i},
+    .u-col-sm-#{$i}.u-col-sm-#{$i} {
+      @include full-size($grid-tablet-gutter);
+    }
+  }
+
+  // Define valid tablet offsets.
+  @for $i from 1 through ($grid-tablet-columns - 1) {
+    .u-col-offset-#{$i},
+    .u-col-sm-offset-#{$i}.u-col-sm-offset-#{$i} {
+      @include offset-size($i, $grid-tablet-columns, $grid-tablet-gutter);
+    }
+  }
+}
+
+
+////////// Desktop //////////
+
+@media (min-width: $grid-desktop-breakpoint) {
+  .u-row {
+    padding: $grid-desktop-margin - ($grid-desktop-gutter / 2);
+  }
+
+  .u-col {
+    margin: $grid-desktop-gutter / 2;
+    @include partial-size($grid-cell-default-columns, $grid-desktop-columns,
+        $grid-desktop-gutter);
+  }
+
+  .u-col-hide-desktop {
+    display: none !important;
+  }
+
+  // Define order override classes.
+  @for $i from 1 through $grid-max-columns {
+    .u-col-md-order-#{$i}.u-col-md-order-#{$i} {
+      order: $i;
+    }
+  }
+
+  // Define partial sizes for all numbers of columns.
+  @for $i from 1 through $grid-desktop-columns {
+    .u-col-#{$i},
+    .u-col-md-#{$i}.u-col-md-#{$i} {
+      @include partial-size($i, $grid-desktop-columns, $grid-desktop-gutter);
+    }
+  }
+
+  // Define valid desktop offsets.
+  @for $i from 1 through ($grid-desktop-columns - 1) {
+    .u-col-offset-#{$i},
+    .u-col-md-offset-#{$i}.u-col-md-offset-#{$i} {
+      @include offset-size($i, $grid-desktop-columns, $grid-desktop-gutter);
+    }
+  }
+}
+
+////////// Large Desktop //////////
+
+@media (min-width: $grid-large-desktop-breakpoint) {
+  .u-row {
+    padding: $grid-large-desktop-margin - ($grid-large-desktop-gutter / 2);
+  }
+
+  .u-col {
+    margin: $grid-large-desktop-gutter / 2;
+    @include partial-size($grid-cell-default-columns, $grid-large-desktop-columns,
+        $grid-large-desktop-gutter);
+  }
+
+  .u-col-hide-large-desktop {
+    display: none !important;
+  }
+
+  // Define order override classes.
+  @for $i from 1 through $grid-max-columns {
+    .u-col-lg-order-#{$i}.u-col-lg-order-#{$i} {
+      order: $i;
+    }
+  }
+
+  // Define partial sizes for all numbers of columns.
+  @for $i from 1 through $grid-large-desktop-columns {
+    .u-col-#{$i},
+    .u-col-lg-#{$i}.u-col-lg-#{$i} {
+      @include partial-size($i, $grid-large-desktop-columns, $grid-large-desktop-gutter);
+    }
+  }
+
+  // Define valid desktop offsets.
+  @for $i from 1 through ($grid-large-desktop-columns - 1) {
+    .u-col-offset-#{$i},
+    .u-col-lg-offset-#{$i}.u-col-lg-offset-#{$i} {
+      @include offset-size($i, $grid-large-desktop-columns, $grid-large-desktop-gutter);
+    }
+  }
+}

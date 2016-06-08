@@ -1,0 +1,67 @@
+<div class="demo-page-content">
+
+	<table class="demo-datagrid u-table selectable u-shadow-2dp u-table-multi">
+		<thead>
+			<tr>
+				<th>
+					<label class="u-checkbox only-style" data-bind="click: listData.toggleAllSelect.bind(listData), css:{'is-checked': listData.allSelected()}">
+						<input id="checkInput" type="checkbox" class="u-checkbox-input">
+						<span class="u-checkbox-label"></span>
+					</label>
+				</th>
+				<th>对账单</th>
+				<th>对账日期</th>
+				<th>采购公司</th>
+				<th>对账总金额</th>
+				<th>可开发票金额</th>
+			</tr>
+		</thead>
+		<tbody data-bind="foreach:{data:listData.rows(), as: 'row', afterAdd: afterAdd}">
+			<tr data-bind="css: { 'is-selected' : row.selected() }, attr: {'rowindex': $index}, click: $parent.rowClick" class="sub-collapse">
+				<td>
+					<label class="u-checkbox only-style" data-bind="click: row.multiSelect, css:{'is-checked': row.selected()}">
+						<input type="checkbox" class="u-checkbox-input">
+						<span class="u-checkbox-label"></span>
+					</label>
+				</td>
+				<td><span class="fa fa-plus-circle"></span><span class="fa fa-minus-circle"></span><span data-bind="text: row.ref('field1')"></span></td>
+				<td data-bind="text: row.ref('field2')"></td>
+				<td data-bind="text: row.ref('field3')"></td>
+				<td data-bind="text: row.ref('field4')"></td>
+				<td data-bind="text: row.ref('field5')"></td>
+			</tr>
+			<tr class="u-subtable">
+				<td colspan="6">
+					<div>
+						<table class="u-table u-shadow-2dp ">
+							<thead>
+								<tr>
+									<th>产品</th>
+									<th>无税单价</th>
+									<th>税率</th>
+									<th>含税单价</th>
+									<th>对账数量</th>
+									<th>可开票金额</th>
+
+								</tr>
+							</thead>
+							<tbody data-bind="foreach:{data:row.ref('childpk'), as: 'r'}">
+								<tr>
+									<td data-bind="text: r.ref('f1')"></td>
+									<td data-bind="text: r.ref('f2')"></td>
+									<td data-bind="text: r.ref('f3')"></td>
+									<td data-bind="text: r.ref('f4')"></td>
+									<td data-bind="text: r.ref('f5')"></td>
+									<td data-bind="text: r.ref('f6')"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div id='pagination' class='u-pagination' u-meta='{"type":"pagination","data":"listData"}'>
+	</div>
+
+</div>

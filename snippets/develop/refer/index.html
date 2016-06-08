@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css"  href="../../../vendor/uui/css/u.css"></head>
+<body>
+
+
+<button data-bind="click: btn1Click" class="u-button">选择</button>
+<button data-bind="click: btn2Click" class="u-button">选择2</button>
+
+
+    <script src="../../../vendor/knockout/knockout-3.2.0.debug.js"></script>
+    <script src="../../../vendor/uui/js/u-polyfill.js"></script>
+    <script src="../../../vendor/uui/js/u.js"></script>
+    <script src="requirejs/require.js"></script>
+    <script src="require.config.js"></script>
+
+    <script>
+
+
+            var app,viewModel;
+            viewModel = {
+                dt1: new u.DataTable({
+                    meta:{
+                        f1:{},
+                        f2:{}
+                    }
+                }),
+                btn1Click: function(){
+                    // AMD
+                    require(['./refer/user'], function(user){
+                        u.refer({
+                            params:{'p1':'p1'}, //传给弹窗的参数，在module.init方法中接受
+                            title:'示例',
+                            isPOPMode: true,
+                            contentId: 'test_refer',
+//                            width: '800px',
+//                            height: '600px',
+                            module:user,  // module中要有 template 和 init 两个属性
+                            onOk: function(data) {
+                                alert(data);
+                            }
+                        })
+                    });
+
+                    // commonJS
+//                    var user = require('./refer/user');
+//                    u.refer({
+//                        params:{'p1':'p1'},
+//                        title:'示例',
+//                        isPOPMode: true,
+//                        contentId: 'test_refer',
+//                        width: '600px',
+//                        module:user,
+//                        onOk: function(data) {
+//                            alert(data);
+//                        }
+//                    })
+
+                },
+                btn2Click: function(){
+                    u.refer({
+                        params:{'p1':'p1'},
+                        title:'示例',
+                        isPOPMode: true,
+                        contentId: 'test_refer',
+//                        width: '800px',
+//                        height: '600px',
+                        module:{
+                            template: '<div>test template</div>',
+                            init: function(){
+                                alert(viewModel.dt1);
+                            }
+                        },
+                        onOk: function(data) {
+                            alert(data);
+                        }
+                    })
+                }
+            };
+
+            app = u.createApp({
+                el:'body',
+                model:viewModel
+            });
+
+
+
+
+    </script>
+</body>
+</html>

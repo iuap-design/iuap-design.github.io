@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css"  href="../../../vendor/uui/css/u.css"></head>
+<body>
+
+<button class="u-button raised" data-bind="click: add">增加</button>
+<button class="u-button raised" data-bind="click: edit">编辑</button>
+<button class="u-button raised" data-bind="click: del">删除</button>
+
+<br>
+<br>
+
+
+<table id="table1" class="u-table">
+    <thead>
+    <tr>
+        <th>公司</th>
+        <th>部门</th>
+        <th>姓名</th>
+    </tr>
+    </thead>
+    <tbody data-bind="foreach:{data:listDT.rows(), as: 'row'}">
+    <tr data-bind="click: row.singleSelect,css: { 'is-selected' : row.selected() }">
+        <td data-bind="text:row.ref('enterprise')"></td>
+        <td data-bind="text: row.ref('depart')"></td>
+        <td data-bind="text: row.ref('name')"></td>
+    </tr>
+    </tbody>
+</table>
+
+<!--卡片弹窗-->
+<div id="card_dialog" style="display:none;">
+    <div class="u-msg-title">
+        <h4>卡片</h4>
+    </div>
+    <div class="u-msg-content">
+        <div class="u-row" style="width:100%">
+            <div class="u-col-12">
+                <div class="u-text" u-meta='{"type":"u-text","data":"operateDT","field":"enterprise"}'>
+                    <input class="u-input" type="text">
+                    <label class="u-label">公司</label>
+                </div>
+            </div>
+            <div class="u-col-12">
+                <div class="u-text" u-meta='{"type":"u-text","data":"operateDT","field":"depart"}'>
+                    <input class="u-input" type="text">
+                    <label class="u-label">部门</label>
+                </div>
+            </div>
+            <div class="u-col-12">
+                <div class="u-text" u-meta='{"type":"u-text","data":"operateDT","field":"name"}'>
+                    <input class="u-input" type="text">
+                    <label class="u-label">姓名</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="u-msg-footer">
+        <button class="u-msg-ok u-button" data-bind="click:save">保存<span class="u-button-container"><span class="u-ripple"></span></span></button>
+        <button class="u-msg-cancel u-button" data-bind="click:cancel">取消<span class="u-button-container"><span class="u-ripple"></span></span></button>
+    </div>
+</div>
+
+<script src="../../../vendor/knockout/knockout-3.2.0.debug.js"></script>
+<script src="../../../vendor/uui/js/u.js"></script>
+<script src="./crud.js"></script>
+
+
+</body>
+</html>

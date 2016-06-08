@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css"  href="../../../vendor/uui/css/u.css"></head>
+<body>
+
+
+    <label  class="u-checkbox" for="checkbox-1" u-meta='{"id":"c1","type":"u-checkbox","data":"dt1","field":"f1"}'>
+        <input type="checkbox" id="checkbox-1"  value="test1" class="u-checkbox-input">
+        <span class="u-checkbox-label">test1</span>
+    </label>
+    <label  class="u-checkbox" for="checkbox-2" u-meta='{"id":"c1","type":"u-checkbox","data":"dt1","field":"f1"}'>
+        <input type="checkbox" id="checkbox-2"  value="test2" class="u-checkbox-input">
+        <span class="u-checkbox-label">test2</span>
+    </label>
+
+    <br>
+    <!--<label  class="u-checkbox" for="checkbox-2">-->
+        <!--<input type="checkbox" id="checkbox-2" class="u-checkbox-input" value="test2" data-bind="uchecked:dt1.ref('f1')">-->
+        <!--<span class="u-checkbox-label">test2</span>-->
+    <!--</label>-->
+
+    <br>
+
+    <!--<input type="checkbox" value="test3" data-bind="uchecked:dt1.ref('f1')">-->
+    <!--<span class="u-checkbox-label">test3</span>-->
+    <br>
+    <div  data-bind="text:dt1.ref('f1')"></div>
+
+    <script src="../../../vendor/knockout/knockout-3.2.0.debug.js"></script>
+    <script src="../../../vendor/uui/js/u-polyfill.js"></script>
+    <script src="../../../vendor/uui/js/u.js"></script>
+
+    <script>
+        var app,viewModel;
+        viewModel = {
+            dt1: new u.DataTable({
+                meta:{
+                f1:{},
+                f2:{}
+            }
+        }),
+        btn1Click: function(){
+                alert('btn1Click');
+//                    app.serverEvent().fire();
+            }
+        };
+
+        app = u.createApp({
+            el:'body',
+            model:viewModel
+        });
+
+
+        viewModel.dt1.setSimpleData([
+            {"f1":"test1","f2":"a"}
+        ])
+
+    </script>
+</body>
+</html>

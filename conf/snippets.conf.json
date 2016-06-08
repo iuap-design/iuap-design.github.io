@@ -1,0 +1,231 @@
+[{
+    "name": "控件",
+    "sub": [{
+            "name": "消息框",
+            "sub": [{
+                "name": "提示框",
+                "url": "demos/ui/dialog/message"
+            }, {
+                "name": "确认框",
+                "url": "demos/ui/dialog/confirm"
+            }, {
+                "name": "模态框",
+                "url": "demos/ui/dialog/modal"
+            }]
+        }, {
+            "name": "下拉框",
+            "url": "demos/ui/combobox"
+        }, {
+            "name": "进度条",
+            "url": "demos/ui/progress"
+
+        }, {
+            "name": "菜单",
+            "url": "demos/ui/menu"
+        }, {
+            "name": "按钮",
+            "url": "demos/ui/button"
+        }, {
+            "name": "徽章",
+            "url": "demos/ui/badge"
+        }, {
+            "name": "标签",
+            "url": "demos/ui/label"
+        }, {
+            "name": "复选框",
+            "url": "demos/ui/checkbox"
+        }, {
+            "name": "复选框(DT)",
+            "url": "demos/model/checkbox"
+        }, {
+            "name": "单选框",
+            "url": "demos/ui/radio"
+        }, {
+            "name": "switch",
+            "url": "demos/ui/switch"
+        }, {
+            "name": "输入框",
+            "url": "demos/ui/textfield"
+        },
+
+        {
+            "name": "时间选择器",
+            "url": "demos/ui/datetime/date"
+        }, 
+	{
+            "name": "参照选择器",
+            "url": "demos/ui/refer"
+        },
+        {
+            "name": "参照框",
+            "url": "demos/ui/refer/refer/his"
+        }, {
+            "name": "加载条",
+            "url": "demos/ui/loading"
+        },
+
+
+        {
+            "name": "消息提示",
+            "url": "demos/ui/message"
+        }, {
+            "name": "表格",
+            "url": "demos/ui/datatable"
+        }, {
+            "name": "页签",
+            "url": "demos/ui/tabs"
+        },
+
+        {
+            "name": "导航菜单",
+            "url": "demos/ui/navmenu"
+        }, {
+            "name": "分页",
+            "url": "demos/ui/pagination"
+        }, {
+            "name": "自动完成",
+            "url": "demos/ui/autocomplete"
+        }
+    ]
+}, {
+  "name":"辅助",
+  "sub": [{
+    "name": "辅助样式",
+    "url": "demos/assist/styles"
+    }, {
+        "name": "宽高",
+        "url": "demos/assist/wh"
+    }, {
+        "name": "边距",
+        "url": "demos/assist/mp"
+    }, {
+        "name": "文字",
+        "url": "demos/assist/text"
+    }, {
+        "name": "颜色",
+        "url": "demos/assist/color"
+    }]
+},{
+    "name": "表单",
+    "sub": [{
+        "name": "表单布局",
+        "url": "demos/forms/layout"
+    }, {
+        "name": "基本元素",
+        "url": "demos/forms/baseElements"
+    }, {
+        "name": "material 元素",
+        "url": "demos/forms/materialElements"
+    },  {
+        "name": "元素校验",
+        "url": "demos/forms/validate"
+    },{
+        "name": "按钮条",
+        "url": "demos/forms/buttonBar"
+    },{
+        "name": "浏览态表单",
+        "url": "demos/forms/browse"
+    }]
+}, {
+    "name": "复杂控件",
+    "sub": [{
+        "name": "树",
+        "url": "demos/complex/tree-dt"
+    }, {
+        "name": "穿梭框",
+        "url": "demos/complex/transfer-dt"
+    }]
+}, {
+    "name": "表格",
+    "sub": [{
+        "name": "table",
+        "sub": [{
+            "name": "简单表格",
+            "url": "demos/tables/simple"
+        },{
+            "name": "简单表格(DT)",
+            "url": "demos/tables/simple-dt"
+        }, {
+            "name": "固定表头",
+            "url": "demos/tables/fixedheader"
+        }, {
+            "name": "分页",
+            "url": "demos/tables/pagination"
+        }]
+    },{
+        "name": "grid控件",
+        "sub": [{
+                "name": "基础grid",
+                "url": "demos/grids/base"
+            },{
+                "name": "表头设置",
+                "url": "demos/grids/columnMenu"
+            },{
+                "name": "拖拽",
+                "url": "demos/grids/drag"
+            },{
+                "name": "编辑功能",
+                "url": "demos/grids/edit"
+            },{
+                "name": "表单形式编辑",
+                "url": "demos/grids/editForm"
+            },{
+                "name": "固定列",
+                "url": "demos/grids/fixed"
+            },{
+                "name": "二级表头",
+                "url": "demos/grids/headerLevel"
+            },{
+                "name": "宽度不足自动隐藏数据列",
+                "url": "demos/grids/overWidthHidden"
+            },{
+                "name": "排序",
+                "url": "demos/grids/sort"
+            },{
+                "name": "合计",
+                "url": "demos/grids/sumRow"
+            },{
+                "name": "交换列",
+                "url": "demos/grids/swap"
+            },{
+                "name": "树表",
+                "url": "demos/grids/tree"
+            }]
+    }]
+}, {
+    "name": "搜索",
+    "sub": [{
+        "name": "高级搜索",
+        "url": "demos/search/advsearch"
+    }, {
+            "name": "筛选栏",
+            "url": "demos/search/filterBar"
+        }]
+}, {
+    "name": "布局",
+    "sub": [{
+        "name": "卡片式布局",
+        "url": "demos/layouts/pageLayout"
+    },{
+        "name": "面板",
+        "url": "demos/layouts/panel"
+    },{
+        "name": "栅格布局",
+        "url": "demos/forms/layout/response"
+    }]
+}, {
+    "name": "页面模板",
+    "sub": [{
+        "name": "空页面",
+        "url": "demos/patterns/blank"
+    }, {
+        "name": "订单",
+        "sub": [{
+            "name": "订单列表",
+            "url": "demos/patterns/order/list"
+        }, {
+            "name": "订单详细",
+            "url": "demos/patterns/order/detail"
+        }]
+    }]
+}]
