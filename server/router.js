@@ -8,7 +8,7 @@ var down = require("./down");
 module.exports = {
   setRouters: function(router ,ctx){
     router.get('/loadMenu', function *(next) {
-        var demos = require('./demos.json');
+        var demos = require('../conf/snippets.conf.json');
         this.body = demos;//JSON.stringify('test');
     });
 
@@ -22,12 +22,14 @@ module.exports = {
       var url = this.request.body.wUrl;
       var datas = {}
       var _html  = _css = _script = '';
+      
       if (fs.existsSync('./root/' + url + '/widget.html'))
         _html = fs.readFileSync('./root/' + url + '/widget.html');
       if (fs.existsSync('./root/' + url + '/widget.css'))
         _css = fs.readFileSync('./root/' + url + '/widget.css');
       if (fs.existsSync('./root/' + url + '/widget.js'))
         _script = fs.readFileSync('./root/' + url + '/widget.js');
+
       datas.html = _html.toString();
       datas.css = _css.toString();
       datas.script = _script.toString();
