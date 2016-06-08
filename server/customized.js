@@ -23,20 +23,20 @@ var AUTOPREFIXER_BROWSERS = [
 ];
 
 var gridJs = []
-var modelGridJs = ['custom/src/model/comp-adp/grid.js']
-var treeJs = ['custom/src/ui/tree/treeComp.js']
+var modelGridJs = ['src/grid/js/dtJs/grid.js']
+var treeJs = ['src/tree/js/treeComp.js']
 var modeTreeJs = [
-  'custom/src/ui/tree/treeComp.js',
-  'custom/src/model/comp-adp/tree.js'
+  'src/tree/js/treeComp.js',
+  'src/tree/js/dtJs/tree.js'
 ]
 
 var polyfillJs = [
-  'custom/src/polyfill/core.js',
-  'custom/src/polyfill/JsExtensions.js'
+  'src/iuap-design/vendor/polyfill/core.js',
+  'src/iuap-design/vendor/polyfill/JsExtensions.js'
 ]
-var gridCss = 'custom/src/ui/grid/grid.css';
-var treeCss = 'custom/src/ui/tree/tree.css';
-var assets = 'customizedAssets/**';
+var gridCss = 'src/grid/css/grid.css';
+var treeCss = 'src/tree/css/tree.css';
+var assets = ''; //暂时没处理，后续考虑
 
 flagObj = {};
 
@@ -63,9 +63,9 @@ function gulpRun(app, cb){
   		hasGrid = jsArr.indexOf('hasGrid'),
   		hasTree = jsArr.indexOf('hasTree'),
   		hasPolyfill = jsArr.indexOf('hasPolyfill'),
-  		hasModel = jsArr.indexOf('custom/src/model/core/core.js'),
+  		hasModel = jsArr.indexOf('src/datatable/js/app.js'),
   		jsHashStr = hash(params.jsArr + params.colorArr),
-  		baseURL =  'root/custom/dist/customized/' + jsHashStr,
+  		baseURL =  'temp/customized/' + jsHashStr,
   		settingStr = params.settingStr;
 
 	gulp.task('customizedGridTreePolyfill',function(){
@@ -83,7 +83,7 @@ function gulpRun(app, cb){
 			/* 将jsArr中的grid相关的放入arr */
 			for(var i = 0;i<jsArr.length;i++){
 				var jsStr =  jsArr[i];
-				if(jsStr.indexOf('src/ui/grid/') > -1){
+				if(jsStr.indexOf('src/grid/js') > -1){
 					jsArr.splice(i,1);
 					arr.push(jsStr);
 				}
@@ -217,14 +217,14 @@ function gulpRun(app, cb){
 
 	//themeColors写入主题颜色
 	//customized 写入需要压缩的css
-	var colorFilePath = 'custom/src/ui/themeColors.scss';
-	var customizedCssFilePath = 'custom/src/ui/customized.scss';
+	var colorFilePath = 'dist/pages/custom/themeColors.scss';
+	var customizedCssFilePath = 'dist/pages/custom/customized.scss';
 	var setttingFilePath = baseURL + '/setting.txt';
 
-	fs.exists('root/custom/dist/customized', function(exist) {
+	fs.exists('temp/customized', function(exist) {
 		if(!exist){
-			fs.mkdirSync('root/custom/dist');
-			fs.mkdirSync('root/custom/dist/customized');
+			fs.mkdirSync('temp');
+			fs.mkdirSync('temp/customized');
 		}
 	});
 
