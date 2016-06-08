@@ -2,9 +2,9 @@
   "name": "scaffold",
   "version": "1.0.0",
   "description": "iuap-design scaffold",
-  "main": "index.js",
+  "main": "server/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node server/app.js"
   },
   "repository": {
     "type": "git",
