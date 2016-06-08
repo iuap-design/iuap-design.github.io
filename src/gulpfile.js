@@ -8,7 +8,6 @@ var uuiPkg = require('../package.json');
 
 var uuiDist = 'dist/uui/' + uuiPkg.version;
 
-
 var distModules = ['iuap-design','datatable','datetimepicker','grid']
 
 var pathOfJS = [

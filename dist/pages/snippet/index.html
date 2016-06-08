@@ -41,15 +41,7 @@
 				<div class="u-navlayout-header-row">
 					<!-- <span class="u-navlayout-title" data-bind="text:title"></span> -->
 					<div class="u-navlayout-spacer"></div>
-					<!-- <ul id="masterNav" class="blog-nav">
-						<li data-bind="click:showDoc,css:{active:currentContent() == 'doc'}">文档</li>
-						<li data-bind="click:showCustom,css:{active:currentContent() == 'custom'}">定制</li>
-						<li data-bind="click:showDemo,css:{active:currentContent() == 'demo'}">示例</li>
-					</ul> -->
 
-					<!-- <button class="u-button white" data-bind="click:switchToPure, visible: codeVersion() =='dt'" style="display:none">切换到纯ui版本</button> -->
-					<!-- <button class="u-button white" data-bind="click:switchToDt" >查看datatable版本</button> -->
-					<!-- <button class="u-button white" data-bind="click:run">运行</button> -->
 					<button  id="demo-menu-lower-right" class="u-button floating primary u-button-icon" style="box-shadow: none;border:none;">
 			        <i class="fa fa-ellipsis-v"></i>
 			    </button>
@@ -65,13 +57,6 @@
 			<div class="demo-drawer demo-folded u-navlayout-drawer u-navlayout-fixed-header">
 				<header class="u-navlayout-header">
 					<a class="demo-drawer-nav-brand">
-						<!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" style="
-                    width: 24px; height: 24px;">
-							<path d="M 50 0 L 100 14 L 92 80 Z" fill="rgba(139, 195, 74, 0.5)"></path>
-							<path d="M 92 80 L 50 0 L 50 100 Z" fill="rgba(139, 195, 74, 0.8)"></path>
-							<path d="M 8 80 L 50 0 L 50 100 Z" fill="#f3f3f3"></path>
-							<path d="M 50 0 L 8 80 L 0 14 Z" fill="rgba(220, 220, 220, 0.6)"></path>
-						</svg> -->
 						<span class="demo-hidden-folded u-color-text-white" style="margin-left: 16px;">iUAP Design</span>
 					</a>
 				</header>
@@ -101,10 +86,6 @@
 												<li><a class="u-nav-link" data-bind="text:ssrow.ref('name'), attr:{href:'#/' + ssrow.ref('url')()},css:{'u-nav-link-current': ssrow.selected()}"></a></li>
 											</ul>
 										<!-- /ko -->
-
-										<!-- <a class="u-nav-link" data-bind="text:srow.ref('name'),css:{'u-nav-link-current': srow.selected()},attr:{href: !srow.ref('url')() ?  'javascript:void(0)': '#/' + srow.ref('url')()}"></a> -->
-										<!-- url 不为空 ，不存在三级菜单 -->
-										<!-- ko if:  !!srow.ref('url')() -->
 											<a class="u-nav-link" data-bind="text:srow.ref('name'),css:{'u-nav-link-current': srow.selected()},attr:{href:'#/' + srow.ref('url')()}"></a>
 										<!-- /ko -->
 									</li>
@@ -151,18 +132,6 @@
 							<iframe class="demo-main-iframe" id="demo-main-iframe" name="demo-main-iframe"></iframe>
 						</div>
 				</div>
-
-
-
-
-				<!-- <div id="code-source" style="display:none">
-		       <pre id='html' style="font-size: 16px;">
-							&lt;h1&gt;
-							    Hello~
-							&lt;/h1&gt;
-		        </pre>
-		    </div> -->
-
 			</main>
 			<!-- 内容 -->
 		</div>
