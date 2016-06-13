@@ -29,8 +29,8 @@ for name in ${prodName[@]}
 do
 	cd ${name}
   echo "--- ${name}进行分支切换和代码更新 ---"
-  git checkout release
-  git pull origin release
+  git checkout master
+  git pull origin master
   cd ..
   echo "--- 分支切换和代码更新完成 ---"
 done

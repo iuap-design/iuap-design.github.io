@@ -60,6 +60,12 @@ gulp.task('css', function(){
     .pipe(gulp.dest(uuiDist + '/css'))
 })
 
+gulp.task('copymdOfiUAPDesign', function(){
+  // gulp.src('iuap-design/docs/**/*.md')
+  gulp.src('iuap-design/docs/*.md')
+    .pipe(gulp.dest('../docs'))
+})
+
 gulp.task('copycss', function(){
   gulp.src( pathOfCopyCSS )
     .pipe(gulp.dest(uuiDist + '/css'))
@@ -91,4 +97,5 @@ gulp.task('publishModules', function(){
   }
 })
 
-gulp.task('default', ['css', 'js', 'copycss', 'copyjs','copyfont', 'publishModules'])
+gulp.task('copy', ['copymdOfiUAPDesign', 'copycss', 'copyjs','copyfont'])
+gulp.task('default', ['css', 'js', 'copy', 'publishModules'])
