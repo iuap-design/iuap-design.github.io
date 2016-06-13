@@ -8,18 +8,18 @@ require(['gitbook', 'jQuery', 'lodash'], function (gitbook, $, _) {
 		/* 添加头部和尾部 begin */
         $.ajax({
 			type: "get",
-			url: "../../../header.html",
+			url: "../common/header.html",
 			dataType: "html",
 			async: false,
 			success: function(data) {
-				data = data.replace(/dist/g,'../../');
+				data = data.replace(/dist/g,'../../').replace('<div class="nav-toggle" data-offcanvas="open"><i class="flaticon-list26"></i></div>','');
 				$(document.body).prepend(data)
 			}
 		})
 
 		$.ajax({
 			type: "get",
-			url: "../../../footer.html",
+			url: "../common/footer.html",
 			dataType: "html",
 			async: false,
 			success: function(data) {
