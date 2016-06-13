@@ -17,13 +17,6 @@
 &lt;button class="u-button raised accent">BUTTON&lt;/button>
 &lt;button class="u-button raised primary">BUTTON&lt;/button>
 </code></pre>
-<div class="example-head">不同颜色的badge 使用7个基础类。例如.badge-success或 .badge，配色情感含义与之前颜色样式版中的涵义相同。</div>
-<div class="example-content"><button class="u-button">BUTTON</button>
-<button class="u-button accent">BUTTON</button>
-<button class="u-button primary">BUTTON</button>
-</div><pre><code>&lt;button class="u-button">BUTTON&lt;/button>
-&lt;button class="u-button accent">BUTTON&lt;/button>
-&lt;button class="u-button primary">BUTTON&lt;/button></code></pre>
 <div class="example-head">圆形按钮</div>
 <div class="example-content"><button class="u-button floating">
     <i class="fa fa-plus"></i>
@@ -45,6 +38,13 @@
     &lt;i class="fa fa-plus">&lt;/i>
 &lt;/button>
 </code></pre>
+<div class="example-head">不同颜色的badge 使用7个基础类。例如.badge-success或 .badge，配色情感含义与之前颜色样式版中的涵义相同。</div>
+<div class="example-content"><button class="u-button">BUTTON</button>
+<button class="u-button accent">BUTTON</button>
+<button class="u-button primary">BUTTON</button>
+</div><pre><code>&lt;button class="u-button">BUTTON&lt;/button>
+&lt;button class="u-button accent">BUTTON&lt;/button>
+&lt;button class="u-button primary">BUTTON&lt;/button></code></pre>
 <div class="example-head">色彩按钮</div>
 <div class="example-content"><button class="u-button  u-button-success">success</button>
 <button class="u-button   u-button-info">info</button>
@@ -85,6 +85,19 @@
 </div><pre><code>&lt;button class="u-button raised primary u-button-round">圆形按钮
 &lt;/button>
 &lt;button class="u-button raised primary u-button-squared">圆形按钮
+&lt;/button></code></pre>
+<div class="example-head">
+ 左半圆样式：.u-button-pill-left和 .u-button-round一起使用
+
+ 右半圆样式： .u-button-pill-right 和 .u-button-round一起使用
+</div>
+<div class="example-content"><button class="u-button raised primary u-button-pill-left u-button-round">左半圆按钮
+</button>
+<button class="u-button raised primary u-button-pill-right u-button-squared">右半圆按钮
+</button>
+</div><pre><code>&lt;button class="u-button raised primary u-button-pill-left u-button-round">左半圆按钮
+&lt;/button>
+&lt;button class="u-button raised primary u-button-pill-right u-button-squared">右半圆按钮
 &lt;/button></code></pre>
 <div class="example-head">不同颜色的下拉按钮</div>
 <div class="example-content"><div class="u-row">
@@ -137,7 +150,6 @@
         </ul>
     </div>
 </div>
-
 </div><pre><code>&lt;div class="u-row">
     &lt;div class="u-col-3">
         &lt;button class="u-button  u-button-success u-menu-button" id="demo-menu-sucess">
@@ -187,21 +199,26 @@
             &lt;li class="u-menu-item">&lt;a href="javascript:void(0)">action three&lt;/a>&lt;/li>
         &lt;/ul>
     &lt;/div>
-&lt;/div>
-</code></pre>
-<div class="example-head">
- 左半圆样式：.u-button-pill-left和 .u-button-round一起使用
+&lt;/div></code></pre>
+<div class="example-head">基本菜单按钮</div>
+<div class="example-content"><button class="u-button  raised u-menu-button" id="demo-menu-lower-right1">
+    联查
+    <span class="u-right-icon fa fa-angle-down"></span>
+</button>
+<ul class="u-menu u-menu-bottom-right" for="demo-menu-lower-right1">
+    <li class="u-menu-item "><a>报价单</a></li>
+    <li class="u-menu-item"><a>到货单</a></li>
+</ul>
 
- 右半圆样式： .u-button-pill-right 和 .u-button-round一起使用
-</div>
-<div class="example-content"><button class="u-button raised primary u-button-pill-left u-button-round">左半圆按钮
-</button>
-<button class="u-button raised primary u-button-pill-right u-button-squared">右半圆按钮
-</button>
-</div><pre><code>&lt;button class="u-button raised primary u-button-pill-left u-button-round">左半圆按钮
+</div><pre><code>&lt;button class="u-button  raised u-menu-button" id="demo-menu-lower-right1">
+    联查
+    &lt;span class="u-right-icon fa fa-angle-down">&lt;/span>
 &lt;/button>
-&lt;button class="u-button raised primary u-button-pill-right u-button-squared">右半圆按钮
-&lt;/button></code></pre>
+&lt;ul class="u-menu u-menu-bottom-right" for="demo-menu-lower-right1">
+    &lt;li class="u-menu-item ">&lt;a>报价单&lt;/a>&lt;/li>
+    &lt;li class="u-menu-item">&lt;a>到货单&lt;/a>&lt;/li>
+&lt;/ul>
+</code></pre>
 <div class="example-head">分割按钮</div>
 <div class="example-content"><div class="u-button-group u-split">
     <button class="u-button u-split-pre">
@@ -232,25 +249,6 @@
         &lt;/ul>
     &lt;/div>
 &lt;/div>
-</code></pre>
-<div class="example-head">基本菜单按钮</div>
-<div class="example-content"><button class="u-button  raised u-menu-button" id="demo-menu-lower-right1">
-    联查
-    <span class="u-right-icon fa fa-angle-down"></span>
-</button>
-<ul class="u-menu u-menu-bottom-right" for="demo-menu-lower-right1">
-    <li class="u-menu-item "><a>报价单</a></li>
-    <li class="u-menu-item"><a>到货单</a></li>
-</ul>
-
-</div><pre><code>&lt;button class="u-button  raised u-menu-button" id="demo-menu-lower-right1">
-    联查
-    &lt;span class="u-right-icon fa fa-angle-down">&lt;/span>
-&lt;/button>
-&lt;ul class="u-menu u-menu-bottom-right" for="demo-menu-lower-right1">
-    &lt;li class="u-menu-item ">&lt;a>报价单&lt;/a>&lt;/li>
-    &lt;li class="u-menu-item">&lt;a>到货单&lt;/a>&lt;/li>
-&lt;/ul>
 </code></pre>
 
 

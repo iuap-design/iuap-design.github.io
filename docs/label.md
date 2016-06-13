@@ -8,7 +8,7 @@
 
 # 示例
 
-<div class="example-head">描边按钮</div>
+<div class="example-head">圆形label</div>
 <div class="example-content"><span class="u-tag u-tag-default u-tag-round">Default</span>
 <span class="u-tag u-tag-primary u-tag-round">Primary</span>
 <span class="u-tag u-tag-success u-tag-round">Success</span>
@@ -42,7 +42,7 @@
 &lt;span class="u-tag u-tag-danger">Danger&lt;/span>
 &lt;span class="u-tag u-tag-dark">Dark&lt;/span>
 </code></pre>
-<div class="example-head">圆形label</div>
+<div class="example-head">描边按钮</div>
 <div class="example-content"><span class="u-tag u-tag-default u-tag-round">Default</span>
 <span class="u-tag u-tag-primary u-tag-round">Primary</span>
 <span class="u-tag u-tag-success u-tag-round">Success</span>
