@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>pagination | </title>
+        <title>分页 pagination | </title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -62,10 +62,10 @@
         
     <div class="book"
         data-level="5"
-        data-chapter-title="pagination"
+        data-chapter-title="分页 pagination"
         data-filepath="pagination.md"
         data-basepath="."
-        data-revision="Mon Jun 13 2016 18:41:05 GMT+0800 (中国标准时间)"
+        data-revision="Mon Jun 13 2016 20:39:28 GMT+0800 (中国标准时间)"
         data-innerlanguage="">
     
 
@@ -103,7 +103,7 @@
                         
                             <b>1.</b>
                         
-                        badge
+                        徽章 badge
                     </a>
             
             
@@ -118,7 +118,7 @@
                         
                             <b>2.</b>
                         
-                        button按钮
+                        按钮 button
                     </a>
             
             
@@ -133,7 +133,7 @@
                         
                             <b>3.</b>
                         
-                        checkbox
+                        复选框 checkbox
                     </a>
             
             
@@ -148,7 +148,7 @@
                         
                             <b>4.</b>
                         
-                        label
+                        标签 label
                     </a>
             
             
@@ -163,7 +163,7 @@
                         
                             <b>5.</b>
                         
-                        pagination
+                        分页 pagination
                     </a>
             
             
@@ -178,7 +178,7 @@
                         
                             <b>6.</b>
                         
-                        radio
+                        单选 radio
                     </a>
             
             
@@ -223,10 +223,10 @@
 <p>&#x6682;&#x65E0;</p>
 <h1 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h1>
 <div class="example-head">&#x57FA;&#x7840;&#x5206;&#x9875;</div>
-<div id="pagination" class="u-pagination">
+<div class="example-content"><div id="pagination" class="u-pagination">
 </div>
 
-<p><script>  var element = document.getElementById(&#39;pagination&#39;);
+<p>&lt;/div&gt;<script>  var element = document.getElementById(&#39;pagination&#39;);
   var comp = new u.pagination({ el: element, jumppage: true });
   comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });</p>
 <p>  this.comp.on(&#39;pageChange&#39;, function(pageIndex) {
@@ -251,10 +251,10 @@
   });
 </code></pre>
 <div class="example-head">有间距的分页</div>
-<div id='paginationGap' class='u-pagination pagination-gap'>
+<div class="example-content"><div id='paginationGap' class='u-pagination pagination-gap'>
 </div>
 
-<script> //有间距的分页
+</div><script> //有间距的分页
  var paginationGap = document.getElementById('paginationGap');
  var comp = new u.pagination({ el: paginationGap, jumppage: true });
  comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });
@@ -268,10 +268,10 @@
  comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });
 </code></pre>
 <div class="example-head">&#x65E0;&#x8FB9;&#x6846;&#x7684;&#x5206;&#x9875;</div>
-<div id="paginationNoBorder" class="u-pagination u-pagination-no-border">
+<div class="example-content"><div id="paginationNoBorder" class="u-pagination u-pagination-no-border">
 </div>
 
-<script> //无边框分页
+</div><script> //无边框分页
  var paginationNoBorder = document.getElementById('paginationNoBorder');
  var comp = new u.pagination({ el: paginationNoBorder, jumppage: true });
  comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });
@@ -285,7 +285,7 @@
  comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });
 </code></pre>
 <div class="example-head">&#x4E0D;&#x540C;&#x5C3A;&#x5BF8;&#x7684;&#x6309;&#x94AE;</div>
-</p><p>&#x5927;&#x5C3A;&#x5BF8;</p>
+<div class="example-content"><p>&#x5927;&#x5C3A;&#x5BF8;</p>
 <div id="paginationLg" class="u-pagination pagination-lg">
 </div>
 <p>&#x9ED8;&#x8BA4;&#x5C3A;&#x5BF8;</p>
@@ -295,7 +295,7 @@
 <div id="paginationSm" class="u-pagination pagination-sm">
 </div>
 
-<script>
+</div><script>
 //大尺寸分页
 var paginationLg = document.getElementById('paginationLg');
 var comp = new u.pagination({el:paginationLg,jumppage:true});
@@ -344,7 +344,7 @@ comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200,showState:
 ### 示例2
 
 示例2说-->
-<h1 id="api">API</h1>
+</p><h1 id="api">API</h1>
 <h2 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h2>
 <p>&#x6682;&#x65E0;
 &lt;!--### &#x5C5E;&#x6027;1</p>
@@ -357,7 +357,7 @@ comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200,showState:
 <p>&#x65B9;&#x6CD5;1&#x8BF4;&#x660E;</p>
 <h3 id="&#x65B9;&#x6CD5;2">&#x65B9;&#x6CD5;2</h3>
 <p>&#x65B9;&#x6CD5;2&#x8BF4;&#x660E;--&gt;</p>
-<div id='anchors-navbar'><i class='fa fa-anchor'></i><ul><li><a href='#分页控件'>分页控件</a></li><li><a href='#如何使用'>如何使用</a></li><li><a href='#示例'>示例</a></li><li><a href='#api'>API</a></li><ul><li><a href='#属性'>属性</a></li><ul><li><a href='#属性2'>属性2</a></li></ul><li><a href='#方法'>方法</a></li><ul><li><a href='#方法2'>方法2</a></li></ul></ul></ul></div><a href='#分页控件' id='goTop'><i class='fa fa-arrow-up'></i></a>
+</div><div id='anchors-navbar'><i class='fa fa-anchor'></i><ul><li><a href='#分页控件'>分页控件</a></li><li><a href='#如何使用'>如何使用</a></li><li><a href='#示例'>示例</a></li><li><a href='#api'>API</a></li><ul><li><a href='#属性'>属性</a></li><ul><li><a href='#属性2'>属性2</a></li></ul><li><a href='#方法'>方法</a></li><ul><li><a href='#方法2'>方法2</a></li></ul></ul></ul></div><a href='#分页控件' id='goTop'><i class='fa fa-arrow-up'></i></a>
                     
                     </section>
                 
@@ -367,10 +367,10 @@ comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200,showState:
         </div>
 
         
-        <a href="./label.html" class="navigation navigation-prev " aria-label="Previous page: label"><i class="fa fa-angle-left"></i></a>
+        <a href="./label.html" class="navigation navigation-prev " aria-label="Previous page: 标签 label"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./radio.html" class="navigation navigation-next " aria-label="Next page: radio"><i class="fa fa-angle-right"></i></a>
+        <a href="./radio.html" class="navigation navigation-next " aria-label="Next page: 单选 radio"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

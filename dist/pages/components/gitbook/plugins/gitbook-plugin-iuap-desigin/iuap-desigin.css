@@ -1,5 +1,9 @@
 .book .book-summary{
-    background:#fff;
+    position: fixed;
+    top: 80px;
+    bottom: 0px;
+    background:#f8f8f8;
+    border-right: 0px;
 }
 
 .book .book-summary ul.summary li.active>a{
@@ -15,13 +19,13 @@
 }
 
 .book .book-body .page-wrapper .page-inner{
-	max-width: 1000px;
-	margin: 0px 50px;
-	padding-bottom: 50px;
+    max-width: 1000px;
+    margin: 0px 50px;
+    padding-bottom: 50px;
 }
 
 .book .book-body .navigation{
-	height: 50px;
+    height: 50px;
     top: auto;
 }
 
@@ -37,24 +41,39 @@ html{
 
 .book .book-body, .book .book-body .body-inner{
     overflow-y: visible;
+    position:relative;
+    background: #f8f8f8;
 }
 
+.book .book-body .page-wrapper .page-inner section.normal{
+    background: #f8f8f8;
+}
 .book{
     height: auto;
 }
 
-.book .book-body, .book .book-body .body-inner{
-    position:relative;
+.book .book-body .page-wrapper .page-inner section.normal pre{
+    border: 1px solid #ddd;
 }
 
-.book .book-summary{
-    position: fixed;
-    top: 80px;
-    bottom: 0px;
+.example-content{
+    padding: 20px 30px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-bottom: 0px;
 }
+
 @media (min-width:600px){
     .book.with-summary .book-body{
         padding-left: 300px;
         left: 0px;
     }
 }
+
+.book .book-summary .book-search{
+    display: none;
+}
+
+body{
+    display: none;
+} 

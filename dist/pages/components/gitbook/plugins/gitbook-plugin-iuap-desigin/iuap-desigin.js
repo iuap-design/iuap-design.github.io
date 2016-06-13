@@ -12,7 +12,7 @@ require(['gitbook', 'jQuery', 'lodash'], function (gitbook, $, _) {
 			dataType: "html",
 			async: false,
 			success: function(data) {
-				data = data.replace(/dist/g,'../../').replace('<div class="nav-toggle" data-offcanvas="open"><i class="flaticon-list26"></i></div>','');
+				data = data.replace(/dist/g,'../..').replace('<div class="nav-toggle" data-offcanvas="open"><i class="flaticon-list26"></i></div>','');
 				$(document.body).prepend(data)
 			}
 		})
@@ -23,7 +23,7 @@ require(['gitbook', 'jQuery', 'lodash'], function (gitbook, $, _) {
 			dataType: "html",
 			async: false,
 			success: function(data) {
-				data = data.replace(/dist/g,'../../');
+				data = data.replace(/dist/g,'../..');
 				$(document.body).append(data)
 			}
 		})
@@ -85,6 +85,6 @@ require(['gitbook', 'jQuery', 'lodash'], function (gitbook, $, _) {
         $html.css('font-size','62.5%');
         /* 主体引入uui内容 */
 
-        
+        $('body').css('display','block');
 	});
 });
