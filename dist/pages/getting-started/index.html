@@ -1,0 +1,80 @@
+<!DOCTYPE html><html><head><title>开始使用</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        <div id="wmd-preview" class="preview-content"></div>
+                    <div id="wmd-preview-section-6278" class="wmd-preview-section preview-content">
+
+</div><div id="wmd-preview-section-6279" class="wmd-preview-section preview-content">
+
+<h2 id="开始使用">开始使用</h2>
+
+</div><div id="wmd-preview-section-6280" class="wmd-preview-section preview-content">
+
+<h3 id="1获取iuap-design">1.获取iuap-design</h3>
+
+<ul><li>直接从github获取我们的源码</li>
+</ul>
+
+</div><div id="wmd-preview-section-6281" class="wmd-preview-section preview-content">
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs crmsh"><span class="hljs-comment line-number">1.</span>git <span class="hljs-keyword">clone</span> <span class="hljs-title">git</span>@github.com:iuap-design/iuap-design.git<br></code></pre>
+
+<ul><li>使用CDN</li>
+</ul>
+
+</div><div id="wmd-preview-section-6282" class="wmd-preview-section preview-content">
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs crystal"><span class="hljs-comment line-number">1.</span><span class="hljs-symbol">http:</span>/<span class="hljs-regexp">/design.yyuap.com/static</span><span class="hljs-regexp">/iuap-design/</span><span class="hljs-number">3.0</span>.<span class="hljs-number">1</span>/js/u-ui.js<br><span class="hljs-comment line-number">2.</span><span class="hljs-symbol">http:</span>/<span class="hljs-regexp">/design.yyuap.com/static</span><span class="hljs-regexp">/iuap-design/</span><span class="hljs-number">3.0</span>.<span class="hljs-number">1</span>/js/u-polyfill.js<br><span class="hljs-comment line-number">3.</span><br><span class="hljs-comment line-number">4.</span><span class="hljs-symbol">http:</span>/<span class="hljs-regexp">/design.yyuap.com/static</span><span class="hljs-regexp">/iuap-design/</span><span class="hljs-number">3.0</span>.<span class="hljs-number">1</span>/css/u.css<br><span class="hljs-comment line-number">5.</span><span class="hljs-symbol">http:</span>/<span class="hljs-regexp">/design.yyuap.com/static</span><span class="hljs-regexp">/iuap-design/</span><span class="hljs-number">3.0</span>.<span class="hljs-number">1</span>/css/u-<span class="hljs-keyword">extend</span>.css<br></code></pre>
+
+<ul><li>使用npm安装</li>
+</ul>
+
+<p>暂未发布，敬请期待…</p>
+
+<ul><li>使用bower下载</li>
+</ul>
+
+<p>暂未发布，敬请期待…</p>
+
+</div><div id="wmd-preview-section-6283" class="wmd-preview-section preview-content">
+
+<h3 id="2版本说明">2.版本说明</h3>
+
+<p>当前iuap-design框架的版本为3.0.1。</p>
+
+</div><div id="wmd-preview-section-6284" class="wmd-preview-section preview-content">
+
+<h3 id="3目录及文件说明">3.目录及文件说明</h3>
+
+<p>提供的资源目录结构</p>
+
+</div><div id="wmd-preview-section-6285" class="wmd-preview-section preview-content">
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs stylus"><span class="hljs-comment line-number">1.</span>dist<br><span class="hljs-comment line-number">2.</span>│<br><span class="hljs-comment line-number">3.</span>├─css<br><span class="hljs-comment line-number">4.</span>│      <span class="hljs-attribute">font</span>-awesome<span class="hljs-class">.css</span><br><span class="hljs-comment line-number">5.</span>│      u-extend<span class="hljs-class">.css</span><br><span class="hljs-comment line-number">6.</span>│      u-extend<span class="hljs-class">.min</span><span class="hljs-class">.css</span><br><span class="hljs-comment line-number">7.</span>│      u<span class="hljs-class">.css</span><br><span class="hljs-comment line-number">8.</span>│      u<span class="hljs-class">.min</span><span class="hljs-class">.css</span><br><span class="hljs-comment line-number">9.</span>│<br><span class="hljs-comment line-number">10.</span>├─fonts<br><span class="hljs-comment line-number">11.</span>│      fontawesome-webfont<span class="hljs-class">.eot</span><br><span class="hljs-comment line-number">12.</span>│      fontawesome-webfont<span class="hljs-class">.svg</span><br><span class="hljs-comment line-number">13.</span>│      fontawesome-webfont<span class="hljs-class">.ttf</span><br><span class="hljs-comment line-number">14.</span>│      fontawesome-webfont<span class="hljs-class">.woff</span><br><span class="hljs-comment line-number">15.</span>│      fontawesome-webfont<span class="hljs-class">.woff2</span><br><span class="hljs-comment line-number">16.</span>│      FontAwesome<span class="hljs-class">.otf</span><br><span class="hljs-comment line-number">17.</span>│<br><span class="hljs-comment line-number">18.</span>└─js<br><span class="hljs-comment line-number">19.</span>        u-polyfill<span class="hljs-class">.js</span><br><span class="hljs-comment line-number">20.</span>        u-polyfill<span class="hljs-class">.min</span><span class="hljs-class">.js</span><br><span class="hljs-comment line-number">21.</span>        u-ui<span class="hljs-class">.js</span><br><span class="hljs-comment line-number">22.</span>        u-ui<span class="hljs-class">.min</span><span class="hljs-class">.js</span><br><span class="hljs-comment line-number">23.</span><br><span class="hljs-comment line-number">24.</span><br></code></pre>
+
+</div><div id="wmd-preview-section-6286" class="wmd-preview-section preview-content">
+
+<h3 id="4快速创建一个页面">4.快速创建一个页面</h3>
+
+</div><div id="wmd-preview-section-6287" class="wmd-preview-section preview-content">
+
+<pre class="prettyprint with-line-number hljs-dark"><code class="hljs xml"><span class="hljs-comment line-number">1.</span><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span><br><span class="hljs-comment line-number">2.</span><span class="hljs-tag">&lt;<span class="hljs-title">html</span> <span class="hljs-attribute">lang</span>=<span class="hljs-value">"en"</span>&gt;</span><br><span class="hljs-comment line-number">3.</span><span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span><br><span class="hljs-comment line-number">4.</span>  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"UTF-8"</span>&gt;</span><br><span class="hljs-comment line-number">5.</span>  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">http-equiv</span>=<span class="hljs-value">"X-UA-Compatible"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"IE=edge"</span>&gt;</span><br><span class="hljs-comment line-number">6.</span>  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"description"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">""</span>&gt;</span><br><span class="hljs-comment line-number">7.</span>  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"keywords"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">""</span>&gt;</span><br><span class="hljs-comment line-number">8.</span>  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"viewport"</span><br><span class="hljs-comment line-number">9.</span>        <span class="hljs-attribute">content</span>=<span class="hljs-value">"width=device-width, initial-scale=1"</span>&gt;</span><br><span class="hljs-comment line-number">10.</span>  <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>iUAP Design Demo<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span><br><span class="hljs-comment line-number">11.</span><br><span class="hljs-comment line-number">12.</span>  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"renderer"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"webkit"</span>&gt;</span><br><span class="hljs-comment line-number">13.</span>  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">http-equiv</span>=<span class="hljs-value">"Cache-Control"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"no-siteapp"</span>/&gt;</span><br><span class="hljs-comment line-number">14.</span>  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"mobile-web-app-capable"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"yes"</span>&gt;</span><br><span class="hljs-comment line-number">15.</span>  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"apple-mobile-web-app-capable"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"yes"</span>&gt;</span><br><span class="hljs-comment line-number">16.</span>  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"apple-mobile-web-app-status-bar-style"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"black"</span>&gt;</span><br><span class="hljs-comment line-number">17.</span>  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"apple-mobile-web-app-title"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"iUAP Design"</span>/&gt;</span><br><span class="hljs-comment line-number">18.</span>  <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://design.yyuap.com/static/iuap-design/3.0.1/css/u.css"</span>&gt;</span><br><span class="hljs-comment line-number">19.</span><span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span><br><span class="hljs-comment line-number">20.</span><span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span><br><span class="hljs-comment line-number">21.</span>  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span> Hi, iUAP Design <span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span><br><span class="hljs-comment line-number">22.</span><br><span class="hljs-comment line-number">23.</span>  <span class="hljs-comment">&lt;!-- 你的代码 --&gt;</span><br><span class="hljs-comment line-number">24.</span><br><span class="hljs-comment line-number">25.</span>  <span class="hljs-comment">&lt;!--[if (gte IE 9)|!(IE)]&gt;&lt;!--&gt;</span><br><span class="hljs-comment line-number">26.</span>  <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://libs.baidu.com/jquery/1.11.3/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span><br><span class="hljs-comment line-number">27.</span>  <span class="hljs-comment">&lt;!--&lt;![endif]--&gt;</span><br><span class="hljs-comment line-number">28.</span>  <span class="hljs-comment">&lt;!--[if lte IE 8 ]&gt;<br><span class="hljs-comment line-number">29.</span>  &lt;script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"&gt;&lt;/script&gt;<br><span class="hljs-comment line-number">30.</span>  &lt;script src="http://design.yyuap.com/static/iuap-design/3.0.1/js/u-polyfill.js"&gt;&lt;/script&gt;<br><span class="hljs-comment line-number">31.</span>  &lt;![endif]--&gt;</span><br><span class="hljs-comment line-number">32.</span>  <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://design.yyuap.com/static/iuap-design/3.0.1/js/u-ui.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span><br><span class="hljs-comment line-number">33.</span><span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span><br><span class="hljs-comment line-number">34.</span><span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span><br></code></pre>
+
+</div><div id="wmd-preview-section-6288" class="wmd-preview-section preview-content">
+
+<h3 id="5开发文档">5.开发文档</h3>
+
+<p>开发文档详见<a href="https://github.com/iuap-design/iuap-design/tree/master/docs" target="_blank">这里</a>。</p>
+
+<p>更多内容请移步我们的<a href="http://design.yyuap.com/" target="_blank">官网</a></p>
+
+</div><div id="wmd-preview-section-6289" class="wmd-preview-section preview-content">
+
+<h3 id="6参与讨论和开发">6.参与讨论和开发</h3>
+
+<p>如在使用过程中遇到任何问题，可以在<a href="https://github.com/iuap-design/iuap-design/issues" target="_blank">这里</a>提交issue反馈；</p>
+
+<p>或者直接fork代码到你的github仓库，提交pull request给我们。</p>
+
+<p>有紧急问题可以直接邮件给我（Email：guoyff@yonyou.com）</p></div><div id="wmd-preview-section-footnotes" class="preview-content"></div></div></body></html>
