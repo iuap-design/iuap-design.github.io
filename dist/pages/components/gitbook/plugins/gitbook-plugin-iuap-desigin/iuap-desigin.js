@@ -12,7 +12,7 @@ require(['gitbook', 'jQuery', 'lodash'], function (gitbook, $, _) {
 			dataType: "html",
 			async: false,
 			success: function(data) {
-				data = data.replace(/dist/g,'../../').replace('<div class="nav-toggle" data-offcanvas="open"><i class="flaticon-list26"></i></div>','');
+				data = data.replace(/dist/g,'../..').replace('<div class="nav-toggle" data-offcanvas="open"><i class="flaticon-list26"></i></div>','');
 				$(document.body).prepend(data)
 			}
 		})
@@ -23,7 +23,7 @@ require(['gitbook', 'jQuery', 'lodash'], function (gitbook, $, _) {
 			dataType: "html",
 			async: false,
 			success: function(data) {
-				data = data.replace(/dist/g,'../../');
+				data = data.replace(/dist/g,'../..');
 				$(document.body).append(data)
 			}
 		})
@@ -47,6 +47,10 @@ require(['gitbook', 'jQuery', 'lodash'], function (gitbook, $, _) {
 
 		var $summaryAB = $('a b',$summary); 
 		$summaryAB.remove();// 去掉目录的编号
+		var $bookSearch = $('.book-search');
+		setTimeout(function(){
+			$bookSearch.remove();	
+		},1000); //删除查询
 		/* 左侧目录修改 end */
 
 		/* 右侧主体修改 begin */
@@ -85,6 +89,6 @@ require(['gitbook', 'jQuery', 'lodash'], function (gitbook, $, _) {
         $html.css('font-size','62.5%');
         /* 主体引入uui内容 */
 
-        
+        $('body').css('display','block');
 	});
 });

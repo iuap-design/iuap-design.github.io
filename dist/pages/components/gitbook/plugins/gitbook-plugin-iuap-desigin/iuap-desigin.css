@@ -15,13 +15,13 @@
 }
 
 .book .book-body .page-wrapper .page-inner{
-	max-width: 1000px;
-	margin: 0px 50px;
-	padding-bottom: 50px;
+    max-width: 1000px;
+    margin: 0px 50px;
+    padding-bottom: 50px;
 }
 
 .book .book-body .navigation{
-	height: 50px;
+    height: 50px;
     top: auto;
 }
 
@@ -57,4 +57,8 @@ html{
         padding-left: 300px;
         left: 0px;
     }
+}
+
+.book .book-summary .book-search{
+    display: none;
 }
