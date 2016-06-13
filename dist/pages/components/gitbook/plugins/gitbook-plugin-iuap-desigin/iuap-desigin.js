@@ -47,10 +47,6 @@ require(['gitbook', 'jQuery', 'lodash'], function (gitbook, $, _) {
 
 		var $summaryAB = $('a b',$summary); 
 		$summaryAB.remove();// 去掉目录的编号
-		var $bookSearch = $('.book-search');
-		setTimeout(function(){
-			$bookSearch.remove();	
-		},1000); //删除查询
 		/* 左侧目录修改 end */
 
 		/* 右侧主体修改 begin */
