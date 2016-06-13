@@ -119,7 +119,9 @@ u.extend(u, {
 				//火狐下有问题修改判断
 				if (!e) e = typeof event != 'undefined' && event ? event : window.event;
 				element["uEvent"][eventName].forEach(function (fn) {
+					try{
 					e.target = e.target || e.srcElement; //兼容IE8
+					}catch(e){}
 					if (fn) fn.call(element, e);
 				});
 			};

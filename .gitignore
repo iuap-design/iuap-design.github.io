@@ -87,6 +87,7 @@ build/Release
 
 # Dependency directory
 node_modules
+docs/_book
 
 # Optional npm cache directory
 .npm
