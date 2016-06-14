@@ -7,7 +7,7 @@
     "dev": "node server/app.js",
     "fetch": "sh src/fetch.sh",
     "build:res": "cd src && gulp && cd ../",
-    "build:book": "cd docs && gitbook build "
+    "build:book": "gitbook build --output=dist/pages "
   },
   "repository": {
     "type": "git",
