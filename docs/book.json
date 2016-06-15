@@ -5,7 +5,7 @@
   	"githubHost": "https://github.com/iuap-design/iuap-design",
 	"title":"iUAP Design",
 	"description":"UI Framework For Enterprise",
-	"output": "../dist/pages",
+	"output": "../dist/pages/gitbook",
 	"language":"zh-hans",
 	"plugins":[
 		"iuap-desigin",
@@ -15,18 +15,7 @@
 		"-livereload",
 	],
 	"pluginsConfig": {
-		"fontsettings": {
-      		"theme": "sepia",
-      		"family": "serif",
-      		"size":  1
-	    },
-		"disqus": {
-	      	"shortName": "gitbookuse"
-	    },
-		"search-pro": {
-	      	"cutWordLib": "nodejieba",
-	      	"defineWord" : ["Gitbook Use"]
-		}
+		
 	},
 	"styles": {
 		"website": ""
