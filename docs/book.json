@@ -10,12 +10,9 @@
 	"plugins":[
 		"iuap-desigin",
 		"anchor-navigation",
-		"-search",
-		"disqus",
-		"-livereload",
-		"splitter",
-		"toggle-chapters",
 		"expandable-chapters"
+		"-search",
+		"-livereload",
 	],
 	"pluginsConfig": {
 		"fontsettings": {
