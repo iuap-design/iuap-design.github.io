@@ -5,7 +5,6 @@
 	"githubHost": "https://github.com/iuap-design/iuap-design",
 	"title":"iUAP Design",
 	"description":"UI Framework For Enterprise",
-	"output": "../dist/pages/docs",
 	"language":"zh-hans",
 	"plugins":[
 		"iuap-design",

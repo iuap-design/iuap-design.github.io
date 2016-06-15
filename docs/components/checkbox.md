@@ -8,7 +8,8 @@ checkbox
 
 # 示例
 
-<div class="example-head">基础checkbox</div>
+
+基础checkbox
 <div class="example-content"><p>已选checkbox</p>
 <label  class="u-checkbox w-64">
     <input type="checkbox" class="u-checkbox-input" checked>
@@ -30,7 +31,8 @@ checkbox
     <input type="checkbox" class="u-checkbox-input" disabled checked>
     <span class="u-checkbox-label">Checkbox</span>
 </label>
-</div><pre><code>&lt;p>已选checkbox&lt;/p>
+</div>
+<div class="examples-code"><pre><code>&lt;p>已选checkbox&lt;/p>
 &lt;label  class="u-checkbox w-64">
     &lt;input type="checkbox" class="u-checkbox-input" checked>
     &lt;span class="u-checkbox-label">Checkbox&lt;/span>
@@ -51,7 +53,9 @@ checkbox
     &lt;input type="checkbox" class="u-checkbox-input" disabled checked>
     &lt;span class="u-checkbox-label">Checkbox&lt;/span>
 &lt;/label></code></pre>
-<div class="example-head">图片checkbox</div>
+</div>
+
+图片checkbox
 <div class="example-content"><label  class="u-checkbox w-64">
     <input type="checkbox" class="u-checkbox-input" checked>
     <span class="u-checkbox-label"><img src="../static/checkbox-1.png" height="30" width="30"></span>
@@ -62,7 +66,8 @@ checkbox
     <input type="checkbox" class="u-checkbox-input" >
     <span class="u-checkbox-label"><img src="../static/checkbox-2.png" height="30" width="30"></span>
 </label>
-</div><pre><code>&lt;label  class="u-checkbox w-64">
+</div>
+<div class="examples-code"><pre><code>&lt;label  class="u-checkbox w-64">
     &lt;input type="checkbox" class="u-checkbox-input" checked>
     &lt;span class="u-checkbox-label">&lt;img src="../static/checkbox-1.png" height="30" width="30">&lt;/span>
 &lt;/label>
@@ -72,7 +77,9 @@ checkbox
     &lt;input type="checkbox" class="u-checkbox-input" >
     &lt;span class="u-checkbox-label">&lt;img src="../static/checkbox-2.png" height="30" width="30">&lt;/span>
 &lt;/label></code></pre>
-<div class="example-head">个性的checkbox</div>
+</div>
+
+个性的checkbox
 <style>.u-checkbox-labelauty {
     width: auto;
     height: 32px;
@@ -135,11 +142,13 @@ checkbox
     -webkit-transition: all .2s cubic-bezier(.12,.4,.29,1.46) .1s;
     transition: all .2s cubic-bezier(.12,.4,.29,1.46) .1s;
 }
-</style><div class="example-content"><label  class="u-checkbox u-checkbox-labelauty">
+</style>
+<div class="example-content"><label  class="u-checkbox u-checkbox-labelauty">
     <input type="checkbox" class="u-checkbox-input" checked>
     <span class="u-checkbox-label">30天免息</span>
 </label>
-</div><pre><code>.u-checkbox-labelauty {
+</div>
+<div class="examples-code"><pre><code>.u-checkbox-labelauty {
     width: auto;
     height: 32px;
     padding: 2px 8px;
@@ -201,11 +210,14 @@ checkbox
     -webkit-transition: all .2s cubic-bezier(.12,.4,.29,1.46) .1s;
     transition: all .2s cubic-bezier(.12,.4,.29,1.46) .1s;
 }</code></pre>
-<pre><code>&lt;label  class="u-checkbox u-checkbox-labelauty">
+</div>
+<div class="examples-code"><pre><code>&lt;label  class="u-checkbox u-checkbox-labelauty">
     &lt;input type="checkbox" class="u-checkbox-input" checked>
     &lt;span class="u-checkbox-label">30天免息&lt;/span>
 &lt;/label></code></pre>
-<div class="example-head">不同颜色的checkbox</div>
+</div>
+
+不同颜色的checkbox
 <div class="example-content"><label  class="u-checkbox u-checkbox-success w-64">
     <input type="checkbox" class="u-checkbox-input"  checked>
     <span class="u-checkbox-label">green</span>
@@ -227,7 +239,8 @@ checkbox
     <input type="checkbox" class="u-checkbox-input"  checked>
     <span class="u-checkbox-label">grey</span>
 </label>
-</div><pre><code>&lt;label  class="u-checkbox u-checkbox-success w-64">
+</div>
+<div class="examples-code"><pre><code>&lt;label  class="u-checkbox u-checkbox-success w-64">
     &lt;input type="checkbox" class="u-checkbox-input"  checked>
     &lt;span class="u-checkbox-label">green&lt;/span>
 &lt;/label>
@@ -248,6 +261,7 @@ checkbox
     &lt;input type="checkbox" class="u-checkbox-input"  checked>
     &lt;span class="u-checkbox-label">grey&lt;/span>
 &lt;/label></code></pre>
+</div>
 
 
 <!--### 示例1

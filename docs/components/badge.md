@@ -1,18 +1,23 @@
 # 徽章控件
 
-徽章控件
+徽章控件主要包括不同色彩的徽章、含有图标的徽章。
 
 # 如何使用
 
-暂无
+添加含有“u-badge”就可以创建一个徽章，徽章的内容在data-badge中设置。
 
 # 示例
 
-<div class="example-head">不同颜色的badge 使用7个基础类。例如.badge-success或 .badge，配色情感含义与之前颜色样式版中的涵义相同。</div>
+
+﻿##不同颜色的badge
+
+
+使用“u-badge-primary”、“u-badge-success”、“u-badge-info”、“u-badge-warning”、“u-badge-danger”、“u-badge-dark”这七个个基础类，来显示不同的颜色。
 <style>.demo .u-badge{
     display: inline-block;
 }
-</style><div class="example-content"><label class="u-badge u-badge-primary" data-badge="1">
+</style>
+<div class="example-content"><label class="u-badge u-badge-primary" data-badge="1">
 </label>
 <label class="u-badge u-badge-success" data-badge="1">
 </label>
@@ -24,11 +29,12 @@
 </label>
 <label class="u-badge u-badge-dark" data-badge="1">
 </label>
-
-</div><pre><code>.demo .u-badge{
+</div>
+<div class="examples-code"><pre><code>.demo .u-badge{
     display: inline-block;
 }</code></pre>
-<pre><code>&lt;label class="u-badge u-badge-primary" data-badge="1">
+</div>
+<div class="examples-code"><pre><code>&lt;label class="u-badge u-badge-primary" data-badge="1">
 &lt;/label>
 &lt;label class="u-badge u-badge-success" data-badge="1">
 &lt;/label>
@@ -39,59 +45,33 @@
 &lt;label class="u-badge u-badge-danger" data-badge="1">
 &lt;/label>
 &lt;label class="u-badge u-badge-dark" data-badge="1">
-&lt;/label>
-</code></pre>
-<div class="example-head">含有icon的badge</div>
+&lt;/label></code></pre>
+</div>
+
+﻿##绝对定位标记
+
+
+用于推送消息或提醒时，在标签dom元素中添加添加具体的图标即可。
 <style>.demo .u-badge{
     display: inline-block;
 }
-</style><div class="example-content"><div class="u-badge w-20 m" data-badge="1">
+</style>
+<div class="example-content"><div class="u-badge w-20 m" data-badge="1">
     <i class="fa fa-bell"></i>
 </div>
 <div class="u-badge u-badge-no-background w-20 m" data-badge="1">
     <i class="fa fa-bell"></i>
 </div>
-
-</div><pre><code>.demo .u-badge{
+</div>
+<div class="examples-code"><pre><code>.demo .u-badge{
     display: inline-block;
 }</code></pre>
-<pre><code>&lt;div class="u-badge w-20 m" data-badge="1">
+</div>
+<div class="examples-code"><pre><code>&lt;div class="u-badge w-20 m" data-badge="1">
     &lt;i class="fa fa-bell">&lt;/i>
 &lt;/div>
 &lt;div class="u-badge u-badge-no-background w-20 m" data-badge="1">
     &lt;i class="fa fa-bell">&lt;/i>
-&lt;/div>
-</code></pre>
+&lt;/div></code></pre>
+</div>
 
-
-<!--### 示例1
-
-示例1说明
-
-### 示例2
-
-示例2说-->
-
-# API
-
-## 属性
-
-暂无
-<!--### 属性1
-
-属性1说明
-
-### 属性2
-
-属性2说明-->
-
-## 方法
-
-暂无
-<!--### 方法1
-
-方法1说明
-
-### 方法2
-
-方法2说明-->
