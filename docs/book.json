@@ -3,11 +3,11 @@
 	"extension": null,
 	"github": null,
 	"githubHost": "https://github.com/iuap-design/iuap-design",
-	"title": "iUAP Design",
-	"description": "UI Framework For Enterprise",
-	"output": "../dist/pages",
-	"language": "zh-hans",
-	"plugins": [
+	"title":"iUAP Design",
+	"description":"UI Framework For Enterprise",
+	"output": "../dist/pages/docs",
+	"language":"zh-hans",
+	"plugins":[
 		"iuap-desigin",
 		"anchor-navigation",
 		"expandable-chapters",
