@@ -5,14 +5,14 @@
   	"githubHost": "https://github.com/iuap-design/iuap-design",
 	"title":"iUAP Design",
 	"description":"UI Framework For Enterprise",
-	"output": "../dist/pages/gitbook",
+	"output": "../dist/pages",
 	"language":"zh-hans",
 	"plugins":[
 		"iuap-desigin",
 		"anchor-navigation",
 		"expandable-chapters",
 		"-search",
-		"-livereload",
+		"-livereload"
 	],
 	"pluginsConfig": {
 		
