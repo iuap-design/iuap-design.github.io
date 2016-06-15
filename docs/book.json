@@ -6,6 +6,7 @@
 	"title":"iUAP Design",
 	"description":"UI Framework For Enterprise",
 	"language":"zh-hans",
+	"output": "../dist/pages/docs",
 	"plugins":[
 		"iuap-design",
 		"anchor-navigation",
