@@ -6,12 +6,12 @@ _site
 Thumbs.db
 ehthumbs.db
 
-src/datatable
-src/iuap-design
-src/tree
-src/grid
-src/datetimepicker
-src/dist
+bin/datatable
+bin/iuap-design
+bin/tree
+bin/grid
+bin/datetimepicker
+bin/dist
 
 # Folder config file
 Desktop.ini

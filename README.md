@@ -23,11 +23,10 @@ iUAP Deisgn 的官网
 │  │      ├─libs
 │  │      └─plugins
 │  └─vendor 第三方类库或框架
-├─docs MD文档源码
+├─docs MD文档源码，使用Gitbook构建
 ├─server web服务目录
-│  └─mailer
 ├─snippets 所有的代码片段
-└─src 待构建的源代码
+└─res 待构建的源代码
     ├─compatible
     ├─core
     ├─model
@@ -72,11 +71,11 @@ git pull origin master
 到src目录下执行脚本获取所有工程的源码
 
 ```
-cd src && sh fetch.sh
+cd bin && sh fetch.sh
 ```
 
 构建产出各版本资源
 
 ```
-cd src && gulp
+gulp
 ```
