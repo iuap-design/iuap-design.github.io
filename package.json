@@ -23,7 +23,7 @@
     "gitbook-cli": "^2.2.0",
     "gitbook-plugin-anchor-navigation": "0.0.1",
     "gitbook-plugin-expandable-chapters": "^0.1.7",
-    "gitbook-plugin-iuap-desigin": "^1.0.3",
+    "gitbook-plugin-iuap-design": "^1.0.4",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-base64": "^0.1.3",

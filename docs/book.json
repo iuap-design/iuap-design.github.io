@@ -8,7 +8,7 @@
 	"output": "../dist/pages/docs",
 	"language":"zh-hans",
 	"plugins":[
-		"iuap-desigin",
+		"iuap-design",
 		"anchor-navigation",
 		"expandable-chapters",
 		"-search",
