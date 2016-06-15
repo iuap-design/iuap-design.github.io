@@ -10,7 +10,7 @@
 	"plugins":[
 		"iuap-desigin",
 		"anchor-navigation",
-		"expandable-chapters"
+		"expandable-chapters",
 		"-search",
 		"-livereload",
 	],
