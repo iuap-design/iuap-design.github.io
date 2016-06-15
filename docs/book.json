@@ -1,34 +1,31 @@
 {
-  	"generator": "site",
-  	"extension": null,
-  	"github": null,
-  	"githubHost": "https://github.com/iuap-design/iuap-design",
-	"title":"iUAP Design",
-	"description":"UI Framework For Enterprise",
+	"generator": "site",
+	"extension": null,
+	"github": null,
+	"githubHost": "https://github.com/iuap-design/iuap-design",
+	"title": "iUAP Design",
+	"description": "UI Framework For Enterprise",
 	"output": "../dist/pages",
-	"language":"zh-hans",
-	"plugins":[
+	"language": "zh-hans",
+	"plugins": [
 		"iuap-desigin",
 		"anchor-navigation",
-		"expandable-chapters"
+		"expandable-chapters",
 		"-search",
-		"-livereload",
+		"-livereload"
 	],
 	"pluginsConfig": {
 		"fontsettings": {
-      		"theme": "sepia",
-      		"family": "serif",
-      		"size":  1
-	    },
+  		"theme": "sepia",
+  		"family": "serif",
+  		"size": 1
+    },
 		"disqus": {
-	      	"shortName": "gitbookuse"
-	    },
+      "shortName": "gitbookuse"
+    },
 		"search-pro": {
-	      	"cutWordLib": "nodejieba",
-	      	"defineWord" : ["Gitbook Use"]
+    	"cutWordLib": "nodejieba",
+    	"defineWord" : ["Gitbook Use"]
 		}
-	},
-	"styles": {
-		"website": ""
 	}
 }
