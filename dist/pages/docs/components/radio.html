@@ -61,7 +61,7 @@
         data-chapter-title="单选 radio"
         data-filepath="components/radio.md"
         data-basepath=".."
-        data-revision="Wed Jun 15 2016 16:37:48 GMT+0800 (中国标准时间)"
+        data-revision="Thu Jun 16 2016 06:51:53 GMT+0800 (中国标准时间)"
         data-innerlanguage="">
     
 
@@ -229,11 +229,24 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="radio&#x63A7;&#x4EF6;">radio&#x63A7;&#x4EF6;</h1>
-<p>radio</p>
+<p>radio&#x63D0;&#x4F9B;&#x4E86;&#x57FA;&#x672C;&#x7684;&#x5355;&#x9009;&#x6846;&#x548C;&#x4E0D;&#x540C;&#x8272;&#x5F69;&#x7684;&#x5355;&#x9009;&#x6846;</p>
 <h1 id="&#x5982;&#x4F55;&#x4F7F;&#x7528;">&#x5982;&#x4F55;&#x4F7F;&#x7528;</h1>
-<p>&#x6682;&#x65E0;</p>
-<h1 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h1>
-<p>&#x57FA;&#x7840;radio</p>
+<p>1&#x3001;&#x521B;&#x5EFA;&#x542B;&#x6709;&#x201C;u-radio&#x201D;&#x6837;&#x5F0F;&#x7684;label&#x5143;&#x7D20;&#xFF0C;&#x5E76;&#x6DFB;&#x52A0;id&#x5C5E;&#x6027;&#xFF0C;for&#x7684;&#x5C5E;&#x6027;&#x503C;&#x7528;&#x4E8E;&#x6807;&#x8BB0;&#x552F;&#x4E00;&#x7684;radio&#x3002;</p>
+<pre><code>&lt;label  class=&quot;u-radio&quot; for=&quot;option-1&quot;&gt;
+&lt;/label&gt;
+</code></pre><p>2&#x3001;&#x5728;&#x7B2C;&#x4E00;&#x6B65;&#x4E2D;label&#x5143;&#x7D20;&#x5185;&#x521B;&#x5EFA;type&#x4E3A;radio&#x7684;&#x8F93;&#x5165;&#x6846;&#xFF0C;&#x5E76;&#x4E14;&#x8F93;&#x5165;&#x6846;&#x7684;&#x6837;&#x5F0F;&#x4E3A;&#x201C;u-radio-button&#x201D;&#xFF0C;&#x6DFB;&#x52A0;for&#x5C5E;&#x6027;&#xFF0C;&#x5C5E;&#x6027;&#x503C;
+&#x8981;&#x4E0E;lable&#x4E2D;&#x7684;for&#x5C5E;&#x6027;&#x503C;&#x4E00;&#x81F4;&#x3002;</p>
+<pre><code> &lt;label  class=&quot;u-radio&quot; for=&quot;option-1&quot;&gt;
+    &lt;input type=&quot;radio&quot; id=&quot;option-1&quot; class=&quot;u-radio-button&quot; name=&quot;options&quot; value=&quot;1&quot; checked&gt;
+&lt;/label&gt;
+</code></pre><p>3&#x3001;&#x5728;&#x7B2C;&#x4E00;&#x6B65;&#x4E2D;label&#x5143;&#x7D20;&#x5185;&#x521B;&#x5EFA;&#x542B;&#x6709;&#x201C;u-radio-label&#x201D;&#x6837;&#x5F0F;&#x7684;span&#x5143;&#x7D20;&#x7528;&#x4E8E;&#x63CF;&#x8FF0;radio&#x7684;&#x5185;&#x5BB9;</p>
+<pre><code>&lt;label  class=&quot;u-radio&quot; for=&quot;option-1&quot;&gt;
+    &lt;input type=&quot;radio&quot; id=&quot;option-1&quot; class=&quot;u-radio-button&quot; name=&quot;options&quot; value=&quot;1&quot; checked&gt;
+    &lt;span class=&quot;u-radio-label&quot;&gt;First&lt;/span&gt;
+&lt;/label&gt;
+</code></pre><h1 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h1>
+<h2 id="&#x57FA;&#x7840;radio">&#x57FA;&#x7840;radio</h2>
+<p>&#x5728;&#x5355;&#x9009;&#x6846;&#x4E2D;input&#x5143;&#x7D20;&#x6DFB;&#x52A0;&#x201C;checked&#x201D;&#x3001;&#x201C;disabled&#x201D;&#x6765;&#x5B9E;&#x73B0;&#x9009;&#x4E2D;&#x548C;&#x4E0D;&#x53EF;&#x7528;&#x6548;&#x679C;</p>
 <div class="example-content"><p>&#x53EF;&#x7528;&#x672A;&#x9009;radio</p>
 <label class="u-radio" for="option-1">
     <input type="radio" id="option-1" class="u-radio-button" name="options" value="1">
@@ -277,7 +290,8 @@
 &lt;/label&gt;</code></pre>
 </div>
 
-<p>&#x4E0D;&#x540C;&#x8272;&#x5F69;radio</p>
+<h2 id="&#x4E0D;&#x540C;&#x8272;&#x5F69;radio">&#x4E0D;&#x540C;&#x8272;&#x5F69;radio</h2>
+<p>&#x5728;&#x5355;&#x9009;&#x6846;&#x4E2D;label&#x91CC;&#x9762;&#x6DFB;&#x52A0;&#x201C; u-radio-success&#x201D;&#x3001;&#x201C;u-radio-info&#x201D;&#x3001;&#x201C;u-radio-warning&#x201D;&#x3001;&#x201C;u-radio-danger&#x201D;&#x3001;&#x201C;u-radio-dark&#x201D;&#x6837;&#x5F0F;&#x6765;&#x5B9E;&#x73B0;&#x4E0D;&#x540C;&#x8272;&#x5F69;&#x7684;&#x5355;&#x9009;&#x6846;</p>
 <div class="example-content"><label class="u-radio u-radio-success">
     <input type="radio" class="u-radio-button" checked>
     <span class="u-radio-label">green</span>
@@ -322,27 +336,9 @@
 </div>
 
 
-<!--### 示例1
 
-示例1说明
 
-### 示例2
-
-示例2说-->
-<h1 id="api">API</h1>
-<h2 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h2>
-<p>&#x6682;&#x65E0;
-&lt;!--### &#x5C5E;&#x6027;1</p>
-<p>&#x5C5E;&#x6027;1&#x8BF4;&#x660E;</p>
-<h3 id="&#x5C5E;&#x6027;2">&#x5C5E;&#x6027;2</h3>
-<p>&#x5C5E;&#x6027;2&#x8BF4;&#x660E;--&gt;</p>
-<h2 id="&#x65B9;&#x6CD5;">&#x65B9;&#x6CD5;</h2>
-<p>&#x6682;&#x65E0;
-&lt;!--### &#x65B9;&#x6CD5;1</p>
-<p>&#x65B9;&#x6CD5;1&#x8BF4;&#x660E;</p>
-<h3 id="&#x65B9;&#x6CD5;2">&#x65B9;&#x6CD5;2</h3>
-<p>&#x65B9;&#x6CD5;2&#x8BF4;&#x660E;--&gt;</p>
-<div id='anchors-navbar'><i class='fa fa-anchor'></i><ul><li><a href='#radio控件'>radio控件</a></li><li><a href='#如何使用'>如何使用</a></li><li><a href='#示例'>示例</a></li><li><a href='#api'>API</a></li><ul><li><a href='#属性'>属性</a></li><ul><li><a href='#属性2'>属性2</a></li></ul><li><a href='#方法'>方法</a></li><ul><li><a href='#方法2'>方法2</a></li></ul></ul></ul></div><a href='#radio控件' id='goTop'><i class='fa fa-arrow-up'></i></a>
+<div id='anchors-navbar'><i class='fa fa-anchor'></i><ul><li><a href='#radio控件'>radio控件</a></li><li><a href='#如何使用'>如何使用</a></li><li><a href='#示例'>示例</a></li><ul><li><a href='#基础radio'>基础radio</a></li><li><a href='#不同色彩radio'>不同色彩radio</a></li></ul></ul></div><a href='#radio控件' id='goTop'><i class='fa fa-arrow-up'></i></a>
                     
                     </section>
                 
