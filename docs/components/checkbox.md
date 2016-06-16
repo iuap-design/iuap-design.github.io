@@ -24,6 +24,78 @@ checkbox提供了基础复选框、不同色彩复选框、图片复选框、个
 # 示例
 
 
+##图片checkbox
+在“u-checkbox-label”的span中添加图片说明即可。
+<div class="example-content"><label  class="u-checkbox w-64">
+    <input type="checkbox" class="u-checkbox-input" checked>
+    <span class="u-checkbox-label"><img src="../static/checkbox-1.png" height="30" width="30"></span>
+</label>
+
+
+<label  class="u-checkbox w-64">
+    <input type="checkbox" class="u-checkbox-input" >
+    <span class="u-checkbox-label"><img src="../static/checkbox-2.png" height="30" width="30"></span>
+</label>
+</div>
+<div class="examples-code"><pre><code>&lt;label  class="u-checkbox w-64">
+    &lt;input type="checkbox" class="u-checkbox-input" checked>
+    &lt;span class="u-checkbox-label">&lt;img src="../static/checkbox-1.png" height="30" width="30">&lt;/span>
+&lt;/label>
+
+
+&lt;label  class="u-checkbox w-64">
+    &lt;input type="checkbox" class="u-checkbox-input" >
+    &lt;span class="u-checkbox-label">&lt;img src="../static/checkbox-2.png" height="30" width="30">&lt;/span>
+&lt;/label></code></pre>
+</div>
+
+##不同颜色的checkbox
+在复选框中label里面添加“ u-checkbox-success”、“u-checkbox-info”、“u-checkbox-warning”、“u-checkbox-danger”、“u-checkbox-dark”样式来实现不同色彩的复选框
+<div class="example-content"><label  class="u-checkbox u-checkbox-success w-64">
+    <input type="checkbox" class="u-checkbox-input"  checked>
+    <span class="u-checkbox-label">green</span>
+</label>
+
+<label  class="u-checkbox u-checkbox-info w-64">
+    <input type="checkbox" class="u-checkbox-input"  checked>
+    <span class="u-checkbox-label">blue</span>
+</label>
+<label  class="u-checkbox u-checkbox-warning w-64">
+    <input type="checkbox" class="u-checkbox-input"  checked>
+    <span class="u-checkbox-label">yellow</span>
+</label>
+<label  class="u-checkbox u-checkbox-danger w-64">
+    <input type="checkbox" class="u-checkbox-input"  checked>
+    <span class="u-checkbox-label">red</span>
+</label>
+<label  class="u-checkbox u-checkbox-dark w-64">
+    <input type="checkbox" class="u-checkbox-input"  checked>
+    <span class="u-checkbox-label">grey</span>
+</label>
+</div>
+<div class="examples-code"><pre><code>&lt;label  class="u-checkbox u-checkbox-success w-64">
+    &lt;input type="checkbox" class="u-checkbox-input"  checked>
+    &lt;span class="u-checkbox-label">green&lt;/span>
+&lt;/label>
+
+&lt;label  class="u-checkbox u-checkbox-info w-64">
+    &lt;input type="checkbox" class="u-checkbox-input"  checked>
+    &lt;span class="u-checkbox-label">blue&lt;/span>
+&lt;/label>
+&lt;label  class="u-checkbox u-checkbox-warning w-64">
+    &lt;input type="checkbox" class="u-checkbox-input"  checked>
+    &lt;span class="u-checkbox-label">yellow&lt;/span>
+&lt;/label>
+&lt;label  class="u-checkbox u-checkbox-danger w-64">
+    &lt;input type="checkbox" class="u-checkbox-input"  checked>
+    &lt;span class="u-checkbox-label">red&lt;/span>
+&lt;/label>
+&lt;label  class="u-checkbox u-checkbox-dark w-64">
+    &lt;input type="checkbox" class="u-checkbox-input"  checked>
+    &lt;span class="u-checkbox-label">grey&lt;/span>
+&lt;/label></code></pre>
+</div>
+
 ##基础checkbox
 在复选框中input元素添加“checked”、“disabled”来实现选中和不可用效果
 <div class="example-content"><p>已选checkbox</p>
@@ -68,31 +140,6 @@ checkbox提供了基础复选框、不同色彩复选框、图片复选框、个
 &lt;label  class="u-checkbox w-64">
     &lt;input type="checkbox" class="u-checkbox-input" disabled checked>
     &lt;span class="u-checkbox-label">Checkbox&lt;/span>
-&lt;/label></code></pre>
-</div>
-
-##图片checkbox
-在“u-checkbox-label”的span中添加图片说明即可。
-<div class="example-content"><label  class="u-checkbox w-64">
-    <input type="checkbox" class="u-checkbox-input" checked>
-    <span class="u-checkbox-label"><img src="../static/checkbox-1.png" height="30" width="30"></span>
-</label>
-
-
-<label  class="u-checkbox w-64">
-    <input type="checkbox" class="u-checkbox-input" >
-    <span class="u-checkbox-label"><img src="../static/checkbox-2.png" height="30" width="30"></span>
-</label>
-</div>
-<div class="examples-code"><pre><code>&lt;label  class="u-checkbox w-64">
-    &lt;input type="checkbox" class="u-checkbox-input" checked>
-    &lt;span class="u-checkbox-label">&lt;img src="../static/checkbox-1.png" height="30" width="30">&lt;/span>
-&lt;/label>
-
-
-&lt;label  class="u-checkbox w-64">
-    &lt;input type="checkbox" class="u-checkbox-input" >
-    &lt;span class="u-checkbox-label">&lt;img src="../static/checkbox-2.png" height="30" width="30">&lt;/span>
 &lt;/label></code></pre>
 </div>
 
@@ -232,53 +279,6 @@ checkbox提供了基础复选框、不同色彩复选框、图片复选框、个
 <div class="examples-code"><pre><code>&lt;label  class="u-checkbox u-checkbox-labelauty">
     &lt;input type="checkbox" class="u-checkbox-input" checked>
     &lt;span class="u-checkbox-label">30天免息&lt;/span>
-&lt;/label></code></pre>
-</div>
-
-##不同颜色的checkbox
-在复选框中label里面添加“ u-checkbox-success”、“u-checkbox-info”、“u-checkbox-warning”、“u-checkbox-danger”、“u-checkbox-dark”样式来实现不同色彩的复选框
-<div class="example-content"><label  class="u-checkbox u-checkbox-success w-64">
-    <input type="checkbox" class="u-checkbox-input"  checked>
-    <span class="u-checkbox-label">green</span>
-</label>
-
-<label  class="u-checkbox u-checkbox-info w-64">
-    <input type="checkbox" class="u-checkbox-input"  checked>
-    <span class="u-checkbox-label">blue</span>
-</label>
-<label  class="u-checkbox u-checkbox-warning w-64">
-    <input type="checkbox" class="u-checkbox-input"  checked>
-    <span class="u-checkbox-label">yellow</span>
-</label>
-<label  class="u-checkbox u-checkbox-danger w-64">
-    <input type="checkbox" class="u-checkbox-input"  checked>
-    <span class="u-checkbox-label">red</span>
-</label>
-<label  class="u-checkbox u-checkbox-dark w-64">
-    <input type="checkbox" class="u-checkbox-input"  checked>
-    <span class="u-checkbox-label">grey</span>
-</label>
-</div>
-<div class="examples-code"><pre><code>&lt;label  class="u-checkbox u-checkbox-success w-64">
-    &lt;input type="checkbox" class="u-checkbox-input"  checked>
-    &lt;span class="u-checkbox-label">green&lt;/span>
-&lt;/label>
-
-&lt;label  class="u-checkbox u-checkbox-info w-64">
-    &lt;input type="checkbox" class="u-checkbox-input"  checked>
-    &lt;span class="u-checkbox-label">blue&lt;/span>
-&lt;/label>
-&lt;label  class="u-checkbox u-checkbox-warning w-64">
-    &lt;input type="checkbox" class="u-checkbox-input"  checked>
-    &lt;span class="u-checkbox-label">yellow&lt;/span>
-&lt;/label>
-&lt;label  class="u-checkbox u-checkbox-danger w-64">
-    &lt;input type="checkbox" class="u-checkbox-input"  checked>
-    &lt;span class="u-checkbox-label">red&lt;/span>
-&lt;/label>
-&lt;label  class="u-checkbox u-checkbox-dark w-64">
-    &lt;input type="checkbox" class="u-checkbox-input"  checked>
-    &lt;span class="u-checkbox-label">grey&lt;/span>
 &lt;/label></code></pre>
 </div>
 

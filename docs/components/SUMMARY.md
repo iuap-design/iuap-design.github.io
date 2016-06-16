@@ -5,4 +5,5 @@
  * [标签 label](label.md)
  * [分页 pagination](pagination.md)
  * [单选 radio](radio.md)
+ * [开关 switch](switchButton.md)
 
