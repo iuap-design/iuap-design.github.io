@@ -6,13 +6,13 @@
 	"title":"iUAP Design",
 	"description":"UI Framework For Enterprise",
 	"language":"zh-hans",
-	"output": "../dist/pages/docs",
+	"output": "../../dist/pages/components",
 	"plugins":[
-		"iuap-design",
 		"anchor-navigation",
 		"expandable-chapters",
 		"-search",
-		"-livereload"
+		"-livereload",
+		"iuap-design"
 	],
 	"pluginsConfig": {
 		"fontsettings": {
