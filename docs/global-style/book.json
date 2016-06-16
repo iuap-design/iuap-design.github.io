@@ -6,7 +6,7 @@
 	"title":"iUAP Design",
 	"description":"UI Framework For Enterprise",
 	"language":"zh-hans",
-	"output": "../../dist/pages/components",
+	"output": "../../dist/pages/global-style",
 	"plugins":[
 		"anchor-navigation",
 		"expandable-chapters",
@@ -28,8 +28,5 @@
     	"cutWordLib": "nodejieba",
     	"defineWord" : ["Gitbook Use"]
 		}
-	},
-	"styles": {
-		"website": ""
 	}
 }
