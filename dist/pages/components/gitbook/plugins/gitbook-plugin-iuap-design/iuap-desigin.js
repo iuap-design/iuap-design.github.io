@@ -148,7 +148,7 @@ require(['gitbook', 'jQuery', 'lodash'], function (gitbook, $, _) {
         bodyScrollFun();
 
         var oH = document.body.offsetHeight;
-        var h = parseInt(oH) - 80;
+        var h = parseInt(oH) - 110;
         $summary.css('height',h + 'px');
 	});
 });
