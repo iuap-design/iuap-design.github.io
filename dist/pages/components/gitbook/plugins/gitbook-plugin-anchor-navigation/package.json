@@ -9,7 +9,7 @@
         "spec": "0.0.1",
         "type": "version"
       },
-      "D:\\website\\fed\\iuap-design.github.io\\docs\\components"
+      "/Users/AYA/Desktop/work/iuap-design.github.io/docs/components"
     ]
   ],
   "_from": "gitbook-plugin-anchor-navigation@0.0.1",
@@ -35,11 +35,11 @@
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "http://registry.npmjs.org/gitbook-plugin-anchor-navigation/-/gitbook-plugin-anchor-navigation-0.0.1.tgz",
+  "_resolved": "https://registry.npmjs.org/gitbook-plugin-anchor-navigation/-/gitbook-plugin-anchor-navigation-0.0.1.tgz",
   "_shasum": "f2c9247f3c013ad5982931a75f4ef57348c6ec99",
   "_shrinkwrap": null,
   "_spec": "gitbook-plugin-anchor-navigation@0.0.1",
-  "_where": "D:\\website\\fed\\iuap-design.github.io\\docs\\components",
+  "_where": "/Users/AYA/Desktop/work/iuap-design.github.io/docs/components",
   "author": {
     "email": "xxdawei@gmail.com",
     "name": "yaneryou"
