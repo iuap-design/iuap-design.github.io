@@ -149,3 +149,43 @@ body{
     bottom:38px;
 }
 
+
+// 样式复写
+
+
+.book .book-body .page-wrapper .page-inner section.normal .u-pagination > .active > a {
+    z-index: 2;
+    color: #fff;
+    cursor: default;
+    background-color: rgb(27,174,222);
+    border-color: rgb(27,174,222);
+}
+
+ .book .book-body .page-wrapper .page-inner section.normal .u-menu{
+    padding: 8px 0;
+    margin: 0px;
+}
+
+.example-content{
+    position: relative;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal .u-pagination > .active > a, 
+
+.book .book-body .page-wrapper .page-inner section.normal .u-pagination > .active > 
+
+span, .book .book-body .page-wrapper .page-inner section.normal .u-pagination > .active 
+
+> a:hover,.book .book-body .page-wrapper .page-inner section.normal  .u-pagination > 
+
+.active > span:hover,.book .book-body .page-wrapper .page-inner section.normal .u-
+
+pagination > .active > a:focus,.book .book-body .page-wrapper .page-inner section.normal 
+
+.u-pagination > .active > span:focus {
+    z-index: 2;
+    color: #fff;
+    cursor: default;
+    background-color: rgb(27,174,222);
+    border-color: rgb(27,174,222);
+}

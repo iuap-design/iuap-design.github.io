@@ -9,36 +9,6 @@ switch控件
 # 示例
 
 
-##点击触发Message
-<div class="example-content"><button id="msgBtn" class="u-button" >Success</button>
-<button id="errorBtn" class="u-button" >Error</button>
-<button id="warnBtn" class="u-button" >Warning</button>
-</div>
-<style>.margin-r-10{
-    margin-right: 10px; 
-}
-.example .u-message{
-    position: inherit;
-}
-.example{
-	width: 300px;
-}
-</style>
-<div class="examples-code"><pre><code>&lt;button id="msgBtn" class="u-button" >Success&lt;/button>
-&lt;button id="errorBtn" class="u-button" >Error&lt;/button>
-&lt;button id="warnBtn" class="u-button" >Warning&lt;/button></code></pre>
-</div>
-<div class="examples-code"><pre><code>.margin-r-10{
-    margin-right: 10px; 
-}
-.example .u-message{
-    position: inherit;
-}
-.example{
-	width: 300px;
-}</code></pre>
-</div>
-
 ##基础Message
 
 消息类型对应不同class属性则显示不同的背景色
@@ -113,6 +83,36 @@ warning -- u-meswarning
         Warning!
     &lt;/div>
 &lt;/div></code></pre>
+</div>
+
+##点击触发Message
+<style>.margin-r-10{
+    margin-right: 10px; 
+}
+.example .u-message{
+    position: inherit;
+}
+.example{
+	width: 300px;
+}
+</style>
+<div class="example-content"><button id="msgBtn" class="u-button" >Success</button>
+<button id="errorBtn" class="u-button" >Error</button>
+<button id="warnBtn" class="u-button" >Warning</button>
+</div>
+<div class="examples-code"><pre><code>.margin-r-10{
+    margin-right: 10px; 
+}
+.example .u-message{
+    position: inherit;
+}
+.example{
+	width: 300px;
+}</code></pre>
+</div>
+<div class="examples-code"><pre><code>&lt;button id="msgBtn" class="u-button" >Success&lt;/button>
+&lt;button id="errorBtn" class="u-button" >Error&lt;/button>
+&lt;button id="warnBtn" class="u-button" >Warning&lt;/button></code></pre>
 </div>
 
 ##带icon的加深颜色版Message

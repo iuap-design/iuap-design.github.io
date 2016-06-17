@@ -150,6 +150,5 @@ require(['gitbook', 'jQuery', 'lodash'], function (gitbook, $, _) {
         var oH = document.body.offsetHeight;
         var h = parseInt(oH) - 80;
         $summary.css('height',h + 'px');
-        $book.css('min-height',parseInt(oH) - 60 + 'px');
 	});
 });
