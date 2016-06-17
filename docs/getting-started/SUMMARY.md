@@ -1,2 +1,6 @@
-
- * [安装 Install](install.md)
+ * [下载](./install.md)
+ * [开发文档](./doc-guide.md)
+ * [资源说明](./dir.md)
+ * [快速开始](./start.md)
+ * [版本说明](./version.md)
+ * [参与讨论](./contribute.md)

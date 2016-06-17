@@ -9,60 +9,41 @@ madal控件
 # 示例
 
 
-##消息摸态框
+##提示摸态框
 
-通过confirmDialog方法调出模态框
-当点击取消或者保存，可在js中的方法里进行业务的回调 
+只有一个确认按钮
+通过messageDialog方法调出模态框
 
-<script>  u.compMgr.apply({
-        el:'body'
-    })
 
- 
-    var msgBtn2 = document.body.querySelector("#msgDialogBtn2");
-    u.on(msgBtn2,'click', function(){
-//            u.showMessage("HELLO!!!");
-        u.confirmDialog({
-            msg: "是否保存单据？",
-            title: "测试确认",
-            onOk: function () {
-                alert('ok')
-            },
-            onCancel: function () {
-                alert('cancel')
-            }
-        });
-    })
-	
+<script>u.compMgr.apply({
+    el:'body'
+})
+
+var msgBtn = document.body.querySelector("#msgDialogBtn");
+u.on(msgBtn, 'click', function() {
+    //            u.showMessage("HELLO!!!");
+    u.messageDialog({ msg: "HELLO!!!", title: "测试提示", btnText: "OK!" });
+})
+
 </script>
 <div class="example-content">
-<button id="msgDialogBtn2" class="u-button raised accent">消息确认框</button>
+<button id="msgDialogBtn" class="u-button raised accent">消息提示框</button>
 
    
 </div>
-<div class="examples-code"><pre><code>  u.compMgr.apply({
-        el:'body'
-    })
+<div class="examples-code"><pre><code>u.compMgr.apply({
+    el:'body'
+})
 
- 
-    var msgBtn2 = document.body.querySelector("#msgDialogBtn2");
-    u.on(msgBtn2,'click', function(){
-//            u.showMessage("HELLO!!!");
-        u.confirmDialog({
-            msg: "是否保存单据？",
-            title: "测试确认",
-            onOk: function () {
-                alert('ok')
-            },
-            onCancel: function () {
-                alert('cancel')
-            }
-        });
-    })
-	</code></pre>
+var msgBtn = document.body.querySelector("#msgDialogBtn");
+u.on(msgBtn, 'click', function() {
+    //            u.showMessage("HELLO!!!");
+    u.messageDialog({ msg: "HELLO!!!", title: "测试提示", btnText: "OK!" });
+})
+</code></pre>
 </div>
 <div class="examples-code"><pre><code>
-&lt;button id="msgDialogBtn2" class="u-button raised accent">消息确认框&lt;/button>
+&lt;button id="msgDialogBtn" class="u-button raised accent">消息提示框&lt;/button>
 
    </code></pre>
 </div>
@@ -144,43 +125,62 @@ madal控件
 	});</code></pre>
 </div>
 
-##提示摸态框
+##消息摸态框
 
-只有一个确认按钮
-通过messageDialog方法调出模态框
+通过confirmDialog方法调出模态框
+当点击取消或者保存，可在js中的方法里进行业务的回调 
 
+<script>  u.compMgr.apply({
+        el:'body'
+    })
 
+ 
+    var msgBtn2 = document.body.querySelector("#msgDialogBtn2");
+    u.on(msgBtn2,'click', function(){
+//            u.showMessage("HELLO!!!");
+        u.confirmDialog({
+            msg: "是否保存单据？",
+            title: "测试确认",
+            onOk: function () {
+                alert('ok')
+            },
+            onCancel: function () {
+                alert('cancel')
+            }
+        });
+    })
+	
+</script>
 <div class="example-content">
-<button id="msgDialogBtn" class="u-button raised accent">消息提示框</button>
+<button id="msgDialogBtn2" class="u-button raised accent">消息确认框</button>
 
    
 </div>
-<script>u.compMgr.apply({
-    el:'body'
-})
+<div class="examples-code"><pre><code>  u.compMgr.apply({
+        el:'body'
+    })
 
-var msgBtn = document.body.querySelector("#msgDialogBtn");
-u.on(msgBtn, 'click', function() {
-    //            u.showMessage("HELLO!!!");
-    u.messageDialog({ msg: "HELLO!!!", title: "测试提示", btnText: "OK!" });
-})
-
-</script>
+ 
+    var msgBtn2 = document.body.querySelector("#msgDialogBtn2");
+    u.on(msgBtn2,'click', function(){
+//            u.showMessage("HELLO!!!");
+        u.confirmDialog({
+            msg: "是否保存单据？",
+            title: "测试确认",
+            onOk: function () {
+                alert('ok')
+            },
+            onCancel: function () {
+                alert('cancel')
+            }
+        });
+    })
+	</code></pre>
+</div>
 <div class="examples-code"><pre><code>
-&lt;button id="msgDialogBtn" class="u-button raised accent">消息提示框&lt;/button>
+&lt;button id="msgDialogBtn2" class="u-button raised accent">消息确认框&lt;/button>
 
    </code></pre>
-</div>
-<div class="examples-code"><pre><code>u.compMgr.apply({
-    el:'body'
-})
-
-var msgBtn = document.body.querySelector("#msgDialogBtn");
-u.on(msgBtn, 'click', function() {
-    //            u.showMessage("HELLO!!!");
-    u.messageDialog({ msg: "HELLO!!!", title: "测试提示", btnText: "OK!" });
-})
-</code></pre>
 </div>
 
 

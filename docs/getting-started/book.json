@@ -28,8 +28,5 @@
     	"cutWordLib": "nodejieba",
     	"defineWord" : ["Gitbook Use"]
 		}
-	},
-	"styles": {
-		"website": ""
 	}
 }

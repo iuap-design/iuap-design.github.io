@@ -17,11 +17,6 @@ tree控件
 	min-height: 200px;
 }*/
 </style>
-<div class="example-content"><!-- <div id="demoLeft"> -->
-	<div id="treeTest" class="ztree" u-meta='{"multiSelect":"true","id":"tree2","data":"dataTable","type":"tree","idField":"id","pidField":"pid","nameField":"title","setting":"treeSetting"}'></div>
-<!-- </div> -->
-       
-</div>
 <script>$(document).ready(function () {
     var viewModel = {
     	treeSetting:{
@@ -82,16 +77,16 @@ var app = u.createApp();
     })
 });
 </script>
+<div class="example-content"><!-- <div id="demoLeft"> -->
+	<div id="treeTest" class="ztree" u-meta='{"multiSelect":"true","id":"tree2","data":"dataTable","type":"tree","idField":"id","pidField":"pid","nameField":"title","setting":"treeSetting"}'></div>
+<!-- </div> -->
+       
+</div>
 <div class="examples-code"><pre><code>/*#demoLeft{
 	width:40%;
 	border: 1px solid #EEEEEE;
 	min-height: 200px;
 }*/</code></pre>
-</div>
-<div class="examples-code"><pre><code>&lt;!-- &lt;div id="demoLeft"> -->
-	&lt;div id="treeTest" class="ztree" u-meta='{"multiSelect":"true","id":"tree2","data":"dataTable","type":"tree","idField":"id","pidField":"pid","nameField":"title","setting":"treeSetting"}'>&lt;/div>
-&lt;!-- &lt;/div> -->
-       </code></pre>
 </div>
 <div class="examples-code"><pre><code>$(document).ready(function () {
     var viewModel = {
@@ -152,6 +147,11 @@ var app = u.createApp();
     	viewModel.dataTable.removeAllRows();
     })
 });</code></pre>
+</div>
+<div class="examples-code"><pre><code>&lt;!-- &lt;div id="demoLeft"> -->
+	&lt;div id="treeTest" class="ztree" u-meta='{"multiSelect":"true","id":"tree2","data":"dataTable","type":"tree","idField":"id","pidField":"pid","nameField":"title","setting":"treeSetting"}'>&lt;/div>
+&lt;!-- &lt;/div> -->
+       </code></pre>
 </div>
 
 

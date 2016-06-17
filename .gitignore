@@ -13,6 +13,11 @@ bin/grid
 bin/datetimepicker
 bin/dist
 
+dist/pages/components
+dist/pages/design-language
+dist/pages/getting-started
+dist/pages/global-style
+
 # Folder config file
 Desktop.ini
 
