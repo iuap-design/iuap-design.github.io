@@ -41,7 +41,7 @@
         
     
     
-    <link rel="next" href="./radio.html" />
+    <link rel="next" href="./switchButton.html" />
     
     
     <link rel="prev" href="./label.html" />
@@ -53,11 +53,11 @@
         
         
     <div class="book"
-        data-level="5"
+        data-level="9"
         data-chapter-title="分页 pagination"
         data-filepath="pagination.md"
         data-basepath="."
-        data-revision="Fri Jun 17 2016 10:23:27 GMT+0800 (CST)"
+        data-revision="Fri Jun 17 2016 11:15:21 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -131,44 +131,14 @@
             
         </li>
     
-        <li class="chapter " data-level="4" data-path="label.html">
-            
-                
-                    <a href="./label.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>4.</b>
-                        
-                        标签 label
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter active" data-level="5" data-path="pagination.html">
-            
-                
-                    <a href="./pagination.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>5.</b>
-                        
-                        分页 pagination
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="6" data-path="radio.html">
+        <li class="chapter " data-level="4" data-path="radio.html">
             
                 
                     <a href="./radio.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>6.</b>
+                            <b>4.</b>
                         
                         单选 radio
                     </a>
@@ -176,14 +146,89 @@
             
         </li>
     
-        <li class="chapter " data-level="7" data-path="switchButton.html">
+        <li class="chapter " data-level="5" data-path="message.html">
+            
+                
+                    <a href="./message.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        提示消息 message
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="modal.html">
+            
+                
+                    <a href="./modal.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        模态框 modal
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="tabs.html">
+            
+                
+                    <a href="./tabs.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        页签 tabs
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="label.html">
+            
+                
+                    <a href="./label.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        标签 label
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="9" data-path="pagination.html">
+            
+                
+                    <a href="./pagination.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        分页 pagination
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="switchButton.html">
             
                 
                     <a href="./switchButton.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>7.</b>
+                            <b>10.</b>
                         
                         开关 switch
                     </a>
@@ -227,165 +272,145 @@
                         <h1 id="&#x5206;&#x9875;&#x63A7;&#x4EF6;">&#x5206;&#x9875;&#x63A7;&#x4EF6;</h1>
 <p>&#x5206;&#x9875;&#x63A7;&#x4EF6;&#x63D0;&#x4F9B;&#x4E86;&#x57FA;&#x7840;&#x5206;&#x9875;&#x3001;&#x65E0;border&#x5206;&#x9875;&#x3001;&#x6709;&#x95F4;&#x8DDD;&#x7684;&#x5206;&#x9875;&#x3001;&#x591A;&#x5C3A;&#x5BF8;&#x5206;&#x9875;&#x3002;</p>
 <h1 id="&#x5982;&#x4F55;&#x4F7F;&#x7528;">&#x5982;&#x4F55;&#x4F7F;&#x7528;</h1>
-<p>&#x5206;&#x9875;&#x901A;&#x8FC7;&#x6DFB;&#x52A0;&#x201C;u-pagination&#x201D;&#x7684;&#x6837;&#x5F0F;&#x6765;&#x5B9E;&#x73B0;&#x57FA;&#x672C;&#x7684;&#x5206;&#x9875;&#x6548;&#x679C;</p>
+<p>&#x5206;&#x9875;&#x901A;&#x8FC7;&#x6DFB;&#x52A0;<code>u-pagination</code>&#x7684;&#x6837;&#x5F0F;&#x6765;&#x5B9E;&#x73B0;&#x57FA;&#x672C;&#x7684;&#x5206;&#x9875;&#x6548;&#x679C;</p>
 <h1 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h1>
 <h2 id="&#x57FA;&#x7840;&#x5206;&#x9875;">&#x57FA;&#x7840;&#x5206;&#x9875;</h2>
-<p><script>  var element = document.getElementById(&#39;pagination&#39;);
-  var comp = new u.pagination({ el: element, jumppage: true });
-  comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });</p>
-<p>  this.comp.on(&#39;pageChange&#39;, function(pageIndex) {
-      console.log(&#39;新的页号为&#39; + pageIndex);
-  });</p>
-<p>  this.comp.on(&#39;sizeChange&#39;, function(arg) {
-      console.log(&#39;每页显示条数为&#39; + arg[0]);
-  });</p>
-<p>&lt;/script&gt;</p>
-<div class="example-content"><div id='pagination' class='u-pagination'>
+<div class="example-content"><div id="pagination" class="u-pagination">
 </div>
 </div>
-<div class="examples-code"><pre><code>  var element = document.getElementById('pagination');
+<script>  var element = document.getElementById("pagination");
   var comp = new u.pagination({ el: element, jumppage: true });
   comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });
-
   this.comp.on('pageChange', function(pageIndex) {
       console.log('新的页号为' + pageIndex);
   });
-
   this.comp.on('sizeChange', function(arg) {
       console.log('每页显示条数为' + arg[0]);
   });
-</code></pre>
+</script>
+<div class="examples-code"><pre><code>&lt;div id=&apos;pagination&apos; class=&apos;u-pagination&apos;&gt;
+&lt;/div&gt;</code></pre>
 </div>
-<div class="examples-code"><pre><code>&lt;div id='pagination' class='u-pagination'>
-&lt;/div></code></pre>
+<div class="examples-code"><pre><code>  var element = document.getElementById(&quot;pagination&quot;);
+  var comp = new u.pagination({ el: element, jumppage: true });
+  comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });
+  this.comp.on(&apos;pageChange&apos;, function(pageIndex) {
+      console.log(&apos;&#x65B0;&#x7684;&#x9875;&#x53F7;&#x4E3A;&apos; + pageIndex);
+  });
+  this.comp.on(&apos;sizeChange&apos;, function(arg) {
+      console.log(&apos;&#x6BCF;&#x9875;&#x663E;&#x793A;&#x6761;&#x6570;&#x4E3A;&apos; + arg[0]);
+  });</code></pre>
 </div>
 
-<h2>无边框的分页</h2>
-<p>在含有“u-pagination”的div元素中添加“u-pagination-no-border”样式即可</p>
-<div class="example-content"><div id='paginationNoBorder' class='u-pagination u-pagination-no-border'>
+<h2 id="&#x6709;&#x95F4;&#x8DDD;&#x7684;&#x5206;&#x9875;">&#x6709;&#x95F4;&#x8DDD;&#x7684;&#x5206;&#x9875;</h2>
+<p>&#x6DFB;&#x52A0;&#x6837;&#x5F0F;<code>pagination-gap</code>&#x53EF;&#x4EE5;&#x589E;&#x52A0;&#x9875;&#x7801;&#x4E4B;&#x95F4;&#x7684;&#x95F4;&#x8DDD;</p>
+<div class="example-content"><div id="paginationGap" class="u-pagination pagination-gap">
 </div>
 </div>
-<script> //无边框分页
- var paginationNoBorder = document.getElementById('paginationNoBorder');
+<script> var paginationGap = document.getElementById('paginationGap');
+ var comp = new u.pagination({ el: paginationGap, jumppage: true });
+ comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });
+</script>
+<div class="examples-code"><pre><code>&lt;div id=&apos;paginationGap&apos; class=&apos;u-pagination pagination-gap&apos;&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<div class="examples-code"><pre><code> var paginationGap = document.getElementById(&apos;paginationGap&apos;);
+ var comp = new u.pagination({ el: paginationGap, jumppage: true });
+ comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });</code></pre>
+</div>
+
+<h2 id="&#x4E0D;&#x540C;&#x5C3A;&#x5BF8;&#x7684;&#x6309;&#x94AE;">&#x4E0D;&#x540C;&#x5C3A;&#x5BF8;&#x7684;&#x6309;&#x94AE;</h2>
+<p>&#x6DFB;&#x52A0;<code>pagination-lg</code>&#x3001;<code>pagination-sm</code>&#x6837;&#x5F0F;&#x53EF;&#x4EE5;&#x4F7F;&#x5206;&#x9875;&#x53D8;&#x5927;&#x3001;&#x53D8;&#x5C0F;</p>
+<div class="example-content"><p>&#x5927;&#x5C3A;&#x5BF8;</p>
+<div id="paginationLg" class="u-pagination pagination-lg">
+</div>
+<p>&#x9ED8;&#x8BA4;&#x5C3A;&#x5BF8;</p>
+<div id="paginationDefault" class="u-pagination">
+</div>
+<p>&#x5C0F;&#x5C3A;&#x5BF8;</p>
+<div id="paginationSm" class="u-pagination pagination-sm">
+</div>
+</div>
+<script>var paginationLg = document.getElementById("paginationLg");
+var comp = new u.pagination({el:paginationLg,jumppage:true});
+comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200,showState:false});
+var paginationDefault = document.getElementById("paginationDefault");
+var comp = new u.pagination({el:paginationDefault,jumppage:true});
+comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200,showState:false});
+var paginationSm = document.getElementById("paginationSm");
+var comp = new u.pagination({el:paginationSm,jumppage:true});
+comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200,showState:false});
+</script>
+<div class="examples-code"><pre><code>&lt;p&gt;&#x5927;&#x5C3A;&#x5BF8;&lt;/p&gt;
+&lt;div id=&apos;paginationLg&apos; class=&apos;u-pagination pagination-lg&apos;&gt;
+&lt;/div&gt;
+&lt;p&gt;&#x9ED8;&#x8BA4;&#x5C3A;&#x5BF8;&lt;/p&gt;
+&lt;div id=&apos;paginationDefault&apos; class=&apos;u-pagination&apos;&gt;
+&lt;/div&gt;
+&lt;p&gt;&#x5C0F;&#x5C3A;&#x5BF8;&lt;/p&gt;
+&lt;div id=&apos;paginationSm&apos; class=&apos;u-pagination pagination-sm&apos;&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<div class="examples-code"><pre><code>var paginationLg = document.getElementById(&quot;paginationLg&quot;);
+var comp = new u.pagination({el:paginationLg,jumppage:true});
+comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200,showState:false});
+var paginationDefault = document.getElementById(&quot;paginationDefault&quot;);
+var comp = new u.pagination({el:paginationDefault,jumppage:true});
+comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200,showState:false});
+var paginationSm = document.getElementById(&quot;paginationSm&quot;);
+var comp = new u.pagination({el:paginationSm,jumppage:true});
+comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200,showState:false});</code></pre>
+</div>
+
+<h2 id="&#x65E0;&#x8FB9;&#x6846;&#x7684;&#x5206;&#x9875;">&#x65E0;&#x8FB9;&#x6846;&#x7684;&#x5206;&#x9875;</h2>
+<p>&#x5728;&#x542B;&#x6709;<code>u-pagination</code>&#x7684;div&#x5143;&#x7D20;&#x4E2D;&#x6DFB;&#x52A0;<code>u-pagination-no-border</code>&#x6837;&#x5F0F;&#x5373;&#x53EF;</p>
+<div class="example-content"><div id="paginationNoBorder" class="u-pagination u-pagination-no-border">
+</div>
+</div>
+<script> var paginationNoBorder = document.getElementById("paginationNoBorder");
  var comp = new u.pagination({ el: paginationNoBorder, jumppage: true });
  comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });
-
 </script>
 <div class="examples-code"><pre><code>&lt;div id=&apos;paginationNoBorder&apos; class=&apos;u-pagination u-pagination-no-border&apos;&gt;
 &lt;/div&gt;</code></pre>
 </div>
-<div class="examples-code"><pre><code> //&#x65E0;&#x8FB9;&#x6846;&#x5206;&#x9875;
- var paginationNoBorder = document.getElementById(&apos;paginationNoBorder&apos;);
+<div class="examples-code"><pre><code> var paginationNoBorder = document.getElementById(&quot;paginationNoBorder&quot;);
  var comp = new u.pagination({ el: paginationNoBorder, jumppage: true });
- comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });
-</code></pre>
-</div>
-
-</p><h2 id="&#x4E0D;&#x540C;&#x5C3A;&#x5BF8;&#x7684;&#x6309;&#x94AE;">&#x4E0D;&#x540C;&#x5C3A;&#x5BF8;&#x7684;&#x6309;&#x94AE;</h2>
-<p>&#x6DFB;&#x52A0;&#x201C;pagination-lg&#x201D;&#x3001;&#x201C;pagination-sm&#x201D;&#x6837;&#x5F0F;&#x53EF;&#x4EE5;&#x4F7F;&#x5206;&#x9875;&#x53D8;&#x5927;&#x3001;&#x53D8;&#x5C0F;</p>
-<p><script>
-//大尺寸分页
-var paginationLg = document.getElementById(&#39;paginationLg&#39;);
-var comp = new u.pagination({el:paginationLg,jumppage:true});
-comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200,showState:false});</p>
-<p> //默认尺寸分页
-var paginationDefault = document.getElementById(&#39;paginationDefault&#39;);
-var comp = new u.pagination({el:paginationDefault,jumppage:true});
-comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200,showState:false});</p>
-<p> //小尺寸分页
-var paginationSm = document.getElementById(&#39;paginationSm&#39;);
-var comp = new u.pagination({el:paginationSm,jumppage:true});
-comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200,showState:false});
-&lt;/script&gt;</p>
-<div class="example-content"><p>大尺寸</p>
-<div id='paginationLg' class='u-pagination pagination-lg'>
-</div>
-<p>默认尺寸</p>
-<div id='paginationDefault' class='u-pagination'>
-</div>
-<p>小尺寸</p>
-<div id='paginationSm' class='u-pagination pagination-sm'>
-</div>
-</div>
-<div class="examples-code"><pre><code>
-//大尺寸分页
-var paginationLg = document.getElementById('paginationLg');
-var comp = new u.pagination({el:paginationLg,jumppage:true});
-comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200,showState:false});
-
- //默认尺寸分页
-var paginationDefault = document.getElementById('paginationDefault');
-var comp = new u.pagination({el:paginationDefault,jumppage:true});
-comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200,showState:false});
-
- //小尺寸分页
-var paginationSm = document.getElementById('paginationSm');
-var comp = new u.pagination({el:paginationSm,jumppage:true});
-comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200,showState:false});</code></pre>
-</div>
-<div class="examples-code"><pre><code>&lt;p>大尺寸&lt;/p>
-&lt;div id='paginationLg' class='u-pagination pagination-lg'>
-&lt;/div>
-&lt;p>默认尺寸&lt;/p>
-&lt;div id='paginationDefault' class='u-pagination'>
-&lt;/div>
-&lt;p>小尺寸&lt;/p>
-&lt;div id='paginationSm' class='u-pagination pagination-sm'>
-&lt;/div></code></pre>
-</div>
-
-<h2>有间距的分页</h2>
-<p>添加样式“pagination-gap”可以增加页码之间的间距</p>
-<p><script> //有间距的分页
- var paginationGap = document.getElementById(&#39;paginationGap&#39;);
- var comp = new u.pagination({ el: paginationGap, jumppage: true });
- comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });</p>
-<p>&lt;/script&gt;</p>
-<div class="example-content"><div id='paginationGap' class='u-pagination pagination-gap'>
-</div>
-</div>
-<div class="examples-code"><pre><code> //有间距的分页
- var paginationGap = document.getElementById('paginationGap');
- var comp = new u.pagination({ el: paginationGap, jumppage: true });
- comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });
-</code></pre>
-</div>
-<div class="examples-code"><pre><code>&lt;div id='paginationGap' class='u-pagination pagination-gap'>
-&lt;/div></code></pre>
+ comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });</code></pre>
 </div>
 
 
-<h1>API</h1>
-<h2>创建分页对象</h2>
-<h3>描述</h3>
-<p>创建一个分页对象，方法：new u.pagination(paramter)</p>
-<h3>参数paramter字段说明</h3>
+<h1 id="api">API</h1>
+<h2 id="&#x521B;&#x5EFA;&#x5206;&#x9875;&#x5BF9;&#x8C61;">&#x521B;&#x5EFA;&#x5206;&#x9875;&#x5BF9;&#x8C61;</h2>
+<h3 id="&#x63CF;&#x8FF0;">&#x63CF;&#x8FF0;</h3>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5206;&#x9875;&#x5BF9;&#x8C61;&#xFF0C;&#x65B9;&#x6CD5;&#xFF1A;new u.pagination(paramter)</p>
+<h3 id="&#x53C2;&#x6570;paramter&#x5B57;&#x6BB5;&#x8BF4;&#x660E;">&#x53C2;&#x6570;paramter&#x5B57;&#x6BB5;&#x8BF4;&#x660E;</h3>
 <ul>
-<li>类型 ：object</li>
-<li><p>内容说明</p>
-<p>  el ：分页绑定的dom元素</p>
-<p>  jumppage：是否可跳转到某页。type为：boolean</p>
-<h3>例子</h3>
+<li>&#x7C7B;&#x578B; &#xFF1A;object</li>
+<li><p>&#x5185;&#x5BB9;&#x8BF4;&#x660E;</p>
+<p>  el &#xFF1A;&#x5206;&#x9875;&#x7ED1;&#x5B9A;&#x7684;dom&#x5143;&#x7D20;</p>
+<p>  jumppage&#xFF1A;&#x662F;&#x5426;&#x53EF;&#x8DF3;&#x8F6C;&#x5230;&#x67D0;&#x9875;&#x3002;type&#x4E3A;&#xFF1A;boolean</p>
+<h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
 <pre><code>  var comp = new u.pagination({el:paginationNoBorder,jumppage:true});
 </code></pre></li>
 </ul>
-<h2>分页对象update方法</h2>
-<h3>描述</h3>
-<p>更新分页的一些属性，方法：comp.update(paramter)//这里的comp指分页对象</p>
-<h3>参数paramter字段说明</h3>
+<h2 id="&#x5206;&#x9875;&#x5BF9;&#x8C61;update&#x65B9;&#x6CD5;">&#x5206;&#x9875;&#x5BF9;&#x8C61;update&#x65B9;&#x6CD5;</h2>
+<h3 id="&#x63CF;&#x8FF0;">&#x63CF;&#x8FF0;</h3>
+<p>&#x66F4;&#x65B0;&#x5206;&#x9875;&#x7684;&#x4E00;&#x4E9B;&#x5C5E;&#x6027;&#xFF0C;&#x65B9;&#x6CD5;&#xFF1A;comp.update(paramter)//&#x8FD9;&#x91CC;&#x7684;comp&#x6307;&#x5206;&#x9875;&#x5BF9;&#x8C61;</p>
+<h3 id="&#x53C2;&#x6570;paramter&#x5B57;&#x6BB5;&#x8BF4;&#x660E;">&#x53C2;&#x6570;paramter&#x5B57;&#x6BB5;&#x8BF4;&#x660E;</h3>
 <ul>
-<li>类型 ：object</li>
-<li><p>内容说明</p>
-<p>  totalPages: 总页数</p>
-<p>  pageSize:每页显示的条数</p>
-<p>  currentPage:当前页面</p>
-<p>  totalCount:总条数</p>
-<h3>例子</h3>
+<li>&#x7C7B;&#x578B; &#xFF1A;object</li>
+<li><p>&#x5185;&#x5BB9;&#x8BF4;&#x660E;</p>
+<p>  totalPages: &#x603B;&#x9875;&#x6570;</p>
+<p>  pageSize:&#x6BCF;&#x9875;&#x663E;&#x793A;&#x7684;&#x6761;&#x6570;</p>
+<p>  currentPage:&#x5F53;&#x524D;&#x9875;&#x9762;</p>
+<p>  totalCount:&#x603B;&#x6761;&#x6570;</p>
+<h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
 <p>  comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200});</p>
 </li>
 </ul>
-<p>上例修改了comp分页的总页码为100，每页显示20个，当前页是1，总条数是200</p>
-</script></p><div id='anchors-navbar'><i class='fa fa-anchor'></i><ul><li><a href='#分页控件'>分页控件</a></li><li><a href='#如何使用'>如何使用</a></li><li><a href='#示例'>示例</a></li><ul><li><a href='#基础分页'>基础分页</a></li><li><a href='#不同尺寸的按钮'>不同尺寸的按钮</a></li></ul></ul></div><a href='#分页控件' id='goTop'><i class='fa fa-arrow-up'></i></a>
+<p>&#x4E0A;&#x4F8B;&#x4FEE;&#x6539;&#x4E86;comp&#x5206;&#x9875;&#x7684;&#x603B;&#x9875;&#x7801;&#x4E3A;100&#xFF0C;&#x6BCF;&#x9875;&#x663E;&#x793A;20&#x4E2A;&#xFF0C;&#x5F53;&#x524D;&#x9875;&#x662F;1&#xFF0C;&#x603B;&#x6761;&#x6570;&#x662F;200</p>
+<div id='anchors-navbar'><i class='fa fa-anchor'></i><ul><li><a href='#分页控件'>分页控件</a></li><li><a href='#如何使用'>如何使用</a></li><li><a href='#示例'>示例</a></li><ul><li><a href='#基础分页'>基础分页</a></li><li><a href='#有间距的分页'>有间距的分页</a></li><li><a href='#不同尺寸的按钮'>不同尺寸的按钮</a></li><li><a href='#无边框的分页'>无边框的分页</a></li></ul><li><a href='#api'>API</a></li><ul><li><a href='#创建分页对象'>创建分页对象</a></li><ul><li><a href='#描述'>描述</a></li><li><a href='#参数paramter字段说明'>参数paramter字段说明</a></li><li><a href='#例子'>例子</a></li></ul><li><a href='#分页对象update方法'>分页对象update方法</a></li><ul><li><a href='#描述'>描述</a></li><li><a href='#参数paramter字段说明'>参数paramter字段说明</a></li><li><a href='#例子'>例子</a></li></ul></ul></ul></div><a href='#分页控件' id='goTop'><i class='fa fa-arrow-up'></i></a>
                     
                     </section>
                 
@@ -398,7 +423,7 @@ comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200,showState:
         <a href="./label.html" class="navigation navigation-prev " aria-label="Previous page: 标签 label"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./radio.html" class="navigation navigation-next " aria-label="Next page: 单选 radio"><i class="fa fa-angle-right"></i></a>
+        <a href="./switchButton.html" class="navigation navigation-next " aria-label="Next page: 开关 switch"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

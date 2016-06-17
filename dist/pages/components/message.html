@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>徽章 badge | iUAP Design</title>
+        <title>提示消息 message | iUAP Design</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -41,10 +41,10 @@
         
     
     
-    <link rel="next" href="./button.html" />
+    <link rel="next" href="./modal.html" />
     
     
-    <link rel="prev" href="./index.html" />
+    <link rel="prev" href="./radio.html" />
     
 
         
@@ -53,9 +53,9 @@
         
         
     <div class="book"
-        data-level="1"
-        data-chapter-title="徽章 badge"
-        data-filepath="badge.md"
+        data-level="5"
+        data-chapter-title="提示消息 message"
+        data-filepath="message.md"
         data-basepath="."
         data-revision="Fri Jun 17 2016 11:15:21 GMT+0800 (CST)"
         data-innerlanguage="">
@@ -86,7 +86,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1" data-path="badge.html">
+        <li class="chapter " data-level="1" data-path="badge.html">
             
                 
                     <a href="./badge.html">
@@ -146,7 +146,7 @@
             
         </li>
     
-        <li class="chapter " data-level="5" data-path="message.html">
+        <li class="chapter active" data-level="5" data-path="message.html">
             
                 
                     <a href="./message.html">
@@ -269,74 +269,212 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="&#x5FBD;&#x7AE0;&#x63A7;&#x4EF6;">&#x5FBD;&#x7AE0;&#x63A7;&#x4EF6;</h1>
-<p>&#x5FBD;&#x7AE0;&#x63A7;&#x4EF6;&#x4E3B;&#x8981;&#x5305;&#x62EC;&#x4E0D;&#x540C;&#x8272;&#x5F69;&#x7684;&#x5FBD;&#x7AE0;&#x3001;&#x542B;&#x6709;&#x56FE;&#x6807;&#x7684;&#x5FBD;&#x7AE0;&#x3002;</p>
+                        <h1 id="switch&#x63A7;&#x4EF6;">switch&#x63A7;&#x4EF6;</h1>
+<p>switch&#x63A7;&#x4EF6;</p>
 <h1 id="&#x5982;&#x4F55;&#x4F7F;&#x7528;">&#x5982;&#x4F55;&#x4F7F;&#x7528;</h1>
-<p>&#x6DFB;&#x52A0;&#x542B;&#x6709;<code>u-badge</code>&#x5C31;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5FBD;&#x7AE0;&#xFF0C;&#x5FBD;&#x7AE0;&#x7684;&#x5185;&#x5BB9;&#x5728;data-badge&#x4E2D;&#x8BBE;&#x7F6E;&#x3002;</p>
+<p>&#x6682;&#x65E0;</p>
 <h1 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h1>
-<h2 id="&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;&#x6807;&#x8BB0;">&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;&#x6807;&#x8BB0;</h2>
-<p>&#x7528;&#x4E8E;&#x63A8;&#x9001;&#x6D88;&#x606F;&#x6216;&#x63D0;&#x9192;&#x65F6;&#xFF0C;&#x5728;&#x6807;&#x7B7E;dom&#x5143;&#x7D20;&#x4E2D;&#x6DFB;&#x52A0;&#x6DFB;&#x52A0;&#x5177;&#x4F53;&#x7684;&#x56FE;&#x6807;&#x5373;&#x53EF;&#x3002;</p>
-<p><style>.demo .u-badge{
-    display: inline-block;
+<h2 id="&#x57FA;&#x7840;message">&#x57FA;&#x7840;Message</h2>
+<p>&#x6D88;&#x606F;&#x7C7B;&#x578B;&#x5BF9;&#x5E94;&#x4E0D;&#x540C;class&#x5C5E;&#x6027;&#x5219;&#x663E;&#x793A;&#x4E0D;&#x540C;&#x7684;&#x80CC;&#x666F;&#x8272;
+news --  u-mesnews
+info --  u-mesinfo
+success -- u-messuccess
+danger -- u-mesdanger
+warning -- u-meswarning</p>
+<p><style>.margin-r-10{
+    margin-right: 10px; 
+}
+.example .u-message{
+    position: inherit;
+}
+.example{
+    width: 300px;
 }
 </style></p>
-<div class="example-content"><div class="u-badge w-20 m" data-badge="1">
-    <i class="fa fa-bell"></i>
+<div class="example-content"><div class="example">
+    <div class="u-message u-mesnews active">    
+        <span class="u-msg-close fa fa-close"></span>
+        News!
+    </div>
+    <div class="u-message u-mesinfo active">
+        <span class="u-msg-close fa fa-close"></span>
+        Info!
+    </div>
+    <div class="u-message u-messuccess active">    
+        <span class="u-msg-close fa fa-close"></span>
+        Success!
+    </div>
+    <div class="u-message u-mesdanger active">
+        <span class="u-msg-close fa fa-close"></span>
+        Danger!
+    </div>
+    <div class="u-message u-meswarning active">
+        <span class="u-msg-close fa fa-close"></span>
+        Warning!
+    </div>
 </div>
-<div class="u-badge u-badge-no-background w-20 m" data-badge="1">
-    <i class="fa fa-bell"></i>
 </div>
-</div>
-<div class="examples-code"><pre><code>.demo .u-badge{
-    display: inline-block;
+<div class="examples-code"><pre><code>.margin-r-10{
+    margin-right: 10px; 
+}
+.example .u-message{
+    position: inherit;
+}
+.example{
+    width: 300px;
 }</code></pre>
 </div>
-<div class="examples-code"><pre><code>&lt;div class=&quot;u-badge w-20 m&quot; data-badge=&quot;1&quot;&gt;
-    &lt;i class=&quot;fa fa-bell&quot;&gt;&lt;/i&gt;
-&lt;/div&gt;
-&lt;div class=&quot;u-badge u-badge-no-background w-20 m&quot; data-badge=&quot;1&quot;&gt;
-    &lt;i class=&quot;fa fa-bell&quot;&gt;&lt;/i&gt;
+<div class="examples-code"><pre><code>&lt;div class=&quot;example&quot;&gt;
+    &lt;div class=&quot;u-message u-mesnews active&quot; &gt;    
+        &lt;span class=&quot;u-msg-close fa fa-close&quot;&gt;&lt;/span&gt;
+        News!
+    &lt;/div&gt;
+    &lt;div class=&quot;u-message u-mesinfo active&quot;&gt;
+        &lt;span class=&quot;u-msg-close fa fa-close&quot;&gt;&lt;/span&gt;
+        Info!
+    &lt;/div&gt;
+    &lt;div class=&quot;u-message u-messuccess active&quot;&gt;    
+        &lt;span class=&quot;u-msg-close fa fa-close&quot;&gt;&lt;/span&gt;
+        Success!
+    &lt;/div&gt;
+    &lt;div class=&quot;u-message u-mesdanger active&quot;&gt;
+        &lt;span class=&quot;u-msg-close fa fa-close&quot;&gt;&lt;/span&gt;
+        Danger!
+    &lt;/div&gt;
+    &lt;div class=&quot;u-message u-meswarning active&quot;&gt;
+        &lt;span class=&quot;u-msg-close fa fa-close&quot;&gt;&lt;/span&gt;
+        Warning!
+    &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 </div>
 
-<h2 id="&#x4E0D;&#x540C;&#x989C;&#x8272;&#x7684;badge">&#x4E0D;&#x540C;&#x989C;&#x8272;&#x7684;badge</h2>
-<p>&#x4F7F;&#x7528;<code>u-badge-primary</code>&#x3001;<code>u-badge-success</code>&#x3001;<code>u-badge-info</code>&#x3001;<code>u-badge-warning</code>&#x3001;<code>u-badge-danger</code>&#x3001;<code>u-badge-dark</code>&#x8FD9;&#x4E03;&#x4E2A;&#x4E2A;&#x57FA;&#x7840;&#x7C7B;&#xFF0C;&#x6765;&#x663E;&#x793A;&#x4E0D;&#x540C;&#x7684;&#x989C;&#x8272;&#x3002;</p>
-<p><style>.demo .u-badge{
-    display: inline-block;
+<h2 id="&#x70B9;&#x51FB;&#x89E6;&#x53D1;message">&#x70B9;&#x51FB;&#x89E6;&#x53D1;Message</h2>
+<p><style>.margin-r-10{
+    margin-right: 10px; 
+}
+.example .u-message{
+    position: inherit;
+}
+.example{
+    width: 300px;
 }
 </style></p>
-<div class="example-content"><label class="u-badge u-badge-primary" data-badge="1">
-</label>
-<label class="u-badge u-badge-success" data-badge="1">
-</label>
-<label class="u-badge u-badge-info" data-badge="1">
-</label>
-<label class="u-badge u-badge-warning" data-badge="1">
-</label>
-<label class="u-badge u-badge-danger" data-badge="1">
-</label>
-<label class="u-badge u-badge-dark" data-badge="1">
-</label>
+<div class="example-content"><button id="msgBtn" class="u-button">Success</button>
+<button id="errorBtn" class="u-button">Error</button>
+<button id="warnBtn" class="u-button">Warning</button>
 </div>
-<div class="examples-code"><pre><code>.demo .u-badge{
-    display: inline-block;
+<div class="examples-code"><pre><code>.margin-r-10{
+    margin-right: 10px; 
+}
+.example .u-message{
+    position: inherit;
+}
+.example{
+    width: 300px;
 }</code></pre>
 </div>
-<div class="examples-code"><pre><code>&lt;label class=&quot;u-badge u-badge-primary&quot; data-badge=&quot;1&quot;&gt;
-&lt;/label&gt;
-&lt;label class=&quot;u-badge u-badge-success&quot; data-badge=&quot;1&quot;&gt;
-&lt;/label&gt;
-&lt;label class=&quot;u-badge u-badge-info&quot; data-badge=&quot;1&quot;&gt;
-&lt;/label&gt;
-&lt;label class=&quot;u-badge u-badge-warning&quot; data-badge=&quot;1&quot;&gt;
-&lt;/label&gt;
-&lt;label class=&quot;u-badge u-badge-danger&quot; data-badge=&quot;1&quot;&gt;
-&lt;/label&gt;
-&lt;label class=&quot;u-badge u-badge-dark&quot; data-badge=&quot;1&quot;&gt;
-&lt;/label&gt;</code></pre>
+<div class="examples-code"><pre><code>&lt;button id=&quot;msgBtn&quot; class=&quot;u-button&quot; &gt;Success&lt;/button&gt;
+&lt;button id=&quot;errorBtn&quot; class=&quot;u-button&quot; &gt;Error&lt;/button&gt;
+&lt;button id=&quot;warnBtn&quot; class=&quot;u-button&quot; &gt;Warning&lt;/button&gt;</code></pre>
 </div>
 
-<div id='anchors-navbar'><i class='fa fa-anchor'></i><ul><li><a href='#徽章控件'>徽章控件</a></li><li><a href='#如何使用'>如何使用</a></li><li><a href='#示例'>示例</a></li><ul><li><a href='#绝对定位标记'>绝对定位标记</a></li><li><a href='#不同颜色的badge'>不同颜色的badge</a></li></ul></ul></div><a href='#徽章控件' id='goTop'><i class='fa fa-arrow-up'></i></a>
+<h2 id="&#x5E26;icon&#x7684;&#x52A0;&#x6DF1;&#x989C;&#x8272;&#x7248;message">&#x5E26;icon&#x7684;&#x52A0;&#x6DF1;&#x989C;&#x8272;&#x7248;Message</h2>
+<p>&#x80CC;&#x666F;&#x8272;&#x52A0;&#x6DF1; &#x5728;u-message&#x5E73;&#x7EA7;&#x4E0A;&#x6DFB;&#x52A0;dark class</p>
+<p>&#x6D88;&#x606F;&#x7C7B;&#x578B;&#x5BF9;&#x5E94;&#x76F8;&#x5E94;&#x7684;icon
+news -- fa fa-bell
+info -- fa fa-info-circle
+success -- fa fa-check-circle
+danger -- fa fa-times-circle
+warning -- fa fa-warning</p>
+<div class="example-content"><div class="example">
+    <div class="u-message dark u-mesnews active">    
+        <span class="u-msg-close fa fa-close"></span>
+        <i class="fa fa-bell margin-r-10"></i>News!
+    </div>
+    <div class="u-message dark u-mesinfo active">
+        <span class="u-msg-close fa fa-close"></span>
+        <i class="fa fa-info-circle margin-r-10"></i>Info!
+    </div>
+    <div class="u-message dark u-messuccess active">    
+        <span class="u-msg-close fa fa-close"></span>
+        <i class="fa fa-check-circle margin-r-10"></i>Success!
+    </div>
+    <div class="u-message dark u-mesdanger active">
+        <span class="u-msg-close fa fa-close"></span>
+        <i class="fa fa-times-circle margin-r-10"></i>Danger!
+    </div>
+    <div class="u-message dark u-meswarning active">
+        <span class="u-msg-close fa fa-close"></span>
+        <i class="fa fa-warning margin-r-10"></i>Warning!
+    </div>
+</div>
+</div>
+<style>.margin-r-10{
+    margin-right: 10px; 
+}
+.example .u-message{
+    position: inherit;
+}
+.example{
+    width: 300px;
+}
+</style>
+<div class="examples-code"><pre><code>&lt;div class=&quot;example&quot;&gt;
+    &lt;div class=&quot;u-message dark u-mesnews active&quot; &gt;    
+        &lt;span class=&quot;u-msg-close fa fa-close&quot;&gt;&lt;/span&gt;
+        &lt;i class=&quot;fa fa-bell margin-r-10&quot;&gt;&lt;/i&gt;News!
+    &lt;/div&gt;
+    &lt;div class=&quot;u-message dark u-mesinfo active&quot;&gt;
+        &lt;span class=&quot;u-msg-close fa fa-close&quot;&gt;&lt;/span&gt;
+        &lt;i class=&quot;fa fa-info-circle margin-r-10&quot;&gt;&lt;/i&gt;Info!
+    &lt;/div&gt;
+    &lt;div class=&quot;u-message dark u-messuccess active&quot;&gt;    
+        &lt;span class=&quot;u-msg-close fa fa-close&quot;&gt;&lt;/span&gt;
+        &lt;i class=&quot;fa fa-check-circle margin-r-10&quot;&gt;&lt;/i&gt;Success!
+    &lt;/div&gt;
+    &lt;div class=&quot;u-message dark u-mesdanger active&quot;&gt;
+        &lt;span class=&quot;u-msg-close fa fa-close&quot;&gt;&lt;/span&gt;
+        &lt;i class=&quot;fa fa-times-circle margin-r-10&quot;&gt;&lt;/i&gt;Danger!
+    &lt;/div&gt;
+    &lt;div class=&quot;u-message dark u-meswarning active&quot;&gt;
+        &lt;span class=&quot;u-msg-close fa fa-close&quot;&gt;&lt;/span&gt;
+        &lt;i class=&quot;fa fa-warning margin-r-10&quot;&gt;&lt;/i&gt;Warning!
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<div class="examples-code"><pre><code>.margin-r-10{
+    margin-right: 10px; 
+}
+.example .u-message{
+    position: inherit;
+}
+.example{
+    width: 300px;
+}</code></pre>
+</div>
+
+
+<!--### 示例1
+
+示例1说明
+
+### 示例2
+
+示例2说-->
+<h1 id="api">API</h1>
+<h2 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h2>
+<p>&#x6682;&#x65E0;
+&lt;!--### &#x5C5E;&#x6027;1</p>
+<p>&#x5C5E;&#x6027;1&#x8BF4;&#x660E;</p>
+<h3 id="&#x5C5E;&#x6027;2">&#x5C5E;&#x6027;2</h3>
+<p>&#x5C5E;&#x6027;2&#x8BF4;&#x660E;--&gt;</p>
+<h2 id="&#x65B9;&#x6CD5;">&#x65B9;&#x6CD5;</h2>
+<p>&#x6682;&#x65E0;
+&lt;!--### &#x65B9;&#x6CD5;1</p>
+<p>&#x65B9;&#x6CD5;1&#x8BF4;&#x660E;</p>
+<h3 id="&#x65B9;&#x6CD5;2">&#x65B9;&#x6CD5;2</h3>
+<p>&#x65B9;&#x6CD5;2&#x8BF4;&#x660E;--&gt;</p>
+<div id='anchors-navbar'><i class='fa fa-anchor'></i><ul><li><a href='#switch控件'>switch控件</a></li><li><a href='#如何使用'>如何使用</a></li><li><a href='#示例'>示例</a></li><ul><li><a href='#基础message'>基础Message</a></li><li><a href='#点击触发message'>点击触发Message</a></li><li><a href='#带icon的加深颜色版message'>带icon的加深颜色版Message</a></li></ul><li><a href='#api'>API</a></li><ul><li><a href='#属性'>属性</a></li><ul><li><a href='#属性2'>属性2</a></li></ul><li><a href='#方法'>方法</a></li><ul><li><a href='#方法2'>方法2</a></li></ul></ul></ul></div><a href='#switch控件' id='goTop'><i class='fa fa-arrow-up'></i></a>
                     
                     </section>
                 
@@ -346,10 +484,10 @@
         </div>
 
         
-        <a href="./index.html" class="navigation navigation-prev " aria-label="Previous page: 介绍"><i class="fa fa-angle-left"></i></a>
+        <a href="./radio.html" class="navigation navigation-prev " aria-label="Previous page: 单选 radio"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./button.html" class="navigation navigation-next " aria-label="Next page: 按钮 button"><i class="fa fa-angle-right"></i></a>
+        <a href="./modal.html" class="navigation navigation-next " aria-label="Next page: 模态框 modal"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
