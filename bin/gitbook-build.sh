@@ -14,7 +14,7 @@ do
   rm -rf $pageDir
   echo "--- 删除完成 ---"
 
-  cd $docDir && gitbook install
+  cd $docDir
   echo "--- 开始编译${name} ---"
   gitbook build --ouput=../../dist/pages/$pageDir
   echo "--- ${name}资源编译完成 ---"
