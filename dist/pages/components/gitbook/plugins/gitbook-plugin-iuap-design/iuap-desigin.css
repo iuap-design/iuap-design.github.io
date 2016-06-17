@@ -4,7 +4,7 @@
     top: 0px;
     display: inline-block;
     background:#f8f8f8;
-    border-right: 0px;
+    border-right: 1px solid #e3e3e3;
     width:240px;
     margin-top: 30px;
 }
@@ -147,5 +147,9 @@ body{
 
 #goTop{
     bottom:38px;
+}
+
+.book .book-body .navigation.navigation-prev,.book .book-body .navigation.navigation-next{
+    display: none;
 }
 
