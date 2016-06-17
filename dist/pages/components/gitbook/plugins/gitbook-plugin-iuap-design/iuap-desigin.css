@@ -153,3 +153,34 @@ body{
     display: none;
 }
 
+/*返回顶部*/
+#goTop,#anchors-navbar{
+    position: fixed;
+    border: 1px solid #2db7f5;
+    z-index: 999;
+    cursor: pointer;
+    padding: 5px 10px;
+    box-shadow: none;
+    color:#2db7f5;
+    background-color: transparent;
+    right:20px;
+}
+#goTop{
+    bottom:15px;
+}
+/*锚点*/
+#anchors-navbar{
+    top: 68px;
+}
+#anchors-navbar:hover{
+    background: #fff;
+}
+
+
+
+
+
+
+
+
+

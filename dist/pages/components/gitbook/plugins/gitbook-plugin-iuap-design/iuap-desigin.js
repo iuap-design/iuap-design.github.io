@@ -136,8 +136,9 @@ require(['gitbook', 'jQuery', 'lodash'], function (gitbook, $, _) {
         		t = 0;
     		$('.book-summary').css('top', -1 * t + 'px');
     		if(t1 < 80)
-    			t1 = 80
+    			t1 = 30
     		$('#anchors-navbar').css('top', t1 + 'px');
+
         }
 
         function bodyScroll(){
@@ -151,5 +152,12 @@ require(['gitbook', 'jQuery', 'lodash'], function (gitbook, $, _) {
         var h = parseInt(oH) - 80;
         // $summary.css('height',h + 'px');
         $book.css('min-height',parseInt(oH) - 60 + 'px');
+
+        // backtop
+        // var bTop = document.getElementById('goTop');
+        // bTop.innerHTML = '<button type="button" class="btn btn-ghost btn-primary btn-sm">回到顶部</button>';
+
+
+
 	});
 });
