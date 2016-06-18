@@ -11,6 +11,7 @@ tree控件
 
 ##基础Tree
 
+用于多层目录的嵌套结构的数据。
 <style>/*#demoLeft{
 	width:40%;
 	border: 1px solid #EEEEEE;
