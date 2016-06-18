@@ -10,8 +10,9 @@
 	"plugins":[
 		"anchor-navigation",
 		"expandable-chapters",
-		"-livereload",
 		"-search",
+		"-livereload",
+		"-fontsettings",
 		"iuap-design"
 	],
 	"pluginsConfig": {
@@ -22,6 +23,10 @@
     },
 		"disqus": {
       "shortName": "gitbookuse"
-    }
+    },
+		"search-pro": {
+    	"cutWordLib": "nodejieba",
+    	"defineWord" : ["Gitbook Use"]
+		}
 	}
 }
