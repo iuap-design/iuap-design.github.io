@@ -1,7 +1,7 @@
 
 # breadcrumb控件
 
-### `/`为分隔符
+## `/`为分隔符
 
 <div class="example-content">
 <ol class="u-breadcrumb">
@@ -28,7 +28,7 @@
 </code></pre>
 </div>
 
-### `>>`为分隔符
+## `>>`为分隔符
 
 
 
@@ -60,7 +60,7 @@
 &lt;/ol></code></pre>
 </div>
 
-### `/`为分隔符,并添加Home icon
+## `/`为分隔符,并添加Home icon
 
 <style>.md-home:before {
     content: "\f015";
