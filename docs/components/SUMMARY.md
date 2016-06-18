@@ -15,5 +15,5 @@
  * [表格 datatable](datatable.md)
  * [页签 tabs](tabs.md)
  * [提示 tooltip](tooltip.md)
- * [面包屑 breadcut](breadcut.md)
+ * [面包屑 breadcrumb](breadcrumb.md)
 

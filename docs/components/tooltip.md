@@ -1,13 +1,5 @@
 # tooltip控件
 
-tooltip控件
-
-# 如何使用
-
-暂无
-
-# 示例
-
 
 ##基础tooltip
 

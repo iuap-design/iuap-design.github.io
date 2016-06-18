@@ -1,17 +1,7 @@
-# breadcut控件
 
-breadcut控件
+# breadcrumb控件
 
-# 如何使用
-
-暂无
-
-# 示例
-
-
-##面包屑
-
-"/"为分隔符
+### `/`为分隔符
 
 <div class="example-content">
 <ol class="u-breadcrumb">
@@ -38,9 +28,9 @@ breadcut控件
 </code></pre>
 </div>
 
-##面包屑
+### `>>`为分隔符
 
-">>"为分隔符
+
 
 <div class="example-content">
 <ol class="u-breadcrumb u-breadcrumb-arrow">
@@ -70,9 +60,7 @@ breadcut控件
 &lt;/ol></code></pre>
 </div>
 
-##面包屑
-
-"/"为分隔符,并添加Home icon
+### `/`为分隔符,并添加Home icon
 
 <style>.md-home:before {
     content: "\f015";
