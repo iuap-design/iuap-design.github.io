@@ -1,4 +1,4 @@
-#  iUAP Design 特性
+# iUAP Design 特性
 
 ## 细微：
 

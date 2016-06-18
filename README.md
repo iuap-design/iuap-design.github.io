@@ -38,12 +38,26 @@ iUAP Deisgn 的官网
 
 ## 如何开发
 
+### 使用gitbook编译MD文档
+
+一键编译docs下目录所有的资源
+
+```
+sh bin/gitbook-build.sh
+```
+
+> gitbook产出的资源在代码库中ignore掉了，文档推送之后服务器会自动build编译并部署
+
+### Git基本操作
+
 1.切到你本地的某个目录，比如直接到本地D盘
+
 ```
 cd /d
 ```
 
 2.拉取远程仓库代码
+
 ```
 git clone git@github.com:iuap-design/iuap-design.github.io.git
 npm install

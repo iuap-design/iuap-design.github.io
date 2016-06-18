@@ -1,23 +1,17 @@
-# switch控件
+# message控件
 
-switch控件
+用于即时信息的提示，消息背景色取决于消息类型，易可添加相对应的`icon`
 
 # 如何使用
 
-暂无
+给父元素添加`.u-message`类
+自定义类型背景  例如new  在父元素添加`.u-mesnews`类
 
 # 示例
-
 
 ##基础Message
 
 消息类型对应不同class属性则显示不同的背景色
-news --  u-mesnews
-info --  u-mesinfo
-success -- u-messuccess
-danger -- u-mesdanger
-warning -- u-meswarning
-
 <style>.margin-r-10{
     margin-right: 10px; 
 }
@@ -31,35 +25,25 @@ warning -- u-meswarning
 <div class="example-content"><div class="example">
     <div class="u-message u-mesnews active" >    
         <span class="u-msg-close fa fa-close"></span>
-        News!
+        News u-mesnews!
     </div>
     <div class="u-message u-mesinfo active">
         <span class="u-msg-close fa fa-close"></span>
-        Info!
+        Info  u-mesinfo!
     </div>
     <div class="u-message u-messuccess active">    
         <span class="u-msg-close fa fa-close"></span>
-        Success!
+        Success u-messuccess!
     </div>
     <div class="u-message u-mesdanger active">
         <span class="u-msg-close fa fa-close"></span>
-        Danger!
+        Danger u-mesdanger!
     </div>
     <div class="u-message u-meswarning active">
         <span class="u-msg-close fa fa-close"></span>
-        Warning!
+        Warning u-meswarning!
     </div>
 </div>
-</div>
-<div class="examples-code"><pre><code>.margin-r-10{
-    margin-right: 10px; 
-}
-.example .u-message{
-    position: inherit;
-}
-.example{
-	width: 300px;
-}</code></pre>
 </div>
 <div class="examples-code"><pre><code>&lt;div class="example">
     &lt;div class="u-message u-mesnews active" >    
@@ -85,80 +69,38 @@ warning -- u-meswarning
 &lt;/div></code></pre>
 </div>
 
-##点击触发Message
-<style>.margin-r-10{
-    margin-right: 10px; 
-}
-.example .u-message{
-    position: inherit;
-}
-.example{
-	width: 300px;
-}
-</style>
-<div class="example-content"><button id="msgBtn" class="u-button" >Success</button>
-<button id="errorBtn" class="u-button" >Error</button>
-<button id="warnBtn" class="u-button" >Warning</button>
-</div>
-<div class="examples-code"><pre><code>.margin-r-10{
-    margin-right: 10px; 
-}
-.example .u-message{
-    position: inherit;
-}
-.example{
-	width: 300px;
-}</code></pre>
-</div>
-<div class="examples-code"><pre><code>&lt;button id="msgBtn" class="u-button" >Success&lt;/button>
-&lt;button id="errorBtn" class="u-button" >Error&lt;/button>
-&lt;button id="warnBtn" class="u-button" >Warning&lt;/button></code></pre>
-</div>
 
-##带icon的加深颜色版Message
+##加深颜色Message
 
-背景色加深 在u-message平级上添加dark class
+背景色加深 `.dark`类提供了选择
 
 消息类型对应相应的icon
-news -- fa fa-bell
-info -- fa fa-info-circle
-success -- fa fa-check-circle
-danger -- fa fa-times-circle
-warning -- fa fa-warning
+
 
 <div class="example-content"><div class="example">
     <div class="u-message dark u-mesnews active" >    
         <span class="u-msg-close fa fa-close"></span>
-        <i class="fa fa-bell margin-r-10"></i>News!
+        <i class="fa fa-bell margin-r-10"></i>News!  fa fa-bell
     </div>
     <div class="u-message dark u-mesinfo active">
         <span class="u-msg-close fa fa-close"></span>
-        <i class="fa fa-info-circle margin-r-10"></i>Info!
+        <i class="fa fa-info-circle margin-r-10"></i>Info! fa fa-info-circle
     </div>
     <div class="u-message dark u-messuccess active">    
         <span class="u-msg-close fa fa-close"></span>
-        <i class="fa fa-check-circle margin-r-10"></i>Success!
+        <i class="fa fa-check-circle margin-r-10"></i>Success! fa fa-check-circle
     </div>
     <div class="u-message dark u-mesdanger active">
         <span class="u-msg-close fa fa-close"></span>
-        <i class="fa fa-times-circle margin-r-10"></i>Danger!
+        <i class="fa fa-times-circle margin-r-10"></i>Danger! fa fa-times-circle
     </div>
     <div class="u-message dark u-meswarning active">
         <span class="u-msg-close fa fa-close"></span>
-        <i class="fa fa-warning margin-r-10"></i>Warning!
+        <i class="fa fa-warning margin-r-10"></i>Warning! fa fa-warning
     </div>
 </div>
 </div>
-<style>.margin-r-10{
-    margin-right: 10px; 
-}
-.example .u-message{
-    position: inherit;
-}
-.example{
-	width: 300px;
-}
-</style>
+
 <div class="examples-code"><pre><code>&lt;div class="example">
     &lt;div class="u-message dark u-mesnews active" >    
         &lt;span class="u-msg-close fa fa-close">&lt;/span>
@@ -182,46 +124,17 @@ warning -- fa fa-warning
     &lt;/div>
 &lt;/div></code></pre>
 </div>
-<div class="examples-code"><pre><code>.margin-r-10{
-    margin-right: 10px; 
-}
-.example .u-message{
-    position: inherit;
-}
-.example{
-	width: 300px;
-}</code></pre>
+
+##点击触发Message
+<div class="example-content"><button id="msgBtn" class="u-button" >Success</button>
+<button id="errorBtn" class="u-button" >Error</button>
+<button id="warnBtn" class="u-button" >Warning</button>
+</div>
+
+<div class="examples-code"><pre><code>&lt;button id="msgBtn" class="u-button" >Success&lt;/button>
+&lt;button id="errorBtn" class="u-button" >Error&lt;/button>
+&lt;button id="warnBtn" class="u-button" >Warning&lt;/button></code></pre>
 </div>
 
 
-<!--### 示例1
 
-示例1说明
-
-### 示例2
-
-示例2说-->
-
-# API
-
-## 属性
-
-暂无
-<!--### 属性1
-
-属性1说明
-
-### 属性2
-
-属性2说明-->
-
-## 方法
-
-暂无
-<!--### 方法1
-
-方法1说明
-
-### 方法2
-
-方法2说明-->
