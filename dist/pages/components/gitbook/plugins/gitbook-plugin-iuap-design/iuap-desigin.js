@@ -83,45 +83,7 @@ require(['gitbook', 'jQuery', 'lodash'], function (gitbook, $, _) {
 		var $nextA = $('.navigation-next',$bookBody);
 		$pageWrapper.append($prevA);
 		$pageWrapper.append($nextA);
-
-		// 主体引入uui内容 
-		var ctx = 'http://design.yyuap.com/static/uui-original/1.0.1';
-		// var tpl = [
-		// 	'<link rel="stylesheet" href="'+ ctx +'/fonts/font-awesome/css/font-awesome.css">',
-	 //       	'<link rel="stylesheet" type="text/css" href="'+ ctx +'/css/u.css">',
-	 //       	'<link rel="stylesheet" type="text/css" href="'+ ctx +'/css/u-extend.css">',
-		//     '<link rel="stylesheet" type="text/css" href="'+ ctx +'/css/tree.css">',
-	 //        '<link rel="stylesheet" type="text/css" href="'+ ctx +'/css/grid.css">',
-	 //        '<script src="http://design.yyuap.com/static/jquery/jquery-1.11.2.js"></script>',
-	 //    	'<script src="http://design.yyuap.com/static/knockout/knockout-3.2.0.debug.js"></script>',
-	 //        '<script src="'+ ctx +'/js/u-polyfill.js"></script>',
-	 //        '<script src="'+ ctx +'/js/u.js"></script>',
-	 //        '<script src="'+ ctx +'/js/u-tree.js"></script>',
-	 //        '<script src="'+ ctx +'/js/u-grid.js"></script>',
-  //       ]
-        // var tplStr = tpl.join('\r\n');
-        var linkArray=['/fonts/font-awesome/css/font-awesome.css','/css/u.css','/css/u-extend.css','/css/tree.css','/css/grid.css'];
-        var scriptArray=['/js/u-polyfill.js','/js/u.js',/*'/js/u-tree.js','/js/u-grid.js'*/];
-      	for(var i=0;i<linkArray.length;i++){
-      		var link = document.createElement('link');
-      		link.rel='stylesheet';
-      		link.href=ctx+linkArray[i];
-      		 $('head').append(link);
-      	}
-        var jquerySrc= document.createElement('script');
-        jquerySrc.scr = 'http://design.yyuap.com/static/jquery/jquery-1.11.2.js';
-        $('head').append(jquerySrc);
-
-        var koSrc= document.createElement('script');
-        koSrc.scr = 'http://design.yyuap.com/static/knockout/knockout-3.2.0.debug.js';
-        $('head').append(koSrc);
-        var tim = 1000;
-        for(var j=0;j<scriptArray.length;j++){
-      		var script = document.createElement('script');
-      		script.src=ctx+scriptArray[j];
-  			$('head').append(script);
-      	}
-        // document.write(tplStr);
+		
         var $html = $('html');
         $html.css('font-size','62.5%');
 
@@ -156,7 +118,7 @@ require(['gitbook', 'jQuery', 'lodash'], function (gitbook, $, _) {
         // backtop
         // var bTop = document.getElementById('goTop');
         // bTop.innerHTML = '<button type="button" class="btn btn-ghost btn-primary btn-sm">回到顶部</button>';
-
+        hljs.initHighlightingOnLoad();
 
 
 	});
