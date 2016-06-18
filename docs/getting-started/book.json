@@ -10,10 +10,14 @@
 	"plugins":[
 		"anchor-navigation",
 		"expandable-chapters",
-		"-search",
 		"-livereload",
-		"-fontsettings",
-		"iuap-design"
+		"iuap-design",
+		"highlight",
+		"-search",
+		"search-pro",
+		"emphasize",
+		"splitter",
+		"toggle-chapters"
 	],
 	"pluginsConfig": {
 		"fontsettings": {

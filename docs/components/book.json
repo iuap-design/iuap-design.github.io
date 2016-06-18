@@ -12,7 +12,6 @@
 		"expandable-chapters",
 		"-search",
 		"-livereload",
-		"-fontsettings",
 		"iuap-design"
 	],
 	"pluginsConfig": {
