@@ -12,9 +12,6 @@
 		"expandable-chapters",
 		"-livereload",
 		"-search",
-		"emphasize",
-		"splitter",
-		"toggle-chapters",
 		"iuap-design"
 	],
 	"pluginsConfig": {
