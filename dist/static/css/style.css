@@ -2077,7 +2077,7 @@ label.hover {
 .offcanvas-nav {
 	position: fixed;
 	z-index: 1000;
-	width: 92px;
+	width: 200px;
 	min-height: 100%;
 	top: 0;
 	right: 0;
