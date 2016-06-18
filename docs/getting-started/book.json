@@ -11,12 +11,11 @@
 		"anchor-navigation",
 		"expandable-chapters",
 		"-livereload",
-		"iuap-design",
-		"highlight",
 		"-search",
 		"emphasize",
 		"splitter",
-		"toggle-chapters"
+		"toggle-chapters",
+		"iuap-design"
 	],
 	"pluginsConfig": {
 		"fontsettings": {
