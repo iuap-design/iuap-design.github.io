@@ -14,7 +14,6 @@
 		"iuap-design",
 		"highlight",
 		"-search",
-		"search-pro",
 		"emphasize",
 		"splitter",
 		"toggle-chapters"
@@ -27,10 +26,6 @@
     },
 		"disqus": {
       "shortName": "gitbookuse"
-    },
-		"search-pro": {
-    	"cutWordLib": "nodejieba",
-    	"defineWord" : ["Gitbook Use"]
-		}
+    }
 	}
 }
