@@ -6,17 +6,17 @@ _site
 Thumbs.db
 ehthumbs.db
 
-bin/datatable
-bin/iuap-design
-bin/tree
-bin/grid
-bin/datetimepicker
-bin/dist
+bin/datatable/
+bin/iuap-design/
+bin/tree/
+bin/grid/
+bin/datetimepicker/
+bin/dist/
 
-dist/pages/components
-dist/pages/design-language
-dist/pages/getting-started
-dist/pages/global-style
+dist/pages/components/
+dist/pages/design-language/
+dist/pages/getting-started/
+dist/pages/global-style/
 
 
 # Folder config file

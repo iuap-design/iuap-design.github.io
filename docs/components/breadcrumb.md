@@ -89,6 +89,3 @@
     &lt;li class="active">Data&lt;/li>
 &lt;/ol></code></pre>
 </div>
-
-
-
