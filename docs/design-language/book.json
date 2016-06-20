@@ -13,9 +13,14 @@
 		"-search",
 		"-livereload",
 		"-fontsettings",
+		"-sharing",
 		"iuap-design"
 	],
 	"pluginsConfig": {
+		"iuap-design": {
+			"title": "设计语言",
+			"desc": "设计语言的特性、原则、字体、文案、排版等"
+		},
 		"fontsettings": {
   		"theme": "sepia",
   		"family": "serif",
