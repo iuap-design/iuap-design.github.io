@@ -1,5 +1,5 @@
 * 基本开发 Basic Development
-  * [CSS组件库](./basic-development/css.md)
+  * [CSS样式](./basic-development/css.md)
   * [典型页面](./basic-development/page.md)
   * [浏览器兼容性](./basic-development/browser.md)
   * [版本更新](./basic-development/version.md)

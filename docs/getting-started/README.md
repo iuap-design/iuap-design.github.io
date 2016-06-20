@@ -18,7 +18,9 @@ http://design.yyuap.com/static/iuap-design/3.0.1/css/u-extend.css
 
 - 使用npm安装
 
-暂未发布，敬请期待...
+```
+npm install iuap-design
+```
 
 - 使用bower下载
 
