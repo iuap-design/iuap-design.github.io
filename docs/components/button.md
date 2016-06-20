@@ -10,17 +10,17 @@
 
 
 ##基础按钮
-在含有`u-button`样式的button元素上添加`raised`样式。如果添加`primary`样式，按钮的背景色为系统的主色，如果添加`accent`样式,按钮的背景色为系统的副色。
-<div class="example-content"><button class="u-button raised">BUTTON</button>
-<button class="u-button raised accent">BUTTON</button>
-<button class="u-button raised primary">BUTTON</button>
+在含有`u-button`样式的button元素上添加`waves-effect waves-light`样式。如果添加`primary`样式，按钮的背景色为系统的主色，如果添加`accent`样式,按钮的背景色为系统的副色。
+<div class="example-content"><button class="u-button waves-effect waves-light">BUTTON</button>
+<button class="u-button waves-effect waves-light accent">BUTTON</button>
+<button class="u-button waves-effect waves-light primary">BUTTON</button>
 </div>
-<div class="examples-code"><pre><code>&lt;button class="u-button raised">BUTTON&lt;/button>
-&lt;button class="u-button raised accent">BUTTON&lt;/button>
-&lt;button class="u-button raised primary">BUTTON&lt;/button></code></pre>
+<div class="examples-code"><pre><code>&lt;button class="u-button waves-effect waves-light">BUTTON&lt;/button>
+&lt;button class="u-button waves-effect waves-light accent">BUTTON&lt;/button>
+&lt;button class="u-button waves-effect waves-light primary">BUTTON&lt;/button></code></pre>
 </div>
 
-﻿##文字按钮
+##文字按钮
 <div class="example-content"><button class="u-button">BUTTON</button>
 <button class="u-button accent">BUTTON</button>
 <button class="u-button primary">BUTTON</button>
@@ -46,31 +46,31 @@
 ##宽按钮
 如果想按钮充满，添加类 `.u-button-block `
 <div class="example-content"><div style="width:600px">
-    <button class="u-button raised primary u-button-block">宽按钮
+    <button class="u-button waves-effect waves-light primary u-button-block">宽按钮
     </button>   
 </div>
 </div>
 <div class="examples-code"><pre><code>&lt;div style="width:600px">
-    &lt;button class="u-button raised primary u-button-block">宽按钮
+    &lt;button class="u-button waves-effect waves-light primary u-button-block">宽按钮
     &lt;/button>   
 &lt;/div></code></pre>
 </div>
 
 ##多尺寸响应
 不同尺寸的按钮需添加类`.u-button-xg`, `.u-button-lg`,`.u-button-sm`
-<div class="example-content"><button class="u-button raised primary u-button-xg">特大尺寸</button>
+<div class="example-content"><button class="u-button waves-effect waves-light primary u-button-xg">特大尺寸</button>
 
-<button class="u-button raised primary u-button-lg">大尺寸</button>
-<button class="u-button raised primary">默认尺寸
+<button class="u-button waves-effect waves-light primary u-button-lg">大尺寸</button>
+<button class="u-button waves-effect waves-light primary">默认尺寸
 </button>
-<button class="u-button raised primary u-button-sm">小尺寸</button>
+<button class="u-button waves-effect waves-light primary u-button-sm">小尺寸</button>
 </div>
-<div class="examples-code"><pre><code>&lt;button class="u-button raised primary u-button-xg">特大尺寸&lt;/button>
+<div class="examples-code"><pre><code>&lt;button class="u-button waves-effect waves-light primary u-button-xg">特大尺寸&lt;/button>
 
-&lt;button class="u-button raised primary u-button-lg">大尺寸&lt;/button>
-&lt;button class="u-button raised primary">默认尺寸
+&lt;button class="u-button waves-effect waves-light primary u-button-lg">大尺寸&lt;/button>
+&lt;button class="u-button waves-effect waves-light primary">默认尺寸
 &lt;/button>
-&lt;button class="u-button raised primary u-button-sm">小尺寸&lt;/button></code></pre>
+&lt;button class="u-button waves-effect waves-light primary u-button-sm">小尺寸&lt;/button></code></pre>
 </div>
 
 ##左半圆按钮、右半圆按钮
@@ -78,14 +78,14 @@
 
 右半圆按钮的样式： `.u-button-pill-right` 和 `.u-button-round`一起使用
 
-<div class="example-content"><button class="u-button raised primary u-button-pill-left u-button-round">左半圆按钮
+<div class="example-content"><button class="u-button waves-effect waves-light primary u-button-pill-left u-button-round">左半圆按钮
 </button>
-<button class="u-button raised primary u-button-pill-right u-button-squared">右半圆按钮
+<button class="u-button waves-effect waves-light primary u-button-pill-right u-button-squared">右半圆按钮
 </button>
 </div>
-<div class="examples-code"><pre><code>&lt;button class="u-button raised primary u-button-pill-left u-button-round">左半圆按钮
+<div class="examples-code"><pre><code>&lt;button class="u-button waves-effect waves-light primary u-button-pill-left u-button-round">左半圆按钮
 &lt;/button>
-&lt;button class="u-button raised primary u-button-pill-right u-button-squared">右半圆按钮
+&lt;button class="u-button waves-effect waves-light primary u-button-pill-right u-button-squared">右半圆按钮
 &lt;/button></code></pre>
 </div>
 
@@ -102,7 +102,7 @@
 * 在ul标签内，使用样式为`u-menu-item`的li标签定义菜单的具体内容，当li标签不可用时，可以添加`disabled`属性。
 
 
-<div class="example-content"><button class="u-button  raised u-menu-button" id="demo-menu-lower-right1">
+<div class="example-content"><button class="u-button  waves-effect waves-light u-menu-button" id="demo-menu-lower-right1">
     联查
     <span class="u-right-icon fa fa-angle-down"></span>
 </button>
@@ -111,7 +111,7 @@
     <li class="u-menu-item"><a>到货单</a></li>
 </ul>
 </div>
-<div class="examples-code"><pre><code>&lt;button class="u-button  raised u-menu-button" id="demo-menu-lower-right1">
+<div class="examples-code"><pre><code>&lt;button class="u-button  waves-effect waves-light u-menu-button" id="demo-menu-lower-right1">
     联查
     &lt;span class="u-right-icon fa fa-angle-down">&lt;/span>
 &lt;/button>
@@ -228,14 +228,14 @@
 
 ##圆角按钮
 圆角和直角按钮来区分不同的行为风格.对应的样式分别为：`u-button-round` ，`.u-button-squared`
-<div class="example-content"><button class="u-button raised primary u-button-round">圆形按钮
+<div class="example-content"><button class="u-button waves-effect waves-light primary u-button-round">圆形按钮
 </button>
-<button class="u-button raised primary u-button-squared">圆形按钮
+<button class="u-button waves-effect waves-light primary u-button-squared">圆形按钮
 </button>
 </div>
-<div class="examples-code"><pre><code>&lt;button class="u-button raised primary u-button-round">圆形按钮
+<div class="examples-code"><pre><code>&lt;button class="u-button waves-effect waves-light primary u-button-round">圆形按钮
 &lt;/button>
-&lt;button class="u-button raised primary u-button-squared">圆形按钮
+&lt;button class="u-button waves-effect waves-light primary u-button-squared">圆形按钮
 &lt;/button></code></pre>
 </div>
 

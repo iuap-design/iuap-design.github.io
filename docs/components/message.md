@@ -18,9 +18,6 @@
 .example .u-message{
     position: inherit;
 }
-.example{
-	width: 300px;
-}
 </style>
 <div class="example-content"><div class="example">
     <div class="u-message u-mesnews active" >    

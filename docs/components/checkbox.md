@@ -241,7 +241,7 @@ checkbox提供了基础复选框、不同色彩复选框、图片复选框、个
 &lt;/label></code></pre>
 </div>
 
-##图片checkbox
+ ##图片checkbox
 在`u-checkbox-label`的span中添加图片说明即可。
 <div class="example-content"><label  class="u-checkbox w-xs">
     <input type="checkbox" class="u-checkbox-input" checked>
