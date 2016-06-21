@@ -13,9 +13,14 @@
 		"-search",
 		"-livereload",
 		"-fontsettings",
+		"-sharing",
 		"iuap-design"
 	],
 	"pluginsConfig": {
+		"iuap-design": {
+			"title": "CSS组件库",
+			"desc": "包含30+个CSS组件，助力快速产出易用美观的界面"
+		},
 		"fontsettings": {
   		"theme": "sepia",
   		"family": "serif",

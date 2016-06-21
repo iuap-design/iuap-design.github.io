@@ -7,26 +7,19 @@
 	"description":"UI Framework For Enterprise",
 	"language":"zh-hans",
 	"output": "../../dist/pages/design-language",
-	"plugins":[
+	"plugins": [
 		"anchor-navigation",
 		"expandable-chapters",
 		"-search",
 		"-livereload",
 		"-fontsettings",
+		"-sharing",
 		"iuap-design"
 	],
 	"pluginsConfig": {
-		"fontsettings": {
-  		"theme": "sepia",
-  		"family": "serif",
-  		"size": 1
-    },
-		"disqus": {
-      "shortName": "gitbookuse"
-    },
-		"search-pro": {
-    	"cutWordLib": "nodejieba",
-    	"defineWord" : ["Gitbook Use"]
+		"iuap-design": {
+			"title": "设计语言",
+			"desc": "设计语言的特性、原则、字体、文案、排版等"
 		}
 	}
 }

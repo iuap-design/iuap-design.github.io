@@ -13,9 +13,14 @@
 		"-search",
 		"-livereload",
 		"-fontsettings",
+		"-sharing",
 		"iuap-design"
 	],
 	"pluginsConfig": {
+		"iuap-design": {
+			"title": "全局样式",
+			"desc": "包含基础样式、布局、排版、图标字体等"
+		},
 		"fontsettings": {
   		"theme": "sepia",
   		"family": "serif",

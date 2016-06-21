@@ -245,25 +245,23 @@ checkbox提供了基础复选框、不同色彩复选框、图片复选框、个
 在`u-checkbox-label`的span中添加图片说明即可。
 <div class="example-content"><label  class="u-checkbox w-xs">
     <input type="checkbox" class="u-checkbox-input" checked>
-    <span class="u-checkbox-label"><img src="../img/checkbox-1.png" height="30" width="30"></span>
+    <span class="u-checkbox-label"><img src="/dist/static/img/website/checkbox/checkbox-1.png" height="30" width="30"></span>
 </label>
 
 
 <label  class="u-checkbox w-xs">
     <input type="checkbox" class="u-checkbox-input" >
-    <span class="u-checkbox-label"><img src="../img/checkbox-2.png" height="30" width="30"></span>
+    <span class="u-checkbox-label"><img src="/dist/static/img/website/checkbox/checkbox-2.png" height="30" width="30"></span>
 </label>
 </div>
 <div class="examples-code"><pre><code>&lt;label  class="u-checkbox w-xs">
     &lt;input type="checkbox" class="u-checkbox-input" checked>
-    &lt;span class="u-checkbox-label">&lt;img src="../img/checkbox-1.png" height="30" width="30">&lt;/span>
+    &lt;span class="u-checkbox-label">&lt;img src="/dist/static/img/website/checkbox/checkbox-1.png" height="30" width="30">&lt;/span>
 &lt;/label>
 
 
 &lt;label  class="u-checkbox w-xs">
     &lt;input type="checkbox" class="u-checkbox-input" >
-    &lt;span class="u-checkbox-label">&lt;img src="../img/checkbox-2.png" height="30" width="30">&lt;/span>
+    &lt;span class="u-checkbox-label">&lt;img src="/dist/static/img/website/checkbox/checkbox-2.png" height="30" width="30">&lt;/span>
 &lt;/label></code></pre>
 </div>
-
-
