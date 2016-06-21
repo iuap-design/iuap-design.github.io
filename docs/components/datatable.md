@@ -8,8 +8,9 @@
 
 # 示例
 ##基础datatable
+也是最基本的表格
+表头与表体背景色区分，表体斑马背景区分。表格整体具有边框
 
-父级`<table>`添加通用`.u-table`
 
 <div class="example-content"><table class="u-table">
     <thead>
@@ -45,12 +46,7 @@
 </div>
 
 ##常用datatable
-
-也是最基本的表格
-表头与表体背景色区分，表体斑马背景区分。表格整体具有边框
-
-
-
+父级`<table>`添加通用`.u-table`
 
 <div class="example-content"><div class="example table-responsive">
     <table class="u-table-base">
@@ -121,7 +117,7 @@
 
 
 div上添加class名table-responsive
-talbe上添加class名u-table-bordered
+table上添加class名u-table-bordered
 
 <div class="example-content"><div class="example table-responsive">
     <table class="u-table-base u-table-bordered">
