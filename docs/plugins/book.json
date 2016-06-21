@@ -6,7 +6,7 @@
 	"title":"iUAP Design",
 	"description":"UI Framework For Enterprise",
 	"language":"zh-hans",
-	"output": "../../dist/pages/components",
+	"output": "../../dist/pages/plugins",
 	"plugins":[
 		"anchor-navigation",
 		"expandable-chapters",
@@ -18,20 +18,8 @@
 	],
 	"pluginsConfig": {
 		"iuap-design": {
-			"title": "CSS 组件",
-			"desc": "包含30+个CSS组件，助力快速产出易用美观的界面"
-		},
-		"fontsettings": {
-  		"theme": "sepia",
-  		"family": "serif",
-  		"size": 1
-    },
-		"disqus": {
-      "shortName": "gitbookuse"
-    },
-		"search-pro": {
-    	"cutWordLib": "nodejieba",
-    	"defineWord" : ["Gitbook Use"]
+			"title": "JS 插件",
+			"desc": "20+个官方插件，并在持续开发中，满足你的功能需求"
 		}
 	}
 }
