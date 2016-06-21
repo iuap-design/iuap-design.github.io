@@ -2020,10 +2020,13 @@ label.hover {
 	margin-right: 15px;
 }
 .navbar .toolbar .action-btn {
+	color:#424242;
 	position: relative;
 	margin: 0 27px 0 18px;
 }
+
 .navbar .toolbar .action-btn:hover {
+	color:#4da3ff;
 	opacity: 1;
 }
 .navbar .nav-toggle {
@@ -2144,6 +2147,7 @@ label.hover {
 .offcanvas-nav .nav-toggle {
 	margin-left: 0;
 	margin-right: 7px;
+	color:#fff;
 }
 .search-box {
 	position: relative;
