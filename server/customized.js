@@ -23,19 +23,19 @@ var AUTOPREFIXER_BROWSERS = [
 ];
 
 var gridJs = []
-var modelGridJs = ['src/grid/js/dtJs/grid.js']
-var treeJs = ['src/tree/js/treeComp.js']
+var modelGridJs = ['../bin/grid/js/dtJs/grid.js']
+var treeJs = ['../bin/tree/js/treeComp.js']
 var modeTreeJs = [
-  'src/tree/js/treeComp.js',
-  'src/tree/js/dtJs/tree.js'
+  '../bin/tree/js/treeComp.js',
+  '../bin/tree/js/dtJs/tree.js'
 ]
 
 var polyfillJs = [
-  'src/iuap-design/vendor/polyfill/core.js',
-  'src/iuap-design/vendor/polyfill/JsExtensions.js'
+  '../bin/iuap-design/vendor/polyfill/core.js',
+  '../bin/iuap-design/vendor/polyfill/JsExtensions.js'
 ]
-var gridCss = 'src/grid/css/grid.css';
-var treeCss = 'src/tree/css/tree.css';
+var gridCss = '../bin/grid/css/grid.css';
+var treeCss = '../bin/tree/css/tree.css';
 var assets = ''; //暂时没处理，后续考虑
 
 flagObj = {};
@@ -65,7 +65,7 @@ function gulpRun(app, cb){
   		hasPolyfill = jsArr.indexOf('hasPolyfill'),
   		hasModel = jsArr.indexOf('src/datatable/js/app.js'),
   		jsHashStr = hash(params.jsArr + params.colorArr),
-  		baseURL =  'temp/customized/' + jsHashStr,
+  		baseURL =  '../dist/pages/custom/temp/customized/' + jsHashStr,
   		settingStr = params.settingStr;
 
 	gulp.task('customizedGridTreePolyfill',function(){
@@ -83,7 +83,7 @@ function gulpRun(app, cb){
 			/* 将jsArr中的grid相关的放入arr */
 			for(var i = 0;i<jsArr.length;i++){
 				var jsStr =  jsArr[i];
-				if(jsStr.indexOf('src/grid/js') > -1){
+				if(jsStr.indexOf('bin/grid/js') > -1){
 					jsArr.splice(i,1);
 					arr.push(jsStr);
 				}
@@ -186,14 +186,14 @@ function gulpRun(app, cb){
 		fs.writeFileSync(colorFilePath,baseColorStr);
 
 		var filePath = baseURL + '/UUI-1.0.0.zip';
-    if (fs.existsSync(filePath)){
-      app.body=filePath;
-      flagObj[jsHashStr] = 'finish';
-    }else{
-        console.log('file not find!');
-    }
+	    if (fs.existsSync(filePath)){
+	      app.body=filePath;
+	      flagObj[jsHashStr] = 'finish';
+	    }else{
+	        console.log('file not find!');
+	    }
 
-    cb(null,"");
+    	cb(null,"");
 	}
 
 	/* 标记状态
@@ -217,19 +217,20 @@ function gulpRun(app, cb){
 
 	//themeColors写入主题颜色
 	//customized 写入需要压缩的css
-	var colorFilePath = 'dist/pages/custom/themeColors.scss';
-	var customizedCssFilePath = 'dist/pages/custom/customized.scss';
+	var colorFilePath = '../dist/pages/custom/themeColors.scss';
+	var customizedCssFilePath = '../dist/pages/custom/customized.scss';
 	var setttingFilePath = baseURL + '/setting.txt';
 
-	fs.exists('temp/customized', function(exist) {
+	fs.exists('../dist/pages/custom/temp/customized', function(exist) {
 		if(!exist){
-			fs.mkdirSync('temp');
-			fs.mkdirSync('temp/customized');
+			fs.mkdirSync('../dist/pages/custom/temp');
+			fs.mkdirSync('../dist/pages/custom/temp/customized');
 		}
 	});
 
 	fs.exists(baseURL, function(exist) {
 		if(!exist){
+			console.log(baseURL);
 			fs.mkdirSync(baseURL);
 		}
 	});

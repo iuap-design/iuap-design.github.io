@@ -1,0 +1,53 @@
+.color{
+    font-weight: normal;
+  }
+  .book .book-body .page-wrapper .page-inner section.normal .title{
+      margin-top: 0!important;
+  }
+  .primaries > div {
+     display: inline-block;
+     width: 80px;
+     height: 80px;
+     margin-right: 20px;
+     margin-bottom: 10px;
+     line-height: 80px;
+     color: #fff;
+     text-align: center;
+     border-radius: 100%;
+     font-size: 12px !important;
+  }
+  .text-uppercase {
+      text-transform: uppercase!important;
+  }
+  .list-group {
+      padding-left: 0;
+      margin-bottom: 20px;
+  }
+
+  .list-group-item {
+      position: relative;
+      display: block;
+      padding: 10px 15px;
+      margin-bottom: -1px;
+      background-color: #fff;
+      border: 1px solid transparent;
+  }
+  .color-palette .list-group-item {
+      padding: 15px 20px;
+      border: none;
+  }
+
+  .list-group-item:first-child {
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+  }
+
+  .color-palette .list-group-item{
+      text-transform: uppercase;
+  }
+  .color-palette .list-group {
+      color: white;
+  }
+  .u-row{
+    font-size: 14px !important;
+  }
