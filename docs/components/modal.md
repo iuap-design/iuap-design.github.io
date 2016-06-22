@@ -1,3 +1,10 @@
+```javascript
+
+document.getElementById('test')
+
+```
+
+
 # madal控件
 
 `modal`控件分为三种：提示模态框、确认模态框和自定义模态框
@@ -17,8 +24,9 @@
 用户自定在html文件自定义所要展现的内容
 点击保存，做进一步的确认校验
 
-<script>  u.compMgr.apply({
-        el:'body'
+<div class="jstag" style="display:none">
+	u.compMgr.apply({
+        el:"body"
     })
 
 	var msgBtn3 = document.body.querySelector("#msgDialogBtn3");
@@ -35,7 +43,12 @@
 	u.on(cancelButton,'click', function(){
 		md.close();
 	});
-</script>
+</div class="jstag">
+
+
+
+
+
 <div class="example-content">
 <button id="msgDialogBtn3" class="u-button raised accent">模态框</button>
 <div id="dialog_content" style="display:none;">
@@ -98,7 +111,9 @@
 
    
 </div>
-<script>  u.compMgr.apply({
+
+<div class="jstag" style="display:none">
+	u.compMgr.apply({
         el:'body'
     })
 
@@ -116,12 +131,14 @@
                 alert('cancel')
             }
         });
-    })
-	
-</script>
-<div class="examples-code"><pre><code>
-&lt;button id="msgDialogBtn2" class="u-button raised accent">消息确认框&lt;/button>
+    })	
+</div class="jstag">
 
+
+
+<div class="examples-code">
+<pre><code>
+&lt;button id="msgDialogBtn2" class="u-button raised accent">消息确认框&lt;/button>
    </code></pre>
 </div>
 <div class="examples-code"><pre><code>  u.compMgr.apply({
@@ -151,18 +168,18 @@
 只有一个确认按钮
 通过`messageDialog`方法调出模态框
 
+<div class="jstag" style="display:none">
+	u.compMgr.apply({
+	    el:'body'
+	})
 
-<script>u.compMgr.apply({
-    el:'body'
-})
+	var msgBtn = document.body.querySelector("#msgDialogBtn");
+	u.on(msgBtn, 'click', function() {
+	    //            u.showMessage("HELLO!!!");
+	    u.messageDialog({ msg: "HELLO!!!", title: "测试提示", btnText: "OK!" });
+	})	
+</div class="jstag">
 
-var msgBtn = document.body.querySelector("#msgDialogBtn");
-u.on(msgBtn, 'click', function() {
-    //            u.showMessage("HELLO!!!");
-    u.messageDialog({ msg: "HELLO!!!", title: "测试提示", btnText: "OK!" });
-})
-
-</script>
 <div class="example-content">
 <button id="msgDialogBtn" class="u-button raised accent">消息提示框</button>
 

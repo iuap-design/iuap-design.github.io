@@ -14,6 +14,7 @@
 		"-livereload",
 		"-fontsettings",
 		"-sharing",
+		"highlight",
 		"iuap-design"
 	],
 	"pluginsConfig": {
@@ -22,16 +23,16 @@
 			"desc": "包含30+个CSS组件，助力快速产出易用美观的界面"
 		},
 		"fontsettings": {
-  		"theme": "sepia",
-  		"family": "serif",
-  		"size": 1
-    },
+	  		"theme": "sepia",
+	  		"family": "serif",
+	  		"size": 1
+	    },
 		"disqus": {
-      "shortName": "gitbookuse"
-    },
+	    	"shortName": "gitbookuse"
+	    },
 		"search-pro": {
-    	"cutWordLib": "nodejieba",
-    	"defineWord" : ["Gitbook Use"]
+	    	"cutWordLib": "nodejieba",
+	    	"defineWord" : ["Gitbook Use"]
 		}
 	}
 }

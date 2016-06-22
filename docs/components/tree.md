@@ -18,14 +18,15 @@ tree控件
 	min-height: 200px;
 }*/
 </style>
-<script>$(document).ready(function () {
+<div class="jstag" style="display: none">
+$(document).ready(function () {
     var viewModel = {
-    	treeSetting:{
-    		view:{
-    			showLine:false,
+        treeSetting:{
+            view:{
+                showLine:false,
                 multiSelect:true
-    		}
-    	},
+            }
+        },
         dataTable: new u.DataTable({
             meta: {
                 'id': {
@@ -35,7 +36,7 @@ tree控件
                     'value':""
                 },
                 'title':{
-                	'value':""
+                    'value':""
                 }
             }
         })
@@ -69,15 +70,16 @@ var app = u.createApp();
         viewModel.dataTable.addRow(r);
     });
     $("#deleteOneRow").on("click",function(){
-    	var index=viewModel.dataTable.getSelectedIndex();
-    	//console.log(index);
-    	viewModel.dataTable.removeRow(index)
+        var index=viewModel.dataTable.getSelectedIndex();
+        //console.log(index);
+        viewModel.dataTable.removeRow(index)
     });
     $("#deleteAllRows").on("click",function(){
-    	viewModel.dataTable.removeAllRows();
+        viewModel.dataTable.removeAllRows();
     })
-});
-</script>
+});   
+</div>
+
 <div class="example-content"><!-- <div id="demoLeft"> -->
 	<div id="treeTest" class="ztree" u-meta='{"multiSelect":"true","id":"tree2","data":"dataTable","type":"tree","idField":"id","pidField":"pid","nameField":"title","setting":"treeSetting"}'></div>
 <!-- </div> -->
