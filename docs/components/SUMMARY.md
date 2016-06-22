@@ -16,4 +16,9 @@
  * [页签 tabs](tabs.md)
  * [提示 tooltip](tooltip.md)
  * [面包屑 breadcrumb](breadcrumb.md)
+ * [进度条 progress](progress.md)
+ * [图片 image](image.md)
+ * [评分 rating](rating.md)
+ * [面板 tooltip](panel.md)
+ * [流程 pearls](pearls.md)
 
