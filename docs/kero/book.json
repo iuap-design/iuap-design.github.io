@@ -6,7 +6,7 @@
 	"title":"iUAP Design",
 	"description":"UI Framework For Enterprise",
 	"language":"zh-hans",
-	"output": "../../dist/pages/global-style",
+	"output": "../../dist/pages/kero",
 	"plugins":[
 		"anchor-navigation",
 		"expandable-chapters",
@@ -18,20 +18,8 @@
 	],
 	"pluginsConfig": {
 		"iuap-design": {
-			"title": "全局样式",
-			"desc": "包含基础样式、布局、排版、图标字体等"
-		},
-		"fontsettings": {
-  		"theme": "sepia",
-  		"family": "serif",
-  		"size": 1
-    },
-		"disqus": {
-      "shortName": "gitbookuse"
-    },
-		"search-pro": {
-    	"cutWordLib": "nodejieba",
-    	"defineWord" : ["Gitbook Use"]
+			"title": "Kero",
+			"desc": "Kero是一个基于knockout扩展的Library，做为MVVM架构中Model层的增强，主要用于处理企业级复杂数据交互。"
 		}
 	}
 }

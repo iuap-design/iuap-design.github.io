@@ -2,7 +2,7 @@
 
 cdir=`pwd`
 
-bookName=("components" "design-language" "getting-started" "global-style")
+bookName=("components" "design-language" "getting-started" "kero" "plugins")
 
 for name in ${bookName[@]}
 do
