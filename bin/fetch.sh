@@ -4,7 +4,7 @@ cdir=`pwd`
 
 prodName=(
   "iuap-design"
-  "datatable"
+  "kero"
   "datetimepicker"
   "tree"
   "grid"

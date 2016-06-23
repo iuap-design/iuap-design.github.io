@@ -1,10 +1,6 @@
-# tree控件
+# pearls控件
 
-tree控件
-
-# 如何使用
-
-暂无
+常用于流程的跟踪
 
 # 示例
 
@@ -77,7 +73,7 @@ tree控件
 &lt;/div></code></pre>
 </div>
 
-##不同尺寸Pearls
+##不同尺寸pearls
 
 pearls-xs pearls-sm pearls-lg 供尺寸的选择
 <style>.content{
@@ -235,7 +231,7 @@ pearls-xs pearls-sm pearls-lg 供尺寸的选择
 &lt;/div></code></pre>
 </div>
 
-##多状态Pearls
+##多状态pearls
 
 通过icon和边框颜色表明当前状态
 <div class="example-content"><div class="example">
@@ -393,7 +389,7 @@ pearls-xs pearls-sm pearls-lg 供尺寸的选择
 }</code></pre>
 </div>
 
-##基础Pearls
+##基础pearls
 
 常用于流程步骤的跟踪。
 <div class="example-content"><div class="example-wrap">
@@ -460,36 +456,3 @@ pearls-xs pearls-sm pearls-lg 供尺寸的选择
     float: left;
 }</code></pre>
 </div>
-
-
-<!--### 示例1
-
-示例1说明
-
-### 示例2
-
-示例2说-->
-
-# API
-
-## 属性
-
-暂无
-<!--### 属性1
-
-属性1说明
-
-### 属性2
-
-属性2说明-->
-
-## 方法
-
-暂无
-<!--### 方法1
-
-方法1说明
-
-### 方法2
-
-方法2说明-->
