@@ -6,7 +6,7 @@ _site
 Thumbs.db
 ehthumbs.db
 
-bin/datatable/
+bin/kero/
 bin/iuap-design/
 bin/tree/
 bin/grid/
@@ -19,6 +19,7 @@ dist/pages/getting-started/
 dist/pages/global-style/
 dist/pages/kero/
 dist/pages/plugins/
+dist/pages/custom/temp
 
 
 # Folder config file
