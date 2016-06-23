@@ -57,8 +57,7 @@
 		<button class="u-msg-cancel u-button">取消<span class="u-button-container"><span class="u-ripple"></span></span></button>
 	</div>
 </div>
-   
-</div>
+
 <div class="examples-code"><pre><code>  u.compMgr.apply({
         el:'body'
     })
@@ -114,7 +113,6 @@
  
     var msgBtn2 = document.body.querySelector("#msgDialogBtn2");
     u.on(msgBtn2,'click', function(){
-//            u.showMessage("HELLO!!!");
         u.confirmDialog({
             msg: "是否保存单据？",
             title: "测试确认",
@@ -142,7 +140,6 @@
  
     var msgBtn2 = document.body.querySelector("#msgDialogBtn2");
     u.on(msgBtn2,'click', function(){
-//            u.showMessage("HELLO!!!");
         u.confirmDialog({
             msg: "是否保存单据？",
             title: "测试确认",
@@ -169,7 +166,6 @@
 
 	var msgBtn = document.body.querySelector("#msgDialogBtn");
 	u.on(msgBtn, 'click', function() {
-	    //            u.showMessage("HELLO!!!");
 	    u.messageDialog({ msg: "HELLO!!!", title: "测试提示", btnText: "OK!" });
 	})	
 </div>
@@ -185,7 +181,6 @@
 
 var msgBtn = document.body.querySelector("#msgDialogBtn");
 u.on(msgBtn, 'click', function() {
-    //            u.showMessage("HELLO!!!");
     u.messageDialog({ msg: "HELLO!!!", title: "测试提示", btnText: "OK!" });
 })
 </code></pre>
@@ -197,34 +192,39 @@ u.on(msgBtn, 'click', function() {
 </div>
 
 
-<!--### 示例1
 
-示例1说明
+### 方法1
 
-### 示例2
-
-示例2说-->
-
-# API
-
-## 属性
-
-暂无
-<!--### 属性1
-
-属性1说明
-
-### 属性2
-
-属性2说明-->
-
-## 方法
-
-暂无
-<!--### 方法1
+messageDialog 调用提示模态框
 
 方法1说明
 
+入参
+msg:提示内容
+title:提示标题
+btnText:确认按钮字样
+
 ### 方法2
 
-方法2说明-->
+messageDialog 调用自定义模态框
+
+
+方法2说明
+
+入参
+id:自定义模态框i
+content:自定义模态框内容放html里，html父级的id
+hasCloseMenu:是否带关闭按钮菜单
+
+
+### 方法3
+
+confirmDialog 调用消息模态框
+
+方法3说明
+
+入参
+msg:提示内容
+title:提示标题
+onOK:点击确认回调方法
+onCancel:点击取消回调方法
