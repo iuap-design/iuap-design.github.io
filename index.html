@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Site Title -->
+    <title>iUAP Design</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="iUAP Design" />
+    <meta name="keywords" content="设计语言" />
+    <meta name="author" content="iuap" />
+
+    <!-- Mobile Specific Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Theme Stylesheet -->
+    <link href="/dist/static/css/style.css" rel="stylesheet" media="screen">
+     <link href="/dist/static/ionicons/ionicons.css" rel="stylesheet" media="screen">
+
+    <!-- Preloader (Pace.js) -->
+    <script src="/dist/static/js/plugins/pace.min.js"></script>
+
+    <!-- Modernizr -->
+    <script src="/dist/static/js/libs/modernizr.custom.js"></script>
+    <script src="/dist/static/js/libs/detectizr.min.js"></script>
+
+  </head>
+
+  <!-- Body -->
+  <!-- Remove '.fixed-footer' from body to disable fixed footer reveal on scroll -->
+  <body class="fixed-footer">
+
+    <!-- 启动logo  style="display:none;"-->
+    <div id="preloader">
+      <div class="logo">
+        <img src="/dist/static/img/logo-middle.png" alt="iUAP Design">
+        <span>iUAP Design</span>
+      </div>
+    </div>
+
+    <!-- Fake scrollbar (when open popups/modals) -->
+    <div class="fake-scrollbar"></div>
+
+    <!-- Off-canvas Navigation -->
+    <div class="offcanvas-nav">
+      <!-- Head (Fixed Part) -->
+      <div class="nav-head">
+        <div class="top-bar">
+
+          <div class="nav-toggle" data-offcanvas="close"><i class="flaticon-list26"></i></div>
+        </div>
+
+      </div>
+      <!-- Body (Scroll Part) -->
+
+      <div class="nav-body">
+        <div class="overflow">
+          <div class="inner">
+            <!-- Navigation -->
+            <nav class="nav-link">
+              <div class="scroll-nav">
+                <ul>
+                  <!-- Add ".scroll" class to anchor tag to enable smooth scrolling -->
+                  <li class="active"><a class="scrollup" href="#"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                  <li><a class="scroll" href="#features" data-offset-top="80"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                  <li><a class="scroll" href="#gallery" data-offset-top="80"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                  <li><a class="scroll" href="#versions" data-offset-top="85"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                  <li><a class="scroll" href="#team" data-offset-top="80"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                  <li><a class="scroll" href="#web-app" data-offset-top="80"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                  <li><a class="scroll" href="#web-app" data-offset-top="80"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                </ul>
+                <ul class="pages">
+                  <li><a href="/dist/pages/getting-started/index.html">开始使用</a></li>
+                  <li><a href="/dist/pages/design-language/iuapdesign.html">设计语言</a></li>
+                  <li><a href="/dist/pages/components/index.html">CSS 组件</a></li>
+                  <li><a href="/dist/pages/plugins/index.html">JS 插件</a></li>
+                  <li><a href="＃">模板库</a></li>
+                  <li><a href="/dist/pages/demo/index.html">WebIDE</a></li>
+                  <li><a href="/dist/pages/kero/index.html">Kero</a></li>
+              </ul>
+              </div>
+            </nav>
+
+          </div>
+        </div>
+      </div>
+    </div><!-- Off-canvas Navigation End -->
+
+
+
+    <!-- Intro Section -->
+    <section class="intro" style="background-image: url(/dist/static/img/intro/intro-bg.jpg);">
+
+      <div class="gradient"></div>
+      <div class="container">
+        <div class="column-wrap">
+
+          <!-- Left Column -->
+          <div class="column c-left">
+            <!-- Social Buttons -->
+            <!-- 滚动鼠标提示按钮文字 -->
+            <a href="#features" class="scroll-more scroll" data-offset-top="80">
+              <i class="icon"></i>
+              <span>模板库</span>
+            </a>
+          </div>
+
+          <!-- Middle Column-->
+          <div class="column c-middle">
+            <h2 class="logo">
+              <img src="/dist/static/img/logo-big.png" alt="iUAP Design">
+              iUAP Design
+              <!-- <span><h3>开放    轻量    自由    生态</h3></span> -->
+              <span><h3>企业级应用开发前端框架</h3></span>
+            </h2>
+            <!-- Right Column-->
+            <div class="phone"><img src="/dist/static/img/intro/screen.png" alt="App Screen"> </div>
+          </div>
+
+          <!-- Right Column-->
+          <div class="column c-right">
+            <!-- Navi   第一页顶部导航-->
+            <div class="navi">
+
+              <div class="nav-toggle" data-offcanvas="open"><i class="flaticon-list26"></i></div>
+            </div>
+            <!-- Features -->
+            <div class="intro-features">
+              <div class="icon-block icon-block-horizontal light-color" data-transition-delay="100">
+                <div class="icon"></div>
+                <div class="text">
+                  <h5>开放 自由 轻量 生态</h5>
+
+                </div>
+              </div>
+              <div class="icon-block icon-block-horizontal light-color" data-transition-delay="300">
+                <div class="icon"></div>
+                <div class="text">
+                  <button type="button" class="btn btn-warning btn-block" style="width:180px"  onclick="window.open('http://design.yyuap.com//dist/pages/getting-started/index.html','_self');">开始使用</button>
+                </div>
+              </div>
+              <div class="icon-block icon-block-horizontal light-color" data-transition-delay="500">
+                <div class="icon"></div>
+                <div class="text">
+                  <button type="button" class="btn btn-success btn-block"  style="width:180px" onclick="window.open('http://design.yyuap.com//dist/pages/components/button.html','_self');">查看组件</button>
+                </div>
+              </div>
+                 <div class="icon-block icon-block-horizontal light-color padding-bottom-3x" data-transition-delay="500">
+                <div class="icon"></div>
+                <div class="text">
+                <button type="button" class="btn btn-info btn-block"  style="width:180px">用户定制</button>
+                </div>
+              </div>
+            </div>
+            <!-- 首页下载按钮 -->
+            <div class="download">
+              <p>当前版本 v3.0.1</p>
+              <a href="#" class="btn btn-default btn-app-store">
+                <!-- 图标 <i class="bi-apple"></i> -->
+                <div>
+                  <span>下载体验</span>
+                 <h3> iUAP Design</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- Intro Section End -->
+
+    <!-- Content Wrap -->
+    <div class="content-wrap">
+
+      <!-- Navbar -->
+      <!-- Add '.navbar-sticky' to make navbar stuck to top on document scroll -->
+      <header class="navbar gray navbar-sticky">
+        <div class="container">
+          <!-- Logo -->
+          <a href="/" class="logo scrollup">
+            <img src="/dist/static/img/logo-small.png" alt="iUAP Design">
+            iUAP Design
+          </a>
+          <!-- Social Buttons
+          <div class="social-buttons">
+            <a href="#" class="sb-twitter"><i class="bi-twitter"></i></a>
+            <a href="#" class="sb-google-plus"><i class="bi-gplus"></i></a>
+            <a href="#" class="sb-facebook"><i class="bi-facebook"></i></a>
+          </div>-->
+          <!-- Toolbar -->
+          <div class="toolbar">
+            <a href="/dist/pages/getting-started/index.html" class="action-btn">开始使用</a>
+            <a href="/dist/pages/design-language/iuapdesign.html" class="action-btn">设计语言
+            <a href="/dist/pages/components/index.html" class="action-btn">CSS 组件</a>
+            <a href="/dist/pages/plugins/index.html" class="action-btn">JS 插件</a>
+            <a href="＃" class="action-btn">模板库</a>
+            <a href="/dist/pages/demo/index.html" class="action-btn">WebIDE</a>
+            <a href="/dist/pages/kero/index.html" class="action-btn">Kero</a>
+            <a href="/dist/pages/custom/index.html" class="btn btn-ghost btn-primary icon-left"> 定制 </a>
+            <div class="nav-toggle" data-offcanvas="open"><i class="flaticon-list26"></i></div>
+          </div>
+
+        </div>
+      </header><!-- Navbar End -->
+
+      <!-- Feature Tabs -->
+      <section class="fw-bg bg-align-bottom feature-tabs padding-bottom-3x" style="background-image: url(/dist/static/img/features/bg.jpg);" id="features">
+        <!-- Heading when columns stack -->
+        <div class="block-heading light-color visible-when-stack">
+          <h2>丰富的企业级应用模版</h2>
+          <span>100％响应 pc桌面  pad全兼容</span>
+        </div>
+        <div class="clearfix padding-bottom-3x">
+
+          <!-- Devices -->
+          <div class="devices">
+            <div class="tablet">
+              <img src="/dist/static/img/features/ipad.png" alt="iPad">
+              <div class="mask">
+                <ul class="screens">
+                  <li class="active in" id="ts01"><img src="/dist/static/img/features/tablet/screen.png" alt="Screen 01"></li>
+                  <li id="ts02"><img src="/dist/static/img/features/tablet/screen2.png" alt="Screen 02"></li>
+                  <li id="ts03"><img src="/dist/static/img/features/tablet/screen3.png" alt="Screen 03"></li>
+                  <li id="ts04"><img src="/dist/static/img/features/tablet/screen4.png" alt="Screen 04"></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <!-- Tabs -->
+          <div class="tabs light-color text-center">
+            <div class="block-heading hidden-when-stack">
+              <h2>丰富的企业级应用模板</h2>
+              <span>提供企业级复杂场景应用模板，对复杂业务建立标准，快速完成复杂业务开发，增强应用的统一性和稳定性。</span>
+            </div>
+            <!-- Nav Tabs -->
+            <!-- Remove data-autoswitch="true" to disable automatic tabs change. -->
+            <ul class="nav-tabs" data-autoswitch="true" data-interval="3000">
+              <li class="active"><a href="#video-player" data-toggle="tab" data-tablet="#ts01" data-phone="#ps01"><i class="flaticon-film22"></i></a></li>
+              <li><a href="#settings" data-toggle="tab" data-tablet="#ts02" data-phone="#ps02"><i class="flaticon-settings20"></i></a></li>
+              <li><a href="#file-sharing" data-toggle="tab" data-tablet="#ts03" data-phone="#ps03"><i class="flaticon-layers4"></i></a></li>
+              <li><a href="#chat" data-toggle="tab" data-tablet="#ts04" data-phone="#ps04"><i class="flaticon-speech38"></i></a></li>
+            </ul>
+            <!-- Tab panes -->
+            <!-- Use different transitions: 'scale', 'scaleup', 'top', 'bottom', 'left', 'right' and 'flip' -->
+            <div class="tab-content">
+              <div class="tab-pane transition scale fade in active" id="video-player">
+                <h3></h3>
+                <p></p>
+              </div>
+              <div class="tab-pane transition scale fade" id="settings">
+                <h3></h3>
+                <p></p>
+              </div>
+              <div class="tab-pane transition scale fade" id="file-sharing">
+                <h3></h3>
+                <p></p>
+              </div>
+              <div class="tab-pane transition scale fade" id="chat">
+                <h3></h3>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><!-- Feature Tabs End -->
+
+      <!-- App Features (Icon + Text + Link) -->
+      <section class="fw-bg overlay gradient-dark padding-bottom-2x" style="background-image: url(/dist/static/img/space.jpg);" id="model">
+
+        <div class="container light-color">
+
+          <!-- Badge -->
+          <div class="badge badge-reverse">
+
+            <a class="scroll" href="#model" data-offset-top="80">设计模式</a>
+            <span class="icon"><i class="flaticon-star51"></i></span>
+         <a class="scroll" href="#gallery" data-offset-top="80">UX</a>
+          </div>
+                    <div class="block-heading light-color text-center">
+            <h2>20年企业应用领域设计模式积淀</h2>
+            <span class="text-warning">基于20多年企业开发经验，总结了企业应用领域中遇到的常见场景，并提供相应的解决方案。企业级应用开发不再困难。</span>
+          </div>
+          <!-- Content -->
+          <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+              <div class="row">
+                <div class="col-sm-12">
+                  <!-- Icon block are very flexible. If you remove '.icon-block-horizontal' you'll get stacked version. There is als modofier classes for icon like '.icon-bigger', '.va-middle' for vertical alignment. -->
+                  <div class="icon-block icon-block-horizontal">
+                  <img src="/dist/static/img/intro/godigital-mock.png" alt="Thumbnail">
+                    <div class="text text-right">
+                      <a href="#" class=""></a>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section><!-- App Features End -->
+
+      <!-- App Gallery  padding-top-3x -->
+      <section class="gallery padding-bottom-3x" id="gallery">
+
+        <div class="container">
+
+        <div class="badge alt-color-2">
+        <a class="scroll" href="#model" data-offset-top="80">设计模式</a>
+          <span class="icon"><i class="flaticon-star51"></i></span>
+          <a class="scroll" href="#versions" data-offset-top="80">组件</a>
+        </div>
+
+          <div class="row">
+            <div class="col-md-3 col-sm-4">
+              <div class="block-heading text-right">
+                <h2>创造最好的企业应用体验</h2>
+                <span></span>
+              </div>
+              <ul class="block-heading space-top-2x">
+                <li><span>基于iUAP Design设计语言，所有页面规范、标准、一致</span></li><br>
+                <li><span>支持IE8+、chrome、firefox、safari等主流浏览器</span></li><br>
+                <li><span>100%响应，一次开发适配多种终端设备，兼容不同分辨率</span></li><br>
+                <li><span>框架体积、执行效率均已深度优化，显著提升前端性能</span></li>
+              </ul>
+            </div>
+            <div class="col-lg-8 col-lg-offset-1 col-md-9 col-sm-8">
+              <div class="tab-content">
+                  <div class="icon-block icon-block-horizontal">
+                  <img src="/dist/static/img/intro/ux-block.png" alt="Thumbnail">
+                    <div class="text text-right">
+                      <a href="#" class=""></a>
+                    </div>
+
+                  </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><!-- App Gallery End -->
+
+
+
+      <!-- Blog Posts -->
+
+
+
+      <!-- Appica Versions  padding-top-3x-->
+      <section class="fw-bg overlay gradient-red-blue padding-bottom-3x" style="background-image: url(/dist/static/img/space.jpg);" id="versions">
+        <div class="container">
+        <!-- Badge -->
+          <div class="badge badge-reverse">
+            <a class="scroll" href="#gallery" data-offset-top="80">UX</a>
+            <span class="icon"><i class="flaticon-star51"></i></span>
+         <a class="scroll" href="#team" data-offset-top="80">使用者</a>
+          </div>
+          <div class="block-heading light-color text-center">
+            <h2>丰富的应用组件库，一切皆有可能</h2>
+            <span class="text-warning">提供多场景多用途的样式，丰富的组件／控件／布局选择，为创意提供无限可能，基于iUAPDesign可以构建任何类型前端页面。</span>
+          </div>
+          <div class="row space-top-3x">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="row appica-versions">
+                <div class="col-xs-4">
+
+                    <div class="icon">
+                      <img src="/dist/static/img/intro/mock1-1.png">
+                    </div>
+
+                </div>
+                <div class="col-xs-4">
+
+                    <div class="icon">
+                     <img src="/dist/static/img/intro/mock1-2.png">
+                    </div>
+
+
+                </div>
+                <div class="col-xs-4">
+                  <div class="icon">
+
+                      <img src="/dist/static/img/intro/mock1-3.png">
+
+
+                  </div>
+                </div>
+                    <div class="col-xs-6">
+                  <div class="icon">
+                      <img src="/dist/static/img/intro/mock2-1.png">
+                  </div>
+                </div>
+                                  <div class="col-xs-6">
+                  <div class="icon">
+                      <img src="/dist/static/img/intro/mock2-2.png">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><!-- Appica Versions End -->
+
+
+
+
+      <!-- Team padding-top-3x  padding-bottom-->
+      <section class="fw-gray-bg " id="team">
+        <div class="container">
+             <!-- Badge -->
+          <div class="badge alt-color">
+          <a class="scroll" href="#versions" data-offset-top="80">组件</a>
+            <span class="icon"><i class="flaticon-star51"></i></span>
+
+            <a class="scroll" href="#web-app" data-offset-top="80">体验</a>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <p class="text-muted text-smaller"></p>
+            </div>
+            <div class="col-lg-5 col-lg-offset-4 col-md-6 col-md-offset-1 col-sm-6">
+              <div class="block-heading">
+                <h2>关注更多的使用者</h2>
+                <span>iUAP Design希望团队所有参与者的沟通能够基于共同的设计语言</span>
+              </div>
+            </div>
+          </div>
+          <div class="row space-top-3x">
+            <div class="col-sm-3 team-member">
+              <h3>产品终极用户</h3>
+              <span>提供细致入微的用户体验</span>
+
+              <img src="/dist/static/img/team/good.png" alt="The Good">
+            </div>
+            <div class="col-sm-3 team-member">
+              <h3>设计师</h3>
+              <span>快速html原型实现</span>
+              <img src="/dist/static/img/team/smiley.png" alt="The Smiley">
+            </div>
+             <div class="col-sm-3 team-member">
+              <h3>FE前端工程师</h3>
+              <span>快速前端构建</span>
+              <img src="/dist/static/img/team/bad.png" alt="The Smiley">
+            </div>
+                         <div class="col-sm-3 team-member">
+              <h3>产品经理</h3>
+              <span>更直观的预期产品前端展现</span>
+              <img src="/dist/static/img/team/smiley.png" alt="The Smiley">
+            </div>
+          </div>
+        </div>
+      </section><!-- Team End -->
+
+
+
+      <!-- Web Application -->
+      <section class="fw-bg bottom-shadow overlay gradient-blue-red padding-top-3x padding-bottom-3x" style="background-image: url(/dist/static/img/webapp/bg.jpg);" id="web-app">
+        <div class="container light-color">
+          <div class="block-heading">
+            <h2></h2>
+            <span></span>
+          </div>
+          <div class="row space-top-3x">
+            <div class="col-md-5">
+              <div class="icon-block icon-block-horizontal">
+                 <!-- Download Button <div class="icon hidden-xs"><i class="flaticon-globe14"></i></div>-->
+                <div class="text">
+                  <h3>开始体验iUAP Design</h3>
+                  <p>使用grid system网格布局系统，布局适应任何设备屏幕尺寸。<br>我们秉持企业应用全面兼容移动，个人应用移动优先的原则设计整个iUAPDesign。</p>
+                  <p class="space-top  padding-bottom-3x">根据您的实际需求</p>
+                  <!-- Download Button -->
+                  <a href="http://iuap.yonyou.com/fe/custom/" class="btn btn-default btn-app-store">
+                  <i class="flaticon-cloud79"></i>
+                    <div>
+                      <span>定制下载</span>
+
+                    </div>
+                    </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7  padding-bottom-3x">
+              <img src="/dist/static/img/webapp/macbook.png" alt="Web App">
+            </div>
+          </div>
+        </div>
+      </section><!-- Web Application End -->
+
+    </div><!-- Content Wrap End -->
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container space-top">
+        <!-- Footer Head -->
+
+        <div class="body">
+          <!-- Copyright -->
+          <div class="column copyright">
+            <p>2016 &copy; <a href="http://www.yonyou.com/" target="_blank">用友网络</a>. iUAP Design</p>
+          </div>
+          <!-- Gadget (Middle Column) -->
+
+          <nav class="column footer-nav">
+            <ul>
+              <li><a href="legal.html"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="legal.html"></a></li>
+              <li><a href="#"></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer><!-- Footer End -->
+
+    <!-- Javascript (jQuery) Libraries and Plugins -->
+    <script src="/dist/static/js/libs/jquery-2.1.3.min.js"></script>
+    <script src="/dist/static/js/libs/jquery.easing.1.3.js"></script>
+    <script src="/dist/static/js/plugins/velocity.min.js"></script>
+    <script src="/dist/static/js/plugins/bootstrap.min.js"></script>
+    <script src="/dist/static/js/plugins/smoothscroll.js"></script>
+    <script src="/dist/static/js/plugins/jquery.waypoints.min.js"></script>
+    <script src="/dist/static/js/plugins/form-plugins.js"></script>
+    <script src="/dist/static/js/plugins/jquery.magnific-popup.min.js"></script>
+    <script src="/dist/static/js/plugins/jquery.mCustomScrollbar.min.js"></script>
+    <script src="/dist/static/js/scripts.js"></script>
+
+  </body><!-- Body End-->
+</html>
