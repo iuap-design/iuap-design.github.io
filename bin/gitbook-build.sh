@@ -15,6 +15,7 @@ do
   echo "--- 删除完成 ---"
 
   cd $docDir && gitbook install
+  
   echo "--- 开始编译${name} ---"
   gitbook build --ouput=../../dist/pages/$pageDir
   echo "--- ${name}资源编译完成 ---"
