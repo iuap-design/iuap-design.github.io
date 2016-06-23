@@ -1,0 +1,367 @@
+.book .book-summary{
+    position: absolute;
+    left: -240px;
+    top: 0px;
+    display: inline-block;
+    border-right: 1px solid #e3e3e3;
+    width:240px;
+    margin-top: 30px;
+    overflow: auto;
+    background: #fff;
+    -webkit-transition: left 400ms cubic-bezier(0.785, 0.135, 0.150, 0.860) ,visibility 400ms;
+    -moz-transition: left 400ms cubic-bezier(0.785, 0.135, 0.150, 0.860) ,visibility 400ms;
+    -o-transition: left 400ms cubic-bezier(0.785, 0.135, 0.150, 0.860) ,visibility 400ms;
+    transition: left 400ms cubic-bezier(0.785, 0.135, 0.150, 0.860) ,visibility 400ms;
+}
+
+.book .book-summary ul.summary{
+    position:relative;
+}
+
+.container-div{
+    position: relative;
+    overflow: hidden;
+}
+
+.book .book-summary ul.summary li.active>a{
+    color:#2db7f5;
+}
+
+
+.book .book-body .page-wrapper .page-inner{
+    max-width: 1000px;
+    margin: 0px 50px;
+    padding-bottom: 50px;
+}
+
+.book .book-body .navigation{
+    height: 50px;
+    top: auto;
+}
+
+.example-head{
+    font-weight: bold;
+    font-size: 1.2em;
+    height: 40px;
+}
+
+html{
+    height:100% !important;
+}
+
+.book .book-body, .book .book-body .body-inner{
+    overflow-y: visible;
+    position:relative;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal{
+    font-size: 14px;
+}
+.book{
+    height: auto;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal pre{
+    border: 1px solid #ddd;
+}
+
+.example-content{
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-bottom: 0px;
+}
+
+/*wd*/
+@media (min-width:600px){
+    .book.with-summary .book-body{
+        padding-left: 240px;
+        left: 0px;
+    }
+}
+
+.book.with-summary .book-body{
+    position: relative;
+    /*display: inline-block;*/
+}
+.book .book-summary .book-search{
+    display: none;
+}
+
+body{
+    display: none;
+} 
+
+
+
+
+.banner {
+    width: 100%;
+    overflow: hidden;
+    background-color: #0088cc;
+}
+.head-area.normal {
+    background-color: #fff;
+}
+.banner-content {
+    margin: 0 auto;
+    padding: 30px 0px 10px 0px;
+    color: #fff;
+}
+.banner-content h1 {
+    font-size: 30px;
+}
+
+.book .book-summary ul.summary li a, .book .book-summary ul.summary li span{
+    /*padding-left:0px;*/
+    font-size: 14px;
+    opaicty:1;
+    filter:alpha(opacity=100);
+}
+
+.book .book-body{
+    -webkit-transition: padding-left 400ms cubic-bezier(0.785, 0.135, 0.150, 0.860) ,visibility 400ms;
+    -moz-transition: padding-left 400ms cubic-bezier(0.785, 0.135, 0.150, 0.860) ,visibility 400ms;
+    -o-transition: padding-left 400ms cubic-bezier(0.785, 0.135, 0.150, 0.860) ,visibility 400ms;
+    transition: padding-left 400ms cubic-bezier(0.785, 0.135, 0.150, 0.860) ,visibility 400ms;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal h1{
+    font-size: 24px;
+    font-family: 微软雅黑,Helvetica Neue,Helvetica,STHeiTi,sans-serif;
+    font-weight: normal;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal h2{
+    font-size: 20px;
+    font-family: 微软雅黑,Helvetica Neue,Helvetica,STHeiTi,sans-serif;
+    font-weight: normal;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal h3{
+    font-size: 18px;
+    font-family: 微软雅黑,Helvetica Neue,Helvetica,STHeiTi,sans-serif;
+    font-weight: normal;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal p{
+    font-size:14px;
+}
+
+#anchors-navbar{
+    top: 240px;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal .u-pagination > .active > a {
+    z-index: 2;
+    color: #fff;
+    cursor: default;
+    background-color: rgb(27,174,222);
+    border-color: rgb(27,174,222);
+}
+
+ .book .book-body .page-wrapper .page-inner section.normal .u-menu{
+    padding: 8px 0;
+    margin: 0px;
+}
+
+.example-content{
+    position: relative;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal .u-pagination > .active > a,  .book .book-body .page-wrapper .page-inner section.normal .u-pagination > .active >  span, .book .book-body .page-wrapper .page-inner section.normal .u-pagination > .active  > a:hover,.book .book-body .page-wrapper .page-inner section.normal  .u-pagination >  .active > span:hover,.book .book-body .page-wrapper .page-inner section.normal .u- pagination > .active > a:focus,.book .book-body .page-wrapper .page-inner section.normal  .u-pagination > .active > span:focus {
+    z-index: 2;
+    color: #fff;
+    cursor: default;
+    background-color: rgb(27,174,222);
+    border-color: rgb(27,174,222);
+}
+.book .book-body .page-wrapper .page-inner section.normal table td, .book .book-body .page-wrapper .page-inner section.normal table th{
+    border:none;
+}
+.book .book-body .page-wrapper .page-inner section.normal table tr{
+    border-top: 1px solid rgb(224,224,224);
+}
+.book .book-body .page-wrapper .page-inner section.normal table thead tr{
+    border:none;
+}
+table.u-table-base.u-table-striped thead tr{
+    border:none;
+}
+.book .book-body .page-wrapper .page-inner section.normal table th{
+    font-weight: 500;
+}
+.book .book-body .page-wrapper .page-inner section.normal table tbody tr:nth-child(2n+1){
+    background-color: rgba(238,238,238,.3);
+}
+.book .book-body .page-wrapper .page-inner section.normal table tr:nth-child(2n){
+    background: none;
+}
+.u-table tbody tr.is-selected {
+    background-color: #C4EAF6!important;
+}
+.book .book-body .page-wrapper .page-inner section.normal .u-table tbody tr:nth-child(2n+1){
+    background: none;
+}
+.book .book-body .page-wrapper .page-inner section.normal .u-table tr{
+    background-color: #eee;
+}
+.book .book-body .page-wrapper .page-inner section.normal .u-table-base tbody tr:nth-child(2n+1){
+    background: none;
+}
+.u-message .u-msg-close{
+    top: 12px !important;
+    right: 15px !important;
+}
+.u-breadcrumb{
+    padding: 8px 10px !important;
+    margin-bottom: 10px !important;
+    list-style: none;
+    background-color: transparent;
+    border-radius: 3px;
+}
+
+
+
+.book .book-body .navigation.navigation-prev,.book .book-body .navigation.navigation-next{
+    display: none;
+}
+
+/*返回顶部*/
+#goTop,#anchors-navbar{
+    position: fixed;
+    border: 1px solid #2db7f5;
+    z-index: 99;
+    cursor: pointer;
+    padding: 5px 10px;
+    box-shadow: none;
+    color:#2db7f5;
+    background-color: transparent;
+    right:20px;
+}
+#goTop{
+    bottom:15px;
+}
+/*锚点*/
+#anchors-navbar{
+    top: 68px;
+}
+#anchors-navbar:hover{
+    background: #fff;
+}
+
+/*代码高亮背景*/
+body .book .book-body .page-wrapper .page-inner section.normal pre .hljs, body .book .book-body .page-wrapper .page-inner section.normal code .hljs{
+    background: transparent;
+}
+
+/*list style*/
+.book .book-body .page-wrapper .page-inner section.normal>ul>li{
+    list-style-type: disc;
+}
+
+/*left mobile show*/
+.book .book-header h1{
+    display: none;
+}
+.book .book-header .btn{
+    border:0px;
+}
+.book .book-header .pull-right{
+    display: none;
+}
+
+/*left secondary menu*/
+.book .book-summary ul.summary li span{
+    cursor: pointer;
+    padding-left:30px;
+    opacity: 1;
+    filter:alpha(opacity=100);
+}
+.book .book-summary ul.summary li span:hover{
+    color:#008cff;
+}
+.book .book-summary ul.summary li span b {
+    display: none;
+    position:absolute;
+    left:0;
+}
+.book .book-summary ul.summary li span i{
+    left:0px;
+    top:8px;
+    width:100%;
+}
+.book .book-summary .exc-trigger{
+    left:0px;
+    top:8px;
+}
+.book .book-body .page-wrapper .page-inner section.normal .u-menu li a{
+    color: #333;
+}
+.book .book-body .page-wrapper .page-inner section.normal .u-menu li:hover > a{
+        color: #fff;
+        text-decoration: none;
+}
+.book .book-body .page-wrapper .page-inner section.normal .u-table-hover tbody tr:hover{
+    background: #eee;
+}
+.book .book-body .page-wrapper .page-inner section.normal .u-table-striped tbody tr:nth-child(2n+1){
+    background: rgba(238,238,238,.3);
+}
+.book .book-body .page-wrapper .page-inner section.normal table thead th :last-child{
+    text-align: right;
+}
+.book .book-body .page-wrapper .page-inner section.normal table tbody td:last-child{
+    text-align: right;
+}
+
+/*main nav change distance*/
+header.navbar .logo{
+    margin-right:10px;
+}
+header.navbar .toolbar .action-btn{
+    margin:0 18px;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal hr{
+    height:1px;
+}
+
+/*mobile style*/
+@media screen and (max-width:600px) {
+    #anchors-navbar,#goTop{
+        display: none;
+    }
+    .book.with-summary .book-body{
+        -webkit-transform: translate(calc(240px),0); 
+        -moz-transform: translate(calc(240px),0);
+        -ms-transform: translate(calc(240px),0);
+        -o-transform: translate(calc(240px),0);
+        transform: translate(calc(240px),0);
+        -webkit-transition: -webkit-transform 400ms cubic-bezier(0.785, 0.135, 0.150, 0.860) ,visibility 400ms;
+        -moz-transition: transform 400ms cubic-bezier(0.785, 0.135, 0.150, 0.860) ,visibility 400ms;
+        -o-transition: transform 400ms cubic-bezier(0.785, 0.135, 0.150, 0.860) ,visibility 400ms;
+        transition: transform 400ms cubic-bezier(0.785, 0.135, 0.150, 0.860) ,visibility 400ms;
+    }
+
+    /*mobile content*/
+    .book .book-body .page-wrapper .page-inner{
+        margin:0px;
+    }
+    .book .book-body .page-wrapper .page-inner section{
+        padding:5px;
+    }
+    .book .book-header{
+        padding:0px;
+    }
+    .book .book-header .btn{
+        padding:0 15px 0 0;
+    }
+
+}
+
+
+
+
+
+
