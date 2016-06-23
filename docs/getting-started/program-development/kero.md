@@ -1,12 +1,12 @@
-# Datatable
+# Kero
 
-> Datatable基于knockout封装的library，专门处理企业级复杂数据交互。项目地址：https://github.com/iuap-design/datatable
+> `Kero` 基于 `knockout` 封装的 `library`，用于增强 MVVM 架构中的 Model 层能力，能够处理企业级复杂数据交互。项目地址：https://github.com/iuap-design/kero
 
 
 
 ## 1、介绍
 
-数据模型(dataTabe)做为MVVM架构中Model层的增强。主要功能有：
+`Kero` 主要功能有：
 
 * 以行、列的形式对数据做存储，并对外暴露一批增删改查的API，方便开发者对页面数据的处理，而且所有开发者之间做到统一，减少出错概率。
 
