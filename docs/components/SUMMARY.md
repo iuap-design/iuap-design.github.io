@@ -27,5 +27,5 @@
    * [进度条 progress](progress.md)
    * [图片 image](image.md)
    * [评分 rating](rating.md)
-   * [面板 tooltip](panel.md)
+   * [面板 panel](panel.md)
    * [流程 pearls](pearls.md)

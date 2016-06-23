@@ -5,7 +5,7 @@
 # 示例
 
 
-##带icon的Pearls
+##带icon的pearls
 
 将数据换成icon，适用于多场景的流程步骤。
 <style>.content{
@@ -21,7 +21,6 @@
 }
 </style>
 <div class="example-content"><div class="example-wrap">
-    <h4 class="example-title">Icon</h4>
     <div class="example">
       <div class="pearls row">
         <div class="pearl done col-xs-4">
@@ -393,7 +392,6 @@ pearls-xs pearls-sm pearls-lg 供尺寸的选择
 
 常用于流程步骤的跟踪。
 <div class="example-content"><div class="example-wrap">
-    <h4 class="example-title">Default</h4>
     <div class="example">
       <div class="pearls row">
         <div class="pearl done col-xs-4">

@@ -229,12 +229,7 @@ colorLevel:'tooltip-danger'
     </div>
 </div>
 </div>
-<div class="examples-code"><pre><code> #example3,#example2{
-    margin: 10px;
-    float: left;
-    margin-left: 115px;
-}</code></pre>
-</div>
+
 <div class="examples-code"><pre><code>&lt;div id='example3'>
     &lt;div class="tooltip tooltip-primary top active" role="tooltip">
         &lt;div class="tooltip-arrow">&lt;/div>
@@ -275,7 +270,6 @@ colorLevel:'tooltip-danger'
 
 <div class="example-content">
 <div id='example1'>
-	<p>各种颜色tooltips</p>
 	<label id="primary" class="ws">primary</label>
 	<label id="info" class="ws">info</label>
 	<label id="warning" class="ws">warning</label>
