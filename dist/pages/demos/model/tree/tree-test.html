@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<style>
+			#demoLeft{
+				width:40%;
+				border: 1px solid #EEEEEE;
+				min-height: 200px;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="../../../project/libs/bootstrap/css/bootstrap.css" />
+	    <link rel="stylesheet"  href="../../../vendor/uui/assets/fonts/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="../../../vendor/uui/css/u.css" />
+		<link rel="stylesheet" type="text/css" href="../../../vendor/uui/css/tree.css" />
+	</head>
+	<body>
+		<div id="demoLeft"><div id="treeTest" class="ztree" u-meta='{"multiSelect":"true","id":"tree2","data":"dataTable","type":"tree","idField":"id","pidField":"pid","nameField":"title","setting":"treeSetting"}'></div></div>
+		<hr />
+		<h4>dataTable操作</h4>
+		<button type="button" class="btn-success" id="addOneRow1">新增节点</button>
+		<button type="button" class="btn-success" id="deleteOneRow">删除节点</button> 
+		<button type="button" class="btn-success" id="deleteAllRows">删除全部节点</button>
+		
+		<script src="../../../project/libs/jquery/jquery-1.11.2.js"></script>
+		<script src="../../../vendor/knockout/knockout-3.2.0.debug.js"></script>
+		<script src="../../../vendor/uui/js/u.js"></script>
+		<script src="../../../vendor/uui/js/u-tree.js"></script>
+		<script src="treef.js"></script>
+
+	</body>
+</html>

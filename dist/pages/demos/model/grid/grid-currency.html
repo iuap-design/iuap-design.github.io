@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title></title>
+    <style>
+        [type=radio] {
+            cursor: pointer;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="../../../project/libs/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet"  href="../../../vendor/uui/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../vendor/uui/css/u.css" />
+	<link rel="stylesheet" type="text/css" href="../../../vendor/uui/css/grid.css" />
+
+</head>
+<!--onRowUnSelected-->
+<body>
+<!--<div id="gridTest1" u-meta='{"id":"grid1","multiSelect":true,"type":"grid","editable":true,"rowClickBan":false,"autoExpand":false,"data":"dataTable","showNumCol":true,"showTree":false,"keyField":"id","parentKeyField":"pid","onBeforeRowSelected":"onBeforeRowSelected1","onRowSelected":"onRowSelected1","onBeforeRowUnSelected":"onBeforeRowUnSelected1","onRowUnSelected":"onRowUnSelected1","onBeforeAllRowSelected":"onBeforeAllRowSelected1","onRowFocus":"onRowFocus1","onBeforeRowFocus":"onBeforeRowFocus1","onBeforeRowUnFocus":"onBeforeRowUnFocus1"}'>
+    <div options='{"field":"name","fixed":false,"dataType":"String","title":"姓名","editOptions":{"id":"stringname","type":"string","maxLength":6},"editType":"string"}'></div>
+    <div options='{"field":"time","dataType":"time","title":"时间","editType":"time","renderType":""}'></div>
+    <div options='{"field":"distance","dataType":"String","title":"距离","editType":"string"}'></div>
+    <div options='{"field":"currency","dataType":"float","precision":2,"title":"金额","editType":"float","editOptions":{"id":"currency1","type":"float","precision":"3","max":10000}}'></div>
+    <div options='{"field":"pass","dataType":"String","title":"是否通过","editOptions":{"id":"radio", "type":"radio","datasource":"radiodata"},"editType":"radio","renderType":"radioRender"}'></div>
+    <div options='{"field":"combobox","dataType":"string","title":"combo","editOptions":{"id":"combobox","type":"combo","datasource":"comItems"},"editType":"combo","renderType":"comboRender"}'></div>
+    <div options='{"field":"check","dataType":"string","title":"勾选","editOptions":{"id":"check1","type":"check"},"editType":"checkbox","renderType":"booleanRender"}'></div>
+</div>-->
+<!--<button type="button" class="btn-success" id="addOneRow1">新增节点</button>
+<button type="button" class="btn-success" id="selectOneRow1">选中一行</button>
+<button type="button" class="btn-success" id="deleteOneRow1">删除一行</button>
+<button type="button" class="btn-success" id="changecell">改变某个单元</button>
+<button type="button" class="btn-success" id="setUnSelect1">取消选中</button>
+<button type="button" class="btn-success" id="setFocus1">设置焦点</button>
+<button type="button" class="btn-success" id="setUnFocus1">取消焦点</button>
+<button type="button" class="btn-success" id="setAllRowsS1">全选</button>
+<button type="button" class="btn-success" id="setAllRowsUnS1">取消全选</button>
+-->
+<div id="gridTest2" u-meta='{"id":"grid2","multiSelect":true,"editType":"default","type":"grid","field":"","autoExpand":false,"data":"dataTable","showNumCol":true,"showTree":false,"keyField":"id","parentKeyField":"pid","editable":true,"onBeforeRowSelected":"onBeforeRowSelected1","onRowSelected":"onRowSelected1","onBeforeRowUnSelected":"onBeforeRowUnSelected1","onRowUnSelected":"onRowUnSelected1","onBeforeAllRowSelected":"onBeforeAllRowSelected1"}'>
+	<div options='{"field":"name","dataType":"String","title":"姓名","editOptions":{"id":"stringname","type":"string","maxLength":6},"editType":"string"}'></div>
+    <div options='{"field":"startdate","dataType":"date","title":"开始日期","editType":"eidtTypeFun" ,"renderType":"dateRender"}'></div>
+    <div options='{"field":"enddate","dataType":"date","title":"结束日期","editType":"endEidtTypeFun" ,"renderType":"dateRender"}'></div>
+	<div options='{"field":"time","dataType":"time","title":"时间","editType":"eidtTypeFun" ,"renderType":"timeRender"}'></div>
+	<div options='{"field":"distance","dataType":"String","title":"距离","editType":"eidtTypeFun"}'></div>
+	<div options='{"field":"currency","dataType":"String","title":"金额","editType":"float","editOptions":{"id":"currency1","type":"float","precision":"3","max":10000}}'></div>
+	<div options='{"field":"pass","dataType":"String","title":"是否通过","editOptions":{"id":"radio", "type":"radio","datasource":"radiodata"},"editType":"radio","renderType":"radioRender"}'></div>
+	<div options='{"field":"combobox","dataType":"string","title":"combo1","editOptions":{"id":"combobox1","type":"combo","datasource":"comItems"},"editType":"combo","renderType":"comboRender"}'></div>
+    <div options='{"field":"combobox2","dataType":"string","title":"combo2","editOptions":{"id":"combobox2","type":"combo","single":false,"mutil":true,"datasource":"comItems2"},"editType":"combo","renderType":"comboRender"}'></div>
+	<div options='{"field":"check","dataType":"string","title":"勾选","editOptions":{"id":"check1","type":"check"},"editType":"checkbox","renderType":"booleanRender"}'></div>
+</div>
+
+<script src="../../../project/libs/jquery/jquery-1.11.2.js"></script>
+<script src="../../../vendor/knockout/knockout-3.2.0.debug.js"></script>
+<script src="../../../vendor/uui/js/u.js"></script>
+<script src="../../../vendor/uui/js/u-grid.js"></script>
+<script src="grid-currency.js"></script>
+</body>
+
+</html>

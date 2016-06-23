@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../vendor/uui/css/u.css">
+    <link rel="stylesheet" type="text/css" href="../../vendor/uui/css/u-extend.css">
+
+</head>
+
+<body>
+<!-- 内容区 -->
+<div class="u-container-fluid u-widget-bg">
+    <div class="u-row">
+        <div class="u-col-12">
+            <div class="u-widget">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">发票信息</h3>
+                </div>
+                <div class="u-widget-body">
+                    <div class="u-container-fluid">
+                        <div class="u-row">
+                            <div class="u-col-1 u-col-sm-4">
+                                <label class="u-input-label right">发票号码:</label>
+                            </div>
+                            <div class="u-col-2 u-col-sm-8 m-b-md">
+                                <input type="text" class="u-form-control" placeholder="填写发票号码">
+                            </div>
+                            <div class="u-col-1 u-col-sm-4">
+                                <label class="u-input-label right">对账单:</label>
+                            </div>
+                            <div class="u-col-2 u-col-sm-8 m-b-md">
+                                <div class="u-input-group u-has-feedback">
+                                    <div class="u-input-group-before" style="color: red;">*</div>
+                                    <input type="text" class="u-form-control">
+                                    <span id="receive_ref" class="u-form-control-feedback fa fa-list-ul"></span>
+                                </div>
+                            </div>
+                            <div class="u-col-1 u-col-sm-4">
+                                <label class="u-input-label right">开票日期:</label>
+                            </div>
+                            <div class="u-col-2 u-col-sm-8 m-b-md">
+                                <div class="u-input-group u-has-feedback">
+                                    <input type="text" class="u-form-control"/>
+                                    <span class="u-form-control-feedback fa fa-calendar" data-role="date-button"></span>
+                                </div>
+                            </div>
+                            <div class="u-col-1 u-col-sm-4">
+                                <label class="u-input-label right">开票金额:</label>
+                            </div>
+                            <div class="u-col-2 u-col-sm-8 m-b-md">
+                                <input type="text" class="u-form-control">
+                            </div>
+                        </div>
+                        <div class="u-row">
+                            <div class="u-col-1 u-col-sm-4">
+                                <label class="u-input-label right">付款单位:</label>
+                            </div>
+                            <div class="u-col-11 u-col-sm-8 m-b-md">
+                                <input type="text" class="u-form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="u-row">
+        <div class="u-col-12">
+            <div class="u-widget">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">发票明细</h3>
+                </div>
+                <div class="u-widget-body">
+                    <table class="u-table" style="width:100%;">
+                        <thead>
+                        <tr>
+                            <th>名称</th>
+                            <th class="u-hidden-sm">规格型号</th>
+                            <th class="u-hidden-sm">单位</th>
+                            <th>数量</th>
+                            <th class="u-hidden-xs">单价</th>
+                            <th class="u-hidden-xs">金额</th>
+                            <th class="u-hidden-sm">税率</th>
+                            <th class="u-hidden-sm">税额</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>联想笔记本</td>
+                            <td class="u-hidden-sm">E430</td>
+                            <td class="u-hidden-sm">台</td>
+                            <td>10</td>
+                            <td class="u-hidden-xs">￥5382.00</td>
+                            <td class="u-hidden-xs">￥53820.00</td>
+                            <td class="u-hidden-sm">17%</td>
+                            <td class="u-hidden-sm">￥9149.40</td>
+                        </tr>
+                        <tr class="is-selected">
+                            <td>联想笔记本</td>
+                            <td class="u-hidden-sm">X210</td>
+                            <td class="u-hidden-sm">台</td>
+                            <td>50</td>
+                            <td class="u-hidden-xs">￥6382.00</td>
+                            <td class="u-hidden-xs">￥63820.00</td>
+                            <td class="u-hidden-sm">17%</td>
+                            <td class="u-hidden-sm">￥6149.40</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="u-row">
+        <div class="u-col-12">
+            <div class="u-widget">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">联系方式</h3>
+                </div>
+                <div class="u-widget-body">
+
+                    <div class="u-container-fluid">
+                        <div class="u-row">
+                            <div class="u-col-1 u-col-sm-4">
+                                <label class="u-input-label right">联系人:</label>
+                            </div>
+                            <div class="u-col-3 u-col-sm-8 m-b-md">
+                                <div class="u-input-group">
+                                    <div class="u-input-group-before" style="color: red;">*</div>
+                                    <input type="text" class="u-form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="u-row">
+                            <div class="u-col-1 u-col-sm-4">
+                                <label class="u-input-label right">联系电话:</label>
+                            </div>
+                            <div class="u-col-3 u-col-sm-8 m-b-md">
+                                <div class="u-input-group">
+                                    <div class="u-input-group-before" style="color: red;">*</div>
+                                    <input type="text" class="u-form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="u-row">
+                            <div class="u-col-1 u-col-sm-4">
+                                <label class="u-input-label right">邮件地址:</label>
+                            </div>
+                            <div class="u-col-3 u-col-sm-8 m-b-md">
+                                <input type="text" class="u-form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="u-row">
+        <div class="u-col-md-12 u-col-sm-12">
+            <div class="u-widget" style="background-color:transparent">
+                <button class="u-button raised u-right">保存</button>
+                <button class="u-button raised primary u-right m-r-sm">新增</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- /内容区 -->
+<script src="../../vendor/uui/js/u-polyfill.min.js"></script>
+<script src="../../vendor/uui/js/u.min.js"></script>
+
+<!-- 脚本区 -->
+<script type="text/javascript">
+    u.on(document.querySelector('#receive_ref'), 'click', function () {
+        var slide =  u.slidePanel({url: './duizhang.html', width: '800px',callback:function(){
+            u.compMgr.updateComp();
+            u.on(document.querySelector('#condition-toggle'), 'click', function () {
+                var conditionRow = document.querySelector('#condition-row');
+                var toggleIcon = this.querySelector('i');
+                if (u.hasClass(conditionRow, 'u-visible')) {
+                    u.removeClass(conditionRow, 'u-visible').addClass(conditionRow, 'u-not-visible');
+                    u.removeClass(toggleIcon, 'fa-angle-up').addClass(toggleIcon, 'fa-angle-down');
+                } else {
+                    u.removeClass(conditionRow, 'u-not-visible').addClass(conditionRow, 'u-visible');
+                    u.removeClass(toggleIcon, 'fa-angle-down').addClass(toggleIcon, 'fa-angle-up');
+
+                }
+            })
+            u.on(document.querySelector('#returnBtn'), 'click', function(){
+                slide.close();
+            })
+            u.on(document.querySelector('#okBtn'), 'click', function(){
+                slide.close();
+            })
+        }});
+    })
+
+</script>
+</body>
+
+</html>

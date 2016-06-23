@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet"  href="../../../vendor/uui/assets/fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css"  href="../../../vendor/uui/css/u.css">
+</head>
+<body>
+	<div id='pagination' class='pagination'  u-meta='{"type":"pagination","data":"listData"}'>
+    </div>
+
+
+    <script src="../../../vendor/knockout/knockout-3.2.0.debug.js"></script>
+    <script src="../../../vendor/uui/js/u-polyfill.js"></script>
+    <script src="../../../vendor/uui/js/u.js"></script>
+
+<script>
+    var app;
+    var viewModel = {
+        listData: new u.DataTable({
+            meta: {
+                enterprise: {type: 'string'},
+                depart: {type: 'string'},
+                name: {type: 'string'},
+                sex: {type: 'string'}
+            }
+        })
+    };
+
+    app=u.createApp({
+        el:'body',
+        model:viewModel
+    });
+
+    //dataTable设置值
+    viewModel.listData.setSimpleData([
+        {"enterprise": "用友","depart": "UE","name": "张紫琼","sex": "male"},
+        {"enterprise": "阿里巴巴","depart": "测试","name": "张丽丹","sex": "female"}
+    ])
+
+
+</script>
+
+</body>
+</html>

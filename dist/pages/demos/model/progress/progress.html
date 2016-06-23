@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>进度条绑定datatable</title>
+    <link rel="stylesheet" type="text/css"  href="../../../vendor/uui/css/u.css">
+</head>
+<body>
+
+<p>
+<!-- 简单进度条 -->
+<div id="p1" class="u-progress" u-meta='{"id":"c1","type":"u-progress","data":"dt1","field":"f1"}'></div>
+</p>
+
+<script src="../../../vendor/knockout/knockout-3.2.0.debug.js"></script>
+<script src="../../../vendor/uui/js/u-polyfill.js"></script>
+<script src="../../../vendor/uui/js/u.js"></script>
+
+<script>
+        var app,viewModel;
+        viewModel = {
+            dt1: new u.DataTable({
+                meta:{
+                f1:{},
+                f2:{}
+            }
+        })
+        };
+
+        app = u.createApp({
+            el:'body',
+            model:viewModel
+        });
+
+        var r = viewModel.dt1.createEmptyRow();
+        r.setValue('f1',44);
+        viewModel.dt1.setRowSelect(0);
+    </script>
+</body>
+</html>

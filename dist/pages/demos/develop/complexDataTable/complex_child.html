@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css"  href="../../../vendor/uui/css/u.css"></head>
+<body>
+
+<div>主表</div>
+<div class="rslistInfo">
+    <table id="table1" class="u-table">
+        <thead>
+        <tr>
+            <th>公司</th>
+            <th>部门</th>
+            <th>姓名</th>
+        </tr>
+        </thead>
+        <tbody data-bind="foreach:{data:listData.rows(), as: 'row', afterAdd: afterAdd}">
+        <tr data-bind="click: row.singleSelect,css: { 'is-selected' : row.selected() }">
+            <td data-bind="text:row.ref('enterprise')"></td>
+            <td data-bind="text: row.ref('depart')"></td>
+            <td data-bind="text: row.ref('sex')"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<br>
+<br>
+<div>主表字段编辑：</div>
+<input type="text"  data-bind="value:listData.ref('sex')"/>
+<br>
+<br>
+
+
+
+
+<div>子数据</div>
+<div class="rslistInfo">
+    <table id="table1" class="u-table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>姓名</th>
+        </tr>
+        </thead>
+        <tbody data-bind="foreach:{data:listData.ref('userid'), as: 'row', afterAdd: afterAdd}">
+        <tr data-bind="click: row.singleSelect,css: { 'is-selected' : row.selected() }">
+            <td data-bind="text:row.ref('id')"></td>
+            <td data-bind="text: row.ref('name2')"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<br>
+<br>
+<br>
+
+
+<div>子表字段编辑：</div>
+<input type="text"  data-bind="value:listData.ref('userid.name2')"/>
+
+<br>
+<br>
+<br>
+
+
+<!--<div class="u-text"  u-meta='{"id":"f1","type":"u-text","data":"listData.userid","field":"name2"}'>-->
+    <!--<input class="u-input"/>-->
+    <!--<label class="u-label"></label>-->
+<!--</div>-->
+
+<script src="../../../vendor/knockout/knockout-3.2.0.debug.js"></script>
+<script src="../../../vendor/uui/js/u-polyfill.js"></script>
+<script src="../../../vendor/uui/js/u.js"></script>
+
+<script>
+    var app;
+    var viewModel = {
+        listData: new u.DataTable({
+            meta: {
+//                enterprise: {type: 'string'},
+//                depart: {type: 'string'},
+//                name: {type: 'string'},
+//                sex: {type: 'string'},
+//                userid:{type: 'child',meta:{
+//                    id:{type:'string'},
+//                    name2:{type:'string'}
+//                }}
+                userid:{type: 'child'}
+            }
+        }),
+
+        afterAdd:function(element, index, data){
+            if (element.nodeType === 1) {
+                u.compMgr.updateComp(element);
+            }
+        }
+    };
+
+    app=u.createApp({
+        el:'body',
+        model:viewModel
+    });
+
+    //dataTable设置值
+//    viewModel.listData.setSimpleData([
+//        {"enterprise": "用友","depart": "UE","sex": "male","userid":{"name":{"name2":"张紫琼"},"id":"001"}},
+//        {"enterprise": "阿里巴巴","depart": "测试","sex": "female","userid":{"name":{"name2":"张丽丹"},"id":"002"}}
+//    ])
+
+    viewModel.listData.setSimpleData([
+        {"enterprise": "用友","depart": "UE","sex": "male","userid":[{"name2":"张紫琼","id":"001"},{"name2":"张紫琼2","id":"0012"}]},
+        {"enterprise": "阿里巴巴","depart": "测试","sex": "female","userid":[{"name2":"张丽丹","id":"002"},{"name2":"张丽丹2","id":"0022"}]}
+    ])
+
+
+
+</script>
+
+
+
+</body>
+</html>

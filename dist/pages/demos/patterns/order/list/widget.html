@@ -1,0 +1,84 @@
+<div class="u-container-fluid">
+<div class="u-row content">
+  <div class="u-col-12">
+    <div class="widget-content">
+    <h4 class="form-title">订单标题</h4>
+    <!-- 主表表格内容 -->
+    <table class="demo-datagrid u-table selectable u-shadow-2dp u-table-editable">
+  		<thead>
+  			<tr>
+  				<th>
+  					<label class="u-checkbox only-style" data-bind="click: listData.toggleAllSelect.bind(listData), css:{'is-checked': listData.allSelected()}">
+  						<input id="checkInput" type="checkbox" class="u-checkbox-input">
+  						<span class="u-checkbox-label"></span>
+  					</label>
+  				</th>
+  				<th>名称</th>
+  				<th>数量</th>
+  				<th>单价</th>
+  				<th>名称</th>
+  				<th>数量</th>
+  				<th>单价</th>
+  				<th>名称</th>
+  				<th>数量</th>
+  				<th>单价</th>
+  				<th>操作</th>
+  			</tr>
+  		</thead>
+  		<tbody data-bind="foreach:{data:listData.rows(), as: 'row', afterAdd: afterAdd}">
+  			<tr data-bind="css: { 'is-selected' : row.selected(), 'is-focused' : row.focused(), 'not-focused' : !row.focused()  }, attr: {'rowindex': $index}">
+  				<td>
+  					<label class="u-checkbox only-style" data-bind="click: row.multiSelect, css:{'is-checked': row.selected()}">
+  						<input type="checkbox" class="u-checkbox-input">
+  						<span class="u-checkbox-label"></span>
+  					</label>
+  				</td>
+  				<td>
+  					<div class="u-text">
+  						<input class="u-input" data-bind="value: row.ref('field1')" />
+  						<label class="u-label"></label>
+  					</div>
+  				</td>
+  				<td>
+  					<div class='u-datepicker time'>
+  						<input class="u-input" type="text" data-bind="value: row.ref('field2')">
+  					</div>
+  				</td>
+  				<td>
+  					<div class="u-text">
+  						<input class="u-input" data-bind="value: row.ref('field3')" />
+  						<label class="u-label"></label>
+  					</div>
+  				</td>
+  				<td>
+  					<div class="u-text">
+  						<input class="u-input" data-bind="value: row.ref('field4')" />
+  						<label class="u-label"></label>
+  					</div>
+  				</td>
+  				<td>
+  					<div class="u-text">
+  						<input class="u-input" data-bind="value: row.ref('field5')" />
+  						<label class="u-label"></label>
+  					</div>
+  				</td>
+  				<td data-bind="text: row.ref('field6')"></td>
+  				<td data-bind="text: row.ref('field7')"></td>
+  				<td data-bind="text: row.ref('field8')"></td>
+  				<td data-bind="text: row.ref('field9')"></td>
+  				<td>
+  					<button class="demo-line-button table-line-edit-btn" data-bind="click: $parent.editClick">修改</button>
+  					<button class="demo-line-button table-line-del-btn" data-bind="click: $parent.delClick">删除</button>
+  					<button class="demo-line-button table-line-save-btn" data-bind="click: $parent.saveClick">保存</button>
+  					<button class="demo-line-button table-line-cancel-btn" data-bind="click: $parent.cancelClick">取消</button>
+  				</td>
+  			</tr>
+
+  		</tbody>
+  	</table>
+  	<div id='pagination' class='u-pagination' u-meta='{"type":"pagination","data":"listData"}'>
+  	</div>
+  </div>
+  </div>
+</div>
+</div>

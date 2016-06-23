@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css"  href="../../../vendor/uui/css/u.css"></head>
+<body>
+
+<div>单选</div>
+<div class="rslistInfo">
+    <table id="table1" class="u-table">
+        <thead>
+        <tr>
+            <th>公司</th>
+            <th>部门</th>
+            <th>姓名</th>
+        </tr>
+        </thead>
+        <tbody data-bind="foreach:{data:listData.rows(), as: 'row', afterAdd: afterAdd}">
+        <tr data-bind="click: row.singleSelect,css: { 'is-selected' : row.selected() }">
+            <td data-bind="text:row.ref('enterprise')"></td>
+            <td data-bind="text: row.ref('depart')"></td>
+            <td data-bind="text: row.ref('name')"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<br>
+<br>
+<div>多选</div>
+<div class="rslistInfo">
+    <table id="table2" class="u-table">
+        <thead>
+        <tr>
+            <th>
+                <label  class="u-checkbox only-style" data-bind="click: listData.toggleAllSelect.bind(listData), css:{'is-checked': listData.allSelected()}">
+                    <input id="checkInput" type="checkbox" class="u-checkbox-input">
+                    <span class="u-checkbox-label"></span>
+                </label>
+            </th>
+            <th>公司</th>
+            <th>部门</th>
+            <th>姓名</th>
+        </tr>
+        </thead>
+        <tbody data-bind="foreach:{data:listData.rows(), as: 'row', afterAdd: afterAdd}">
+        <tr data-bind="css: { 'is-selected' : row.selected() }">
+            <td>
+                <label  class="u-checkbox only-style" data-bind="click: row.multiSelect, css:{'is-checked': row.selected()}">
+                    <input type="checkbox" class="u-checkbox-input">
+                    <span class="u-checkbox-label"></span>
+                </label>
+            </td>
+            <td data-bind="text: row.ref('enterprise')"></td>
+            <td data-bind="text: row.ref('depart')"></td>
+            <td data-bind="text: row.ref('name')"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<script src="../../../vendor/knockout/knockout-3.2.0.debug.js"></script>
+<script src="../../../vendor/uui/js/u-polyfill.js"></script>
+<script src="../../../vendor/uui/js/u.js"></script>
+
+<script>
+    var app;
+    var viewModel = {
+        listData: new u.DataTable({
+            meta: {
+                enterprise: {type: 'string'},
+                depart: {type: 'string'},
+                name: {type: 'string'},
+                sex: {type: 'string'}
+            }
+        }),
+
+        afterAdd:function(element, index, data){
+            if (element.nodeType === 1) {
+                u.compMgr.updateComp(element);
+            }
+        }
+    };
+
+    app=u.createApp({
+        el:'body',
+        model:viewModel
+    });
+
+    //dataTable设置值
+    viewModel.listData.setSimpleData([
+        {"enterprise": "用友","depart": "UE","name": "张紫琼","sex": "male"},
+        {"enterprise": "阿里巴巴","depart": "测试","name": "张丽丹","sex": "female"}
+    ])
+
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css"  href="../../../vendor/uui/css/u.css"></head>
+<body>
+    <div class="u-text"  u-meta='{"id":"f1","type":"u-text","data":"dt1","field":"f1"}'>
+        <input class="u-input"/>
+        <label class="u-label">f1</label>
+    </div>
+    <br>
+    <br>
+    <br>
+    <input  u-meta='{"id":"f2","type":"float","data":"dt1","field":"f1"}' />
+    <input  data-bind="value:dt1.ref('f1'), enable: dt1.refEnable('f1')"/>
+
+    <div  data-bind="text:dt1.ref('f1')"></div>
+
+
+    <script src="../../../vendor/knockout/knockout-3.2.0.debug.js"></script>
+    <script src="../../../vendor/uui/js/u-polyfill.js"></script>
+    <script src="../../../vendor/uui/js/u.js"></script>
+
+    <script>
+        var app,viewModel;
+        viewModel = {
+            dt1: new u.DataTable({
+                meta:{
+                f1:{},
+                f2:{}
+            }
+        }),
+        btn1Click: function(){
+                alert('btn1Click');
+//                    app.serverEvent().fire();
+            }
+        };
+
+
+
+//        viewModel.dt1.on('f1.valueChange', function(event){
+//            alert(1);
+//        })
+
+        app = u.createApp({
+            el:'body',
+            model:viewModel
+        });
+
+        var r = viewModel.dt1.createEmptyRow();
+        r.setValue('f1',250);
+        viewModel.dt1.setRowSelect(0);
+        viewModel.dt1.setEnable(false)
+    </script>
+</body>
+</html>
