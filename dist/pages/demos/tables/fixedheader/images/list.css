@@ -1,0 +1,70 @@
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	font-family: 'Open Sans', 'Helvetica Neue', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+	font-size: 13px;
+	line-height: 1.7;
+	background-color: #FFFFFF;
+	word-wrap: break-word;
+}
+
+.demoe-page-content {
+	margin: 32px;
+}
+
+.demo-actions .u-button {
+	margin: 0 4px;
+}
+
+.demo-form-item {
+	margin: 8px;
+}
+
+.demo-show-item dt,
+.demo-show-item dd {
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 13px;
+}
+
+.demo-show-item {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+
+.demo-show-item dt {
+	flex: 1;
+}
+
+.demo-show-item dd {
+	flex: 2;
+	text-align: left;
+	margin-left: 8px;
+	font-weight: bold;
+}
+
+.demo-table-search {
+	float: right;
+	margin-right: 16px
+}
+
+.demoe-icon-btn {
+	font-size: 16px;
+}
+
+.demo-datagrid {
+	width: 100%;
+}
+
+.demo-card {
+	padding: 32px;
+}
+
+.demo-card-wide {
+	width: 100%;
+}

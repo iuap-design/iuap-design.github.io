@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css"  href="../../../vendor/uui/css/u.css"></head>
+<body>
+
+
+<div class="rslistInfo">
+    <table class="u-table">
+        <thead>
+        <tr>
+            <th>公司</th>
+            <th>部门</th>
+            <th>姓名</th>
+            <th>switch</th>
+        </tr>
+        </thead>
+        <tbody data-bind="foreach:{data:listData.rows(), as: 'row', afterAdd: afterAdd}">
+        <tr>
+            <td data-bind="text:row.ref('enterprise')"></td>
+            <td data-bind="text: row.ref('depart')"></td>
+            <td data-bind="text: row.ref('name')"></td>
+            <td>
+                <label class="u-switch"  data-bind="attr:{'for':'switch-' + $index()}">
+                    <input type="checkbox" data-bind="attr:{'id':'switch-' + $index()}" class="u-switch-input">
+                    <span class="u-switch-label"></span>
+                </label>
+
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="../../../vendor/knockout/knockout-3.2.0.debug.js"></script>
+<script src="../../../vendor/uui/js/u-polyfill.js"></script>
+<script src="../../../vendor/uui/js/u.js"></script>
+
+<script>
+    var app;
+    var viewModel = {
+        listData: new u.DataTable({
+            meta: {
+                enterprise: {type: 'string'},
+                depart: {type: 'string'},
+                name: {type: 'string'},
+                sex: {type: 'string'}
+            }
+        }),
+        afterAdd:function(element, index, data){
+            if (element.nodeType === 1) {
+                var _switch = new u.Switch(element.querySelector('.u-switch'));
+                _switch.on('change', function(event){
+                    if (event.isChecked){
+                        alert('dataTable第' + index + '行switch被触发，状态为true')
+                    }else{
+                        alert('dataTable第' + index + '行switch被触发，状态为false')
+                    }
+                })
+            }
+        }
+    }
+
+    app=u.createApp({
+        el:'body',
+        model:viewModel
+    });
+
+    //dataTable设置值
+    viewModel.listData.setSimpleData([
+        {"enterprise": "用友","depart": "UE","name": "张紫琼","sex": "male"},
+        {"enterprise": "阿里巴巴","depart": "测试","name": "张丽丹","sex": "female"}
+    ])
+
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+.demoe-page-content {
+	padding: 32px;
+}
+
+.demo-actions .u-button {
+	margin: 0 4px;
+}
+
+.demo-form-item {
+	margin: 8px;
+}
+
+.demo-show-item dt,
+.demo-show-item dd {
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 13px;
+}
+
+.demo-show-item {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+
+.demo-show-item dt {
+	flex: 1;
+}
+
+.demo-show-item dd {
+	flex: 2;
+	text-align: left;
+	margin-left: 8px;
+	font-weight: bold;
+}
+
+.demo-table-search {
+	float: right;
+	margin-right: 16px
+}
+
+.demoe-icon-btn {
+	font-size: 16px;
+}
+
+.demo-datagrid {
+	width: 100%;
+}
+
+.demo-card {
+	padding: 32px;
+}
+
+.demo-card-wide {
+	width: 100%;
+}
+
+.demo-page-save {
+	float: right;
+    top: 6px;
+    right: 16px;
+    font-weight: bold;
+}
+
+.demo-page-cancel {
+	float: left;
+    top: 6px;
+    left: 16px;
+    font-weight: bold;
+}
+
+.u-mdlayout-page-header label {
+	display: block;
+}

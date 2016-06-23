@@ -1,0 +1,12 @@
+.example {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.example .example-col {
+    margin-bottom: 20px;
+    min-height: 0;
+    padding: 10px 15px 12px;
+    background-color: #eceff1;
+    border-radius: 0;
+}

@@ -1,0 +1,48 @@
+.demoe-page-content {
+	padding: 32px;
+}
+
+.demo-actions .u-button {
+	margin: 0 4px;
+}
+
+.demo-datagrid {
+	width: 100%;
+}
+
+.demo-card {
+	padding: 32px;
+}
+
+.demo-card-wide {
+	width: 100%;
+}
+
+.u-table-multi > tbody > tr {
+	cursor: pointer;
+}
+
+.u-subtable .u-table {
+	margin: 0 auto;
+}
+
+.sub-collapse + .u-subtable {
+	display: none;
+}
+
+.sub-collapse .fa-minus-circle {
+	display: none;
+}
+
+.sub-collapse .fa-plus-circle {
+	display: inline;
+}
+
+.fa-plus-circle {
+	display: none;
+}
+
+.u-table td,
+.u-table th {
+	text-align: left;
+}

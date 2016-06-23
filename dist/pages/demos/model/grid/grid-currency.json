@@ -1,0 +1,95 @@
+{
+	"pageIndex": 1,
+	"pageSize": 10,
+	"rows": [
+		{
+			"status": "nrm",
+			"data": {
+				"name": "赵四",
+				"time": "12:22:00",
+				"distance": "25",
+				"currency": {
+					"value": "200.00",
+					"meta": {
+						"precision": "2",
+						"max": "3000",
+						"min": "0",
+						"curSymbol": "$"
+					}
+				},
+				"pass": "",
+				"pid": "",
+				"id": "04",
+				"combobox": "002",
+				"combobox2": "a1",
+				"check": "Y"
+			}
+		}, {
+			"status": "nrm",
+			"data": {
+				"name": "王一",
+				"time": "14:42:14",
+				"distance": "25",
+				"currency": {
+					"value": "200.00",
+					"meta": {
+						"precision": "2",
+						"max": "3000",
+						"min": "0",
+						"curSymbol": "$"
+					}
+				},
+				"pass": "002",
+				"pid": "04",
+				"id": "01",
+				"combobox": "007",
+				"combobox2": "a1",
+				"check": "Y"
+			}
+		}, {
+			"status": "nrm",
+			"data": {
+				"name": "李三",
+				"time": "13:54:23",
+				"distance": "50",
+				"currency": {
+					"value": "300.00",
+					"meta": {
+						"precision": "2",
+						"max": "3000",
+						"min": "0",
+						"curSymbol": "$"
+					}
+				},
+				"pass": "001",
+				"pid": "",
+				"id": "02",
+				"combobox": "001",
+				"combobox2": "a1",
+				"check": "N"
+			}
+		}, {
+			"status": "nrm",
+			"data": {
+				"name": "彰武",
+				"time": "04:44:22",
+				"distance": "50",
+				"currency": {
+					"value": "300.00",
+					"meta": {
+						"precision": "2",
+						"max": "3000",
+						"min": "0",
+						"curSymbol": "$"
+					}
+				},
+				"pass": "003",
+				"pid": "01",
+				"id": "03",
+				"combobox": "005",
+				"combobox2": "a2",
+				"check": "Y"
+			}
+		}
+	]
+}
