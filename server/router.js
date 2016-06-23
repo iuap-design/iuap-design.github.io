@@ -24,12 +24,12 @@ module.exports = {
       var _html  = _css = _script = '';
       
       // 相对于当前执行文件的目录
-      if (fs.existsSync('../dist/pages/' + url + '/widget.html'))
-        _html = fs.readFileSync('../dist/pages/' + url + '/widget.html');
-      if (fs.existsSync('../dist/pages/' + url + '/widget.css'))
-        _css = fs.readFileSync('../dist/pages/' + url + '/widget.css');
-      if (fs.existsSync('../dist/pages/' + url + '/widget.js'))
-        _script = fs.readFileSync('../dist/pages/' + url + '/widget.js');
+      if (fs.existsSync('../dist/pages/webIDE/' + url + '/widget.html'))
+        _html = fs.readFileSync('../dist/pages/webIDE/' + url + '/widget.html');
+      if (fs.existsSync('../dist/pages/webIDE/' + url + '/widget.css'))
+        _css = fs.readFileSync('../dist/pages/webIDE/' + url + '/widget.css');
+      if (fs.existsSync('../dist/pages/webIDE/' + url + '/widget.js'))
+        _script = fs.readFileSync('../dist/pages/webIDE/' + url + '/widget.js');
 
       datas.html = _html.toString();
       datas.css = _css.toString();
