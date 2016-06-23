@@ -6,7 +6,7 @@
 * [项目开发](./program-development/index.md)
   * [开发目录结构](./program-development/dir.md)
   * [JS插件库](./program-development/js.md)
-  * [Datatable](./program-development/datatable.md)
+  * [Kero](./program-development/kero.md)
   * [主题 Theme](./program-development/theme.md)
 * [基础架构](./architecture/index.md)
   * [CSS开发规范](./architecture/specification-css.md)
@@ -17,4 +17,3 @@
 * [交流和反馈](./feedback/index.md)
   * [BUG或Feature反馈](./feedback/feedback.md)
   * [常见问题](./feedback/faq.md)
-  

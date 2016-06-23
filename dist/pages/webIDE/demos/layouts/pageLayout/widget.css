@@ -1,0 +1,18 @@
+.u-widget{
+  background-color: #FFF;
+  margin: 15px;
+}
+
+
+.u-widget-left{
+  margin-right: 0;
+}
+
+.u-widget-right{
+  margin-left: 0;
+}
+
+.u-widget-middle{
+  margin-left: 0;
+  margin-right:0;
+}

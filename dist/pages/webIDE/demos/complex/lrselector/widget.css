@@ -1,0 +1,10 @@
+.u-lrselector ul {
+    list-style: none;
+}
+
+.u-lrselector .list-group .list-group-item.is-selected {
+    background-color: rgb(27,174,222);
+}
+.u-lrselector .u-lrsel-btns .u-button {
+    margin: 4px 0;
+}

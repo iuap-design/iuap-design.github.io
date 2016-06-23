@@ -1,0 +1,15 @@
+.u-widget-body div{
+    margin:0px 15px;
+    border:solid 1px red;
+    background:#EF0;
+    display:inline-block;
+    height:50px;
+    
+}
+
+.desc{
+    position:absolute;
+    bottom:0px;
+    font-size:12px;
+    
+}

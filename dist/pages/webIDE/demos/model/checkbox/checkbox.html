@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../../../vendor/uui/css/u.css">
+</head>
+<body>
+
+
+<div u-meta='{"data":"dt1","field":"f1", "type":"checkbox","datasource":"cehckboxData"}'>
+    <input type="checkbox"/><span data-role="name"></span>
+    <br/>
+</div>
+
+
+<br>
+<br>
+<br>
+
+<div u-meta='{"id":"c1","type":"u-checkbox","data":"dt1","field":"f1","datasource":"cehckboxData"}'>
+    <label class="u-checkbox">
+        <input type="checkbox" class="u-checkbox-input">
+        <span class="u-checkbox-label" data-role="name"></span>
+    </label>
+</div>
+
+<!--<label  class="u-checkbox" u-meta='{"id":"c1","type":"u-checkbox","isGroup":true,"data":"dt1","field":"f1","checkedValue":"test1"}'>-->
+<!--<input type="checkbox" class="u-checkbox-input">-->
+<!--<span class="u-checkbox-label">test1</span>-->
+<!--</label>-->
+<!--<label  class="u-checkbox" u-meta='{"id":"c1","type":"u-checkbox","isGroup":true,"data":"dt1","field":"f1","checkedValue":"test2"}'>-->
+<!--<input type="checkbox" class="u-checkbox-input">-->
+<!--<span class="u-checkbox-label">test2</span>-->
+<!--</label>-->
+
+<br>
+<br>
+
+<div data-bind="text:dt1.ref('f1')"></div>
+
+<br>
+<br>
+<input type="checkbox" u-meta='{"data":"dt1","field":"f2", "type":"checkbox","checkedValue":"Y","unCheckedValue":"N"}'/><span>test3</span>
+
+
+<br>
+<br>
+<br>
+<label class="u-checkbox"
+       u-meta='{"id":"c1","type":"u-checkbox","isGroup":false,"data":"dt1","field":"f2","checkedValue":"Y","unCheckedValue":"N"}'>
+    <input type="checkbox" class="u-checkbox-input">
+    <span class="u-checkbox-label">test3</span>
+</label>
+
+
+<!--<input type="checkbox" value="test3" data-bind="uchecked:dt1.ref('f1')">-->
+<!--<span class="u-checkbox-label">test3</span>-->
+
+
+<br>
+
+<div data-bind="text:dt1.ref('f2')"></div>
+
+<script src="../../../vendor/knockout/knockout-3.2.0.debug.js"></script>
+<script src="../../../vendor/uui/js/u-polyfill.js"></script>
+<script src="../../../vendor/uui/js/u.js"></script>
+
+<script>
+    var app, viewModel;
+    viewModel = {
+        dt1: new u.DataTable({
+            meta: {
+                f1: {},
+                f2: {}
+            }
+        }),
+        cehckboxData: [{value: 'test1', name: '产品一'}, {value: 'test2', name: '产品二'}]
+    }
+
+    app = u.createApp({
+        el: 'body',
+        model: viewModel
+    });
+
+    var r = viewModel.dt1.createEmptyRow();
+    r.setValue('f1', "test1");
+    viewModel.dt1.setRowSelect(0);
+</script>
+</body>
+</html>

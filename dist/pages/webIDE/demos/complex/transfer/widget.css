@@ -1,0 +1,53 @@
+.demo {
+}
+
+.u-transfer {
+    font-size: 12px;
+}
+
+.u-transfer-list, .u-transfer-operation {
+    display: inline-block;
+    margin: 8px;
+    vertical-align: middle;
+    
+}
+
+.u-transfer-list {
+    width: 160px;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+}
+
+.u-transfer-list-header {
+    padding: 4px 16px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.u-transfer-list-header .u-checkbox {
+    width: 24px;
+}
+
+.u-transfer-list-header-title {
+    float: right;
+    margin-top: 2px;
+}
+
+.u-transfer-list-body {
+    height: 256px;
+    overflow: auto;
+}
+
+.u-transfer-list-body > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.u-transfer-list-body > ul li{
+    padding: 4px 16px;
+}
+
+.u-transfer-operation .u-button {
+    display: block;
+    margin: 8px;
+}

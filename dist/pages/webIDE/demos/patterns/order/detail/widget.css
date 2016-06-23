@@ -1,0 +1,82 @@
+/* 页面布局*/
+.content{
+  background-color: #F5F5F5;
+  padding: 20px 5px 40px;
+}
+
+.widget-content{
+  background-color: #FFF;
+  margin: 10px 5px;
+}
+
+/*主表表单样式*/
+
+.header-actions{
+  float: right;
+}
+
+.form-title{
+  padding: 0 10px;
+}
+
+/*子表表单样式*/
+.demo-actions .u-button {
+	margin: 0 4px;
+}
+
+
+.demo-datagrid {
+	width: 100%;
+}
+
+.demo-card {
+	padding: 32px;
+}
+
+.demo-card-wide {
+	width: 100%;
+}
+
+
+.u-table-editable .u-text {
+	width: 39px;
+}
+
+.u-table-editable .not-focused .u-input {
+	border: none;
+}
+
+.u-table-editable .not-focused .u-text:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.u-table-editable .not-focused .table-line-save-btn, .u-table-editable .not-focused .table-line-cancel-btn {
+	display: none;
+}
+
+.u-table-editable .is-focused .table-line-edit-btn, .u-table-editable .is-focused .table-line-del-btn {
+	display: none;
+}
+
+.u-table-editable .is-focused .u-input {
+
+}
+
+.demo-actions-float {
+	position: fixed;
+	top: 24px;
+    right: 76px;
+}
+
+.demo-line-button {
+    color: #fff!important;
+    background-color: #2196f3;
+    font-size: 12px;
+    border: none;
+}

@@ -1,0 +1,16 @@
+<p>普通输入框</p>
+<div class="u-text">
+    <input class="u-input"/>
+    <label class="u-label">Hello World！</label>
+ </div>
+ <br/>
+ <br/>
+ <br/>
+ <p>与dataTable绑定的输入框</p>
+ <div class="u-text" u-meta='{"id":"field1","type":"u-text","data":"dt1","field":"field1"}'>
+    <input class="u-input" />
+    <label class="u-label">field1</label>
+</div>
+  <br>
+  <br> 您输入的值为：
+  <span data-bind="text:dt1.ref('field1')"></span>

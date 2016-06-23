@@ -10,11 +10,8 @@
 
 
 ##基础分页
-<div class="example-content"><div id='pagination' class='u-pagination'>
-</div>
-</div>
 <script>  var element = document.getElementById("pagination");
-  var comp = new u.pagination({ el: element, jumppage: true });
+  var comp = new u.pagination({ el: element,showState:false });
   comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });
   this.comp.on('pageChange', function(pageIndex) {
       console.log('新的页号为' + pageIndex);
@@ -23,11 +20,11 @@
       console.log('每页显示条数为' + arg[0]);
   });
 </script>
-<div class="examples-code"><pre><code>&lt;div id='pagination' class='u-pagination'>
-&lt;/div></code></pre>
+<div class="example-content"><div id='pagination' class='u-pagination'>
+</div>
 </div>
 <div class="examples-code"><pre><code>  var element = document.getElementById("pagination");
-  var comp = new u.pagination({ el: element, jumppage: true });
+  var comp = new u.pagination({ el: element,showState:false });
   comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });
   this.comp.on('pageChange', function(pageIndex) {
       console.log('新的页号为' + pageIndex);
@@ -36,6 +33,9 @@
       console.log('每页显示条数为' + arg[0]);
   });</code></pre>
 </div>
+<div class="examples-code"><pre><code>&lt;div id='pagination' class='u-pagination'>
+&lt;/div></code></pre>
+</div>
 
 ##有间距的分页
 添加样式`pagination-gap`可以增加页码之间的间距
@@ -43,14 +43,31 @@
 </div>
 </div>
 <script> var paginationGap = document.getElementById('paginationGap');
- var comp = new u.pagination({ el: paginationGap, jumppage: true });
+ var comp = new u.pagination({ el: paginationGap,showState:false });
  comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });
 </script>
 <div class="examples-code"><pre><code>&lt;div id='paginationGap' class='u-pagination pagination-gap'>
 &lt;/div></code></pre>
 </div>
 <div class="examples-code"><pre><code> var paginationGap = document.getElementById('paginationGap');
- var comp = new u.pagination({ el: paginationGap, jumppage: true });
+ var comp = new u.pagination({ el: paginationGap,showState:false });
+ comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });</code></pre>
+</div>
+
+##无边框的分页
+在含有`u-pagination`的div元素中添加`u-pagination-no-border`样式即可
+<div class="example-content"><div id='paginationNoBorder' class='u-pagination u-pagination-no-border'>
+</div>
+</div>
+<script> var paginationNoBorder = document.getElementById("paginationNoBorder");
+ var comp = new u.pagination({ el: paginationNoBorder, showState:false });
+ comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });
+</script>
+<div class="examples-code"><pre><code>&lt;div id='paginationNoBorder' class='u-pagination u-pagination-no-border'>
+&lt;/div></code></pre>
+</div>
+<div class="examples-code"><pre><code> var paginationNoBorder = document.getElementById("paginationNoBorder");
+ var comp = new u.pagination({ el: paginationNoBorder, showState:false });
  comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });</code></pre>
 </div>
 
@@ -67,14 +84,14 @@
 </div>
 </div>
 <script>var paginationLg = document.getElementById("paginationLg");
-var comp = new u.pagination({el:paginationLg,jumppage:true});
-comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200,showState:false});
+var comp = new u.pagination({el:paginationLg,showState:false});
+comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200});
 var paginationDefault = document.getElementById("paginationDefault");
-var comp = new u.pagination({el:paginationDefault,jumppage:true});
-comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200,showState:false});
+var comp = new u.pagination({el:paginationDefault,jumppage:true,showState:false});
+comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200});
 var paginationSm = document.getElementById("paginationSm");
-var comp = new u.pagination({el:paginationSm,jumppage:true});
-comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200,showState:false});
+var comp = new u.pagination({el:paginationSm,jumppage:true,showState:false});
+comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200});
 </script>
 <div class="examples-code"><pre><code>&lt;p>大尺寸&lt;/p>
 &lt;div id='paginationLg' class='u-pagination pagination-lg'>
@@ -87,31 +104,14 @@ comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200,showState:
 &lt;/div></code></pre>
 </div>
 <div class="examples-code"><pre><code>var paginationLg = document.getElementById("paginationLg");
-var comp = new u.pagination({el:paginationLg,jumppage:true});
-comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200,showState:false});
+var comp = new u.pagination({el:paginationLg,showState:false});
+comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200});
 var paginationDefault = document.getElementById("paginationDefault");
-var comp = new u.pagination({el:paginationDefault,jumppage:true});
-comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200,showState:false});
+var comp = new u.pagination({el:paginationDefault,jumppage:true,showState:false});
+comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200});
 var paginationSm = document.getElementById("paginationSm");
-var comp = new u.pagination({el:paginationSm,jumppage:true});
-comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200,showState:false});</code></pre>
-</div>
-
-##无边框的分页
-在含有`u-pagination`的div元素中添加`u-pagination-no-border`样式即可
-<div class="example-content"><div id='paginationNoBorder' class='u-pagination u-pagination-no-border'>
-</div>
-</div>
-<script> var paginationNoBorder = document.getElementById("paginationNoBorder");
- var comp = new u.pagination({ el: paginationNoBorder, jumppage: true });
- comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });
-</script>
-<div class="examples-code"><pre><code>&lt;div id='paginationNoBorder' class='u-pagination u-pagination-no-border'>
-&lt;/div></code></pre>
-</div>
-<div class="examples-code"><pre><code> var paginationNoBorder = document.getElementById("paginationNoBorder");
- var comp = new u.pagination({ el: paginationNoBorder, jumppage: true });
- comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });</code></pre>
+var comp = new u.pagination({el:paginationSm,jumppage:true,showState:false});
+comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200});</code></pre>
 </div>
 
 

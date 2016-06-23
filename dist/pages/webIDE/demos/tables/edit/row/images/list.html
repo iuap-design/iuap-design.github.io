@@ -1,0 +1,283 @@
+<!doctype html>
+<!--
+	作者：offline
+	时间：2016-03-10
+	描述：列表卡片交互模板
+-->
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="网站描述">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>列表卡片交互模板</title>
+
+		<link rel="stylesheet" href="../../vendor/uui/assets/fonts/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../../vendor/uui/css/u.css">
+		<link rel="stylesheet" href="list.css">
+		<style type="text/css">
+
+		</style>
+
+	</head>
+
+	<body>
+		<!-- 内容 -->
+		<div class="u-mdlayout" id="demo-mdlayout">
+			<div class="u-mdlayout-master" style="display:none">
+
+			</div>
+
+			<div class="u-mdlayout-detail">
+				<div class="u-mdlayout-page  current" id="list">
+
+					<div class="u-mdlayout-page-header">
+						<label class="text-center">列表</label>
+					</div>
+
+					<div class="u-mdlayout-page-section">
+						<div class="demoe-page-content">
+							<div class="demo-actions">
+								<button class="u-button raised" id="demo-table-add" data-bind="click: addClick">增加</button>
+								<button class="u-button raised" id="demo-table-edit" data-bind="click: editClick">修改</button>
+								<button class="u-button raised accent" id="demo-table-del" data-bind="click: delClick">删除</button>
+								<div class="u-text u-text-expandable demo-table-search">
+									<label class="u-button u-button-icon" for="search">
+										<i class="fa fa-search demoe-icon-btn"></i>
+									</label>
+									<div class="u-text-expandable-holder">
+										<input class="u-input" type="text" id="search">
+										<label class="u-label" for="search">输入关键字</label>
+									</div>
+								</div>
+							</div>
+
+							<table class="demo-datagrid u-table selectable u-shadow-2dp">
+								<thead>
+									<tr>
+										<th>
+											<label class="u-checkbox only-style" data-bind="click: listData.toggleAllSelect.bind(listData), css:{'is-checked': listData.allSelected()}">
+												<input id="checkInput" type="checkbox" class="u-checkbox-input">
+												<span class="u-checkbox-label"></span>
+											</label>
+										</th>
+										<th>名称</th>
+										<th>数量</th>
+										<th>单价</th>
+										<th>名称</th>
+										<th>数量</th>
+										<th>单价</th>
+										<th>名称</th>
+										<th>数量</th>
+										<th>单价</th>
+									</tr>
+								</thead>
+								<tbody data-bind="foreach:{data:listData.rows(), as: 'row'}">
+									<tr data-bind="css: { 'is-selected' : row.selected() }, attr: {'rowindex': $index}, click: $parent.rowClick">
+										<td>
+											<label class="u-checkbox only-style" data-bind="click: row.multiSelect, css:{'is-checked': row.selected()}">
+												<input type="checkbox" class="u-checkbox-input">
+												<span class="u-checkbox-label"></span>
+											</label>
+										</td>
+										<td data-bind="text: row.ref('field1')"></td>
+										<td data-bind="text: row.ref('field2')"></td>
+										<td data-bind="text: row.ref('field3')"></td>
+										<td data-bind="text: row.ref('field4')"></td>
+										<td data-bind="text: row.ref('field5')"></td>
+										<td data-bind="text: row.ref('field6')"></td>
+										<td data-bind="text: row.ref('field7')"></td>
+										<td data-bind="text: row.ref('field8')"></td>
+										<td data-bind="text: row.ref('field9')"></td>
+									</tr>
+
+								</tbody>
+							</table>
+
+						</div>
+
+					</div>
+
+				</div>
+				<div class="u-mdlayout-page" id="addPage">
+
+					<div class="u-mdlayout-page-header">
+						<div class="u-mdlayout-header-func">
+							<button class="u-button u-button-icon demo-backbtn" data-bind="click: backClick">
+								<i class=" fa fa-arrow-left"></i>
+							</button>
+						</div>
+						<label class="text-center">增加</label>
+					</div>
+
+					<div class="u-mdlayout-page-section">
+
+						<div class="demo-card">
+							<div class="demo-card-wide u-card u-shadow-2dp">
+								<div class="u-card-title">
+									<h2 class="u-card-title-text">商品信息</h2>
+								</div>
+								<div class="u-card-supporting-text">
+									请添加商品信息 </div>
+
+								<div class="">
+
+									<form action="#">
+
+										<div class="u-row">
+											<div class="demo-form-item u-col-4 u-col-xs-4 u-col-sm-4 u-col-md-3">
+												<div class="u-text u-label-floating-always">
+													<input class="u-input" type="text" id="sample3" data-bind="value: refFormInputValue('field1')()">
+													<label class="u-label" for="sample3">名称</label>
+												</div>
+											</div>
+											<div class="demo-form-item u-col-4 u-col-xs-4 u-col-sm-4 u-col-md-3">
+												<div class="u-text u-label-floating-always">
+													<input class="u-input" type="text" id="sample3" data-bind="value: refFormInputValue('field2')()">
+													<label class="u-label" for="sample3">编号</label>
+												</div>
+											</div>
+											<div class="demo-form-item u-col-4 u-col-xs-4 u-col-sm-4 u-col-md-3">
+												<div class="u-text u-label-floating-always">
+													<input class="u-input" type="text" id="sample3" data-bind="value: refFormInputValue('field3')()">
+													<label class="u-label" for="sample3">供应商</label>
+												</div>
+											</div>
+											<div class="demo-form-item u-col-4 u-col-xs-4 u-col-sm-4 u-col-md-3">
+												<div class="u-text u-label-floating-always">
+													<input class="u-input" type="text" id="sample3" data-bind="value: refFormInputValue('field4')()">
+													<label class="u-label" for="sample3">数量</label>
+												</div>
+											</div>
+											<div class="demo-form-item u-col-4 u-col-xs-4 u-col-sm-4 u-col-md-3">
+												<div class="u-text u-label-floating-always">
+													<input class="u-input" type="text" id="sample3" data-bind="value: refFormInputValue('field5')()">
+													<label class="u-label" for="sample3">单价</label>
+												</div>
+											</div>
+											<div class="demo-form-item u-col-4 u-col-xs-4 u-col-sm-4 u-col-md-3">
+												<div class="u-text u-label-floating-always">
+													<input class="u-input" type="text" id="sample3" data-bind="value: refFormInputValue('field6')()">
+													<label class="u-label" for="sample3">原产地</label>
+												</div>
+											</div>
+											<div class="demo-form-item u-col-4 u-col-xs-4 u-col-sm-4 u-col-md-3">
+												<div class="u-text u-label-floating-always">
+													<input class="u-input" type="text" id="sample3" data-bind="value: refFormInputValue('field7')()">
+													<label class="u-label" for="sample3">商品名称</label>
+												</div>
+											</div>
+											<div class="demo-form-item u-col-4 u-col-xs-4 u-col-sm-4 u-col-md-3">
+												<div class="u-text u-label-floating-always">
+													<input class="u-input" type="text" id="sample3" data-bind="value: refFormInputValue('field8')()">
+													<label class="u-label" for="sample3">生产日期</label>
+												</div>
+											</div>
+											<div class="demo-form-item u-col-4 u-col-xs-4 u-col-sm-4 u-col-md-3">
+												<div class="u-text u-label-floating-always">
+													<input class="u-input" type="text" id="sample3" data-bind="value: refFormInputValue('field9')()">
+													<label class="u-label" for="sample3">生产日期</label>
+												</div>
+											</div>
+										</div>
+
+									</form>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="u-mdlayout-page" id="showPage">
+
+						<div class="u-mdlayout-page-header">
+							<div class="u-mdlayout-header-func">
+								<button class="u-button u-button-icon demo-backbtn" data-bind="click: backClick">
+									<i class=" fa fa-arrow-left"></i>
+								</button>
+							</div>
+							<label class="text-center">增加</label>
+						</div>
+
+						<div class="u-mdlayout-page-section">
+
+							<div style="demo-card">
+								<div class="demo-card-wide u-card u-shadow-2dp">
+									<div class="u-card-title">
+										<h2 class="u-card-title-text">详情</h2>
+									</div>
+
+									<div class="u-row" style="width: 100%">
+										<div class="demo-form-item u-col-4 u-col-xs-4 u-col-sm-4 u-col-md-3">
+											<dl class="demo-show-item">
+												<dt>名称</dt>
+												<dd data-bind="text: listData.getFocusRow() ? listData.getFocusRow().ref('field1') : ''"></dd>
+											</dl>
+										</div>
+										<div class="demo-form-item u-col-4 u-col-xs-4 u-col-sm-4 u-col-md-3">
+											<dl class="demo-show-item">
+												<dt>编号</dt>
+												<dd data-bind="text: listData.getFocusRow() ? listData.getFocusRow().ref('field2') : ''"></dd>
+											</dl>
+										</div>
+										<div class="demo-form-item u-col-4 u-col-xs-4 u-col-sm-4 u-col-md-3">
+											<dl class="demo-show-item">
+												<dt>供应商</dt>
+												<dd data-bind="text: listData.getFocusRow() ? listData.getFocusRow().ref('field3') : ''"></dd>
+											</dl>
+										</div>
+										<div class="demo-form-item u-col-4 u-col-xs-4 u-col-sm-4 u-col-md-3">
+											<dl class="demo-show-item">
+												<dt>数量</dt>
+												<dd data-bind="text: listData.getFocusRow() ? listData.getFocusRow().ref('field4') : ''"></dd>
+											</dl>
+										</div>
+										<div class="demo-form-item u-col-4 u-col-xs-4 u-col-sm-4 u-col-md-3">
+											<dl class="demo-show-item">
+												<dt>单价</dt>
+												<dd data-bind="text: listData.getFocusRow() ? listData.getFocusRow().ref('field5') : ''"></dd>
+											</dl>
+										</div>
+										<div class="demo-form-item u-col-4 u-col-xs-4 u-col-sm-4 u-col-md-3">
+											<dl class="demo-show-item">
+												<dt>名称</dt>
+												<dd data-bind="text: listData.getFocusRow() ? listData.getFocusRow().ref('field6') : ''"></dd>
+											</dl>
+										</div>
+										<div class="demo-form-item u-col-4 u-col-xs-4 u-col-sm-4 u-col-md-3">
+											<dl class="demo-show-item">
+												<dt>原产地</dt>
+												<dd data-bind="text: listData.getFocusRow() ? listData.getFocusRow().ref('field7') : ''"></dd>
+											</dl>
+										</div>
+										<div class="demo-form-item u-col-4 u-col-xs-4 u-col-sm-4 u-col-md-3">
+											<dl class="demo-show-item">
+												<dt>生产日期</dt>
+												<dd data-bind="text: listData.getFocusRow() ? listData.getFocusRow().ref('field8') : ''"></dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<script src="../../vendor/knockout/knockout-3.2.0.debug.js"></script>
+			<script src="../../vendor/uui/js/u-polyfill.js"></script>
+			<script src="../../vendor/uui/js/u.js"></script>
+			<script type="text/javascript" src="list.js"></script>
+
+	</body>
+
+</html>
