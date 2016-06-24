@@ -4,7 +4,7 @@
 
 # 如何使用
 
-创建类为`.u-rating`的`<div>`,`dom`上添加属性`data-plugin=rating`
+暂无
 
 # 示例
 
@@ -12,7 +12,21 @@
 ##基础rating
 
 常用于评级评分
-<script>(function(document, window, $) {
+<div class="example-content"> <div class="u-rating" data-score="3" data-plugin="rating"></div>
+</div>
+<div class="csstag" style="display:none">.content{
+    padding: 10px;
+}
+.example{
+    width: 60%;
+    margin: 80px;
+}
+.col-xs-4{
+    width: 33.3%;
+    float: left;
+}
+</div>
+<div class="jstag" style="display:none">(function(document, window, $) {
     'use strict';
     
       var  defaults= {
@@ -38,8 +52,10 @@
       // }
     // });
   })(document, window, jQuery);
-</script>
-<style>.content{
+</div>
+<div class="examples-code"><pre><code> &lt;div class="u-rating" data-score="3" data-plugin="rating">&lt;/div></code></pre>
+</div>
+<div class="examples-code"><pre><code>.content{
     padding: 10px;
 }
 .example{
@@ -49,9 +65,7 @@
 .col-xs-4{
     width: 33.3%;
     float: left;
-}
-</style>
-<div class="example-content"> <div class="u-rating" data-score="3" data-plugin="rating"></div>
+}</code></pre>
 </div>
 <div class="examples-code"><pre><code>(function(document, window, $) {
     'use strict';
@@ -80,41 +94,11 @@
     // });
   })(document, window, jQuery);</code></pre>
 </div>
-<div class="examples-code"><pre><code>.content{
-    padding: 10px;
-}
-.example{
-    width: 60%;
-    margin: 80px;
-}
-.col-xs-4{
-    width: 33.3%;
-    float: left;
-}</code></pre>
-</div>
-<div class="examples-code"><pre><code> &lt;div class="u-rating" data-score="3" data-plugin="rating">&lt;/div></code></pre>
-</div>
 
-##多个star的rating
+##所个star的rating
 
-通过在`dom`上添加属性`data-number` 改变数量
-<style>.content{
-    padding: 10px;
-}
-.example{
-    width: 60%;
-    margin: 80px;
-}
-.col-xs-4{
-    width: 33.3%;
-    float: left;
-}
-</style>
-<div class="example-content"><div class="example">
-      <div class="u-rating" data-number="10" data-plugin="rating"></div>
-  </div>
-</div>
-<script>(function(document, window, $) {
+通过在html上 的属性 data-number值改变数量
+<div class="jstag" style="display:none">(function(document, window, $) {
     'use strict';
     
       var  defaults= {
@@ -137,9 +121,15 @@
 
           $this.raty(options);
       });
+      // }
+    // });
   })(document, window, jQuery);
-</script>
-<div class="examples-code"><pre><code>.content{
+</div>
+<div class="example-content"><div class="example">
+      <div class="u-rating" data-number="10" data-plugin="rating"></div>
+  </div>
+</div>
+<div class="csstag" style="display:none">.content{
     padding: 10px;
 }
 .example{
@@ -149,70 +139,56 @@
 .col-xs-4{
     width: 33.3%;
     float: left;
-}</code></pre>
+}
+</div>
+<div class="examples-code"><pre><code>(function(document, window, $) {
+    'use strict';
+    
+      var  defaults= {
+        targetKeep: true,
+        icon: "font",
+        starType: "i",
+        starOff: "icon fa fa-star",
+        starOn: "icon fa fa-star orange-600",
+        cancelOff: "icon fa fa-minus-circle",
+        cancelOn: "icon  fa fa-minus-circle orange-600",
+        starHalf: "icon fa fa-half-o orange-500"
+      };
+      $('[data-plugin="rating"]').each(function() {
+          var $this = $(this);
+          var options = $.extend(true, {}, defaults, $this.data());
+
+          if (options.hints) {
+            options.hints = options.hints.split(',');
+          }
+
+          $this.raty(options);
+      });
+      // }
+    // });
+  })(document, window, jQuery);</code></pre>
 </div>
 <div class="examples-code"><pre><code>&lt;div class="example">
       &lt;div class="u-rating" data-number="10" data-plugin="rating">&lt;/div>
   &lt;/div></code></pre>
 </div>
-<div class="examples-code"><pre><code>(function(document, window, $) {
-    'use strict';
-    
-      var  defaults= {
-        targetKeep: true,
-        icon: "font",
-        starType: "i",
-        starOff: "icon fa fa-star",
-        starOn: "icon fa fa-star orange-600",
-        cancelOff: "icon fa fa-minus-circle",
-        cancelOn: "icon  fa fa-minus-circle orange-600",
-        starHalf: "icon fa fa-half-o orange-500"
-      };
-      $('[data-plugin="rating"]').each(function() {
-          var $this = $(this);
-          var options = $.extend(true, {}, defaults, $this.data());
-
-          if (options.hints) {
-            options.hints = options.hints.split(',');
-          }
-
-          $this.raty(options);
-      });
-  })(document, window, jQuery);</code></pre>
+<div class="examples-code"><pre><code>.content{
+    padding: 10px;
+}
+.example{
+    width: 60%;
+    margin: 80px;
+}
+.col-xs-4{
+    width: 33.3%;
+    float: left;
+}</code></pre>
 </div>
-
 
 ##不同尺寸rating
 
 u-rating-lg u-rating-sm供尺寸的选择
-<script>(function(document, window, $) {
-    'use strict';
-    
-      var  defaults= {
-        targetKeep: true,
-        icon: "font",
-        starType: "i",
-        starOff: "icon fa fa-star",
-        starOn: "icon fa fa-star orange-600",
-        cancelOff: "icon fa fa-minus-circle",
-        cancelOn: "icon  fa fa-minus-circle orange-600",
-        starHalf: "icon fa fa-half-o orange-500"
-      };
-      $('[data-plugin="rating"]').each(function() {
-          var $this = $(this);
-          var options = $.extend(true, {}, defaults, $this.data());
-
-          if (options.hints) {
-            options.hints = options.hints.split(',');
-          }
-
-          $this.raty(options);
-      });
-      // }
-    // });
-  })(document, window, jQuery);
-</script>
-<style>.content{
+<div class="csstag" style="display:none">.content{
     padding: 10px;
 }
 .example{
@@ -223,7 +199,7 @@ u-rating-lg u-rating-sm供尺寸的选择
     width: 33.3%;
     float: left;
 }
-</style>
+</div>
 <div class="example-content"><div class="example">
     <div class="margin-bottom-10">
         <div class="u-rating u-rating-sm" data-score="4" data-plugin="rating"></div>
@@ -236,7 +212,7 @@ u-rating-lg u-rating-sm供尺寸的选择
     </div>
 </div>
 </div>
-<div class="examples-code"><pre><code>(function(document, window, $) {
+<div class="jstag" style="display:none">(function(document, window, $) {
     'use strict';
     
       var  defaults= {
@@ -261,7 +237,7 @@ u-rating-lg u-rating-sm供尺寸的选择
       });
       // }
     // });
-  })(document, window, jQuery);</code></pre>
+  })(document, window, jQuery);
 </div>
 <div class="examples-code"><pre><code>.content{
     padding: 10px;
@@ -287,18 +263,63 @@ u-rating-lg u-rating-sm供尺寸的选择
     &lt;/div>
 &lt;/div></code></pre>
 </div>
+<div class="examples-code"><pre><code>(function(document, window, $) {
+    'use strict';
+    
+      var  defaults= {
+        targetKeep: true,
+        icon: "font",
+        starType: "i",
+        starOff: "icon fa fa-star",
+        starOn: "icon fa fa-star orange-600",
+        cancelOff: "icon fa fa-minus-circle",
+        cancelOn: "icon  fa fa-minus-circle orange-600",
+        starHalf: "icon fa fa-half-o orange-500"
+      };
+      $('[data-plugin="rating"]').each(function() {
+          var $this = $(this);
+          var options = $.extend(true, {}, defaults, $this.data());
+
+          if (options.hints) {
+            options.hints = options.hints.split(',');
+          }
+
+          $this.raty(options);
+      });
+      // }
+    // });
+  })(document, window, jQuery);</code></pre>
+</div>
 
 
+<!--### 示例1
+
+示例1说明
+
+### 示例2
+
+示例2说-->
 
 # API
 
 ## 属性
 
-data-plugin="rating" 设置此`dom`具有rating效果
-data-number:设置星星个数
-data-score:设置评分默认值
+暂无
+<!--### 属性1
+
+属性1说明
+
+### 属性2
+
+属性2说明-->
 
 ## 方法
 
-$this.raty(option):获取dom调用raty，自动生成具有rating效果的控件
+暂无
+<!--### 方法1
 
+方法1说明
+
+### 方法2
+
+方法2说明-->
