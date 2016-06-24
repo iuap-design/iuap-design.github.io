@@ -1,9 +1,4 @@
-# panel控件
-
-panel控件
-
-# 示例
-
+#panel
 
 ##带有head的panel
 
