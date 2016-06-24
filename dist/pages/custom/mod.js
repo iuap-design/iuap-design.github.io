@@ -1,5 +1,9 @@
 /*存储模块*/
 define(function(){
+    /**
+     * 模块js代码集合
+     * @type {{core: string[], ajax: string[], event: string[], renderUtil: string[], dateUtil: string[], formater: string[], hotKeys: string[], masker: string[], rsautils: string[], model: string[], polyfill: string[], ui: string[], textfield: string[], clockpicker: string[], time: string[], datetimepicker: string[], year: string[], month: string[], yearmonth: string[], checkbox: string[], combobox: string[], radio: string[], autocomplete: string[], switch: string[], button: string[], dialog: string[], message: string[], loading: string[], menu: string[], pagination: string[], progress: string[], datatable: string[], grid: string[], tree: string[], tooltip: string[], multilang: string[], palette: Array, refer: string[], ripple: string[], shadow: Array, tabs: string[], card: Array, navlayout: string[], gridlayout: Array, mdlayout: string[], validate: string[], palette: Array, gridBase: string[], ColumnMenu: string[], Drag: string[], Edit: string[], EditForm: string[], Fixed: string[], HeaderLevel: string[], OverWidthHidden: string[], Sort: string[], SumRow: string[], Swap: string[], Tree: string[]}}
+     */
     var obj = {
         core: [
             '../bin/iuap-design/js/core/core.js',
@@ -177,7 +181,10 @@ define(function(){
             '../bin/grid/js/Tree.js'
         ]
     };
-
+    /**
+     * 模块树集合
+     * @type {{all: Array, coreModel: string[], utilModel: string[], modelModel: string[], uiModel: string[], layoutModel: string[], otherModel: string[], gridMode: string[]}}
+     */
     var treeObj = {
         all:[],
         coreModel:[
@@ -254,19 +261,10 @@ define(function(){
             'Swap',
             'Tree']
     };
-
-    /*
-     var str = ''
-     for(var f in treeObj){
-     str += f + ':"", ss'
-
-     for(var i = 0 ; i < treeObj[f].length; i++){
-     str += treeObj[f][i] + ':"", ss'        
-     }
-     }
-     console.log(str)
+    /**
+     * 模块名称集合
+     * @type {{all: string, coreModel: string, core: string, ajax: string, event: string, utilModel: string, renderUtil: string, dateUtil: string, formater: string, hotKeys: string, masker: string, rsautils: string, modelModel: string, model: string, otherModel: string, polyfill: string, validate: string, uiModel: string, ui: string, textfield: string, clockpicker: string, time: string, datetimepicker: string, year: string, month: string, yearmonth: string, checkbox: string, combobox: string, radio: string, switch: string, button: string, dialog: string, message: string, loading: string, menu: string, pagination: string, progress: string, grid: string, tree: string, tooltip: string, multilang: string, palette: string, refer: string, ripple: string, shadow: string, autocomplete: string, layoutModel: string, datatable: string, tabs: string, card: string, navlayout: string, gridlayout: string, mdlayout: string, gridMode: string, gridBase: string, ColumnMenu: string, Drag: string, Edit: string, EditForm: string, Fixed: string, HeaderLevel: string, OverWidthHidden: string, Sort: string, SumRow: string, Swap: string, Tree: string}}
      */
-
     var captionObj = {
         all:"全选/全部反选",
         coreModel:"核心模块",
@@ -337,9 +335,8 @@ define(function(){
         Swap:"交换列",
         Tree:"树表"
     };
-
     /**
-     * 
+     * css样式集合
      * @type {{ui: string[], autocomplete: string[], button: string[], card: string[], checkbox: string[], clockpicker: string[], month: string[], combobox: string[], datatable: string[], datetimepicker: string[], dialog: string[], gridlayout: string[], loading: string[], mdlayout: string[], menu: string[], message: string[], navlayout: string[], pagination: string[], palette: string[], progress: string[], radio: string[], ripple: string[], shadow: string[], tabs: string[], textfield: string[], time: string[], year: string[], yearmonth: string[], tooltip: string[], switch: string[], palette: string[]}}
      */
     var cssObj = {
@@ -451,7 +448,10 @@ define(function(){
             '@import "../../../bin/iuap-design/scss/palette.scss"'
         ]
     };
-
+    /**
+     * 控件模块集合
+     * @type {{model: string[], checkbox: string[], combobox: string[], textfield: string[], datetimepicker: string[], month: string[], pagination: string[], progress: string[], radio: string[], switch: string[], time: string[], year: string[], yearmonth: string[]}}
+     */
     var modeluiObj = {
         model: [
             '../bin/kero/js/dtJs/mixins/enableMixin.js',
@@ -503,7 +503,10 @@ define(function(){
             '../bin/kero/js/dtJs/yearmonth.js'
         ]
     };
-
+    /**
+     * 模块依赖关系集合
+     * @type {{event: string[], renderUtil: string[], dateUtil: string[], formater: string[], hotKeys: string[], masker: string[], model: string[], ui: string[], textfield: string[], datetimepicker: string[], clockpicker: string[], time: string[], year: string[], month: string[], yearmonth: string[], checkbox: string[], combobox: string[], radio: string[], autocomplete: string[], switch: string[], button: string[], dialog: string[], message: string[], loading: string[], menu: string[], pagination: string[], progress: string[], datatable: string[], tooltip: string[], multilang: string[], tabs: string[], navlayout: string[], mdlayout: string[], ripple: string[], validate: string[]}}
+     */
     var dependObj = {
         event:[
             'core'
@@ -649,8 +652,10 @@ define(function(){
             'datetimepicker'
         ]
     };
-
-
+    /**
+     * 基础颜色集合
+     * @type {{red: string[], pink: string[], purple: string[], deep_purple: string[], indigo: string[], blue: string[], light_blue: string[], cyan: string[], teal: string[], green: string[], light_green: string[], lime: string[], yellow: string[], amber: string[], orange: string[], deep_orange: string[]}}
+     */
     var colorBaseObj = {
         red:[
             "255,235,238",
@@ -924,7 +929,10 @@ define(function(){
             "221,44,0"
         ]
     };
-
+    /**
+     * 默认颜色集合
+     * @type {string[]}
+     */
     var defaultColor = [
         '63,81,181',
         '48,63,159',
