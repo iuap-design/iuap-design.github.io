@@ -218,15 +218,15 @@ var modeluiObj = {
                 '../bin/kero/js/dtJs/string.js',
                 '../bin/kero/js/dtJs/textarea.js',
                 '../bin/kero/js/dtJs/textfield.js',],
-    datetimepicker: ['../bin/datatimepicker/js/dtJs/datetime.js'],
-    month: ['../bin/datatimepicker/js/dtJs/month.js'],
+    datetimepicker: ['../bin/kero/js/dtJs/datetime.js'],
+    month: ['../bin/kero/js/dtJs/month.js'],
     pagination: ['../bin/kero/js/dtJs/pagination.js'],
     progress: ['../bin/kero/js/dtJs/progress.js'],
     radio: ['../bin/kero/js/dtJs/radio.js'],
     switch: ['../bin/kero/js/dtJs/switch.js'],
-    time: ['../bin/datatimepicker/js/dtJs/time.js'],
-    year: ['../bin/datatimepicker/js/dtJs/year.js'],
-    yearmonth: ['../bin/datatimepicker/js/dtJs/yearmonth.js'],
+    time: ['../bin/kero/js/dtJs/time.js'],
+    year: ['../bin/kero/js/dtJs/year.js'],
+    yearmonth: ['../bin/kero/js/dtJs/yearmonth.js'],
 }
 
 var dependObj = {
