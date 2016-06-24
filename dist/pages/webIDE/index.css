@@ -2,7 +2,7 @@ html{
 	height: 100%;
 }
 body {
-    // width: 100%;
+    /*// width: 100%;*/
     height: 100%;
     margin: 0;
     font-family: 'Open Sans','Helvetica Neue',Arial,'Hiragino Sans GB','Microsoft YaHei',sans-serif;
@@ -217,60 +217,6 @@ body {
 		margin: 100px auto;
 }
 
-
-
-
-// html{
-// 	height: 100%;
-// }
-// body {
-//     // width: 100%;
-//     height: 100%;
-//     margin: 0;
-//     font-family: 'Open Sans','Helvetica Neue',Arial,'Hiragino Sans GB','Microsoft YaHei',sans-serif;
-//     font-size: 13px;
-//     line-height: 1.7;
-//     background-color: #FFFFFF;
-//     word-wrap: break-word;
-// }
-// .ide{
-// 	height: calc(100% - 155px);
-// }
-// .ide-nav{
-// 	position: absolute;
-//     width: 240px;
-//     padding-top: 16px;
-//     padding-left: 0;
-//     background: #fafafa;  
-//     overflow: auto;
-//     height: inherit;
-// }
-
-// .ide-nav .demo-navigation .u-nav-link {
-// 	padding-top: 8px;
-// 	padding-bottom: 8px;
-// 	display: block;
-//      padding: 16px 40px;
-//     margin: 0;
-//     color: #757575;
-// }
-
-// .demo-navigation .u-nav-link {
-// 	text-decoration: none;
-// }
-
-// .ide-content{
-// 	height: 100%;
-//     margin-left: 240px;
-//     width: calc(100% - 240px);
-// }
-
-
-// .demo-main-iframe {
-//     width: 100%;
-//     height: 100%;
-//     border: none;
-// }
 .u-navlayout-header .u-navlayout-toolbar{
 	list-style: none;
 }
@@ -328,9 +274,9 @@ body {
 	width:100%;
 }
 .menuAnimal{
-	 transition:All 0.4s ease-in-out;    
-	 -webkit-transition:All 0.4s ease-in-out;    
-	 -moz-transition:All 0.4s ease-in-out;    
+	 transition:All 0.4s ease-in-out;
+	 -webkit-transition:All 0.4s ease-in-out;
+	 -moz-transition:All 0.4s ease-in-out;
 	 -o-transition:All 0.4s ease-in-out;
 }
 .u-navlayout-center{
@@ -349,17 +295,17 @@ body {
 .u-navlayout-right .right-content{
 	line-height: 66px;
 }
-.showAnimal:hover {    
- 	transform:rotate(90deg);    
- 	-webkit-transform:rotate(90deg);    
- 	-moz-transform:rotate(90deg);    
- 	-o-transform:rotate(90deg);    
+.showAnimal:hover {
+ 	transform:rotate(90deg);
+ 	-webkit-transform:rotate(90deg);
+ 	-moz-transform:rotate(90deg);
+ 	-o-transform:rotate(90deg);
  	-ms-transform:rotate(90deg);
  }
-.hideAnimal:hover {    
- 	transform:rotate(-90deg);    
- 	-webkit-transform:rotate(-90deg);    
- 	-moz-transform:rotate(-90deg);    
- 	-o-transform:rotate(-90deg);    
+.hideAnimal:hover {
+ 	transform:rotate(-90deg);
+ 	-webkit-transform:rotate(-90deg);
+ 	-moz-transform:rotate(-90deg);
+ 	-o-transform:rotate(-90deg);
  	-ms-transform:rotate(-90deg);
  }
