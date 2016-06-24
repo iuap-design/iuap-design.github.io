@@ -1,83 +1,88 @@
-var func = {
+require(['mod'], function (mod) {
     /**
-     * 校验对象的属性名在基础对象中是否存在
-     * @param checkObj 校验的对象
-     * @param baseObj  基础对象
-     * @param checkObjName 校验的对象名称
+     * 工具函数对象
+     * @type {{checkObjKey: func.checkObjKey, checkObjKeyValue: func.checkObjKeyValue, checkObjValue: func.checkObjValue, getNoRepeat: func.getNoRepeat, getModelData: func.getModelData}}
      */
-    checkObj1: function (checkObj, baseObj, checkObjName) {
-        for (var attr in checkObj) {
-            if (!baseObj[attr]) {
-                alert(checkObjName + " err:" + attr);
-                console.log(checkObjName + " err:" + attr);
-            }
-        }
-    },
-    /**
-     * 校验对象的属性名以及属性值在基础对象中是否存在
-     * @param checkObj 校验的对象
-     * @param baseObj  基础对象
-     * @param checkObjName 校验的对象名称
-     */
-    checkObj2: function checkObj2(checkObj, baseObj, checkObjName) {
-        for (var attr in checkObj) {
-            if (!baseObj[attr]) {
-                alert(checkObjName + " err:" + attr);
-                console.log(checkObjName + " err:" + attr);
-            }
-            for (var i = 0; i < checkObj[attr].length; i++) {
-                if (!baseObj[checkObj[attr][i]]) {
-                    alert(checkObjName + "err:" + attr + checkObj[attr][i]);
-                    console.log(checkObjName + " err:" + attr + checkObj[attr][i]);
+    var func = {
+        /**
+         * 校验对象的属性名在基础对象中是否存在
+         * @param checkObj 校验的对象
+         * @param baseObj  基础对象
+         * @param checkObjName 校验的对象名称
+         */
+        checkObjKey: function (checkObj, baseObj, checkObjName) {
+            for (var attr in checkObj) {
+                if (!baseObj[attr]) {
+                    alert(checkObjName + " err:" + attr);
+                    console.log(checkObjName + " err:" + attr);
                 }
             }
-        }
-    },
-    /**
-     * 校验对象的属性值在基础对象中是否存在
-     * @param checkObj 校验的对象
-     * @param baseObj  基础对象
-     * @param checkObjName 校验的对象名称
-     */
-    checkObj3: function checkObj3(checkObj, baseObj, checkObjName) {
-        for (var attr in checkObj) {
-            for (var i = 0; i < checkObj[attr].length; i++) {
-                if (!baseObj[checkObj[attr][i]]) {
-                    alert(checkObjName + "err:" + attr + checkObj[attr][i]);
-                    console.log(checkObjName + " err:" + attr + checkObj[attr][i]);
+        },
+        /**
+         * 校验对象的属性名以及属性值在基础对象中是否存在
+         * @param checkObj 校验的对象
+         * @param baseObj  基础对象
+         * @param checkObjName 校验的对象名称
+         */
+        checkObjKeyValue: function (checkObj, baseObj, checkObjName) {
+            for (var attr in checkObj) {
+                if (!baseObj[attr]) {
+                    alert(checkObjName + " err:" + attr);
+                    console.log(checkObjName + " err:" + attr);
+                }
+                for (var i = 0; i < checkObj[attr].length; i++) {
+                    if (!baseObj[checkObj[attr][i]]) {
+                        alert(checkObjName + "err:" + attr + checkObj[attr][i]);
+                        console.log(checkObjName + " err:" + attr + checkObj[attr][i]);
+                    }
                 }
             }
-        }
-    },
-    /**
-     * 去掉数组中重复内容
-     * @param arr 数组
-     * @returns {Array}
-     */
-    getNoRepeat: function (arr) {
-        var newArr = new Array();
-        for (var i = 0; i < arr.length; i++) {
-            if (newArr.indexOf(arr[i]) > 0) {
+        },
+        /**
+         * 校验对象的属性值在基础对象中是否存在
+         * @param checkObj 校验的对象
+         * @param baseObj  基础对象
+         * @param checkObjName 校验的对象名称
+         */
+        checkObjValue: function (checkObj, baseObj, checkObjName) {
+            for (var attr in checkObj) {
+                for (var i = 0; i < checkObj[attr].length; i++) {
+                    if (!baseObj[checkObj[attr][i]]) {
+                        alert(checkObjName + "err:" + attr + checkObj[attr][i]);
+                        console.log(checkObjName + " err:" + attr + checkObj[attr][i]);
+                    }
+                }
+            }
+        },
+        /**
+         * 去掉数组中重复内容
+         * @param arr 数组
+         * @returns {Array}
+         */
+        getNoRepeat: function (arr) {
+            var newArr = new Array();
+            for (var i = 0; i < arr.length; i++) {
+                if (newArr.indexOf(arr[i]) > 0) {
 
-            } else {
-                newArr.push(arr[i]);
+                } else {
+                    newArr.push(arr[i]);
+                }
             }
-        }
-        return newArr;
-    },
-    /**
-     * 获得模块数据
-     * @param rowStr
-     * @returns {string}
-     */
-    getModelData: function (rowStr) {
+            return newArr;
+        },
+        /**
+         * 获得模块数据
+         * @param rowStr
+         * @returns {string}
+         */
+        getModelData:function(rowStr) {
         var row = eval(rowStr);
         var dataObj = row.getSimpleData(),
             str = rowStr + '.setSimpleData({';
         for (var f in dataObj) {
             if (dataObj[f]) {
                 if (dataObj[f] === true)
-                    str += f + ':' + dataObj[f] + ','
+                    str += f + ':' + dataObj[f] + ',';
                 else
                     str += f + ':\'' + dataObj[f] + '\','
             }
@@ -85,111 +90,103 @@ var func = {
         str += '});';
         return str;
     }
-};
-require(['mod'], function (mod) {
-    var obj = mod.obj;
-    var treeObj = mod.treeObj;
-    /* var str = ''
-     for(var f in treeObj){
-     str += f + ':"", ss'
-
-     for(var i = 0 ; i < treeObj[f].length; i++){
-     str += treeObj[f][i] + ':"", ss'
-     }
-     }
-     console.log(str);*/
-    var captionObj = mod.captionObj;
-    var cssObj = mod.cssObj;
-    var modeluiObj = mod.modeluiObj;
-    var dependObj = mod.dependObj;
-    var modeDependObj = mod.modeDependObj;
-    var colorBaseObj = mod.colorBaseObj;
-    var defaultColor = mod.defaultColor;
-    var colorObj = {};
-    for (var f in colorBaseObj) {
-        var arr = new Array();
-        arr.push(colorBaseObj[f][5]);
-        arr.push(colorBaseObj[f][7]);
-        arr.push(colorBaseObj[f][11]);
-        colorObj[f] = arr
+    }, obj = mod.obj,treeObj = mod.treeObj,captionObj = mod.captionObj,cssObj = mod.cssObj, modeluiObj = mod.modeluiObj,dependObj = mod.dependObj,modeDependObj = mod.modeDependObj,colorBaseObj = mod.colorBaseObj,defaultColor = mod.defaultColor,colorObj = {},gridObj = {};
+    for (var color in colorBaseObj) {
+        var arr = [];
+        arr.push(colorBaseObj[color][5]);
+        arr.push(colorBaseObj[color][7]);
+        arr.push(colorBaseObj[color][11]);
+        colorObj[color] = arr;
     }
-    var gridObj = {};
     /*确保obj中属性为最大集合 begin*/
     /*校验属性是否存在*/
-    func.checkObj1(modeluiObj, obj, 'modeluiObj');
-    func.checkObj1(cssObj, obj, 'cssObj');
+    func.checkObjKey(modeluiObj, obj, 'modeluiObj');
+    func.checkObjKey(cssObj, obj, 'cssObj');
     /*校验属性以及属性值是否存在*/
-    func.checkObj2(dependObj, obj, 'dependObj');
-    func.checkObj2(modeDependObj, obj, 'modeDependObj');
+    func.checkObjKeyValue(dependObj, obj, 'dependObj');
+    func.checkObjKeyValue(modeDependObj, obj, 'modeDependObj');
     /*校验属性值是否存在*/
-    func.checkObj3(treeObj, obj, 'treeObj');
+    func.checkObjValue(treeObj, obj, 'treeObj');
+    /*提取className*/
+    var headClassName='head-div',//头部提示类名
+        contentClassName='u-row containers ',//内容区域类名
+        /*色块区域类名*/
+        colorClassName={
+            msgOut:'color-whole-div',/*头部信息外部div类名*/
+            msgInner:'color-head-div',/*头部信息内部div类名*/
+            areaInput:'color-input-div',/*颜色输入区域类名*/
+            lineDiv:'u-text color-input',/*横线外盒子类名*/
+            lineInput:'u-input',/*横线input类名*/
+            area:'color-content-div',//颜色区域类名
+            areaLeft:'color-left-div',//颜色区域左侧类名
+            areaRight:'color-right-div',//颜色区域右侧类名
+            areaDiv:'color-div'//色块类名
+        },
+        /*下载区域类名*/
+        evalOut='eval-whole-div',//下载提示外部类名
+        evalInner='eval-head-div',//下载提示内部类名
+        runButton='u-button raised u-eval-button',//执行按钮类名
+        listClassName={
+            line:'tree-whole-div u-col-6',//每个模块的类名
+            checkBoxDiv:'tree-icon',//小模块标题行类名
+            checkBoxSpan:'fa fa-minus-square-o',//展开关闭按钮
+            textDiv:'tree-div',//小模块区域类名
+            textLabel:'u-checkbox tree-parent',//小模块每行的类名
+            textInput:'u-checkbox-input',//小模块选择框类名
+            textSpan:'u-checkbox-label'//小模块名类名
+        };
     /*确保obj中属性为最大集合 end*/
-    var app, viewModel,
-        metaObj = {},
-        treemetaObj = {},
-        wholeStr = '<div>',
-        headStr = '<div class="head-div"><span>本功能可自定义选中下载特定模块，设置主题颜色，并可以导入之前选择进行更新操作</span></div>',
-        contentStr = '<div class="u-row containers">',
-        colorStr = '<div class="color-whole-div"><div class="color-head-div">设置主题颜色，左侧选中主色，右侧选择辅色。通过点击色块进行选中，也可在输入框中输入rgb格式的颜色编码。</div>';
-    colorStr += '<div class="color-input-div">';
+    var app, viewModel,metaObj = {},treemetaObj = {},wholeStr = '<div>',
+        headStr = '<div class='+headClassName+'><span>本功能可自定义选中下载特定模块，设置主题颜色，并可以导入之前选择进行更新操作</span></div>',
+        contentStr = '<div class='+'"'+contentClassName+'"'+'>',
+        colorStr = '<div class='+colorClassName.msgOut+'><div class='+colorClassName.msgInner+'>设置主题颜色，左侧选中主色，右侧选择辅色。通过点击色块进行选中，也可在输入框中输入rgb格式的颜色编码。</div>';
+        colorStr += '<div class='+colorClassName.areaInput+'>';
     for (var i = 0; i < 3; i++) {
-        colorStr += '<div class="u-text color-input"  u-meta=\'{"id":"color1","type":"u-text","data":"colorData","field":"color' + i + '"}\'><input class="u-input"/></div>';
+        colorStr += '<div class='+'"'+colorClassName.lineDiv+'"'+'  u-meta=\'{"id":"color1","type":"u-text","data":"colorData","field":"color' + i + '"}\'>' +'<input class='+'"'+colorClassName.lineInput+'"'+'/></div>';
     }
     colorStr += '</div>';
-    colorStr += '<div class="color-content-div">';
-    var colorLeftStr = '<div class="color-left-div">';
-    var colorRightStr = '<div class="color-right-div">';
+    colorStr += '<div class='+colorClassName.area+'>';
+    var colorLeftStr = '<div class='+colorClassName.areaLeft+'>';
+    var colorRightStr = '<div class='+colorClassName.areaRight+'>';
     for (var color in colorObj) {
-        colorLeftStr += '<div class="color-div" style="background:rgb(' + colorObj[color][0] + ')" color0="' + colorObj[color][0] + '" color1="' + colorObj[color][1] + '"></div>';
-        colorRightStr += '<div class="color-div" style="background:rgb(' + colorObj[color][2] + ')" color2="' + colorObj[color][2] + '"></div>';
+        colorLeftStr += '<div class='+colorClassName.areaDiv+' style="background:rgb(' + colorObj[color][0] + ')" color0="' + colorObj[color][0] + '" color1="' + colorObj[color][1] + '"></div>';
+        colorRightStr += '<div class='+colorClassName.areaDiv+' style="background:rgb(' + colorObj[color][2] + ')" color2="' + colorObj[color][2] + '"></div>';
     }
     colorLeftStr += '</div>';
     colorRightStr += '</div>';
-
     colorStr += colorLeftStr;
     colorStr += colorRightStr;
-
     colorStr += '</div>';
     colorStr += '</div>';
-
-
-    var evalStr = '<div class="eval-whole-div"><div class="eval-head-div">下载文件setting.txt中保存了上次配置的信息，将信息复制至文本域中并点击执行可恢复上次配置。</div>';
-    evalStr += '<button id="eavl-button" class="u-button raised u-eval-button" >执行</button>';
+    var evalStr = '<div class='+evalOut+'><div class='+evalInner+'>下载文件setting.txt中保存了上次配置的信息，将信息复制至文本域中并点击执行可恢复上次配置。</div>';
+    evalStr += '<button id="eavl-button" class='+'"'+runButton+'"'+' >执行</button>';
     evalStr += '<textarea style="width: 100%;height: 70px;"u-meta=\'{"id":"str","type":"textarea","data":"evalData","field":"str"}\'></textarea>';
     evalStr += '</div>';
     // 遍历obj创建datatable的field字段，同时生成html列表
     for (var model in treeObj) {
         treemetaObj[model] = {};
-        contentStr += '<div class="tree-whole-div u-col-6">';
+        contentStr += '<div class='+'"'+listClassName.line+'"'+'>';
         if (model != 'all')
-            contentStr += '<div class="tree-icon"><span class="fa fa-minus-square-o"></span> ' + model + ':' + captionObj[model] + '</div>';
-        contentStr += '<div class="tree-div"><label  class="u-checkbox tree-parent" u-meta=\'{"id":"' + model + '","type":"u-checkbox","data":"treeData","field":"' + model + '","checkedValue":true,"unCheckedValue":false}\'><input type="checkbox" class="u-checkbox-input"><span class="u-checkbox-label">' + model + ':' + captionObj[model] + '</span></label>';
-
+            contentStr += '<div class='+listClassName.checkBoxDiv+'>' +'<span class='+'"'+listClassName.checkBoxSpan+'"'+'></span> ' + model + ':' + captionObj[model] + '</div>';
+            contentStr += '<div class='+listClassName.textDiv+'><label  class='+'"'+listClassName.textLabel+'"'+' u-meta=\'{"id":"' + model + '","type":"u-checkbox","data":"treeData","field":"' + model + '","checkedValue":true,"unCheckedValue":false}\'>' + '<input type="checkbox" class='+'"'+listClassName.textInput+'"'+'>' + '<span class='+listClassName.textSpan+'>' + model + ':' + captionObj[model] + '</span></label>';
         for (var i = 0; i < treeObj[model].length; i++) {
             var field = treeObj[model][i];
             var firstClass = '';
             metaObj[field] = {};
-            if (i == 0) {
-                firstClass = 'tree-first-leaf';
-            }
-            contentStr += '<label  class="u-checkbox tree-leaf ' + firstClass + '" u-meta=\'{"id":"' + field + '","type":"u-checkbox","data":"modelData","field":"' + field + '","checkedValue":true,"unCheckedValue":false}\'><input type="checkbox" class="u-checkbox-input"><span class="u-checkbox-label">' + field + ':' + captionObj[field] + '</span></label>';
+            if (i == 0)firstClass = 'tree-first-leaf';
+            contentStr += '<label  class="u-checkbox tree-leaf ' + firstClass + '" u-meta=\'{"id":"' + field + '","type":"u-checkbox","data":"modelData","field":"' + field + '","checkedValue":true,"unCheckedValue":false}\'>' + '<input type="checkbox" class='+'"'+listClassName.textInput+'"'+'>' + '<span class='+listClassName.textSpan+'>' + field + ':' + captionObj[field] + '</span></label>';
         }
         contentStr += '</div>';
         contentStr += '</div>';
     }
     contentStr += '</div>';
-
-
     wholeStr += headStr + contentStr + colorStr + evalStr;
     wholeStr += '</div>';
-
     document.getElementById('content').appendChild(u.makeDOM(wholeStr));
-
     u.on(document.getElementById('eavl-button'), 'click', function () {
         value = viewModel.evalData.getCurrentRow().getValue('str');
         eval(value)
     });
-
     u.on(document, 'click', function (e) {
         /* 模块展开收起 */
         var targetEle = u.closest(e.target, 'fa');
@@ -199,7 +196,6 @@ require(['mod'], function (mod) {
                 u.removeClass(targetEle, 'fa-minus-square-o');
                 u.addClass(targetEle, 'fa-plus-square-o');
                 treeDiv.style.display = 'none';
-
             } else { //展开
                 u.removeClass(targetEle, 'fa-plus-square-o');
                 u.addClass(targetEle, 'fa-minus-square-o');
@@ -224,10 +220,7 @@ require(['mod'], function (mod) {
             }
         }
     });
-
-
     /* 处理全部 */
-
     viewModel = {
         treeData: new u.DataTable({
             meta: treemetaObj
@@ -239,24 +232,21 @@ require(['mod'], function (mod) {
             meta: {
                 color0: {},
                 color1: {},
-                color2: {},
+                color2: {}
             }
         }),
         evalData: new u.DataTable({
             meta: {
-                str: {},
+                str: {}
             }
         })
     };
-
     app = u.createApp({
         el: 'body',
-        model: viewModel,
+        model: viewModel
     });
-
     var r = viewModel.modelData.createEmptyRow();
     viewModel.modelData.setRowSelect(0);
-
 
     var treeRow = viewModel.treeData.createEmptyRow();
     viewModel.treeData.setRowSelect(0);
@@ -272,8 +262,8 @@ require(['mod'], function (mod) {
         var modelFlag = false;
         var jsStr = '';
         var cssStr = '';
-        var jsArr = new Array();
-        var cssArr = new Array();
+        var jsArr = [];
+        var cssArr = [];
         if (r.getValue('model')) {
             modelFlag = true;
         }
@@ -287,25 +277,16 @@ require(['mod'], function (mod) {
             }
         }
         cssArr = cssArr.toString().split(',');
-
         cssArr = func.getNoRepeat(cssArr);
-        // console.log(jsArr);
-        // console.log(cssArr);
-
         var colorRow = viewModel.colorData.getCurrentRow();
         color0 = colorRow.getValue('color0');
-
         color1 = colorRow.getValue('color1');
         color2 = colorRow.getValue('color2');
         color0 = color0 ? color0 : defaultColor[0];
         color1 = color1 ? color1 : defaultColor[1];
         color2 = color2 ? color2 : defaultColor[2];
-
-
         colorArr = [color0, color1, color2];
-
         settingStr = '';
-
         settingStr += func.getModelData('viewModel.colorData.getCurrentRow()');
         settingStr += func.getModelData('viewModel.modelData.getCurrentRow()');
         settingStr += func.getModelData('viewModel.treeData.getCurrentRow()');
@@ -314,7 +295,7 @@ require(['mod'], function (mod) {
             cssArr: cssArr,
             colorArr: colorArr,
             settingStr: settingStr
-        }
+        };
         u.showLoading();
         u.ajax({
             type: 'post',
@@ -323,21 +304,17 @@ require(['mod'], function (mod) {
             url: '/customized',
             success: function (patch) {
                 u.hideLoading();
-                patch = patch.replace('..', '')
+                patch = patch.replace('..', '');
                 document.getElementById('ss').href = patch;
                 document.getElementById('ss').click();
             },
             error: function (patch) {
                 u.hideLoading();
-                // alert('构建失败');
             }
         })
-
     }
-
     u.on(document.getElementById('button'), 'click', clickFun);
     /*按钮处理end*/
-
     /*处理依赖关系begin*/
     var dependCountObj = {};
     viewModel.modelData.on('valueChange', function (options) {
@@ -358,7 +335,6 @@ require(['mod'], function (mod) {
         if (modelFlag && field != 'model') {
             dependFun(modeDependObj, field, newValue);
         }
-
         if (field == 'grid') {
             if (newValue) {
                 row.setValue('gridBase', true);
@@ -372,7 +348,12 @@ require(['mod'], function (mod) {
             }
         }
     });
-    /* 处理依赖关系方法 */
+    /**
+     * 处理依赖的方法
+     * @param dependObj 依赖的对象
+     * @param field  键
+     * @param value  值
+     */
     function dependFun(dependObj, field, value) {
         row = viewModel.modelData.getCurrentRow();
         if (dependObj[field] && dependObj[field].length > 0) {
@@ -397,13 +378,12 @@ require(['mod'], function (mod) {
         }
     }
     /* 处理依赖关系end */
-
     /* 处理tree选中 */
     viewModel.treeData.on('valueChange', function (options) {
         var field = options.field,
             newValue = options.newValue,
             treeRow = viewModel.treeData.getCurrentRow();
-        modelRow = viewModel.modelData.getCurrentRow(),
+            modelRow = viewModel.modelData.getCurrentRow(),
             arr = treeObj[field],
             dependFlag = true;
         /* 处理全选以及全部取消 */
@@ -413,7 +393,7 @@ require(['mod'], function (mod) {
                     treeRow.setValue(f, true);
                 }
             } else {
-                dependCountObj = {}
+                dependCountObj = {};
                 for (var f in obj) {
                     modelRow.setValue(f, false);
                 }
@@ -422,7 +402,6 @@ require(['mod'], function (mod) {
                         treeRow.setValue(f, false);
                 }
                 dependCountObj = {}
-
             }
         }
         if (newValue) {
@@ -442,13 +421,15 @@ require(['mod'], function (mod) {
                     }
                 }
             }
-
         }
         if (field == 'gridMode') {
             modelRow.setValue('gridBase', true);
         }
     });
-
+    /**
+     * 设置grid是否可用
+     * @param enable
+     */
     function gridEnabled(enable) {
         var gridArr = treeObj.gridMode;
         for (var i = 1; i < gridArr.length; i++) {
@@ -456,7 +437,6 @@ require(['mod'], function (mod) {
         }
         app.getComp('gridMode').setEnable(enable);
     }
-
     gridEnabled(false);
     app.getComp('gridBase').setEnable(false);
 });
