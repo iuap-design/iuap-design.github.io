@@ -4,7 +4,7 @@ define(function(){
      * 模块js代码集合
      * @type {{core: string[], ajax: string[], event: string[], renderUtil: string[], dateUtil: string[], formater: string[], hotKeys: string[], masker: string[], rsautils: string[], model: string[], polyfill: string[], ui: string[], textfield: string[], clockpicker: string[], time: string[], datetimepicker: string[], year: string[], month: string[], yearmonth: string[], checkbox: string[], combobox: string[], radio: string[], autocomplete: string[], switch: string[], button: string[], dialog: string[], message: string[], loading: string[], menu: string[], pagination: string[], progress: string[], datatable: string[], grid: string[], tree: string[], tooltip: string[], multilang: string[], palette: Array, refer: string[], ripple: string[], shadow: Array, tabs: string[], card: Array, navlayout: string[], gridlayout: Array, mdlayout: string[], validate: string[], palette: Array, gridBase: string[], ColumnMenu: string[], Drag: string[], Edit: string[], EditForm: string[], Fixed: string[], HeaderLevel: string[], OverWidthHidden: string[], Sort: string[], SumRow: string[], Swap: string[], Tree: string[]}}
      */
-    var obj = {
+    var allJsObj = {
         core: [
             '../bin/iuap-design/js/core/core.js',
             '../bin/iuap-design/js/core/base.js',
@@ -940,7 +940,7 @@ define(function(){
     ];
 
     return {
-        obj:obj,
+        obj:allJsObj,
         treeObj:treeObj,
         captionObj:captionObj,
         cssObj:cssObj,

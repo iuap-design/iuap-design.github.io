@@ -1,9 +1,9 @@
 require(['mod'], function (mod) {
     /**
      * 工具函数对象
-     * @type {{checkObjKey: func.checkObjKey, checkObjKeyValue: func.checkObjKeyValue, checkObjValue: func.checkObjValue, getNoRepeat: func.getNoRepeat, getModelData: func.getModelData}}
+     * @type {{checkObjKey: util.checkObjKey, checkObjKeyValue: util.checkObjKeyValue, checkObjValue: util.checkObjValue, getNoRepeat: util.getNoRepeat, getModelData: util.getModelData}}
      */
-    var func = {
+    var util = {
         /**
          * 校验对象的属性名在基础对象中是否存在
          * @param checkObj 校验的对象
@@ -82,7 +82,7 @@ require(['mod'], function (mod) {
         for (var f in dataObj) {
             if (dataObj[f]) {
                 if (dataObj[f] === true)
-                    str += f + ':' + dataObj[f] + ',';
+                    str += f + ':' + dataObj[f] + ','
                 else
                     str += f + ':\'' + dataObj[f] + '\','
             }
@@ -90,7 +90,18 @@ require(['mod'], function (mod) {
         str += '});';
         return str;
     }
-    }, obj = mod.obj,treeObj = mod.treeObj,captionObj = mod.captionObj,cssObj = mod.cssObj, modeluiObj = mod.modeluiObj,dependObj = mod.dependObj,modeDependObj = mod.modeDependObj,colorBaseObj = mod.colorBaseObj,defaultColor = mod.defaultColor,colorObj = {},gridObj = {};
+    };
+    var obj = mod.obj;
+    var treeObj = mod.treeObj;
+    var captionObj = mod.captionObj;
+    var cssObj = mod.cssObj;
+    var modeluiObj = mod.modeluiObj;
+    var dependObj = mod.dependObj;
+    var modeDependObj = mod.modeDependObj;
+    var colorBaseObj = mod.colorBaseObj;
+    var defaultColor = mod.defaultColor;
+    var colorObj = {};
+    var gridObj = {};
     for (var color in colorBaseObj) {
         var arr = [];
         arr.push(colorBaseObj[color][5]);
@@ -100,13 +111,13 @@ require(['mod'], function (mod) {
     }
     /*确保obj中属性为最大集合 begin*/
     /*校验属性是否存在*/
-    func.checkObjKey(modeluiObj, obj, 'modeluiObj');
-    func.checkObjKey(cssObj, obj, 'cssObj');
+    util.checkObjKey(modeluiObj, obj, 'modeluiObj');
+    util.checkObjKey(cssObj, obj, 'cssObj');
     /*校验属性以及属性值是否存在*/
-    func.checkObjKeyValue(dependObj, obj, 'dependObj');
-    func.checkObjKeyValue(modeDependObj, obj, 'modeDependObj');
+    util.checkObjKeyValue(dependObj, obj, 'dependObj');
+    util.checkObjKeyValue(modeDependObj, obj, 'modeDependObj');
     /*校验属性值是否存在*/
-    func.checkObjValue(treeObj, obj, 'treeObj');
+    util.checkObjValue(treeObj, obj, 'treeObj');
     /*提取className*/
     var headClassName='head-div',//头部提示类名
         contentClassName='u-row containers ',//内容区域类名
@@ -123,17 +134,17 @@ require(['mod'], function (mod) {
             areaDiv:'color-div'//色块类名
         },
         /*下载区域类名*/
-        evalOut='eval-whole-div',//下载提示外部类名
-        evalInner='eval-head-div',//下载提示内部类名
-        runButton='u-button raised u-eval-button',//执行按钮类名
+        evalOut='eval-whole-div',/*下载提示外部类名*/
+        evalInner='eval-head-div',/*下载提示内部类名*/
+        runButton='u-button raised u-eval-button',/*执行按钮类名*/
         listClassName={
-            line:'tree-whole-div u-col-6',//每个模块的类名
-            checkBoxDiv:'tree-icon',//小模块标题行类名
-            checkBoxSpan:'fa fa-minus-square-o',//展开关闭按钮
-            textDiv:'tree-div',//小模块区域类名
-            textLabel:'u-checkbox tree-parent',//小模块每行的类名
-            textInput:'u-checkbox-input',//小模块选择框类名
-            textSpan:'u-checkbox-label'//小模块名类名
+            line:'tree-whole-div u-col-6',/*每个模块的类名*/
+            checkBoxDiv:'tree-icon',/*小模块标题行类名*/
+            checkBoxSpan:'fa fa-minus-square-o',/*展开关闭按钮*/
+            textDiv:'tree-div',/*小模块区域类名*/
+            textLabel:'u-checkbox tree-parent',/*小模块每行的类名*/
+            textInput:'u-checkbox-input',/*小模块选择框类名*/
+            textSpan:'u-checkbox-label'/*小模块名类名*/
         };
     /*确保obj中属性为最大集合 end*/
     var app, viewModel,metaObj = {},treemetaObj = {},wholeStr = '<div>',
@@ -277,7 +288,7 @@ require(['mod'], function (mod) {
             }
         }
         cssArr = cssArr.toString().split(',');
-        cssArr = func.getNoRepeat(cssArr);
+        cssArr = util.getNoRepeat(cssArr);
         var colorRow = viewModel.colorData.getCurrentRow();
         color0 = colorRow.getValue('color0');
         color1 = colorRow.getValue('color1');
@@ -287,9 +298,9 @@ require(['mod'], function (mod) {
         color2 = color2 ? color2 : defaultColor[2];
         colorArr = [color0, color1, color2];
         settingStr = '';
-        settingStr += func.getModelData('viewModel.colorData.getCurrentRow()');
-        settingStr += func.getModelData('viewModel.modelData.getCurrentRow()');
-        settingStr += func.getModelData('viewModel.treeData.getCurrentRow()');
+        settingStr += util.getModelData('viewModel.colorData.getCurrentRow()');
+        settingStr += util.getModelData('viewModel.modelData.getCurrentRow()');
+        settingStr += util.getModelData('viewModel.treeData.getCurrentRow()');
         dataJson = {
             jsArr: jsArr,
             cssArr: cssArr,
