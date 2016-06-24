@@ -27,12 +27,13 @@ var modelGridJs = ['../bin/grid/js/dtJs/grid.js']
 var treeJs = ['../bin/tree/js/treeComp.js']
 var modeTreeJs = [
   '../bin/tree/js/treeComp.js',
-  '../bin/tree/js/dtJs/tree.js'
+  '../bin/kero/js/dtJs/tree.js'
 ]
 
 var polyfillJs = [
   '../bin/iuap-design/vendor/polyfill/core.js',
-  '../bin/iuap-design/vendor/polyfill/JsExtensions.js'
+  '../bin/iuap-design/vendor/polyfill/JsExtensions.js',
+  '../bin/iuap-design/vendor/polyfill/respond.js'
 ]
 var gridCss = '../bin/grid/css/grid.css';
 var treeCss = '../bin/tree/css/tree.css';
@@ -63,30 +64,30 @@ function gulpRun(app, cb){
   		hasGrid = jsArr.indexOf('hasGrid'),
   		hasTree = jsArr.indexOf('hasTree'),
   		hasPolyfill = jsArr.indexOf('hasPolyfill'),
-  		hasModel = jsArr.indexOf('src/datatable/js/app.js'),
+  		hasModel = jsArr.indexOf('../bin/kero/js/app.js'),
   		jsHashStr = hash(params.jsArr + params.colorArr),
   		baseURL =  '../dist/pages/custom/temp/customized/' + jsHashStr,
   		settingStr = params.settingStr;
-
 	gulp.task('customizedGridTreePolyfill',function(){
 
 		if(hasGrid > -1){
 			/*压缩grid*/
 			jsArr.splice(hasGrid,1)
 			var arr = [];
-			if(hasModel > -1){
-				arr = modelGridJs;
-			}else{
-				arr = gridJs;
-			}
-
 			/* 将jsArr中的grid相关的放入arr */
-			for(var i = 0;i<jsArr.length;i++){
+			for(var i = 0; i < jsArr.length;i++){
 				var jsStr =  jsArr[i];
 				if(jsStr.indexOf('bin/grid/js') > -1){
-					jsArr.splice(i,1);
 					arr.push(jsStr);
 				}
+			}
+			for(var i = 0; i < arr.length; i++){
+				var index = jsArr.indexOf(arr[i]);
+				jsArr.splice(index,1);
+			}
+			if(hasModel > -1){
+				arr.push('../bin/kero/js/dtJs/grid.js');
+			}else{
 			}
 
 			gulp.src(arr)
@@ -128,12 +129,12 @@ function gulpRun(app, cb){
 			/*压缩grid*/
 			jsArr.splice(hasPolyfill,1)
 			gulp.src(polyfillJs)
-        .pipe(concat('u-polyfill.js'))
-        .pipe(gulp.dest(baseURL + '/js'))
-        .pipe(uglify())
-        .on('error', errHandle)
-        .pipe(rename('u-polyfill.min.js'))
-        .pipe(gulp.dest(baseURL + '/js'));
+	        .pipe(concat('u-polyfill.js'))
+	        .pipe(gulp.dest(baseURL + '/js'))
+	        .pipe(uglify())
+	        .on('error', errHandle)
+	        .pipe(rename('u-polyfill.min.js'))
+	        .pipe(gulp.dest(baseURL + '/js'));
 		}
 	});
 
