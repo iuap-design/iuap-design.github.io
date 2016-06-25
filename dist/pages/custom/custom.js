@@ -120,7 +120,7 @@ require(['mod'], function (mod) {
     util.checkObjValue(treeObj, obj, 'treeObj');
     /*提取className*/
     var headClassName='head-div',//头部提示类名
-        contentClassName='u-row containers ',//内容区域类名
+        contentClassName='containers ',//内容区域类名
         /*色块区域类名*/
         colorClassName={
             msgOut:'color-whole-div',/*头部信息外部div类名*/
@@ -138,19 +138,19 @@ require(['mod'], function (mod) {
         evalInner='eval-head-div',/*下载提示内部类名*/
         runButton='u-button raised u-eval-button',/*执行按钮类名*/
         listClassName={
-            line:'tree-whole-div u-col-6',/*每个模块的类名*/
+            line:'tree-whole-div',/*每个模块的类名*/
             checkBoxDiv:'tree-icon',/*小模块标题行类名*/
             checkBoxSpan:'fa fa-minus-square-o',/*展开关闭按钮*/
-            textDiv:'tree-div',/*小模块区域类名*/
+            textDiv:'tree-div u-row',/*小模块区域类名*/
             textLabel:'u-checkbox tree-parent',/*小模块每行的类名*/
             textInput:'u-checkbox-input',/*小模块选择框类名*/
             textSpan:'u-checkbox-label'/*小模块名类名*/
         };
     /*确保obj中属性为最大集合 end*/
     var app, viewModel,metaObj = {},treemetaObj = {},wholeStr = '<div>',
-        headStr = '<div class='+headClassName+'><span>本功能可自定义选中下载特定模块，设置主题颜色，并可以导入之前选择进行更新操作</span></div>',
+        headStr ='<div class="banner"><div class="u-container"><div class="banner-content"><h1>定制</h1><p class="info">本功能可自定义选中下载特定模块，设置主题颜色，并可以导入之前选择进行更新操作</p></div></div></div>',
         contentStr = '<div class='+'"'+contentClassName+'"'+'>',
-        colorStr = '<div class='+colorClassName.msgOut+'><div class='+colorClassName.msgInner+'>设置主题颜色，左侧选中主色，右侧选择辅色。通过点击色块进行选中，也可在输入框中输入rgb格式的颜色编码。</div>';
+        colorStr = '<div class='+'"'+colorClassName.msgOut+'"'+'><div class='+colorClassName.msgInner+'>设置主题颜色，左侧选中主色，右侧选择辅色。通过点击色块进行选中，也可在输入框中输入rgb格式的颜色编码。</div>';
         colorStr += '<div class='+colorClassName.areaInput+'>';
     for (var i = 0; i < 3; i++) {
         colorStr += '<div class='+'"'+colorClassName.lineDiv+'"'+'  u-meta=\'{"id":"color1","type":"u-text","data":"colorData","field":"color' + i + '"}\'>' +'<input class='+'"'+colorClassName.lineInput+'"'+'/></div>';
@@ -169,31 +169,49 @@ require(['mod'], function (mod) {
     colorStr += colorRightStr;
     colorStr += '</div>';
     colorStr += '</div>';
-    var evalStr = '<div class='+evalOut+'><div class='+evalInner+'>下载文件setting.txt中保存了上次配置的信息，将信息复制至文本域中并点击执行可恢复上次配置。</div>';
-    evalStr += '<button id="eavl-button" class='+'"'+runButton+'"'+' >执行</button>';
-    evalStr += '<textarea style="width: 100%;height: 70px;"u-meta=\'{"id":"str","type":"textarea","data":"evalData","field":"str"}\'></textarea>';
-    evalStr += '</div>';
     // 遍历obj创建datatable的field字段，同时生成html列表
     for (var model in treeObj) {
         treemetaObj[model] = {};
         contentStr += '<div class='+'"'+listClassName.line+'"'+'>';
         if (model != 'all')
-            contentStr += '<div class='+listClassName.checkBoxDiv+'>' +'<span class='+'"'+listClassName.checkBoxSpan+'"'+'></span> ' + model + ':' + captionObj[model] + '</div>';
-            contentStr += '<div class='+listClassName.textDiv+'><label  class='+'"'+listClassName.textLabel+'"'+' u-meta=\'{"id":"' + model + '","type":"u-checkbox","data":"treeData","field":"' + model + '","checkedValue":true,"unCheckedValue":false}\'>' + '<input type="checkbox" class='+'"'+listClassName.textInput+'"'+'>' + '<span class='+listClassName.textSpan+'>' + model + ':' + captionObj[model] + '</span></label>';
+            contentStr += '<div class='+listClassName.checkBoxDiv+'>' +
+                /*'<span class='+'"'+listClassName.checkBoxSpan+'"'+'></span> ' +model + ':' +*/
+                 captionObj[model] + '<span  class='+'"'+listClassName.textLabel+'"'+' u-meta=\'{"id":"' + model + '","type":"u-checkbox","data":"treeData","field":"' + model + '","checkedValue":true,"unCheckedValue":false}\'>' +
+                '<input type="checkbox" class='+'"'+listClassName.textInput+'"'+'>'
+                + '<span class='+listClassName.textSpan+'>'
+                /*+ model + ':' + captionObj[model]*/
+                + '全选</span></span></div>';
+        contentStr += '<ul class='+'"'+listClassName.textDiv+'"'+'>';
+        
         for (var i = 0; i < treeObj[model].length; i++) {
             var field = treeObj[model][i];
             var firstClass = '';
             metaObj[field] = {};
-            if (i == 0)firstClass = 'tree-first-leaf';
-            contentStr += '<label  class="u-checkbox tree-leaf ' + firstClass + '" u-meta=\'{"id":"' + field + '","type":"u-checkbox","data":"modelData","field":"' + field + '","checkedValue":true,"unCheckedValue":false}\'>' + '<input type="checkbox" class='+'"'+listClassName.textInput+'"'+'>' + '<span class='+listClassName.textSpan+'>' + field + ':' + captionObj[field] + '</span></label>';
+            // if (i == 0)firstClass = 'tree-first-leaf';
+            contentStr += '<li  class="u-checkbox tree-leaf u-col-4" u-meta=\'{"id":"' + field + '","type":"u-checkbox","data":"modelData","field":"' + field + '","checkedValue":true,"unCheckedValue":false}\'>' + '<input type="checkbox" class='+'"'+listClassName.textInput+'"'+'>' + '<span class='+listClassName.textSpan+'>'
+                /*+ field + ':' */
+                + captionObj[field] + '</span></li>';
         }
         contentStr += '</div>';
         contentStr += '</div>';
     }
     contentStr += '</div>';
-    wholeStr += headStr + contentStr + colorStr + evalStr;
-    wholeStr += '</div>';
-    document.getElementById('content').appendChild(u.makeDOM(wholeStr));
+    var contentStrArr=contentStr.split('<div class="tree-whole-div">');
+    var coreModel='<div>'+contentStrArr[2]+'</div>';
+    var utilModel='<div>'+contentStrArr[3]+'</div>';
+    var modelModel='<div>'+contentStrArr[4]+'</div>';
+    var uiModel='<div>'+contentStrArr[5]+'</div>';
+    var layoutModel='<div>'+contentStrArr[6]+'</div>';
+    var otherModel='<div>'+contentStrArr[7]+'</div>';
+    var gridModel='<div>'+contentStrArr[8]+'</div>';
+    document.getElementById('colorModel').appendChild(u.makeDOM(colorStr));
+    document.getElementById('coreModel').appendChild(u.makeDOM(coreModel));
+    document.getElementById('utilModel').appendChild(u.makeDOM(utilModel));
+    document.getElementById('modelModel').appendChild(u.makeDOM(modelModel));
+    document.getElementById('uiModel').appendChild(u.makeDOM(uiModel));
+    document.getElementById('layoutModel').appendChild(u.makeDOM(layoutModel));
+    document.getElementById('otherModel').appendChild(u.makeDOM(otherModel));
+    document.getElementById('gridModel').appendChild(u.makeDOM(gridModel));
     u.on(document.getElementById('eavl-button'), 'click', function () {
         value = viewModel.evalData.getCurrentRow().getValue('str');
         eval(value)
