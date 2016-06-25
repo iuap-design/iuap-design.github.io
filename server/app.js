@@ -38,16 +38,20 @@ console.log('server started at http://localhost:8000');
 
 function deleteFolderRecursive(path) {
     var files = [];
-    if( fs.existsSync(path) ) {
-        files = fs.readdirSync(path);
+    if( fs.existsSync(getResolvePath(path)) ) {
+        files = fs.readdirSync(getResolvePath(path));
         files.forEach(function(file,index){
             var curPath = path + "/" + file;
-            if(fs.statSync(curPath).isDirectory()) { 
+            if(fs.statSync(getResolvePath(curPath)).isDirectory()) { 
                 deleteFolderRecursive(curPath);
             } else { 
-                fs.unlinkSync(curPath);
+                fs.unlinkSync(getResolvePath(curPath));
             }
         });
-        fs.rmdirSync(path);
+        fs.rmdirSync(getResolvePath(path));
     }
 };
+
+function getResolvePath(p){
+	return path.resolve(__dirname, p)
+}
