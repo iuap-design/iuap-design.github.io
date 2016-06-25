@@ -184,10 +184,11 @@ function gulpRun(app, cb){
 
 	function downFun(){
 		/*将主题颜色还原*/
-		fs.writeFileSync(colorFilePath,baseColorStr);
+		fs.writeFileSync(getResolvePath(colorFilePath),baseColorStr);
 
 		var filePath = baseURL + '/UUI-1.0.0.zip';
-	    if (fs.existsSync(filePath)){
+    console.log(filePath);
+	    if (fs.existsSync(getResolvePath(filePath))){
 	      app.body=filePath;
 	      flagObj[jsHashStr] = 'finish';
 	    }else{
@@ -222,27 +223,32 @@ function gulpRun(app, cb){
 	var customizedCssFilePath = '../dist/pages/custom/customized.scss';
 	var setttingFilePath = baseURL + '/setting.txt';
 
-	fs.exists('../dist/pages/custom/temp/customized', function(exist) {
+  var tempPath = getResolvePath('../dist/pages/custom/temp/customized');
+
+	fs.exists( tempPath, function(exist) {
+    console.log( 'tempPath:'+ tempPath );
+    console.log( 'exist: ' + exist );
+
 		if(!exist){
-			fs.mkdirSync('../dist/pages/custom/temp');
-			fs.mkdirSync('../dist/pages/custom/temp/customized');
+			fs.mkdirSync(getResolvePath('../dist/pages/custom/temp'));
+			fs.mkdirSync(getResolvePath('../dist/pages/custom/temp/customized'));
 		}
 	});
 
-	fs.exists(baseURL, function(exist) {
+	fs.exists(getResolvePath(baseURL), function(exist) {
 		if(!exist){
- 			fs.mkdirSync(baseURL);
+ 			fs.mkdirSync(getResolvePath(baseURL));
 		}
 	});
 
 	setTimeout(function(){
-		var writerStream = fs.createWriteStream(setttingFilePath);
+		var writerStream = fs.createWriteStream(getResolvePath(setttingFilePath));
 		writerStream.write(settingStr);
 		writerStream.end();
 	},100)
 
-	fs.writeFile(colorFilePath,colorStr,function(e){
-		fs.writeFile(customizedCssFilePath,cssArr.toString().replace(/\,/g,";"),function(e){
+	fs.writeFile(getResolvePath(colorFilePath),colorStr,function(e){
+		fs.writeFile(getResolvePath(customizedCssFilePath),cssArr.toString().replace(/\,/g,";"),function(e){
 			if(flagObj[jsHashStr]){
 			}else{
 				flagObj[jsHashStr] = 'doing';
@@ -289,5 +295,8 @@ function hash(input){
 }
 
 
+function getResolvePath(p){
+	return path.resolve(__dirname, p)
+}
 
 exports.run = run;
