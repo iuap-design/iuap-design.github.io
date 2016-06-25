@@ -32,7 +32,7 @@ app.use(serve(path.join(__dirname, '../')));
 app.listen( 8000 );
 
 // 起服务时清楚定制生成的临时文件
-deleteFolderRecursive('../dist/pages/custom/temp/');
+deleteFolderRecursive(path.resolve(__dirname, '../dist/pages/custom/temp/'));
 
 console.log('server started at http://localhost:8000');
 
@@ -42,9 +42,9 @@ function deleteFolderRecursive(path) {
         files = fs.readdirSync(getResolvePath(path));
         files.forEach(function(file,index){
             var curPath = path + "/" + file;
-            if(fs.statSync(getResolvePath(curPath)).isDirectory()) { 
+            if(fs.statSync(getResolvePath(curPath)).isDirectory()) {
                 deleteFolderRecursive(curPath);
-            } else { 
+            } else {
                 fs.unlinkSync(getResolvePath(curPath));
             }
         });

@@ -187,6 +187,7 @@ function gulpRun(app, cb){
 		fs.writeFileSync(getResolvePath(colorFilePath),baseColorStr);
 
 		var filePath = baseURL + '/UUI-1.0.0.zip';
+    console.log(filePath);
 	    if (fs.existsSync(getResolvePath(filePath))){
 	      app.body=filePath;
 	      flagObj[jsHashStr] = 'finish';
@@ -222,7 +223,12 @@ function gulpRun(app, cb){
 	var customizedCssFilePath = '../dist/pages/custom/customized.scss';
 	var setttingFilePath = baseURL + '/setting.txt';
 
-	fs.exists(getResolvePath('../dist/pages/custom/temp/customized'), function(exist) {
+  var tempPath = getResolvePath('../dist/pages/custom/temp/customized');
+
+	fs.exists( tempPath, function(exist) {
+    console.log( 'tempPath:'+ tempPath );
+    console.log( 'exist: ' + exist );
+
 		if(!exist){
 			fs.mkdirSync(getResolvePath('../dist/pages/custom/temp'));
 			fs.mkdirSync(getResolvePath('../dist/pages/custom/temp/customized'));
