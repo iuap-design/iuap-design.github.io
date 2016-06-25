@@ -230,11 +230,9 @@ function gulpRun(app, cb){
 	});
 
 	fs.exists(baseURL, function(exist) {
-		if(exist){
-			deleteFolderRecursive(baseURL);
+		if(!exist){
+ 			fs.mkdirSync(baseURL);
 		}
-		fs.mkdirSync(baseURL);
-		
 	});
 
 	setTimeout(function(){
@@ -290,34 +288,6 @@ function hash(input){
     return retValue;
 }
 
-function deleteFolderRecursive(path) {
 
-    var files = [];
-
-    if( fs.existsSync(path) ) {
-
-        files = fs.readdirSync(path);
-
-        files.forEach(function(file,index){
-
-            var curPath = path + "/" + file;
-
-            if(fs.statSync(curPath).isDirectory()) { // recurse
-
-                deleteFolderRecursive(curPath);
-
-            } else { // delete file
-
-                fs.unlinkSync(curPath);
-
-            }
-
-        });
-
-        fs.rmdirSync(path);
-
-    }
-
-};
 
 exports.run = run;
