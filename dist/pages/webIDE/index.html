@@ -23,12 +23,16 @@
 		<link rel="shortcut icon" href="../static/img/favicon.png">
 
 		<link rel="stylesheet" href="http://design.yyuap.com/static/uui-original/1.0.1/fonts/font-awesome/css/font-awesome.min.css">
-		<link rel="stylesheet" href="http://design.yyuap.com/static/uui-original/1.0.1/css/u.min.css">
+		<link rel="stylesheet" href="http://design.yyuap.com/static/uui-original/1.0.3/css/u.min.css">
+		<!-- <link rel="stylesheet" href="http://design.yyuap.com/static/uui-original/1.0.3/css/u.css"> -->
 		<link rel="stylesheet" href="http://design.yyuap.com/static/uui-original/1.0.1/css/u-extend.min.css">
 		<link rel="stylesheet" href="./index.css">
 		<style media="screen">
 			.u-nav-link{
 				cursor: pointer;
+			}
+			.content-fullScreen{
+				margin-left:0 !important;
 			}
 		</style>
 	</head>
@@ -39,27 +43,39 @@
 			<!-- 头部导航 -->
 			<header class="u-navlayout-header demo-header">
 				<div class="u-navlayout-header-row">
-
+					<ul class="u-navlayout-toolbar">
+          	<li id="toggleMenubar">
+            	<a id="menubutton" href="#" role="button" class=" waves-effect waves-light waves-round">
+              		<i data-toggle="show" class="fa fa-align-justify">
+                	</i>
+                	<i data-toggle="left" class="fa fa-chevron-left hide">
+                	</i>
+            	</a>
+          	</li>
+          	<li>
+            	<a class="icon u-topic" data-toggle="collapse" href="#site-navbar-search" role="button">
+              		<span class="demo-hidden-folded u-color-text-white" style="margin-left: 16px;">WebIDE For iUAP Design</span>
+            	</a>
+          	</li>
+        	</ul>
 					<div class="u-navlayout-spacer"></div>
-
-
 				</div>
 			</header>
 			<!-- 头部导航 -->
 			<!-- 左侧导航 -->
-			<div class="demo-drawer demo-folded u-navlayout-drawer u-navlayout-fixed-header">
-				<header class="u-navlayout-header">
+			<div id="menubar" class="u-menubar-open demo-drawer demo-folded u-navlayout-drawer u-navlayout-fixed-header">
+				<!-- <header class="u-navlayout-header">
 					<a class="demo-drawer-nav-brand">
-						<!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" style="
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" style="
                     width: 24px; height: 24px;">
 							<path d="M 50 0 L 100 14 L 92 80 Z" fill="rgba(139, 195, 74, 0.5)"></path>
 							<path d="M 92 80 L 50 0 L 50 100 Z" fill="rgba(139, 195, 74, 0.8)"></path>
 							<path d="M 8 80 L 50 0 L 50 100 Z" fill="#f3f3f3"></path>
 							<path d="M 50 0 L 8 80 L 0 14 Z" fill="rgba(220, 220, 220, 0.6)"></path>
-						</svg> -->
+						</svg>
 						<span class="demo-hidden-folded u-color-text-white" style="margin-left: 16px;">WebIDE For iUAP Design</span>
 					</a>
-				</header>
+				</header> -->
 				<div class="demo-drawer-header-wrap u-color-white over-au">
 					<nav class="demo-navigation u-nav" id="demo-navigation">
 						<ul data-bind="foreach:{data: menuDT.rows(),as :'row'}">
@@ -147,5 +163,6 @@
 		<script src="http://design.yyuap.com/static/uui-original/1.0.1/js/u-polyfill.min.js"></script>
 		<script src="http://design.yyuap.com/static/uui-original/1.0.1/js/u.js"></script>
 		<script src="./index.js"></script>
+		<script src="./menu-toggle.js"></script>
 	</body>
 </html>
