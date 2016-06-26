@@ -13,30 +13,30 @@ var minifycss = require('gulp-minify-css');
 var autoprefixer = require('gulp-autoprefixer');
 
 var AUTOPREFIXER_BROWSERS = [
-  'ie >= 11',
-  'edge >= 20',
-  'ff >= 44',
-  'chrome >= 48',
-  'safari >= 8',
-  'opera >= 35',
-  'ios >= 8'
+	'ie >= 11',
+	'edge >= 20',
+	'ff >= 44',
+	'chrome >= 48',
+	'safari >= 8',
+	'opera >= 35',
+	'ios >= 8'
 ];
 
 var gridJs = []
-var modelGridJs = ['../bin/grid/js/dtJs/grid.js']
-var treeJs = ['../bin/tree/js/treeComp.js']
+var modelGridJs = [path.resolve(__dirname,'../bin/grid/js/dtJs/grid.js')]
+var treeJs = [path.resolve(__dirname,'../bin/tree/js/treeComp.js')]
 var modeTreeJs = [
-  '../bin/tree/js/treeComp.js',
-  '../bin/kero/js/dtJs/tree.js'
+  	path.resolve(__dirname,'../bin/tree/js/treeComp.js'),
+  	path.resolve(__dirname,'../bin/kero/js/dtJs/tree.js')
 ]
 
 var polyfillJs = [
-  '../bin/iuap-design/vendor/polyfill/core.js',
-  '../bin/iuap-design/vendor/polyfill/JsExtensions.js',
-  '../bin/iuap-design/vendor/polyfill/respond.js'
+  	path.resolve(__dirname,'../bin/iuap-design/vendor/polyfill/core.js'),
+  	path.resolve(__dirname,'../bin/iuap-design/vendor/polyfill/JsExtensions.js'),
+  	path.resolve(__dirname,'../bin/iuap-design/vendor/polyfill/respond.js')
 ]
-var gridCss = '../bin/grid/css/grid.css';
-var treeCss = '../bin/tree/css/tree.css';
+var gridCss = path.resolve(__dirname,'../bin/grid/css/grid.css');
+var treeCss = path.resolve(__dirname,'../bin/tree/css/tree.css');
 var assets = ''; //暂时没处理，后续考虑
 
 flagObj = {};
@@ -47,7 +47,7 @@ function errHandle(err) {
 };
 
 function run(app, cb){
-  gulpRun(app,cb);
+  	gulpRun(app,cb);
 }
 
 /**
@@ -58,8 +58,18 @@ function run(app, cb){
  */
 function gulpRun(app, cb){
 	var params = app.request.body,
-  		jsArr = params.jsArr?params.jsArr.split(','):[],
-  		cssArr = params.cssArr?params.cssArr.split(','):[],
+  		baseJsArr = params.jsArr?params.jsArr.split(','):[],
+  		jsArr = [];
+  	//处理jsArr，转为path.resolve(__dirname, p)
+  	for(var i = 0; i < baseJsArr.length; i++){
+  		if(baseJsArr[i] != 'hasGrid' && baseJsArr[i] != 'hasTree' && baseJsArr[i] != 'hasPolyfill'){
+  			jsArr.push(path.resolve(__dirname,baseJsArr[i]));
+  		}else{
+  			jsArr.push(baseJsArr[i]);
+  		}
+  	}
+  	console.log(jsArr)
+  	var	cssArr = params.cssArr?params.cssArr.split(','):[],
   		colorArr = params.colorArr?params.colorArr.split(','):[],
   		hasGrid = jsArr.indexOf('hasGrid'),
   		hasTree = jsArr.indexOf('hasTree'),
@@ -86,20 +96,20 @@ function gulpRun(app, cb){
 				jsArr.splice(index,1);
 			}
 			if(hasModel > -1){
-				arr.push('../bin/kero/js/dtJs/grid.js');
+				arr.push(path.resolve(__dirname,'../bin/kero/js/dtJs/grid.js'));
 			}else{
 			}
-
+			console.log(arr)
 			gulp.src(arr)
         .pipe(concat('u-grid.js'))
-        .pipe(gulp.dest(baseURL + '/js'))
+        .pipe(gulp.dest(path.resolve(__dirname,baseURL + '/js')))
         .pipe(uglify())
         .on('error', errHandle)
         .pipe(rename('u-grid.min.js'))
-        .pipe(gulp.dest(baseURL + '/js'));
+        .pipe(gulp.dest(path.resolve(__dirname,baseURL + '/js')));
 
 	    gulp.src(gridCss)
-	      .pipe(gulp.dest(baseURL + '/css'))
+	      .pipe(gulp.dest(path.resolve(__dirname,baseURL + '/css')))
 		}
 
 		if(hasTree > -1){
@@ -112,17 +122,16 @@ function gulpRun(app, cb){
 			}else{
 				arr = treeJs;
 			}
-
 			gulp.src(arr)
 		    .pipe(concat('u-tree.js'))
-		    .pipe(gulp.dest(baseURL + '/js'))
+		    .pipe(gulp.dest(path.resolve(__dirname,baseURL + '/js')))
 		    .pipe(uglify())
 		    .on('error', errHandle)
 		    .pipe(rename('u-tree.min.js'))
-		    .pipe(gulp.dest(baseURL + '/js'));
+		    .pipe(gulp.dest(path.resolve(__dirname,baseURL + '/js')));
 
 			gulp.src(treeCss)
-			  .pipe(gulp.dest(baseURL + '/css'))
+			  .pipe(gulp.dest(path.resolve(__dirname,baseURL + '/css')))
 		}
 
 		if(hasPolyfill > -1){
@@ -130,49 +139,49 @@ function gulpRun(app, cb){
 			jsArr.splice(hasPolyfill,1)
 			gulp.src(polyfillJs)
 	        .pipe(concat('u-polyfill.js'))
-	        .pipe(gulp.dest(baseURL + '/js'))
+	        .pipe(gulp.dest(path.resolve(__dirname,baseURL + '/js')))
 	        .pipe(uglify())
 	        .on('error', errHandle)
 	        .pipe(rename('u-polyfill.min.js'))
-	        .pipe(gulp.dest(baseURL + '/js'));
+	        .pipe(gulp.dest(path.resolve(__dirname,baseURL + '/js')));
 		}
 	});
 
 	gulp.task('customizedAssets',['customizedGridTreePolyfill'],function(){
 		return gulp.src(assets)
-    	.pipe(gulp.dest(baseURL))
+    	.pipe(gulp.dest(path.resolve(__dirname,baseURL)))
 	});
 
 	gulp.task('customizedCss',['customizedAssets'],function(){
 		/*压缩css*/
-		return gulp.src(customizedCssFilePath)
+		return gulp.src(path.resolve(__dirname,customizedCssFilePath))
       .pipe(sass().on('error',errHandle))
       .pipe(base64().on('error',errHandle))
       .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
       .pipe(rename('u.css'))
-      .pipe(gulp.dest(baseURL + '/css'))
+      .pipe(gulp.dest(path.resolve(__dirname,baseURL + '/css')))
       //.pipe(sourcemaps.init())
       .pipe(minifycss())
       //.pipe(sourcemaps.write())
       .pipe(rename('u.min.css'))
-      .pipe(gulp.dest(baseURL + '/css'));
+      .pipe(gulp.dest(path.resolve(__dirname,baseURL + '/css')));
 	});
 
 	gulp.task('customizedJs',['customizedCss'],function(){
 		/*压缩js*/
 		return gulp.src(jsArr)
 				.pipe(concat('u.js'))
-				.pipe(gulp.dest(baseURL + '/js'))
+				.pipe(gulp.dest(path.resolve(__dirname,baseURL + '/js')))
 				.pipe(uglify())
 				.on('error', errHandle)
 				.pipe(rename('u.min.js'))
-				.pipe(gulp.dest(baseURL + '/js'))
+				.pipe(gulp.dest(path.resolve(__dirname,baseURL + '/js')))
 	});
 
 	gulp.task('customizedZip',['customizedJs'],function(){
-		return	gulp.src(baseURL + '/**')
+		return	gulp.src(path.resolve(__dirname,baseURL + '/**'))
 			.pipe(zip('UUI-1.0.0.zip'))
-			.pipe(gulp.dest(baseURL))
+			.pipe(gulp.dest(path.resolve(__dirname,baseURL)))
 	});
 
 	gulp.task('customizedConcurrent',['customizedZip'],function(){
@@ -187,7 +196,6 @@ function gulpRun(app, cb){
 		fs.writeFileSync(getResolvePath(colorFilePath),baseColorStr);
 
 		var filePath = baseURL + '/UUI-1.0.0.zip';
-    console.log(filePath);
 	    if (fs.existsSync(getResolvePath(filePath))){
 	      app.body=filePath;
 	      flagObj[jsHashStr] = 'finish';
@@ -223,12 +231,8 @@ function gulpRun(app, cb){
 	var customizedCssFilePath = '../dist/pages/custom/customized.scss';
 	var setttingFilePath = baseURL + '/setting.txt';
 
-  var tempPath = getResolvePath('../dist/pages/custom/temp/customized');
-
+  	var tempPath = getResolvePath('../dist/pages/custom/temp/customized');
 	fs.exists( tempPath, function(exist) {
-    console.log( 'tempPath:'+ tempPath );
-    console.log( 'exist: ' + exist );
-
 		if(!exist){
 			fs.mkdirSync(getResolvePath('../dist/pages/custom/temp'));
 			fs.mkdirSync(getResolvePath('../dist/pages/custom/temp/customized'));
@@ -246,7 +250,6 @@ function gulpRun(app, cb){
 		writerStream.write(settingStr);
 		writerStream.end();
 	},100)
-
 	fs.writeFile(getResolvePath(colorFilePath),colorStr,function(e){
 		fs.writeFile(getResolvePath(customizedCssFilePath),cssArr.toString().replace(/\,/g,";"),function(e){
 			if(flagObj[jsHashStr]){
