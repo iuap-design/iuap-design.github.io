@@ -327,7 +327,7 @@ define(function(){
         mdlayout:"主从布局",
         // resets:"",
 
-        gridMode:"表格控件",
+        gridMode:"表格插件",
         gridBase:"基础表格",
         ColumnMenu:"表头操作",
         Drag:"拖拽",
@@ -957,7 +957,6 @@ define(function(){
     ];
     /*页面模型盒子id集合*/
     var modelIdArr=[
-        'colorModel',
         'coreModel',
         'utilModel',
         'modelModel',

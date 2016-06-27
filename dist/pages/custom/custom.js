@@ -134,10 +134,10 @@ require(['mod'], function (mod) {
             areaRight:'color-right-div',//颜色区域右侧类名
             areaDiv:'color-div'//色块类名
         },
-        /*下载区域类名*/
-        evalOut='eval-whole-div',/*下载提示外部类名*/
-        evalInner='eval-head-div',/*下载提示内部类名*/
-        runButton='u-button raised u-eval-button',/*执行按钮类名*/
+        /*/!*下载区域类名*!/
+        evalOut='eval-whole-div',/!*下载提示外部类名*!/
+        evalInner='eval-head-div',/!*下载提示内部类名*!/
+        runButton='u-button raised u-eval-button',/!*执行按钮类名*!/*/
         listClassName={
             line:'tree-whole-div',/*每个模块的类名*/
             checkBoxDiv:'tree-icon',/*小模块标题行类名*/
@@ -149,7 +149,7 @@ require(['mod'], function (mod) {
         };
     /*确保obj中属性为最大集合 end*/
     var app, viewModel,metaObj = {},treemetaObj = {},wholeStr = '<div>',
-        headStr ='<div class="banner"><div class="u-container"><div class="banner-content"><h1>定制</h1><p class="info">本功能可自定义选中下载特定模块，设置主题颜色，并可以导入之前选择进行更新操作</p></div></div></div>',
+        // headStr ='<div class="banner"><div class="u-container"><div class="banner-content"><h1>定制</h1><p class="info">本功能可自定义选中下载特定模块，设置主题颜色，并可以导入之前选择进行更新操作</p></div></div></div>',
         contentStr = '<div class='+'"'+contentClassName+'"'+'>',
         colorStr = '<div class='+'"'+colorClassName.msgOut+'"'+'><div class='+colorClassName.msgInner+'>设置主题颜色，左侧选中主色，右侧选择辅色。通过点击色块进行选中，也可在输入框中输入rgb格式的颜色编码。</div>';
         colorStr += '<div class='+colorClassName.areaInput+'>';
@@ -170,10 +170,10 @@ require(['mod'], function (mod) {
     colorStr += colorRightStr;
     colorStr += '</div>';
     colorStr += '</div>';
-    var evalStr = '<div class='+evalOut+'><div class='+evalInner+'>下载文件setting.txt中保存了上次配置的信息，将信息复制至文本域中并点击执行可恢复上次配置。</div>';
+    /*var evalStr = '<div class='+evalOut+'><div class='+evalInner+'>下载文件setting.txt中保存了上次配置的信息，将信息复制至文本域中并点击执行可恢复上次配置。</div>';
     evalStr += '<button id="eavl-button" class='+'"'+runButton+'"'+' >执行</button>';
     evalStr += '<textarea style="width: 100%;height: 70px;"u-meta=\'{"id":"str","type":"textarea","data":"evalData","field":"str"}\'></textarea>';
-    evalStr += '</div>';
+    evalStr += '</div>';*/
     // 遍历obj创建datatable的field字段，同时生成html列表
     for (var model in treeObj) {
         treemetaObj[model] = {};
@@ -197,28 +197,14 @@ require(['mod'], function (mod) {
         contentStr += '</div>';
     }
     contentStr += '</div>';
-    wholeStr += headStr + contentStr + colorStr + evalStr;
-    wholeStr += '</div>';
+    // wholeStr += headStr + contentStr + colorStr + evalStr;
+    // wholeStr += '</div>';
     var contentStrArr=contentStr.split('<div class="tree-whole-div">');
-    var coreModel='<div class="tree-whole-div">'+contentStrArr[2]+'</div>';
-    var utilModel='<div class="tree-whole-div">'+contentStrArr[3]+'</div>';
-    var modelModel='<div class="tree-whole-div">'+contentStrArr[4]+'</div>';
-    var uiModel='<div class="tree-whole-div">'+contentStrArr[5]+'</div>';
-    var layoutModel='<div class="tree-whole-div">'+contentStrArr[6]+'</div>';
-    var otherModel='<div class="tree-whole-div">'+contentStrArr[7]+'</div>';
-    var gridModel='<div class="tree-whole-div">'+contentStrArr[8]+'</div>';
-    var treeModel='<div class="tree-whole-div">'+contentStrArr[9]+'</div>';
-    var dataTimeModel='<div class="tree-whole-div">'+contentStrArr[10]+'</div>';
     document.getElementById('colorModel').appendChild(u.makeDOM(colorStr));
-    document.getElementById('coreModel').appendChild(u.makeDOM(coreModel));
-    document.getElementById('utilModel').appendChild(u.makeDOM(utilModel));
-    document.getElementById('modelModel').appendChild(u.makeDOM(modelModel));
-    document.getElementById('uiModel').appendChild(u.makeDOM(uiModel));
-    document.getElementById('layoutModel').appendChild(u.makeDOM(layoutModel));
-    document.getElementById('otherModel').appendChild(u.makeDOM(otherModel));
-    document.getElementById('gridModel').appendChild(u.makeDOM(gridModel));
-    document.getElementById('treeModel').appendChild(u.makeDOM(treeModel));
-    document.getElementById('dataTimeModel').appendChild(u.makeDOM(dataTimeModel));
+    for(var i=2;i<=10;i++){
+         var modelTemp='<div class="tree-whole-div">'+contentStrArr[i]+'</div>';
+        document.getElementById(modelIdArr[i-2]).appendChild(u.makeDOM(modelTemp));
+    }
     u.on(document.getElementById('eavl-button'), 'click', function () {
         value = viewModel.evalData.getCurrentRow().getValue('str');
         eval(value)
@@ -481,10 +467,10 @@ require(['mod'], function (mod) {
         u.addClass(this, 'nav-open');
         u.addClass(document.getElementById('offId'),'open');
     });
-    u.on(document.getElementById('offId'),'click',function () {
-        u.removeClass(this,'open')
+    u.on(document.getElementById('offIdI'),'click',function () {
+        u.removeClass(document.getElementById('offId'),'open');
+        u.removeClass(document.getElementById('navId'),'nav-open');
     });
-
 });
 
 
