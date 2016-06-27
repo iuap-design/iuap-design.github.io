@@ -91,7 +91,7 @@ require(['mod'], function (mod) {
         return str;
     }
     };
-    var obj = mod.obj;
+    var allJsObj = mod.allJsObj;
     var treeObj = mod.treeObj;
     var captionObj = mod.captionObj;
     var cssObj = mod.cssObj;
@@ -100,6 +100,7 @@ require(['mod'], function (mod) {
     var modeDependObj = mod.modeDependObj;
     var colorBaseObj = mod.colorBaseObj;
     var defaultColor = mod.defaultColor;
+    var modelIdArr=mod.modelIdArr;
     var colorObj = {};
     var gridObj = {};
     for (var color in colorBaseObj) {
@@ -111,16 +112,16 @@ require(['mod'], function (mod) {
     }
     /*确保obj中属性为最大集合 begin*/
     /*校验属性是否存在*/
-    util.checkObjKey(modeluiObj, obj, 'modeluiObj');
-    util.checkObjKey(cssObj, obj, 'cssObj');
+    util.checkObjKey(modeluiObj, allJsObj, 'modeluiObj');
+    util.checkObjKey(cssObj, allJsObj, 'cssObj');
     /*校验属性以及属性值是否存在*/
-    util.checkObjKeyValue(dependObj, obj, 'dependObj');
-    util.checkObjKeyValue(modeDependObj, obj, 'modeDependObj');
+    util.checkObjKeyValue(dependObj, allJsObj, 'dependObj');
+    util.checkObjKeyValue(modeDependObj, allJsObj, 'modeDependObj');
     /*校验属性值是否存在*/
-    util.checkObjValue(treeObj, obj, 'treeObj');
+    util.checkObjValue(treeObj, allJsObj, 'treeObj');
     /*提取className*/
     var headClassName='head-div',//头部提示类名
-        contentClassName='u-row containers ',//内容区域类名
+        contentClassName='containers ',//内容区域类名
         /*色块区域类名*/
         colorClassName={
             msgOut:'color-whole-div',/*头部信息外部div类名*/
@@ -138,19 +139,19 @@ require(['mod'], function (mod) {
         evalInner='eval-head-div',/*下载提示内部类名*/
         runButton='u-button raised u-eval-button',/*执行按钮类名*/
         listClassName={
-            line:'tree-whole-div u-col-6',/*每个模块的类名*/
+            line:'tree-whole-div',/*每个模块的类名*/
             checkBoxDiv:'tree-icon',/*小模块标题行类名*/
             checkBoxSpan:'fa fa-minus-square-o',/*展开关闭按钮*/
-            textDiv:'tree-div',/*小模块区域类名*/
+            textDiv:'tree-div u-row textDiv',/*小模块区域类名*/
             textLabel:'u-checkbox tree-parent',/*小模块每行的类名*/
             textInput:'u-checkbox-input',/*小模块选择框类名*/
-            textSpan:'u-checkbox-label'/*小模块名类名*/
+            textSpan:'u-checkbox-label select-module'/*小模块名类名*/
         };
     /*确保obj中属性为最大集合 end*/
     var app, viewModel,metaObj = {},treemetaObj = {},wholeStr = '<div>',
-        headStr = '<div class='+headClassName+'><span>本功能可自定义选中下载特定模块，设置主题颜色，并可以导入之前选择进行更新操作</span></div>',
+        headStr ='<div class="banner"><div class="u-container"><div class="banner-content"><h1>定制</h1><p class="info">本功能可自定义选中下载特定模块，设置主题颜色，并可以导入之前选择进行更新操作</p></div></div></div>',
         contentStr = '<div class='+'"'+contentClassName+'"'+'>',
-        colorStr = '<div class='+colorClassName.msgOut+'><div class='+colorClassName.msgInner+'>设置主题颜色，左侧选中主色，右侧选择辅色。通过点击色块进行选中，也可在输入框中输入rgb格式的颜色编码。</div>';
+        colorStr = '<div class='+'"'+colorClassName.msgOut+'"'+'><div class='+colorClassName.msgInner+'>设置主题颜色，左侧选中主色，右侧选择辅色。通过点击色块进行选中，也可在输入框中输入rgb格式的颜色编码。</div>';
         colorStr += '<div class='+colorClassName.areaInput+'>';
     for (var i = 0; i < 3; i++) {
         colorStr += '<div class='+'"'+colorClassName.lineDiv+'"'+'  u-meta=\'{"id":"color1","type":"u-text","data":"colorData","field":"color' + i + '"}\'>' +'<input class='+'"'+colorClassName.lineInput+'"'+'/></div>';
@@ -178,14 +179,19 @@ require(['mod'], function (mod) {
         treemetaObj[model] = {};
         contentStr += '<div class='+'"'+listClassName.line+'"'+'>';
         if (model != 'all')
-            contentStr += '<div class='+listClassName.checkBoxDiv+'>' +'<span class='+'"'+listClassName.checkBoxSpan+'"'+'></span> ' + model + ':' + captionObj[model] + '</div>';
-            contentStr += '<div class='+listClassName.textDiv+'><label  class='+'"'+listClassName.textLabel+'"'+' u-meta=\'{"id":"' + model + '","type":"u-checkbox","data":"treeData","field":"' + model + '","checkedValue":true,"unCheckedValue":false}\'>' + '<input type="checkbox" class='+'"'+listClassName.textInput+'"'+'>' + '<span class='+listClassName.textSpan+'>' + model + ':' + captionObj[model] + '</span></label>';
+        contentStr += '<div class="second-title">' +captionObj[model] +
+            '<span  class='+'"'+listClassName.textLabel+'"'+' u-meta=\'{"id":"' + model + '","type":"u-checkbox","data":"treeData","field":"' + model + '","checkedValue":true,"unCheckedValue":false}\'>' +
+            '<input type="checkbox" class='+'"'+listClassName.textInput+'"'+'>' +
+            '<span class='+'"'+listClassName.textSpan+'"'+'>全选</span>' +
+            '</span>' +
+            '</div>';
+        contentStr += '<ul class='+'"'+listClassName.textDiv+'"'+'>';
         for (var i = 0; i < treeObj[model].length; i++) {
             var field = treeObj[model][i];
             var firstClass = '';
             metaObj[field] = {};
-            if (i == 0)firstClass = 'tree-first-leaf';
-            contentStr += '<label  class="u-checkbox tree-leaf ' + firstClass + '" u-meta=\'{"id":"' + field + '","type":"u-checkbox","data":"modelData","field":"' + field + '","checkedValue":true,"unCheckedValue":false}\'>' + '<input type="checkbox" class='+'"'+listClassName.textInput+'"'+'>' + '<span class='+listClassName.textSpan+'>' + field + ':' + captionObj[field] + '</span></label>';
+            contentStr += '<li  class="u-checkbox tree-leaf u-col-md-4" u-meta=\'{"id":"' + field + '","type":"u-checkbox","data":"modelData","field":"' + field + '","checkedValue":true,"unCheckedValue":false}\'>' + '<input type="checkbox" class='+'"'+listClassName.textInput+'"'+'>' + '<span class='+listClassName.textSpan+'>'
+                + captionObj[field] + '</span></li>';
         }
         contentStr += '</div>';
         contentStr += '</div>';
@@ -193,7 +199,26 @@ require(['mod'], function (mod) {
     contentStr += '</div>';
     wholeStr += headStr + contentStr + colorStr + evalStr;
     wholeStr += '</div>';
-    document.getElementById('content').appendChild(u.makeDOM(wholeStr));
+    var contentStrArr=contentStr.split('<div class="tree-whole-div">');
+    var coreModel='<div class="tree-whole-div">'+contentStrArr[2]+'</div>';
+    var utilModel='<div class="tree-whole-div">'+contentStrArr[3]+'</div>';
+    var modelModel='<div class="tree-whole-div">'+contentStrArr[4]+'</div>';
+    var uiModel='<div class="tree-whole-div">'+contentStrArr[5]+'</div>';
+    var layoutModel='<div class="tree-whole-div">'+contentStrArr[6]+'</div>';
+    var otherModel='<div class="tree-whole-div">'+contentStrArr[7]+'</div>';
+    var gridModel='<div class="tree-whole-div">'+contentStrArr[8]+'</div>';
+    var treeModel='<div class="tree-whole-div">'+contentStrArr[9]+'</div>';
+    var dataTimeModel='<div class="tree-whole-div">'+contentStrArr[10]+'</div>';
+    document.getElementById('colorModel').appendChild(u.makeDOM(colorStr));
+    document.getElementById('coreModel').appendChild(u.makeDOM(coreModel));
+    document.getElementById('utilModel').appendChild(u.makeDOM(utilModel));
+    document.getElementById('modelModel').appendChild(u.makeDOM(modelModel));
+    document.getElementById('uiModel').appendChild(u.makeDOM(uiModel));
+    document.getElementById('layoutModel').appendChild(u.makeDOM(layoutModel));
+    document.getElementById('otherModel').appendChild(u.makeDOM(otherModel));
+    document.getElementById('gridModel').appendChild(u.makeDOM(gridModel));
+    document.getElementById('treeModel').appendChild(u.makeDOM(treeModel));
+    document.getElementById('dataTimeModel').appendChild(u.makeDOM(dataTimeModel));
     u.on(document.getElementById('eavl-button'), 'click', function () {
         value = viewModel.evalData.getCurrentRow().getValue('str');
         eval(value)
@@ -278,9 +303,9 @@ require(['mod'], function (mod) {
         if (r.getValue('model')) {
             modelFlag = true;
         }
-        for (var field in obj) {
+        for (var field in allJsObj) {
             if (r.getValue(field)) {
-                jsArr.push(obj[field]);
+                jsArr.push(allJsObj[field]);
                 if (modelFlag && modeluiObj[field])
                     jsArr.push(modeluiObj[field]);
                 if (cssObj[field])
@@ -405,7 +430,7 @@ require(['mod'], function (mod) {
                 }
             } else {
                 dependCountObj = {};
-                for (var f in obj) {
+                for (var f in allJsObj) {
                     modelRow.setValue(f, false);
                 }
                 for (var f in treeObj) {
@@ -450,6 +475,16 @@ require(['mod'], function (mod) {
     }
     gridEnabled(false);
     app.getComp('gridBase').setEnable(false);
+
+    /*导航开关*/
+    u.on(document.getElementById('navId'), 'click', function () {
+        u.addClass(this, 'nav-open');
+        u.addClass(document.getElementById('offId'),'open');
+    });
+    u.on(document.getElementById('offId'),'click',function () {
+        u.removeClass(this,'open')
+    });
+
 });
 
 

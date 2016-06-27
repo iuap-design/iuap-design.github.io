@@ -13,32 +13,39 @@ var minifycss = require('gulp-minify-css');
 var autoprefixer = require('gulp-autoprefixer');
 
 var AUTOPREFIXER_BROWSERS = [
-  'ie >= 11',
-  'edge >= 20',
-  'ff >= 44',
-  'chrome >= 48',
-  'safari >= 8',
-  'opera >= 35',
-  'ios >= 8'
+	'ie >= 11',
+	'edge >= 20',
+	'ff >= 44',
+	'chrome >= 48',
+	'safari >= 8',
+	'opera >= 35',
+	'ios >= 8'
 ];
-
-var gridJs = []
-var modelGridJs = ['../bin/grid/js/dtJs/grid.js']
-var treeJs = ['../bin/tree/js/treeComp.js']
+var gridCss = getResolvePath('../bin/grid/css/grid.css');
+var treeJs = [getResolvePath('../bin/tree/js/treeComp.js')]
 var modeTreeJs = [
-  '../bin/tree/js/treeComp.js',
-  '../bin/kero/js/dtJs/tree.js'
+  	getResolvePath('../bin/tree/js/treeComp.js'),
+  	getResolvePath('../bin/kero/js/dtJs/tree.js')
 ]
-
+var treeCss = getResolvePath('../bin/tree/css/tree.css');
 var polyfillJs = [
-  '../bin/iuap-design/vendor/polyfill/core.js',
-  '../bin/iuap-design/vendor/polyfill/JsExtensions.js',
-  '../bin/iuap-design/vendor/polyfill/respond.js'
+  	getResolvePath('../bin/iuap-design/vendor/polyfill/core.js'),
+  	getResolvePath('../bin/iuap-design/vendor/polyfill/JsExtensions.js'),
+  	getResolvePath('../bin/iuap-design/vendor/polyfill/respond.js')
 ]
-var gridCss = '../bin/grid/css/grid.css';
-var treeCss = '../bin/tree/css/tree.css';
 var assets = ''; //暂时没处理，后续考虑
 
+var baseColorStr = '$color-primary: $palette-indigo-500 !default;';
+	baseColorStr += '$color-primary-dark: $palette-indigo-700 !default;';
+	baseColorStr += '$color-accent: $palette-pink-A200 !default;';
+
+/**
+	标记状态
+		doing 构建中
+		done 构建完成
+		down 第一次下载
+		finish 完成
+**/
 flagObj = {};
 
 function errHandle(err) {
@@ -47,7 +54,12 @@ function errHandle(err) {
 };
 
 function run(app, cb){
-  gulpRun(app,cb);
+	try{
+		gulpRun(app,cb);
+	}catch(e){
+
+	}
+  	
 }
 
 /**
@@ -58,8 +70,17 @@ function run(app, cb){
  */
 function gulpRun(app, cb){
 	var params = app.request.body,
-  		jsArr = params.jsArr?params.jsArr.split(','):[],
-  		cssArr = params.cssArr?params.cssArr.split(','):[],
+  		baseJsArr = params.jsArr?params.jsArr.split(','):[],
+  		jsArr = [];
+  	// 处理jsArr，转为getResolvePath( p)
+  	for(var i = 0; i < baseJsArr.length; i++){
+  		if(baseJsArr[i] != 'hasGrid' && baseJsArr[i] != 'hasTree' && baseJsArr[i] != 'hasPolyfill'){
+  			jsArr.push(getResolvePath(baseJsArr[i]));
+  		}else{
+  			jsArr.push(baseJsArr[i]);
+  		}
+  	}
+  	var	cssArr = params.cssArr?params.cssArr.split(','):[],
   		colorArr = params.colorArr?params.colorArr.split(','):[],
   		hasGrid = jsArr.indexOf('hasGrid'),
   		hasTree = jsArr.indexOf('hasTree'),
@@ -68,13 +89,22 @@ function gulpRun(app, cb){
   		jsHashStr = hash(params.jsArr + params.colorArr),
   		baseURL =  '../dist/pages/custom/temp/customized/' + jsHashStr,
   		settingStr = params.settingStr;
-	gulp.task('customizedGridTreePolyfill',function(){
 
+  	var colorStr = '$color-primary: ' + colorArr[0] + ',' + colorArr[1] + ',' + colorArr[2] + ' !default;';
+	colorStr += '$color-primary-dark: ' + colorArr[3] + ',' + colorArr[4] + ',' + colorArr[5] + ' !default;';
+	colorStr += '$color-accent: ' + colorArr[6] + ',' + colorArr[7] + ',' + colorArr[8] + ' !default;';
+	// 存储主色 辅色文件
+	var colorFilePath = '../dist/pages/custom/themeColors.scss'; 
+	// 存储引用css文件
+	var customizedCssFilePath = '../dist/pages/custom/customized.scss';
+	var setttingFilePath = baseURL + '/setting.txt';
+
+  	// 处理grid、tree、polyfill的压缩
+	gulp.task('customizedGridTreePolyfill',function(){
 		if(hasGrid > -1){
-			/*压缩grid*/
 			jsArr.splice(hasGrid,1)
 			var arr = [];
-			/* 将jsArr中的grid相关的放入arr */
+			// 将jsArr中的grid相关的放入arr 
 			for(var i = 0; i < jsArr.length;i++){
 				var jsStr =  jsArr[i];
 				if(jsStr.indexOf('bin/grid/js') > -1){
@@ -86,24 +116,22 @@ function gulpRun(app, cb){
 				jsArr.splice(index,1);
 			}
 			if(hasModel > -1){
-				arr.push('../bin/kero/js/dtJs/grid.js');
+				arr.push(getResolvePath('../bin/kero/js/dtJs/grid.js'));
 			}else{
 			}
-
 			gulp.src(arr)
-        .pipe(concat('u-grid.js'))
-        .pipe(gulp.dest(baseURL + '/js'))
-        .pipe(uglify())
-        .on('error', errHandle)
-        .pipe(rename('u-grid.min.js'))
-        .pipe(gulp.dest(baseURL + '/js'));
+	        	.pipe(concat('u-grid.js'))
+	        	.pipe(gulp.dest(getResolvePath(baseURL + '/js')))
+	        	.pipe(uglify())
+	        	.on('error', errHandle)
+	        	.pipe(rename('u-grid.min.js'))
+	        	.pipe(gulp.dest(getResolvePath(baseURL + '/js')));
 
-	    gulp.src(gridCss)
-	      .pipe(gulp.dest(baseURL + '/css'))
+	    	gulp.src(gridCss)
+	      		.pipe(gulp.dest(getResolvePath(baseURL + '/css')))
 		}
 
 		if(hasTree > -1){
-			/*压缩tree*/
 			jsArr.splice(hasTree,1)
 			var arr = [];
 
@@ -112,69 +140,68 @@ function gulpRun(app, cb){
 			}else{
 				arr = treeJs;
 			}
-
 			gulp.src(arr)
-		    .pipe(concat('u-tree.js'))
-		    .pipe(gulp.dest(baseURL + '/js'))
-		    .pipe(uglify())
-		    .on('error', errHandle)
-		    .pipe(rename('u-tree.min.js'))
-		    .pipe(gulp.dest(baseURL + '/js'));
+			    .pipe(concat('u-tree.js'))
+			    .pipe(gulp.dest(getResolvePath(baseURL + '/js')))
+			    .pipe(uglify())
+			    .on('error', errHandle)
+			    .pipe(rename('u-tree.min.js'))
+			    .pipe(gulp.dest(getResolvePath(baseURL + '/js')));
 
 			gulp.src(treeCss)
-			  .pipe(gulp.dest(baseURL + '/css'))
+				.pipe(gulp.dest(getResolvePath(baseURL + '/css')))
 		}
 
 		if(hasPolyfill > -1){
-			/*压缩grid*/
 			jsArr.splice(hasPolyfill,1)
 			gulp.src(polyfillJs)
-	        .pipe(concat('u-polyfill.js'))
-	        .pipe(gulp.dest(baseURL + '/js'))
-	        .pipe(uglify())
-	        .on('error', errHandle)
-	        .pipe(rename('u-polyfill.min.js'))
-	        .pipe(gulp.dest(baseURL + '/js'));
+		        .pipe(concat('u-polyfill.js'))
+		        .pipe(gulp.dest(getResolvePath(baseURL + '/js')))
+		        .pipe(uglify())
+		        .on('error', errHandle)
+		        .pipe(rename('u-polyfill.min.js'))
+		        .pipe(gulp.dest(getResolvePath(baseURL + '/js')));
 		}
 	});
 
+	// 处理asset
 	gulp.task('customizedAssets',['customizedGridTreePolyfill'],function(){
-		return gulp.src(assets)
-    	.pipe(gulp.dest(baseURL))
+		return  gulp.src(assets)
+    				.pipe(gulp.dest(getResolvePath(baseURL)))
 	});
 
+	// 处理css压缩
 	gulp.task('customizedCss',['customizedAssets'],function(){
-		/*压缩css*/
-		return gulp.src(customizedCssFilePath)
-      .pipe(sass().on('error',errHandle))
-      .pipe(base64().on('error',errHandle))
-      .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
-      .pipe(rename('u.css'))
-      .pipe(gulp.dest(baseURL + '/css'))
-      //.pipe(sourcemaps.init())
-      .pipe(minifycss())
-      //.pipe(sourcemaps.write())
-      .pipe(rename('u.min.css'))
-      .pipe(gulp.dest(baseURL + '/css'));
+		return  gulp.src(getResolvePath(customizedCssFilePath))
+				    .pipe(sass().on('error',errHandle))
+				    .pipe(base64().on('error',errHandle))
+				    .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
+				    .pipe(rename('u.css'))
+				    .pipe(gulp.dest(getResolvePath(baseURL + '/css')))
+				    .pipe(minifycss())
+				    .pipe(rename('u.min.css'))
+				    .pipe(gulp.dest(getResolvePath(baseURL + '/css')));
 	});
 
+	// 处理js压缩
 	gulp.task('customizedJs',['customizedCss'],function(){
-		/*压缩js*/
-		return gulp.src(jsArr)
-				.pipe(concat('u.js'))
-				.pipe(gulp.dest(baseURL + '/js'))
-				.pipe(uglify())
-				.on('error', errHandle)
-				.pipe(rename('u.min.js'))
-				.pipe(gulp.dest(baseURL + '/js'))
+		return  gulp.src(jsArr)
+					.pipe(concat('u.js'))
+					.pipe(gulp.dest(getResolvePath(baseURL + '/js')))
+					.pipe(uglify())
+					.on('error', errHandle)
+					.pipe(rename('u.min.js'))
+					.pipe(gulp.dest(getResolvePath(baseURL + '/js')))
 	});
 
+	// 生成zip
 	gulp.task('customizedZip',['customizedJs'],function(){
-		return	gulp.src(baseURL + '/**')
-			.pipe(zip('UUI-1.0.0.zip'))
-			.pipe(gulp.dest(baseURL))
+		return	gulp.src(getResolvePath(baseURL + '/**'))
+					.pipe(zip('UUI-1.0.0.zip'))
+					.pipe(gulp.dest(getResolvePath(baseURL)))
 	});
 
+	// 执行完成之后修改状态
 	gulp.task('customizedConcurrent',['customizedZip'],function(){
 		flagObj[jsHashStr] = 'done';
 	});
@@ -183,71 +210,42 @@ function gulpRun(app, cb){
 	gulp.task('customized',['customizedConcurrent']);
 
 	function downFun(){
-		/*将主题颜色还原*/
+		// 将主题颜色还原
 		fs.writeFileSync(getResolvePath(colorFilePath),baseColorStr);
 
 		var filePath = baseURL + '/UUI-1.0.0.zip';
-    console.log(filePath);
 	    if (fs.existsSync(getResolvePath(filePath))){
 	      app.body=filePath;
 	      flagObj[jsHashStr] = 'finish';
 	    }else{
 	        console.log('file not find!');
 	    }
-
     	cb(null,"");
 	}
 
-	/* 标记状态
-		doing 构建中
-		done 构建完成
-		down 第一次下载
-		finish 完成
-	*/
-
-	/*设置主题颜色*/
-	var baseColorStr = '$color-primary: $palette-indigo-500 !default;';
-
-	baseColorStr += '$color-primary-dark: $palette-indigo-700 !default;';
-	baseColorStr += '$color-accent: $palette-pink-A200 !default;';
-
-	var colorStr = '$color-primary: ' + colorArr[0] + ',' + colorArr[1] + ',' + colorArr[2] + ' !default;';
-
-	colorStr += '$color-primary-dark: ' + colorArr[3] + ',' + colorArr[4] + ',' + colorArr[5] + ' !default;';
-
-	colorStr += '$color-accent: ' + colorArr[6] + ',' + colorArr[7] + ',' + colorArr[8] + ' !default;';
-
-	//themeColors写入主题颜色
-	//customized 写入需要压缩的css
-	var colorFilePath = '../dist/pages/custom/themeColors.scss';
-	var customizedCssFilePath = '../dist/pages/custom/customized.scss';
-	var setttingFilePath = baseURL + '/setting.txt';
-
-  var tempPath = getResolvePath('../dist/pages/custom/temp/customized');
-
+	// 正式开始执行程序，创建临时文件夹
+  	var tempPath = getResolvePath('../dist/pages/custom/temp/customized');
 	fs.exists( tempPath, function(exist) {
-    console.log( 'tempPath:'+ tempPath );
-    console.log( 'exist: ' + exist );
-
 		if(!exist){
 			fs.mkdirSync(getResolvePath('../dist/pages/custom/temp'));
 			fs.mkdirSync(getResolvePath('../dist/pages/custom/temp/customized'));
 		}
 	});
 
+	// 创建本次对应文件夹
 	fs.exists(getResolvePath(baseURL), function(exist) {
 		if(!exist){
  			fs.mkdirSync(getResolvePath(baseURL));
 		}
-	});
-
-	setTimeout(function(){
+		// 写入setting.txt
 		var writerStream = fs.createWriteStream(getResolvePath(setttingFilePath));
 		writerStream.write(settingStr);
 		writerStream.end();
-	},100)
+	});
 
+	// 写入主色、辅色变量文件
 	fs.writeFile(getResolvePath(colorFilePath),colorStr,function(e){
+		// 写入引入css文件
 		fs.writeFile(getResolvePath(customizedCssFilePath),cssArr.toString().replace(/\,/g,";"),function(e){
 			if(flagObj[jsHashStr]){
 			}else{
@@ -267,11 +265,12 @@ function gulpRun(app, cb){
 	});
 }
 
-/*
- *对jsStr和cssStr进行hash，用于判断是否生成过对应文件（未确定是否前端控制）
- */
 var I64BIT_TABLE = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-'.split('');
-
+/**
+ * [hash 对jsStr和cssStr进行hash，用于判断是否生成过对应文件（未确定是否前端控制）]
+ * @param  {[string]}   input [js及css拼接的字符串]
+ * @return {[string]}       [hash值]
+ */
 function hash(input){
     var hash = 5381;
     var i = input.length - 1;

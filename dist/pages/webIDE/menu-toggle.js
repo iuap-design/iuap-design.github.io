@@ -1,6 +1,10 @@
 (function(document, window, $) {
     'use strict';
   $(document).ready(function(){ 
+        
+    $(".iscroll-improve").mCustomScrollbar({theme:"minimal-dark"});
+    // $(".u-container-fluid.u-widget-bg").mCustomScrollbar({theme:"minimal-dark"});
+
     var togglebutton = $("#menubutton").find("i");
     var togglebar = $("#menubar");
 

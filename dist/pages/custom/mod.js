@@ -206,12 +206,6 @@ define(function(){
         uiModel:[
             'ui',
             'textfield',
-            'clockpicker',
-            'time',
-            'datetimepicker',
-            'year',
-            'month',
-            'yearmonth',
             'checkbox',
             'combobox',
             'radio',
@@ -224,7 +218,6 @@ define(function(){
             'pagination',
             'progress',
             'grid',
-            'tree',
             'tooltip',
             'multilang',
             'palette',
@@ -259,18 +252,31 @@ define(function(){
             'Sort',
             'SumRow',
             'Swap',
-            'Tree']
+            'Tree'],
+
+        treeModel:[
+            'tree'
+        ],
+        datetimeModel:[
+            'time',
+            'datetimepicker',
+            'year',
+            'month',
+            'yearmonth',
+            'clockpicker'
+        ]
     };
     /**
      * 模块名称集合
      * @type {{all: string, coreModel: string, core: string, ajax: string, event: string, utilModel: string, renderUtil: string, dateUtil: string, formater: string, hotKeys: string, masker: string, rsautils: string, modelModel: string, model: string, otherModel: string, polyfill: string, validate: string, uiModel: string, ui: string, textfield: string, clockpicker: string, time: string, datetimepicker: string, year: string, month: string, yearmonth: string, checkbox: string, combobox: string, radio: string, switch: string, button: string, dialog: string, message: string, loading: string, menu: string, pagination: string, progress: string, grid: string, tree: string, tooltip: string, multilang: string, palette: string, refer: string, ripple: string, shadow: string, autocomplete: string, layoutModel: string, datatable: string, tabs: string, card: string, navlayout: string, gridlayout: string, mdlayout: string, gridMode: string, gridBase: string, ColumnMenu: string, Drag: string, Edit: string, EditForm: string, Fixed: string, HeaderLevel: string, OverWidthHidden: string, Sort: string, SumRow: string, Swap: string, Tree: string}}
      */
     var captionObj = {
-        all:"全选/全部反选",
+        all:"全选/反选",
         coreModel:"核心模块",
         core:"核心代码",
         ajax:"请求处理",
         event:"事件处理",
+
         utilModel:"工具模块",
         renderUtil:"渲染工具",
         dateUtil:"日期工具",
@@ -278,20 +284,19 @@ define(function(){
         hotKeys:"热键工具",
         masker:"显示格式化工具",
         rsautils:"数据加密",
+
         modelModel:"模型模块",
         model:"模型",
+
         otherModel:"其他模块",
         polyfill:"IE8兼容",
         validate:"校验处理",
-        uiModel:"ui控件模块",
+
+        uiModel:"控件模块",
         ui:"ui基础",
         textfield:"输入框控件",
-        clockpicker:"时分钟表控件",
-        time:"时分输入控件",
-        datetimepicker:"日期控件",
-        year:"年控件",
-        month:"月控件",
-        yearmonth:"年月控件",
+
+
         checkbox:"复选框控件",
         combobox:"下拉控件",
         radio:"单选控件",
@@ -304,7 +309,7 @@ define(function(){
         pagination:"分页控件",
         progress:"进度条控件",
         grid:"表格控件",
-        tree:"树控件",
+
         tooltip:"工具栏控件",
         multilang:"多语控件",
         palette:"调色板",
@@ -312,6 +317,7 @@ define(function(){
         ripple:"点击特效",
         shadow:"阴影",
         autocomplete:"自定义控件",
+
         layoutModel:"布局模块",
         datatable:"表格布局",
         tabs:"页签布局",
@@ -319,8 +325,9 @@ define(function(){
         navlayout:"导航布局",
         gridlayout:"栅格布局",
         mdlayout:"主从布局",
-        // resets:"",     
-        gridMode:"表格控件定制",
+        // resets:"",
+
+        gridMode:"表格控件",
         gridBase:"基础表格",
         ColumnMenu:"表头操作",
         Drag:"拖拽",
@@ -333,7 +340,18 @@ define(function(){
         Sort:"排序",
         SumRow:"合计",
         Swap:"交换列",
-        Tree:"树表"
+        Tree:"树表",
+
+        treeModel:'树插件',
+        tree:"树插件",
+
+        datetimeModel:'日期插件',
+        datetimepicker:"日期插件",
+        year:"年插件",
+        month:"月插件",
+        yearmonth:"年月插件",
+        clockpicker:"时分钟表插件",
+        time:"时分输入插件"
     };
     /**
      * css样式集合
@@ -642,7 +660,6 @@ define(function(){
             'tooltip'
         ]
     };
-
     var modeDependObj = {
         grid:[
             'textfield',
@@ -938,9 +955,21 @@ define(function(){
         '48,63,159',
         '255,64,129'
     ];
-
+    /*页面模型盒子id集合*/
+    var modelIdArr=[
+        'colorModel',
+        'coreModel',
+        'utilModel',
+        'modelModel',
+        'uiModel',
+        'layoutModel',
+        'otherModel',
+        'gridModel',
+        'treeModel',
+        'dataTimeModel'
+    ];
     return {
-        obj:allJsObj,
+        allJsObj:allJsObj,
         treeObj:treeObj,
         captionObj:captionObj,
         cssObj:cssObj,
@@ -948,6 +977,7 @@ define(function(){
         dependObj:dependObj,
         modeDependObj:modeDependObj,
         colorBaseObj:colorBaseObj,
-        defaultColor:defaultColor
+        defaultColor:defaultColor,
+        modelIdArr:modelIdArr
     }
 });
