@@ -91,7 +91,7 @@ require(['mod'], function (mod) {
         return str;
     }
     };
-    var obj = mod.obj;
+    var allJsObj = mod.allJsObj;
     var treeObj = mod.treeObj;
     var captionObj = mod.captionObj;
     var cssObj = mod.cssObj;
@@ -111,13 +111,13 @@ require(['mod'], function (mod) {
     }
     /*确保obj中属性为最大集合 begin*/
     /*校验属性是否存在*/
-    util.checkObjKey(modeluiObj, obj, 'modeluiObj');
-    util.checkObjKey(cssObj, obj, 'cssObj');
+    util.checkObjKey(modeluiObj, allJsObj, 'modeluiObj');
+    util.checkObjKey(cssObj, allJsObj, 'cssObj');
     /*校验属性以及属性值是否存在*/
-    util.checkObjKeyValue(dependObj, obj, 'dependObj');
-    util.checkObjKeyValue(modeDependObj, obj, 'modeDependObj');
+    util.checkObjKeyValue(dependObj, allJsObj, 'dependObj');
+    util.checkObjKeyValue(modeDependObj, allJsObj, 'modeDependObj');
     /*校验属性值是否存在*/
-    util.checkObjValue(treeObj, obj, 'treeObj');
+    util.checkObjValue(treeObj, allJsObj, 'treeObj');
     /*提取className*/
     var headClassName='head-div',//头部提示类名
         contentClassName='containers ',//内容区域类名
@@ -169,6 +169,10 @@ require(['mod'], function (mod) {
     colorStr += colorRightStr;
     colorStr += '</div>';
     colorStr += '</div>';
+    var evalStr = '<div class='+evalOut+'><div class='+evalInner+'>下载文件setting.txt中保存了上次配置的信息，将信息复制至文本域中并点击执行可恢复上次配置。</div>';
+    evalStr += '<button id="eavl-button" class='+'"'+runButton+'"'+' >执行</button>';
+    evalStr += '<textarea style="width: 100%;height: 70px;"u-meta=\'{"id":"str","type":"textarea","data":"evalData","field":"str"}\'></textarea>';
+    evalStr += '</div>';
     // 遍历obj创建datatable的field字段，同时生成html列表
     for (var model in treeObj) {
         treemetaObj[model] = {};
@@ -188,7 +192,7 @@ require(['mod'], function (mod) {
             var firstClass = '';
             metaObj[field] = {};
             // if (i == 0)firstClass = 'tree-first-leaf';
-            contentStr += '<li  class="u-checkbox tree-leaf u-col-4" u-meta=\'{"id":"' + field + '","type":"u-checkbox","data":"modelData","field":"' + field + '","checkedValue":true,"unCheckedValue":false}\'>' + '<input type="checkbox" class='+'"'+listClassName.textInput+'"'+'>' + '<span class='+listClassName.textSpan+'>'
+            contentStr += '<li  class="u-checkbox tree-leaf u-col-md-4" u-meta=\'{"id":"' + field + '","type":"u-checkbox","data":"modelData","field":"' + field + '","checkedValue":true,"unCheckedValue":false}\'>' + '<input type="checkbox" class='+'"'+listClassName.textInput+'"'+'>' + '<span class='+listClassName.textSpan+'>'
                 /*+ field + ':' */
                 + captionObj[field] + '</span></li>';
         }
@@ -196,14 +200,16 @@ require(['mod'], function (mod) {
         contentStr += '</div>';
     }
     contentStr += '</div>';
+    wholeStr += headStr + contentStr + colorStr + evalStr;
+    wholeStr += '</div>';
     var contentStrArr=contentStr.split('<div class="tree-whole-div">');
-    var coreModel='<div>'+contentStrArr[2]+'</div>';
-    var utilModel='<div>'+contentStrArr[3]+'</div>';
-    var modelModel='<div>'+contentStrArr[4]+'</div>';
-    var uiModel='<div>'+contentStrArr[5]+'</div>';
-    var layoutModel='<div>'+contentStrArr[6]+'</div>';
-    var otherModel='<div>'+contentStrArr[7]+'</div>';
-    var gridModel='<div>'+contentStrArr[8]+'</div>';
+    var coreModel='<div class="tree-whole-div">'+contentStrArr[2]+'</div>';
+    var utilModel='<div class="tree-whole-div">'+contentStrArr[3]+'</div>';
+    var modelModel='<div class="tree-whole-div">'+contentStrArr[4]+'</div>';
+    var uiModel='<div class="tree-whole-div">'+contentStrArr[5]+'</div>';
+    var layoutModel='<div class="tree-whole-div">'+contentStrArr[6]+'</div>';
+    var otherModel='<div class="tree-whole-div">'+contentStrArr[7]+'</div>';
+    var gridModel='<div class="tree-whole-div">'+contentStrArr[8]+'</div>';
     document.getElementById('colorModel').appendChild(u.makeDOM(colorStr));
     document.getElementById('coreModel').appendChild(u.makeDOM(coreModel));
     document.getElementById('utilModel').appendChild(u.makeDOM(utilModel));
@@ -296,9 +302,9 @@ require(['mod'], function (mod) {
         if (r.getValue('model')) {
             modelFlag = true;
         }
-        for (var field in obj) {
+        for (var field in allJsObj) {
             if (r.getValue(field)) {
-                jsArr.push(obj[field]);
+                jsArr.push(allJsObj[field]);
                 if (modelFlag && modeluiObj[field])
                     jsArr.push(modeluiObj[field]);
                 if (cssObj[field])
@@ -423,7 +429,7 @@ require(['mod'], function (mod) {
                 }
             } else {
                 dependCountObj = {};
-                for (var f in obj) {
+                for (var f in allJsObj) {
                     modelRow.setValue(f, false);
                 }
                 for (var f in treeObj) {
@@ -468,6 +474,15 @@ require(['mod'], function (mod) {
     }
     gridEnabled(false);
     app.getComp('gridBase').setEnable(false);
+
+    /*导航开关*/
+    u.on(document.getElementById('navId'), 'click', function () {
+        u.addClass(this, 'nav-open');
+        u.addClass(document.getElementById('offId'),'open');
+    });
+    u.on(document.getElementById('offId'),'click',function () {
+        u.removeClass(this,'open')
+    })
 });
 
 

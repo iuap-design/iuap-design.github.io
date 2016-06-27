@@ -266,11 +266,12 @@ define(function(){
      * @type {{all: string, coreModel: string, core: string, ajax: string, event: string, utilModel: string, renderUtil: string, dateUtil: string, formater: string, hotKeys: string, masker: string, rsautils: string, modelModel: string, model: string, otherModel: string, polyfill: string, validate: string, uiModel: string, ui: string, textfield: string, clockpicker: string, time: string, datetimepicker: string, year: string, month: string, yearmonth: string, checkbox: string, combobox: string, radio: string, switch: string, button: string, dialog: string, message: string, loading: string, menu: string, pagination: string, progress: string, grid: string, tree: string, tooltip: string, multilang: string, palette: string, refer: string, ripple: string, shadow: string, autocomplete: string, layoutModel: string, datatable: string, tabs: string, card: string, navlayout: string, gridlayout: string, mdlayout: string, gridMode: string, gridBase: string, ColumnMenu: string, Drag: string, Edit: string, EditForm: string, Fixed: string, HeaderLevel: string, OverWidthHidden: string, Sort: string, SumRow: string, Swap: string, Tree: string}}
      */
     var captionObj = {
-        all:"全选/全部反选",
+        all:"全选/反选",
         coreModel:"核心模块",
         core:"核心代码",
         ajax:"请求处理",
         event:"事件处理",
+
         utilModel:"工具模块",
         renderUtil:"渲染工具",
         dateUtil:"日期工具",
@@ -278,12 +279,15 @@ define(function(){
         hotKeys:"热键工具",
         masker:"显示格式化工具",
         rsautils:"数据加密",
+
         modelModel:"模型模块",
         model:"模型",
+
         otherModel:"其他模块",
         polyfill:"IE8兼容",
         validate:"校验处理",
-        uiModel:"ui控件模块",
+
+        uiModel:"控件模块",
         ui:"ui基础",
         textfield:"输入框控件",
         clockpicker:"时分钟表控件",
@@ -312,6 +316,7 @@ define(function(){
         ripple:"点击特效",
         shadow:"阴影",
         autocomplete:"自定义控件",
+
         layoutModel:"布局模块",
         datatable:"表格布局",
         tabs:"页签布局",
@@ -319,7 +324,8 @@ define(function(){
         navlayout:"导航布局",
         gridlayout:"栅格布局",
         mdlayout:"主从布局",
-        // resets:"",     
+        // resets:"",
+
         gridMode:"表格控件定制",
         gridBase:"基础表格",
         ColumnMenu:"表头操作",
@@ -642,7 +648,6 @@ define(function(){
             'tooltip'
         ]
     };
-
     var modeDependObj = {
         grid:[
             'textfield',
@@ -938,9 +943,8 @@ define(function(){
         '48,63,159',
         '255,64,129'
     ];
-
     return {
-        obj:allJsObj,
+        allJsObj:allJsObj,
         treeObj:treeObj,
         captionObj:captionObj,
         cssObj:cssObj,

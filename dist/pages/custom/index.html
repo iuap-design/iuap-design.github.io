@@ -11,7 +11,7 @@
     <link href="/dist/static/ionicons/ionicons.css" rel="stylesheet" media="screen">
 </head>
 <body>
-<div class="offcanvas-nav">
+<div id="offId" class="offcanvas-nav">
     <div class="nav-head">
         <div class="top-bar">
             <div class="nav-toggle" data-offcanvas="close"><i class="flaticon-list26"></i></div>
@@ -86,7 +86,7 @@
             <a href="/dist/pages/webIDE/index.html" class="action-btn" target="_blank">WebIDE</a>
             <a href="/dist/pages/kero/index.html" class="action-btn">Kero</a>
             <a href="/dist/pages/custom/index.html" class="btn btn-ghost btn-primary btn-sm icon-left"> 定制 </a>
-            <div class="nav-toggle" data-offcanvas="open"><i class="flaticon-list26"></i></div>
+            <div id="navId" class="nav-toggle" data-offcanvas="open"><i class="flaticon-list26"></i></div>
         </div>
     </div>
 </header><!-- Navbar End -->
@@ -103,13 +103,14 @@
             </div>
         </div>
     </div>
+    <div>
     <div class="u-container">
     <!--全选-->
     <div class="tree-whole-div" id="selectAll">
         <div class="tree-div">
             <label class="u-checkbox tree-parent is-upgraded" u-meta="{&quot;id&quot;:&quot;all&quot;,&quot;type&quot;:&quot;u-checkbox&quot;,&quot;data&quot;:&quot;treeData&quot;,&quot;field&quot;:&quot;all&quot;,&quot;checkedValue&quot;:true,&quot;unCheckedValue&quot;:false}">
                 <input type="checkbox" class="u-checkbox-input">
-                <span class="u-checkbox-label select">全选/全部反选</span>
+                <span class="u-checkbox-label select">全选/反选</span>
                 <span class="u-checkbox-focus-helper"></span>
                 <span class="u-checkbox-outline">
                     <span class="u-checkbox-tick-outline"></span>
@@ -121,63 +122,62 @@
         </div>
     </div>
         <!--iUAP Design定制资源下载-->
-        <h2>1、iUAP Design资源定制下载</h2>
-        <div id="iuap">
+        <h2 class="title">iUAP Design资源定制下载</h2>
+        <div id="iuap" >
             <div class="color-whole-div">
-                <!--<h2>1.1颜色定制</h2>-->
+                <div class="tree-icon-color">颜色定制</div>
                 <div class="color-head-div" id="colorModel">
                 </div>
             </div>
             <div class="color-whole-div">
                 <!--<h2>1.2核心模块</h2>-->
-                <div class="tree-whole-div" id="coreModel">
+                <div  id="coreModel">
 
                 </div>
             </div>
 
             <div class="color-whole-div">
                 <!--<h2>1.3工具模块</h2>-->
-                <div class="tree-whole-div" id="utilModel">
+                <div  id="utilModel">
 
                 </div>
             </div>
             <div class="color-whole-div">
                 <!--<h2>1.4布局模块</h2>-->
-                <div class="tree-whole-div" id="layoutModel">
+                <div id="layoutModel">
 
                 </div>
             </div>
             <div class="color-whole-div">
                 <!--<h2>1.5其它模块</h2>-->
-                <div class="tree-whole-div" id="otherModel">
+                <div  id="otherModel">
 
                 </div>
             </div>
             <div class="color-whole-div">
                 <!--<h2>1.6控件模块</h2>-->
-                <div class="tree-whole-div" id="uiModel">
+                <div  id="uiModel">
 
                 </div>
             </div>
 
         </div>
         <!--插件下载-->
-        <h2>2、kero资源定制下载</h2>
+        <h2 class="title">kero资源定制下载</h2>
         <div id="plugin">
             <div class="color-whole-div">
                 <!--<h2>2.1模型模块</h2>-->
-                <div class="tree-whole-div" id="modelModel">
+                <div  id="modelModel">
 
                 </div>
             </div>
         </div>
         <!--kero资源定制下载-->
-        <h2>3、插件下载</h2>
+        <h2 class="title">插件下载</h2>
         <div id="kero">
             <div class="color-whole-div">
                 <!--<h2>3.1表单控件</h2>-->
-                <div class="tree-whole-div" id="gridModel">
-
+                <div  id="gridModel">
                 </div>
             </div>
         </div>
@@ -188,10 +188,8 @@
             下载
         </button>
     </div>
+    </div>
 </div>
-
-
-
 <footer class="footer">
     <div class="container space-top">
         <!-- Footer Head -->
@@ -208,6 +206,5 @@
 <script src="http://design.yyuap.com/static/uui-original/1.0.2/js/u-polyfill.min.js"></script>
 <script src="http://design.yyuap.com/static/uui-original/1.0.2/js/u.min.js"></script>
 <script src="http://design.yyuap.com/static/requirejs/require.js" data-main="custom"></script>
-
 </body>
 </html>
