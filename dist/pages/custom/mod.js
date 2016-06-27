@@ -206,12 +206,6 @@ define(function(){
         uiModel:[
             'ui',
             'textfield',
-            'clockpicker',
-            'time',
-            'datetimepicker',
-            'year',
-            'month',
-            'yearmonth',
             'checkbox',
             'combobox',
             'radio',
@@ -224,7 +218,6 @@ define(function(){
             'pagination',
             'progress',
             'grid',
-            'tree',
             'tooltip',
             'multilang',
             'palette',
@@ -259,7 +252,19 @@ define(function(){
             'Sort',
             'SumRow',
             'Swap',
-            'Tree']
+            'Tree'],
+
+        treeModel:[
+            'tree'
+        ],
+        datetimeModel:[
+            'time',
+            'datetimepicker',
+            'year',
+            'month',
+            'yearmonth',
+            'clockpicker'
+        ]
     };
     /**
      * 模块名称集合
@@ -290,12 +295,8 @@ define(function(){
         uiModel:"控件模块",
         ui:"ui基础",
         textfield:"输入框控件",
-        clockpicker:"时分钟表控件",
-        time:"时分输入控件",
-        datetimepicker:"日期控件",
-        year:"年控件",
-        month:"月控件",
-        yearmonth:"年月控件",
+
+
         checkbox:"复选框控件",
         combobox:"下拉控件",
         radio:"单选控件",
@@ -308,7 +309,7 @@ define(function(){
         pagination:"分页控件",
         progress:"进度条控件",
         grid:"表格控件",
-        tree:"树控件",
+
         tooltip:"工具栏控件",
         multilang:"多语控件",
         palette:"调色板",
@@ -326,7 +327,7 @@ define(function(){
         mdlayout:"主从布局",
         // resets:"",
 
-        gridMode:"表格控件定制",
+        gridMode:"表格插件",
         gridBase:"基础表格",
         ColumnMenu:"表头操作",
         Drag:"拖拽",
@@ -339,7 +340,18 @@ define(function(){
         Sort:"排序",
         SumRow:"合计",
         Swap:"交换列",
-        Tree:"树表"
+        Tree:"树表",
+
+        treeModel:'树插件',
+        tree:"树插件",
+
+        datetimeModel:'日期插件',
+        datetimepicker:"日期插件",
+        year:"年插件",
+        month:"月插件",
+        yearmonth:"年月插件",
+        clockpicker:"时分钟表插件",
+        time:"时分输入插件"
     };
     /**
      * css样式集合
@@ -943,6 +955,18 @@ define(function(){
         '48,63,159',
         '255,64,129'
     ];
+    /*页面模型盒子id集合*/
+    var modelIdArr=[
+        'coreModel',
+        'utilModel',
+        'modelModel',
+        'uiModel',
+        'layoutModel',
+        'otherModel',
+        'gridModel',
+        'treeModel',
+        'dataTimeModel'
+    ];
     return {
         allJsObj:allJsObj,
         treeObj:treeObj,
@@ -952,6 +976,7 @@ define(function(){
         dependObj:dependObj,
         modeDependObj:modeDependObj,
         colorBaseObj:colorBaseObj,
-        defaultColor:defaultColor
+        defaultColor:defaultColor,
+        modelIdArr:modelIdArr
     }
 });

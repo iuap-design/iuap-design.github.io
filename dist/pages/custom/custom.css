@@ -1,83 +1,89 @@
-.banner{
-	width: 100%;
-	overflow: hidden;
-	background-color: #0088cc;
+.banner {
+    width: 100%;
+    overflow: hidden;
+    background-color: #0088cc;
 }
+
 .banner-content {
-	margin: 0 auto;
-	padding: 30px 0 10px 0;
-	color: #fff;
+    margin: 0 auto;
+    padding: 30px 0 10px 0;
+    color: #fff;
 }
+
 .banner-content h1 {
-	font-size: 30px;
+    font-size: 30px;
 }
+
 .banner-content p {
-	font-size: 16px;
-	line-height: 1.5;
-	margin-bottom: 20px;
-}
-.u-bottom-button{
-	position: relative;
-	display: block;
-	width: 100%;
-	font-size: 30px;
-	line-height: 1;
-	text-align: center;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-	background: #007ae3;
-	color: #FFFFFF;
-	padding: 10px 20px;
-}
-.u-bottom-button:hover{
-	background: #1874CD;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
-.tree-whole-div{
-	border-bottom:1px dotted #666666;
-	padding: 20px 50px;
+.u-bottom-button {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background: #007ae3;
+    color: #FFFFFF;
+
 }
 
-.tree-icon{
-	position: relative;
-	color: #007ae3;
-	left: -15px;
-}
-.tree-parent{
-	width: 50%;
-	padding-right: 30px;
-	height: auto;
+.u-bottom-button:hover {
+    background: #1874CD;
 }
 
-.tree-leaf{
-	height: auto;
-	display: block;
-	float: left;
+.tree-whole-div {
+    border-bottom: 1px dotted #666666;
+    padding: 10px 0;
 }
-@media (min-width: 992px){
-	.u-col-md-4 {
-		width: 33.33333%;
-	}
+
+.tree-icon {
+    position: relative;
+    color: #007ae3;
+    left: -15px;
 }
-.tree-first-leaf{
-	display: inline-block;
+
+.tree-parent {
+    width: 50%;
+    padding-right: 30px;
+    height: auto;
+    display: block;
+    position: relative;
+    top: -23px;
+    left: 92px;
+}
+
+.tree-leaf {
+    height: auto;
+    display: block;
+    float: left;
+}
+
+@media (min-width: 992px) {
+    .u-col-md-4 {
+        width: 33.33333%;
+    }
+}
+
+.tree-first-leaf {
+    display: inline-block;
     left: 0;
 }
 
-.color-whole-div{
-	padding: 20px 30px;
+.color-whole-div {
+    padding: 10px 0;
 }
 
-.color-head-div{
-	padding-bottom:20px;
+.color-head-div {
+    padding-bottom: 20px;
 }
 
-.color-input-div{
-	padding-bottom:20px;
+.color-input-div {
+    padding-bottom: 20px;
 }
 
-.color-input{
+.color-input {
     margin-right: 10%;
     min-width: 70px;
     width: 15%;
@@ -85,51 +91,104 @@
     padding-bottom: 0;
 }
 
-.color-content-div{
-	display: block;
+.color-content-div {
+    display: block;
 }
 
-.color-left-div{
+.color-left-div {
     width: 50%;
     display: inline-block;
 }
 
-.color-right-div{
-	display: inline-block;
+.color-right-div {
+    display: inline-block;
     left: 0;
     width: 50%;
 }
 
-.color-div{
-	display: inline-block;
-	width: 100px;
-	height: 20px;
+.color-div {
+    display: inline-block;
+    width: 100px;
+    height: 20px;
 }
 
-.eval-whole-div{
-	position: relative;
-	padding: 20px 50px;
+.eval-whole-div {
+    position: relative;
+    padding: 20px 50px;
 }
 
-.eval-head-div{
-	padding-bottom:20px;
+.eval-head-div {
+    padding-bottom: 20px;
 }
 
-.u-eval-button{
-	position: absolute;
-	right:50px;
-	top:10px;
-	display: block;
+.u-eval-button {
+    position: relative;
+    top: -38px;
+    display: block;
+    float: right;
+    padding: 2px;
+    background: #F9F9F9;
 }
-.btn-whole{
-	position: relative;
-	padding: 20px 50px;
+
+.btn-whole {
+    position: relative;
+    padding: 20px 0;
 }
-.title{
-	padding: 20px 30px;
+
+.title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #5A5A5A;
+    font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
 }
-.tree-icon-color{
-	position: relative;
-	color: #007ae3;
-	left: 30px;
+
+.tree-icon-color {
+    position: relative;
+    color: #007ae3;
+    left: 30px;
+}
+
+.textDiv {
+    /*background: #F9F9F9;*/
+    margin-left: 0;
+    padding: 5px;
+    width: 100%;
+}
+
+.set {
+    position: relative;
+}
+
+.u-checkbox-outline {
+    margin-left: 10px;
+}
+
+.u-checkbox-label {
+    margin: 10px;
+}
+
+.second-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 300;
+    font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+    color: #5A5A5A;
+}
+.select-module{
+    position: absolute;
+    top: -10px;
+}
+.checkbox-select-module{
+    position: absolute;
+    top: 10px;
+}
+.select-all{
+    width: 50%;
+    padding-right: 30px;
+    height: auto;
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
 }
