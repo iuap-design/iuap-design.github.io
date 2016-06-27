@@ -7,6 +7,7 @@
 	"description":"UI Framework For Enterprise",
 	"language":"zh-hans",
 	"output": "../../dist/pages/kero",
+	"theme":"node_modules/gitbook-plugin-iuap-design/theme/",
 	"plugins":[
 		"anchor-navigation",
 		"expandable-chapters",
