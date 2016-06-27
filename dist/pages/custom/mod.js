@@ -326,7 +326,7 @@ define(function(){
         mdlayout:"主从布局",
         // resets:"",
 
-        gridMode:"表格控件定制",
+        gridMode:"表格控件",
         gridBase:"基础表格",
         ColumnMenu:"表头操作",
         Drag:"拖拽",

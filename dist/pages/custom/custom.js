@@ -141,10 +141,10 @@ require(['mod'], function (mod) {
             line:'tree-whole-div',/*每个模块的类名*/
             checkBoxDiv:'tree-icon',/*小模块标题行类名*/
             checkBoxSpan:'fa fa-minus-square-o',/*展开关闭按钮*/
-            textDiv:'tree-div u-row',/*小模块区域类名*/
+            textDiv:'tree-div u-row textDiv',/*小模块区域类名*/
             textLabel:'u-checkbox tree-parent',/*小模块每行的类名*/
             textInput:'u-checkbox-input',/*小模块选择框类名*/
-            textSpan:'u-checkbox-label'/*小模块名类名*/
+            textSpan:'u-checkbox-label select-module'/*小模块名类名*/
         };
     /*确保obj中属性为最大集合 end*/
     var app, viewModel,metaObj = {},treemetaObj = {},wholeStr = '<div>',
@@ -178,22 +178,18 @@ require(['mod'], function (mod) {
         treemetaObj[model] = {};
         contentStr += '<div class='+'"'+listClassName.line+'"'+'>';
         if (model != 'all')
-            contentStr += '<div class='+listClassName.checkBoxDiv+'>' +
-                /*'<span class='+'"'+listClassName.checkBoxSpan+'"'+'></span> ' +model + ':' +*/
-                 captionObj[model] + '<span  class='+'"'+listClassName.textLabel+'"'+' u-meta=\'{"id":"' + model + '","type":"u-checkbox","data":"treeData","field":"' + model + '","checkedValue":true,"unCheckedValue":false}\'>' +
-                '<input type="checkbox" class='+'"'+listClassName.textInput+'"'+'>'
-                + '<span class='+listClassName.textSpan+'>'
-                /*+ model + ':' + captionObj[model]*/
-                + '全选</span></span></div>';
+        contentStr += '<div class="second-title">' +captionObj[model] +
+            '<span  class='+'"'+listClassName.textLabel+'"'+' u-meta=\'{"id":"' + model + '","type":"u-checkbox","data":"treeData","field":"' + model + '","checkedValue":true,"unCheckedValue":false}\'>' +
+            '<input type="checkbox" class='+'"'+listClassName.textInput+'"'+'>' +
+            '<span class='+'"'+listClassName.textSpan+'"'+'>全选</span>' +
+            '</span>' +
+            '</div>';
         contentStr += '<ul class='+'"'+listClassName.textDiv+'"'+'>';
-        
         for (var i = 0; i < treeObj[model].length; i++) {
             var field = treeObj[model][i];
             var firstClass = '';
             metaObj[field] = {};
-            // if (i == 0)firstClass = 'tree-first-leaf';
             contentStr += '<li  class="u-checkbox tree-leaf u-col-md-4" u-meta=\'{"id":"' + field + '","type":"u-checkbox","data":"modelData","field":"' + field + '","checkedValue":true,"unCheckedValue":false}\'>' + '<input type="checkbox" class='+'"'+listClassName.textInput+'"'+'>' + '<span class='+listClassName.textSpan+'>'
-                /*+ field + ':' */
                 + captionObj[field] + '</span></li>';
         }
         contentStr += '</div>';
@@ -482,7 +478,8 @@ require(['mod'], function (mod) {
     });
     u.on(document.getElementById('offId'),'click',function () {
         u.removeClass(this,'open')
-    })
+    });
+
 });
 
 

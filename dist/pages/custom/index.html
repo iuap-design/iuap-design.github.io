@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>定制 | iUAP Design</title>
     <link rel="stylesheet" type="text/css" href="http://design.yyuap.com/static/uui-original/1.0.2/css/u.min.css">
     <link rel="stylesheet" href="http://design.yyuap.com/static/uui-original/1.0.2/css/u-extend.min.css">
     <link rel="stylesheet" href="http://design.yyuap.com/static/uui-original/1.0.2/fonts/font-awesome/css/font-awesome.css">
@@ -103,91 +103,98 @@
             </div>
         </div>
     </div>
-    <div>
     <div class="u-container">
     <!--全选-->
-    <div class="tree-whole-div" id="selectAll">
-        <div class="tree-div">
-            <label class="u-checkbox tree-parent is-upgraded" u-meta="{&quot;id&quot;:&quot;all&quot;,&quot;type&quot;:&quot;u-checkbox&quot;,&quot;data&quot;:&quot;treeData&quot;,&quot;field&quot;:&quot;all&quot;,&quot;checkedValue&quot;:true,&quot;unCheckedValue&quot;:false}">
-                <input type="checkbox" class="u-checkbox-input">
-                <span class="u-checkbox-label select">全选/反选</span>
-                <span class="u-checkbox-focus-helper"></span>
-                <span class="u-checkbox-outline">
-                    <span class="u-checkbox-tick-outline"></span>
-                </span>
-                <span style="overflow: hidden; position: relative;">
-                    <span class="u-ripple"></span>
-                </span>
-            </label>
-        </div>
-    </div>
-        <!--iUAP Design定制资源下载-->
-        <h2 class="title">iUAP Design资源定制下载</h2>
-        <div id="iuap" >
-            <div class="color-whole-div">
-                <div class="tree-icon-color">颜色定制</div>
-                <div class="color-head-div" id="colorModel">
-                </div>
-            </div>
-            <div class="color-whole-div">
-                <!--<h2>1.2核心模块</h2>-->
-                <div  id="coreModel">
-
-                </div>
-            </div>
-
-            <div class="color-whole-div">
-                <!--<h2>1.3工具模块</h2>-->
-                <div  id="utilModel">
-
-                </div>
-            </div>
-            <div class="color-whole-div">
-                <!--<h2>1.4布局模块</h2>-->
-                <div id="layoutModel">
-
-                </div>
-            </div>
-            <div class="color-whole-div">
-                <!--<h2>1.5其它模块</h2>-->
-                <div  id="otherModel">
-
-                </div>
-            </div>
-            <div class="color-whole-div">
-                <!--<h2>1.6控件模块</h2>-->
-                <div  id="uiModel">
-
-                </div>
-            </div>
-
-        </div>
-        <!--插件下载-->
-        <h2 class="title">kero资源定制下载</h2>
-        <div id="plugin">
-            <div class="color-whole-div">
-                <!--<h2>2.1模型模块</h2>-->
-                <div  id="modelModel">
-
-                </div>
+        <div class="tree-whole-div" id="selectAll">
+            <div class="tree-div">
+                <label class="u-checkbox tree-parent is-upgraded select-all" u-meta="{&quot;id&quot;:&quot;all&quot;,&quot;type&quot;:&quot;u-checkbox&quot;,&quot;data&quot;:&quot;treeData&quot;,&quot;field&quot;:&quot;all&quot;,&quot;checkedValue&quot;:true,&quot;unCheckedValue&quot;:false}">
+                    <input type="checkbox" class="u-checkbox-input">
+                    <span class="u-checkbox-label select">全选/反选</span>
+                    <span class="u-checkbox-focus-helper"></span>
+                    <span class="u-checkbox-outline custom-checkbox">
+                        <span class="u-checkbox-tick-outline"></span>
+                    </span>
+                    <span style="overflow: hidden; position: relative;">
+                        <span class="u-ripple"></span>
+                    </span>
+                </label>
             </div>
         </div>
-        <!--kero资源定制下载-->
-        <h2 class="title">插件下载</h2>
-        <div id="kero">
-            <div class="color-whole-div">
-                <!--<h2>3.1表单控件</h2>-->
-                <div  id="gridModel">
+            <!--iUAP Design定制资源下载-->
+            <h2 class="title">iUAP Design资源定制下载</h2>
+            <div>
+                <div class="color-whole-div">
+                    <div class="second-title">颜色定制</div>
+                    <div class="color-head-div" id="colorModel">
+                    </div>
+                </div>
+                <div class="color-whole-div">
+                    <!--<h2>1.2核心模块</h2>-->
+                    <div  id="coreModel">
+
+                    </div>
+                </div>
+                <div class="color-whole-div">
+                    <!--<h2>1.3工具模块</h2>-->
+                    <div  id="utilModel">
+
+                    </div>
+                </div>
+                <div class="color-whole-div">
+                    <!--<h2>1.4布局模块</h2>-->
+                    <div id="layoutModel">
+
+                    </div>
+                </div>
+                <div class="color-whole-div">
+                    <!--<h2>1.5其它模块</h2>-->
+                    <div  id="otherModel">
+
+                    </div>
+                </div>
+                <div class="color-whole-div">
+                    <!--<h2>1.6控件模块</h2>-->
+                    <div  id="uiModel">
+
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="eval-whole-div"><div class="eval-head-div">下载文件setting.txt中保存了上次配置的信息，将信息复制至文本域中并点击执行可恢复上次配置。</div><button id="eavl-button" class="u-button raised u-eval-button" data-upgraded=",u.Button">执行<span class="u-button-container"><span class="u-ripple"></span></span></button><textarea style="width: 100%;height: 70px;" u-meta="{&quot;id&quot;:&quot;str&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;data&quot;:&quot;evalData&quot;,&quot;field&quot;:&quot;str&quot;}" title=""></textarea></div>
-    <div class="btn-whole" >
-        <button id="button" class="u-button raised u-bottom-button" style="background: #007ae3">
-            下载
-        </button>
-    </div>
+            <!--插件下载-->
+            <h2 class="title">kero资源定制下载</h2>
+            <div id="plugin">
+                <div class="color-whole-div">
+                    <!--<h2>2.1模型模块</h2>-->
+                    <div  id="modelModel">
+
+                    </div>
+                </div>
+            </div>
+            <!--kero资源定制下载-->
+            <h2 class="title">插件下载</h2>
+            <div id="kero">
+                <div class="color-whole-div">
+                    <!--<h2>3.1表单控件</h2>-->
+                    <div  id="gridModel">
+                    </div>
+                </div>
+            </div>
+            <!--配置-->
+            <h2 class="title">导入上次配置</h2>
+            <div id="set" class="set">
+                <div class="color-whole-div">
+                    <div class="eval-head-div">下载文件setting.txt中保存了上次配置的信息，将信息复制至文本域中并点击执行可恢复上次配置。
+                    </div>
+                    <button id="eavl-button" class=" raised u-eval-button" data-upgraded=",u.Button">导入
+                        <span class="u-button-container">
+                            <span class="u-ripple"></span>
+                        </span>
+                    </button>
+                    <textarea style="width: 100%;height: 70px;" u-meta="{&quot;id&quot;:&quot;str&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;data&quot;:&quot;evalData&quot;,&quot;field&quot;:&quot;str&quot;}" title=""></textarea>
+                </div>
+            </div>
+            <div class="btn-whole">
+                <button id="button" class="u-button raised u-bottom-button">下载</button>
+            </div>
     </div>
 </div>
 <footer class="footer">
@@ -208,3 +215,7 @@
 <script src="http://design.yyuap.com/static/requirejs/require.js" data-main="custom"></script>
 </body>
 </html>
+
+
+
+
