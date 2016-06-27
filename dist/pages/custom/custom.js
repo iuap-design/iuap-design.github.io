@@ -200,11 +200,25 @@ require(['mod'], function (mod) {
     wholeStr += headStr + contentStr + colorStr + evalStr;
     wholeStr += '</div>';
     var contentStrArr=contentStr.split('<div class="tree-whole-div">');
-
-    for(var i=2;i<=10;i++){
-        var modelTemp='<div class="tree-whole-div">'+contentStrArr[i]+'</div>';
-        document.getElementById(modelIdArr[i-2]).appendChild(u.makeDOM(modelTemp));
-    }
+    var coreModel='<div class="tree-whole-div">'+contentStrArr[2]+'</div>';
+    var utilModel='<div class="tree-whole-div">'+contentStrArr[3]+'</div>';
+    var modelModel='<div class="tree-whole-div">'+contentStrArr[4]+'</div>';
+    var uiModel='<div class="tree-whole-div">'+contentStrArr[5]+'</div>';
+    var layoutModel='<div class="tree-whole-div">'+contentStrArr[6]+'</div>';
+    var otherModel='<div class="tree-whole-div">'+contentStrArr[7]+'</div>';
+    var gridModel='<div class="tree-whole-div">'+contentStrArr[8]+'</div>';
+    var treeModel='<div class="tree-whole-div">'+contentStrArr[9]+'</div>';
+    var dataTimeModel='<div class="tree-whole-div">'+contentStrArr[10]+'</div>';
+    document.getElementById('colorModel').appendChild(u.makeDOM(colorStr));
+    document.getElementById('coreModel').appendChild(u.makeDOM(coreModel));
+    document.getElementById('utilModel').appendChild(u.makeDOM(utilModel));
+    document.getElementById('modelModel').appendChild(u.makeDOM(modelModel));
+    document.getElementById('uiModel').appendChild(u.makeDOM(uiModel));
+    document.getElementById('layoutModel').appendChild(u.makeDOM(layoutModel));
+    document.getElementById('otherModel').appendChild(u.makeDOM(otherModel));
+    document.getElementById('gridModel').appendChild(u.makeDOM(gridModel));
+    document.getElementById('treeModel').appendChild(u.makeDOM(treeModel));
+    document.getElementById('dataTimeModel').appendChild(u.makeDOM(dataTimeModel));
     u.on(document.getElementById('eavl-button'), 'click', function () {
         value = viewModel.evalData.getCurrentRow().getValue('str');
         eval(value)
