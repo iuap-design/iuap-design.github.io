@@ -71,10 +71,6 @@
 ************************************/
 @import'vendor/magnific-popup.css';
 
-/** Custom Scrollbar
-************************************/
-@import'vendor/jquery.mCustomScrollbar.css';
-
 
 /** 01.CSS RESET
 **********************************/
@@ -91,8 +87,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -103,7 +99,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -200,10 +196,10 @@ a.link-invert:focus {
 hr {
 	width: 100%;
 	margin: 0;
-	border-top: 1px solid #f2f2f2; 
+	border-top: 1px solid #f2f2f2;
 }
 .gray-bg hr {
-	border-top: 1px solid #cccccc; 
+	border-top: 1px solid #cccccc;
 }
 strong {
 	font-weight: 600;
@@ -398,12 +394,12 @@ ol {
 
 /* Page Heading */
 .page-heading {
-	padding-top: 56px; 
+	padding-top: 56px;
 	margin-bottom: 20px;
 }
 @media screen and (max-width: 991px) {
 	.page-heading {
-		padding-top: 40px; 
+		padding-top: 40px;
 	}
 }
 .page-heading .container {
@@ -881,7 +877,7 @@ label.error {
 	opacity: 1;
 }
 .response-holder.error {
-	color: #ff2d55; 
+	color: #ff2d55;
 }
 .response-holder.success {
 	color: #4cd964;
@@ -1048,13 +1044,13 @@ label.hover {
 }
 .light-color .size-lg .iradio:before,
 .light-color.size-lg .iradio:before {
-	background-color: #5e5e5e; 
+	background-color: #5e5e5e;
 }
 .light-color .size-lg .icheckbox:before,
 .light-color.size-lg .icheckbox:before,
 .light-color .size-lg.radio-alt .iradio:before,
 .light-color.size-lg.radio-alt .iradio:before {
-	color: #5e5e5e; 
+	color: #5e5e5e;
 }
 .light-color .radio-alt .iradio:before {
 	background-color: transparent;
@@ -1187,7 +1183,7 @@ label.hover {
 
 /* Ghost Buttons */
 .btn-ghost {
-	background: transparent; 
+	background: transparent;
 }
 .btn-ghost.btn-default {
 	border-color: rgb(49,49,49);
@@ -1232,7 +1228,7 @@ label.hover {
 	background-color: #ff2d55;
 }
 .btn-default, .btn-primary, .btn-success,
-.btn-info, .btn-warning, .btn-danger, 
+.btn-info, .btn-warning, .btn-danger,
 .btn-default:hover, .btn-primary:hover, .btn-success:hover,
 .btn-info:hover, .btn-warning:hover, .btn-danger:hover,
 .btn-ghost.btn-default:hover, .btn-ghost.btn-primary:hover, .btn-ghost.btn-success:hover,
@@ -1268,7 +1264,7 @@ label.hover {
 	font-size: 14px;
 }
 .btn [class^="flaticon-"], .btn [class*=" flaticon-"],
-.btn [class^="flaticon-"], .btn [class*=" flaticon-"] {   
+.btn [class^="flaticon-"], .btn [class*=" flaticon-"] {
 	font-size: 19px;
 	vertical-align: middle;
 	margin-left: 0;
@@ -1277,21 +1273,21 @@ label.hover {
 	margin-right: 1px;
 }
 .btn.icon-left [class^="flaticon-"], .btn.icon-left [class*=" flaticon-"],
-.btn.icon-left [class^="flaticon-"], .btn.icon-left [class*=" flaticon-"] {   
+.btn.icon-left [class^="flaticon-"], .btn.icon-left [class*=" flaticon-"] {
 	margin-right: 5px;
 }
 .btn i.icon-right {
 	margin-left: 1px;
 }
 .btn.icon-right [class^="flaticon-"], .btn.icon-right [class*=" flaticon-"],
-.btn.icon-right [class^="flaticon-"], .btn.icon-right [class*=" flaticon-"] {   
+.btn.icon-right [class^="flaticon-"], .btn.icon-right [class*=" flaticon-"] {
 	margin-left: 5px;
 }
 .btn.icon-left {
-	padding-left: 23px; 
+	padding-left: 23px;
 }
 .btn.icon-right {
-	padding-right: 23px; 
+	padding-right: 23px;
 }
 .btn-lg.icon-left {
 	padding-left: 28px;
@@ -1338,7 +1334,7 @@ label.hover {
 	font-size: 16px;
 	font-weight: normal;
 	text-transform: uppercase;
-} 
+}
 .btn-plus:before {
 	position: absolute;
 	display: block;
@@ -1373,19 +1369,19 @@ label.hover {
 	font-weight: normal;
 }
 .btn-light.btn-primary {
-	color: #007aff !important; 
+	color: #007aff !important;
 }
 .btn-light.btn-success {
-	color: #4cd964 !important; 
+	color: #4cd964 !important;
 }
 .btn-light.btn-info {
-	color: #5ac8fa !important; 
+	color: #5ac8fa !important;
 }
 .btn-light.btn-warning {
-	color: #ffcc00 !important; 
+	color: #ffcc00 !important;
 }
 .btn-light.btn-danger {
-	color: #ff2d55 !important; 
+	color: #ff2d55 !important;
 }
 .btn-ghost.btn-light {
 	color: #fff !important;
@@ -1403,7 +1399,7 @@ label.hover {
 	display: block;
 	width: 100%;
 	padding-left: 15px;
-	padding-right: 15px;  
+	padding-right: 15px;
 }
 .downloadable {
 	display: inline-block;
@@ -1576,7 +1572,7 @@ label.hover {
 	z-index: 10;
 	text-align: center;
 }
-.intro .column.c-left { 
+.intro .column.c-left {
 	width: 30%;
 }
 .intro .column.c-right {
@@ -1619,7 +1615,7 @@ label.hover {
 	background-image: url('../img/intro/iphone.png');
 	background-repeat: no-repeat;
 	background-size: cover;
-	padding: 151px 83px 0 84px; 
+	padding: 151px 83px 0 84px;
 	margin: 0 auto -500px auto;
 	overflow: hidden;
 	-webkit-transform: translateY(0) scale(1);
@@ -1814,7 +1810,7 @@ label.hover {
 	.intro .phone {
 		width: 390px;
 		height: 709px;
-		padding: 121px 67px 0 68px; 
+		padding: 121px 67px 0 68px;
 		margin-bottom: -420px;
 	}
 	.intro .phone:after {
@@ -1918,7 +1914,7 @@ label.hover {
 	.intro .phone {
 		width: 320px;
 		height: 582px;
-		padding: 100px 55px 0 56px; 
+		padding: 100px 55px 0 56px;
 		margin-bottom: -390px;
 	}
 	.intro .phone:after {
@@ -2090,9 +2086,9 @@ label.hover {
 	visibility: hidden;
 	-webkit-transform: translateX(100%);
 					transform: translateX(100%);
-	-webkit-transition: -webkit-transform 400ms cubic-bezier(0.785, 0.135, 0.150, 0.860), visibility 400ms; 
-  -moz-transition: transform 400ms cubic-bezier(0.785, 0.135, 0.150, 0.860), visibility 400ms; 
-  -o-transition: transform 400ms cubic-bezier(0.785, 0.135, 0.150, 0.860), visibility 400ms; 
+	-webkit-transition: -webkit-transform 400ms cubic-bezier(0.785, 0.135, 0.150, 0.860), visibility 400ms;
+  -moz-transition: transform 400ms cubic-bezier(0.785, 0.135, 0.150, 0.860), visibility 400ms;
+  -o-transition: transform 400ms cubic-bezier(0.785, 0.135, 0.150, 0.860), visibility 400ms;
   transition: transform 400ms cubic-bezier(0.785, 0.135, 0.150, 0.860), visibility 400ms; /* easeInOutCirc */
 }
 .offcanvas-nav.open {
@@ -2259,7 +2255,7 @@ label.hover {
 	z-index: 5;
 	top: 0;
 	right: 0;
-	padding-top: 6px; 
+	padding-top: 6px;
 }
 .offcanvas-nav .social-buttons a {
 	margin: 5px 0 10px 12px;
@@ -2305,7 +2301,7 @@ label.hover {
 	margin-right: 20px;
 }
 .offcanvas-nav .btn.icon-left {
-	padding-left: 23px; 
+	padding-left: 23px;
 }
 .offcanvas-nav a.nav-link,
 .offcanvas-nav .nav-link a {
@@ -2435,7 +2431,7 @@ label.hover {
 	line-height: 1.5;
 }
 .offcanvas-instagram {
-	padding-bottom: 30px; 
+	padding-bottom: 30px;
 }
 .offcanvas-instagram .instgr-row {
 	margin-bottom: 25px;
@@ -2496,8 +2492,8 @@ label.hover {
 		display: none;
 	}
 	.offcanvas-nav .btn {
-		padding-left: 18px; 
-		padding-right: 18px; 
+		padding-left: 18px;
+		padding-right: 18px;
 	}
 	.offcanvas-nav a.nav-link,
 	.offcanvas-nav .nav-link a {
@@ -2509,7 +2505,7 @@ label.hover {
 		margin-right: 20px;
 	}
 	.offcanvas-instagram {
-		padding-bottom: 15px; 
+		padding-bottom: 15px;
 	}
 	.offcanvas-instagram .instgr-row {
 		margin-bottom: 15px;
@@ -2992,7 +2988,7 @@ label.hover {
 }
 @media screen and (max-width: 1050px) {
 	.feature-tabs {
-		padding: 70px 15px 60px 15px; 
+		padding: 70px 15px 60px 15px;
 	}
 	.feature-tabs .tabs,
 	.feature-tabs .devices {
@@ -3357,7 +3353,7 @@ a.icon-block {
 .gallery-item.video-item:before {
 	font-size: 26px;
 	line-height: 36px;
-	padding-left: 7px; 
+	padding-left: 7px;
 	content: "\e0ea";
 	width: 36px;
 	border: 1px solid #fff;
@@ -3424,7 +3420,7 @@ a.icon-block {
 	-webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0);
 		 -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0);
 		 			box-shadow: 2px 2px 5px 0px rgba(0,0,0,0);
-} 
+}
 .gallery-item:hover figcaption {
 	visibility: visible;
 	opacity: 1;
@@ -3432,7 +3428,7 @@ a.icon-block {
 .gallery-item.download-item figcaption {
 	visibility: visible;
 	opacity: 1;
-	padding-top: 25.5%; 
+	padding-top: 25.5%;
 }
 .gallery-item.download-item:hover:before,
 .gallery-item.download-item:hover figcaption h3 {
@@ -3503,7 +3499,7 @@ a.icon-block {
 .split-block .column {
 	display: inline-block;
 	vertical-align: top;
-	padding: 70px 15px 30px 4%; 
+	padding: 70px 15px 30px 4%;
 }
 .split-block.img-left .column:first-child,
 .split-block.img-right .column:last-child {
@@ -3772,7 +3768,7 @@ a.icon-block {
 	top: 0;
 	left: 0;
 	color: #fff;
-	padding: 0 15px; 
+	padding: 0 15px;
 }
 .facebook-tile .inner {
 	padding-top: 26%;
@@ -3868,7 +3864,7 @@ a.icon-block {
 		float: none;
 		width: 100%;
 		max-width: 380px;
-		margin: auto; 
+		margin: auto;
 	}
 	.facebook-tile .inner {
 		padding-top: 26%;
@@ -3933,7 +3929,7 @@ a.icon-block {
 	font-weight: 300;
 	font-size: 60px;
 	white-space: nowrap;
-	padding: 22px 0; 
+	padding: 22px 0;
 	margin: 0 auto 35px auto;
 }
 .pricing-plan-title span {
@@ -4033,7 +4029,7 @@ a.icon-block {
 					transform: translateY(0);
 }
 .post-body {
-	padding: 45px 22px 15px 22px; 
+	padding: 45px 22px 15px 22px;
 }
 .post-title {
 	text-align: center;
@@ -4053,7 +4049,7 @@ a.icon-block {
 .post-title a:hover {
 	color: #007aff;
 }
-.post-title h2, 
+.post-title h2,
 .post-title h3 {
 	font-size: 24px;
 	font-weight: 300;
@@ -4205,11 +4201,11 @@ a.icon-block {
 /* Categories */
 .categories {
 	position: relative;
-	padding-top: 10px; 
+	padding-top: 10px;
 	margin-bottom: 38px;
 }
 .categories.with-grid-btn {
-	padding-left: 32px; 
+	padding-left: 32px;
 }
 .categories ul {
 	list-style: none;
@@ -4312,25 +4308,25 @@ a.icon-block {
 .featured-post .arrow {
 	height: 0px;
 	padding-top: 10px;
-	overflow: hidden; 
-	-webkit-transition: height .3s; 
-					transition: height .3s;  
+	overflow: hidden;
+	-webkit-transition: height .3s;
+					transition: height .3s;
 }
 .featured-post .arrow i {
 	font-size: 34px;
 	opacity: 0;
-	-webkit-transform: translateX(-40px); 
-					transform: translateX(-40px)  
-	-webkit-transition: all .3s .1s; 
-					transition: all .3s .1s;  
+	-webkit-transform: translateX(-40px);
+					transform: translateX(-40px)
+	-webkit-transition: all .3s .1s;
+					transition: all .3s .1s;
 }
 .featured-post:hover .arrow {
 	height: 75px;
 }
 .featured-post:hover .arrow i {
 	opacity: 1;
-	-webkit-transform: translateX(0); 
-					transform: translateX(0)  
+	-webkit-transform: translateX(0);
+					transform: translateX(0)
 }
 
 
@@ -4351,10 +4347,10 @@ a.icon-block {
 	margin-top: -9px;
 }
 .pagination .prev {
-	left: 0; 
+	left: 0;
 }
 .pagination .next {
-	right: 0; 
+	right: 0;
 }
 .pagination .prev i,
 .pagination .next i {
@@ -4475,7 +4471,7 @@ a.icon-block {
   position: absolute;
   cursor: pointer;
   border-radius: 4px;
-  background-color: rgba(0,122,255, 0.25); 
+  background-color: rgba(0,122,255, 0.25);
 }
 .slider-selection {
   position: absolute;
@@ -4858,7 +4854,7 @@ a.icon-block {
 	width: 100%;
 	height: 190px;
 	text-align: right;
-	padding: 32px 65px 0 0; 
+	padding: 32px 65px 0 0;
 }
 .bar-charts .chart .bar {
 	position: absolute;
@@ -4902,7 +4898,7 @@ a.icon-block {
 	}
 	.bar-charts .chart {
 		height: 170px;
-		padding: 44px 50px 0 0; 
+		padding: 44px 50px 0 0;
 	}
 	.bar-charts .chart h3 {
 		font-size: 40px;
@@ -4922,7 +4918,7 @@ a.icon-block {
 	}
 	.bar-charts .chart {
 		height: 140px;
-		padding: 39px 50px 0 0; 
+		padding: 39px 50px 0 0;
 	}
 	.bar-charts .chart h3 {
 		font-size: 30px;
@@ -4945,7 +4941,7 @@ a.icon-block {
 	}
 	.bar-charts .chart {
 		height: 120px;
-		padding: 42px 50px 0 0; 
+		padding: 42px 50px 0 0;
 	}
 	.bar-charts .chart h3 {
 		font-size: 18px;
@@ -5039,7 +5035,7 @@ a.icon-block {
 @media screen and (max-width: 768px) {
 	.contact-info {
 		padding-top: 280px;
-		padding-bottom: 40px; 
+		padding-bottom: 40px;
 	}
 	.ie .google-map {
 		min-height: 240px;
@@ -5154,7 +5150,7 @@ a.icon-block {
 	padding: 0;
 	list-style: none;
 	text-align: right;
-	padding-bottom: 12px; 
+	padding-bottom: 12px;
 }
 .footer-nav ul li {
 	display: inline-block;
@@ -5175,7 +5171,7 @@ a.icon-block {
 		padding-left: 0;
 	}
 	.footer-head .logo a {
-		margin: 0 auto 20px auto; 
+		margin: 0 auto 20px auto;
 	}
 	.footer .body,
 	.footer .body .column {
