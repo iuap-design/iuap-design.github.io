@@ -100,6 +100,7 @@ require(['mod'], function (mod) {
     var modeDependObj = mod.modeDependObj;
     var colorBaseObj = mod.colorBaseObj;
     var defaultColor = mod.defaultColor;
+    var modelIdArr=mod.modelIdArr;
     var colorObj = {};
     var gridObj = {};
     for (var color in colorBaseObj) {
@@ -199,21 +200,11 @@ require(['mod'], function (mod) {
     wholeStr += headStr + contentStr + colorStr + evalStr;
     wholeStr += '</div>';
     var contentStrArr=contentStr.split('<div class="tree-whole-div">');
-    var coreModel='<div class="tree-whole-div">'+contentStrArr[2]+'</div>';
-    var utilModel='<div class="tree-whole-div">'+contentStrArr[3]+'</div>';
-    var modelModel='<div class="tree-whole-div">'+contentStrArr[4]+'</div>';
-    var uiModel='<div class="tree-whole-div">'+contentStrArr[5]+'</div>';
-    var layoutModel='<div class="tree-whole-div">'+contentStrArr[6]+'</div>';
-    var otherModel='<div class="tree-whole-div">'+contentStrArr[7]+'</div>';
-    var gridModel='<div class="tree-whole-div">'+contentStrArr[8]+'</div>';
-    document.getElementById('colorModel').appendChild(u.makeDOM(colorStr));
-    document.getElementById('coreModel').appendChild(u.makeDOM(coreModel));
-    document.getElementById('utilModel').appendChild(u.makeDOM(utilModel));
-    document.getElementById('modelModel').appendChild(u.makeDOM(modelModel));
-    document.getElementById('uiModel').appendChild(u.makeDOM(uiModel));
-    document.getElementById('layoutModel').appendChild(u.makeDOM(layoutModel));
-    document.getElementById('otherModel').appendChild(u.makeDOM(otherModel));
-    document.getElementById('gridModel').appendChild(u.makeDOM(gridModel));
+
+    for(var i=2;i<=10;i++){
+        var modelTemp='<div class="tree-whole-div">'+contentStrArr[i]+'</div>';
+        document.getElementById(modelIdArr[i-2]).appendChild(u.makeDOM(modelTemp));
+    }
     u.on(document.getElementById('eavl-button'), 'click', function () {
         value = viewModel.evalData.getCurrentRow().getValue('str');
         eval(value)
