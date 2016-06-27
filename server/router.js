@@ -12,11 +12,6 @@ module.exports = {
         this.body = demos;//JSON.stringify('test');
     });
 
-    router.get('/loadMenuPure', function *(next) {
-        var demos = require('./demos-pure.json');
-        this.body = demos;//JSON.stringify('test');
-    });
-
     router.post('/getWidgets', function *(next) {
       var fs = require("fs");
       var url = this.request.body.wUrl;
@@ -64,7 +59,7 @@ module.exports = {
           styles,
           '</style>',
           '</head>',
-          '<body>',
+          '<body style="background-color: #eceff1">',
           htmls,
           '<script src="http://design.yyuap.com/static/jquery/jquery-1.11.2.js"></script>',
     	    '<script src="http://design.yyuap.com/static/knockout/knockout-3.2.0.debug.js"></script>',

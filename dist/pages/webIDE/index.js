@@ -185,7 +185,7 @@ $(function(){
 			if(location.href.indexOf('#') == -1) {
 				location=location.href+$('.u-nav-link-current').eq(0).attr('href');
 			}
-
+			 $(".iscroll-improve").mCustomScrollbar({theme:"minimal-dark"});
 		}
 	})
 
