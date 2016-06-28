@@ -13,43 +13,11 @@ progress控件
 <div class="example-content"><div id="p2" class="u-progress u-progress__indeterminate"></div>
 </p>
 </div>
-<div class="jstag" style="display:none">u.on(window, 'load', function() {
-    'use strict';
-    document.querySelector('#p11')['u.Progress'].setProgress(69);
-    document.querySelector('#p3')['u.Progress'].setProgress(33).setBuffer(87);
-    document.querySelector('#p12')['u.Progress'].setProgress(69);
-    document.querySelector('#p13')['u.Progress'].setProgress(69);
-    document.querySelector('#p14')['u.Progress'].setProgress(69);
-    document.querySelector('#p15')['u.Progress'].setProgress(69)
-    document.querySelector('#p16')['u.Progress'].setProgress(69);
-    document.querySelector('#p17')['u.Progress'].setProgress(69);
-    document.querySelector('#p22')['u.Progress'].setProgress(69);
-    document.querySelector('#p23')['u.Progress'].setProgress(69)
-    document.querySelector('#p24')['u.Progress'].setProgress(69);
-    document.querySelector('#p25')['u.Progress'].setProgress(69);
 
-});
-</div>
 <div class="examples-code"><pre><code>&lt;div id="p2" class="u-progress u-progress__indeterminate">&lt;/div>
 &lt;/p></code></pre>
 </div>
-<div class="examples-code"><pre><code>u.on(window, 'load', function() {
-    'use strict';
-    document.querySelector('#p11')['u.Progress'].setProgress(69);
-    document.querySelector('#p3')['u.Progress'].setProgress(33).setBuffer(87);
-    document.querySelector('#p12')['u.Progress'].setProgress(69);
-    document.querySelector('#p13')['u.Progress'].setProgress(69);
-    document.querySelector('#p14')['u.Progress'].setProgress(69);
-    document.querySelector('#p15')['u.Progress'].setProgress(69)
-    document.querySelector('#p16')['u.Progress'].setProgress(69);
-    document.querySelector('#p17')['u.Progress'].setProgress(69);
-    document.querySelector('#p22')['u.Progress'].setProgress(69);
-    document.querySelector('#p23')['u.Progress'].setProgress(69)
-    document.querySelector('#p24')['u.Progress'].setProgress(69);
-    document.querySelector('#p25')['u.Progress'].setProgress(69);
 
-});</code></pre>
-</div>
 
 ##不同颜色的Progress
 
@@ -71,17 +39,12 @@ progress控件
 <div class="jstag" style="display:none">u.on(window, 'load', function() {
     'use strict';
     document.querySelector('#p11')['u.Progress'].setProgress(69);
-    document.querySelector('#p3')['u.Progress'].setProgress(33).setBuffer(87);
     document.querySelector('#p12')['u.Progress'].setProgress(69);
     document.querySelector('#p13')['u.Progress'].setProgress(69);
     document.querySelector('#p14')['u.Progress'].setProgress(69);
     document.querySelector('#p15')['u.Progress'].setProgress(69)
     document.querySelector('#p16')['u.Progress'].setProgress(69);
     document.querySelector('#p17')['u.Progress'].setProgress(69);
-    document.querySelector('#p22')['u.Progress'].setProgress(69);
-    document.querySelector('#p23')['u.Progress'].setProgress(69)
-    document.querySelector('#p24')['u.Progress'].setProgress(69);
-    document.querySelector('#p25')['u.Progress'].setProgress(69);
 
 });
 </div>
@@ -102,17 +65,12 @@ progress控件
 <div class="examples-code"><pre><code>u.on(window, 'load', function() {
     'use strict';
     document.querySelector('#p11')['u.Progress'].setProgress(69);
-    document.querySelector('#p3')['u.Progress'].setProgress(33).setBuffer(87);
     document.querySelector('#p12')['u.Progress'].setProgress(69);
     document.querySelector('#p13')['u.Progress'].setProgress(69);
     document.querySelector('#p14')['u.Progress'].setProgress(69);
     document.querySelector('#p15')['u.Progress'].setProgress(69)
     document.querySelector('#p16')['u.Progress'].setProgress(69);
     document.querySelector('#p17')['u.Progress'].setProgress(69);
-    document.querySelector('#p22')['u.Progress'].setProgress(69);
-    document.querySelector('#p23')['u.Progress'].setProgress(69)
-    document.querySelector('#p24')['u.Progress'].setProgress(69);
-    document.querySelector('#p25')['u.Progress'].setProgress(69);
 
 });</code></pre>
 </div>
@@ -122,18 +80,7 @@ progress控件
 有缓冲标识的进度条
 <div class="jstag" style="display:none">u.on(window, 'load', function() {
     'use strict';
-    document.querySelector('#p11')['u.Progress'].setProgress(69);
     document.querySelector('#p3')['u.Progress'].setProgress(33).setBuffer(87);
-    document.querySelector('#p12')['u.Progress'].setProgress(69);
-    document.querySelector('#p13')['u.Progress'].setProgress(69);
-    document.querySelector('#p14')['u.Progress'].setProgress(69);
-    document.querySelector('#p15')['u.Progress'].setProgress(69)
-    document.querySelector('#p16')['u.Progress'].setProgress(69);
-    document.querySelector('#p17')['u.Progress'].setProgress(69);
-    document.querySelector('#p22')['u.Progress'].setProgress(69);
-    document.querySelector('#p23')['u.Progress'].setProgress(69)
-    document.querySelector('#p24')['u.Progress'].setProgress(69);
-    document.querySelector('#p25')['u.Progress'].setProgress(69);
 
 });
 </div>
@@ -141,18 +88,7 @@ progress控件
 </div>
 <div class="examples-code"><pre><code>u.on(window, 'load', function() {
     'use strict';
-    document.querySelector('#p11')['u.Progress'].setProgress(69);
     document.querySelector('#p3')['u.Progress'].setProgress(33).setBuffer(87);
-    document.querySelector('#p12')['u.Progress'].setProgress(69);
-    document.querySelector('#p13')['u.Progress'].setProgress(69);
-    document.querySelector('#p14')['u.Progress'].setProgress(69);
-    document.querySelector('#p15')['u.Progress'].setProgress(69)
-    document.querySelector('#p16')['u.Progress'].setProgress(69);
-    document.querySelector('#p17')['u.Progress'].setProgress(69);
-    document.querySelector('#p22')['u.Progress'].setProgress(69);
-    document.querySelector('#p23')['u.Progress'].setProgress(69)
-    document.querySelector('#p24')['u.Progress'].setProgress(69);
-    document.querySelector('#p25')['u.Progress'].setProgress(69);
 
 });</code></pre>
 </div>
@@ -164,14 +100,6 @@ progress控件
 `.u-progress-md` `.u-progress-sm`提供了额外可供选择的尺寸
 <div class="jstag" style="display:none">u.on(window, 'load', function() {
     'use strict';
-    document.querySelector('#p11')['u.Progress'].setProgress(69);
-    document.querySelector('#p3')['u.Progress'].setProgress(33).setBuffer(87);
-    document.querySelector('#p12')['u.Progress'].setProgress(69);
-    document.querySelector('#p13')['u.Progress'].setProgress(69);
-    document.querySelector('#p14')['u.Progress'].setProgress(69);
-    document.querySelector('#p15')['u.Progress'].setProgress(69)
-    document.querySelector('#p16')['u.Progress'].setProgress(69);
-    document.querySelector('#p17')['u.Progress'].setProgress(69);
     document.querySelector('#p22')['u.Progress'].setProgress(69);
     document.querySelector('#p23')['u.Progress'].setProgress(69)
     document.querySelector('#p24')['u.Progress'].setProgress(69);
@@ -189,14 +117,7 @@ progress控件
 </div>
 <div class="examples-code"><pre><code>u.on(window, 'load', function() {
     'use strict';
-    document.querySelector('#p11')['u.Progress'].setProgress(69);
-    document.querySelector('#p3')['u.Progress'].setProgress(33).setBuffer(87);
-    document.querySelector('#p12')['u.Progress'].setProgress(69);
-    document.querySelector('#p13')['u.Progress'].setProgress(69);
-    document.querySelector('#p14')['u.Progress'].setProgress(69);
-    document.querySelector('#p15')['u.Progress'].setProgress(69)
-    document.querySelector('#p16')['u.Progress'].setProgress(69);
-    document.querySelector('#p17')['u.Progress'].setProgress(69);
+    ['u.Progress'].setProgress(69);
     document.querySelector('#p22')['u.Progress'].setProgress(69);
     document.querySelector('#p23')['u.Progress'].setProgress(69)
     document.querySelector('#p24')['u.Progress'].setProgress(69);
@@ -214,34 +135,5 @@ progress控件
 </div>
 
 
-<!--### 示例1
 
-示例1说明
 
-### 示例2
-
-示例2说-->
-
-# API
-
-## 属性
-
-暂无
-<!--### 属性1
-
-属性1说明
-
-### 属性2
-
-属性2说明-->
-
-## 方法
-
-暂无
-<!--### 方法1
-
-方法1说明
-
-### 方法2
-
-方法2说明-->

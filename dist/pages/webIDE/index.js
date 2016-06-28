@@ -14,18 +14,29 @@ var viewModel = {
 				name:{},
 				url:{},
 				hasDt:{},
+				img:{},
 				sub:{type:'child',meta:{
 					name:{},
 					url:{},
-					hasDt:{}
+					hasDt:{},
+					img:{}
 				}}
-			}}
-		}
+			}},
+			img:{default:"fa-folder-o"}
+		},
+
 	}),
 	title : ko.observable(''),
 	currentRow:null,
 	currentUrl:"",
 	currentContent:ko.observable(''),
+	getIcon:function(img){
+			if(!img){
+				return "fa-folder-o";
+			}else{
+				return "fa-folder-o";
+			}
+	},
 	run: function(jump){
 		// var t=document.getElementById("textareaCode").value;
 		document.getElementById("html_code").value= htmlEditor.getValue();
