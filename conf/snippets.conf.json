@@ -212,6 +212,9 @@
     },{
         "name": "栅格布局",
         "url": "demos/forms/layout/response"
+    },{
+        "name": "页面框架布局",
+        "url": "demos/layouts/frame"
     }]
 }, {
     "name": "页面模板",
