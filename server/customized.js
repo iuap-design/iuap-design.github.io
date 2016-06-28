@@ -98,6 +98,10 @@ function gulpRun(app, cb){
 	// 存储引用css文件
 	var customizedCssFilePath = '../dist/pages/custom/customized.scss';
 	var setttingFilePath = baseURL + '/setting.txt';
+	//压缩包名称取package.json
+	var data = fs.readFileSync(getResolvePath('../bin/iuap-design/package.json'), 'utf8');
+	var packageObj = JSON.parse( data );
+	var zipName = packageObj.name + '-' + packageObj.version + '.zip'; 
 
   	// 处理grid、tree、polyfill的压缩
 	gulp.task('customizedGridTreePolyfill',function(){
@@ -197,7 +201,7 @@ function gulpRun(app, cb){
 	// 生成zip
 	gulp.task('customizedZip',['customizedJs'],function(){
 		return	gulp.src(getResolvePath(baseURL + '/**'))
-					.pipe(zip('UUI-1.0.0.zip'))
+					.pipe(zip(zipName))
 					.pipe(gulp.dest(getResolvePath(baseURL)))
 	});
 
@@ -213,7 +217,8 @@ function gulpRun(app, cb){
 		// 将主题颜色还原
 		fs.writeFileSync(getResolvePath(colorFilePath),baseColorStr);
 
-		var filePath = baseURL + '/UUI-1.0.0.zip';
+		
+		var filePath = baseURL + '/' + zipName;
 	    if (fs.existsSync(getResolvePath(filePath))){
 	      app.body=filePath;
 	      flagObj[jsHashStr] = 'finish';
@@ -237,10 +242,13 @@ function gulpRun(app, cb){
 		if(!exist){
  			fs.mkdirSync(getResolvePath(baseURL));
 		}
-		// 写入setting.txt
-		var writerStream = fs.createWriteStream(getResolvePath(setttingFilePath));
-		writerStream.write(settingStr);
-		writerStream.end();
+		// 写入setting.txt,延迟是为了保证基准目录已经创建
+		setTimeout(function(){
+			var writerStream = fs.createWriteStream(getResolvePath(setttingFilePath));
+			writerStream.write(settingStr);
+			writerStream.end();
+		},100);
+		
 	});
 
 	// 写入主色、辅色变量文件
