@@ -237,10 +237,13 @@ function gulpRun(app, cb){
 		if(!exist){
  			fs.mkdirSync(getResolvePath(baseURL));
 		}
-		// 写入setting.txt
-		var writerStream = fs.createWriteStream(getResolvePath(setttingFilePath));
-		writerStream.write(settingStr);
-		writerStream.end();
+		// 写入setting.txt,延迟是为了保证基准目录已经创建
+		setTimeout(function(){
+			var writerStream = fs.createWriteStream(getResolvePath(setttingFilePath));
+			writerStream.write(settingStr);
+			writerStream.end();
+		},100);
+		
 	});
 
 	// 写入主色、辅色变量文件
