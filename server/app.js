@@ -31,8 +31,20 @@ app.use(serve(path.join(__dirname, '../')));
 
 app.listen( 8000 );
 
-// 起服务时清楚定制生成的临时文件
+// 起服务时清楚定制生成的临时文件同时创建临时scss文件
 deleteFolderRecursive(path.resolve(__dirname, '../dist/pages/custom/temp/'));
+
+fs.exists( path.resolve(__dirname, '../dist/pages/custom/themeColors.scss'), function(exist) {
+    if(!exist){
+        fs.writeFile(path.resolve(__dirname, '../dist/pages/custom/themeColors.scss'),'');
+    }
+});
+
+fs.exists( path.resolve(__dirname, '../dist/pages/custom/customized.scss'), function(exist) {
+    if(!exist){
+        fs.writeFile(path.resolve(__dirname, '../dist/pages/custom/customized.scss'),'');
+    }
+});
 
 console.log('server started at http://localhost:8000');
 

@@ -51,22 +51,22 @@ define(function(){
             '../bin/iuap-design/js/ui.textfield.js'
         ],
         clockpicker: [
-            '../bin/datetimepicker/css/js/clockpicker.js'
+            '../bin/datetimepicker/js/clockpicker.js'
         ],
         time: [
-            '../bin/datetimepicker/css/js/time.js'
+            '../bin/datetimepicker/js/time.js'
         ],
         datetimepicker: [
-            '../bin/datetimepicker/css/js/datetimepicker.js'
+            '../bin/datetimepicker/js/datetimepicker.js'
         ],
         year: [
-            '../bin/datetimepicker/css/js/year.js'
+            '../bin/datetimepicker/js/year.js'
         ],
         month: [
-            '../bin/datetimepicker/css/js/month.js'
+            '../bin/datetimepicker/js/month.js'
         ],
         yearmonth: [
-            '../bin/datetimepicker/css/js/yearmonth.js'
+            '../bin/datetimepicker/js/yearmonth.js'
         ],
         checkbox: [
             '../bin/iuap-design/js/ui.checkbox.js'
@@ -519,7 +519,7 @@ define(function(){
         ],
         yearmonth: [
             '../bin/kero/js/dtJs/yearmonth.js'
-        ]
+        ],
     };
     /**
      * 模块依赖关系集合
