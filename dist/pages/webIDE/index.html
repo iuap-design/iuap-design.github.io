@@ -18,14 +18,16 @@
     <!-- Win8的标题图片(144x144 + tile color) -->
     <meta name="msapplication-TileColor" content="#3372DF">
     <link rel="shortcut icon" href="../static/img/favicon.png">
-    <link rel="stylesheet" href="http://design.yyuap.com/static/uui-original/1.0.1/fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://design.yyuap.com/static/uui-original/1.0.3/fonts/font-awesome/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="http://design.yyuap.com/static/uui-original/1.0.3/css/u.min.css"> -->
-    <link rel="stylesheet" href="http://design.yyuap.com/static/uui-original/1.0.1/css/u.css">
-    <link rel="stylesheet" href="http://design.yyuap.com/static/uui-original/1.0.1/css/u-extend.min.css">
+    <link rel="stylesheet" href="http://design.yyuap.com/static/uui-original/1.0.3/css/u.css">
+    <link rel="stylesheet" href="http://design.yyuap.com/static/uui-original/1.0.3/css/u-extend.min.css">
     <link rel="stylesheet" href="http://design.yyuap.com/static/scrollbar/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="./index.css">
     <style media="screen">
-   
+     #menubutton i{
+        cursor: pointer;
+     }
    
     </style>
 </head>
@@ -46,7 +48,7 @@
                     <ul data-bind="foreach:{data: menuDT.rows(),as :'row'}">
                         <li>
                             <a class="u-nav-link" data-bind="css:{'u-nav-link-open': row.selected()}">
-                                <i class="fa fa-folder-o demo-icon"></i>
+                                <i class="fa   demo-icon" ></i>
                                 <span class="demo-hidden-folded" data-bind="text:row.ref('name')"></span>
                                 <span class="pull-right">
 							          <i class="fa fa-chevron-right"></i>
@@ -57,7 +59,7 @@
                                     <!-- url 为空 ，存在三级菜单 -->
                                     <!-- ko if:  !srow.ref('url')() -->
                                     <a class="u-nav-link" data-bind="css:{'u-nav-link-open': srow.selected()}">
-                                        <i class="fa fa-folder-o demo-icon"></i>
+                                        <i class="fa  demo-icon"></i>
                                         <span class="demo-hidden-folded " data-bind="text:srow.ref('name')"></span>
                                         <span class="pull-right">
 										          <i class="fa fa-chevron-right"></i>

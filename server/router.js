@@ -59,7 +59,7 @@ module.exports = {
           styles,
           '</style>',
           '</head>',
-          '<body style="background-color: #eceff1">',
+          '<body style="background-color: #eceff1;padding-left: 20px;width: calc(100% - 20px );">',
           htmls,
           '<script src="http://design.yyuap.com/static/jquery/jquery-1.11.2.js"></script>',
     	    '<script src="http://design.yyuap.com/static/knockout/knockout-3.2.0.debug.js"></script>',
