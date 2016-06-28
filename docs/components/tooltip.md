@@ -17,7 +17,8 @@ title:'默认向上显示'
 # 示例
 
 ##基础tooltip
-<div class="csstag" style="display:none">.ws{
+<div class="csstag" style="display:none">
+.ws{
 	width: 60px;
 	display: inline-block;
 	border: 1px solid #ddd;
