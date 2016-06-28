@@ -1,11 +1,9 @@
  * 全局样式
-   * 基础样式
-   * 布局
+   * [布局](layout.md)
    * [排版](typography.md)
    * [色彩](color.md)
    * [辅助类](utilities.md)
-   * 栅格
-   * 图标字体
+   * [图标字体](icon.md)
  * CSS 组件
    * [徽章 badge](badge.md)
    * [按钮 button](button.md)
