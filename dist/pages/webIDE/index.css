@@ -111,8 +111,14 @@ body {
     padding-left: 45px;
     font-size: 18px;
     font-weight: bold;
-    // text-align: center;
+    color: #FFF;
 }
+
+a.demo-drawer-nav-brand:focus, a.demo-drawer-nav-brand:hover {
+    color: #FFF;
+    text-decoration: none;
+}
+
 
 
 /* iOS Safari specific workaround */
@@ -236,6 +242,10 @@ body {
     color: #757575;
 }
 
+ #menubutton i{
+    cursor: pointer;
+ }
+
 .u-tabs__tab-bar {
     height: 64px;
 }
@@ -255,6 +265,9 @@ body {
     border-bottom: none;
 }
 
+.u-navlayout-fixed-drawer > .u-navlayout-content {
+    margin-left: 240px;
+}
 // 内容滚动条
 .u-navlayout-content.ov-hide {
     overflow: hidden !important;
@@ -312,6 +325,7 @@ body {
 .ov-hide {
     overflow: hidden;
 }
+
 
 @media screen and (min-width: 1024px) {
     .u-navlayout-fixed-drawer > .u-navlayout-drawer-pc {
