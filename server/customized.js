@@ -72,6 +72,7 @@ function gulpRun(app, cb){
 	var params = app.request.body,
   		baseJsArr = params.jsArr?params.jsArr.split(','):[],
   		jsArr = [];
+
   	// 处理jsArr，转为getResolvePath( p)
   	for(var i = 0; i < baseJsArr.length; i++){
   		if(baseJsArr[i] != 'hasGrid' && baseJsArr[i] != 'hasTree' && baseJsArr[i] != 'hasPolyfill'){
@@ -82,10 +83,7 @@ function gulpRun(app, cb){
   	}
   	var	cssArr = params.cssArr?params.cssArr.split(','):[],
   		colorArr = params.colorArr?params.colorArr.split(','):[],
-  		hasGrid = jsArr.indexOf('hasGrid'),
-  		hasTree = jsArr.indexOf('hasTree'),
-  		hasPolyfill = jsArr.indexOf('hasPolyfill'),
-  		hasModel = jsArr.indexOf('../bin/kero/js/app.js'),
+  		hasModel = jsArr.indexOf(getResolvePath('../bin/kero/js/app.js')),
   		jsHashStr = hash(params.jsArr + params.colorArr),
   		baseURL =  '../dist/pages/custom/temp/customized/' + jsHashStr,
   		settingStr = params.settingStr;
@@ -105,13 +103,14 @@ function gulpRun(app, cb){
 
   	// 处理grid、tree、polyfill的压缩
 	gulp.task('customizedGridTreePolyfill',function(){
+		var hasGrid = jsArr.indexOf('hasGrid');
 		if(hasGrid > -1){
 			jsArr.splice(hasGrid,1)
 			var arr = [];
 			// 将jsArr中的grid相关的放入arr 
 			for(var i = 0; i < jsArr.length;i++){
 				var jsStr =  jsArr[i];
-				if(jsStr.indexOf('bin/grid/js') > -1){
+				if(jsStr.indexOf('bin\\grid\\js') > -1){
 					arr.push(jsStr);
 				}
 			}
@@ -134,11 +133,10 @@ function gulpRun(app, cb){
 	    	gulp.src(gridCss)
 	      		.pipe(gulp.dest(getResolvePath(baseURL + '/css')))
 		}
-
+		var hasTree = jsArr.indexOf('hasTree');
 		if(hasTree > -1){
 			jsArr.splice(hasTree,1)
 			var arr = [];
-
 			if(hasModel > -1){
 				arr = modeTreeJs;
 			}else{
@@ -155,7 +153,7 @@ function gulpRun(app, cb){
 			gulp.src(treeCss)
 				.pipe(gulp.dest(getResolvePath(baseURL + '/css')))
 		}
-
+		var hasPolyfill = jsArr.indexOf('hasPolyfill');
 		if(hasPolyfill > -1){
 			jsArr.splice(hasPolyfill,1)
 			gulp.src(polyfillJs)

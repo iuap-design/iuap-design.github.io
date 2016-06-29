@@ -76,23 +76,23 @@ require(['mod'], function (mod) {
          * @returns {string}
          */
         getModelData:function(rowStr) {
-        var row = eval(rowStr);
-        var dataObj = row.getSimpleData(),
-            str = rowStr + '.setSimpleData({';
-        for (var f in dataObj) {
-            if (dataObj[f]) {
-                if (dataObj[f] === true)
-                    str += f + ':' + dataObj[f] + ','
-                else
-                    str += f + ':\'' + dataObj[f] + '\','
+            var row = eval(rowStr);
+            var dataObj = row.getSimpleData(),
+                str = rowStr + '.setSimpleData({';
+            for (var f in dataObj) {
+                if (dataObj[f]) {
+                    if (dataObj[f] === true)
+                        str += f + ':' + dataObj[f] + ','
+                    else
+                        str += f + ':\'' + dataObj[f] + '\','
+                }
             }
+            str += '});';
+            return str;
         }
-        str += '});';
-        return str;
-    }
     };
     var allJsObj = mod.allJsObj;
-    var treeObj = mod.treeObj;
+    treeObj = mod.treeObj;
     var captionObj = mod.captionObj;
     var cssObj = mod.cssObj;
     var modeluiObj = mod.modeluiObj;
@@ -343,6 +343,10 @@ require(['mod'], function (mod) {
         var field = options.field,
             newValue = options.newValue,
             row = viewModel.modelData.getCurrentRow();
+        if(treeObj.gridMode.indexOf(field) > -1){
+            gridModeChangeFun(field,newValue,row);
+            return;
+        }
         dependFun(dependObj, field, newValue);
         if (field == 'model') {
             // 当前修改mdoel，如果之前选择modeDependObj的值之后处理相关的依赖
@@ -360,16 +364,40 @@ require(['mod'], function (mod) {
         if (field == 'grid') {
             if (newValue) {
                 row.setValue('gridBase', true);
-                gridEnabled(true);
+                // gridEnabled(true);
             } else {
-                gridEnabled(false);
-                var treeRow = viewModel.treeData.getCurrentRow();
-                treeRow.setValue('gridMode', true);
-                treeRow.setValue('gridMode', false);
-                row.setValue('gridBase', false);
+                // gridEnabled(false);
+                // var treeRow = viewModel.treeData.getCurrentRow();
+                // treeRow.setValue('gridMode', true);
+                // treeRow.setValue('gridMode', false);
+                // row.setValue('gridBase', false);
             }
         }
     });
+    gridModeTrueCount = 0;
+    /**
+     * grid子项发生改变时的处理
+     * @param field  键
+     * @param value  值
+     * @param row  当前行
+     */
+    function gridModeChangeFun(field,value,row){
+        if(value){
+            gridModeTrueCount += 1;
+        }else{
+            gridModeTrueCount -= 1;
+        }
+        if(gridModeTrueCount > 0){
+            row.setValue('grid',true);
+            if(gridModeTrueCount > 1){
+                app.getComp('gridBase').setEnable(false);
+            }else{
+                app.getComp('gridBase').setEnable(true);
+            }
+        }else{
+            row.setValue('grid',false);
+        }
+    };
     /**
      * 处理依赖的方法
      * @param dependObj 依赖的对象
@@ -459,8 +487,8 @@ require(['mod'], function (mod) {
         }
         app.getComp('gridMode').setEnable(enable);
     }
-    gridEnabled(false);
-    app.getComp('gridBase').setEnable(false);
+    // gridEnabled(false);
+    // app.getComp('gridBase').setEnable(false);
 
     /*导航开关*/
     u.on(document.getElementById('navId'), 'click', function () {
