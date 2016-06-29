@@ -1,3 +1,7 @@
+# 关于 `iUAP Design` 的介绍
+
+<img src="/dist/static/img/all/design.png" />
+
 # 获取iuap-design
 
 - 直接从github获取我们的源码
