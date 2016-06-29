@@ -276,7 +276,7 @@
 }
 .templatePicPc {
     height: 250px;
-    background: url(img/t_bg.png) no-repeat;
+    background: url(../img/t_bg.png) no-repeat;
     position: relative;
     z-index: 1;
     text-align: center;
