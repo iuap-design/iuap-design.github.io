@@ -1,6 +1,8 @@
 # 关于 `iUAP Design` 的介绍
 
-<img src="/dist/static/img/all/design.png" />
+<img src="" />
+
+![iUAP Design 前端集成解决方案](http://design.yyuap.com/dist/static/img/all/design.png)
 
 # 获取iuap-design
 
