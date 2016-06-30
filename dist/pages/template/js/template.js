@@ -5,22 +5,24 @@ require(['../lib/artTemplate','text!../textTemplate.html'], function (template,t
      function initDom(){
         var domList = [
             {
-                'title': '产品摄影模板',
+                'title': '合同主体模板',
                 "id": "71160247",
-                'content_img': "img/main_1.jpg",
+                'content_img': "img/main_1.png",
                 'phone_img': "img/phone_1.jpg",
+                'url': '../../website/hr/list.html',
                 "using_times": "772",
-                "for_area": ["摄影工作室"]
+                "for_area": ["互联网","影视"]
             },
             {
-                'title': '建筑摄影模板',
+                'title': '入职申请书模板',
                 "id": "00871460",
-                'content_img': "img/main_2.jpg",
+                'content_img': "img/main_2.png",
                 'phone_img': "img/phone_2.jpg",
+                'url': '../../website/hr/apply.html',
                 "using_times": "772",
                 "for_area": [
-                    "建筑摄影",
-                    "摄影工作室"
+                    "互联网",
+                    "教育"
                 ]
             },
             {

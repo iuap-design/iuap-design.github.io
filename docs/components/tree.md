@@ -43,16 +43,77 @@ $(document).ready(function () {
     };
 var app = u.createApp();
     app.init(viewModel);
-    
-    $.ajax({
-        type: 'GET',
-        url: 'treeJson.json',
-        dataType: 'JSON',
-        async: true,
-        success: function (data) {
-            viewModel.dataTable.setData(data);
-        }
-    });
+    data = {
+    "pageIndex": 1,
+    "pageSize": 10,
+    "rows": [
+    {
+      "status": "nrm",
+      "data": {
+      "id": "01",
+      "pid": "root",
+      "title": "f1"
+      }
+    },
+    {
+      "status": "nrm",
+      "data": {
+      "id": "02",
+      "pid": "root",
+      "title": "f2"
+      }
+    },
+    {
+      "status": "nrm",
+      "data": {
+      "id": "03",
+      "pid": "root",
+      "title": "f3"
+      }
+    },
+    {
+      "status": "nrm",
+      "data": {
+      "id": "101",
+      "pid": "01",
+      "title": "f11"
+      }
+    },
+    {
+      "status": "nrm",
+      "data": {
+      "id": "102",
+      "pid": "01",
+      "title": "f12"
+      }
+    },
+    {
+      "status": "nrm",
+      "data": {
+      "id": "201",
+      "pid": "02",
+      "title": "f21"
+      }
+    },
+    {
+      "status": "nrm",
+      "data": {
+      "id": "202",
+      "pid": "02",
+      "title": "f22"
+      }
+    },
+    {
+      "status": "nrm",
+      "data": {
+      "id": "221",
+      "pid": "202",
+      "title": "f221"
+      }
+    }
+    ]
+  };
+viewModel.dataTable.setData(data);
     
     window.app=app;
     $("#addOneRow1").on("click",function(){
@@ -115,16 +176,77 @@ var app = u.createApp();
     };
 var app = u.createApp();
     app.init(viewModel);
-    
-    $.ajax({
-        type: 'GET',
-        url: 'treeJson.json',
-        dataType: 'JSON',
-        async: true,
-        success: function (data) {
-            viewModel.dataTable.setData(data);
-        }
-    });
+    data = {
+    "pageIndex": 1,
+    "pageSize": 10,
+    "rows": [
+    {
+      "status": "nrm",
+      "data": {
+      "id": "01",
+      "pid": "root",
+      "title": "f1"
+      }
+    },
+    {
+      "status": "nrm",
+      "data": {
+      "id": "02",
+      "pid": "root",
+      "title": "f2"
+      }
+    },
+    {
+      "status": "nrm",
+      "data": {
+      "id": "03",
+      "pid": "root",
+      "title": "f3"
+      }
+    },
+    {
+      "status": "nrm",
+      "data": {
+      "id": "101",
+      "pid": "01",
+      "title": "f11"
+      }
+    },
+    {
+      "status": "nrm",
+      "data": {
+      "id": "102",
+      "pid": "01",
+      "title": "f12"
+      }
+    },
+    {
+      "status": "nrm",
+      "data": {
+      "id": "201",
+      "pid": "02",
+      "title": "f21"
+      }
+    },
+    {
+      "status": "nrm",
+      "data": {
+      "id": "202",
+      "pid": "02",
+      "title": "f22"
+      }
+    },
+    {
+      "status": "nrm",
+      "data": {
+      "id": "221",
+      "pid": "202",
+      "title": "f221"
+      }
+    }
+    ]
+  };
+viewModel.dataTable.setData(data);
     
     window.app=app;
     $("#addOneRow1").on("click",function(){

@@ -2,8 +2,6 @@
 .sass-cache/
 _site
 
-static/
-
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
