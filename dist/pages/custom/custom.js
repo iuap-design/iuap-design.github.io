@@ -122,22 +122,22 @@ require(['mod'], function (mod) {
     /*提取className*/
     var headClassName='head-div',//头部提示类名
         contentClassName='containers ',//内容区域类名
-        /*色块区域类名*/
+    /*色块区域类名*/
         colorClassName={
             msgOut:'color-whole-div',/*头部信息外部div类名*/
             msgInner:'color-head-div',/*头部信息内部div类名*/
-            areaInput:'color-input-div',/*颜色输入区域类名*/
-            lineDiv:'u-text color-input',/*横线外盒子类名*/
-            lineInput:'u-input',/*横线input类名*/
+            areaInput:'color-input-div u-row',/*颜色输入区域类名*/
+            lineDiv:'u-text color-input u-col-md-4',/*横线外盒子类名*/
+            lineInput:'color-in',/*横线input类名*/
             area:'color-content-div',//颜色区域类名
             areaLeft:'color-left-div',//颜色区域左侧类名
             areaRight:'color-right-div',//颜色区域右侧类名
             areaDiv:'color-div'//色块类名
         },
-        /*/!*下载区域类名*!/
-        evalOut='eval-whole-div',/!*下载提示外部类名*!/
-        evalInner='eval-head-div',/!*下载提示内部类名*!/
-        runButton='u-button raised u-eval-button',/!*执行按钮类名*!/*/
+    /*/!*下载区域类名*!/
+     evalOut='eval-whole-div',/!*下载提示外部类名*!/
+     evalInner='eval-head-div',/!*下载提示内部类名*!/
+     runButton='u-button raised u-eval-button',/!*执行按钮类名*!/*/
         listClassName={
             line:'tree-whole-div',/*每个模块的类名*/
             checkBoxDiv:'tree-icon',/*小模块标题行类名*/
@@ -149,13 +149,13 @@ require(['mod'], function (mod) {
         };
     /*确保obj中属性为最大集合 end*/
     var app, viewModel,metaObj = {},treemetaObj = {},wholeStr = '<div>',
-        // headStr ='<div class="banner"><div class="u-container"><div class="banner-content"><h1>定制</h1><p class="info">本功能可自定义选中下载特定模块，设置主题颜色，并可以导入之前选择进行更新操作</p></div></div></div>',
+    // headStr ='<div class="banner"><div class="u-container"><div class="banner-content"><h1>定制</h1><p class="info">本功能可自定义选中下载特定模块，设置主题颜色，并可以导入之前选择进行更新操作</p></div></div></div>',
         contentStr = '<div class='+'"'+contentClassName+'"'+'>',
         colorStr = '<div class='+'"'+colorClassName.msgOut+'"'+'><div class='+colorClassName.msgInner+'>设置主题颜色，左侧选中主色，右侧选择辅色。通过点击色块进行选中，也可在输入框中输入rgb格式的颜色编码。</div>';
-        colorStr += '<div class='+colorClassName.areaInput+'>';
-    for (var i = 0; i < 3; i++) {
-        colorStr += '<div class='+'"'+colorClassName.lineDiv+'"'+'  u-meta=\'{"id":"color1","type":"u-text","data":"colorData","field":"color' + i + '"}\'>' +'<input class='+'"'+colorClassName.lineInput+'"'+'/></div>';
-    }
+    colorStr += '<div class='+'"'+colorClassName.areaInput+'"'+'>';
+    colorStr += '<div class='+'"'+colorClassName.lineDiv+'"'+'  u-meta=\'{"id":"color1","type":"u-text","data":"colorData","field":"color0"}\'>' +'<label for="color0" class="color-label">主色</label><input id="color0" value="63,81,181" class='+'"'+colorClassName.lineInput+'"'+'/></div>';
+    colorStr += '<div class='+'"'+colorClassName.lineDiv+'"'+'  u-meta=\'{"id":"color1","type":"u-text","data":"colorData","field":"color1"}\'>' +'<label for="color1" class="color-label">主色加深</label><input id="color1" value="48,63,159" class='+'"'+colorClassName.lineInput+'"'+'/></div>';
+    colorStr += '<div class='+'"'+colorClassName.lineDiv+'"'+'  u-meta=\'{"id":"color1","type":"u-text","data":"colorData","field":"color2"}\'>' +'<label for="color2" class="color-label">辅色</label><input id="color2" value="83,109,254" class='+'"'+colorClassName.lineInput+'"'+'/></div>';
     colorStr += '</div>';
     colorStr += '<div class='+colorClassName.area+'>';
     var colorLeftStr = '<div class='+colorClassName.areaLeft+'>';
@@ -171,20 +171,20 @@ require(['mod'], function (mod) {
     colorStr += '</div>';
     colorStr += '</div>';
     /*var evalStr = '<div class='+evalOut+'><div class='+evalInner+'>下载文件setting.txt中保存了上次配置的信息，将信息复制至文本域中并点击执行可恢复上次配置。</div>';
-    evalStr += '<button id="eavl-button" class='+'"'+runButton+'"'+' >执行</button>';
-    evalStr += '<textarea style="width: 100%;height: 70px;"u-meta=\'{"id":"str","type":"textarea","data":"evalData","field":"str"}\'></textarea>';
-    evalStr += '</div>';*/
+     evalStr += '<button id="eavl-button" class='+'"'+runButton+'"'+' >执行</button>';
+     evalStr += '<textarea style="width: 100%;height: 70px;"u-meta=\'{"id":"str","type":"textarea","data":"evalData","field":"str"}\'></textarea>';
+     evalStr += '</div>';*/
     // 遍历obj创建datatable的field字段，同时生成html列表
     for (var model in treeObj) {
         treemetaObj[model] = {};
         contentStr += '<div class='+'"'+listClassName.line+'"'+'>';
         if (model != 'all')
-        contentStr += '<div class="second-title">' +captionObj[model] +
-            '<span  class='+'"'+listClassName.textLabel+'"'+' u-meta=\'{"id":"' + model + '","type":"u-checkbox","data":"treeData","field":"' + model + '","checkedValue":true,"unCheckedValue":false}\'>' +
-            '<input type="checkbox" class='+'"'+listClassName.textInput+'"'+'>' +
-            '<span class='+'"'+listClassName.textSpan+'"'+'>全选</span>' +
-            '</span>' +
-            '</div>';
+            contentStr += '<div class="second-title">' +captionObj[model] +
+                '<span  class='+'"'+listClassName.textLabel+'"'+' u-meta=\'{"id":"' + model + '","type":"u-checkbox","data":"treeData","field":"' + model + '","checkedValue":true,"unCheckedValue":false}\'>' +
+                '<input type="checkbox" class='+'"'+listClassName.textInput+'"'+'>' +
+                '<span class='+'"'+listClassName.textSpan+'"'+'>全选</span>' +
+                '</span>' +
+                '</div>';
         contentStr += '<ul class='+'"'+listClassName.textDiv+'"'+'>';
         for (var i = 0; i < treeObj[model].length; i++) {
             var field = treeObj[model][i];
@@ -202,7 +202,7 @@ require(['mod'], function (mod) {
     var contentStrArr=contentStr.split('<div class="tree-whole-div">');
     document.getElementById('colorModel').appendChild(u.makeDOM(colorStr));
     for(var i=2;i<=10;i++){
-         var modelTemp='<div class="tree-whole-div">'+contentStrArr[i]+'</div>';
+        var modelTemp='<div class="tree-whole-div">'+contentStrArr[i]+'</div>';
         document.getElementById(modelIdArr[i-2]).appendChild(u.makeDOM(modelTemp));
     }
     u.on(document.getElementById('eavl-button'), 'click', function () {
@@ -336,6 +336,7 @@ require(['mod'], function (mod) {
         })
     }
     u.on(document.getElementById('button'), 'click', clickFun);
+    u.on(document.getElementById('buttonTop'), 'click', clickFun);
     /*按钮处理end*/
     /*处理依赖关系begin*/
     var dependCountObj = {};
@@ -433,7 +434,7 @@ require(['mod'], function (mod) {
         var field = options.field,
             newValue = options.newValue,
             treeRow = viewModel.treeData.getCurrentRow();
-            modelRow = viewModel.modelData.getCurrentRow(),
+        modelRow = viewModel.modelData.getCurrentRow(),
             arr = treeObj[field],
             dependFlag = true;
         /* 处理全选以及全部取消 */
@@ -499,6 +500,8 @@ require(['mod'], function (mod) {
         u.removeClass(document.getElementById('offId'),'open');
         u.removeClass(document.getElementById('navId'),'nav-open');
     });
+    $('.color-div')[4].click();
+    $('.color-div')[20].click();
 });
 
 
