@@ -35,9 +35,6 @@
             "name": "复选框",
             "url": "demos/ui/checkbox"
         }, {
-            "name": "复选框(DT)",
-            "url": "demos/model/checkbox"
-        }, {
             "name": "单选框",
             "url": "demos/ui/radio"
         }, {
