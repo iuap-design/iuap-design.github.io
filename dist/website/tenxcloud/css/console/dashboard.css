@@ -73,8 +73,8 @@ pre {
 .samll-logo {
     width: 40px;
     position: relative;
-    left: 7px;
-    top: 15px;
+    // left: 7px;
+    // top: 15px;
 }
 
 li {
@@ -158,6 +158,10 @@ header {
     height: 55px;
     background: #16243d;
     position: relative;
+    line-height: 55px;
+    font-size: 20px;
+    color: #FFF;
+    padding-left: 10px;
 }
 
 .radiusStyle {
