@@ -48,9 +48,9 @@ require(['../lib/artTemplate','text!../textTemplate.html'], function (template,t
                 'title': '运维管理模板',
                 "id": "0005",
                 'decription': '发展可持续、完善易有序、拓展能稳定',
-                'content_img': "img/main_3.png",
+                'content_img': "img/main_5.png",
                 'phone_img': "img/phone_3.jpg",
-                'url': '../../website/cooperating/index.html',
+                'url': '../../website/tenxcloud/index.html',
                 "using_times": "228",
                 "for_area": ["互联网",'金融']
             },
@@ -58,20 +58,22 @@ require(['../lib/artTemplate','text!../textTemplate.html'], function (template,t
                 'title': '电商模板',
                 "id": "59220030",
                 'decription': '站在用户的角度，针对性的为用户提供刚需',
-                'content_img': "img/main_3.png",
+                'content_img': "img/main_4.png",
                 'phone_img': "img/phone_4.jpg",
+                'url': '../../website/e-commerce/index.html',
                 "using_times": "100",
                 "for_area": ["电商"]
-            },
-            {
-                'title': '地产建筑模板',
-                "id": "59220030",
-                'decription': '专业化展现地产的多维角度,立体化建筑',
-                'content_img': "img/main_3.png",
-                'phone_img': "img/phone_4.jpg",
-                "using_times": "100",
-                "for_area": ["建筑",'装修']
             }
+            // ,
+            // {
+            //     'title': '地产建筑模板',
+            //     "id": "59220030",
+            //     'decription': '专业化展现地产的多维角度,立体化建筑',
+            //     'content_img': "img/main_2.png",
+            //     'phone_img': "img/phone_4.jpg",
+            //     "using_times": "100",
+            //     "for_area": ["建筑",'装修']
+            // }
         ];
 
         renderPage(domList);
