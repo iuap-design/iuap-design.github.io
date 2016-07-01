@@ -11,6 +11,9 @@ a:hover{
 img{
     vertical-align: top;
 }
+.width-full{
+    overflow: hidden;
+}
 /*头*/
 .head-right-item a:hover,.menu-item a:hover{
     color: #ea544a;
@@ -23,10 +26,6 @@ img{
     overflow: hidden;
     color: #A5A5A5;
     box-sizing: border-box;
-}
-.head-left,.nav-logo{
-    float: left;
-    margin-left: 5%;
 }
 .head-right,.nav-my{
     float: right;
@@ -56,11 +55,9 @@ img{
     height: 20px;
 }
 .nav{
-    margin-top:18px;
     background: #fff;
     height: 70px;
     line-height: 70px;
-    border-bottom: solid 1px #E6E6E6;
 }
 .nav-logo,.nav-btn,.nav-search,.nav-my,.nav-btn-item{
     float: left;
@@ -107,20 +104,13 @@ img{
 }
 /*菜单*/
 .menu{
-    width: 80%;
     background: #fff;
-    margin-left: 5%;
 }
 .menu-item{
-    float: left;
-    padding: 8px 8px;
     margin-top: -5px;
-}
-.menu-item a{
-    color: #474E5D;
 }
 .menu-item-active{
-    margin-top: -5px;
+    margin-top: -5px!important;
     border-top: 1px #EA544A solid;
 }
 /*轮播图*/
@@ -167,31 +157,11 @@ img{
     height: 380px;
     width: 1214px;
 }
-.carousel-center-item img{
-
-}
 /*panel*/
-.panel-div{
-    width: 100%;
-    margin-left: 5%;
-    margin-top: 10px;
-    margin-right: 5%;
-    background: #fff;
-}
 .panel-item{
     float: left;
     width: 30%;
     margin: 0 5px;
-}
-.panel-div-number{
-    color: #F52F3E;
-    font-size: 40px;
-    font-weight: bold;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-.u-panel-body a{
-    color: #323232;
 }
 .panel-title{
     border-bottom: 2px solid #F52F3E;
@@ -203,58 +173,25 @@ img{
     -o-transition: .5s ease all!important;
     transition: .5s ease all!important;
 }
-/*title*/
-.title{
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-    height: 90px;
-    line-height: 90px;
-    font-size: 28px;
-}
+
 /*table*/
 .table-search{
-    height: 60px;
     background: #F4F4FA;
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 10px;
-    margin-right: 5%;
 }
 .table-search-item{
-    font-size: 16px;
-    text-align: center;
-    line-height: 60px;
-    float: left;
-    font-weight: 700;
-    margin-right: 10%;
+    line-height: 50px;
     cursor: pointer;
 }
 .table-search-item-first{
     background: #F52F3E;
     color: #fff;
-    padding: 0 10px;
-}
-.table-search-item-last{
-    margin-right: 0;
-    margin-left: 9%;
+    line-height: 50px;
 }
 /*table-body*/
-.table-number{
-    color: #F52F3E;
-    font-size: 20px;
-    font-weight: bold;
-}
-.table td,.table th{
-    text-align: center;
-}
-tr.table-tr td{
+.table-tr td{
     height: 86px;
     padding-right: 15px!important;
     vertical-align: middle!important;
-}
-.table-tr a{
-    color: #787878;
 }
 .table-thead-tr th{
     height: 60px;
@@ -262,44 +199,23 @@ tr.table-tr td{
     vertical-align: middle;
     box-sizing: border-box;
 }
-.table-thead-tr th a{
-    color: #5E5E5E;
-}
 .table-thead-tr th a:hover{
     color: #F52F3E;
 }
-.table th{
-    color: #5E5E5E;
-}
 .table-page{
-    float: right;
     margin-right: 5%;
-}
-.page-total{
-    margin-top: 5px;
 }
 /*more*/
 .more{
     width: 90%;
-    background: #F5F5FA;
     height: 730px;
-    padding-top: 50px;
-    /*padding-bottom: 50px;*/
     padding-left: 5%;
     padding-right: 5%;
 }
-.more-title{
-    width: 90%;
-    text-align: center;
-    line-height: 0;
-    margin: 0 5%;
-    height: 30px;
-}
 .more-item-left,.more-item-right{
-    float: left;
     position: relative;
-    height: 270px;
     box-sizing: border-box;
+    height: 270px;
 }
 .more-see{
     position: absolute;
@@ -308,24 +224,14 @@ tr.table-tr td{
     left: 55px;
     background: #DCDBDA;
 }
-.more-item{
-    float: left;
-    margin-left: 35px;
-    margin-bottom: 35px;
-}
 .more-item-right{
     background: #fff;
-    padding: 10px;
     width: 350px;
     box-sizing: border-box;
 }
 .more-item-right-top{
     position: relative;
     border-bottom: 1px solid #F6F6F6;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 100%;
     -webkit-transition: .3s ease all;
     -moz-transition: .3s ease all;
     -ms-transition: .3s ease all;
@@ -334,8 +240,6 @@ tr.table-tr td{
 }
 .more-item-right-bottom{
     position: relative;
-    padding: 10px;
-    width: 100%;
 }
 .more-button-top,.more-button-bottom{
     position: absolute;
@@ -361,32 +265,8 @@ tr.table-tr td{
 /*foot*/
 .foot{
     background: #323232;
-    width: 100%;
-    height: 120px;
     box-sizing: border-box;
-    padding: 60px;
 }
-.foot-left{
-    float: left;
-    margin-top: -17px;
-}
-.foot-right{
-    float: right;
-    color: #D0D0D0;
-    margin-top: -15px;
-}
-.foot-left-p a{
-    color: #B3B5BA;
-}
-.foot-left-p a:hover{
-    text-decoration:none;
-}
-.foot-left-text{
-    display: inline-block;
-}
-.foot-right a{
-    color: #B3B5BA;
-}
-.foot-right-p{
-    font-size: 16px;
-}
+
+
+
