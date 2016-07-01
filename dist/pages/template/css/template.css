@@ -174,7 +174,7 @@
 	float: left;
 }
 .u-page-content{
-    margin-left: 230px;
+    /*margin-left: 230px;*/
     overflow: hidden;
 }
 .templateListHead {
@@ -199,6 +199,11 @@
 }
 .templateListStyle_2:hover i:after, .templateListStyle_2:hover i:before, .templateListStyle_2.active i:after, .templateListStyle_2.active i:before, .templateListStyle a.active {
     background: #E78E1F;
+    color: #fff;
+}
+.templateListStyle_1:hover i:after, .templateListStyle_1:hover i:before, .templateListStyle_1.active i:after, .templateListStyle_1.active i:before, .templateListStyle a.active {
+    background: #E78E1F;
+    color: #fff;
 }
 .templateListStyle a {
     display: inline-block;
@@ -276,7 +281,7 @@
 }
 .templatePicPc {
     height: 250px;
-    background: url(img/t_bg.png) no-repeat;
+    background: url(../img/t_bg.png) no-repeat;
     position: relative;
     z-index: 1;
     text-align: center;
@@ -402,4 +407,28 @@ h4 {
     line-height: 20px;
     padding: 13px 0;
     color: #999;
+}
+.templateSpeInfo{
+    display: none;
+}
+.templateListLayout_1 .templateSpeInfo{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.templateListLayout_1 .templateSpeInfo span{
+    font-size: 14px;
+    color: #3BB7FD;
+    text-align: center;
+}
+.templateListStyle_1,.templateListStyle_2, i:before {
+     -webkit-transition: all .5s; 
+    -o-transition: all .5s;
+    -ms-transition: all .5s;
+     transition: all .5s; 
+}
+.templateListStyle a:hover{
+    background: #E78E1F;
+    color: #fff;
 }

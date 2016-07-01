@@ -127,10 +127,49 @@
 <button id="errorBtn" class="u-button" >Error</button>
 <button id="warnBtn" class="u-button" >Warning</button>
 </div>
+<div class="jstag" style="display:none">
+var msgBtn = document.body.querySelector("#msgBtn");
+var errorBtn = document.body.querySelector("#errorBtn");
+var warnBtn = document.body.querySelector("#warnBtn");
+var rightInfo='<i class="fa fa-check-circle margin-r-10"></i>成功信息!!!';
+u.on(msgBtn,'click', function(){ 
+    u.showMessage({msg:rightInfo,position:"top",msgType:"success"})
+})
+
+var errorInfo='<i class="fa fa-times-circle margin-r-10"></i>错误信息!!!'
+u.on(errorBtn,'click', function(){ 
+    u.showMessage({msg:errorInfo,position:"top",msgType:"danger"})
+})
+
+var warningInfo='<i class="fa fa-warning margin-r-10"></i>警告信息!!!';
+u.on(warnBtn,'click', function(){ 
+    u.showMessage({msg:warningInfo,position:"top",msgType:"warning"})
+})
+</div>
 
 <div class="examples-code"><pre><code>&lt;button id="msgBtn" class="u-button" >Success&lt;/button>
 &lt;button id="errorBtn" class="u-button" >Error&lt;/button>
 &lt;button id="warnBtn" class="u-button" >Warning&lt;/button></code></pre>
+</div>
+<div class="examples-code"><pre><code>
+var msgBtn = document.body.querySelector("#msgBtn");
+var errorBtn = document.body.querySelector("#errorBtn");
+var warnBtn = document.body.querySelector("#warnBtn");
+var rightInfo='<i class="fa fa-check-circle margin-r-10"></i>成功信息!!!';
+u.on(msgBtn,'click', function(){ 
+    u.showMessage({msg:rightInfo,position:"top",msgType:"success"})
+})
+
+var errorInfo='<i class="fa fa-times-circle margin-r-10"></i>错误信息!!!'
+u.on(errorBtn,'click', function(){ 
+    u.showMessage({msg:errorInfo,position:"top",msgType:"danger"})
+})
+
+var warningInfo='<i class="fa fa-warning margin-r-10"></i>警告信息!!!';
+u.on(warnBtn,'click', function(){ 
+    u.showMessage({msg:warningInfo,position:"top",msgType:"warning"})
+})
+</code></pre>
 </div>
 
 
