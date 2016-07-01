@@ -1070,3 +1070,9 @@ article>.dashboard .server-list li a {
 .step-inner .pull-right.searchbtn{
     float: none !important;
 }
+
+
+.u-progress > .bar {
+
+    transition: width 0.5s 
+}

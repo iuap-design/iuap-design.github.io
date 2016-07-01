@@ -65,7 +65,6 @@
                         </li>
                         <li class="consume">
                             <a class="nav-t">消费记录</a>
-                           
                         </li>
                         <li class="ticket">
                             <a data-permalink onclick="_permalink(this);" class="nav-t">工单
@@ -73,7 +72,6 @@
                   <h id="ticketsNum" class="badge"></h>
                   
                </a>
-                           
                         </li>
                         <input type="hidden" id="user_memory_limit" value="0">
                     </ul>
@@ -312,11 +310,13 @@
                                   <a class="u-link u-widget-more">充值</a></h3>
                                 </div>
                                 <div class="u-widget-body">
-                                    <div class='condition'>
+                                    <div class='condition' style="margin-top: -24px;margin-left: -32px;">
+                                        <img src="images/wasteMoney.png" style="margin: 0 auto;
+    display: block;">
                                     </div>
                                     <div class="notice text-center">
                                         账户余额：￥<span id="thisMonthconsumptionSum">-</span>
-                                        <p style="font-size:12px">其中优惠券：￥<span id="thisMonthGruntSum">-</span>，充值余额：￥<span id="thisMonthPaySum">-</span></p>
+                                        <p style="font-size:12px">其中优惠券：￥<span id="thisMonthGruntSum">0</span>，充值余额：￥<span id="thisMonthPaySum">0</span></p>
                                     </div>
                                 </div>
                             </div>
@@ -464,9 +464,8 @@
     <!-- <script src="scripts/console/console-duang.js?rev=0.1.0"></script> -->
     <script type="text/javascript" src="scripts/console/jquery.nicescroll.min.js"></script>
     <script type="text/javascript" src='http://design.yyuap.com/static/uui-original/1.0.3/js/u.js'></script>
+    <script type="text/javascript" src="scripts/console/common.js"></script>
     <script type="text/javascript" src="scripts/console/index.js"></script>
-   
-    
 </body>
 
 </html>
