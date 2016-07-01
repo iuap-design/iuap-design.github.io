@@ -9,12 +9,10 @@
 # 示例
 
 
-##基础rating
+##所个star的Rating
 
-常用于评级评分
-<div class="example-content"> <div class="u-rating" data-score="3" data-plugin="rating"></div>
-</div>
-<div class="csstag" style="display:none">.content{
+通过在html上 的属性 data-number值改变数量
+<div class="example-content"><style>.content{
     padding: 10px;
 }
 .example{
@@ -25,8 +23,8 @@
     width: 33.3%;
     float: left;
 }
-</div>
-<div class="jstag" style="display:none">(function(document, window, $) {
+</style></div>
+<div class="example-content"><script>(function(document, window, $) {
     'use strict';
     
       var  defaults= {
@@ -52,8 +50,10 @@
       // }
     // });
   })(document, window, jQuery);
-</div>
-<div class="examples-code"><pre><code> &lt;div class="u-rating" data-score="3" data-plugin="rating">&lt;/div></code></pre>
+</script></div>
+<div class="example-content"><div class="example">
+      <div class="u-rating" data-number="10" data-plugin="rating"></div>
+  </div>
 </div>
 <div class="examples-code"><pre><code>.content{
     padding: 10px;
@@ -66,80 +66,6 @@
     width: 33.3%;
     float: left;
 }</code></pre>
-</div>
-<div class="examples-code"><pre><code>(function(document, window, $) {
-    'use strict';
-    
-      var  defaults= {
-        targetKeep: true,
-        icon: "font",
-        starType: "i",
-        starOff: "icon fa fa-star",
-        starOn: "icon fa fa-star orange-600",
-        cancelOff: "icon fa fa-minus-circle",
-        cancelOn: "icon  fa fa-minus-circle orange-600",
-        starHalf: "icon fa fa-half-o orange-500"
-      };
-      $('[data-plugin="rating"]').each(function() {
-          var $this = $(this);
-          var options = $.extend(true, {}, defaults, $this.data());
-
-          if (options.hints) {
-            options.hints = options.hints.split(',');
-          }
-
-          $this.raty(options);
-      });
-      // }
-    // });
-  })(document, window, jQuery);</code></pre>
-</div>
-
-##所个star的rating
-
-通过在html上 的属性 data-number值改变数量
-<div class="jstag" style="display:none">(function(document, window, $) {
-    'use strict';
-    
-      var  defaults= {
-        targetKeep: true,
-        icon: "font",
-        starType: "i",
-        starOff: "icon fa fa-star",
-        starOn: "icon fa fa-star orange-600",
-        cancelOff: "icon fa fa-minus-circle",
-        cancelOn: "icon  fa fa-minus-circle orange-600",
-        starHalf: "icon fa fa-half-o orange-500"
-      };
-      $('[data-plugin="rating"]').each(function() {
-          var $this = $(this);
-          var options = $.extend(true, {}, defaults, $this.data());
-
-          if (options.hints) {
-            options.hints = options.hints.split(',');
-          }
-
-          $this.raty(options);
-      });
-      // }
-    // });
-  })(document, window, jQuery);
-</div>
-<div class="example-content"><div class="example">
-      <div class="u-rating" data-number="10" data-plugin="rating"></div>
-  </div>
-</div>
-<div class="csstag" style="display:none">.content{
-    padding: 10px;
-}
-.example{
-    width: 60%;
-    margin: 80px;
-}
-.col-xs-4{
-    width: 33.3%;
-    float: left;
-}
 </div>
 <div class="examples-code"><pre><code>(function(document, window, $) {
     'use strict';
@@ -172,23 +98,11 @@
       &lt;div class="u-rating" data-number="10" data-plugin="rating">&lt;/div>
   &lt;/div></code></pre>
 </div>
-<div class="examples-code"><pre><code>.content{
-    padding: 10px;
-}
-.example{
-    width: 60%;
-    margin: 80px;
-}
-.col-xs-4{
-    width: 33.3%;
-    float: left;
-}</code></pre>
-</div>
 
-##不同尺寸rating
+##基础Rating
 
-u-rating-lg u-rating-sm供尺寸的选择
-<div class="csstag" style="display:none">.content{
+常用于评级评分
+<div class="example-content"><style>.content{
     padding: 10px;
 }
 .example{
@@ -199,20 +113,10 @@ u-rating-lg u-rating-sm供尺寸的选择
     width: 33.3%;
     float: left;
 }
+</style></div>
+<div class="example-content"> <div class="u-rating" data-score="3" data-plugin="rating"></div>
 </div>
-<div class="example-content"><div class="example">
-    <div class="margin-bottom-10">
-        <div class="u-rating u-rating-sm" data-score="4" data-plugin="rating"></div>
-    </div>
-    <div class="margin-bottom-10">
-        <div class="u-rating" data-score="4" data-plugin="rating"></div>
-    </div>
-    <div>
-        <div class="u-rating u-rating-lg" data-score="4" data-plugin="rating"></div>
-    </div>
-</div>
-</div>
-<div class="jstag" style="display:none">(function(document, window, $) {
+<div class="example-content"><script>(function(document, window, $) {
     'use strict';
     
       var  defaults= {
@@ -238,7 +142,103 @@ u-rating-lg u-rating-sm供尺寸的选择
       // }
     // });
   })(document, window, jQuery);
+</script></div>
+<div class="examples-code"><pre><code>.content{
+    padding: 10px;
+}
+.example{
+    width: 60%;
+    margin: 80px;
+}
+.col-xs-4{
+    width: 33.3%;
+    float: left;
+}</code></pre>
 </div>
+<div class="examples-code"><pre><code> &lt;div class="u-rating" data-score="3" data-plugin="rating">&lt;/div></code></pre>
+</div>
+<div class="examples-code"><pre><code>(function(document, window, $) {
+    'use strict';
+    
+      var  defaults= {
+        targetKeep: true,
+        icon: "font",
+        starType: "i",
+        starOff: "icon fa fa-star",
+        starOn: "icon fa fa-star orange-600",
+        cancelOff: "icon fa fa-minus-circle",
+        cancelOn: "icon  fa fa-minus-circle orange-600",
+        starHalf: "icon fa fa-half-o orange-500"
+      };
+      $('[data-plugin="rating"]').each(function() {
+          var $this = $(this);
+          var options = $.extend(true, {}, defaults, $this.data());
+
+          if (options.hints) {
+            options.hints = options.hints.split(',');
+          }
+
+          $this.raty(options);
+      });
+      // }
+    // });
+  })(document, window, jQuery);</code></pre>
+</div>
+
+##不同尺寸Rating
+
+u-rating-lg u-rating-sm供尺寸的选择
+<div class="example-content"><style>.content{
+    padding: 10px;
+}
+.example{
+    width: 60%;
+    margin: 80px;
+}
+.col-xs-4{
+    width: 33.3%;
+    float: left;
+}
+</style></div>
+<div class="example-content"><div class="example">
+    <div class="margin-bottom-10">
+        <div class="u-rating u-rating-sm" data-score="4" data-plugin="rating"></div>
+    </div>
+    <div class="margin-bottom-10">
+        <div class="u-rating" data-score="4" data-plugin="rating"></div>
+    </div>
+    <div>
+        <div class="u-rating u-rating-lg" data-score="4" data-plugin="rating"></div>
+    </div>
+</div>
+</div>
+<div class="example-content"><script>(function(document, window, $) {
+    'use strict';
+    
+      var  defaults= {
+        targetKeep: true,
+        icon: "font",
+        starType: "i",
+        starOff: "icon fa fa-star",
+        starOn: "icon fa fa-star orange-600",
+        cancelOff: "icon fa fa-minus-circle",
+        cancelOn: "icon  fa fa-minus-circle orange-600",
+        starHalf: "icon fa fa-half-o orange-500"
+      };
+      $('[data-plugin="rating"]').each(function() {
+          var $this = $(this);
+          var options = $.extend(true, {}, defaults, $this.data());
+
+          if (options.hints) {
+            options.hints = options.hints.split(',');
+          }
+
+          $this.raty(options);
+      });
+      // }
+    // });
+  })(document, window, jQuery);
+</script></div>
 <div class="examples-code"><pre><code>.content{
     padding: 10px;
 }
