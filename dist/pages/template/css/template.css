@@ -11,6 +11,9 @@
 .banner-content h1 {
 	font-size: 30px;
 }
+.templateTabs{
+    display: none;
+}
 .banner-content p {
 	font-size: 16px;
 	line-height: 1.5;
@@ -178,7 +181,7 @@
     overflow: hidden;
 }
 .templateListHead {
-    background: #f5f5f5;
+    /*background: #f5f5f5;*/
     overflow: hidden;
     padding-left: 5px;
 }
