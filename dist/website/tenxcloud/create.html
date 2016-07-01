@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>运维平台 - 总览</title>
+    <title>运维平台 - 创建服务</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="UTF-8">
     <meta name="renderer" content="webkit">
@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="css/console/dashboard.css?rev=0.1.0">
     <script src="lib/jquery/jquery.js?rev=0.1.0"></script>
     <meta content="_csrf" name="csrf-param">
-    <meta content="EpdUamZM-zcHtnr-QvbsSxhcSJGaELorXTvg" name="csrf-token">
-    <link id="console_main_css" rel="stylesheet" href="css/console/main.526.css?rev=0.1.0" />
+    <meta content="avcycSjT-6unNvut-TYmVuhy50ON4altBvQc" name="csrf-token">
+    <link id="console_main_css" rel='stylesheet' href='css/console/main.526.css?rev=0.1.0' />
 </head>
 
 <body>
@@ -65,15 +65,13 @@
                         </li>
                         <li class="consume">
                             <a class="nav-t">消费记录</a>
-                           
                         </li>
                         <li class="ticket">
                             <a data-permalink onclick="_permalink(this);" class="nav-t">工单
                   
-                  <h id="ticketsNum" class="badge"></h>
-                  
-               </a>
-                           
+                              <h id="ticketsNum" class="badge"></h>
+                              
+                           </a>
                         </li>
                         <input type="hidden" id="user_memory_limit" value="0">
                     </ul>
@@ -293,180 +291,142 @@
     </div>
     <div class="page-container" style="margin-left: 200px;">
         <article>
-            <div class="contentTitle">
-                <div class="dbserver">
-                    <ol class="u-breadcrumb">
-                        <li><a class="icon md-home u-link" href="javascript:void(0)">控制台</a></li>
-                        <li class="active">总览</li>
-                    </ol>
-                </div>
+            <div class="dbserver">
+                <ol class="u-breadcrumb">
+                    <li><a class="icon md-home u-link" href="javascript:void(0)">控制台</a></li>
+                    <li><a class="u-link" href="javascript:void(0)">容器服务</a></li>
+                    <li class="active">创建服务</li>
+                </ol>
             </div>
-            <div class="dashboard">
-                <div class="u-row">
-                    <div class="u-col-xs-12 u-col-md-4">
-                        <section>
-                            <div class="u-widget">
-                                <div class="u-widget-heading">
-                                    <h3 class="u-widget-title">本月消费
-                                  
-                                  <a class="u-link u-widget-more">充值</a></h3>
-                                </div>
-                                <div class="u-widget-body">
-                                    <div class='condition'>
-                                    </div>
-                                    <div class="notice text-center">
-                                        账户余额：￥<span id="thisMonthconsumptionSum">-</span>
-                                        <p style="font-size:12px">其中优惠券：￥<span id="thisMonthGruntSum">-</span>，充值余额：￥<span id="thisMonthPaySum">-</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                    <div class="u-col-xs-12 u-col-md-4">
-                        <section>
-                            <div class="u-widget">
-                                <div class="u-widget-heading">
-                                    <h3 class="u-widget-title">资源详情
-                                    </h3>
-                                </div>
-                                <div class="u-widget-body">
-                                    <ul class="server-list">
-                                        <li>
-                                            <a data-permalink onclick="_permalink(this)">
-                                                <span class="server-info-icon"><i class="fa_icon server_icon_1"></i>
-                                            <span>服务个数：</span>
-                                                </span>
-                                                <span class="pull-right u-tag u-tag-info u-tag-round">0&nbsp;个</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a data-permalink onclick="_permalink(this)">
-                                                <span class="server-info-icon"><i class="fa_icon server_icon_2">1</i>
-                                            <span>项目个数：</span>
-                                                </span>
-                                                <span class="pull-right u-tag u-tag-primary u-tag-round">1&nbsp;个</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a data-permalink onclick="_permalink(this)">
-                                                <span class="server-info-icon"><i class="fa_icon server_icon_3">0</i>
-                                            <span>镜像个数：</span>
-                                                </span>
-                                                <span class="pull-right u-tag u-tag-warning u-tag-round">1&nbsp;个</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a data-permalink onclick="_permalink(this)">
-                                                <span class="server-info-icon"><i class="fa_icon server_icon_hosting"></i>
-                                            <span>主机个数：</span>
-                                                </span>
-                                                <span class="pull-right u-tag u-tag-success u-tag-round">1&nbsp;个</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                    <div class="u-col-xs-12 u-col-md-4">
-                        <section style="background:none;">
-                            <div class="u-widget">
-                                <div class="u-widget-heading">
-                                    <h3 class="u-widget-title">消息中心
-                                    <div class="symbol pull-right">
-                                        <i class="fa fa-angle-down"></i></div>
-                                    </h3>
-                                </div>
-                                <div id="message-center" class="u-widget-body">
-                                    消息为空，在这里您会收到镜像的消息
-                                </div>
-                            </div>
-                        </section>
+            <div id="home-main" class="modalCrealApp" style="background:#fff;min-height:100%;">
+                <div class="pearls-con u-container-fluid">
+                    <div class="pearls u-row">
+                        <div class="pearl done u-col-xs-4">
+                            <span class="pearl-number">1</span>
+                            <span class="pearl-title">镜像来源</span>
+                        </div>
+                        <div class="pearl current u-col-xs-4">
+                            <span class="pearl-number">2</span>
+                            <span class="pearl-title">容器配置</span>
+                        </div>
+                        <div class="pearl u-col-xs-4">
+                            <span class="pearl-number">3</span>
+                            <span class="pearl-title">高级设置</span>
+                        </div>
                     </div>
                 </div>
-                <div class="u-row">
-                    <div class="u-col-xs-12 u-col-md-8">
-                        <section>
-                            <div class="u-widget">
-                                <div class="u-widget-heading">
-                                    <h3 class="u-widget-title">资源配额使用情况
-                                    
-                                    </h3>
-                                </div>
-                                <div class="u-widget-body use-condition">
-                                    <div class="u-row">
-                                        <div class="u-col-xs-12 u-col-md-6 per">
-                                            <span class="part1-info">CPU</span>
-                                            <div id="pCPU" class="u-progress u-progress-sm part2-info"></div>
-                                            <span class="part3-info">0 &nbsp; 核</span>
-                                        </div>
-                                        <div class="u-col-xs-12 u-col-md-6 per">
-                                            <span class="part1-info">网络</span>
-                                            <div id="pNet" class="u-progress u-progress-sm part2-info"></div>
-                                            <span class="part3-info">10 &nbsp; M</span>
-                                        </div>
-                                        <div class="u-col-xs-12 u-col-md-6 per">
-                                            <span class="part1-info">内存</span>
-                                            <div id="pMemory" class="u-progress u-progress-sm part2-info"></div>
-                                            <span class="part3-info">0 &nbsp; G</span>
-                                        </div>
-                                        <div class="u-col-xs-12 u-col-md-6 per">
-                                            <span class="part1-info">存储</span>
-                                            <div id="pStorage" class="u-progress u-progress-sm part2-info"></div>
-                                            <span class="part3-info">0 &nbsp; G</span>
-                                        </div>
-                                        <div class="u-col-xs-12 u-col-md-6 per">
-                                            <span class="part1-info">任务</span>
-                                            <div id="pTask" class="u-progress u-progress-sm part2-info"></div>
-                                            <span class="part3-info">0 &nbsp; 个</span>
-                                        </div>
-                                        <div class="u-col-xs-12 u-col-md-6 per">
-                                            <span class="part1-info">编排</span>
-                                            <div id="pLayout" class="u-progress u-progress-sm part2-info"></div>
-                                            <span class="part3-info">10 &nbsp; 个</span>
-                                        </div>
-                                        <div class="u-col-xs-12 u-col-md-6 per">
-                                            <span class="part1-info">集群</span>
-                                            <div id="pCluster" class="u-progress u-progress-sm part2-info"></div>
-                                            <span class="part3-info">0 &nbsp; 个</span>
-                                        </div>
-                                        <div class="u-col-xs-12 u-col-md-6 per">
-                                            <span class="part1-info">主机</span>
-                                            <div id="pMaster" class="u-progress u-progress-sm part2-info"></div>
-                                            <span class="part3-info">10 &nbsp; 个</span>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="steps-main">
+                    <div class="step-inner">
+                        <div class="host_step1">
+                            <div class="u-input-group u-has-feedback sw  pull-right searchbtn">
+                                <input type="text" class="u-form-control" id="exampleInput3">
+                                <span class="u-form-control-feedback fa fa-search"></span>
                             </div>
-                        </section>
+                            <div class="select-server">
+                                <span>选择镜像:</span>
+                            </div>
+                            <section class="info-class">
+                                <span class="u-tag u-tag-info u-tag-round">常用</span>
+                                <span class="u-tag  cyan u-tag-round">Stack</span>
+                                <span class="u-tag  cyan u-tag-round">公有</span>
+                                <span class="u-tag  cyan u-tag-round">私有</span>
+                                <span class="u-tag  cyan u-tag-round">收藏夹</span>
+                                <span class="u-tag  cyan u-tag-round">Docker/第三方镜像</span>
+                            </section>
+                            <div class='select-type' style="margin:0;">
+                                <span class='pull-type'>镜像类别:</span>
+                            </div>
+                            <section class='open-system'>
+                                <span class="u-tag u-tag-info u-tag-round">运行时</span>
+                                <span class="u-tag  cyan u-tag-round">SSH 服务器</span>
+                                <span class="u-tag cyan  u-tag-round">Web 服务器</span>
+                                <span class="u-tag cyan  u-tag-round">数据库与缓存</span>
+                                <span class="u-tag cyan  u-tag-round">Library</span>
+                                <span class="u-tag cyan   u-tag-round">其他</span>
+                            </section>
+                        </div>
                     </div>
-                    <div class="u-col-xs-12 u-col-md-4">
-                        <section style="background:none;">
-                            <div class="u-widget">
-                                <div class="u-widget-heading">
-                                    <h3 class="u-widget-title">最近操作
-                                    <div class="symbol pull-right">
-                                        <i class="fa fa-angle-down"></i>
-                                    </div>
-                                    </h3>
+                    <div style="margin-left:64px;margin-right: 64px">
+                        <div class="u-container-fluid list-system-img">
+                            <div class="u-row image-item">
+                                <div class="u-col-2 u-col-xs-12">
+                                    <span class="img_icon"><img src="https://dn-tenxstore.qbox.me/tenxcloud_lamp.png?imageView3/2/h/50"></span>
                                 </div>
-                                <div class="u-widget-body">
-                                    暂无操作记录
+                                <div class="u-col-8 u-col-xs-12">
+                                    <div class="list-item-description">
+                                        <div class="name h4">tenxcloud/lamp <a title="点击查看镜像详情" target="_blank" href="https://hub.tenxcloud.com/repos/tenxcloud/lamp"><i class="fa fa-external-link-square"></i></a></div><span class="span9" style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">LAMP 运行时环境，包含Ubuntu+Apache+Mysql+PHP，开放SSH</span></div>
+                                </div>
+                                <div class="u-col-2 u-col-xs-12">
+                                    <button class="u-button   u-button-info margin-top-35">部署
+                                        <i class="fa fa-arrow-circle-o-right margin fa-lg"></i>
+                                    </button>
                                 </div>
                             </div>
-                        </section>
+                            <div class="u-row image-item">
+                                <div class="u-col-2 u-col-xs-12">
+                                    <span class="img_icon"><img src="https://dn-tenxstore.qbox.me/tenxcloud_php.png?imageView3/2/h/50"></span>
+                                </div>
+                                <div class="u-col-8 u-col-xs-12">
+                                    <div class="list-item-description">
+                                        <div class="name h4">tenxcloud/php <a title="点击查看镜像详情" target="_blank" href="https://hub.tenxcloud.com/repos/tenxcloud/lamp"><i class="fa fa-external-link-square"></i></a></div><span class="span9" style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"> PHP运行时环境，快速部署PHP应用，含示例代码，开放SSH</span></div>
+                                </div>
+                                <div class="u-col-2 u-col-xs-12">
+                                    <button class="u-button   u-button-info margin-top-35">部署
+                                        <i class="fa fa-arrow-circle-o-right margin fa-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="u-row image-item">
+                                <div class="u-col-2 u-col-xs-12">
+                                    <span class="img_icon"><img src="https://dn-tenxstore.qbox.me/tenxcloud_java.png?imageView3/2/h/50"></span>
+                                </div>
+                                <div class="u-col-8 u-col-xs-12">
+                                    <div class="list-item-description">
+                                        <div class="name h4">tenxcloud/JAVA <a title="点击查看镜像详情" target="_blank" href="https://hub.tenxcloud.com/repos/tenxcloud/lamp"><i class="fa fa-external-link-square"></i></a></div><span class="span9" style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Java运行时环境，快速部署Java应用，含示例代码，开放SSH</span></div>
+                                </div>
+                                <div class="u-col-2 u-col-xs-12">
+                                    <button class="u-button   u-button-info margin-top-35">部署
+                                        <i class="fa fa-arrow-circle-o-right margin fa-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="u-row image-item">
+                                <div class="u-col-2 u-col-xs-12">
+                                    <span class="img_icon"><img src="https://dn-tenxstore.qbox.me/tenxcloud_nodejs.png?imageView3/2/h/50"></span>
+                                </div>
+                                <div class="u-col-8 u-col-xs-12">
+                                    <div class="list-item-description">
+                                        <div class="name h4">tenxcloud/nodejs <a title="点击查看镜像详情" target="_blank" href="https://hub.tenxcloud.com/repos/tenxcloud/lamp"><i class="fa fa-external-link-square"></i></a></div><span class="span9" style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Node.js运行时环境，快速部署Node.js应用，含示例代码，开放SSH</span></div>
+                                </div>
+                                <div class="u-col-2 u-col-xs-12">
+                                    <button class="u-button   u-button-info margin-top-35">部署
+                                        <i class="fa fa-arrow-circle-o-right margin fa-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="u-row image-item">
+                                <div class="u-col-2 u-col-xs-12">
+                                    <span class="img_icon"><img src="https://dn-tenxstore.qbox.me/tenxcloud_lamp.png?imageView3/2/h/50"></span>
+                                </div>
+                                <div class="u-col-8 u-col-xs-12">
+                                    <div class="list-item-description">
+                                        <div class="name h4">tenxcloud/lamp <a title="点击查看镜像详情" target="_blank" href="https://hub.tenxcloud.com/repos/tenxcloud/lamp"><i class="fa fa-external-link-square"></i></a></div><span class="span9" style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">LAMP 运行时环境，包含Ubuntu+Apache+Mysql+PHP，开放SSH</span></div>
+                                </div>
+                                <div class="u-col-2 u-col-xs-12">
+                                    <button class="u-button   u-button-info margin-top-35">部署
+                                        <i class="fa fa-arrow-circle-o-right margin fa-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <script src="lib/Highcharts-4.0.3/js/highcharts.js?rev="></script>
         </article>
+        </div>
     </div>
-    <!-- <script src="scripts/console/console-duang.js?rev=0.1.0"></script> -->
-    <script type="text/javascript" src="scripts/console/jquery.nicescroll.min.js"></script>
     <script type="text/javascript" src='http://design.yyuap.com/static/uui-original/1.0.3/js/u.js'></script>
-    <script type="text/javascript" src="scripts/console/index.js"></script>
-   
-    
+    <script type="text/javascript" src="scripts/console/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src='scripts/console/index.js'></script>
 </body>
 
 </html>
