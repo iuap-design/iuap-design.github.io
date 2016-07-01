@@ -292,7 +292,7 @@ tr.table-tr td{
     width: 90%;
     text-align: center;
     line-height: 0;
-    margin: 0;
+    margin: 0 5%;
     height: 30px;
 }
 .more-item-left,.more-item-right{
@@ -358,7 +358,7 @@ tr.table-tr td{
 .more-item a{
     color: #363636;
 }
-
+/*foot*/
 .foot{
     background: #323232;
     width: 100%;

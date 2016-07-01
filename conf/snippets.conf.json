@@ -29,6 +29,9 @@
             "name": "徽章",
             "url": "demos/ui/badge"
         }, {
+            "name": "面包屑",
+            "url": "demos/ui/breadcrumbs"
+        }, {
             "name": "标签",
             "url": "demos/ui/label"
         }, {
