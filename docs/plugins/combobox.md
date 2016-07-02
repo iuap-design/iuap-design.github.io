@@ -34,7 +34,7 @@ option中的value属性值为用户传递给后端参数，option中的innerHtml
 1.  下拉单选
   
 
-![](img/combo1.png) 
+![](../../static/plugins/img/combo1.png)
  
 
 	<div class="u-combo">
@@ -50,7 +50,7 @@ option中的value属性值为用户传递给后端参数，option中的innerHtml
 
 2.下拉多选  
 
-![](img/combo2.png)
+![](../../static/plugins/img/combo2.png)
 
 	<div class="u-combo mutil-select">
 	    <input class="u-input"/>

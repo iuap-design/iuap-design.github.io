@@ -13,7 +13,7 @@ loading 组件以一个圆环顺时针方向运动，用来传达某一事件已
 	<div class="u-loading is-active u-loading-single-color"></div>
 
 ##具体示例
-![](img/loading.png)
+![](../../static/plugins/img/loading.png)
 
 	<div class="u-loading is-active u-loading-single-color"></div>
 

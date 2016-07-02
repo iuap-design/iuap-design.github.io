@@ -43,7 +43,7 @@
 - **消息提示框**
 
 
-![](img/messageDialog.png) 
+![](../../static/plugins/img/messageDialog.png)
 
 	u.messageDialog({msg:"HELLO!!!",title:"测试提示", btnText:"OK"});
 
@@ -53,7 +53,7 @@
 
 - **消息确认框**
 
-![](img/confirmDialog.png)
+![](../../static/plugins/img/confirmDialog.png)
 
         u.confirmDialog({
             msg: "是否保存单据？",
@@ -70,7 +70,7 @@
 
 - **模态框**
 
-![](img/modalDialog.png)
+![](../../static/plugins/img/modalDialog.png)
 
 	<div id="dialog_content" style="display:none;">
 		<div class="u-msg-title">
