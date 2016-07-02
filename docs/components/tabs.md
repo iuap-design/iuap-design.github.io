@@ -76,8 +76,6 @@ var dangertip=new u.Tooltip(dangerEle,{
 title:'danger tooltip',
 colorLevel:'tooltip-danger'
 });
-</div>
-<!-- <script>
 var toptoolEle=document.getElementById('top');
 var bottomtoolEle=document.getElementById('down');
 var lefttoolEle=document.getElementById('left');
