@@ -14,7 +14,7 @@
 
 ##具体示例
 
-![](img/month.png) 
+![](../../static/plugins/img/month.png)
 
 	<div class='u-month'>
         <input class="u-input" type="text">

@@ -21,7 +21,7 @@ textfield包括一个表示键盘输入的水平线，是标准输入框的增�
     </div>
 
 ##具体示例
-![](img/textfield.png) 
+![](../../static/plugins/img/textfield.png)
 
     <div class="u-text">
         <input class="u-input"/>

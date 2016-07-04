@@ -24,7 +24,7 @@
 
 此例为菜单内容显示在按钮的下方，并且左对齐。
 
-![](img/menu.png) 
+![](../../static/plugins/img/menu.png)
 
 	<button  id="demo-menu-lower-left" class="u-button floating u-button-icon">
 	    <i class="fa fa-ellipsis-v"></i>

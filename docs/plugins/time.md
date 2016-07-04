@@ -14,7 +14,7 @@
 
 ##具体示例
 
-![](img/time.png) 
+![](../../static/plugins/img/time.png)
 
 	<div class='u-time'>
         <input class="u-input" type="text">
