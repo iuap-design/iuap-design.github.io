@@ -1,0 +1,901 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>流程 pearls | iUAP Design</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-anchor-navigation/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-iuap-design/iuap-design.css">
+        
+    
+    
+
+        
+    
+    
+    
+    <link rel="prev" href="./panel.html" />
+    
+
+        <link rel="stylesheet" href="http://design.yyuap.com/static/uui-original/1.0.3/fonts/font-awesome/css/font-awesome.css">
+<link rel="stylesheet" href="http://design.yyuap.com/static/uui-original/1.0.3/css/u.css">
+<link rel="stylesheet" href="http://design.yyuap.com/static/uui-original/1.0.3/css/u-extend.css">
+<link rel="stylesheet" href="http://design.yyuap.com/static/highlight/styles/atelier-plateau-light.css">
+<link rel="stylesheet" href="http://design.yyuap.com/static/scrollbar/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" href="http://design.yyuap.com/static/nanoscroller/nanoscroller.css">
+<script src="http://design.yyuap.com/static/jquery/jquery-1.9.1.min.js"></script>
+<script src="http://design.yyuap.com/static/raty/rating.js"></script>
+<script src="http://design.yyuap.com/static/uui-original/1.0.3/js/u.js"></script>
+
+    </head>
+    <body>
+        
+  <!-- Theme Stylesheet -->
+  <link href="/dist/static/css/style.css" rel="stylesheet" media="screen">
+  <link href="/dist/static/ionicons/ionicons.css" rel="stylesheet" media="screen">
+  <link rel="stylesheet" href="http://design.yyuap.com/static/uui-original/1.0.3/css/u.css">
+
+  <div class="offcanvas-nav">
+        <!-- Head (Fixed Part) -->
+        <div class="nav-head">
+          <div class="top-bar">
+
+            <div class="nav-toggle" data-offcanvas="close"><i class="flaticon-list26"></i></div>
+          </div>
+
+        </div>
+        <!-- Body (Scroll Part) -->
+
+        <div class="nav-body">
+          <div class="overflow mCustomScrollbar _mCS_1" style="height: 190px; position: relative; overflow: visible;"><div id="mCSB_1" class="mCustomScrollBox mCS-dark mCSB_vertical mCSB_outside" tabindex="0"><div id="mCSB_1_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
+            <div class="inner">
+              <!-- Navigation -->
+              <nav class="nav-link">
+                <div class="scroll-nav">
+                  <ul>
+                    <!-- Add ".scroll" class to anchor tag to enable smooth scrolling -->
+                    <li class="active"><a class="scrollup" href="#"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                    <li><a class="scroll" href="#features" data-offset-top="80"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                    <li><a class="scroll" href="#gallery" data-offset-top="80"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                    <li><a class="scroll" href="#versions" data-offset-top="85"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                    <li><a class="scroll" href="#team" data-offset-top="80"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                    <li><a class="scroll" href="#web-app" data-offset-top="80"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                    <li><a class="scroll" href="#web-app" data-offset-top="80"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                  </ul>
+                  <ul class="pages">
+                    <li><a href="/dist/pages/getting-started/index.html">开始使用</a></li>
+                    <li><a href="/dist/pages/design-language/iuapdesign.html">设计语言</a></li>
+                    <li><a href="/dist/pages/globalstyle/index.html">样式</a></li>
+                    <li><a href="/dist/pages/components/index.html">组件</a></li>
+                    <li><a href="/dist/pages/plugins/index.html">JS 插件</a></li>
+                    <li><a href="/dist/pages/template/index.html">模板库</a></li>
+                    <li><a href="/dist/pages/webIDE/index.html">WebIDE</a></li>
+                    <li><a href="/dist/pages/kero/index.html">Kero</a></li>
+                </ul>
+                </div>
+              </nav>
+
+            </div>
+          </div></div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark mCSB_scrollTools_vertical" style="display: block;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; height: 177px; top: 0px; display: block; max-height: 180px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div>
+        </div>
+  </div>
+
+<header class="navbar gray navbar-sticky">
+
+
+	<div class="container">
+		<a href="/" class="logo scrollup">
+		<img src="/dist/static/img/logo-small.png" alt="iUAP Design">
+		iUAP Design
+		</a>
+		<div class="toolbar">
+      <a href="/dist/pages/getting-started/index.html" class="action-btn">开始使用</a>
+      <a href="/dist/pages/design-language/iuapdesign.html" class="action-btn">设计语言
+      <a href="/dist/pages/globalstyle/index.html" class="action-btn">全局css样式</a>
+      <a href="/dist/pages/components/index.html" class="action-btn">组件</a>
+      <a href="/dist/pages/plugins/index.html" class="action-btn">JS 插件</a>
+      <a href="/dist/pages/template/index.html" class="action-btn" target="_blank">模板库</a>
+      <a href="/dist/pages/webIDE/index.html" class="action-btn"  target="_blank">WebIDE</a>
+      <a href="/dist/pages/kero/index.html" class="action-btn">Kero</a>
+      <a href="/dist/pages/custom/index.html" class="btn btn-ghost btn-primary btn-sm icon-left"> 定制 </a>
+      <div class="nav-toggle" data-offcanvas="open"><i class="flaticon-list26"></i></div>
+		</div>
+	</div>
+</header><!-- Navbar End -->
+<div class="banner">
+ <div class="container">
+   <div class="banner-content">
+       <h1>CSS 组件</h1>
+         <p class="info">包含30+个CSS组件，助力快速产出易用美观的界面</p>
+   </div>
+ </div>
+</div>
+        
+    <div class="book"
+        data-level="12"
+        data-chapter-title="流程 pearls"
+        data-filepath="pearls.md"
+        data-basepath="."
+        data-revision="Mon Jul 04 2016 15:07:34 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="message.html">
+            
+                
+                    <a href="./message.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        提示消息 message
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="modal.html">
+            
+                
+                    <a href="./modal.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        模态框 modal
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="tabs.html">
+            
+                
+                    <a href="./tabs.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        页签 tabs
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="pagination.html">
+            
+                
+                    <a href="./pagination.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        分页 pagination
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="switchButton.html">
+            
+                
+                    <a href="./switchButton.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        开关 switch
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="tree.html">
+            
+                
+                    <a href="./tree.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        树 tree
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="tooltip.html">
+            
+                
+                    <a href="./tooltip.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        提示 tooltip
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="breadcrumb.html">
+            
+                
+                    <a href="./breadcrumb.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        面包屑 breadcrumb
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="progress.html">
+            
+                
+                    <a href="./progress.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        进度条 progress
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="rating.html">
+            
+                
+                    <a href="./rating.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        评分 rating
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="panel.html">
+            
+                
+                    <a href="./panel.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        面板 panel
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="12" data-path="pearls.html">
+            
+                
+                    <a href="./pearls.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                        流程 pearls
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >iUAP Design</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="pearls&#x63A7;&#x4EF6;">pearls&#x63A7;&#x4EF6;</h1>
+<p>&#x5E38;&#x7528;&#x4E8E;&#x6D41;&#x7A0B;&#x7684;&#x8DDF;&#x8E2A;</p>
+<h1 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h1>
+<h2 id="&#x5E26;icon&#x7684;pearls">&#x5E26;icon&#x7684;pearls</h2>
+<p>&#x5C06;&#x6570;&#x636E;&#x6362;&#x6210;icon&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x591A;&#x573A;&#x666F;&#x7684;&#x6D41;&#x7A0B;&#x6B65;&#x9AA4;&#x3002;</p>
+<p><style>.content{
+    padding: 10px;
+}
+.example{
+    width: 60%;
+    margin: 80px;
+}
+.col-xs-4{
+    width: 33.3%;
+    float: left;
+}
+</style></p>
+<div class="example-content"><div class="example-wrap">
+    <div class="example">
+      <div class="pearls row">
+        <div class="pearl done col-xs-4">
+          <div class="pearl-icon"><i class="icon fa fa-user" aria-hidden="true"></i></div>
+          <span class="pearl-title">Account Info</span>
+        </div>
+        <div class="pearl current col-xs-4">
+          <div class="pearl-icon"><i class="icon fa fa-credit-card" aria-hidden="true"></i></div>
+          <span class="pearl-title">Billing Info</span>
+        </div>
+        <div class="pearl col-xs-4">
+          <div class="pearl-icon"><i class="icon fa fa-check" aria-hidden="true"></i></div>
+          <span class="pearl-title">Confirmation</span>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+<div class="examples-code"><pre><code>.content{
+    padding: 10px;
+}
+.example{
+    width: 60%;
+    margin: 80px;
+}
+.col-xs-4{
+    width: 33.3%;
+    float: left;
+}</code></pre>
+</div>
+<div class="examples-code"><pre><code>&lt;div class=&quot;example-wrap&quot;&gt;
+    &lt;h4 class=&quot;example-title&quot;&gt;Icon&lt;/h4&gt;
+    &lt;div class=&quot;example&quot;&gt;
+      &lt;div class=&quot;pearls row&quot;&gt;
+        &lt;div class=&quot;pearl done col-xs-4&quot;&gt;
+          &lt;div class=&quot;pearl-icon&quot;&gt;&lt;i class=&quot;icon fa fa-user&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Account Info&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pearl current col-xs-4&quot;&gt;
+          &lt;div class=&quot;pearl-icon&quot;&gt;&lt;i class=&quot;icon fa fa-credit-card&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Billing Info&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pearl col-xs-4&quot;&gt;
+          &lt;div class=&quot;pearl-icon&quot;&gt;&lt;i class=&quot;icon fa fa-check&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Confirmation&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<h2 id="&#x4E0D;&#x540C;&#x5C3A;&#x5BF8;pearls">&#x4E0D;&#x540C;&#x5C3A;&#x5BF8;pearls</h2>
+<p>pearls-xs pearls-sm pearls-lg &#x4F9B;&#x5C3A;&#x5BF8;&#x7684;&#x9009;&#x62E9;</p>
+<p><style>.content{
+    padding: 10px;
+}
+.example{
+    width: 60%;
+    margin: 80px;
+}
+.col-xs-4{
+    width: 33.3%;
+    float: left;
+}
+</style></p>
+<div class="example-content"><div class="example">
+    <div class="pearls pearls-xs row">
+        <div class="pearl done col-xs-4">
+          <span class="pearl-number">1</span>
+          <span class="pearl-title">Account Info</span>
+        </div>
+        <div class="pearl current col-xs-4">
+          <span class="pearl-number">2</span>
+          <span class="pearl-title">Billing Info</span>
+        </div>
+        <div class="pearl col-xs-4">
+          <span class="pearl-number">3</span>
+          <span class="pearl-title">Confirmation</span>
+        </div>
+    </div>
+</div>
+<div class="example">
+    <div class="pearls pearls-sm row">
+        <div class="pearl done col-xs-4">
+          <span class="pearl-number">1</span>
+          <span class="pearl-title">Account Info</span>
+        </div>
+        <div class="pearl current col-xs-4">
+          <span class="pearl-number">2</span>
+          <span class="pearl-title">Billing Info</span>
+        </div>
+        <div class="pearl col-xs-4">
+          <span class="pearl-number">3</span>
+          <span class="pearl-title">Confirmation</span>
+        </div>
+    </div>
+</div>
+<div class="example">
+    <div class="pearls row">
+        <div class="pearl done col-xs-4">
+          <span class="pearl-number">1</span>
+          <span class="pearl-title">Account Info</span>
+        </div>
+        <div class="pearl current col-xs-4">
+          <span class="pearl-number">2</span>
+          <span class="pearl-title">Billing Info</span>
+        </div>
+        <div class="pearl col-xs-4">
+          <span class="pearl-number">3</span>
+          <span class="pearl-title">Confirmation</span>
+        </div>
+    </div>
+</div>
+<div class="example">
+    <div class="pearls pearls-lg row">
+        <div class="pearl done col-xs-4">
+          <span class="pearl-number">1</span>
+          <span class="pearl-title">Account Info</span>
+        </div>
+        <div class="pearl current col-xs-4">
+          <span class="pearl-number">2</span>
+          <span class="pearl-title">Billing Info</span>
+        </div>
+        <div class="pearl col-xs-4">
+          <span class="pearl-number">3</span>
+          <span class="pearl-title">Confirmation</span>
+        </div>
+    </div>
+</div>
+</div>
+<div class="examples-code"><pre><code>.content{
+    padding: 10px;
+}
+.example{
+    width: 60%;
+    margin: 80px;
+}
+.col-xs-4{
+    width: 33.3%;
+    float: left;
+}</code></pre>
+</div>
+<div class="examples-code"><pre><code>&lt;div class=&quot;example&quot;&gt;
+    &lt;div class=&quot;pearls pearls-xs row&quot;&gt;
+        &lt;div class=&quot;pearl done col-xs-4&quot;&gt;
+          &lt;span class=&quot;pearl-number&quot;&gt;1&lt;/span&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Account Info&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pearl current col-xs-4&quot;&gt;
+          &lt;span class=&quot;pearl-number&quot;&gt;2&lt;/span&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Billing Info&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pearl col-xs-4&quot;&gt;
+          &lt;span class=&quot;pearl-number&quot;&gt;3&lt;/span&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Confirmation&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;example&quot;&gt;
+    &lt;div class=&quot;pearls pearls-sm row&quot;&gt;
+        &lt;div class=&quot;pearl done col-xs-4&quot;&gt;
+          &lt;span class=&quot;pearl-number&quot;&gt;1&lt;/span&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Account Info&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pearl current col-xs-4&quot;&gt;
+          &lt;span class=&quot;pearl-number&quot;&gt;2&lt;/span&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Billing Info&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pearl col-xs-4&quot;&gt;
+          &lt;span class=&quot;pearl-number&quot;&gt;3&lt;/span&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Confirmation&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;example&quot;&gt;
+    &lt;div class=&quot;pearls row&quot;&gt;
+        &lt;div class=&quot;pearl done col-xs-4&quot;&gt;
+          &lt;span class=&quot;pearl-number&quot;&gt;1&lt;/span&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Account Info&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pearl current col-xs-4&quot;&gt;
+          &lt;span class=&quot;pearl-number&quot;&gt;2&lt;/span&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Billing Info&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pearl col-xs-4&quot;&gt;
+          &lt;span class=&quot;pearl-number&quot;&gt;3&lt;/span&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Confirmation&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;example&quot;&gt;
+    &lt;div class=&quot;pearls pearls-lg row&quot;&gt;
+        &lt;div class=&quot;pearl done col-xs-4&quot;&gt;
+          &lt;span class=&quot;pearl-number&quot;&gt;1&lt;/span&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Account Info&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pearl current col-xs-4&quot;&gt;
+          &lt;span class=&quot;pearl-number&quot;&gt;2&lt;/span&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Billing Info&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pearl col-xs-4&quot;&gt;
+          &lt;span class=&quot;pearl-number&quot;&gt;3&lt;/span&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Confirmation&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+<h2 id="&#x591A;&#x72B6;&#x6001;pearls">&#x591A;&#x72B6;&#x6001;pearls</h2>
+<p>&#x901A;&#x8FC7;icon&#x548C;&#x8FB9;&#x6846;&#x989C;&#x8272;&#x8868;&#x660E;&#x5F53;&#x524D;&#x72B6;&#x6001;</p>
+<div class="example-content"><div class="example">
+    <div class="pearls row">
+        <div class="pearl current col-xs-4">
+          <div class="pearl-icon"><i class="icon fa fa-user" aria-hidden="true"></i></div>
+          <span class="pearl-title">Account Info</span>
+        </div>
+        <div class="pearl disabled col-xs-4">
+          <div class="pearl-icon"><i class="icon fa fa-credit-card" aria-hidden="true"></i></div>
+          <span class="pearl-title">Billing Info</span>
+        </div>
+        <div class="pearl disabled col-xs-4">
+          <div class="pearl-icon"><i class="icon fa fa-credit-card" aria-hidden="true"></i></div>
+          <span class="pearl-title">Confirmation</span>
+        </div>
+    </div>
+</div>
+<div class="example">
+    <div class="pearls row">
+        <div class="pearl done col-xs-4">
+          <div class="pearl-icon"><i class="icon fa fa-user" aria-hidden="true"></i></div>
+          <span class="pearl-title">Account Info</span>
+        </div>
+        <div class="pearl current col-xs-4">
+          <div class="pearl-icon"><i class="icon fa fa-credit-card" aria-hidden="true"></i></div>
+          <span class="pearl-title">Billing Info</span>
+        </div>
+        <div class="pearl disabled col-xs-4">
+          <div class="pearl-icon"><i class="icon fa fa-credit-card" aria-hidden="true"></i></div>
+          <span class="pearl-title">Confirmation</span>
+        </div>
+    </div>
+</div>
+<div class="example">
+    <div class="pearls row">
+        <div class="pearl done col-xs-4">
+          <div class="pearl-icon"><i class="icon fa fa-user" aria-hidden="true"></i></div>
+          <span class="pearl-title">Account Info</span>
+        </div>
+        <div class="pearl current error col-xs-4">
+          <div class="pearl-icon"><i class="icon fa fa-credit-card" aria-hidden="true"></i></div>
+          <span class="pearl-title">Billing Info</span>
+        </div>
+        <div class="pearl disabled col-xs-4">
+          <div class="pearl-icon"><i class="icon fa fa-credit-card" aria-hidden="true"></i></div>
+          <span class="pearl-title">Confirmation</span>
+        </div>
+    </div>
+</div>
+<div class="example">
+    <div class="pearls row">
+        <div class="pearl done col-xs-4">
+          <div class="pearl-icon"><i class="icon fa fa-user" aria-hidden="true"></i></div>
+          <span class="pearl-title">Account Info</span>
+        </div>
+        <div class="pearl done col-xs-4">
+          <div class="pearl-icon"><i class="icon fa fa-credit-card" aria-hidden="true"></i></div>
+          <span class="pearl-title">Billing Info</span>
+        </div>
+        <div class="pearl current col-xs-4">
+          <div class="pearl-icon"><i class="icon fa fa-credit-card" aria-hidden="true"></i></div>
+          <span class="pearl-title">Confirmation</span>
+        </div>
+    </div>
+</div>
+</div>
+<style>.content{
+    padding: 10px;
+}
+.example{
+    width: 60%;
+    margin: 80px;
+}
+.col-xs-4{
+    width: 33.3%;
+    float: left;
+}
+</style>
+<div class="examples-code"><pre><code>&lt;div class=&quot;example&quot;&gt;
+    &lt;div class=&quot;pearls row&quot;&gt;
+        &lt;div class=&quot;pearl current col-xs-4&quot;&gt;
+          &lt;div class=&quot;pearl-icon&quot;&gt;&lt;i class=&quot;icon fa fa-user&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Account Info&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pearl disabled col-xs-4&quot;&gt;
+          &lt;div class=&quot;pearl-icon&quot;&gt;&lt;i class=&quot;icon fa fa-credit-card&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Billing Info&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pearl disabled col-xs-4&quot;&gt;
+          &lt;div class=&quot;pearl-icon&quot;&gt;&lt;i class=&quot;icon fa fa-credit-card&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Confirmation&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;example&quot;&gt;
+    &lt;div class=&quot;pearls row&quot;&gt;
+        &lt;div class=&quot;pearl done col-xs-4&quot;&gt;
+          &lt;div class=&quot;pearl-icon&quot;&gt;&lt;i class=&quot;icon fa fa-user&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Account Info&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pearl current col-xs-4&quot;&gt;
+          &lt;div class=&quot;pearl-icon&quot;&gt;&lt;i class=&quot;icon fa fa-credit-card&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Billing Info&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pearl disabled col-xs-4&quot;&gt;
+          &lt;div class=&quot;pearl-icon&quot;&gt;&lt;i class=&quot;icon fa fa-credit-card&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Confirmation&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;example&quot;&gt;
+    &lt;div class=&quot;pearls row&quot;&gt;
+        &lt;div class=&quot;pearl done col-xs-4&quot;&gt;
+          &lt;div class=&quot;pearl-icon&quot;&gt;&lt;i class=&quot;icon fa fa-user&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Account Info&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pearl current error col-xs-4&quot;&gt;
+          &lt;div class=&quot;pearl-icon&quot;&gt;&lt;i class=&quot;icon fa fa-credit-card&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Billing Info&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pearl disabled col-xs-4&quot;&gt;
+          &lt;div class=&quot;pearl-icon&quot;&gt;&lt;i class=&quot;icon fa fa-credit-card&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Confirmation&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;example&quot;&gt;
+    &lt;div class=&quot;pearls row&quot;&gt;
+        &lt;div class=&quot;pearl done col-xs-4&quot;&gt;
+          &lt;div class=&quot;pearl-icon&quot;&gt;&lt;i class=&quot;icon fa fa-user&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Account Info&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pearl done col-xs-4&quot;&gt;
+          &lt;div class=&quot;pearl-icon&quot;&gt;&lt;i class=&quot;icon fa fa-credit-card&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Billing Info&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pearl current col-xs-4&quot;&gt;
+          &lt;div class=&quot;pearl-icon&quot;&gt;&lt;i class=&quot;icon fa fa-credit-card&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Confirmation&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<div class="examples-code"><pre><code>.content{
+    padding: 10px;
+}
+.example{
+    width: 60%;
+    margin: 80px;
+}
+.col-xs-4{
+    width: 33.3%;
+    float: left;
+}</code></pre>
+</div>
+
+<h2 id="&#x57FA;&#x7840;pearls">&#x57FA;&#x7840;pearls</h2>
+<p>&#x5E38;&#x7528;&#x4E8E;&#x6D41;&#x7A0B;&#x6B65;&#x9AA4;&#x7684;&#x8DDF;&#x8E2A;&#x3002;</p>
+<div class="example-content"><div class="example-wrap">
+    <div class="example">
+      <div class="pearls row">
+        <div class="pearl done col-xs-4">
+          <span class="pearl-number">1</span>
+          <span class="pearl-title">Account Info</span>
+        </div>
+        <div class="pearl current col-xs-4">
+          <span class="pearl-number">2</span>
+          <span class="pearl-title">Billing Info</span>
+        </div>
+        <div class="pearl col-xs-4">
+          <span class="pearl-number">3</span>
+          <span class="pearl-title">Confirmation</span>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+<style>.content{
+    padding: 10px;
+}
+.example{
+    width: 60%;
+    margin: 80px;
+}
+.col-xs-4{
+    width: 33.3%;
+    float: left;
+}
+</style>
+<div class="examples-code"><pre><code>&lt;div class=&quot;example-wrap&quot;&gt;
+    &lt;h4 class=&quot;example-title&quot;&gt;Default&lt;/h4&gt;
+    &lt;div class=&quot;example&quot;&gt;
+      &lt;div class=&quot;pearls row&quot;&gt;
+        &lt;div class=&quot;pearl done col-xs-4&quot;&gt;
+          &lt;span class=&quot;pearl-number&quot;&gt;1&lt;/span&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Account Info&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pearl current col-xs-4&quot;&gt;
+          &lt;span class=&quot;pearl-number&quot;&gt;2&lt;/span&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Billing Info&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pearl col-xs-4&quot;&gt;
+          &lt;span class=&quot;pearl-number&quot;&gt;3&lt;/span&gt;
+          &lt;span class=&quot;pearl-title&quot;&gt;Confirmation&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<div class="examples-code"><pre><code>.content{
+    padding: 10px;
+}
+.example{
+    width: 60%;
+    margin: 80px;
+}
+.col-xs-4{
+    width: 33.3%;
+    float: left;
+}</code></pre>
+</div>
+<div id='anchors-navbar'><i class='fa fa-anchor'></i><ul><li><a href='#pearls控件'>pearls控件</a></li><li><a href='#示例'>示例</a></li><ul><li><a href='#带icon的pearls'>带icon的pearls</a></li><li><a href='#不同尺寸pearls'>不同尺寸pearls</a></li><li><a href='#多状态pearls'>多状态pearls</a></li><li><a href='#基础pearls'>基础pearls</a></li></ul></ul></div><a href='#pearls控件' id='goTop'><i class='fa fa-arrow-up'></i></a>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./panel.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 面板 panel"><i class="fa fa-angle-left"></i></a>
+        
+        
+    </div>
+</div>
+
+
+		
+        
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-iuap-design/iuap-design.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"iuap-design":{"title":"CSS 组件","desc":"包含30+个CSS组件，助力快速产出易用美观的界面"},"anchor-navigation":{},"expandable-chapters":{},"highlight":{},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        <footer class="footer">
+	<div class="container space-top">
+	<!-- Footer Head -->
+
+	<div class="body">
+		<!-- Copyright -->
+		<div class="column copyright">
+			<p>2016 &copy; <a href="http://www.yonyou.com/" target="_blank">用友网络</a>. iUAP Design</p>
+		</div>
+		<!-- Gadget (Middle Column) --></div>
+	</div>
+</footer><!-- Footer End -->
+
+<!-- Javascript (jQuery) Libraries and Plugins --><script src="http://design.yyuap.com/static/knockout/knockout-3.2.0.debug.js"></script>
+<script src="http://design.yyuap.com/static/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="http://design.yyuap.com/static/nanoscroller/jquery.nanoscroller.js"></script>
+<script src="http://design.yyuap.com/static/highlight/highlight.min.js"></script>
+<script src="http://design.yyuap.com/static/uui-original/1.0.3/js/u-polyfill.js"></script>
+
+        <script>
+$(".nano").nanoScroller();
+hljs.initHighlightingOnLoad();</script>
+        
+    </body>
+    
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../../../vendor/uui/css/u.css">
+</head>
+<body>
+
+
+<div class='u-datepicker' u-meta='{"id":"d1","type":"u-date","data":"dt1","field":"f1"}'>
+    <input class="u-input" type="text">
+</div>
+
+<br>
+<br>
+<br>
+
+<div class='u-datepicker' u-meta='{"id":"d1","type":"u-datetime","data":"dt1","field":"f2"}'>
+    <input class="u-input" type="text">
+    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+	</span>
+</div>
+
+<script src="../../../vendor/knockout/knockout-3.2.0.debug.js"></script>
+<script src="../../../vendor/uui/js/u-polyfill.js"></script>
+<script src="../../../vendor/uui/js/u.js"></script>
+
+<script>
+    var app, viewModel;
+    viewModel = {
+        dt1: new u.DataTable({
+            meta: {
+                f1: {type:'date'},
+                f2: {type:'datetime'}
+            }
+        })
+    }
+
+    app = u.createApp({
+        el: 'body',
+        model: viewModel
+    });
+
+    var r = viewModel.dt1.createEmptyRow();
+    r.setValue('f1', "2016-2-13 12:13:22");
+    r.setValue('f2', "2016-2-13 12:13:22");
+    viewModel.dt1.setRowSelect(0);
+</script>
+</body>
+</html>

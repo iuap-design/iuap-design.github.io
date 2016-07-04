@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../../../vendor/uui/css/u.css">
+    <style>
+        #addTable{
+            border:1px solid #ccc;
+            border-collapse: collapse;
+            margin-bottom: 3px;
+        }
+        #addTable thead{
+            border-bottom: 1px solid #ccc;
+        }
+        #addTable tr:nth-of-type(odd){
+            background-color: #eee;
+        }
+
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+
+<div class="rslistInfo">
+    <table id="table2" class="u-table">
+        <thead>
+        <tr>
+            <th>
+                <label class="u-checkbox only-style"
+                       data-bind="click: listData.toggleAllSelect.bind(listData), css:{'is-checked': listData.allSelected()}">
+                    <input id="checkInput" type="checkbox" class="u-checkbox-input">
+                    <span class="u-checkbox-label"></span>
+                </label>
+            </th>
+            <th>公司</th>
+            <th>部门</th>
+            <th>姓名</th>
+            <th>性别</th>
+        </tr>
+        </thead>
+        <tbody data-bind="foreach:{data:listData.rows(), as: 'row', afterAdd: afterAdd}">
+        <tr data-bind="css: { 'is-selected' : row.selected() }">
+            <td>
+                <label class="u-checkbox only-style"
+                       data-bind="click: row.multiSelect, css:{'is-checked': row.selected()}">
+                    <input type="checkbox" class="u-checkbox-input" data-bind="checked:row.selected()">
+                    <span class="u-checkbox-label"></span>
+                </label>
+            </td>
+            <td data-bind="text: row.ref('enterprise')"></td>
+            <td data-bind="text: row.ref('depart')"></td>
+            <td data-bind="text: row.ref('name')"></td>
+            <td data-bind="text: row.ref('sex')"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<hr>
+<h3>dataTableAPI</h3>
+<h5>getSimpleData:</h5>
+<fieldset style="border: 1px solid #eee;">
+    <legend>参数：</legend>
+    <div><label for="getSimpleData-type" style="min-width: 75px;display: inline-block">type:</label><input
+            id="getSimpleData-type"/><em>all,current,focus,select,change</em></div>
+    <div><label for="getSimpleData-fields" style="min-width: 75px;display: inline-block;">fields:</label><input
+            id="getSimpleData-fields"><em>enterprise,depart,name,sex(用半角逗号分隔)</em></div>
+    <input type="button" value="执行" id="operate"><br>
+    <label id="result-show"></label>
+</fieldset>
+<hr>
+<fieldset style="border: 1px solid #eee;">
+    <legend>addSimpleData:</legend>
+    <input type="button" style="padding-right: 1em;" value="增行" id="addCol"/>
+    <input type="button" value="执行" id="operate2">
+    <table id="addTable">
+        <thead>
+        <tr>
+            <th>enterprise</th>
+            <th>depart</th>
+            <th>name</th>
+            <th>sex</th>
+        </tr>
+        </thead>
+        <tbody id="tb">
+        <tr id="tr">
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+        </tbody>
+    </table>
+
+</fieldset>
+
+
+<script src="../../../vendor/knockout/knockout-3.2.0.debug.js"></script>
+<script src="../../../vendor/uui/js/u-polyfill.js"></script>
+<script src="../../../vendor/uui/js/u.js"></script>
+<script src="dataTable.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css"  href="../../../vendor/uui/css/u.css"></head>
+<body>
+
+<div u-meta='{"id":"radio","data":"dt1","field":"f1", "type":"radio","datasource":"radiodata"}'>
+    <input type="radio" name="identity" /><span data-role="name"></span>
+    <br />
+</div>
+
+<br>
+<br>
+<br>
+
+
+<div u-meta='{"id":"r1","type":"u-radio","data":"dt1","field":"f1","datasource":"radiodata"}'>
+    <label  class="u-radio" >
+        <input type="radio" class="u-radio-button" name="options">
+        <span class="u-radio-label"></span>
+    </label>
+
+</div>
+
+
+<br>
+<br>
+<br>
+
+<!--<label  class="u-radio" u-meta='{"id":"r1","type":"u-radio","data":"dt1","field":"f1"}'>-->
+    <!--<input type="radio" class="u-radio-button" name="options" value="test1">-->
+    <!--<span class="u-radio-label">test1</span>-->
+<!--</label>-->
+<!--<label class="u-radio" u-meta='{"id":"r2","type":"u-radio","data":"dt1","field":"f1"}'>-->
+    <!--<input type="radio" class="u-radio-button" name="options" value="test2">-->
+    <!--<span class="u-radio-label">test2</span>-->
+<!--</label>-->
+
+
+<br>
+<br>
+<br>
+
+
+<script src="../../../vendor/knockout/knockout-3.2.0.debug.js"></script>
+    <script src="../../../vendor/uui/js/u-polyfill.js"></script>
+    <script src="../../../vendor/uui/js/u.js"></script>
+
+    <script>
+        var app,viewModel;
+        viewModel = {
+            dt1: new u.DataTable({
+                meta:{
+                f1:{},
+                f2:{}
+            }
+        }),
+        radiodata:[{value:'01',name:'男'},{value:'02',name:'女'}],
+        spamFlavors: ko.observable("test1"),
+        btn1Click: function(){
+                alert('btn1Click');
+//                    app.serverEvent().fire();
+            }
+        };
+
+        app = u.createApp({
+            el:'body',
+            model:viewModel
+        });
+
+        var r = viewModel.dt1.createEmptyRow();
+        r.setValue('f1',"test1");
+        viewModel.dt1.setRowSelect(0);
+    </script>
+</body>
+</html>

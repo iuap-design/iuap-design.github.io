@@ -1,0 +1,587 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>进度条 progress | iUAP Design</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-anchor-navigation/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-iuap-design/iuap-design.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./rating.html" />
+    
+    
+    <link rel="prev" href="./breadcrumb.html" />
+    
+
+        <link rel="stylesheet" href="http://design.yyuap.com/static/uui-original/1.0.3/fonts/font-awesome/css/font-awesome.css">
+<link rel="stylesheet" href="http://design.yyuap.com/static/uui-original/1.0.3/css/u.css">
+<link rel="stylesheet" href="http://design.yyuap.com/static/uui-original/1.0.3/css/u-extend.css">
+<link rel="stylesheet" href="http://design.yyuap.com/static/highlight/styles/atelier-plateau-light.css">
+<link rel="stylesheet" href="http://design.yyuap.com/static/scrollbar/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" href="http://design.yyuap.com/static/nanoscroller/nanoscroller.css">
+<script src="http://design.yyuap.com/static/jquery/jquery-1.9.1.min.js"></script>
+<script src="http://design.yyuap.com/static/raty/rating.js"></script>
+<script src="http://design.yyuap.com/static/uui-original/1.0.3/js/u.js"></script>
+
+    </head>
+    <body>
+        
+  <!-- Theme Stylesheet -->
+  <link href="/dist/static/css/style.css" rel="stylesheet" media="screen">
+  <link href="/dist/static/ionicons/ionicons.css" rel="stylesheet" media="screen">
+  <link rel="stylesheet" href="http://design.yyuap.com/static/uui-original/1.0.3/css/u.css">
+
+  <div class="offcanvas-nav">
+        <!-- Head (Fixed Part) -->
+        <div class="nav-head">
+          <div class="top-bar">
+
+            <div class="nav-toggle" data-offcanvas="close"><i class="flaticon-list26"></i></div>
+          </div>
+
+        </div>
+        <!-- Body (Scroll Part) -->
+
+        <div class="nav-body">
+          <div class="overflow mCustomScrollbar _mCS_1" style="height: 190px; position: relative; overflow: visible;"><div id="mCSB_1" class="mCustomScrollBox mCS-dark mCSB_vertical mCSB_outside" tabindex="0"><div id="mCSB_1_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
+            <div class="inner">
+              <!-- Navigation -->
+              <nav class="nav-link">
+                <div class="scroll-nav">
+                  <ul>
+                    <!-- Add ".scroll" class to anchor tag to enable smooth scrolling -->
+                    <li class="active"><a class="scrollup" href="#"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                    <li><a class="scroll" href="#features" data-offset-top="80"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                    <li><a class="scroll" href="#gallery" data-offset-top="80"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                    <li><a class="scroll" href="#versions" data-offset-top="85"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                    <li><a class="scroll" href="#team" data-offset-top="80"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                    <li><a class="scroll" href="#web-app" data-offset-top="80"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                    <li><a class="scroll" href="#web-app" data-offset-top="80"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                  </ul>
+                  <ul class="pages">
+                    <li><a href="/dist/pages/getting-started/index.html">开始使用</a></li>
+                    <li><a href="/dist/pages/design-language/iuapdesign.html">设计语言</a></li>
+                    <li><a href="/dist/pages/globalstyle/index.html">样式</a></li>
+                    <li><a href="/dist/pages/components/index.html">组件</a></li>
+                    <li><a href="/dist/pages/plugins/index.html">JS 插件</a></li>
+                    <li><a href="/dist/pages/template/index.html">模板库</a></li>
+                    <li><a href="/dist/pages/webIDE/index.html">WebIDE</a></li>
+                    <li><a href="/dist/pages/kero/index.html">Kero</a></li>
+                </ul>
+                </div>
+              </nav>
+
+            </div>
+          </div></div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark mCSB_scrollTools_vertical" style="display: block;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; height: 177px; top: 0px; display: block; max-height: 180px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div>
+        </div>
+  </div>
+
+<header class="navbar gray navbar-sticky">
+
+
+	<div class="container">
+		<a href="/" class="logo scrollup">
+		<img src="/dist/static/img/logo-small.png" alt="iUAP Design">
+		iUAP Design
+		</a>
+		<div class="toolbar">
+      <a href="/dist/pages/getting-started/index.html" class="action-btn">开始使用</a>
+      <a href="/dist/pages/design-language/iuapdesign.html" class="action-btn">设计语言
+      <a href="/dist/pages/globalstyle/index.html" class="action-btn">全局css样式</a>
+      <a href="/dist/pages/components/index.html" class="action-btn">组件</a>
+      <a href="/dist/pages/plugins/index.html" class="action-btn">JS 插件</a>
+      <a href="/dist/pages/template/index.html" class="action-btn" target="_blank">模板库</a>
+      <a href="/dist/pages/webIDE/index.html" class="action-btn"  target="_blank">WebIDE</a>
+      <a href="/dist/pages/kero/index.html" class="action-btn">Kero</a>
+      <a href="/dist/pages/custom/index.html" class="btn btn-ghost btn-primary btn-sm icon-left"> 定制 </a>
+      <div class="nav-toggle" data-offcanvas="open"><i class="flaticon-list26"></i></div>
+		</div>
+	</div>
+</header><!-- Navbar End -->
+<div class="banner">
+ <div class="container">
+   <div class="banner-content">
+       <h1>CSS 组件</h1>
+         <p class="info">包含30+个CSS组件，助力快速产出易用美观的界面</p>
+   </div>
+ </div>
+</div>
+        
+    <div class="book"
+        data-level="9"
+        data-chapter-title="进度条 progress"
+        data-filepath="progress.md"
+        data-basepath="."
+        data-revision="Mon Jul 04 2016 15:07:34 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="message.html">
+            
+                
+                    <a href="./message.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        提示消息 message
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="modal.html">
+            
+                
+                    <a href="./modal.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        模态框 modal
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="tabs.html">
+            
+                
+                    <a href="./tabs.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        页签 tabs
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="pagination.html">
+            
+                
+                    <a href="./pagination.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        分页 pagination
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="switchButton.html">
+            
+                
+                    <a href="./switchButton.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        开关 switch
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="tree.html">
+            
+                
+                    <a href="./tree.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        树 tree
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="tooltip.html">
+            
+                
+                    <a href="./tooltip.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        提示 tooltip
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="breadcrumb.html">
+            
+                
+                    <a href="./breadcrumb.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        面包屑 breadcrumb
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="9" data-path="progress.html">
+            
+                
+                    <a href="./progress.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        进度条 progress
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="rating.html">
+            
+                
+                    <a href="./rating.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        评分 rating
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="panel.html">
+            
+                
+                    <a href="./panel.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        面板 panel
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="pearls.html">
+            
+                
+                    <a href="./pearls.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                        流程 pearls
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >iUAP Design</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="progress&#x63A7;&#x4EF6;">progress&#x63A7;&#x4EF6;</h1>
+<p>progress&#x63A7;&#x4EF6;</p>
+<h1 id="&#x5982;&#x4F55;&#x4F7F;&#x7528;">&#x5982;&#x4F55;&#x4F7F;&#x7528;</h1>
+<p>&#x6682;&#x65E0;</p>
+<h1 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h1>
+<h2 id="&#x4E0D;&#x786E;&#x5B9A;progress">&#x4E0D;&#x786E;&#x5B9A;Progress</h2>
+<div class="example-content"><div id="p2" class="u-progress u-progress__indeterminate"></div>
+<p></p>
+</div>
+
+<div class="examples-code"><pre><code>&lt;div id=&quot;p2&quot; class=&quot;u-progress u-progress__indeterminate&quot;&gt;&lt;/div&gt;
+&lt;/p&gt;</code></pre>
+</div>
+
+
+<h2 id="&#x4E0D;&#x540C;&#x989C;&#x8272;&#x7684;progress">&#x4E0D;&#x540C;&#x989C;&#x8272;&#x7684;Progress</h2>
+<p> <code>.u-progress-primary</code> <code>.u-progress-danger</code> <code>.u-progress-info</code> <code>.u-progress-success</code> <code>.u-progress-warning</code> <code>.u-progress-dark</code> &#x516D;&#x79CD;&#x989C;&#x8272;&#x53EF;&#x4F9B;&#x9009;&#x62E9;</p>
+<div class="example-content"><div id="p11" class="u-progress"></div>
+<br>
+<div id="p12" class="u-progress u-progress-primary"></div>
+<br>
+<div id="p13" class="u-progress u-progress-danger"></div>
+<br>
+<div id="p14" class="u-progress u-progress-info"></div>
+<br>
+<div id="p15" class="u-progress u-progress-success"></div>
+<br>
+<div id="p16" class="u-progress u-progress-warning"></div>
+<br>
+<div id="p17" class="u-progress u-progress-dark"></div>
+</div>
+<div class="jstag" style="display:none">u.on(window, &apos;load&apos;, function() {
+    &apos;use strict&apos;;
+    document.querySelector(&apos;#p11&apos;)[&apos;u.Progress&apos;].setProgress(69);
+    document.querySelector(&apos;#p12&apos;)[&apos;u.Progress&apos;].setProgress(69);
+    document.querySelector(&apos;#p13&apos;)[&apos;u.Progress&apos;].setProgress(69);
+    document.querySelector(&apos;#p14&apos;)[&apos;u.Progress&apos;].setProgress(69);
+    document.querySelector(&apos;#p15&apos;)[&apos;u.Progress&apos;].setProgress(69)
+    document.querySelector(&apos;#p16&apos;)[&apos;u.Progress&apos;].setProgress(69);
+    document.querySelector(&apos;#p17&apos;)[&apos;u.Progress&apos;].setProgress(69);
+
+});
+</div>
+<div class="examples-code"><pre><code>&lt;div id=&quot;p11&quot; class=&quot;u-progress&quot;&gt;&lt;/div&gt;
+&lt;br/&gt;
+&lt;div id=&quot;p12&quot; class=&quot;u-progress u-progress-primary&quot;&gt;&lt;/div&gt;
+&lt;br/&gt;
+&lt;div id=&quot;p13&quot; class=&quot;u-progress u-progress-danger&quot;&gt;&lt;/div&gt;
+&lt;br/&gt;
+&lt;div id=&quot;p14&quot; class=&quot;u-progress u-progress-info&quot;&gt;&lt;/div&gt;
+&lt;br/&gt;
+&lt;div id=&quot;p15&quot; class=&quot;u-progress u-progress-success&quot;&gt;&lt;/div&gt;
+&lt;br/&gt;
+&lt;div id=&quot;p16&quot; class=&quot;u-progress u-progress-warning&quot;&gt;&lt;/div&gt;
+&lt;br/&gt;
+&lt;div id=&quot;p17&quot; class=&quot;u-progress u-progress-dark&quot;&gt;&lt;/div&gt;</code></pre>
+</div>
+<div class="examples-code"><pre><code>u.on(window, &apos;load&apos;, function() {
+    &apos;use strict&apos;;
+    document.querySelector(&apos;#p11&apos;)[&apos;u.Progress&apos;].setProgress(69);
+    document.querySelector(&apos;#p12&apos;)[&apos;u.Progress&apos;].setProgress(69);
+    document.querySelector(&apos;#p13&apos;)[&apos;u.Progress&apos;].setProgress(69);
+    document.querySelector(&apos;#p14&apos;)[&apos;u.Progress&apos;].setProgress(69);
+    document.querySelector(&apos;#p15&apos;)[&apos;u.Progress&apos;].setProgress(69)
+    document.querySelector(&apos;#p16&apos;)[&apos;u.Progress&apos;].setProgress(69);
+    document.querySelector(&apos;#p17&apos;)[&apos;u.Progress&apos;].setProgress(69);
+
+});</code></pre>
+</div>
+
+<h2 id="&#x7F13;&#x51B2;progress">&#x7F13;&#x51B2;Progress</h2>
+<p>&#x6709;&#x7F13;&#x51B2;&#x6807;&#x8BC6;&#x7684;&#x8FDB;&#x5EA6;&#x6761;</p>
+<div class="jstag" style="display:none">u.on(window, &apos;load&apos;, function() {
+    &apos;use strict&apos;;
+    document.querySelector(&apos;#p3&apos;)[&apos;u.Progress&apos;].setProgress(33).setBuffer(87);
+
+});
+</div>
+<div class="example-content"><div id="p3" class="u-progress"></div>
+</div>
+<div class="examples-code"><pre><code>u.on(window, &apos;load&apos;, function() {
+    &apos;use strict&apos;;
+    document.querySelector(&apos;#p3&apos;)[&apos;u.Progress&apos;].setProgress(33).setBuffer(87);
+
+});</code></pre>
+</div>
+<div class="examples-code"><pre><code>&lt;div id=&quot;p3&quot; class=&quot;u-progress&quot;&gt;&lt;/div&gt;</code></pre>
+</div>
+
+<h2 id="&#x4E0D;&#x540C;&#x5C3A;&#x5BF8;&#x7684;progress">&#x4E0D;&#x540C;&#x5C3A;&#x5BF8;&#x7684;Progress</h2>
+<p><code>.u-progress-md</code> <code>.u-progress-sm</code>&#x63D0;&#x4F9B;&#x4E86;&#x989D;&#x5916;&#x53EF;&#x4F9B;&#x9009;&#x62E9;&#x7684;&#x5C3A;&#x5BF8;</p>
+<div class="jstag" style="display:none">u.on(window, &apos;load&apos;, function() {
+    &apos;use strict&apos;;
+    document.querySelector(&apos;#p22&apos;)[&apos;u.Progress&apos;].setProgress(69);
+    document.querySelector(&apos;#p23&apos;)[&apos;u.Progress&apos;].setProgress(69)
+    document.querySelector(&apos;#p24&apos;)[&apos;u.Progress&apos;].setProgress(69);
+    document.querySelector(&apos;#p25&apos;)[&apos;u.Progress&apos;].setProgress(69);
+
+});
+</div>
+<div class="example-content"><div id="p22" class="u-progress u-progress-lg"></div>
+<br>
+<div id="p23" class="u-progress u-progress-md"></div>
+<br>
+<div id="p24" class="u-progress u-progress-sm"></div>
+<br>
+<div id="p25" class="u-progress"></div>
+</div>
+<div class="examples-code"><pre><code>u.on(window, &apos;load&apos;, function() {
+    &apos;use strict&apos;;
+    [&apos;u.Progress&apos;].setProgress(69);
+    document.querySelector(&apos;#p22&apos;)[&apos;u.Progress&apos;].setProgress(69);
+    document.querySelector(&apos;#p23&apos;)[&apos;u.Progress&apos;].setProgress(69)
+    document.querySelector(&apos;#p24&apos;)[&apos;u.Progress&apos;].setProgress(69);
+    document.querySelector(&apos;#p25&apos;)[&apos;u.Progress&apos;].setProgress(69);
+
+});</code></pre>
+</div>
+<div class="examples-code"><pre><code>&lt;div id=&quot;p22&quot; class=&quot;u-progress u-progress-lg&quot;&gt;&lt;/div&gt;
+&lt;br/&gt;
+&lt;div id=&quot;p23&quot; class=&quot;u-progress u-progress-md&quot;&gt;&lt;/div&gt;
+&lt;br/&gt;
+&lt;div id=&quot;p24&quot; class=&quot;u-progress u-progress-sm&quot;&gt;&lt;/div&gt;
+&lt;br/&gt;
+&lt;div id=&quot;p25&quot; class=&quot;u-progress&quot;&gt;&lt;/div&gt;</code></pre>
+</div>
+
+
+
+
+<div id='anchors-navbar'><i class='fa fa-anchor'></i><ul><li><a href='#progress控件'>progress控件</a></li><li><a href='#如何使用'>如何使用</a></li><li><a href='#示例'>示例</a></li><ul><li><a href='#不确定progress'>不确定Progress</a></li><li><a href='#不同颜色的progress'>不同颜色的Progress</a></li><li><a href='#缓冲progress'>缓冲Progress</a></li><li><a href='#不同尺寸的progress'>不同尺寸的Progress</a></li></ul></ul></div><a href='#progress控件' id='goTop'><i class='fa fa-arrow-up'></i></a>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./breadcrumb.html" class="navigation navigation-prev " aria-label="Previous page: 面包屑 breadcrumb"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./rating.html" class="navigation navigation-next " aria-label="Next page: 评分 rating"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+
+		
+        
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-iuap-design/iuap-design.js"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"iuap-design":{"title":"CSS 组件","desc":"包含30+个CSS组件，助力快速产出易用美观的界面"},"anchor-navigation":{},"expandable-chapters":{},"highlight":{},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        <footer class="footer">
+	<div class="container space-top">
+	<!-- Footer Head -->
+
+	<div class="body">
+		<!-- Copyright -->
+		<div class="column copyright">
+			<p>2016 &copy; <a href="http://www.yonyou.com/" target="_blank">用友网络</a>. iUAP Design</p>
+		</div>
+		<!-- Gadget (Middle Column) --></div>
+	</div>
+</footer><!-- Footer End -->
+
+<!-- Javascript (jQuery) Libraries and Plugins --><script src="http://design.yyuap.com/static/knockout/knockout-3.2.0.debug.js"></script>
+<script src="http://design.yyuap.com/static/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="http://design.yyuap.com/static/nanoscroller/jquery.nanoscroller.js"></script>
+<script src="http://design.yyuap.com/static/highlight/highlight.min.js"></script>
+<script src="http://design.yyuap.com/static/uui-original/1.0.3/js/u-polyfill.js"></script>
+
+        <script>
+$(".nano").nanoScroller();
+hljs.initHighlightingOnLoad();</script>
+        
+    </body>
+    
+</html>

@@ -4,7 +4,8 @@
   "description": "iuap-design scaffold",
   "main": "server/app.js",
   "scripts": {
-    "dev": "node server/app.js"
+    "dev": "node server/app.js",
+    "build": "gulp default"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,9 @@
   },
   "homepage": "https://github.com/iuap-design/scaffold#readme",
   "devDependencies": {
+    "art-template": "^3.0.3",
+    "copy-dir": "^0.3.0",
+    "del": "^2.2.1",
     "gitbook-cli": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
@@ -27,7 +31,8 @@
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^1.5.3",
     "gulp-util": "^3.0.1",
-    "gulp-zip": "^3.2.0"
+    "gulp-zip": "^3.2.0",
+    "rimraf": "^2.5.3"
   },
   "dependencies": {
     "koa": "^1.1.2",

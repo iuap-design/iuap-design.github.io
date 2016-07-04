@@ -11,87 +11,83 @@
     <link href="/dist/static/ionicons/ionicons.css" rel="stylesheet" media="screen">
 </head>
 <body>
-<div id="offId" class="offcanvas-nav">
-    <div class="nav-head">
-        <div class="top-bar">
-            <div class="nav-toggle" data-offcanvas="close"><i class="flaticon-list26"></i></div>
-        </div>
-    </div>
 
-    <div class="nav-body">
-        <div class="overflow mCustomScrollbar _mCS_1" style="height: 190px; position: relative; overflow: visible;">
-            <div id="mCSB_1" class="mCustomScrollBox mCS-dark mCSB_vertical mCSB_outside" tabindex="0">
-                <div id="mCSB_1_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
-                    <div class="inner">
-                        <!-- Navigation -->
-                        <nav class="nav-link">
-                            <div class="scroll-nav">
-                                <ul>
-                                    <!-- Add ".scroll" class to anchor tag to enable smooth scrolling -->
-                                    <li class="active"><a class="scrollup" href="#"><i
-                                            class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
-                                    <li><a class="scroll" href="#features" data-offset-top="80"><i
-                                            class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
-                                    <li><a class="scroll" href="#gallery" data-offset-top="80"><i
-                                            class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
-                                    <li><a class="scroll" href="#versions" data-offset-top="85"><i
-                                            class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
-                                    <li><a class="scroll" href="#team" data-offset-top="80"><i
-                                            class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
-                                    <li><a class="scroll" href="#web-app" data-offset-top="80"><i
-                                            class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
-                                    <li><a class="scroll" href="#web-app" data-offset-top="80"><i
-                                            class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
-                                </ul>
-                                <ul class="pages">
-                                    <li><a href="/dist/pages/getting-started/index.html">开始使用</a></li>
-                                    <li><a href="/dist/pages/design-language/iuapdesign.html">设计语言</a></li>
-                                    <li><a href="/dist/pages/globalstyle/index.html">全局css样式</a></li>
-                                    <li><a href="/dist/pages/components/index.html">组件</a></li>
-                                    <li><a href="/dist/pages/plugins/index.html">JS 插件</a></li>
-                                    <li><a href="/dist/pages/tempalte/index.html">模板库</a></li>
-                                    <li><a href="/dist/pages/webIDE/index.html">WebIDE</a></li>
-                                    <li><a href="/dist/pages/kero/index.html">Kero</a></li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            <div id="mCSB_1_scrollbar_vertical"
-                 class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark mCSB_scrollTools_vertical" style="display: block;">
-                <div class="mCSB_draggerContainer">
-                    <div id="mCSB_1_dragger_vertical" class="mCSB_dragger"
-                         style="position: absolute; min-height: 30px; height: 177px; top: 0px; display: block; max-height: 180px;"
-                         oncontextmenu="return false;">
-                        <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
-                    </div>
-                    <div class="mCSB_draggerRail"></div>
-                </div>
-            </div>
+<!-- 引入head -->
+
+  <!-- Theme Stylesheet -->
+  <link href="/dist/static/css/style.css" rel="stylesheet" media="screen">
+  <link href="/dist/static/ionicons/ionicons.css" rel="stylesheet" media="screen">
+  <link rel="stylesheet" href="http://design.yyuap.com/static/uui-original/1.0.3/css/u.css">
+
+  <div class="offcanvas-nav">
+        <!-- Head (Fixed Part) -->
+        <div class="nav-head">
+          <div class="top-bar">
+
+            <div class="nav-toggle" data-offcanvas="close"><i class="flaticon-list26"></i></div>
+          </div>
+
         </div>
-    </div>
-</div>
+        <!-- Body (Scroll Part) -->
+
+        <div class="nav-body">
+          <div class="overflow mCustomScrollbar _mCS_1" style="height: 190px; position: relative; overflow: visible;"><div id="mCSB_1" class="mCustomScrollBox mCS-dark mCSB_vertical mCSB_outside" tabindex="0"><div id="mCSB_1_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
+            <div class="inner">
+              <!-- Navigation -->
+              <nav class="nav-link">
+                <div class="scroll-nav">
+                  <ul>
+                    <!-- Add ".scroll" class to anchor tag to enable smooth scrolling -->
+                    <li class="active"><a class="scrollup" href="#"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                    <li><a class="scroll" href="#features" data-offset-top="80"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                    <li><a class="scroll" href="#gallery" data-offset-top="80"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                    <li><a class="scroll" href="#versions" data-offset-top="85"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                    <li><a class="scroll" href="#team" data-offset-top="80"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                    <li><a class="scroll" href="#web-app" data-offset-top="80"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                    <li><a class="scroll" href="#web-app" data-offset-top="80"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                  </ul>
+                  <ul class="pages">
+                    <li><a href="/dist/pages/getting-started/index.html">开始使用</a></li>
+                    <li><a href="/dist/pages/design-language/iuapdesign.html">设计语言</a></li>
+                    <li><a href="/dist/pages/globalstyle/index.html">样式</a></li>
+                    <li><a href="/dist/pages/components/index.html">组件</a></li>
+                    <li><a href="/dist/pages/plugins/index.html">JS 插件</a></li>
+                    <li><a href="/dist/pages/template/index.html">模板库</a></li>
+                    <li><a href="/dist/pages/webIDE/index.html">WebIDE</a></li>
+                    <li><a href="/dist/pages/kero/index.html">Kero</a></li>
+                </ul>
+                </div>
+              </nav>
+
+            </div>
+          </div></div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark mCSB_scrollTools_vertical" style="display: block;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; height: 177px; top: 0px; display: block; max-height: 180px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div>
+        </div>
+  </div>
+
 <header class="navbar gray navbar-sticky">
-    <div class="container">
-        <a href="/" class="logo scrollup">
-            <img src="/dist/static/img/logo-small.png" alt="iUAP Design">
-            iUAP Design
-        </a>
-        <div class="toolbar">
-            <a href="/dist/pages/getting-started/index.html" class="action-btn">开始使用</a>
-            <a href="/dist/pages/design-language/iuapdesign.html" class="action-btn">设计语言</a>
-            <a href="/dist/pages/globalstyle/index.html" class="action-btn">全局css样式</a>
-            <a href="/dist/pages/components/index.html" class="action-btn">组件</a>
-            <a href="/dist/pages/plugins/index.html" class="action-btn">JS 插件</a>
-            <a href="/dist/pages/template/index.html" class="action-btn" target="_blank">模板库</a>
-            <a href="/dist/pages/webIDE/index.html" class="action-btn" target="_blank">WebIDE</a>
-            <a href="/dist/pages/kero/index.html" class="action-btn">Kero</a>
-            <a href="/dist/pages/custom/index.html" class="btn btn-ghost btn-primary btn-sm icon-left"> 定制 </a>
-            <div id="navId" class="nav-toggle" data-offcanvas="open"><i class="flaticon-list26"></i></div>
-        </div>
-    </div>
+
+
+	<div class="container">
+		<a href="/" class="logo scrollup">
+		<img src="/dist/static/img/logo-small.png" alt="iUAP Design">
+		iUAP Design
+		</a>
+		<div class="toolbar">
+      <a href="/dist/pages/getting-started/index.html" class="action-btn">开始使用</a>
+      <a href="/dist/pages/design-language/iuapdesign.html" class="action-btn">设计语言
+      <a href="/dist/pages/globalstyle/index.html" class="action-btn">全局css样式</a>
+      <a href="/dist/pages/components/index.html" class="action-btn">组件</a>
+      <a href="/dist/pages/plugins/index.html" class="action-btn">JS 插件</a>
+      <a href="/dist/pages/template/index.html" class="action-btn" target="_blank">模板库</a>
+      <a href="/dist/pages/webIDE/index.html" class="action-btn"  target="_blank">WebIDE</a>
+      <a href="/dist/pages/kero/index.html" class="action-btn">Kero</a>
+      <a href="/dist/pages/custom/index.html" class="btn btn-ghost btn-primary btn-sm icon-left"> 定制 </a>
+      <div class="nav-toggle" data-offcanvas="open"><i class="flaticon-list26"></i></div>
+		</div>
+	</div>
 </header><!-- Navbar End -->
+
+
 <!-- <iframe id="iframe1" src="" style="display: none"></iframe> -->
 <a id="ss" href="" target="_self" style="display: none;">a</a>
 <div id="content">
@@ -140,21 +136,755 @@
             </div>
             <div id="templateListBox" class="templateList">
                 <ul class="clearfix" id="templateContainer">
+                
+                    
+                    <li>
+                            <div class="templateListBox clearfix">
+                                <div class="templateListPic">
+                                    <div class="templatePicBox">
+                                        <div class="templatePicPc">
+                                            <a href="#">
+                                                <img src="img/main_6.png">
+                                            </a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="templateListMain">
+                                    <div class="templateLisHead">
+                                        <h4 class="templateListTitle">
+                                            <a href="#">金融理财模板</a>
+                                        </h4>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <div class="templateInfoBox">
+                                            <ul class="templateInfoList">
+                                                <li class="left">模板编号：</li>
+                                                <li class="right">0004</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <div class="templateInfoBox">
+                                            <ul class="templateInfoList">
+                                                <li class="left">使用次数：</li>
+                                                <li class="right">228</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <ul class="templateInfoList">
+                                            <li class="left">适用行业：</li>
+                                            <li class="right">
+                                                
+                                                    互联网
+                                                
+                                                    金融
+                                                
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="templateSpeInfo clearfix">
+                                        <span>深耕银行、券商等金融机构的高净值客户，致力于打造专业的媒体管理模板</span>
+                                    </div>
+                                    <div class="templateInfoBtn">
+                                        <a href="http://design.yyuap.com/ficloud/home/statistics" target="_blank" class="btn_1">
+                                            <i class="previewIcon"></i>预览
+                                        </a>
+                                        <a href="#" class="btn_1">
+                                            <i class="tickIcon"></i>下载
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    
+                    <li>
+                            <div class="templateListBox clearfix">
+                                <div class="templateListPic">
+                                    <div class="templatePicBox">
+                                        <div class="templatePicPc">
+                                            <a href="#">
+                                                <img src="img/main_5.png">
+                                            </a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="templateListMain">
+                                    <div class="templateLisHead">
+                                        <h4 class="templateListTitle">
+                                            <a href="#">运维管理模板</a>
+                                        </h4>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <div class="templateInfoBox">
+                                            <ul class="templateInfoList">
+                                                <li class="left">模板编号：</li>
+                                                <li class="right">005</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <div class="templateInfoBox">
+                                            <ul class="templateInfoList">
+                                                <li class="left">使用次数：</li>
+                                                <li class="right">228</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <ul class="templateInfoList">
+                                            <li class="left">适用行业：</li>
+                                            <li class="right">
+                                                
+                                                    互联网
+                                                
+                                                    金融
+                                                
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="templateSpeInfo clearfix">
+                                        <span>发展可持续、完善易有序、拓展能稳定</span>
+                                    </div>
+                                    <div class="templateInfoBtn">
+                                        <a href="../../website/tenxcloud/index.html" target="_blank" class="btn_1">
+                                            <i class="previewIcon"></i>预览
+                                        </a>
+                                        <a href="#" class="btn_1">
+                                            <i class="tickIcon"></i>下载
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    
+                    <li>
+                            <div class="templateListBox clearfix">
+                                <div class="templateListPic">
+                                    <div class="templatePicBox">
+                                        <div class="templatePicPc">
+                                            <a href="#">
+                                                <img src="img/main_12.png">
+                                            </a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="templateListMain">
+                                    <div class="templateLisHead">
+                                        <h4 class="templateListTitle">
+                                            <a href="#">运维管理模板</a>
+                                        </h4>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <div class="templateInfoBox">
+                                            <ul class="templateInfoList">
+                                                <li class="left">模板编号：</li>
+                                                <li class="right">005</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <div class="templateInfoBox">
+                                            <ul class="templateInfoList">
+                                                <li class="left">使用次数：</li>
+                                                <li class="right">228</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <ul class="templateInfoList">
+                                            <li class="left">适用行业：</li>
+                                            <li class="right">
+                                                
+                                                    互联网
+                                                
+                                                    金融
+                                                
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="templateSpeInfo clearfix">
+                                        <span>发展可持续、完善易有序、拓展能稳定</span>
+                                    </div>
+                                    <div class="templateInfoBtn">
+                                        <a href="../../website/tenxcloud/creat.html" target="_blank" class="btn_1">
+                                            <i class="previewIcon"></i>预览
+                                        </a>
+                                        <a href="#" class="btn_1">
+                                            <i class="tickIcon"></i>下载
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    
+                    <li>
+                            <div class="templateListBox clearfix">
+                                <div class="templateListPic">
+                                    <div class="templatePicBox">
+                                        <div class="templatePicPc">
+                                            <a href="#">
+                                                <img src="img/main_4.png">
+                                            </a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="templateListMain">
+                                    <div class="templateLisHead">
+                                        <h4 class="templateListTitle">
+                                            <a href="#">电商模板</a>
+                                        </h4>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <div class="templateInfoBox">
+                                            <ul class="templateInfoList">
+                                                <li class="left">模板编号：</li>
+                                                <li class="right">006</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <div class="templateInfoBox">
+                                            <ul class="templateInfoList">
+                                                <li class="left">使用次数：</li>
+                                                <li class="right">100</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <ul class="templateInfoList">
+                                            <li class="left">适用行业：</li>
+                                            <li class="right">
+                                                
+                                                    电商
+                                                
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="templateSpeInfo clearfix">
+                                        <span>站在用户的角度，针对性的为用户提供刚需</span>
+                                    </div>
+                                    <div class="templateInfoBtn">
+                                        <a href="../../website/e-commerce/index.html" target="_blank" class="btn_1">
+                                            <i class="previewIcon"></i>预览
+                                        </a>
+                                        <a href="#" class="btn_1">
+                                            <i class="tickIcon"></i>下载
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    
+                    <li>
+                            <div class="templateListBox clearfix">
+                                <div class="templateListPic">
+                                    <div class="templatePicBox">
+                                        <div class="templatePicPc">
+                                            <a href="#">
+                                                <img src="img/main_7.png">
+                                            </a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="templateListMain">
+                                    <div class="templateLisHead">
+                                        <h4 class="templateListTitle">
+                                            <a href="#">金融理财模板</a>
+                                        </h4>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <div class="templateInfoBox">
+                                            <ul class="templateInfoList">
+                                                <li class="left">模板编号：</li>
+                                                <li class="right">007</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <div class="templateInfoBox">
+                                            <ul class="templateInfoList">
+                                                <li class="left">使用次数：</li>
+                                                <li class="right">228</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <ul class="templateInfoList">
+                                            <li class="left">适用行业：</li>
+                                            <li class="right">
+                                                
+                                                    互联网
+                                                
+                                                    金融
+                                                
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="templateSpeInfo clearfix">
+                                        <span>犹如纸上办公，胜似之！方便！快捷！高效！</span>
+                                    </div>
+                                    <div class="templateInfoBtn">
+                                        <a href="http://design.yyuap.com/ficloud/voucher/node/20020PREPA" target="_blank" class="btn_1">
+                                            <i class="previewIcon"></i>预览
+                                        </a>
+                                        <a href="#" class="btn_1">
+                                            <i class="tickIcon"></i>下载
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    
+                    <li>
+                            <div class="templateListBox clearfix">
+                                <div class="templateListPic">
+                                    <div class="templatePicBox">
+                                        <div class="templatePicPc">
+                                            <a href="#">
+                                                <img src="img/main_8.png">
+                                            </a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="templateListMain">
+                                    <div class="templateLisHead">
+                                        <h4 class="templateListTitle">
+                                            <a href="#">数字营销模板</a>
+                                        </h4>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <div class="templateInfoBox">
+                                            <ul class="templateInfoList">
+                                                <li class="left">模板编号：</li>
+                                                <li class="right">008</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <div class="templateInfoBox">
+                                            <ul class="templateInfoList">
+                                                <li class="left">使用次数：</li>
+                                                <li class="right">228</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <ul class="templateInfoList">
+                                            <li class="left">适用行业：</li>
+                                            <li class="right">
+                                                
+                                                    互联网
+                                                
+                                                    金融
+                                                
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="templateSpeInfo clearfix">
+                                        <span> 简约、大气的类京东风格，适用于电商、金融或者其他领域！</span>
+                                    </div>
+                                    <div class="templateInfoBtn">
+                                        <a href="../../website/eccm/html/pages/baseinfo/baseinfo.html" target="_blank" class="btn_1">
+                                            <i class="previewIcon"></i>预览
+                                        </a>
+                                        <a href="#" class="btn_1">
+                                            <i class="tickIcon"></i>下载
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    
+                    <li>
+                            <div class="templateListBox clearfix">
+                                <div class="templateListPic">
+                                    <div class="templatePicBox">
+                                        <div class="templatePicPc">
+                                            <a href="#">
+                                                <img src="img/main_11.png">
+                                            </a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="templateListMain">
+                                    <div class="templateLisHead">
+                                        <h4 class="templateListTitle">
+                                            <a href="#">数字营销模板</a>
+                                        </h4>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <div class="templateInfoBox">
+                                            <ul class="templateInfoList">
+                                                <li class="left">模板编号：</li>
+                                                <li class="right">008</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <div class="templateInfoBox">
+                                            <ul class="templateInfoList">
+                                                <li class="left">使用次数：</li>
+                                                <li class="right">228</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <ul class="templateInfoList">
+                                            <li class="left">适用行业：</li>
+                                            <li class="right">
+                                                
+                                                    互联网
+                                                
+                                                    金融
+                                                
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="templateSpeInfo clearfix">
+                                        <span> 简约、大气的类京东风格，适用于电商、金融或者其他领域！</span>
+                                    </div>
+                                    <div class="templateInfoBtn">
+                                        <a href="../../website/eccm/html/pages/template/template.html" target="_blank" class="btn_1">
+                                            <i class="previewIcon"></i>预览
+                                        </a>
+                                        <a href="#" class="btn_1">
+                                            <i class="tickIcon"></i>下载
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    
+                    <li>
+                            <div class="templateListBox clearfix">
+                                <div class="templateListPic">
+                                    <div class="templatePicBox">
+                                        <div class="templatePicPc">
+                                            <a href="#">
+                                                <img src="img/main_9.png">
+                                            </a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="templateListMain">
+                                    <div class="templateLisHead">
+                                        <h4 class="templateListTitle">
+                                            <a href="#">数字营销模板</a>
+                                        </h4>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <div class="templateInfoBox">
+                                            <ul class="templateInfoList">
+                                                <li class="left">模板编号：</li>
+                                                <li class="right">008</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <div class="templateInfoBox">
+                                            <ul class="templateInfoList">
+                                                <li class="left">使用次数：</li>
+                                                <li class="right">228</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <ul class="templateInfoList">
+                                            <li class="left">适用行业：</li>
+                                            <li class="right">
+                                                
+                                                    互联网
+                                                
+                                                    金融
+                                                
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="templateSpeInfo clearfix">
+                                        <span> 简约、大气的类京东风格，适用于电商、金融或者其他领域！</span>
+                                    </div>
+                                    <div class="templateInfoBtn">
+                                        <a href="../../website/eccm/html/pages/goodsproperty/goodsproperty.html" target="_blank" class="btn_1">
+                                            <i class="previewIcon"></i>预览
+                                        </a>
+                                        <a href="#" class="btn_1">
+                                            <i class="tickIcon"></i>下载
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    
+                    <li>
+                            <div class="templateListBox clearfix">
+                                <div class="templateListPic">
+                                    <div class="templatePicBox">
+                                        <div class="templatePicPc">
+                                            <a href="#">
+                                                <img src="img/main_10.png">
+                                            </a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="templateListMain">
+                                    <div class="templateLisHead">
+                                        <h4 class="templateListTitle">
+                                            <a href="#">数字营销模板</a>
+                                        </h4>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <div class="templateInfoBox">
+                                            <ul class="templateInfoList">
+                                                <li class="left">模板编号：</li>
+                                                <li class="right">008</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <div class="templateInfoBox">
+                                            <ul class="templateInfoList">
+                                                <li class="left">使用次数：</li>
+                                                <li class="right">228</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <ul class="templateInfoList">
+                                            <li class="left">适用行业：</li>
+                                            <li class="right">
+                                                
+                                                    互联网
+                                                
+                                                    金融
+                                                
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="templateSpeInfo clearfix">
+                                        <span> 简约、大气的类京东风格，适用于电商、金融或者其他领域！</span>
+                                    </div>
+                                    <div class="templateInfoBtn">
+                                        <a href="../../website/eccm/html/pages/goodspublish/goodspublish.html" target="_blank" class="btn_1">
+                                            <i class="previewIcon"></i>预览
+                                        </a>
+                                        <a href="#" class="btn_1">
+                                            <i class="tickIcon"></i>下载
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    
+                    <li>
+                            <div class="templateListBox clearfix">
+                                <div class="templateListPic">
+                                    <div class="templatePicBox">
+                                        <div class="templatePicPc">
+                                            <a href="#">
+                                                <img src="img/main_1.png">
+                                            </a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="templateListMain">
+                                    <div class="templateLisHead">
+                                        <h4 class="templateListTitle">
+                                            <a href="#">SASS应用类模板</a>
+                                        </h4>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <div class="templateInfoBox">
+                                            <ul class="templateInfoList">
+                                                <li class="left">模板编号：</li>
+                                                <li class="right">0001</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <div class="templateInfoBox">
+                                            <ul class="templateInfoList">
+                                                <li class="left">使用次数：</li>
+                                                <li class="right">772</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <ul class="templateInfoList">
+                                            <li class="left">适用行业：</li>
+                                            <li class="right">
+                                                
+                                                    互联网
+                                                
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="templateSpeInfo clearfix">
+                                        <span>充分体现出sass的变量神器</span>
+                                    </div>
+                                    <div class="templateInfoBtn">
+                                        <a href="../../website/hr/list.html" target="_blank" class="btn_1">
+                                            <i class="previewIcon"></i>预览
+                                        </a>
+                                        <a href="#" class="btn_1">
+                                            <i class="tickIcon"></i>下载
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    
+                    <li>
+                            <div class="templateListBox clearfix">
+                                <div class="templateListPic">
+                                    <div class="templatePicBox">
+                                        <div class="templatePicPc">
+                                            <a href="#">
+                                                <img src="img/main_2.png">
+                                            </a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="templateListMain">
+                                    <div class="templateLisHead">
+                                        <h4 class="templateListTitle">
+                                            <a href="#">SASS应用类模板</a>
+                                        </h4>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <div class="templateInfoBox">
+                                            <ul class="templateInfoList">
+                                                <li class="left">模板编号：</li>
+                                                <li class="right">002</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <div class="templateInfoBox">
+                                            <ul class="templateInfoList">
+                                                <li class="left">使用次数：</li>
+                                                <li class="right">772</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <ul class="templateInfoList">
+                                            <li class="left">适用行业：</li>
+                                            <li class="right">
+                                                
+                                                    互联网
+                                                
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="templateSpeInfo clearfix">
+                                        <span>专门的软件来完成Sass代码让浏览器识别和转换成CSS代码</span>
+                                    </div>
+                                    <div class="templateInfoBtn">
+                                        <a href="../../website/hr/apply.html" target="_blank" class="btn_1">
+                                            <i class="previewIcon"></i>预览
+                                        </a>
+                                        <a href="#" class="btn_1">
+                                            <i class="tickIcon"></i>下载
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    
+                    <li>
+                            <div class="templateListBox clearfix">
+                                <div class="templateListPic">
+                                    <div class="templatePicBox">
+                                        <div class="templatePicPc">
+                                            <a href="#">
+                                                <img src="img/main_3.png">
+                                            </a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="templateListMain">
+                                    <div class="templateLisHead">
+                                        <h4 class="templateListTitle">
+                                            <a href="#">协同办公模板</a>
+                                        </h4>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <div class="templateInfoBox">
+                                            <ul class="templateInfoList">
+                                                <li class="left">模板编号：</li>
+                                                <li class="right">003</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <div class="templateInfoBox">
+                                            <ul class="templateInfoList">
+                                                <li class="left">使用次数：</li>
+                                                <li class="right">228</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="templateInfo clearfix">
+                                        <ul class="templateInfoList">
+                                            <li class="left">适用行业：</li>
+                                            <li class="right">
+                                                
+                                                    互联网
+                                                
+                                                    建筑
+                                                
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="templateSpeInfo clearfix">
+                                        <span>高效解决日常办公、资产管理、业务管理、信息交流等常规协同</span>
+                                    </div>
+                                    <div class="templateInfoBtn">
+                                        <a href="../../website/cooperating/index.html" target="_blank" class="btn_1">
+                                            <i class="previewIcon"></i>预览
+                                        </a>
+                                        <a href="#" class="btn_1">
+                                            <i class="tickIcon"></i>下载
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                     
                 </ul>
       </div>
     </div>
 </div>
+
+<!-- 引入footer -->
 <footer class="footer">
-    <div class="container space-top">
-        <!-- Footer Head -->
-        <div class="body">
-            <!-- Copyright -->
-            <div class="column copyright">
-                <p>2016 &copy; <a href="http://www.yonyou.com/" target="_blank">用友网络</a>. iUAP Design</p>
-            </div>
-        </div>
-    </div>
-</footer>
+	<div class="container space-top">
+	<!-- Footer Head -->
+
+	<div class="body">
+		<!-- Copyright -->
+		<div class="column copyright">
+			<p>2016 &copy; <a href="http://www.yonyou.com/" target="_blank">用友网络</a>. iUAP Design</p>
+		</div>
+		<!-- Gadget (Middle Column) --></div>
+	</div>
+</footer><!-- Footer End -->
+
+<!-- Javascript (jQuery) Libraries and Plugins -->
+
 
 
 
@@ -164,7 +894,7 @@
 <script src="http://design.yyuap.com/static/uui-original/1.0.2/js/u.min.js"></script>
 <!-- <script src="lib/artTemplate.js"></script>
 <script src="js/template.js"></script> -->
-<script src="http://design.yyuap.com/static/requirejs/require.js" data-main="js/template"></script>
+<!-- <script src="http://design.yyuap.com/static/requirejs/require.js" data-main="js/template"></script> -->
 </body>
 
 

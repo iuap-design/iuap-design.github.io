@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css"  href="../../../vendor/uui/css/u.css"></head>
+<body>
+<br>
+<br>
+<br>
+<!--浮点型校验  type为u-text-->
+<div class="u-text"  u-meta='{"id":"f1","type":"u-text","data":"dt1","field":"f1"}'>
+    <input class="u-input"/>
+    <label class="u-label">string类型</label>
+</div>
+
+<br>
+<br>
+<br>
+
+
+    <!--浮点型校验  type为u-text-->
+    <div class="u-text"  u-meta='{"id":"f2","type":"u-text","data":"dt1","field":"f2"}'>
+        <input class="u-input"/>
+        <label class="u-label">float类型</label>
+    </div>
+    <br>
+    <br>
+    <br>
+    <!--浮点型校验 type为 float-->
+    <input  u-meta='{"id":"f22","type":"float","data":"dt1","field":"f1"}' />
+
+
+<br>
+<br>
+<br>
+
+
+<!--正则校验-->
+<div class="u-text"  u-meta='{"id":"f3","type":"u-text","data":"dt1","field":"f3"}'>
+    <input class="u-input"/>
+    <label class="u-label">正则校验,6位整数</label>
+</div>
+
+<br>
+<br>
+<br>
+
+
+<!--必填-->
+<div class="u-text"  u-meta='{"id":"f4","type":"u-text","data":"dt1","field":"f4"}'>
+    <input class="u-input"/>
+    <label class="u-label">必填</label>
+</div>
+<br>
+<br>
+<br>
+
+<!--自定义信息内容-->
+<div class="u-text"  u-meta='{"id":"f3","type":"u-text","data":"dt1","field":"f3","errorMsg":"自定义的错误信息","nullMsg":"自定义的不能为空信息"}'>
+    <input class="u-input"/>
+    <label class="u-label">6位整数,自定义信息</label>
+</div>
+
+<br>
+<br>
+<br>
+
+<!--自定义显示位置-->
+<div class="u-text"  u-meta='{"id":"f3","type":"u-text","data":"dt1","field":"f3","tipId":"testDiv"}'>
+    <input class="u-input"/>
+    <label class="u-label">自定义显示位置</label>
+</div>
+<span id="testDiv"></span>
+
+<br>
+<br>
+<br>
+    <button class="u-button" data-bind="click:btn1Click">校验</button>
+
+<br>
+<br>
+<br>
+
+
+<script src="../../../vendor/knockout/knockout-3.2.0.debug.js"></script>
+    <script src="../../../vendor/uui/js/u-polyfill.js"></script>
+    <script src="../../../vendor/uui/js/u.js"></script>
+
+    <script>
+        /**
+         * 校验类型说明：
+         *  precision: 精度
+         *  max: 数字最大值
+         *  min: 数字最小值
+         *  maxLength: string最大长度
+         *  minLength: string最小长度
+         *  required: 必填
+         */
+        var app,viewModel;
+        viewModel = {
+            dt1: new u.DataTable({
+                meta:{
+                f1:{type:'string',maxLength:8,minLength:3},
+                f2:{type:'float', precision:2,max:500,min:100},
+                f3:{type: 'integer', required:true,regExp:/^[0-9]{6}$/},
+                f4:{type:'string',required:true}
+
+            }
+        }),
+        btn1Click: function(){
+                app.compsValidate(document.querySelector('body'));
+            }
+        };
+
+
+        app = u.createApp({
+            el:'body',
+            model:viewModel
+        });
+
+        var r = viewModel.dt1.createEmptyRow();
+        viewModel.dt1.setRowSelect(0);
+    </script>
+</body>
+</html>
