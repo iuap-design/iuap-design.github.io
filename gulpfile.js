@@ -27,12 +27,16 @@ var compile = function( src ){
                     var dataPath = filePath.replace(/\/pages\//,'/data/');
                     var isexist = fs.existsSync(dataPath + '.json');
                     // var data = require(dataPath + '.json');
-                    if(isexist){
+                    // if(filePath === './dist/index') {
+                    //     var data = require('./dist/data/index.json');
+                    //     var html = template(filePath, data);
+                    //     fs.writeFileSync( filePath + '.html', html); 
+                    // }
+                    if (isexist){
                         var data = require(dataPath + '.json');
                         var html = template( filePath, data);
-                        // var html = template.render( filePath );
                         fs.writeFileSync( filePath + '.html', html);     
-                    } 
+                    }
                 }
             } else if(st.isDirectory()){
                 compile(_src);
