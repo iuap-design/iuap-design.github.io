@@ -85,6 +85,9 @@
         }, {
             "name": "自动完成",
             "url": "demos/ui/autocomplete"
+        }, {
+            "name": "hover菜单",
+            "url": "demos/ui/hoverNavmenu"
         }
     ]
 }, {
@@ -215,6 +218,9 @@
     },{
         "name": "页面框架布局",
         "url": "demos/layouts/frame"
+    },{
+        "name": "可伸缩菜单布局",
+        "url": "demos/layouts/menuNavLayout"
     }]
 }, {
     "name": "页面模板",

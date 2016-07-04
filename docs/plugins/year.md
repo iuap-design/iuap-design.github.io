@@ -14,7 +14,7 @@
 
 ##具体示例
 
-![](../../static/plugins/img/year.png)
+![](../../static/img/plugins/year.png)
 
 	<div class='u-year'>
         <input class="u-input" type="text">
