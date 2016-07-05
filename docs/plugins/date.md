@@ -14,7 +14,7 @@
 
 ##具体示例
 
-![](../../static/plugins/img/date1.png)
+![](../../static/img/plugins/date1.png)
 
 	<div class='u-datepicker'>
         <input class="u-input" type="text">

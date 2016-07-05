@@ -1,7 +1,7 @@
 
 # 栅格布局
 
-![](../../static/plugins/img/gridlayout.png)
+![](../../static/img/plugins/gridlayout.png)
 
 	<div class="u-row">
 	    <div class="u-col-1">1</div>

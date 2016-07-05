@@ -1,0 +1,11 @@
+.u-navlayout-toolbar li{
+	list-style: none;
+}
+#toggleMenubar #menubutton{
+    line-height: 35px;
+    font-size: 15px;
+    color: #fff;
+    left: 0;
+    position: relative;
+    height: 0;
+}
