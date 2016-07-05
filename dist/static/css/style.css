@@ -1989,7 +1989,7 @@ label.hover {
 	font-weight: 300;
 	color: #8e8e93;
 	text-decoration: none;
-	margin-right: 40px;
+	margin-right: 10px;
 }
 .navbar .logo img {
 	display: inline-block;
@@ -2018,7 +2018,7 @@ label.hover {
 .navbar .toolbar .action-btn {
 	color:#424242;
 	position: relative;
-	margin: 0 27px 0 18px;
+	margin: 0 18px;
 }
 
 .navbar .toolbar .action-btn:hover {
@@ -2130,7 +2130,7 @@ label.hover {
 	padding: 30px 0;
 }
 .offcanvas-nav .nav-body .inner {
-	padding: 0 40px;
+	padding: 0 25px;
 }
 .offcanvas-nav .nav-head {
 	border-bottom: 1px solid rgba(255,255,255,0.3);
