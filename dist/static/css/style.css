@@ -5299,3 +5299,7 @@ a.icon-block {
 .example .example-col-sub{
      background-color: rgb(0,189,189);
 }
+
+.mCSB_scrollTools{
+	display: none;
+}
