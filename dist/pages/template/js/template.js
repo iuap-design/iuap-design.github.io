@@ -28,7 +28,7 @@ require(['../lib/artTemplate','text!../textTemplate.html'], function (template,t
                 'decription': '发展可持续、完善易有序、拓展能稳定',
                 'content_img': "img/main_12.png",
                 'phone_img': "img/phone_3.jpg",
-                'url': '../../website/tenxcloud/creat.html',
+                'url': '../../website/tenxcloud/create.html',
                 "using_times": "228",
                 "for_area": ["互联网",'金融']
             },{
@@ -86,18 +86,18 @@ require(['../lib/artTemplate','text!../textTemplate.html'], function (template,t
                 "using_times": "228",
                 "for_area": ["互联网",'金融']
             },{
-                'title': 'SASS应用类模板',
+                'title': 'SAAS应用类模板',
                 "id": "0001",
-                'decription': '充分体现出sass的变量神器',
+                'decription': ' 订阅式的月费模式,按需定购,选择更加自由',
                 'content_img': "img/main_1.png",
                 'phone_img': "img/phone_1.jpg",
                 'url': '../../website/hr/list.html',
                 "using_times": "772",
                 "for_area": ["互联网"]
             },{
-                'title': 'SASS应用类模板',
+                'title': 'SAAS应用类模板',
                 "id": "002",
-                'decription': '专门的软件来完成Sass代码让浏览器识别和转换成CSS代码',
+                'decription': '准面对面使用指导,准面对面使用指导',
                 'content_img': "img/main_2.png",
                 'phone_img': "img/phone_2.jpg",
                 'url': '../../website/hr/apply.html',
