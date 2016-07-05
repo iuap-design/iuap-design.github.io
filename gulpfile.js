@@ -50,7 +50,12 @@ gulp.task('copy', function() {
         .pipe(gulp.dest('./dist'));    
 });
 
-gulp.task('compile', ['copy'], function() {
+gulp.task('common', ['copy'], function() {
+    return gulp.src(['./src/common/**'])
+        .pipe(gulp.dest('./dist/pages/common'));
+});
+
+gulp.task('compile', ['common'], function() {
     return compile('./dist');
 });
 
