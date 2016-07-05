@@ -14,7 +14,7 @@
 
 ##具体示例
 
-![](../../static/plugins/img/clockpicker.png)
+![](../../static/img/plugins/clockpicker.png)
 
 	<div class='u-clockpicker'>
         <input class="u-input" type="text">

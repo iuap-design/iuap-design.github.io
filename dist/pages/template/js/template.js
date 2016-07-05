@@ -124,53 +124,31 @@ require(['../lib/artTemplate','text!../textTemplate.html'], function (template,t
             //     "for_area": ["建筑",'装修']
             // }
         ];
+window.onload = function() {
 
-        renderPage(domList);
-        bindEvent();
-    };
-    /**
-     * 利用templat机制 渲染页面
-     * @domList 数据源
-     */
-    function renderPage(domList){
-        var render = template.compile(textTemplate);
-        var html = render({
-            list: domList
-        });
-        document.getElementById('templateContainer').innerHTML = html;
-    };
-    /**
-     * dom绑定事件
-     */
-    function bindEvent(){
-        $(".templateListStyle_1").click(function(){
-            $("#templateListBox").toggleClass("templateListLayout_1");
-            $(this).toggleClass("active");
-            $(".templateListStyle_2").toggleClass("active");
-        })
-        $(".templateListStyle_2").click(function(){
-            $("#templateListBox").toggleClass("templateListLayout_1");
-            $(this).toggleClass("active");
-            $(".templateListStyle_1").toggleClass("active");
-        })
-    }
-     
-       
     var template1 = {
 
         /**
          * 页面初始后调用
          */
         init: function () {
-            console.log();
             this.bindEvent();
-            this.renderPage()
+            this.navControl();
         },
         /**
          * 为页面dom绑定事件
          */
         bindEvent: function () {
-            
+            $(".templateListStyle_1").click(function(){
+                $("#templateListBox").toggleClass("templateListLayout_1");
+                $(this).toggleClass("active");
+                $(".templateListStyle_2").toggleClass("active");
+            });
+            $(".templateListStyle_2").click(function(){
+                $("#templateListBox").toggleClass("templateListLayout_1");
+                $(this).toggleClass("active");
+                $(".templateListStyle_1").toggleClass("active");
+            });          
         },
         /**
          * 根据数据渲染页面
@@ -182,11 +160,36 @@ require(['../lib/artTemplate','text!../textTemplate.html'], function (template,t
             // var html = template('test', domList);
             // console.log(html);
             // document.getElementById('templateContainer').innerHTML = html;
+        },
+        /**
+         * 页面侧滑效果
+         * @return {[type]} [description]
+         */
+        navControl: function(){
+            var openOffcanvas = $('[data-offcanvas="open"]');
+            var closeOffcanvas = $('[data-offcanvas="close"]');
+            var offcanvasNav = $('.offcanvas-nav');
+            openOffcanvas.click(function(){
+                openOffcanvas.addClass('nav-open');
+                offcanvasNav.addClass('open');
+                $('body').append('<div class="offcanvas-backdrop"></div>');
+            });
+            closeOffcanvas.click(function(){
+                openOffcanvas.removeClass('nav-open');
+                offcanvasNav.removeClass('open');
+                $('.offcanvas-backdrop').remove();
+            });
+            $(document).on('click', '.offcanvas-backdrop', function(){
+                openOffcanvas.removeClass('nav-open');
+                offcanvasNav.removeClass('open');
+                $('.offcanvas-backdrop').remove();
+            });
         }
-        
     };
-    initDom();
-    
-})
+    template1.init();
+
+};   
+
+
 
 

@@ -6,7 +6,7 @@
 	"title":"iUAP Design",
 	"description":"UI Framework For Enterprise",
 	"language":"zh-hans",
-	"output": "../../dist/pages/globalstyle",
+	"output": "../../dist/pages/global-style",
 	"theme":"node_modules/gitbook-plugin-iuap-design/theme/",
 	"plugins":[
 		"anchor-navigation",
@@ -20,7 +20,7 @@
 	"pluginsConfig": {
 		"iuap-design": {
 			"title": "全局CSS样式",
-			"desc": "iUAP design 全局css样式"
+			"desc": "包括浏览器重置样式、元素基本样式、布局、栅格、色彩、基本CSS组件等"
 		}
 	}
 }

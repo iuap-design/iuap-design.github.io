@@ -50,7 +50,7 @@ option中的value属性值为用户传递给后端参数，option中的innerHtml
 
 2.下拉多选  
 
-![](../../static/plugins/img/combo2.png)
+![](../../static/img/plugins/combo2.png)
 
 	<div class="u-combo mutil-select">
 	    <input class="u-input"/>
