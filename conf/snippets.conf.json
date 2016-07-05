@@ -224,6 +224,9 @@
     },{
         "name": "可伸缩菜单布局",
         "url": "demos/layouts/menuNavLayout"
+    },{
+        "name": "顶部菜单布局",
+        "url": "demos/layouts/topNavLayout"
     }]
 }, {
     "name": "页面模板",

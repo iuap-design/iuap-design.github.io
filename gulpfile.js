@@ -5,7 +5,10 @@ var stat = fs.stat;
 var template = require( 'art-template' );
 var zip = require('gulp-zip');
 var flatmap = require('gulp-flatmap');
+var git = require('gulp-git');
 
+var fileDir = fs.readdirSync('./');
+var uuiDir = fileDir.indexOf('generate-uui');
 var zipPath = [
     './dist/website/cooperating/**/*',
     './dist/website/e-commerce/**/*',
@@ -20,6 +23,10 @@ var zipPath = [
  * @return {[type]}     [description]
  */
 var compile = function( src ){
+    // clone仓库
+    if(uuiDir === -1){
+        git.clone('git@github.com:iuap-design/generate-uui.git');
+    }
 
     // 同步加载
     var paths = fs.readdirSync(src);
@@ -37,11 +44,11 @@ var compile = function( src ){
                     var dataPath = filePath.replace(/\/pages\//,'/data/');
                     var isexist = fs.existsSync(dataPath + '.json');
                     // var data = require(dataPath + '.json');
-                    // if(filePath === './dist/index') {
-                    //     var data = require('./dist/data/index.json');
-                    //     var html = template(filePath, data);
-                    //     fs.writeFileSync( filePath + '.html', html); 
-                    // }
+                    if(filePath === './dist/index') {
+                        var data = require('./generate-uui/package.json');
+                        var html = template(filePath, data);
+                        return fs.writeFileSync( filePath + '.html', html); 
+                    }
                     if (isexist){
                         var data = require(dataPath + '.json');
                         var html = template( filePath, data);
@@ -86,6 +93,59 @@ gulp.task('zip', function() {
 });
 
 
+/**
+ * 更新仓库
+ * @return {[type]} [description]
+ */
+function pullFun(){
+
+    git.pull('origin', 'master',function(){
+        console.log('仓库pull完毕');
+        zipFun();      
+    });
+}
+
+/**
+ * 压缩框架内容
+ * @return {[type]} [description]
+ */
+
+function zipFun(){
+    var version = require('./generate-uui/package.json').version;
+    console.log('版本号:' + version);
+    return gulp.src('./generate-uui/dist/uui/' + version + '/**')
+        .pipe(gulp.dest('./dist/website/iuapframe'))
+        .on('end', function() {
+            return gulp.src('./dist/website/iuapframe/**')
+                .pipe(zip('iuapframe.zip'))
+                .pipe(gulp.dest('./dist/download'));
+    });        
+}
+
+/**
+ * clone/pull仓库并生成首页框架下载资源
+ * @param  {[type]} ) {               var fileDir [description]
+ * @return {[type]}   [description]
+ */
+gulp.task('clone', function() {
+    
+    
+    if(uuiDir === -1) {
+        git.clone('git@github.com:iuap-design/generate-uui.git', function(err){
+            if (err) {
+                throw err;
+            } else {
+                console.log('Clone仓库完毕');
+                zipFun();
+            }
+        });        
+    } else {
+        pullFun();
+    }
+});
+
+
+gulp.task('newpack', ['clone']);
 gulp.task('default', ['del','zip']);
 
 
