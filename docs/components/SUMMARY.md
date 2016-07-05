@@ -8,6 +8,7 @@
 * [模态框 modal](modal.md)
 * [页签 tabs](tabs.md)
 * [提示 tooltip](tooltip.md)
+* [隐藏菜单 menu](menu.md)
 * [面包屑 breadcrumb](breadcrumb.md)
 * [进度条 progress](progress.md)
 * [评分 rating](rating.md)
