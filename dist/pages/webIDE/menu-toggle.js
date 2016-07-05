@@ -3,7 +3,7 @@
   $(document).ready(function(){ 
         
    
-    // $(".u-container-fluid.u-widget-bg").mCustomScrollbar({theme:"minimal-dark"});
+    $(".iscroll-improve").mCustomScrollbar({theme:"minimal-dark"});
 
     var togglebutton = $("#menubutton").find("i");
     var togglebar = $("#menubar");
