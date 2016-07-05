@@ -5,7 +5,7 @@
   "main": "server/app.js",
   "scripts": {
     "dev": "node server/app.js",
-    "build": "gulp default"
+    "build": "gulp && sh bin/gitbook-build.sh"
   },
   "repository": {
     "type": "git",
