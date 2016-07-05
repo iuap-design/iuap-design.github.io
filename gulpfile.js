@@ -5,6 +5,8 @@ var stat = fs.stat;
 var template = require( 'art-template' );
 var zip = require('gulp-zip');
 var flatmap = require('gulp-flatmap');
+var git = require('gulp-git');
+
 
 var zipPath = [
     './dist/website/cooperating/**/*',
@@ -86,6 +88,60 @@ gulp.task('zip', function() {
 });
 
 
+/**
+ * 更新仓库
+ * @return {[type]} [description]
+ */
+function pullFun(){
+
+    git.pull('origin', 'master',function(){
+        console.log('仓库pull完毕');
+        zipFun();      
+    });
+}
+
+/**
+ * 压缩框架内容
+ * @return {[type]} [description]
+ */
+
+function zipFun(){
+    var version = require('./generate-uui/package.json').version;
+    console.log('版本号:' + version);
+    return gulp.src('./generate-uui/dist/uui/' + version + '/**')
+        .pipe(gulp.dest('./dist/website/iuapframe'))
+        .on('end', function() {
+            return gulp.src('./dist/website/iuapframe/**')
+                .pipe(zip('iuapframe.zip'))
+                .pipe(gulp.dest('./dist/download'));
+    });        
+}
+
+/**
+ * clone/pull仓库并生成首页框架下载资源
+ * @param  {[type]} ) {               var fileDir [description]
+ * @return {[type]}   [description]
+ */
+gulp.task('clone', function() {
+
+    var fileDir = fs.readdirSync('./');
+    var uuiDir = fileDir.indexOf('generate-uui');
+    if(uuiDir === -1) {
+        git.clone('git@github.com:iuap-design/generate-uui.git', function(err){
+            if (err) {
+                throw err;
+            } else {
+                console.log('Clone仓库完毕');
+                zipFun();
+            }
+        });        
+    } else {
+        pullFun();
+    }
+});
+
+
+gulp.task('newpack', ['clone']);
 gulp.task('default', ['del','zip']);
 
 

@@ -8,6 +8,7 @@ window.onload = function() {
         init: function () {
             this.bindEvent();
             this.navControl();
+            this.delBtn();
         },
         /**
          * 为页面dom绑定事件
@@ -58,6 +59,15 @@ window.onload = function() {
                 offcanvasNav.removeClass('open');
                 $('.offcanvas-backdrop').remove();
             });
+        },
+        delBtn: function() {
+            var btnAry = document.getElementById('templateContainer').querySelectorAll('.btn_1');
+            for(var i = 0, btnLength = btnAry.length; i < btnLength; i++) {
+                var hrefValue = btnAry[i].getAttribute('href');
+                if( hrefValue === 'javascript:;' ) {
+                    btnAry[i].style.display = 'none';
+                }
+            }
         }
     };
     template1.init();

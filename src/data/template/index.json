@@ -7,7 +7,7 @@
 	        "content_img": "img/main_6.png",
 	        "phone_img": "img/phone_3.jpg",
 	        "url": "http://design.yyuap.com/ficloud/home/statistics",
-	        "download": "/dist/download/#",
+	        "download": "javascript:;",
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
 	    },{
@@ -26,7 +26,7 @@
 	        "decription": "发展可持续、完善易有序、拓展能稳定",
 	        "content_img": "img/main_12.png",
 	        "phone_img": "img/phone_3.jpg",
-	        "url": "../../website/tenxcloud/creat.html",
+	        "url": "../../website/tenxcloud/create.html",
 	        "download": "/dist/download/tenxcloud.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
@@ -47,7 +47,7 @@
 	        "content_img": "img/main_7.png",
 	        "phone_img": "img/phone_3.jpg",
 	        "url": "http://design.yyuap.com/ficloud/voucher/node/20020PREPA",
-	        "download": "/dist/download/#",
+	        "download": "javascript:;",
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
 	    },{
@@ -91,7 +91,7 @@
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
 	    },{
-	        "title": "SASS应用类模板",
+	        "title": "SAAS应用类模板",
 	        "id": "0001",
 	        "decription": "充分体现出sass的变量神器",
 	        "content_img": "img/main_1.png",
@@ -101,7 +101,7 @@
 	        "using_times": "772",
 	        "for_area": ["互联网"]
 	    },{
-	        "title": "SASS应用类模板",
+	        "title": "SAAS应用类模板",
 	        "id": "002",
 	        "decription": "专门的软件来完成Sass代码让浏览器识别和转换成CSS代码",
 	        "content_img": "img/main_2.png",
