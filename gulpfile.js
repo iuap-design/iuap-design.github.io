@@ -3,9 +3,19 @@ var del = require('del');
 var fs = require( 'fs' );
 var stat = fs.stat;
 var template = require( 'art-template' );
+var zip = require('gulp-zip');
+var flatmap = require('gulp-flatmap');
+
+var zipPath = [
+    './dist/website/cooperating/**/*',
+    './dist/website/e-commerce/**/*',
+    './dist/website/hr/**/*',
+    './dist/website/eccm/**/*',
+    './dist/website/tenxcloud/**/*'
+    ];
 
 /**
- * 编译
+ * 编译导出
  * @param  {[type]} src [编译路径]
  * @return {[type]}     [description]
  */
@@ -44,26 +54,39 @@ var compile = function( src ){
         });
     });
 };
-
 gulp.task('copy', function() {
     return gulp.src(['./src/**'])
         .pipe(gulp.dest('./dist'));    
 });
-
 gulp.task('common', ['copy'], function() {
     return gulp.src(['./src/common/**'])
         .pipe(gulp.dest('./dist/pages/common'));
 });
-
 gulp.task('compile', ['common'], function() {
     return compile('./dist');
 });
-
 gulp.task('del', ['compile'], function() {
     del(['./dist/public', './dist/data','./dist/common']);
 });
 
-gulp.task('default', ['del']);
+/**
+ * 压缩模板
+ * @param  {[type]} ) {}          [description]
+ * @return {[type]}   [description]
+ */
+gulp.task('zip', function() {
+    return gulp.src('./dist/website/*')
+        .pipe(flatmap(function(stream, file){
+            var fileName = file.path.substr(file.path.lastIndexOf('/') + 1);
+            gulp.src(file.path + '/**/*')
+                .pipe(zip(fileName+'.zip'))
+                .pipe(gulp.dest('./dist/download'));
+            return stream;
+        }));
+});
+
+
+gulp.task('default', ['del','zip']);
 
 
 

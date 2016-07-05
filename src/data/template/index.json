@@ -7,6 +7,7 @@
 	        "content_img": "img/main_6.png",
 	        "phone_img": "img/phone_3.jpg",
 	        "url": "http://design.yyuap.com/ficloud/home/statistics",
+	        "download": "/dist/download/#",
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
 	    },{
@@ -16,6 +17,7 @@
 	        "content_img": "img/main_5.png",
 	        "phone_img": "img/phone_3.jpg",
 	        "url": "../../website/tenxcloud/index.html",
+	        "download": "/dist/download/tenxcloud.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
 	    },{
@@ -25,6 +27,7 @@
 	        "content_img": "img/main_12.png",
 	        "phone_img": "img/phone_3.jpg",
 	        "url": "../../website/tenxcloud/creat.html",
+	        "download": "/dist/download/tenxcloud.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
 	    },{
@@ -34,6 +37,7 @@
 	        "content_img": "img/main_4.png",
 	        "phone_img": "img/phone_4.jpg",
 	        "url": "../../website/e-commerce/index.html",
+	        "download": "/dist/download/e-commerce.zip",
 	        "using_times": "100",
 	        "for_area": ["电商"]
 	    },{
@@ -43,6 +47,7 @@
 	        "content_img": "img/main_7.png",
 	        "phone_img": "img/phone_3.jpg",
 	        "url": "http://design.yyuap.com/ficloud/voucher/node/20020PREPA",
+	        "download": "/dist/download/#",
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
 	    },{
@@ -52,6 +57,7 @@
 	        "content_img": "img/main_8.png",
 	        "phone_img": "img/phone_3.jpg",
 	        "url": "../../website/eccm/html/pages/baseinfo/baseinfo.html",
+	        "download": "/dist/download/eccm.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
 	    },{
@@ -61,6 +67,7 @@
 	        "content_img": "img/main_11.png",
 	        "phone_img": "img/phone_3.jpg",
 	        "url": "../../website/eccm/html/pages/template/template.html",
+	        "download": "/dist/download/eccm.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
 	    },{
@@ -70,6 +77,7 @@
 	        "content_img": "img/main_9.png",
 	        "phone_img": "img/phone_3.jpg",
 	        "url": "../../website/eccm/html/pages/goodsproperty/goodsproperty.html",
+	        "download": "/dist/download/eccm.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
 	    },{
@@ -79,6 +87,7 @@
 	        "content_img": "img/main_10.png",
 	        "phone_img": "img/phone_3.jpg",
 	        "url": "../../website/eccm/html/pages/goodspublish/goodspublish.html",
+	        "download": "/dist/download/eccm.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
 	    },{
@@ -88,6 +97,7 @@
 	        "content_img": "img/main_1.png",
 	        "phone_img": "img/phone_1.jpg",
 	        "url": "../../website/hr/list.html",
+	        "download": "/dist/download/hr.zip",
 	        "using_times": "772",
 	        "for_area": ["互联网"]
 	    },{
@@ -97,6 +107,7 @@
 	        "content_img": "img/main_2.png",
 	        "phone_img": "img/phone_2.jpg",
 	        "url": "../../website/hr/apply.html",
+	        "download": "/dist/download/hr.zip",
 	        "using_times": "772",
 	        "for_area": ["互联网"]
 	    },{
@@ -106,6 +117,7 @@
 	        "content_img": "img/main_3.png",
 	        "phone_img": "img/phone_3.jpg",
 	        "url": "../../website/cooperating/index.html",
+	        "download": "/dist/download/cooperating.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","建筑"]
 	    }
