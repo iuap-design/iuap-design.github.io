@@ -42,8 +42,8 @@ npm install iuap-design
 
 ## 开发文档资源
 
-- [iuap-design docs on github](https://github.com/iuap-design/iuap-design/tree/master/docs)
-- [iuap-design detail develop docs](http://design.yyuap.com/)
+- [iuap-design docs on github](https://github.com/iuap-design/iuap-design.github.io/tree/master/docs)
+<!-- - [iuap-design detail develop docs](http://design.yyuap.com/) -->
 
 ## 设计语言文档
 
