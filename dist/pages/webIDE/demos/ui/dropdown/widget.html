@@ -1,31 +1,211 @@
-<div class="demo">
-    <div class="u-badge w-20 m" data-badge="1">
-        <i class="fa fa-bell"></i>
-    </div>
-    
-    <div class="u-badge u-badge-no-background w-20 m" data-badge="1">
-        <i class="fa fa-bell"></i>
-    </div>
-    
-    <br>
-
-    <div class="u-avatar w-40 m u-avatar-online">
-        <img src="../../../static/2.jpg" alt="..." class="img-circle">
-        <i></i>
-    </div>
-    
-    <div class="u-avatar w-40 m u-avatar-off">
-        <img src="../../../static/2.jpg" alt="..." class="img-circle">
-        <i></i>
-    </div>
-    
-    <div class="u-avatar w-40 m u-avatar-busy">
-        <img src="../../../static/2.jpg" alt="..." class="img-circle">
-        <i></i>
-    </div>
-    
-    <div class="u-avatar w-40 m u-avatar-away">
-        <img src="../../../static/2.jpg" alt="..." class="img-circle">
-        <i></i>
+<div class="u-container-fluid u-widget-bg">
+    <div class="u-row">
+        <div class="u-col-md-12">
+            <div class="u-widget  u-widget-right">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">基础下拉菜单</h3>
+                </div>
+                <div class="u-widget-body">
+                    <button class="u-button  u-menu-button " id="demo-menu-lower-right2">
+                        <span>Default</span><i class="fa fa-chevron-down"></i>
+                    </button>
+                    <ul class="u-menu " for="demo-menu-lower-right2">
+                        <li class="u-menu-item"><a>选项一</a></li>
+                        <li class="u-menu-item"><a>选项二</a></li>
+                        <li class="u-menu-item"><a>选项三</a></li>
+                        <li class="u-menu-item"><a>选项四</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="u-col-md-12">
+            <div class="u-widget  u-widget-right">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">不同颜色的基础下拉菜单</h3>
+                </div>
+                <div class="u-widget-body">
+                    <div class="u-row">
+                        <div class="u-col-3">
+                            <button class="u-button u-button-success u-menu-button " id="demo-menu1">
+                                <span>SUCCESS</span><i class="fa fa-chevron-down"></i>
+                            </button>
+                            <ul class="u-menu u-menu-success" for="demo-menu1">
+                                <li class="u-menu-item"><a>选项一</a></li>
+                                <li class="u-menu-item"><a>选项二</a></li>
+                                <li class="u-menu-item"><a>选项三</a></li>
+                                <li class="u-menu-item"><a>选项四</a></li>
+                            </ul>
+                        </div>
+                        <div class="u-col-3">
+                            <button class="u-button u-button-info u-menu-button " id="demo-menu2">
+                                <span>INFO</span><i class="fa fa-chevron-down"></i>
+                            </button>
+                            <ul class="u-menu u-menu-info" for="demo-menu2">
+                                <li class="u-menu-item"><a>选项一</a></li>
+                                <li class="u-menu-item"><a>选项二</a></li>
+                                <li class="u-menu-item"><a>选项三</a></li>
+                                <li class="u-menu-item"><a>选项四</a></li>
+                            </ul>
+                        </div>
+                        <div class="u-col-3">
+                            <button class="u-button u-button-danger u-menu-button " id="demo-menu3">
+                                <span>DANGER</span><i class="fa fa-chevron-down"></i>
+                            </button>
+                            <ul class="u-menu u-menu-danger" for="demo-menu3">
+                                <li class="u-menu-item"><a>选项一</a></li>
+                                <li class="u-menu-item"><a>选项二</a></li>
+                                <li class="u-menu-item"><a>选项三</a></li>
+                                <li class="u-menu-item"><a>选项四</a></li>
+                            </ul>
+                        </div>
+                        <div class="u-col-3">
+                            <button class="u-button u-button-warning u-menu-button " id="demo-menu4">
+                                <span>WARNING</span><i class="fa fa-chevron-down"></i>
+                            </button>
+                            <ul class="u-menu u-menu-warning" for="demo-menu4">
+                                <li class="u-menu-item"><a>选项一</a></li>
+                                <li class="u-menu-item"><a>选项二</a></li>
+                                <li class="u-menu-item"><a>选项三</a></li>
+                                <li class="u-menu-item"><a>选项四</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="u-col-md-12">
+            <div class="u-widget  u-widget-right">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">不同样式的下拉菜单</h3>
+                </div>
+                <div class="u-widget-body">
+                    <div class="u-row">
+                        <div class="u-col-3">
+                            <p>有头信息的下拉菜单</p>
+                            <button class="u-button u-button-info u-menu-button " id="demo-menu5">
+                                <span>HEAD</span><i class="fa fa-chevron-down"></i>
+                            </button>
+                            <ul class="u-menu u-menu-info" for="demo-menu5">
+                                <li class="u-menu-item-head">头信息一</li>
+                                <li class="u-menu-item"><a>选项一</a></li>
+                                <li class="u-menu-item"><a>选项二</a></li>
+                                <li class="u-menu-item-head">头信息二</li>
+                                <li class="u-menu-item"><a>选项一</a></li>
+                                <li class="u-menu-item"><a>选项二</a></li>
+                            </ul>
+                        </div>
+                        <div class="u-col-3">
+                            <p>有分割线的下拉菜单</p>
+                            <button class="u-button u-button-info u-menu-button " id="demo-menu6">
+                                <span>BREAK</span><i class="fa fa-chevron-down"></i>
+                            </button>
+                            <ul class="u-menu u-menu-info" for="demo-menu6">
+                                <li class="u-menu-item"><a>选项一</a></li>
+                                <li class="u-menu-item"><a>选项二</a></li>
+                                <li class="u-menu-item-break"></li>
+                                <li class="u-menu-item"><a>选项三</a></li>
+                                <li class="u-menu-item"><a>选项四</a></li>
+                            </ul>
+                        </div>
+                        <div class="u-col-3">
+                            <p>有不可用选项的下拉菜单</p>
+                            <button class="u-button u-button-info u-menu-button " id="demo-menu7">
+                                <span>DISABLE</span><i class="fa fa-chevron-down"></i>
+                            </button>
+                            <ul class="u-menu u-menu-info" for="demo-menu7">
+                                <li class="u-menu-item disabled"><a>选项一</a></li>
+                                <li class="u-menu-item"><a>选项二</a></li>
+                                <li class="u-menu-item"><a>选项三</a></li>
+                                <li class="u-menu-item"><a>选项四</a></li>
+                            </ul>
+                        </div>
+                        <div class="u-col-3">
+                            <p>选中某项的下拉菜单</p>
+                            <button class="u-button u-button-info u-menu-button " id="demo-menu8">
+                                <span>ACTIVE</span><i class="fa fa-chevron-down"></i>
+                            </button>
+                            <ul class="u-menu u-menu-info" for="demo-menu8">
+                                <li class="u-menu-item active"><a>选项一</a></li>
+                                <li class="u-menu-item"><a>选项二</a></li>
+                                <li class="u-menu-item"><a>选项三</a></li>
+                                <li class="u-menu-item"><a>选项四</a></li>
+                            </ul>
+                        </div>
+                        <div class="u-col-3">
+                            <p>选项有图标的下拉菜单</p>
+                            <button class="u-button u-button-info u-menu-button " id="demo-menu9">
+                                <span>ICON</span><i class="fa fa-chevron-down"></i>
+                            </button>
+                            <ul class="u-menu" for="demo-menu9">
+                                <li class="u-menu-item"><a><i class="fa fa-mail-reply"></i>reply</a></li>
+                                <li class="u-menu-item"><a><i class="fa fa-share-alt"></i>share</a></li>
+                                <li class="u-menu-item"><a><i class="fa fa-remove"></i>remove</a></li>
+                                <li class="u-menu-item-break"></li>
+                                <li class="u-menu-item"><a><i class="fa fa-cog fa-fw"></i>setting</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="u-col-md-12">
+            <div class="u-widget  u-widget-right">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">不同方向的下拉菜单</h3>
+                </div>
+                <div class="u-widget-body">
+                    <div class="u-row">
+                        <div class="u-col-3">
+                            <button class="u-button u-button-info u-menu-button" id="demo-menu-default">
+                                <span>Default</span><i class="fa fa-chevron-down"></i>
+                            </button>
+                            <ul class="u-menu" for="demo-menu-default">
+                                <li class="u-menu-item"><a><i class="fa fa-mail-reply"></i>reply</a></li>
+                                <li class="u-menu-item"><a><i class="fa fa-share-alt"></i>share</a></li>
+                                <li class="u-menu-item"><a><i class="fa fa-remove"></i>remove</a></li>
+                                <li class="u-menu-item-break"></li>
+                                <li class="u-menu-item"><a><i class="fa fa-cog fa-fw"></i>setting</a></li>
+                            </ul>
+                        </div>
+                        <div class="u-col-3">
+                            <button class="u-button u-button-info u-menu-button" id="demo-menu11">
+                                <span>TOPLEFT</span><i class="fa fa-chevron-down"></i>
+                            </button>
+                            <ul class="u-menu u-menu-top-left" for="demo-menu11">
+                                <li class="u-menu-item"><a><i class="fa fa-mail-reply"></i>reply</a></li>
+                                <li class="u-menu-item"><a><i class="fa fa-share-alt"></i>share</a></li>
+                                <li class="u-menu-item"><a><i class="fa fa-remove"></i>remove</a></li>
+                                <li class="u-menu-item-break"></li>
+                                <li class="u-menu-item"><a><i class="fa fa-cog fa-fw"></i>setting</a></li>
+                            </ul>
+                        </div>
+                        <div class="u-col-3">
+                            <button class="u-button u-button-info u-menu-button" id="demo-menu12">
+                                <span>TOPRIGHT</span><i class="fa fa-chevron-down"></i>
+                            </button>
+                            <ul class="u-menu u-menu-top-right" for="demo-menu12">
+                                <li class="u-menu-item"><a><i class="fa fa-mail-reply"></i>reply</a></li>
+                                <li class="u-menu-item"><a><i class="fa fa-share-alt"></i>share</a></li>
+                                <li class="u-menu-item"><a><i class="fa fa-remove"></i>remove</a></li>
+                                <li class="u-menu-item-break"></li>
+                                <li class="u-menu-item"><a><i class="fa fa-cog fa-fw"></i>setting</a></li>
+                            </ul>
+                        </div>
+                        <div class="u-col-3">
+                            <button class="u-button u-button-info u-menu-button" id="demo-menu13">
+                                <span>BOTTOMRIGHT</span><i class="fa fa-chevron-down"></i>
+                            </button>
+                            <ul class="u-menu u-menu-bottom-right" for="demo-menu13">
+                                <li class="u-menu-item"><a><i class="fa fa-mail-reply"></i>reply</a></li>
+                                <li class="u-menu-item"><a><i class="fa fa-share-alt"></i>share</a></li>
+                                <li class="u-menu-item"><a><i class="fa fa-remove"></i>remove</a></li>
+                                <li class="u-menu-item-break"></li>
+                                <li class="u-menu-item"><a><i class="fa fa-cog fa-fw"></i>setting</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
