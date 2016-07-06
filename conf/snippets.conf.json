@@ -76,6 +76,12 @@
         }, {
             "name": "hover菜单",
             "url": "demos/ui/hoverNavmenu"
+        }, {
+            "name": "下拉菜单",
+            "url": "demos/ui/dropdown"
+        }, {
+            "name": "列表",
+            "url": "demos/ui/listgroup"
         }
     ]
 }, {

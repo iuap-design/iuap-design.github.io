@@ -74,7 +74,7 @@ module.exports = {
           '</body>',
           '</html>'
         ]
-        this.body = tpl.join(""); ;//JSON.stringify('test');
+        this.body = tpl.join("");//JSON.stringify('test');
     });
 
     //uui定制相关
