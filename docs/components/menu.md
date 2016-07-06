@@ -1,9 +1,5 @@
 # menu控件
 
-# 如何使用
-
-暂无
-
 # 示例
 
 
@@ -26,7 +22,8 @@
 .example-content{
     padding-left: 60px;
 }
-</style></div>
+</style>
+</div>
 <div class="examples-code"><pre><code>&lt;!-- Left aligned menu below button -->
 &lt;button id="demo-menu-lower-left" class="u-button floating u-button-icon">
     &lt;i class="fa fa-ellipsis-v">&lt;/i>
@@ -67,7 +64,8 @@
 <div class="examples-code"><pre><code>
 .example-content{
     padding-left: 60px;
-}</code></pre>
+}
+</code></pre>
 </div>
 <div class="examples-code"><pre><code>&lt;!-- right aligned menu below button -->
 &lt;button id="demo-menu-lower-right" class="u-button floating u-button-icon">
