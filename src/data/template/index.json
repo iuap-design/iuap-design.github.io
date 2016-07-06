@@ -11,6 +11,16 @@
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
 	    },{
+	        "title": "菜单布局模板",
+	        "id": "005",
+	        "decription": "可伸缩导航布局，伸展时展示全部nav，收起显示具体图标",
+	        "content_img": "img/main_13.png",
+	        "phone_img": "img/phone_3.jpg",
+	        "url": "../../website/menuNavLayout/index.html",
+	        "download": "/dist/download/menuNavLayout.zip",
+	        "using_times": "228",
+	        "for_area": ["互联网","金融"]
+	    },{
 	        "title": "运维管理模板",
 	        "id": "005",
 	        "decription": "发展可持续、完善易有序、拓展能稳定",
