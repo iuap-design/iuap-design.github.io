@@ -2018,7 +2018,7 @@ label.hover {
 .navbar .toolbar .action-btn {
 	color:#424242;
 	position: relative;
-	margin: 0 18px;
+	margin: 0 12px;
 }
 
 .navbar .toolbar .action-btn:hover {
@@ -2036,7 +2036,7 @@ label.hover {
 .navbar .nav-toggle:hover {
 	color: #4da3ff;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1000px) {
 	.navbar {
 		height: 80px;
 	}
@@ -5302,4 +5302,16 @@ a.icon-block {
 
 .mCSB_scrollTools{
 	display: none;
+}
+
+@media (min-width: 992px) {
+	.navbar .container{
+		width:auto;
+	}
+}
+
+@media (min-width: 1200px) {
+	.navbar .container{
+		width:1170px;
+	}	
 }
