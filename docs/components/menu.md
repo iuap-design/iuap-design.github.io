@@ -7,10 +7,8 @@
 # 示例
 
 
-##基础label
+##左menu
 
-不同背景具有相应的class名
-例如 u-tab-default 默认灰色
 <div class="example-content"><!-- Left aligned menu below button -->
 <button id="demo-menu-lower-left" class="u-button floating u-button-icon">
     <i class="fa fa-ellipsis-v"></i>
@@ -23,14 +21,10 @@
     <li class="u-menu-item">审核</li>
 </ul>
 </div>
-<div class="example-content"><style>.margin-r-10{
-    margin-right: 10px; 
-}
-.example .u-message{
-    position: inherit;
-}
-.example{
-	width: 300px;
+<div class="example-content">
+<style>
+.example-content{
+    padding-left: 60px;
 }
 </style></div>
 <div class="examples-code"><pre><code>&lt;!-- Left aligned menu below button -->
@@ -45,29 +39,18 @@
     &lt;li class="u-menu-item">审核&lt;/li>
 &lt;/ul></code></pre>
 </div>
-<div class="examples-code"><pre><code>.margin-r-10{
-    margin-right: 10px; 
+<div class="examples-code"><pre><code>
+.example-content{
+    padding-left: 60px;
 }
-.example .u-message{
-    position: inherit;
-}
-.example{
-	width: 300px;
-}</code></pre>
+</code></pre>
 </div>
 
-##基础label
+##右menu
 
-不同背景具有相应的class名
-例如 u-tab-default 默认灰色
-<div class="example-content"><style>.margin-r-10{
-    margin-right: 10px; 
-}
-.example .u-message{
-    position: inherit;
-}
-.example{
-	width: 300px;
+<div class="example-content"><style>
+.example-content{
+    padding-left: 60px;
 }
 </style></div>
 <div class="example-content"><!-- right aligned menu below button -->
@@ -81,14 +64,9 @@
     <li class="u-menu-item">审核</li>
 </ul>
 </div>
-<div class="examples-code"><pre><code>.margin-r-10{
-    margin-right: 10px; 
-}
-.example .u-message{
-    position: inherit;
-}
-.example{
-	width: 300px;
+<div class="examples-code"><pre><code>
+.example-content{
+    padding-left: 60px;
 }</code></pre>
 </div>
 <div class="examples-code"><pre><code>&lt;!-- right aligned menu below button -->
@@ -103,13 +81,5 @@
 &lt;/ul></code></pre>
 </div>
 
-
-<!--### 示例1
-
-示例1说明
-
-### 示例2
-
-示例2说-->
 
 
