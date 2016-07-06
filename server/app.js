@@ -8,13 +8,13 @@ var gzip = require('koa-gzip');
 
 
 var app = koa();
-// var iwebRouter = require('./router');
-//
-// // uui定制
-// var customized = require("./customized");
-// var down = require("./down");
-//
-// iwebRouter.setRouters(router, '.');
+var iwebRouter = require('./router');
+
+// uui定制
+var customized = require("./customized");
+var down = require("./down");
+
+iwebRouter.setRouters(router, '.');
 
 app.use(gzip());
 
