@@ -18,10 +18,8 @@
 
 .u-tabs-pill .u-tabs__tab.is-active:hover {
     background-color: rgb(0,188,212);
-    text-decoration: none;
 }
 
 .u-tabs-pill .u-tabs__tab:hover {
     background-color: #fff;
-    text-decoration: none;
 }
