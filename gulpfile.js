@@ -114,10 +114,10 @@ function zipFun(){
     var version = require('./generate-uui/package.json').version;
     console.log('版本号:' + version);
     return gulp.src('./generate-uui/dist/uui/' + version + '/**')
-        .pipe(gulp.dest('./dist/website/iuapframe'))
+        .pipe(gulp.dest('./dist/website/iuapdesign'))
         .on('end', function() {
-            return gulp.src('./dist/website/iuapframe/**')
-                .pipe(zip('iuapframe.zip'))
+            return gulp.src('./dist/website/iuapdesign/**')
+                .pipe(zip('iuapdesign.zip'))
                 .pipe(gulp.dest('./dist/download'));
     });        
 }

@@ -1,7 +1,5 @@
 # 关于 `iUAP Design` 的介绍
 
-<img src="" />
-
 ![iUAP Design 前端集成解决方案](http://design.yyuap.com/dist/static/img/all/design.png)
 
 # 获取iuap-design
@@ -42,8 +40,8 @@ npm install iuap-design
 
 ## 开发文档资源
 
-- [iuap-design docs on github](https://github.com/iuap-design/iuap-design/tree/master/docs)
-- [iuap-design detail develop docs](http://design.yyuap.com/)
+- [iuap-design docs on github](https://github.com/iuap-design/iuap-design.github.io/tree/master/docs)
+<!-- - [iuap-design detail develop docs](http://design.yyuap.com/) -->
 
 ## 设计语言文档
 
@@ -55,7 +53,7 @@ npm install iuap-design
 
 ## 组件库文档
 
-iuap-design框架将提供40+个控件和30+个插件，[查看详细开发文档](http://design.yyuap.com/dist/pages/components/button.html)。
+iuap-design框架将提供40+个控件和30+个插件，[查看详细开发文档](http://design.yyuap.com/dist/pages/components/index.html)。
 
 # 目录及文件说明
 

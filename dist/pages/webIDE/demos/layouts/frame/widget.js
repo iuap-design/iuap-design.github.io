@@ -1,9 +1,10 @@
     var togglebutton = $("#frame-menubutton").find("i");
     var togglebar = $("#frame-menubar");
 
+
     togglebutton.unbind().bind("click",function(){
       togglebar.toggleClass("u-menubar-open");
-      console.log($(this));
+      
       $("main").toggleClass("content-fullScreen");
       togglebutton.each(function(){
         
