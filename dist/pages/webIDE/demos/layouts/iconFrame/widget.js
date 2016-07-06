@@ -1,19 +1,10 @@
-   
-    var togglebutton = $("#iconframe-menubutton").find("i");
-    var togglebar = $("#iconframe-menubar");
-    
-   // $(".iscroll-improve").mCustomScrollbar({theme:"minimal-dark"});
 
-    togglebutton.unbind().bind("click",function(){
-      togglebar.toggleClass("u-menubar-open");
-      console.log($(this));
-      $("main").toggleClass("content-fullScreen");
-      togglebutton.each(function(){
-        
-        if($(this).hasClass("hide")){
-          $(this).removeClass("hide");
-        }else{
-          $(this).addClass("hide");
-        }
-      })
-    })
+
+document.write('<' + 'script src="dist/static/js/iconFramePlugins/jquery-asHoverScroll.js"><' + '/script>')
+document.write('<' + 'script src="dist/static/js/iconFramePlugins/core.js"><' + '/script>')
+document.write('<' + 'script src="dist/static/js/iconFramePlugins/site.js"><' + '/script>')
+document.write('<' + 'script src="dist/static/js/iconFramePlugins/menu.js"><' + '/script>')
+document.write('<' + 'script src="dist/static/js/iconFramePlugins/menubar.js"><' + '/script>')
+setTimeout(function(){
+	Site.run();	
+},1000)

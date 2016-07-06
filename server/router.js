@@ -42,7 +42,7 @@ module.exports = {
         var styles = this.request.body.css_code;
         var htmls = this.request.body.html_code;
         var scripts = this.request.body.script_code;
-        var ctxPath='http://design.yyuap.com/static/uui-original/1.0.1';
+        var ctxPath='http://design.yyuap.com/static/uui/3.0.6';
         var tpl = [
           '<!DOCTYPE html>',
           '<html lang="en">',
@@ -50,7 +50,7 @@ module.exports = {
           '<meta charset="UTF-8">',
           '<meta name="viewport" content="width=device-width, initial-scale=1">',
           '<title>Title</title>',
-		  '<link rel="stylesheet" href="'+ ctxPath +'/fonts/font-awesome/css/font-awesome.css">',
+		  '<link rel="stylesheet" href="'+ ctxPath +'/css/font-awesome.css">',
           '<link rel="stylesheet" type="text/css" href="'+ ctxPath +'/css/u.css">',
           '<link rel="stylesheet" type="text/css" href="'+ ctxPath +'/css/u-extend.css">',
 		      '<link rel="stylesheet" type="text/css" href="'+ ctxPath +'/css/tree.css">',
@@ -74,7 +74,7 @@ module.exports = {
           '</body>',
           '</html>'
         ]
-        this.body = tpl.join(""); ;//JSON.stringify('test');
+        this.body = tpl.join("");//JSON.stringify('test');
     });
 
     //uui定制相关

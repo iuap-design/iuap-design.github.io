@@ -2,16 +2,8 @@
     "name": "控件",
     "sub": [{
             "name": "消息框",
-            "sub": [{
-                "name": "提示框",
-                "url": "demos/ui/dialog/message"
-            }, {
-                "name": "确认框",
-                "url": "demos/ui/dialog/confirm"
-            }, {
-                "name": "模态框",
-                "url": "demos/ui/dialog/modal"
-            }]
+            "url": "demos/ui/dialog"
+            
         }, {
             "name": "下拉框",
             "url": "demos/ui/combobox"
@@ -55,10 +47,6 @@
 	{
             "name": "参照选择器",
             "url": "demos/ui/refer"
-        },
-        {
-            "name": "参照框",
-            "url": "demos/ui/refer/refer/his"
         }, {
             "name": "加载条",
             "url": "demos/ui/loading"
@@ -88,6 +76,12 @@
         }, {
             "name": "hover菜单",
             "url": "demos/ui/hoverNavmenu"
+        }, {
+            "name": "下拉菜单",
+            "url": "demos/ui/dropdown"
+        }, {
+            "name": "列表",
+            "url": "demos/ui/listgroup"
         }
     ]
 }, {
@@ -98,9 +92,6 @@
     }, {
         "name": "宽高",
         "url": "demos/assist/wh"
-    }, {
-        "name": "边距",
-        "url": "demos/assist/mp"
     }, {
         "name": "文字",
         "url": "demos/assist/text"
