@@ -104,6 +104,13 @@ docs/_book
 # Optional REPL history
 .node_repl_history
 
-# respon
+# respority
 generate-uui
+
+# file
+dist/download/cooperating.zip
+dist/download/e-commerce.zip
+dist/download/eccm.zip
+dist/download/hr.zip
+dist/download/tenxcloud.zip
 
