@@ -33,38 +33,6 @@ tabs控件依赖 `u-tabs` 类，状态类是共用的。
 	margin-left: 0px;
 }
 </style></div>
-<div class="example-content"><div class="u-widget-body">
-    <div class="u-tabs u-tabs-pill">
-        <div class="u-tabs__tab-bar">
-            <a href="#tab-pills-panel-1" class="u-tabs__tab is-active">页签1</a>
-            <a href="#tab-pills-panel-2" class="u-tabs__tab">页签2</a>
-            <a href="#tab-pills-panel-3" class="u-tabs__tab">页签3</a>
-        </div>
-        <div class="u-tabs__panel is-active" id="tab-pills-panel-1">
-            <ul>
-                <li>项目1</li>
-                <li>项目2</li>
-                <li>项目3</li>
-                <li>项目4</li>
-                <li>项目5</li>
-            </ul>
-        </div>
-        <div class="u-tabs__panel" id="tab-pills-panel-2">
-            <ul>
-                <li>项目1</li>
-                <li>项目2</li>
-                <li>项目3</li>
-            </ul>
-        </div>
-        <div class="u-tabs__panel" id="tab-pills-panel-3">
-            <ul>
-                <li>项目1</li>
-                <li>项目2</li>
-            </ul>
-        </div>
-    </div>
-</div>
-</div>
 <div class="example-content"><script>var toptoolEle=document.getElementById('top');
 var bottomtoolEle=document.getElementById('down');
 var lefttoolEle=document.getElementById('left');
@@ -123,6 +91,38 @@ title:'danger tooltip',
 colorLevel:'tooltip-danger'
 });
 </script></div>
+<div class="example-content"><div class="u-widget-body">
+    <div class="u-tabs u-tabs-pill">
+        <div class="u-tabs__tab-bar">
+            <a href="#tab-pills-panel-1" class="u-tabs__tab is-active">页签1</a>
+            <a href="#tab-pills-panel-2" class="u-tabs__tab">页签2</a>
+            <a href="#tab-pills-panel-3" class="u-tabs__tab">页签3</a>
+        </div>
+        <div class="u-tabs__panel is-active" id="tab-pills-panel-1">
+            <ul>
+                <li>项目1</li>
+                <li>项目2</li>
+                <li>项目3</li>
+                <li>项目4</li>
+                <li>项目5</li>
+            </ul>
+        </div>
+        <div class="u-tabs__panel" id="tab-pills-panel-2">
+            <ul>
+                <li>项目1</li>
+                <li>项目2</li>
+                <li>项目3</li>
+            </ul>
+        </div>
+        <div class="u-tabs__panel" id="tab-pills-panel-3">
+            <ul>
+                <li>项目1</li>
+                <li>项目2</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
 <div class="examples-code"><pre><code>.ws{
 	width: 60px;
 	display: inline-block;
@@ -139,38 +139,6 @@ colorLevel:'tooltip-danger'
 #example label:first-child,#example1 label:first-child{
 	margin-left: 0px;
 }</code></pre>
-</div>
-<div class="examples-code"><pre><code>&lt;div class="u-widget-body">
-    &lt;div class="u-tabs u-tabs-pill">
-        &lt;div class="u-tabs__tab-bar">
-            &lt;a href="#tab-pills-panel-1" class="u-tabs__tab is-active">页签1&lt;/a>
-            &lt;a href="#tab-pills-panel-2" class="u-tabs__tab">页签2&lt;/a>
-            &lt;a href="#tab-pills-panel-3" class="u-tabs__tab">页签3&lt;/a>
-        &lt;/div>
-        &lt;div class="u-tabs__panel is-active" id="tab-pills-panel-1">
-            &lt;ul>
-                &lt;li>项目1&lt;/li>
-                &lt;li>项目2&lt;/li>
-                &lt;li>项目3&lt;/li>
-                &lt;li>项目4&lt;/li>
-                &lt;li>项目5&lt;/li>
-            &lt;/ul>
-        &lt;/div>
-        &lt;div class="u-tabs__panel" id="tab-pills-panel-2">
-            &lt;ul>
-                &lt;li>项目1&lt;/li>
-                &lt;li>项目2&lt;/li>
-                &lt;li>项目3&lt;/li>
-            &lt;/ul>
-        &lt;/div>
-        &lt;div class="u-tabs__panel" id="tab-pills-panel-3">
-            &lt;ul>
-                &lt;li>项目1&lt;/li>
-                &lt;li>项目2&lt;/li>
-            &lt;/ul>
-        &lt;/div>
-    &lt;/div>
-&lt;/div></code></pre>
 </div>
 <div class="examples-code"><pre><code>var toptoolEle=document.getElementById('top');
 var bottomtoolEle=document.getElementById('down');
@@ -230,11 +198,60 @@ title:'danger tooltip',
 colorLevel:'tooltip-danger'
 });</code></pre>
 </div>
+<div class="examples-code"><pre><code>&lt;div class="u-widget-body">
+    &lt;div class="u-tabs u-tabs-pill">
+        &lt;div class="u-tabs__tab-bar">
+            &lt;a href="#tab-pills-panel-1" class="u-tabs__tab is-active">页签1&lt;/a>
+            &lt;a href="#tab-pills-panel-2" class="u-tabs__tab">页签2&lt;/a>
+            &lt;a href="#tab-pills-panel-3" class="u-tabs__tab">页签3&lt;/a>
+        &lt;/div>
+        &lt;div class="u-tabs__panel is-active" id="tab-pills-panel-1">
+            &lt;ul>
+                &lt;li>项目1&lt;/li>
+                &lt;li>项目2&lt;/li>
+                &lt;li>项目3&lt;/li>
+                &lt;li>项目4&lt;/li>
+                &lt;li>项目5&lt;/li>
+            &lt;/ul>
+        &lt;/div>
+        &lt;div class="u-tabs__panel" id="tab-pills-panel-2">
+            &lt;ul>
+                &lt;li>项目1&lt;/li>
+                &lt;li>项目2&lt;/li>
+                &lt;li>项目3&lt;/li>
+            &lt;/ul>
+        &lt;/div>
+        &lt;div class="u-tabs__panel" id="tab-pills-panel-3">
+            &lt;ul>
+                &lt;li>项目1&lt;/li>
+                &lt;li>项目2&lt;/li>
+            &lt;/ul>
+        &lt;/div>
+    &lt;/div>
+&lt;/div></code></pre>
+</div>
 
 ##背景tabs
 
 
 切换 背景色跟随作为`active`状态
+<div class="example-content"><style>.ws{
+	width: 60px;
+	display: inline-block;
+	border: 1px solid #ddd;
+	height:30px;
+	line-height: 30px;
+	text-align: center;
+	margin-left: 60px;
+	margin-top: 10px;
+}
+#example,#example1{
+	margin-left: 60px;
+}
+#example label:first-child,#example1 label:first-child{
+	margin-left: 0px;
+}
+</style></div>
 <div class="example-content"><div class="u-tabs">
     <div class="u-tabs__tab-bar">
         <a href="#tab-panel-1" class="u-tabs__tab is-active">页签1</a>
@@ -266,23 +283,6 @@ colorLevel:'tooltip-danger'
 </div>
 
 </div>
-<div class="example-content"><style>.ws{
-	width: 60px;
-	display: inline-block;
-	border: 1px solid #ddd;
-	height:30px;
-	line-height: 30px;
-	text-align: center;
-	margin-left: 60px;
-	margin-top: 10px;
-}
-#example,#example1{
-	margin-left: 60px;
-}
-#example label:first-child,#example1 label:first-child{
-	margin-left: 0px;
-}
-</style></div>
 <div class="example-content"><script>var toptoolEle=document.getElementById('top');
 var bottomtoolEle=document.getElementById('down');
 var lefttoolEle=document.getElementById('left');
@@ -341,6 +341,23 @@ title:'danger tooltip',
 colorLevel:'tooltip-danger'
 });
 </script></div>
+<div class="examples-code"><pre><code>.ws{
+	width: 60px;
+	display: inline-block;
+	border: 1px solid #ddd;
+	height:30px;
+	line-height: 30px;
+	text-align: center;
+	margin-left: 60px;
+	margin-top: 10px;
+}
+#example,#example1{
+	margin-left: 60px;
+}
+#example label:first-child,#example1 label:first-child{
+	margin-left: 0px;
+}</code></pre>
+</div>
 <div class="examples-code"><pre><code>&lt;div class="u-tabs">
     &lt;div class="u-tabs__tab-bar">
         &lt;a href="#tab-panel-1" class="u-tabs__tab is-active">页签1&lt;/a>
@@ -371,23 +388,6 @@ colorLevel:'tooltip-danger'
     &lt;/div>
 &lt;/div>
 </code></pre>
-</div>
-<div class="examples-code"><pre><code>.ws{
-	width: 60px;
-	display: inline-block;
-	border: 1px solid #ddd;
-	height:30px;
-	line-height: 30px;
-	text-align: center;
-	margin-left: 60px;
-	margin-top: 10px;
-}
-#example,#example1{
-	margin-left: 60px;
-}
-#example label:first-child,#example1 label:first-child{
-	margin-left: 0px;
-}</code></pre>
 </div>
 <div class="examples-code"><pre><code>var toptoolEle=document.getElementById('top');
 var bottomtoolEle=document.getElementById('down');
