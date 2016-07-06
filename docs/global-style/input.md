@@ -1,24 +1,18 @@
 # input控件
-暂无
-
-# 如何使用
-
-暂无
 
 # 示例
 
 
-##基础label
+##不可用input
 
-不同背景具有相应的class名
-例如 u-tab-default 默认灰色
-<div class="example-content"><div class="u-form-group">
-    <div class="u-input-group u-has-feedback">
-        <input type="text" class="u-form-control" id="exampleInput3" disabled placeholder="jane.doe@example.com">
+<div class="example-content">
+    <div class="u-form-group">
+        <div class="u-input-group u-has-feedback">
+            <input type="text" class="u-form-control" id="exampleInput3" disabled placeholder="jane.doe@example.com">
+        </div>
     </div>
 </div>
 
-</div>
 <div class="example-content"><style>.margin-r-10{
     margin-right: 10px; 
 }
@@ -47,29 +41,30 @@
 }</code></pre>
 </div>
 
-##基础label
+##基础input
 
-不同背景具有相应的class名
-例如 u-tab-default 默认灰色
-<div class="example-content"><style>.margin-r-10{
-    margin-right: 10px; 
-}
-.example .u-message{
-    position: inherit;
-}
-.example{
-	width: 300px;
-}
-
-
-</style></div>
-<div class="example-content"><div class="u-text">
-    <input class="u-input"/>
-    <label class="u-label">这是一个文本框</label>
+<div class="example-content">
+    <style>.margin-r-10{
+        margin-right: 10px; 
+    }
+    .example .u-message{
+        position: inherit;
+    }
+    .example{
+    	width: 300px;
+    }
+    </style>
+</div>
+<div class="example-content">
+    <div class="u-text">
+        <input class="u-input"/>
+        <label class="u-label">这是一个文本框</label>
+    </div>
 </div>
 
-</div>
-<div class="examples-code"><pre><code>.margin-r-10{
+<div class="examples-code">
+
+<pre><code>.margin-r-10{
     margin-right: 10px; 
 }
 .example .u-message{
@@ -88,10 +83,8 @@
 </code></pre>
 </div>
 
-##基础label
+##校验input
 
-不同背景具有相应的class名
-例如 u-tab-default 默认灰色
 <div class="example-content"><div class="u-form-group">
     <label for="exampleInput3">必输:</label>
     <div class="u-input-group u-has-feedback must-in">

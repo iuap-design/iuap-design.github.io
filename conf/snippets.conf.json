@@ -47,10 +47,6 @@
 	{
             "name": "参照选择器",
             "url": "demos/ui/refer"
-        },
-        {
-            "name": "参照框",
-            "url": "demos/ui/refer/refer/his"
         }, {
             "name": "加载条",
             "url": "demos/ui/loading"

@@ -4,7 +4,7 @@
 * [辅助类](utilities.md)
 * [图标字体](icon.md)
 * [徽章 badge](badge.md)
-* [输入框 input](textfield.md)
+* [输入框 input](input.md)
 * [按钮 button](button.md)
 * [复选框 checkbox](checkbox.md)
 * [单选 radio](radio.md)

@@ -264,10 +264,12 @@ a.demo-drawer-nav-brand:focus, a.demo-drawer-nav-brand:hover {
     font-size: 18px;
     border-bottom: none;
 }
-
-.u-navlayout-fixed-drawer > .u-navlayout-content {
-    margin-left: 240px;
+@media screen and (min-width: 1024px){
+    .u-navlayout-fixed-drawer > .u-navlayout-content {
+        margin-left: 240px;
+    }
 }
+
 // 内容滚动条
 .u-navlayout-content.ov-hide {
     overflow: hidden !important;
@@ -351,4 +353,10 @@ a.demo-drawer-nav-brand:focus, a.demo-drawer-nav-brand:hover {
 // 重写样式
 .u-widget-title {
     border-left: 4px solid red; 
+}
+
+@media screen and (max-width: 480px) {
+    .u-tabs__tab {
+        padding: 0px 5px 0px 5px;
+    }
 }
