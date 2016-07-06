@@ -347,3 +347,8 @@ a.demo-drawer-nav-brand:focus, a.demo-drawer-nav-brand:hover {
         transform: translate3d(0, 0, 0);
     }
 }
+
+// 重写样式
+.u-widget-title {
+    border-left: 4px solid red; 
+}

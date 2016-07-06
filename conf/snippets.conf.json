@@ -2,16 +2,8 @@
     "name": "控件",
     "sub": [{
             "name": "消息框",
-            "sub": [{
-                "name": "提示框",
-                "url": "demos/ui/dialog/message"
-            }, {
-                "name": "确认框",
-                "url": "demos/ui/dialog/confirm"
-            }, {
-                "name": "模态框",
-                "url": "demos/ui/dialog/modal"
-            }]
+            "url": "demos/ui/dialog"
+            
         }, {
             "name": "下拉框",
             "url": "demos/ui/combobox"
@@ -98,9 +90,6 @@
     }, {
         "name": "宽高",
         "url": "demos/assist/wh"
-    }, {
-        "name": "边距",
-        "url": "demos/assist/mp"
     }, {
         "name": "文字",
         "url": "demos/assist/text"
