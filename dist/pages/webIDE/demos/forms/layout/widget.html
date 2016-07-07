@@ -15,9 +15,8 @@
                     <div class="u-form-group">
                         <label>后面带图标:</label>
                         <div class="u-input-group u-has-feedback">
-
                             <input type="email" class="u-form-control" placeholder="jane.doe@example.com">
-                             <span class="u-form-control-feedback fa fa-search"></span>
+                            <span class="u-form-control-feedback fa fa-search"></span>
                         </div>
                     </div>
                     <label class="u-checkbox">
@@ -39,7 +38,6 @@
                     </div>
                     <div class="u-form-group u-has-feedback">
                         <label for="exampleInputEmail2">后面带图标:</label>
-
                         <input type="email" class="u-form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
                         <span class="u-form-control-feedback fa fa-search"></span>
                     </div>
@@ -85,51 +83,85 @@
         </div>
     </div>
     <div class="u-row">
-      <div class="u-col-12">
-        <div class="u-widget p">
-          <h4>栅格表单</h4>
-          <div class="u-container-fluid">
-              <div class="u-row">
-                <div class="u-col-1 u-col-sm-4">
-                  <label class="u-input-label right">Email:</label>
+        <div class="u-col-12">
+            <div class="u-widget p">
+                <h4>栅格表单</h4>
+                <div class="u-container-fluid">
+                    <div class="u-row">
+                        <div class="u-col-1 u-col-sm-4">
+                            <label class="u-input-label right">姓名:</label>
+                        </div>
+                        <div class="u-col-3 u-col-sm-8 m-b-md">
+                            <div class="u-input-group u-has-feedback">
+                                <div class="u-input-group-before" style="color: red;">*</div>
+                                <input type="text" class="u-form-control">
+                            </div>
+                        </div>
+                        <div class="u-col-1 u-col-sm-4">
+                            <label class="u-input-label right">Email:</label>
+                        </div>
+                        <div class="u-col-3 u-col-sm-8 m-b-md">
+                            <input type="email" class="u-form-control" placeholder="Email">
+                        </div>
+                        
+                        <div class="u-col-1 u-col-sm-4">
+                            <label class="u-input-label right">年龄:</label>
+                        </div>
+                        <div class="u-col-3 u-col-sm-8 m-b-md">
+                            <input type="text" class="u-form-control">
+                        </div>
+                        <div class="u-col-1 u-col-sm-4">
+                            <label class="u-input-label right">性别:</label>
+                        </div>
+                        <div class="u-col-3 u-col-sm-8 m-b-md">
+                            <div class="u-form-group">
+                            <label  class="u-radio">
+                                <input type="radio" class="u-radio-button" name="options" value="1" checked>
+                                <span class="u-radio-label">男</span>
+                            </label>
+                            <label class="u-radio">
+                                <input type="radio" class="u-radio-button" name="options" value="2">
+                                <span class="u-radio-label">女</span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="u-col-1 u-col-sm-4">
+                            <label class="u-input-label right">级别:</label>
+                        </div>
+                        <div class="u-col-3 u-col-sm-8 m-b-md">
+                            <div class="u-combo" id="combo3">
+                                <div class="u-input-group u-has-feedback">
+                                   <input class="u-form-control"/>
+                                   <span class="u-form-control-feedback fa fa-angle-down" data-role="combo-button"></span>
+                                   <option value="1">管理员</option>
+                                   <option value="2">普通用户</option>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="u-col-1 u-col-sm-4">
+                            <label class="u-input-label right">启用:</label>
+                        </div>
+                        <div class="u-col-3 u-col-sm-8 m-b-md">
+                             <label class="u-switch" for="switch-1">
+                                <input type="checkbox" id="switch-1" class="u-switch-input">
+                                <span class="u-switch-label"></span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="u-row">
+                        <div class="u-col-1 u-col-sm-4">
+                            <label class="u-input-label right">地址:</label>
+                        </div>
+                        <div class="u-col-11 u-col-sm-8 m-b-md">
+                            <div class="u-input-group u-has-feedback">
+                                <input type="text" class="u-form-control">
+                                <span class="u-form-control-feedback fa fa-search"></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="u-col-2 u-col-sm-8 m-b-md">
-                      <input type="email" class="u-form-control" placeholder="Email">
-                </div>
-                <div class="u-col-1 u-col-sm-4">
-                  <label class="u-input-label right">姓名:</label>
-                </div>
-                <div class="u-col-2 u-col-sm-8 m-b-md">
-                  <div class="u-input-group u-has-feedback">
-                      <div class="u-input-group-before" style="color: red;">*</div>
-                      <input type="text" class="u-form-control">
-                      <span class="u-form-control-feedback fa fa-search"></span>
-                  </div>
-                </div>
-                <div class="u-col-1 u-col-sm-4">
-                  <label class="u-input-label right">年龄:</label>
-                </div>
-                <div class="u-col-2 u-col-sm-8 m-b-md">
-                      <input type="text" class="u-form-control">
-                </div>
-                <div class="u-col-1 u-col-sm-4">
-                  <label class="u-input-label right">籍贯:</label>
-                </div>
-                <div class="u-col-2 u-col-sm-8 m-b-md">
-                      <input type="text" class="u-form-control">
-                </div>
-              </div>
-              <div class="u-row">
-                <div class="u-col-1 u-col-sm-4">
-                  <label class="u-input-label right">地址:</label>
-                </div>
-                <div class="u-col-11 u-col-sm-8 m-b-md">
-                      <input type="text" class="u-form-control">
-                </div>
-              </div>
-          </div>
+            </div>
         </div>
-      </div>
     </div>
-
 </div>
