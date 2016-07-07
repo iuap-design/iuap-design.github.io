@@ -34,7 +34,7 @@ option中的value属性值为用户传递给后端参数，option中的innerHtml
 1.  下拉单选
   
 
-![](../../static/plugins/img/combo1.png)
+<!-- ![](../../static/plugins/img/combo1.png) -->
  
 
 	<div class="u-combo">
