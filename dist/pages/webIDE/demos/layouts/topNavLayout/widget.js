@@ -13,6 +13,7 @@ u.on(window, 'load', function() {
         })
         // menuNav点击时，显示子内容
     $('.site-menu-item.has-sub a').click(function() {
+        $('.site-menu-item').removeClass('open');
         $(this).parent().toggleClass('open');
     })
 
