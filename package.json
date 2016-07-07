@@ -6,9 +6,8 @@
   "scripts": {
     "dev": "node server/app.js",
     "build": "gulp",
-    "newpack": "gulp newpack",
     "gitbook": "sh bin/gitbook-build.sh",
-    "deploy": "npm run build && npm run newpack && npm run gitbook"
+    "deploy": "npm run build && npm run gitbook"
   },
   "repository": {
     "type": "git",
