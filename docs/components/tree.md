@@ -16,7 +16,8 @@ tree控件
 	<div id="treeTest" class="ztree" u-meta='{"multiSelect":"true","id":"tree2","data":"dataTable","type":"tree","idField":"id","pidField":"pid","nameField":"title","setting":"treeSetting"}'></div>
 <!-- </div> -->
        
-<script>$(document).ready(function () {
+</div>
+<div class="example-content"><script>$(document).ready(function () {
     var viewModel = {
     	treeSetting:{
     		view:{
@@ -75,8 +76,7 @@ var app = u.createApp();
     	viewModel.dataTable.removeAllRows();
     })
 });
-</script>
-</div>
+</script></div>
 <div class="examples-code"><pre><code>&lt;!-- &lt;div id="demoLeft"> -->
 	&lt;div id="treeTest" class="ztree" u-meta='{"multiSelect":"true","id":"tree2","data":"dataTable","type":"tree","idField":"id","pidField":"pid","nameField":"title","setting":"treeSetting"}'>&lt;/div>
 &lt;!-- &lt;/div> -->
