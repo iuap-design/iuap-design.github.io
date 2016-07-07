@@ -9,6 +9,60 @@ panel控件
 # 示例
 
 
+##head和foot具有的panel
+<div class="example-content"><style>.content{
+    background: #eceff1;
+    padding: 10px;
+}
+.panel-example{
+    width: 60%;
+    margin-left: 15%;
+    margin-top: 40px;
+}
+</style>
+<div class="panel-example">
+    <!-- Example Panel With All -->
+    <div class="u-panel u-panel-bordered">
+        <div class="u-panel-heading">
+          <h3 class="u-panel-title">Panel Heading</h3>
+        </div>
+        <div class="u-panel-body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce velit
+            tortor, dictum in gravida nec, aliquet non lorem. pellentesque.ipiscing
+            elit. Fusce velit tortor.</P>
+        </div>
+        <div class="u-panel-footer">Panel Footer</div>
+    </div>
+      <!-- End Example Panel With All -->
+</div>
+</div>
+<div class="examples-code"><pre><code>.content{
+    background: #eceff1;
+    padding: 10px;
+}
+.panel-example{
+    width: 60%;
+    margin-left: 15%;
+    margin-top: 40px;
+}</code></pre>
+</div>
+<div class="examples-code"><pre><code>&lt;div class="panel-example">
+    &lt;!-- Example Panel With All -->
+    &lt;div class="u-panel u-panel-bordered">
+        &lt;div class="u-panel-heading">
+          &lt;h3 class="u-panel-title">Panel Heading&lt;/h3>
+        &lt;/div>
+        &lt;div class="u-panel-body">
+          &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce velit
+            tortor, dictum in gravida nec, aliquet non lorem. pellentesque.ipiscing
+            elit. Fusce velit tortor.&lt;/P>
+        &lt;/div>
+        &lt;div class="u-panel-footer">Panel Footer&lt;/div>
+    &lt;/div>
+      &lt;!-- End Example Panel With All -->
+&lt;/div></code></pre>
+</div>
+
 ##只有body的panel
 <div class="example-content"><style>.content{
     background: #eceff1;
@@ -172,60 +226,6 @@ panel控件
 &lt;/div></code></pre>
 </div>
 
-##head和foot具有的panel
-<div class="example-content"><div class="panel-example">
-    <!-- Example Panel With All -->
-    <div class="u-panel u-panel-bordered">
-        <div class="u-panel-heading">
-          <h3 class="u-panel-title">Panel Heading</h3>
-        </div>
-        <div class="u-panel-body">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce velit
-            tortor, dictum in gravida nec, aliquet non lorem. pellentesque.ipiscing
-            elit. Fusce velit tortor.</P>
-        </div>
-        <div class="u-panel-footer">Panel Footer</div>
-    </div>
-      <!-- End Example Panel With All -->
-</div>
-<style>.content{
-    background: #eceff1;
-    padding: 10px;
-}
-.panel-example{
-    width: 60%;
-    margin-left: 15%;
-    margin-top: 40px;
-}
-</style>
-</div>
-<div class="examples-code"><pre><code>&lt;div class="panel-example">
-    &lt;!-- Example Panel With All -->
-    &lt;div class="u-panel u-panel-bordered">
-        &lt;div class="u-panel-heading">
-          &lt;h3 class="u-panel-title">Panel Heading&lt;/h3>
-        &lt;/div>
-        &lt;div class="u-panel-body">
-          &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce velit
-            tortor, dictum in gravida nec, aliquet non lorem. pellentesque.ipiscing
-            elit. Fusce velit tortor.&lt;/P>
-        &lt;/div>
-        &lt;div class="u-panel-footer">Panel Footer&lt;/div>
-    &lt;/div>
-      &lt;!-- End Example Panel With All -->
-&lt;/div></code></pre>
-</div>
-<div class="examples-code"><pre><code>.content{
-    background: #eceff1;
-    padding: 10px;
-}
-.panel-example{
-    width: 60%;
-    margin-left: 15%;
-    margin-top: 40px;
-}</code></pre>
-</div>
-
 
 <!--### 示例1
 
@@ -235,26 +235,3 @@ panel控件
 
 示例2说-->
 
-# API
-
-## 属性
-
-暂无
-<!--### 属性1
-
-属性1说明
-
-### 属性2
-
-属性2说明-->
-
-## 方法
-
-暂无
-<!--### 方法1
-
-方法1说明
-
-### 方法2
-
-方法2说明-->
