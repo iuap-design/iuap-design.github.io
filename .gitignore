@@ -22,6 +22,9 @@ dist/pages/plugins/
 dist/pages/custom/temp
 dist/pages/globalstyle/
 
+generate-uui/
+dist/download/
+
 # Folder config file
 Desktop.ini
 
@@ -108,9 +111,5 @@ docs/_book
 generate-uui
 
 # file
-dist/download/cooperating.zip
-dist/download/e-commerce.zip
-dist/download/eccm.zip
-dist/download/hr.zip
-dist/download/tenxcloud.zip
+dist/download/*
 
