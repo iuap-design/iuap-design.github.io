@@ -132,7 +132,7 @@
                             </ul>
                         </div>
                         <div class="u-col-3">
-                            <p>选项有图标的下拉菜单</p>
+                            <p>选项左边图标的下拉菜单</p>
                             <button class="u-button u-button-info u-menu-button " id="demo-menu9">
                                 <span>ICON</span><i class="fa fa-chevron-down"></i>
                             </button>
@@ -142,6 +142,19 @@
                                 <li class="u-menu-item"><a><i class="fa fa-remove"></i>remove</a></li>
                                 <li class="u-menu-item-break"></li>
                                 <li class="u-menu-item"><a><i class="fa fa-cog fa-fw"></i>setting</a></li>
+                            </ul>
+                        </div>
+                        <div class="u-col-3">
+                            <p>选项右边徽章的下拉菜单</p>
+                            <button class="u-button u-button-info u-menu-button " id="demo-menu91">
+                                <span>ICON</span><i class="fa fa-chevron-down"></i>
+                            </button>
+                            <ul class="u-menu" for="demo-menu91">
+                                <li class="u-menu-item"><a>reply<span class="u-badge u-badge-primary u-menu-item-badge" data-badge="6"></span></a></li>
+                                <li class="u-menu-item"><a>share<span class="u-badge u-badge-success u-menu-item-badge" data-badge="6"></span></a></li>
+                                <li class="u-menu-item"><a>remove<span class="u-badge u-badge-warning u-menu-item-badge" data-badge="6"></span></a></li>
+                                <li class="u-menu-item-break"></li>
+                                <li class="u-menu-item"><a>setting<span class="u-badge u-badge-dark u-menu-item-badge" data-badge="6"></span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -202,6 +215,94 @@
                                 <li class="u-menu-item-break"></li>
                                 <li class="u-menu-item"><a><i class="fa fa-cog fa-fw"></i>setting</a></li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="u-col-md-12">
+            <div class="u-widget  u-widget-right">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">分割的下拉菜单</h3>
+                </div>
+                <div class="u-widget-body">
+                    <div class="u-row">
+                        <div class="u-col-3">
+                            <div class="u-btn-group u-btn-group-split">
+                                <button class="u-button u-button-info  u-menu-button">split</button>
+                                <button class="u-button u-button-icon u-btn-group-split-icon dropdown-toggle u-button-info u-menu-button" id="demo-menu10">
+                                    <i class="fa fa-chevron-down"></i>
+                                </button>
+                                <ul class="u-menu " for="demo-menu10">
+                                    <li class="u-menu-item"><a><i class="fa fa-mail-reply"></i>reply</a></li>
+                                    <li class="u-menu-item"><a><i class="fa fa-share-alt"></i>share</a></li>
+                                    <li class="u-menu-item"><a><i class="fa fa-remove"></i>remove</a></li>
+                                    <li class="u-menu-item-break"></li>
+                                    <li class="u-menu-item-level"><a><i class="fa fa-cog fa-fw"></i>setting</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="u-col-3">
+                            <div class="u-btn-group u-btn-group-split">
+                                <button class="u-button u-button-success  u-menu-button">split</button>
+                                <button class="u-button u-button-icon u-btn-group-split-icon dropdown-toggle u-button-success u-menu-button" id="demo-menu21">
+                                    <i class="fa fa-chevron-down"></i>
+                                </button>
+                                <ul class="u-menu " for="demo-menu21">
+                                    <li class="u-menu-item"><a><i class="fa fa-mail-reply"></i>reply</a></li>
+                                    <li class="u-menu-item"><a><i class="fa fa-share-alt"></i>share</a></li>
+                                    <li class="u-menu-item"><a><i class="fa fa-remove"></i>remove</a></li>
+                                    <li class="u-menu-item-break"></li>
+                                    <li class="u-menu-item-level"><a><i class="fa fa-cog fa-fw"></i>setting</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="u-col-3">
+
+                        </div>
+                        <div class="u-col-3">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="u-col-md-12">
+            <div class="u-widget  u-widget-right">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">鼠标划过下拉菜单</h3>
+                </div>
+                <div class="u-widget-body">
+                    <div class="u-row">
+                        <div class="u-col-6">
+                            <p>默认失去焦点立刻关闭下拉菜单</p>
+                            <div class="u-btn-group">
+                                <button type="button" class="u-button u-button-info dropdown-toggle u-button-hover" id="exampleHoverDropdown2" >
+                                    失去焦点立刻关闭
+                                    <i class="fa fa-chevron-down"></i>
+                                </button>
+                                <ul class="u-dropdown-menu" aria-labelledby="exampleHoverDropdown2" role="menu">
+                                    <li ><a href="javascript:void(0)">Action</a></li>
+                                    <li ><a href="javascript:void(0)">Another action</a></li>
+                                    <li ><a href="javascript:void(0)">Something else here</a></li>
+                                    <li ><a href="javascript:void(0)">Separated link</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="u-col-6">
+                            <p>给按钮增加"time=1000"属性设置延迟关闭的时间</p>
+                            <div class="u-btn-group">
+                                <button type="button" class="u-button u-button-info dropdown-toggle u-button-hover" time="1000" id="exampleHoverDropdown1" >
+                                    失去焦点1000毫秒后关闭
+                                    <i class="fa fa-chevron-down"></i>
+                                </button>
+                                <ul class="u-dropdown-menu" aria-labelledby="exampleHoverDropdown1" role="menu">
+                                    <li ><a href="javascript:void(0)">Action</a></li>
+                                    <li ><a href="javascript:void(0)">Another action</a></li>
+                                    <li ><a href="javascript:void(0)">Something else here</a></li>
+                                    <li ><a href="javascript:void(0)">Separated link</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
