@@ -3525,15 +3525,7 @@
 		obj.$tr = $tr;
 		obj.colIndex = colIndex;
 		oThis.newEditObj = obj;
-		$(td).on('keydown',function(e){
-			var keyCode = e.keyCode;
-			var $this = $(this);
-			if(e.keyCode == 9 || e.keyCode == 13){// 回车或者tab
-				oThis.nextEditShow();
-				u.stopEvent(e);
-			}
-			
-		});
+		
 		if(editType == 'text'){
 			if(this.options.editType == 'default'){
 				td.innerHTML = '<input id="' + this.options.id + "_edit_field_" + field + '" type="text" value="' + value +'" field="' + field+'" style="width:100%;margin:0px;min-height:20px;font-size:12px;color:#444">';
@@ -5912,7 +5904,6 @@ u.GridAdapter = u.BaseAdapter.extend({
 				options:eOptions,
 				model: viewModel
 			});
-			//$.compManager.plugs.string(compDiv.find("input")[0],eOptions,viewModel);
 
 		}else if(eType == 'integer'){
 			compDiv = $('<div><input type="text" class="u-grid-edit-item-integer"></div>');
@@ -6097,6 +6088,10 @@ u.GridAdapter = u.BaseAdapter.extend({
 				model: viewModel
 			});
 		}
+		// input输入blur时显示下一个编辑控件
+		$('input',$(compDiv)).on('blur',function(e){
+			oThis.grid.nextEditShow();
+		});
 		if (comp && comp.dataAdapter){
 			comp = comp.dataAdapter;
 		}
