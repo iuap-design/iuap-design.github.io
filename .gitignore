@@ -108,9 +108,5 @@ docs/_book
 generate-uui
 
 # file
-dist/download/cooperating.zip
-dist/download/e-commerce.zip
-dist/download/eccm.zip
-dist/download/hr.zip
-dist/download/tenxcloud.zip
+dist/download/*
 

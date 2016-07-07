@@ -9,13 +9,6 @@ var git = require('gulp-git');
 
 var fileDir = fs.readdirSync('./');
 var uuiDir = fileDir.indexOf('generate-uui');
-var zipPath = [
-    './dist/website/cooperating/**/*',
-    './dist/website/e-commerce/**/*',
-    './dist/website/hr/**/*',
-    './dist/website/eccm/**/*',
-    './dist/website/tenxcloud/**/*'
-    ];
 
 /**
  * 编译导出
@@ -23,11 +16,6 @@ var zipPath = [
  * @return {[type]}     [description]
  */
 var compile = function( src ){
-    // clone仓库
-    if(uuiDir === -1){
-        git.clone('git@github.com:iuap-design/generate-uui.git');
-    }
-
     // 同步加载
     var paths = fs.readdirSync(src);
     paths.forEach(function( path ){
@@ -45,7 +33,7 @@ var compile = function( src ){
                     var isexist = fs.existsSync(dataPath + '.json');
                     // var data = require(dataPath + '.json');
                     if(filePath === './dist/index') {
-                        var data = require('./generate-uui/package.json');
+                        var data = require('./src/data/index.json');
                         var html = template(filePath, data);
                         return fs.writeFileSync( filePath + '.html', html); 
                     }
@@ -128,8 +116,6 @@ function zipFun(){
  * @return {[type]}   [description]
  */
 gulp.task('clone', function() {
-    
-    
     if(uuiDir === -1) {
         git.clone('git@github.com:iuap-design/generate-uui.git', function(err){
             if (err) {
