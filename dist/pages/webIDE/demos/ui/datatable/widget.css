@@ -1,0 +1,9 @@
+.table-checkbox{
+    top: -10px;
+}
+.table-fixedheader-body {
+    height: 350px;
+    overflow-y: auto;
+}
+
+
