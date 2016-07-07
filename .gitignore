@@ -22,6 +22,9 @@ dist/pages/plugins/
 dist/pages/custom/temp
 dist/pages/globalstyle/
 
+generate-uui/
+dist/download/
+
 # Folder config file
 Desktop.ini
 
