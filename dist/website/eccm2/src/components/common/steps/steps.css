@@ -28,11 +28,12 @@
 
 .ec-steps-processbar {
 	position: absolute;
-	top: 31px;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	background-color: #00bcd4;
+    	top: 33px;
+    	left: 0;
+    	width: 100%;
+    	height: 5px;
+    	border-radius: 2px;
+    	background-color: #00bcd4;
 }
 
 
