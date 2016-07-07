@@ -1,4 +1,4 @@
-# datatable控件
+# table控件
 
 常用于多列数据的展示
 
@@ -7,7 +7,7 @@
 为 `<table>` 增加基本样式--很少的内补`padding`
 
 # 示例
-##基础datatable
+##基础table
 也是最基本的表格
 表头与表体背景色区分，表体斑马背景区分。表格整体具有边框
 
@@ -45,7 +45,7 @@
 &lt;/table></code></pre>
 </div>
 
-##常用datatable
+##常用table
 父级`<table>`添加通用`.u-table`
 
 <div class="example-content"><div class="example table-responsive">
@@ -113,7 +113,7 @@
 &lt;/div></code></pre>
 </div>
 
-##边框datatable
+##边框table
 
 
 div上添加class名table-responsive
@@ -202,7 +202,7 @@ table上添加class名u-table-bordered
 
 
 
-##hove背景datatable
+##hove背景table
 
 
 `<div>`上添加`.table-responsive`
@@ -287,7 +287,7 @@ table上添加class名u-table-bordered
 
 
 
-##斑马datatable
+##斑马table
 
 
 表体斑马背景区分两行
