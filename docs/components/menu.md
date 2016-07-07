@@ -1,11 +1,27 @@
 # menu控件
 
+# 如何使用
+
+暂无
+
 # 示例
 
 
-##左menu
+##基础label
 
-<div class="example-content"><!-- Left aligned menu below button -->
+不同背景具有相应的class名
+例如 u-tab-default 默认灰色
+<div class="example-content"><style>.margin-r-10{
+    margin-right: 10px; 
+}
+.example .u-message{
+    position: inherit;
+}
+.example{
+	width: 300px;
+}
+</style>
+<!-- Left aligned menu below button -->
 <button id="demo-menu-lower-left" class="u-button floating u-button-icon">
     <i class="fa fa-ellipsis-v"></i>
 </button>
@@ -17,12 +33,15 @@
     <li class="u-menu-item">审核</li>
 </ul>
 </div>
-<div class="example-content">
-<style>
-.example-content{
-    padding-left: 60px;
+<div class="examples-code"><pre><code>.margin-r-10{
+    margin-right: 10px; 
 }
-</style>
+.example .u-message{
+    position: inherit;
+}
+.example{
+	width: 300px;
+}</code></pre>
 </div>
 <div class="examples-code"><pre><code>&lt;!-- Left aligned menu below button -->
 &lt;button id="demo-menu-lower-left" class="u-button floating u-button-icon">
@@ -36,21 +55,22 @@
     &lt;li class="u-menu-item">审核&lt;/li>
 &lt;/ul></code></pre>
 </div>
-<div class="examples-code"><pre><code>
-.example-content{
-    padding-left: 60px;
-}
-</code></pre>
-</div>
 
-##右menu
+##基础label
 
-<div class="example-content"><style>
-.example-content{
-    padding-left: 60px;
+不同背景具有相应的class名
+例如 u-tab-default 默认灰色
+<div class="example-content"><style>.margin-r-10{
+    margin-right: 10px; 
 }
-</style></div>
-<div class="example-content"><!-- right aligned menu below button -->
+.example .u-message{
+    position: inherit;
+}
+.example{
+	width: 300px;
+}
+</style>
+<!-- right aligned menu below button -->
 <button id="demo-menu-lower-right" class="u-button floating u-button-icon">
     <i class="fa fa-ellipsis-v"></i>
 </button>右对齐
@@ -61,11 +81,15 @@
     <li class="u-menu-item">审核</li>
 </ul>
 </div>
-<div class="examples-code"><pre><code>
-.example-content{
-    padding-left: 60px;
+<div class="examples-code"><pre><code>.margin-r-10{
+    margin-right: 10px; 
 }
-</code></pre>
+.example .u-message{
+    position: inherit;
+}
+.example{
+	width: 300px;
+}</code></pre>
 </div>
 <div class="examples-code"><pre><code>&lt;!-- right aligned menu below button -->
 &lt;button id="demo-menu-lower-right" class="u-button floating u-button-icon">
@@ -79,5 +103,13 @@
 &lt;/ul></code></pre>
 </div>
 
+
+<!--### 示例1
+
+示例1说明
+
+### 示例2
+
+示例2说-->
 
 

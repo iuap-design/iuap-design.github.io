@@ -27,8 +27,8 @@ h3{
     width: 104px;
 }
 
-</style></div>
-<div class="example-content">
+</style>
+
 <label class="u-switch u-switch-info" for="switch-info-unchecked">
     <input type="checkbox" id="switch-info-unchecked" class="u-switch-input">
     <span class="u-switch-label"></span>
@@ -67,9 +67,9 @@ h3{
 &lt;/label></code></pre>
 </div>
 
-##不可以用的switch
+##不同尺寸的switch
 
-在 `<input>` 添加`disabled`属性
+`.u-switch-lg` `.u-switch-default` `.u-switch-sm`提供了额外可供选择的尺寸
 <div class="example-content"><style>
 .example{
     padding: 0 10px 20px;
@@ -85,16 +85,22 @@ h3{
     width: 104px;
 }
 
-</style></div>
-<div class="example-content"><div class="example">
-    <label class="u-switch u-switch-info" for="switch-info-disable">
-        <input type="checkbox" id="switch-info-disable" class="u-switch-input" disabled>
+</style>
+<div class="switch-example">
+    <label class="u-switch u-switch-primary u-switch-lg" for="switch-primary-lg">
+        <input type="checkbox" id="switch-primary-lg" class="u-switch-input" checked="true">
         <span class="u-switch-label"></span>
     </label>
 </div>
-<div class="example">
-    <label class="u-switch u-switch-info" for="switch-info-checkdisalbed">
-        <input type="checkbox" id="switch-info-checkdisalbed" class="u-switch-input" checked disabled>
+<div class="switch-example">
+    <label class="u-switch u-switch-primary u-switch-default" for="switch-primary-default">
+        <input type="checkbox" id="switch-primary-default" class="u-switch-input" checked="true">
+        <span class="u-switch-label"></span>
+    </label>
+</div>
+<div class="switch-example">
+    <label class="u-switch u-switch-primary u-switch-sm" for="switch-primary-sm">
+        <input type="checkbox" id="switch-primary-sm" class="u-switch-input" checked="true">
         <span class="u-switch-label"></span>
     </label>
 </div>
@@ -115,6 +121,58 @@ h3{
 }
 </code></pre>
 </div>
+<div class="examples-code"><pre><code>&lt;div class="switch-example">
+    &lt;label class="u-switch u-switch-primary u-switch-lg" for="switch-primary-lg">
+        &lt;input type="checkbox" id="switch-primary-lg" class="u-switch-input" checked="true">
+        &lt;span class="u-switch-label">&lt;/span>
+    &lt;/label>
+&lt;/div>
+&lt;div class="switch-example">
+    &lt;label class="u-switch u-switch-primary u-switch-default" for="switch-primary-default">
+        &lt;input type="checkbox" id="switch-primary-default" class="u-switch-input" checked="true">
+        &lt;span class="u-switch-label">&lt;/span>
+    &lt;/label>
+&lt;/div>
+&lt;div class="switch-example">
+    &lt;label class="u-switch u-switch-primary u-switch-sm" for="switch-primary-sm">
+        &lt;input type="checkbox" id="switch-primary-sm" class="u-switch-input" checked="true">
+        &lt;span class="u-switch-label">&lt;/span>
+    &lt;/label>
+&lt;/div></code></pre>
+</div>
+
+##不可以用的switch
+
+在 `<input>` 添加`disabled`属性
+<div class="example-content"><div class="example">
+    <label class="u-switch u-switch-info" for="switch-info-disable">
+        <input type="checkbox" id="switch-info-disable" class="u-switch-input" disabled>
+        <span class="u-switch-label"></span>
+    </label>
+</div>
+<div class="example">
+    <label class="u-switch u-switch-info" for="switch-info-checkdisalbed">
+        <input type="checkbox" id="switch-info-checkdisalbed" class="u-switch-input" checked disabled>
+        <span class="u-switch-label"></span>
+    </label>
+</div>
+<style>
+.example{
+    padding: 0 10px 20px;
+    float: left;
+}
+h3{
+    clear: both;
+    padding-top: 10px;
+}
+.switch-example{    
+    height: 57px;
+    float: left;
+    width: 104px;
+}
+
+</style>
+</div>
 <div class="examples-code"><pre><code>&lt;div class="example">
     &lt;label class="u-switch u-switch-info" for="switch-info-disable">
         &lt;input type="checkbox" id="switch-info-disable" class="u-switch-input" disabled>
@@ -127,6 +185,22 @@ h3{
         &lt;span class="u-switch-label">&lt;/span>
     &lt;/label>
 &lt;/div></code></pre>
+</div>
+<div class="examples-code"><pre><code>
+.example{
+    padding: 0 10px 20px;
+    float: left;
+}
+h3{
+    clear: both;
+    padding-top: 10px;
+}
+.switch-example{    
+    height: 57px;
+    float: left;
+    width: 104px;
+}
+</code></pre>
 </div>
 
 ##不同颜色的switch
@@ -148,8 +222,8 @@ h3{
     width: 104px;
 }
 
-</style></div>
-<div class="example-content"><div class="example">
+</style>
+<div class="example">
     <label class="u-switch u-switch-primary" for="switch-primary">
         <input type="checkbox" id="switch-primary" class="u-switch-input" checked="true">
         <span class="u-switch-label"></span>
@@ -251,80 +325,6 @@ h3{
     &lt;/label>
 &lt;/div>
 
-&lt;/div></code></pre>
-</div>
-
-##不同尺寸的switch
-
-`.u-switch-lg` `.u-switch-default` `.u-switch-sm`提供了额外可供选择的尺寸
-<div class="example-content"><style>
-.example{
-    padding: 0 10px 20px;
-    float: left;
-}
-h3{
-    clear: both;
-    padding-top: 10px;
-}
-.switch-example{    
-    height: 57px;
-    float: left;
-    width: 104px;
-}
-
-</style></div>
-<div class="example-content"><div class="switch-example">
-    <label class="u-switch u-switch-primary u-switch-lg" for="switch-primary-lg">
-        <input type="checkbox" id="switch-primary-lg" class="u-switch-input" checked="true">
-        <span class="u-switch-label"></span>
-    </label>
-</div>
-<div class="switch-example">
-    <label class="u-switch u-switch-primary u-switch-default" for="switch-primary-default">
-        <input type="checkbox" id="switch-primary-default" class="u-switch-input" checked="true">
-        <span class="u-switch-label"></span>
-    </label>
-</div>
-<div class="switch-example">
-    <label class="u-switch u-switch-primary u-switch-sm" for="switch-primary-sm">
-        <input type="checkbox" id="switch-primary-sm" class="u-switch-input" checked="true">
-        <span class="u-switch-label"></span>
-    </label>
-</div>
-</div>
-<div class="examples-code"><pre><code>
-.example{
-    padding: 0 10px 20px;
-    float: left;
-}
-h3{
-    clear: both;
-    padding-top: 10px;
-}
-.switch-example{    
-    height: 57px;
-    float: left;
-    width: 104px;
-}
-</code></pre>
-</div>
-<div class="examples-code"><pre><code>&lt;div class="switch-example">
-    &lt;label class="u-switch u-switch-primary u-switch-lg" for="switch-primary-lg">
-        &lt;input type="checkbox" id="switch-primary-lg" class="u-switch-input" checked="true">
-        &lt;span class="u-switch-label">&lt;/span>
-    &lt;/label>
-&lt;/div>
-&lt;div class="switch-example">
-    &lt;label class="u-switch u-switch-primary u-switch-default" for="switch-primary-default">
-        &lt;input type="checkbox" id="switch-primary-default" class="u-switch-input" checked="true">
-        &lt;span class="u-switch-label">&lt;/span>
-    &lt;/label>
-&lt;/div>
-&lt;div class="switch-example">
-    &lt;label class="u-switch u-switch-primary u-switch-sm" for="switch-primary-sm">
-        &lt;input type="checkbox" id="switch-primary-sm" class="u-switch-input" checked="true">
-        &lt;span class="u-switch-label">&lt;/span>
-    &lt;/label>
 &lt;/div></code></pre>
 </div>
 

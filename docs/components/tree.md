@@ -12,21 +12,18 @@ tree控件
 ##基础Tree
 
 用于多层目录的嵌套结构的数据。
-<style>/*#demoLeft{
-	width:40%;
-	border: 1px solid #EEEEEE;
-	min-height: 200px;
-}*/
-</style>
-<div class="jstag" style="display: none">
-$(document).ready(function () {
+<div class="example-content"><!-- <div id="demoLeft"> -->
+	<div id="treeTest" class="ztree" u-meta='{"multiSelect":"true","id":"tree2","data":"dataTable","type":"tree","idField":"id","pidField":"pid","nameField":"title","setting":"treeSetting"}'></div>
+<!-- </div> -->
+       
+<script>$(document).ready(function () {
     var viewModel = {
-        treeSetting:{
-            view:{
-                showLine:false,
+    	treeSetting:{
+    		view:{
+    			showLine:false,
                 multiSelect:true
-            }
-        },
+    		}
+    	},
         dataTable: new u.DataTable({
             meta: {
                 'id': {
@@ -36,84 +33,23 @@ $(document).ready(function () {
                     'value':""
                 },
                 'title':{
-                    'value':""
+                	'value':""
                 }
             }
         })
     };
 var app = u.createApp();
     app.init(viewModel);
-    data = {
-    "pageIndex": 1,
-    "pageSize": 10,
-    "rows": [
-    {
-      "status": "nrm",
-      "data": {
-      "id": "01",
-      "pid": "root",
-      "title": "f1"
-      }
-    },
-    {
-      "status": "nrm",
-      "data": {
-      "id": "02",
-      "pid": "root",
-      "title": "f2"
-      }
-    },
-    {
-      "status": "nrm",
-      "data": {
-      "id": "03",
-      "pid": "root",
-      "title": "f3"
-      }
-    },
-    {
-      "status": "nrm",
-      "data": {
-      "id": "101",
-      "pid": "01",
-      "title": "f11"
-      }
-    },
-    {
-      "status": "nrm",
-      "data": {
-      "id": "102",
-      "pid": "01",
-      "title": "f12"
-      }
-    },
-    {
-      "status": "nrm",
-      "data": {
-      "id": "201",
-      "pid": "02",
-      "title": "f21"
-      }
-    },
-    {
-      "status": "nrm",
-      "data": {
-      "id": "202",
-      "pid": "02",
-      "title": "f22"
-      }
-    },
-    {
-      "status": "nrm",
-      "data": {
-      "id": "221",
-      "pid": "202",
-      "title": "f221"
-      }
-    }
-    ]
-  };
-viewModel.dataTable.setData(data);
+    
+    $.ajax({
+        type: 'GET',
+        url: 'treeJson.json',
+        dataType: 'JSON',
+        async: true,
+        success: function (data) {
+            viewModel.dataTable.setData(data);
+        }
+    });
     
     window.app=app;
     $("#addOneRow1").on("click",function(){
@@ -131,26 +67,20 @@ viewModel.dataTable.setData(data);
         viewModel.dataTable.addRow(r);
     });
     $("#deleteOneRow").on("click",function(){
-        var index=viewModel.dataTable.getSelectedIndex();
-        //console.log(index);
-        viewModel.dataTable.removeRow(index)
+    	var index=viewModel.dataTable.getSelectedIndex();
+    	//console.log(index);
+    	viewModel.dataTable.removeRow(index)
     });
     $("#deleteAllRows").on("click",function(){
-        viewModel.dataTable.removeAllRows();
+    	viewModel.dataTable.removeAllRows();
     })
-});   
+});
+</script>
 </div>
-
-<div class="example-content"><!-- <div id="demoLeft"> -->
-	<div id="treeTest" class="ztree" u-meta='{"multiSelect":"true","id":"tree2","data":"dataTable","type":"tree","idField":"id","pidField":"pid","nameField":"title","setting":"treeSetting"}'></div>
-<!-- </div> -->
-       
-</div>
-<div class="examples-code"><pre><code>/*#demoLeft{
-	width:40%;
-	border: 1px solid #EEEEEE;
-	min-height: 200px;
-}*/</code></pre>
+<div class="examples-code"><pre><code>&lt;!-- &lt;div id="demoLeft"> -->
+	&lt;div id="treeTest" class="ztree" u-meta='{"multiSelect":"true","id":"tree2","data":"dataTable","type":"tree","idField":"id","pidField":"pid","nameField":"title","setting":"treeSetting"}'>&lt;/div>
+&lt;!-- &lt;/div> -->
+       </code></pre>
 </div>
 <div class="examples-code"><pre><code>$(document).ready(function () {
     var viewModel = {
@@ -176,77 +106,16 @@ viewModel.dataTable.setData(data);
     };
 var app = u.createApp();
     app.init(viewModel);
-    data = {
-    "pageIndex": 1,
-    "pageSize": 10,
-    "rows": [
-    {
-      "status": "nrm",
-      "data": {
-      "id": "01",
-      "pid": "root",
-      "title": "f1"
-      }
-    },
-    {
-      "status": "nrm",
-      "data": {
-      "id": "02",
-      "pid": "root",
-      "title": "f2"
-      }
-    },
-    {
-      "status": "nrm",
-      "data": {
-      "id": "03",
-      "pid": "root",
-      "title": "f3"
-      }
-    },
-    {
-      "status": "nrm",
-      "data": {
-      "id": "101",
-      "pid": "01",
-      "title": "f11"
-      }
-    },
-    {
-      "status": "nrm",
-      "data": {
-      "id": "102",
-      "pid": "01",
-      "title": "f12"
-      }
-    },
-    {
-      "status": "nrm",
-      "data": {
-      "id": "201",
-      "pid": "02",
-      "title": "f21"
-      }
-    },
-    {
-      "status": "nrm",
-      "data": {
-      "id": "202",
-      "pid": "02",
-      "title": "f22"
-      }
-    },
-    {
-      "status": "nrm",
-      "data": {
-      "id": "221",
-      "pid": "202",
-      "title": "f221"
-      }
-    }
-    ]
-  };
-viewModel.dataTable.setData(data);
+    
+    $.ajax({
+        type: 'GET',
+        url: 'treeJson.json',
+        dataType: 'JSON',
+        async: true,
+        success: function (data) {
+            viewModel.dataTable.setData(data);
+        }
+    });
     
     window.app=app;
     $("#addOneRow1").on("click",function(){
@@ -272,11 +141,6 @@ viewModel.dataTable.setData(data);
     	viewModel.dataTable.removeAllRows();
     })
 });</code></pre>
-</div>
-<div class="examples-code"><pre><code>&lt;!-- &lt;div id="demoLeft"> -->
-	&lt;div id="treeTest" class="ztree" u-meta='{"multiSelect":"true","id":"tree2","data":"dataTable","type":"tree","idField":"id","pidField":"pid","nameField":"title","setting":"treeSetting"}'>&lt;/div>
-&lt;!-- &lt;/div> -->
-       </code></pre>
 </div>
 
 
