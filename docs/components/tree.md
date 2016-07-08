@@ -12,6 +12,12 @@ tree控件
 ##基础Tree
 
 用于多层目录的嵌套结构的数据。
+<div class="example-content"><!-- <div id="demoLeft"> -->
+	<div id="treeTest" class="ztree" u-meta='{"multiSelect":"true","id":"tree2","data":"dataTable","type":"tree","idField":"id","pidField":"pid","nameField":"title","setting":"treeSetting"}'></div>
+<!-- </div> -->
+       
+</div>
+>>>>>>> 831297a21cb40bc5a1afdec2b13b5a096c646830
 <div class="example-content"><script>$(document).ready(function () {
     var viewModel = {
     	treeSetting:{
@@ -116,11 +122,19 @@ var app = u.createApp();
     	viewModel.dataTable.removeAllRows();
     })
 });
+<<<<<<< HEAD
 </script>
 <!-- <div id="demoLeft"> -->
 	<div id="treeTest" class="ztree" u-meta='{"multiSelect":"true","id":"tree2","data":"dataTable","type":"tree","idField":"id","pidField":"pid","nameField":"title","setting":"treeSetting"}'></div>
 <!-- </div> -->
        
+=======
+</script></div>
+<div class="examples-code"><pre><code>&lt;!-- &lt;div id="demoLeft"> -->
+	&lt;div id="treeTest" class="ztree" u-meta='{"multiSelect":"true","id":"tree2","data":"dataTable","type":"tree","idField":"id","pidField":"pid","nameField":"title","setting":"treeSetting"}'>&lt;/div>
+&lt;!-- &lt;/div> -->
+       </code></pre>
+>>>>>>> 831297a21cb40bc5a1afdec2b13b5a096c646830
 </div>
 <div class="examples-code"><pre><code>$(document).ready(function () {
     var viewModel = {
