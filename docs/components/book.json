@@ -20,8 +20,8 @@
 	],
 	"pluginsConfig": {
 		"iuap-design": {
-			"title": "CSS 组件",
-			"desc": "包含30+个CSS组件，助力快速产出易用美观的界面"
+			"title": "组件",
+			"desc": "提供丰富的组件，助力快速产出易用美观的界面"
 		}
 	}
 }
