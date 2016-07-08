@@ -9,9 +9,9 @@
 # 示例
 
 
-##所个star的Rating
+##基础Rating
 
-通过在html上 的属性 data-number值改变数量
+常用于评级评分
 <div class="example-content"><style>.content{
     padding: 10px;
 }
@@ -23,8 +23,10 @@
     width: 33.3%;
     float: left;
 }
-</style>
-<script>(function(document, window, $) {
+</style></div>
+<div class="example-content"> <div class="u-rating" data-score="3" data-plugin="rating"></div>
+</div>
+<div class="example-content"><script>(function(document, window, $) {
     'use strict';
     
       var  defaults= {
@@ -50,11 +52,7 @@
       // }
     // });
   })(document, window, jQuery);
-</script>
-<div class="example">
-      <div class="u-rating" data-number="10" data-plugin="rating"></div>
-  </div>
-</div>
+</script></div>
 <div class="examples-code"><pre><code>.content{
     padding: 10px;
 }
@@ -66,6 +64,8 @@
     width: 33.3%;
     float: left;
 }</code></pre>
+</div>
+<div class="examples-code"><pre><code> &lt;div class="u-rating" data-score="3" data-plugin="rating">&lt;/div></code></pre>
 </div>
 <div class="examples-code"><pre><code>(function(document, window, $) {
     'use strict';
@@ -94,14 +94,10 @@
     // });
   })(document, window, jQuery);</code></pre>
 </div>
-<div class="examples-code"><pre><code>&lt;div class="example">
-      &lt;div class="u-rating" data-number="10" data-plugin="rating">&lt;/div>
-  &lt;/div></code></pre>
-</div>
 
-##基础Rating
+##所个star的Rating
 
-常用于评级评分
+通过在html上 的属性 data-number值改变数量
 <div class="example-content"><style>.content{
     padding: 10px;
 }
@@ -113,9 +109,12 @@
     width: 33.3%;
     float: left;
 }
-</style>
- <div class="u-rating" data-score="3" data-plugin="rating"></div>
-<script>(function(document, window, $) {
+</style></div>
+<div class="example-content"><div class="example">
+      <div class="u-rating" data-number="10" data-plugin="rating"></div>
+  </div>
+</div>
+<div class="example-content"><script>(function(document, window, $) {
     'use strict';
     
       var  defaults= {
@@ -141,8 +140,7 @@
       // }
     // });
   })(document, window, jQuery);
-</script>
-</div>
+</script></div>
 <div class="examples-code"><pre><code>.content{
     padding: 10px;
 }
@@ -155,7 +153,9 @@
     float: left;
 }</code></pre>
 </div>
-<div class="examples-code"><pre><code> &lt;div class="u-rating" data-score="3" data-plugin="rating">&lt;/div></code></pre>
+<div class="examples-code"><pre><code>&lt;div class="example">
+      &lt;div class="u-rating" data-number="10" data-plugin="rating">&lt;/div>
+  &lt;/div></code></pre>
 </div>
 <div class="examples-code"><pre><code>(function(document, window, $) {
     'use strict';
@@ -199,8 +199,20 @@ u-rating-lg u-rating-sm供尺寸的选择
     width: 33.3%;
     float: left;
 }
-</style>
-<script>(function(document, window, $) {
+</style></div>
+<div class="example-content"><div class="example">
+    <div class="margin-bottom-10">
+        <div class="u-rating u-rating-sm" data-score="4" data-plugin="rating"></div>
+    </div>
+    <div class="margin-bottom-10">
+        <div class="u-rating" data-score="4" data-plugin="rating"></div>
+    </div>
+    <div>
+        <div class="u-rating u-rating-lg" data-score="4" data-plugin="rating"></div>
+    </div>
+</div>
+</div>
+<div class="example-content"><script>(function(document, window, $) {
     'use strict';
     
       var  defaults= {
@@ -226,19 +238,7 @@ u-rating-lg u-rating-sm供尺寸的选择
       // }
     // });
   })(document, window, jQuery);
-</script>
-<div class="example">
-    <div class="margin-bottom-10">
-        <div class="u-rating u-rating-sm" data-score="4" data-plugin="rating"></div>
-    </div>
-    <div class="margin-bottom-10">
-        <div class="u-rating" data-score="4" data-plugin="rating"></div>
-    </div>
-    <div>
-        <div class="u-rating u-rating-lg" data-score="4" data-plugin="rating"></div>
-    </div>
-</div>
-</div>
+</script></div>
 <div class="examples-code"><pre><code>.content{
     padding: 10px;
 }
@@ -250,6 +250,18 @@ u-rating-lg u-rating-sm供尺寸的选择
     width: 33.3%;
     float: left;
 }</code></pre>
+</div>
+<div class="examples-code"><pre><code>&lt;div class="example">
+    &lt;div class="margin-bottom-10">
+        &lt;div class="u-rating u-rating-sm" data-score="4" data-plugin="rating">&lt;/div>
+    &lt;/div>
+    &lt;div class="margin-bottom-10">
+        &lt;div class="u-rating" data-score="4" data-plugin="rating">&lt;/div>
+    &lt;/div>
+    &lt;div>
+        &lt;div class="u-rating u-rating-lg" data-score="4" data-plugin="rating">&lt;/div>
+    &lt;/div>
+&lt;/div></code></pre>
 </div>
 <div class="examples-code"><pre><code>(function(document, window, $) {
     'use strict';
@@ -277,18 +289,6 @@ u-rating-lg u-rating-sm供尺寸的选择
       // }
     // });
   })(document, window, jQuery);</code></pre>
-</div>
-<div class="examples-code"><pre><code>&lt;div class="example">
-    &lt;div class="margin-bottom-10">
-        &lt;div class="u-rating u-rating-sm" data-score="4" data-plugin="rating">&lt;/div>
-    &lt;/div>
-    &lt;div class="margin-bottom-10">
-        &lt;div class="u-rating" data-score="4" data-plugin="rating">&lt;/div>
-    &lt;/div>
-    &lt;div>
-        &lt;div class="u-rating u-rating-lg" data-score="4" data-plugin="rating">&lt;/div>
-    &lt;/div>
-&lt;/div></code></pre>
 </div>
 
 
