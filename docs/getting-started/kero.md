@@ -17,7 +17,7 @@
 * 具有事件触发器，把数据变化触发出去，供开发者监听使用。
 
 ## 2、快速上手
-[控件使用说明](https://github.com/iuap-design/grid/blob/master/docs/grid.md)
+[控件使用说明](http://design.yyuap.com/dist/pages/kero/index.html)
 
 ## 3、开发说明
 
