@@ -130,6 +130,36 @@
 	        "download": "/dist/download/cooperating.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","建筑"]
+	    },{
+	        "title": "登录模板",
+	        "id": "0031",
+	        "decription": "简易网页登录",
+	        "content_img": "img/main_14.png",
+	        "phone_img": "img/phone_3.jpg",
+	        "url": "../../website/login1/index-left.html",
+	        "download": "/dist/download/login1.zip",
+	        "using_times": "228",
+	        "for_area": ["互联网","建筑"]
+	    },{
+	        "title": "登录模板",
+	        "id": "0031",
+	        "decription": "简易网页登录",
+	        "content_img": "img/main_15.png",
+	        "phone_img": "img/phone_3.jpg",
+	        "url": "../../website/login1/index-center.html",
+	        "download": "/dist/download/login1.zip",
+	        "using_times": "228",
+	        "for_area": ["互联网","建筑"]
+	    },{
+	        "title": "登录模板",
+	        "id": "0031",
+	        "decription": "简易网页登录",
+	        "content_img": "img/main_16.png",
+	        "phone_img": "img/phone_3.jpg",
+	        "url": "../../website/login1/index-center.html",
+	        "download": "/dist/download/login1.zip",
+	        "using_times": "228",
+	        "for_area": ["互联网","建筑"]
 	    }
 	]
 
