@@ -60,29 +60,40 @@ iuap-design框架将提供40+个控件和30+个插件，[查看详细开发文�
 提供的资源目录结构
 
 ```
-dist
-│
-├─css
-│      font-awesome.css
-│      u-extend.css
-│      u-extend.min.css
-│      u.css
-│      u.min.css
-│
-├─fonts
-│      fontawesome-webfont.eot
-│      fontawesome-webfont.svg
-│      fontawesome-webfont.ttf
-│      fontawesome-webfont.woff
-│      fontawesome-webfont.woff2
-│      FontAwesome.otf
-│
-└─js
-        u-polyfill.js
-        u-polyfill.min.js
-        u-ui.js
-        u-ui.min.js
-
+.
+├── css
+│   ├── font-awesome.css
+│   ├── font-awesome.min.css
+│   ├── grid.css
+│   ├── grid.min.css
+│   ├── tree.css
+│   ├── tree.min.css
+│   ├── u-extend.css
+│   ├── u-extend.min.css
+│   ├── u.css
+│   └── u.min.css
+├── fonts
+│   ├── FontAwesome.otf
+│   ├── fontawesome-webfont.eot
+│   ├── fontawesome-webfont.svg
+│   ├── fontawesome-webfont.ttf
+│   ├── fontawesome-webfont.woff
+│   └── fontawesome-webfont.woff2
+└── js
+    ├── u-date.js
+    ├── u-date.min.js
+    ├── u-grid.js
+    ├── u-grid.min.js
+    ├── u-model.js
+    ├── u-model.min.js
+    ├── u-polyfill.js
+    ├── u-polyfill.min.js
+    ├── u-tree.js
+    ├── u-tree.min.js
+    ├── u-ui.js
+    ├── u-ui.min.js
+    ├── u.js
+    └── u.min.js
 
 ```
 
