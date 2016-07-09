@@ -234,10 +234,10 @@
     }, {
         "name": "订单",
         "sub": [{
-            "name": "订单列表",
+            "name": "订单列表UI设计",
             "url": "demos/patterns/order/list"
         }, {
-            "name": "订单详细",
+            "name": "订单详细UI设计",
             "url": "demos/patterns/order/detail"
         }]
     }]
