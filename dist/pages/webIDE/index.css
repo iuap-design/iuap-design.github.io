@@ -360,3 +360,8 @@ a.demo-drawer-nav-brand:focus, a.demo-drawer-nav-brand:hover {
         padding: 0px 5px 0px 5px;
     }
 }
+
+
+.u-navlayout-drawer .u-nav .u-nav-link-open + .u-nav-sub {
+    max-height: 1200px;
+}
