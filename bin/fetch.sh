@@ -3,7 +3,7 @@
 cdir=`pwd`
 
 prodName=(
-  "iuap-design"
+  "neoui"
   "kero"
   "datetimepicker"
   "tree"
