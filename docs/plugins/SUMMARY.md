@@ -3,7 +3,6 @@
 * [下拉框 combobox](combobox.md)
 * [日期 date](date.md)
 * [消息框 dialog](dialog.md)
-* [栅格布局 gridlayout](gridlayout.md)
 * [Loading loading](loading.md)
 * [月份选择 month](month.md)
 * [时分秒 time](time.md)
