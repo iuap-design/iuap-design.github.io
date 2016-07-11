@@ -89,6 +89,9 @@
         }, {
             "name": "工具提示",
             "url": "demos/ui/tooltip"
+        }, {
+            "name": "图片",
+            "url": "demos/ui/image"
         }
     ]
 }, {
@@ -234,10 +237,10 @@
     }, {
         "name": "订单",
         "sub": [{
-            "name": "订单列表UI设计",
+            "name": "订单列表",
             "url": "demos/patterns/order/list"
         }, {
-            "name": "订单详细UI设计",
+            "name": "订单详细",
             "url": "demos/patterns/order/detail"
         }]
     }]
