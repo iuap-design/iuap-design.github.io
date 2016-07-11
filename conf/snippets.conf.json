@@ -3,7 +3,6 @@
     "sub": [{
             "name": "消息框",
             "url": "demos/ui/dialog"
-            
         }, {
             "name": "下拉框",
             "url": "demos/ui/combobox"
@@ -54,10 +53,7 @@
         }, {
             "name": "加载条",
             "url": "demos/ui/loading"
-        },
-
-
-        {
+        }, {
             "name": "消息提示",
             "url": "demos/ui/message"
         }, {
@@ -66,9 +62,7 @@
         }, {
             "name": "页签",
             "url": "demos/ui/tabs"
-        },
-
-        {
+        }, {
             "name": "导航菜单",
             "url": "demos/ui/navmenu"
         }, {
@@ -89,6 +83,9 @@
         }, {
             "name": "工具提示",
             "url": "demos/ui/tooltip"
+        }, {
+            "name": "图片",
+            "url": "demos/ui/image"
         }
     ]
 }, {
@@ -234,10 +231,10 @@
     }, {
         "name": "订单",
         "sub": [{
-            "name": "订单列表UI设计",
+            "name": "订单列表",
             "url": "demos/patterns/order/list"
         }, {
-            "name": "订单详细UI设计",
+            "name": "订单详细",
             "url": "demos/patterns/order/detail"
         }]
     }]
