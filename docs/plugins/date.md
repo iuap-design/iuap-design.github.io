@@ -1,32 +1,40 @@
-# 日期选择(datepicker)
+# date插件
+
 用户可以自定义日期类型，返回日期默认是年月日，也可以返回年月日时分秒。
-##如何使用
-1、定义样式为“u-datepicker”的div元素，如果需要显示时分秒，需要在div中加上time样式。
-	
-	<div class='u-datepicker time'>
-        
-    </div>
-2、在第一步创建的div元素中添加样式为“u-input”的输入框。用户选择的日期将会存放在这里。
 
-	<div class='u-datepicker time'>
-        <input class="u-input" type="text">
-    </div>
+# 插件依赖
 
-##具体示例
-
-![](../../static/img/plugins/date1.png)
-
-	<div class='u-datepicker'>
-        <input class="u-input" type="text">
-    </div>
+首先依赖于 http://design.yyuap.com/static/uui/3.0.6/js/u.js
 
 
+再引入js: http://design.yyuap.com/static/uui/3.0.6/js/u-date.js
 
-[试一试](http://iuap.yonyou.com/fe/demo/#/demos/ui/datetime/date "试一试")
+# 用法
+
+定义样式为`u-datepicker`的div父元素，包裹类`u-input`的input
+
+```
+<div class='u-datepicker'>
+    <input class="u-input" type="text">
+</div>
+
+```
+
+js会根据`u-datepicker`来定位dom，然后绑定事件。
+
+
+# 示例
 
 
 
-
+<div class="example-content"><div class='u-datepicker'>
+    <input class="u-input" type="text">
+</div>
+</div>
+<div class="examples-code"><pre><code>&lt;div class='u-datepicker'>
+    &lt;input class="u-input" type="text">
+&lt;/div></code></pre>
+</div>
 
 
 

@@ -1,25 +1,57 @@
-# 年份选择(year)
-点击输入框时，会弹出年份卡片，选择的年份会显示在输入框中。
-##如何使用
-1、定义样式为“u-year”的div元素。
-	
+# year插件
+
+只选择年
+
+# 插件依赖
+
+首先依赖于 http://design.yyuap.com/static/uui/3.0.6/js/u.js
+
+
+再引入js: http://design.yyuap.com/static/uui/3.0.6/js/u-date.js
+
+# 用法
+
+定义样式为`u-year`的div父元素，包裹类`u-input`的input
+
+```
+<div class='u-year'>
+    <input class="u-input" type="text">
+</div>
+
+```
+
+js会根据`u-year`来定位dom，然后绑定事件。
+
+
+# 示例
+
+
+
+<div class="example-content"><style>.example .u-input{
+	border: 1px solid rgba(0,0,0, 0.12);
+	width: 250px;
+}
+</style></div>
+<div class="example-content"><div class="example">
 	<div class='u-year'>
-        
-    </div>
-2、在第一步创建的div元素中添加样式为“u-input”的输入框。用户选择的时间将会存放在这里。
+	    <input class="u-input" type="text">
+	</div>
+</div>
+</div>
+<div class="examples-code"><pre><code>.example .u-input{
+	border: 1px solid rgba(0,0,0, 0.12);
+	width: 250px;
+}</code></pre>
+</div>
+<div class="examples-code"><pre><code>&lt;div class="example">
+	&lt;div class='u-year'>
+	    &lt;input class="u-input" type="text">
+	&lt;/div>
+&lt;/div></code></pre>
+</div>
 
-	<div class='u-year'>
-        <input class="u-input" type="text">
-    </div>
-
-##具体示例
-
-![](../../static/img/plugins/year.png)
-
-	<div class='u-year'>
-        <input class="u-input" type="text">
-    </div>
 
 
 
-[试一试](http://iuap.yonyou.com/fe/demo/#/demos/ui/year "试一试")
+
+
