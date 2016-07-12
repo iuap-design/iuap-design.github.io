@@ -14,66 +14,36 @@
 
 
 ##不确定Progress
-<div class="example-content"><script>u.on(window, 'load', function() {
+<div class="example-content"><div id="p2" class="u-progress u-progress__indeterminate"></div>
+</p></div>
+<div class="examples-code"><pre><code>&lt;div id="p2" class="u-progress u-progress__indeterminate">&lt;/div>
+&lt;/p></code></pre>
+</div>
+
+##基本Progress
+<div class="example-content"><div id="p1" class="u-progress"></div></div>
+<div class="example-content ex-hide"><script>u.on(window, 'load', function() {
     'use strict';
-    document.querySelector('#p11')['u.Progress'].setProgress(69);
-    document.querySelector('#p3')['u.Progress'].setProgress(33).setBuffer(87);
-    document.querySelector('#p12')['u.Progress'].setProgress(69);
-    document.querySelector('#p13')['u.Progress'].setProgress(69);
-    document.querySelector('#p14')['u.Progress'].setProgress(69);
-    document.querySelector('#p15')['u.Progress'].setProgress(69)
-    document.querySelector('#p16')['u.Progress'].setProgress(69);
-    document.querySelector('#p17')['u.Progress'].setProgress(69);
-    document.querySelector('#p22')['u.Progress'].setProgress(69);
-    document.querySelector('#p23')['u.Progress'].setProgress(69)
-    document.querySelector('#p24')['u.Progress'].setProgress(69);
-    document.querySelector('#p25')['u.Progress'].setProgress(69);
+    document.querySelector('#p1')['u.Progress'].setProgress(33);
 
 });
 </script></div>
-<div class="example-content"><div id="p2" class="u-progress u-progress__indeterminate"></div>
-</p>
+<div class="examples-code"><pre><code>&lt;div id="p1" class="u-progress">&lt;/div></code></pre>
 </div>
 <div class="examples-code"><pre><code>u.on(window, 'load', function() {
     'use strict';
-    document.querySelector('#p11')['u.Progress'].setProgress(69);
-    document.querySelector('#p3')['u.Progress'].setProgress(33).setBuffer(87);
-    document.querySelector('#p12')['u.Progress'].setProgress(69);
-    document.querySelector('#p13')['u.Progress'].setProgress(69);
-    document.querySelector('#p14')['u.Progress'].setProgress(69);
-    document.querySelector('#p15')['u.Progress'].setProgress(69)
-    document.querySelector('#p16')['u.Progress'].setProgress(69);
-    document.querySelector('#p17')['u.Progress'].setProgress(69);
-    document.querySelector('#p22')['u.Progress'].setProgress(69);
-    document.querySelector('#p23')['u.Progress'].setProgress(69)
-    document.querySelector('#p24')['u.Progress'].setProgress(69);
-    document.querySelector('#p25')['u.Progress'].setProgress(69);
+    document.querySelector('#p1')['u.Progress'].setProgress(33);
 
 });</code></pre>
-</div>
-<div class="examples-code"><pre><code>&lt;div id="p2" class="u-progress u-progress__indeterminate">&lt;/div>
-&lt;/p></code></pre>
 </div>
 
 ##缓冲Progress
 
 有缓冲标识的进度条
-<div class="example-content"><div id="p3" class="u-progress"></div>
-</div>
-<div class="example-content"><script>u.on(window, 'load', function() {
+<div class="example-content"><div id="p3" class="u-progress"></div></div>
+<div class="example-content ex-hide"><script>u.on(window, 'load', function() {
     'use strict';
-    document.querySelector('#p11')['u.Progress'].setProgress(69);
     document.querySelector('#p3')['u.Progress'].setProgress(33).setBuffer(87);
-    document.querySelector('#p12')['u.Progress'].setProgress(69);
-    document.querySelector('#p13')['u.Progress'].setProgress(69);
-    document.querySelector('#p14')['u.Progress'].setProgress(69);
-    document.querySelector('#p15')['u.Progress'].setProgress(69)
-    document.querySelector('#p16')['u.Progress'].setProgress(69);
-    document.querySelector('#p17')['u.Progress'].setProgress(69);
-    document.querySelector('#p22')['u.Progress'].setProgress(69);
-    document.querySelector('#p23')['u.Progress'].setProgress(69)
-    document.querySelector('#p24')['u.Progress'].setProgress(69);
-    document.querySelector('#p25')['u.Progress'].setProgress(69);
 
 });
 </script></div>
@@ -81,18 +51,7 @@
 </div>
 <div class="examples-code"><pre><code>u.on(window, 'load', function() {
     'use strict';
-    document.querySelector('#p11')['u.Progress'].setProgress(69);
     document.querySelector('#p3')['u.Progress'].setProgress(33).setBuffer(87);
-    document.querySelector('#p12')['u.Progress'].setProgress(69);
-    document.querySelector('#p13')['u.Progress'].setProgress(69);
-    document.querySelector('#p14')['u.Progress'].setProgress(69);
-    document.querySelector('#p15')['u.Progress'].setProgress(69)
-    document.querySelector('#p16')['u.Progress'].setProgress(69);
-    document.querySelector('#p17')['u.Progress'].setProgress(69);
-    document.querySelector('#p22')['u.Progress'].setProgress(69);
-    document.querySelector('#p23')['u.Progress'].setProgress(69)
-    document.querySelector('#p24')['u.Progress'].setProgress(69);
-    document.querySelector('#p25')['u.Progress'].setProgress(69);
 
 });</code></pre>
 </div>
@@ -101,6 +60,7 @@
 # API
 
 ## JS 方法参数
+
 <table>
   <tbody>
   	  <tr>
@@ -123,7 +83,9 @@
 	  </tr>
 	</tbody>
 </table>
+
 ## css 参数
+
 <table>
   <tbody>
   	  <tr>

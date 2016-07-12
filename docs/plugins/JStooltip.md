@@ -127,7 +127,8 @@ placement:'right'
 
 
 # API
-###JS 方法参数
+
+## JS 方法参数
 <table>
   <tbody>
   	  <tr>
