@@ -1,14 +1,16 @@
 # tabs控件
 
-tabs控件 切换`active`状态包括线性跟随和背景跟随
-tabs控件依赖 `u-tabs` 类，状态类是共用的。
-改变修饰类可以改变active样式。
-默认是`active`状态为线性跟随
-添加修饰类`.u-tabs-pill` 为背景跟随
+多内容分类切换显示
 
-# 如何使用
+# 插件依赖
 
-头部`<a>`是锚链接，链向下列的`<div>`类的名字
+依赖于  http://design.yyuap.com/static/uui/3.0.6/js/u.js
+
+# 用法
+
+定义锚链接，与内容id匹配，详情见示例
+
+
 
 # 示例
 
@@ -17,7 +19,7 @@ tabs控件依赖 `u-tabs` 类，状态类是共用的。
 
 
 切换 背景色跟随作为`active`状态
-<div class="example-content"><style>.ws{
+<div class="example-content ex-hide"><style>.ws{
 	width: 60px;
 	display: inline-block;
 	border: 1px solid #ddd;
@@ -33,8 +35,8 @@ tabs控件依赖 `u-tabs` 类，状态类是共用的。
 #example label:first-child,#example1 label:first-child{
 	margin-left: 0px;
 }
-</style>
-<div class="u-tabs">
+</style></div>
+<div class="example-content"><div class="u-tabs">
     <div class="u-tabs__tab-bar">
         <a href="#tab-panel-1" class="u-tabs__tab is-active">页签1</a>
         <a href="#tab-panel-2" class="u-tabs__tab">页签2</a>
@@ -63,7 +65,6 @@ tabs控件依赖 `u-tabs` 类，状态类是共用的。
         </ul>
     </div>
 </div>
-
 </div>
 <div class="examples-code"><pre><code>.ws{
 	width: 60px;
@@ -117,7 +118,8 @@ tabs控件依赖 `u-tabs` 类，状态类是共用的。
 ##线性tabs
 
 切换 线性跟随作为`active`状态
-<div class="example-content"><style>.ws{
+
+<div class="example-content ex-hide"><style>.ws{
 	width: 60px;
 	display: inline-block;
 	border: 1px solid #ddd;
@@ -133,8 +135,8 @@ tabs控件依赖 `u-tabs` 类，状态类是共用的。
 #example label:first-child,#example1 label:first-child{
 	margin-left: 0px;
 }
-</style>
-<div class="u-widget-body">
+</style></div>
+<div class="example-content"><div class="u-widget-body">
     <div class="u-tabs u-tabs-pill">
         <div class="u-tabs__tab-bar">
             <a href="#tab-pills-panel-1" class="u-tabs__tab is-active">页签1</a>
@@ -164,8 +166,7 @@ tabs控件依赖 `u-tabs` 类，状态类是共用的。
             </ul>
         </div>
     </div>
-</div>
-</div>
+</div></div>
 <div class="examples-code"><pre><code>.ws{
 	width: 60px;
 	display: inline-block;
@@ -217,12 +218,7 @@ tabs控件依赖 `u-tabs` 类，状态类是共用的。
 </div>
 
 
-<!--### 示例1
 
-示例1说明
 
-### 示例2
-
-示例2说-->
 
 
