@@ -27,11 +27,26 @@
     <script src="/dist/static/js/libs/modernizr.custom.js"></script>
     <script src="/dist/static/js/libs/detectizr.min.js"></script>
 
+    <!--[if lte IE 8]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
   </head>
 
-  <!-- Body -->
-  <!-- Remove '.fixed-footer' from body to disable fixed footer reveal on scroll -->
   <body class="fixed-footer">
+
+    <!--[if lt IE 8]>
+		<div style='border: 4px solid #FFF500; background: #FDFDC8; text-align: center; clear: both; height: 75px; position: absolute; z-index:999999999; right: 2px; bottom: 2px; padding:0 8px;'>
+	        <div style='position: absolute; right: 3px; top: 3px; font-weight: bold;z-index:999999999'><a href='#' onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;'>关闭</a></div>
+	        <div style='width: 740px; margin: 0 auto; text-align: left; padding: 0; overflow: hidden; color: black;'>
+	            <div style='width: 675px; float: left;'>
+	                <div style='font-size: 16px; font-weight: bold; margin-top: 12px;'>您使用的是已经过时的IE浏览器</div>
+	                <div style='font-size: 13px; margin-top: 6px; line-height: 16px;'>为了让您在iUAP Design有最佳的使用体验，请升级到 <a href="http://windows.microsoft.com/en-US/internet-explorer/download-ie">最新版本IE浏览器</a>, 或者使用其他高级浏览器如 <a href="https://www.google.com/intl/en/chrome/browser/">Chrome(谷歌浏览器)</a> 或 <a href="http://www.mozilla.org/en-US/firefox/new">Firefox(火狐浏览器)</a></div>
+	            </div>
+	        </div>
+	    </div>
+	    <![endif]-->
 
     <!-- 启动logo  style="display:none;"-->
     <div id="preloader">

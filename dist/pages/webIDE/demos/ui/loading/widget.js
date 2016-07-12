@@ -9,7 +9,7 @@ var options={
 u.showLoader(options);
 // 显示
 u.on(addBtn,'click',function(){
-	var centerContent='<i class="fa fa-cloud u-loader-centerContent"></i>';
+	var centerContent='<i class="uf uf-fluffycloudsilhouette u-loader-centerContent"></i>';
 	var opt1={
 		hasback:true,
 		hasDesc:true,//是否含有加载内容描述
