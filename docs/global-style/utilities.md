@@ -16,8 +16,7 @@
 	<div class="h-64 w-64 bg-blue center-block ">
 		我是内容
 	</div>
-</div>
-</div>
+</div></div>
 <div class="examples-code"><pre><code> &lt;div class="example example-box">
 	&lt;div class="h-64 w-64 bg-blue center-block ">
 		我是内容
@@ -34,58 +33,10 @@
 <div class="example-content"><div class="example example-box">
   <button type="button" class="u-button  u-button-success ">Left</button>
   <button type="button" class="u-button  u-button-success  pull-right" >Pull right</button>
-</div>
-</div>
+</div></div>
 <div class="examples-code"><pre><code>&lt;div class="example example-box">
   &lt;button type="button" class="u-button  u-button-success ">Left&lt;/button>
   &lt;button type="button" class="u-button  u-button-success  pull-right" >Pull right&lt;/button>
-&lt;/div></code></pre>
-</div>
-
-##垂直对齐
-添加如下样式即可实现垂直居中、垂直向下。
-
-* `.vertical-align`:添加这个样式到父元素上，该父元素需要指定高度
-* `.vertical-align-middle`:添加这个样式到到子元素上，实现垂直居中
-* `.vertical-align-bottom`:添加这个样式到子元素上，实现垂直向下
-<div class="example-content"><style>.vertical-align-bottom.u-button{
-	vertical-align: bottom;
-}
-</style></div>
-<div class="example-content"><div class="example example-box u-container-fluid">
-	<div class="u-row">
-
-		<div class="u-col-6">
-			<div class="vertical-align h" >
-      		    <button type="button" class="vertical-align-middle u-button  u-button-success ">垂直居中</button>
-	        </div>
-		</div>
-		<div class="u-col-6">
-			<div class="vertical-align h" >
-	 			<button type="button" class="vertical-align-bottom u-button  u-button-success ">垂直向下</button>
-	 		</div>
-		</div>
-	</div>
-</div>
-</div>
-<div class="examples-code"><pre><code>.vertical-align-bottom.u-button{
-	vertical-align: bottom;
-}</code></pre>
-</div>
-<div class="examples-code"><pre><code>&lt;div class="example example-box u-container-fluid">
-	&lt;div class="u-row">
-
-		&lt;div class="u-col-6">
-			&lt;div class="vertical-align h" >
-      		    &lt;button type="button" class="vertical-align-middle u-button  u-button-success ">垂直居中&lt;/button>
-	        &lt;/div>
-		&lt;/div>
-		&lt;div class="u-col-6">
-			&lt;div class="vertical-align h" >
-	 			&lt;button type="button" class="vertical-align-bottom u-button  u-button-success ">垂直向下&lt;/button>
-	 		&lt;/div>
-		&lt;/div>
-	&lt;/div>
 &lt;/div></code></pre>
 </div>
 
@@ -109,6 +60,52 @@
 * `.font-size-60`: 字体号为60px
 * `.font-size-70`: 字体号为70px
 * `.font-size-80`: 字体号为80px
+
+##垂直对齐
+添加如下样式即可实现垂直居中、垂直向下。
+
+* `.vertical-align`:添加这个样式到父元素上，该父元素需要指定高度
+* `.vertical-align-middle`:添加这个样式到到子元素上，实现垂直居中
+* `.vertical-align-bottom`:添加这个样式到子元素上，实现垂直向下
+<div class="example-content ex-hide"><style>.vertical-align-bottom.u-button{
+	vertical-align: bottom;
+}
+</style></div>
+<div class="example-content"><div class="example example-box u-container-fluid">
+	<div class="u-row">
+
+		<div class="u-col-6">
+			<div class="vertical-align h" >
+      		    <button type="button" class="vertical-align-middle u-button  u-button-success ">垂直居中</button>
+	        </div>
+		</div>
+		<div class="u-col-6">
+			<div class="vertical-align h" >
+	 			<button type="button" class="vertical-align-bottom u-button  u-button-success ">垂直向下</button>
+	 		</div>
+		</div>
+	</div>
+</div></div>
+<div class="examples-code"><pre><code>.vertical-align-bottom.u-button{
+	vertical-align: bottom;
+}</code></pre>
+</div>
+<div class="examples-code"><pre><code>&lt;div class="example example-box u-container-fluid">
+	&lt;div class="u-row">
+
+		&lt;div class="u-col-6">
+			&lt;div class="vertical-align h" >
+      		    &lt;button type="button" class="vertical-align-middle u-button  u-button-success ">垂直居中&lt;/button>
+	        &lt;/div>
+		&lt;/div>
+		&lt;div class="u-col-6">
+			&lt;div class="vertical-align h" >
+	 			&lt;button type="button" class="vertical-align-bottom u-button  u-button-success ">垂直向下&lt;/button>
+	 		&lt;/div>
+		&lt;/div>
+	&lt;/div>
+&lt;/div></code></pre>
+</div>
 
 ##字体粗细
 字体粗细提供了如下粗细数值：unset、100、200、300、400、500、600、700、800、900。
@@ -136,80 +133,11 @@
 	<p class="text-lowercase">Lowercased text.</p>
 	<p class="text-uppercase">Uppercased text.</p>
 	<p class="text-capitalize">Capitalized text.</p>
-</div>
-</div>
+</div></div>
 <div class="examples-code"><pre><code>&lt;div class="example example-box">
 	&lt;p class="text-lowercase">Lowercased text.&lt;/p>
 	&lt;p class="text-uppercase">Uppercased text.&lt;/p>
 	&lt;p class="text-capitalize">Capitalized text.&lt;/p>
-&lt;/div></code></pre>
-</div>
-
-##文字包裹
-添加如下类实现文字包裹的各种样式
-
-* `.text-hide`: 元素中的内容隐藏
-* `text-truncate`: 内容显示到一行，多余的内容用`...`代替
-* `text-break`: 当内容超出容器宽度时，将自动折行
-* `text-nowrap`: 当内容超出容器宽度时，在一行显示，不折行。
-<div class="example-content"><style>.vertical-align-bottom.u-button {
-    vertical-align: bottom;
-}
-</style></div>
-<div class="example-content"><p>文字是否包裹换行</p>
-<div class="example example-box u-container-fluid " style="width:500px">
-    <div class="u-row">
-        <div class="u-col-md-3">
-            <div class="text-hide h" style="border:1px solid #e6e8ea;">
-                我被隐藏了
-            </div>
-        </div>
-        <div class="u-col-md-3">
-            <div class="text-truncate h" style="border:1px solid #e6e8ea;">
-                内容显示一行，超出的内容使用“...”代替 This is text truncate.This is text truncate.
-            </div>
-        </div>
-        <div class="u-col-md-3">
-            <div class="text-break h " style="border:1px solid #e6e8ea;">
-                This-is-text-break.This-is-text-break.This-is-text-break.This-is-text-break.
-            </div>
-        </div>
-        <div class="u-col-md-3">
-            <div class="text-nowrap h" style="border:1px solid #e6e8ea;overflow: hidden;">
-                内容显示一行，不换行 This is text nowrap.This is text nowrap.
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<div class="examples-code"><pre><code>.vertical-align-bottom.u-button {
-    vertical-align: bottom;
-}</code></pre>
-</div>
-<div class="examples-code"><pre><code>&lt;p>文字是否包裹换行&lt;/p>
-&lt;div class="example example-box u-container-fluid " style="width:500px">
-    &lt;div class="u-row">
-        &lt;div class="u-col-md-3">
-            &lt;div class="text-hide h" style="border:1px solid #e6e8ea;">
-                我被隐藏了
-            &lt;/div>
-        &lt;/div>
-        &lt;div class="u-col-md-3">
-            &lt;div class="text-truncate h" style="border:1px solid #e6e8ea;">
-                内容显示一行，超出的内容使用“...”代替 This is text truncate.This is text truncate.
-            &lt;/div>
-        &lt;/div>
-        &lt;div class="u-col-md-3">
-            &lt;div class="text-break h " style="border:1px solid #e6e8ea;">
-                This-is-text-break.This-is-text-break.This-is-text-break.This-is-text-break.
-            &lt;/div>
-        &lt;/div>
-        &lt;div class="u-col-md-3">
-            &lt;div class="text-nowrap h" style="border:1px solid #e6e8ea;overflow: hidden;">
-                内容显示一行，不换行 This is text nowrap.This is text nowrap.
-            &lt;/div>
-        &lt;/div>
-    &lt;/div>
 &lt;/div></code></pre>
 </div>
 
@@ -244,8 +172,7 @@
         <p class="text-right">Right aligned text.</p>
         <p class="text-justify">Justified text.Justified text.Justified text.</p>
     </div>
-</div>
-</div>
+</div></div>
 <div class="examples-code"><pre><code>&lt;div class="example example-box u-container-fluid">
     &lt;div class="row">
         &lt;div class="col-md-4 m-b-sm bg-grey h-64">
@@ -288,28 +215,72 @@
 * `.height-auto`: height高度为auto
 * `.height-full`: height高度为100%
 
-##内间距
-padding提供了如下数值：0，3，5，10, 15, 20, 25, 30, 35, 40, 45, 50.
+##文字包裹
+添加如下类实现文字包裹的各种样式
 
-以内边距5为例说明具体padding的使用方式
-
-
-| 样式名        | 描述           |
-| ------------- |:-------------:|
-| .padding-5   | padding:为5px |
-| .padding-vertical-5    | padding-top和padding-bottom均为 5px   |
-| .padding-horizontal-5 | padding-left和padding-right均为 5px    | 
-| .padding-top-5    | padding-top为 5px   |
-| .padding-right-5 | padding-right为 5px    | 
-| .padding-bottom-5   | padding-bottom为 5px   |
-| .padding-left-5 | padding-left为 5px    | 
-
-##display
-添加如下属性可以修改元素的display属性值。
-
-* `.inline`: 是元素变成内联元素，元素前后没有换行符
-* `.inline-block`: 行内块元素
-* `.block`: 块级元素，此元素前后会带有换行符
+* `.text-hide`: 元素中的内容隐藏
+* `text-truncate`: 内容显示到一行，多余的内容用`...`代替
+* `text-break`: 当内容超出容器宽度时，将自动折行
+* `text-nowrap`: 当内容超出容器宽度时，在一行显示，不折行。
+<div class="example-content ex-hide"><style>.vertical-align-bottom.u-button {
+    vertical-align: bottom;
+}
+</style></div>
+<div class="example-content"><p>文字是否包裹换行</p>
+<div class="example example-box u-container-fluid " style="width:500px">
+    <div class="u-row">
+        <div class="u-col-md-3">
+            <div class="text-hide h" style="border:1px solid #e6e8ea;">
+                我被隐藏了
+            </div>
+        </div>
+        <div class="u-col-md-3">
+            <div class="text-truncate h" style="border:1px solid #e6e8ea;">
+                内容显示一行，超出的内容使用“...”代替 This is text truncate.This is text truncate.
+            </div>
+        </div>
+        <div class="u-col-md-3">
+            <div class="text-break h " style="border:1px solid #e6e8ea;">
+                This-is-text-break.This-is-text-break.This-is-text-break.This-is-text-break.
+            </div>
+        </div>
+        <div class="u-col-md-3">
+            <div class="text-nowrap h" style="border:1px solid #e6e8ea;overflow: hidden;">
+                内容显示一行，不换行 This is text nowrap.This is text nowrap.
+            </div>
+        </div>
+    </div>
+</div></div>
+<div class="examples-code"><pre><code>&lt;p>文字是否包裹换行&lt;/p>
+&lt;div class="example example-box u-container-fluid " style="width:500px">
+    &lt;div class="u-row">
+        &lt;div class="u-col-md-3">
+            &lt;div class="text-hide h" style="border:1px solid #e6e8ea;">
+                我被隐藏了
+            &lt;/div>
+        &lt;/div>
+        &lt;div class="u-col-md-3">
+            &lt;div class="text-truncate h" style="border:1px solid #e6e8ea;">
+                内容显示一行，超出的内容使用“...”代替 This is text truncate.This is text truncate.
+            &lt;/div>
+        &lt;/div>
+        &lt;div class="u-col-md-3">
+            &lt;div class="text-break h " style="border:1px solid #e6e8ea;">
+                This-is-text-break.This-is-text-break.This-is-text-break.This-is-text-break.
+            &lt;/div>
+        &lt;/div>
+        &lt;div class="u-col-md-3">
+            &lt;div class="text-nowrap h" style="border:1px solid #e6e8ea;overflow: hidden;">
+                内容显示一行，不换行 This is text nowrap.This is text nowrap.
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div></code></pre>
+</div>
+<div class="examples-code"><pre><code>.vertical-align-bottom.u-button {
+    vertical-align: bottom;
+}</code></pre>
+</div>
 
 ##外间距
 margin提供了如下数值：0，3，5，10, 15, 20, 25, 30, 35, 40, 45, 50.
@@ -326,6 +297,47 @@ margin提供了如下数值：0，3，5，10, 15, 20, 25, 30, 35, 40, 45, 50.
 | .margin-right-5 | margin-right为 5px    | 
 | .margin-bottom-5   | margin-bottom为 5px   |
 | .margin-left-5 | margin-left为 5px    | 
+
+##内间距
+padding提供了如下数值：0，3，5，10, 15, 20, 25, 30, 35, 40, 45, 50.
+
+以内边距5为例说明具体padding的使用方式
+
+
+| 样式名        | 描述           |
+| ------------- |:-------------:|
+| .padding-5   | padding:为5px |
+| .padding-vertical-5    | padding-top和padding-bottom均为 5px   |
+| .padding-horizontal-5 | padding-left和padding-right均为 5px    | 
+| .padding-top-5    | padding-top为 5px   |
+| .padding-right-5 | padding-right为 5px    | 
+| .padding-bottom-5   | padding-bottom为 5px   |
+| .padding-left-5 | padding-left为 5px    | 
+
+##宽度
+宽度提供了如下数值：50, 100, 150, 200, 250, 300, 350, 400, 450, 500, auto, 100%
+
+添加如下样式即可实现对应的效果。
+
+* `.width-50`: width宽度为50px
+* `.width-100`: width宽度为100px
+* `.width-150`: width宽度为150px
+* `.width-200`: width宽度为200px
+* `.width-250`: width宽度为250px
+* `.width-300`: width宽度为300px
+* `.width-350`: width宽度为350px
+* `.width-400`: width宽度为400px
+* `.width-450`: width宽度为450px
+* `.width-500`: width宽度为500px
+* `.width-auto`: width宽度为auto
+* `.width-full`: width宽度为100%
+
+##display
+添加如下属性可以修改元素的display属性值。
+
+* `.inline`: 是元素变成内联元素，元素前后没有换行符
+* `.inline-block`: 行内块元素
+* `.block`: 块级元素，此元素前后会带有换行符
 
 ##响应式显示
 通过单独或联合使用以下列出的类，可以针对不同屏幕尺寸隐藏或显示页面内容
@@ -352,21 +364,3 @@ margin提供了如下数值：0，3，5，10, 15, 20, 25, 30, 35, 40, 45, 50.
 |.visible-*-inline|display: inline|
 |.visible-*-inline-block|display: inline-block|
 
-
-##宽度
-宽度提供了如下数值：50, 100, 150, 200, 250, 300, 350, 400, 450, 500, auto, 100%
-
-添加如下样式即可实现对应的效果。
-
-* `.width-50`: width宽度为50px
-* `.width-100`: width宽度为100px
-* `.width-150`: width宽度为150px
-* `.width-200`: width宽度为200px
-* `.width-250`: width宽度为250px
-* `.width-300`: width宽度为300px
-* `.width-350`: width宽度为350px
-* `.width-400`: width宽度为400px
-* `.width-450`: width宽度为450px
-* `.width-500`: width宽度为500px
-* `.width-auto`: width宽度为auto
-* `.width-full`: width宽度为100%
