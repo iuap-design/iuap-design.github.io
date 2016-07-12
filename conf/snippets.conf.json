@@ -86,6 +86,9 @@
         }, {
             "name": "图片",
             "url": "demos/ui/image"
+        }, {
+            "name": "色带",
+            "url": "demos/ui/ribbon"
         }
     ]
 }, {
