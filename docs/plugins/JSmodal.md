@@ -1,12 +1,54 @@
-# madal控件
+# modal控件
 
-`modal`控件分为三种：提示模态框、确认模态框和自定义模态框
+区分与message,显示更多的信息,且自带确认取消回调。
 
-# 如何使用
+# 插件依赖
 
-提示模态框与确认模态框通过js调用传参实现，
-例如`u.messageDialog({ msg: "HELLO!!!", title: "测试提示", btnText: "OK!" })` 则是调用提示模态框的方法。
-自定义模态框则是在html文件里可自定义内容
+依赖于  http://design.yyuap.com/static/uui/3.0.6/js/u.js
+
+# 用法
+
+1.定义触发弹出事件的DOM
+
+```
+<button id="modalBtn" class="u-button" >Success</button>
+
+```
+
+2.js 定义应用范围
+
+```
+u.compMgr.apply({
+        el:'body'
+})
+
+```
+
+3.获取dom
+
+```
+var msgBtn2 = document.body.querySelector("#msgDialogBtn2");
+
+```
+
+
+4.绑定modal事件
+
+```
+u.on(msgBtn2,'click', function(){
+        u.confirmDialog({
+            msg: "是否保存单据？",       //modal内容
+            title: "测试确认",           //modal title
+            onOk: function () {          //确认后的回调
+                alert('ok')
+            },
+            onCancel: function () {		 //取消后的回调
+                alert('cancel')
+            }
+        });
+})
+
+```
 
 # 示例
 
@@ -172,34 +214,40 @@ u.on(cancelButton,'click', function(){
 </div>
 
 
-<!--### 示例1
-
-示例1说明
-
-### 示例2
-
-示例2说-->
 
 # API
 
-## 属性
+##js方法
+<table>
+  <tbody>
+  	  <tr>
+	    <td>名称</td>
+	    <td>方法参数</td>
+	    <td>回调方法</td>
+	    <td>描述</td>
+	    <td></td>
+	  </tr>
+	  <tr>
+	    <td>confirmDialog</td>
+	    <td>1.msg  2.title</td>
+	    <td>1.onOk 2.onCancel</td>
+	    <td>确认和取消都有回调</td>
+	    <td></td>
+	  </tr>
+	    <td>messageDialog</td>
+	    <td>1.msg  2.title  3.btnText</td>
+	    <td>无</td>
+	    <td>只有确认按钮，自定义确认按钮字样btnText</td>
+	    <td></td>
+	  </tr>
+	  <tr>
+	    <td>dialog</td>
+	    <td>1.id  2.content  3.hasCloseMenu </td>
+	    <td>自定义回调</td>
+	    <td>id定义dialog唯一性,content自定义内容,可以是html.确认取消时间自行绑定</td>
+	    <td></td>
+	  </tr>
+	</tbody>
+</table>
 
-暂无
-<!--### 属性1
 
-属性1说明
-
-### 属性2
-
-属性2说明-->
-
-## 方法
-
-暂无
-<!--### 方法1
-
-方法1说明
-
-### 方法2
-
-方法2说明-->

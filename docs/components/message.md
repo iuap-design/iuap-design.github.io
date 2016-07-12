@@ -10,72 +10,6 @@
 # 示例
 
 
-##点击触发Message
-<div class="example-content"><style>.margin-r-10{
-    margin-right: 10px; 
-}
-.example .u-message{
-    position: inherit;
-}
-.example{
-	width: 300px;
-}
-</style>
-<button id="msgBtn" class="u-button" >Success</button>
-<button id="errorBtn" class="u-button" >Error</button>
-<button id="warnBtn" class="u-button" >Warning</button>
-<script>var msgBtn = document.body.querySelector("#msgBtn");
-var errorBtn = document.body.querySelector("#errorBtn");
-var warnBtn = document.body.querySelector("#warnBtn");
-var rightInfo='<i class="fa fa-check-circle margin-r-5"></i>成功信息!!!';
-u.on(msgBtn,'click', function(){ 
-    u.showMessage({msg:rightInfo,position:"center"})
-})
-
-var errorInfo='<i class="fa fa-times-circle margin-r-5"></i>错误信息!!!'
-u.on(errorBtn,'click', function(){ 
-    u.showMessage({msg:errorInfo,position:"center",msgType:"error"})
-})
-
-var warningInfo='<i class="fa fa-exclamation-circle margin-r-5"></i>警告信息!!!';
-u.on(warnBtn,'click', function(){ 
-    u.showMessage({msg:warningInfo,position:"center",msgType:"warning"})
-})
-</script>
-</div>
-<div class="examples-code"><pre><code>.margin-r-10{
-    margin-right: 10px; 
-}
-.example .u-message{
-    position: inherit;
-}
-.example{
-	width: 300px;
-}</code></pre>
-</div>
-<div class="examples-code"><pre><code>&lt;button id="msgBtn" class="u-button" >Success&lt;/button>
-&lt;button id="errorBtn" class="u-button" >Error&lt;/button>
-&lt;button id="warnBtn" class="u-button" >Warning&lt;/button></code></pre>
-</div>
-<div class="examples-code"><pre><code>var msgBtn = document.body.querySelector("#msgBtn");
-var errorBtn = document.body.querySelector("#errorBtn");
-var warnBtn = document.body.querySelector("#warnBtn");
-var rightInfo='&lt;i class="fa fa-check-circle margin-r-5">&lt;/i>成功信息!!!';
-u.on(msgBtn,'click', function(){ 
-    u.showMessage({msg:rightInfo,position:"center"})
-})
-
-var errorInfo='&lt;i class="fa fa-times-circle margin-r-5">&lt;/i>错误信息!!!'
-u.on(errorBtn,'click', function(){ 
-    u.showMessage({msg:errorInfo,position:"center",msgType:"error"})
-})
-
-var warningInfo='&lt;i class="fa fa-exclamation-circle margin-r-5">&lt;/i>警告信息!!!';
-u.on(warnBtn,'click', function(){ 
-    u.showMessage({msg:warningInfo,position:"center",msgType:"warning"})
-})</code></pre>
-</div>
-
 ##基础Message
 
 消息类型对应不同class属性则显示不同的背景色
@@ -86,8 +20,8 @@ u.on(warnBtn,'click', function(){
 .example .u-message{
     position: inherit;
 }
-</style>
-<div class="example">
+</style></div>
+<div class="example-content"><div class="example">
     <div class="u-message u-mesnews active" >    
         <span class="u-msg-close fa fa-close"></span>
         News!
@@ -147,14 +81,7 @@ u.on(warnBtn,'click', function(){
 
 消息类型对应相应的icon
 
-<div class="example-content"><style>.margin-r-10{
-    margin-right: 10px; 
-}
-.example .u-message{
-    position: inherit;
-}
-</style>
-<div class="example">
+<div class="example-content"><div class="example">
     <div class="u-message dark u-mesnews active" >    
         <span class="u-msg-close fa fa-close"></span>
         <i class="fa fa-bell margin-r-10"></i>News!
@@ -177,13 +104,13 @@ u.on(warnBtn,'click', function(){
     </div>
 </div>
 </div>
-<div class="examples-code"><pre><code>.margin-r-10{
+<div class="example-content"><style>.margin-r-10{
     margin-right: 10px; 
 }
 .example .u-message{
     position: inherit;
-}</code></pre>
-</div>
+}
+</style></div>
 <div class="examples-code"><pre><code>&lt;div class="example">
     &lt;div class="u-message dark u-mesnews active" >    
         &lt;span class="u-msg-close fa fa-close">&lt;/span>
@@ -206,6 +133,13 @@ u.on(warnBtn,'click', function(){
         &lt;i class="fa fa-warning margin-r-10">&lt;/i>Warning!
     &lt;/div>
 &lt;/div></code></pre>
+</div>
+<div class="examples-code"><pre><code>.margin-r-10{
+    margin-right: 10px; 
+}
+.example .u-message{
+    position: inherit;
+}</code></pre>
 </div>
 
 

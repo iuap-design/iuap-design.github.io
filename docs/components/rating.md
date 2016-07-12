@@ -41,12 +41,7 @@
       };
       $('[data-plugin="rating"]').each(function() {
           var $this = $(this);
-          var options = $.extend(true, {}, defaults, $this.data());
-
-          if (options.hints) {
-            options.hints = options.hints.split(',');
-          }
-
+          
           $this.raty(options);
       });
       // }
@@ -82,11 +77,7 @@
       };
       $('[data-plugin="rating"]').each(function() {
           var $this = $(this);
-          var options = $.extend(true, {}, defaults, $this.data());
-
-          if (options.hints) {
-            options.hints = options.hints.split(',');
-          }
+          
 
           $this.raty(options);
       });
