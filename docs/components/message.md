@@ -23,23 +23,23 @@
 </style></div>
 <div class="example-content"><div class="example">
     <div class="u-message u-mesnews active" >    
-        <span class="u-msg-close fa fa-close"></span>
+        <span class="u-msg-close uf uf-removesymbol"></span>
         News!
     </div>
     <div class="u-message u-mesinfo active">
-        <span class="u-msg-close fa fa-close"></span>
+        <span class="u-msg-close uf uf-removesymbol"></span>
         Info!
     </div>
     <div class="u-message u-messuccess active">    
-        <span class="u-msg-close fa fa-close"></span>
+        <span class="u-msg-close uf uf-removesymbol"></span>
         Success!
     </div>
     <div class="u-message u-mesdanger active">
-        <span class="u-msg-close fa fa-close"></span>
+        <span class="u-msg-close uf uf-removesymbol"></span>
         Danger!
     </div>
     <div class="u-message u-meswarning active">
-        <span class="u-msg-close fa fa-close"></span>
+        <span class="u-msg-close uf uf-removesymbol"></span>
         Warning!
     </div>
 </div>
@@ -53,23 +53,23 @@
 </div>
 <div class="examples-code"><pre><code>&lt;div class="example">
     &lt;div class="u-message u-mesnews active" >    
-        &lt;span class="u-msg-close fa fa-close">&lt;/span>
+        &lt;span class="u-msg-close uf uf-removesymbol">&lt;/span>
         News!
     &lt;/div>
     &lt;div class="u-message u-mesinfo active">
-        &lt;span class="u-msg-close fa fa-close">&lt;/span>
+        &lt;span class="u-msg-close uf uf-removesymbol">&lt;/span>
         Info!
     &lt;/div>
     &lt;div class="u-message u-messuccess active">    
-        &lt;span class="u-msg-close fa fa-close">&lt;/span>
+        &lt;span class="u-msg-close uf uf-removesymbol">&lt;/span>
         Success!
     &lt;/div>
     &lt;div class="u-message u-mesdanger active">
-        &lt;span class="u-msg-close fa fa-close">&lt;/span>
+        &lt;span class="u-msg-close uf uf-removesymbol">&lt;/span>
         Danger!
     &lt;/div>
     &lt;div class="u-message u-meswarning active">
-        &lt;span class="u-msg-close fa fa-close">&lt;/span>
+        &lt;span class="u-msg-close uf uf-removesymbol">&lt;/span>
         Warning!
     &lt;/div>
 &lt;/div></code></pre>
@@ -83,23 +83,23 @@
 
 <div class="example-content"><div class="example">
     <div class="u-message dark u-mesnews active" >    
-        <span class="u-msg-close fa fa-close"></span>
-        <i class="fa fa-bell margin-r-10"></i>News!
+        <span class="u-msg-close uf uf-removesymbol"></span>
+        <i class="uf uf-bellmusicaltool margin-r-10"></i>News!
     </div>
     <div class="u-message dark u-mesinfo active">
-        <span class="u-msg-close fa fa-close"></span>
+        <span class="u-msg-close uf uf-removesymbol"></span>
         <i class="fa fa-info-circle margin-r-10"></i>Info!
     </div>
     <div class="u-message dark u-messuccess active">    
-        <span class="u-msg-close fa fa-close"></span>
-        <i class="fa fa-check-circle margin-r-10"></i>Success!
+        <span class="u-msg-close uf uf-removesymbol"></span>
+        <i class="uf uf-checkedsymbol margin-r-10"></i>Success!
     </div>
     <div class="u-message dark u-mesdanger active">
-        <span class="u-msg-close fa fa-close"></span>
-        <i class="fa fa-times-circle margin-r-10"></i>Danger!
+        <span class="u-msg-close uf uf-removesymbol"></span>
+        <i class="uf uf-crossmarkonablackcirclebackground margin-r-10"></i>Danger!
     </div>
     <div class="u-message dark u-meswarning active">
-        <span class="u-msg-close fa fa-close"></span>
+        <span class="u-msg-close uf uf-removesymbol"></span>
         <i class="fa fa-warning margin-r-10"></i>Warning!
     </div>
 </div>
@@ -113,23 +113,23 @@
 </style></div>
 <div class="examples-code"><pre><code>&lt;div class="example">
     &lt;div class="u-message dark u-mesnews active" >    
-        &lt;span class="u-msg-close fa fa-close">&lt;/span>
-        &lt;i class="fa fa-bell margin-r-10">&lt;/i>News!
+        &lt;span class="u-msg-close uf uf-removesymbol">&lt;/span>
+        &lt;i class="uf uf-bellmusicaltool margin-r-10">&lt;/i>News!
     &lt;/div>
     &lt;div class="u-message dark u-mesinfo active">
-        &lt;span class="u-msg-close fa fa-close">&lt;/span>
+        &lt;span class="u-msg-close uf uf-removesymbol">&lt;/span>
         &lt;i class="fa fa-info-circle margin-r-10">&lt;/i>Info!
     &lt;/div>
     &lt;div class="u-message dark u-messuccess active">    
-        &lt;span class="u-msg-close fa fa-close">&lt;/span>
-        &lt;i class="fa fa-check-circle margin-r-10">&lt;/i>Success!
+        &lt;span class="u-msg-close uf uf-removesymbol">&lt;/span>
+        &lt;i class="uf uf-checkedsymbol margin-r-10">&lt;/i>Success!
     &lt;/div>
     &lt;div class="u-message dark u-mesdanger active">
-        &lt;span class="u-msg-close fa fa-close">&lt;/span>
-        &lt;i class="fa fa-times-circle margin-r-10">&lt;/i>Danger!
+        &lt;span class="u-msg-close uf uf-removesymbol">&lt;/span>
+        &lt;i class="uf uf-crossmarkonablackcirclebackground margin-r-10">&lt;/i>Danger!
     &lt;/div>
     &lt;div class="u-message dark u-meswarning active">
-        &lt;span class="u-msg-close fa fa-close">&lt;/span>
+        &lt;span class="u-msg-close uf uf-removesymbol">&lt;/span>
         &lt;i class="fa fa-warning margin-r-10">&lt;/i>Warning!
     &lt;/div>
 &lt;/div></code></pre>
@@ -140,6 +140,72 @@
 .example .u-message{
     position: inherit;
 }</code></pre>
+</div>
+
+##点击触发Message
+<div class="example-content"><style>.margin-r-10{
+    margin-right: 10px; 
+}
+.example .u-message{
+    position: inherit;
+}
+.example{
+	width: 300px;
+}
+</style></div>
+<div class="example-content"><script>var msgBtn = document.body.querySelector("#msgBtn");
+var errorBtn = document.body.querySelector("#errorBtn");
+var warnBtn = document.body.querySelector("#warnBtn");
+var rightInfo='<i class="uf uf-checkedsymbol margin-r-5"></i>成功信息!!!';
+u.on(msgBtn,'click', function(){ 
+    u.showMessage({msg:rightInfo,position:"center"})
+})
+
+var errorInfo='<i class="uf uf-crossmarkonablackcirclebackground margin-r-5"></i>错误信息!!!'
+u.on(errorBtn,'click', function(){ 
+    u.showMessage({msg:errorInfo,position:"center",msgType:"error"})
+})
+
+var warningInfo='<i class="uf uf-exclamationsign margin-r-5"></i>警告信息!!!';
+u.on(warnBtn,'click', function(){ 
+    u.showMessage({msg:warningInfo,position:"center",msgType:"warning"})
+})
+</script></div>
+<div class="example-content"><button id="msgBtn" class="u-button" >Success</button>
+<button id="errorBtn" class="u-button" >Error</button>
+<button id="warnBtn" class="u-button" >Warning</button>
+</div>
+<div class="examples-code"><pre><code>.margin-r-10{
+    margin-right: 10px; 
+}
+.example .u-message{
+    position: inherit;
+}
+.example{
+	width: 300px;
+}</code></pre>
+</div>
+<div class="examples-code"><pre><code>var msgBtn = document.body.querySelector("#msgBtn");
+var errorBtn = document.body.querySelector("#errorBtn");
+var warnBtn = document.body.querySelector("#warnBtn");
+var rightInfo='&lt;i class="uf uf-checkedsymbol margin-r-5">&lt;/i>成功信息!!!';
+u.on(msgBtn,'click', function(){ 
+    u.showMessage({msg:rightInfo,position:"center"})
+})
+
+var errorInfo='&lt;i class="uf uf-crossmarkonablackcirclebackground margin-r-5">&lt;/i>错误信息!!!'
+u.on(errorBtn,'click', function(){ 
+    u.showMessage({msg:errorInfo,position:"center",msgType:"error"})
+})
+
+var warningInfo='&lt;i class="uf uf-exclamationsign margin-r-5">&lt;/i>警告信息!!!';
+u.on(warnBtn,'click', function(){ 
+    u.showMessage({msg:warningInfo,position:"center",msgType:"warning"})
+})</code></pre>
+</div>
+<div class="examples-code"><pre><code>&lt;button id="msgBtn" class="u-button" >Success&lt;/button>
+&lt;button id="errorBtn" class="u-button" >Error&lt;/button>
+&lt;button id="warnBtn" class="u-button" >Warning&lt;/button></code></pre>
 </div>
 
 

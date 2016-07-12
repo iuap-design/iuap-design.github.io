@@ -69,16 +69,16 @@ gulp.task('del', ['compile'], function() {
  * @param  {[type]} ) {}          [description]
  * @return {[type]}   [description]
  */
-gulp.task('zip', function() {
-    return gulp.src('./dist/website/*')
-        .pipe(flatmap(function(stream, file){
-            var fileName = file.path.substr(file.path.lastIndexOf('/') + 1);
-            gulp.src(file.path + '/**/*')
-                .pipe(zip(fileName+'.zip'))
-                .pipe(gulp.dest('./dist/download'));
-            return stream;
-        }));
-});
+// gulp.task('zip', function() {
+//     return gulp.src('./dist/website/*')
+//         .pipe(flatmap(function(stream, file){
+//             var fileName = file.path.substr(file.path.lastIndexOf('/') + 1);
+//             gulp.src(file.path + '/**/*')
+//                 .pipe(zip(fileName+'.zip'))
+//                 .pipe(gulp.dest('./dist/download'));
+//             return stream;
+//         }));
+// });
 
 
 /**
@@ -132,7 +132,7 @@ gulp.task('clone', function() {
 
 
 gulp.task('newpack', ['clone']);
-gulp.task('default', ['del','zip']);
+gulp.task('default', ['del']);
 
 
 

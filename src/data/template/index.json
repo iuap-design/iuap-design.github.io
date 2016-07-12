@@ -16,8 +16,8 @@
 	        "decription": "可伸缩导航布局，伸展时展示全部nav，收起显示具体图标",
 	        "content_img": "img/main_13.png",
 	        "phone_img": "img/phone_3.jpg",
-	        "url": "../../website/menuNavLayout/index.html",
-	        "download": "/dist/download/menuNavLayout.zip",
+	        "url": "/templates/website/menuNavLayout/index.html",
+	        "download": "/templates/dist/menuNavLayout.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
 	    },{
@@ -26,8 +26,8 @@
 	        "decription": "发展可持续、完善易有序、拓展能稳定",
 	        "content_img": "img/main_5.png",
 	        "phone_img": "img/phone_3.jpg",
-	        "url": "../../website/tenxcloud/index.html",
-	        "download": "/dist/download/tenxcloud.zip",
+	        "url": "/templates/website/tenxcloud/index.html",
+	        "download": "/templates/dist/tenxcloud.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
 	    },{
@@ -36,8 +36,8 @@
 	        "decription": "发展可持续、完善易有序、拓展能稳定",
 	        "content_img": "img/main_12.png",
 	        "phone_img": "img/phone_3.jpg",
-	        "url": "../../website/tenxcloud/create.html",
-	        "download": "/dist/download/tenxcloud.zip",
+	        "url": "/templates/website/tenxcloud/create.html",
+	        "download": "/templates/dist/tenxcloud.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
 	    },{
@@ -46,8 +46,8 @@
 	        "decription": "站在用户的角度，针对性的为用户提供刚需",
 	        "content_img": "img/main_4.png",
 	        "phone_img": "img/phone_4.jpg",
-	        "url": "../../website/e-commerce/index.html",
-	        "download": "/dist/download/e-commerce.zip",
+	        "url": "/templates/website/e-commerce/index.html",
+	        "download": "/templates/dist/e-commerce.zip",
 	        "using_times": "100",
 	        "for_area": ["电商"]
 	    },{
@@ -66,8 +66,8 @@
 	        "decription": " 简约、大气的类京东风格，适用于电商、金融或者其他领域！",
 	        "content_img": "img/main_8.png",
 	        "phone_img": "img/phone_3.jpg",
-	        "url": "../../website/eccm/html/pages/baseinfo/baseinfo.html",
-	        "download": "/dist/download/eccm.zip",
+	        "url": "/templates/website/eccm/html/baseinfo/baseinfo.html",
+	        "download": "/templates/dist/eccm.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
 	    },{
@@ -76,8 +76,8 @@
 	        "decription": " 简约、大气的类京东风格，适用于电商、金融或者其他领域！",
 	        "content_img": "img/main_11.png",
 	        "phone_img": "img/phone_3.jpg",
-	        "url": "../../website/eccm/html/pages/template/template.html",
-	        "download": "/dist/download/eccm.zip",
+	        "url": "/templates/website/eccm/html/template/template.html",
+	        "download": "/templates/dist/eccm.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
 	    },{
@@ -86,8 +86,8 @@
 	        "decription": " 简约、大气的类京东风格，适用于电商、金融或者其他领域！",
 	        "content_img": "img/main_9.png",
 	        "phone_img": "img/phone_3.jpg",
-	        "url": "../../website/eccm/html/pages/goodsproperty/goodsproperty.html",
-	        "download": "/dist/download/eccm.zip",
+	        "url": "/templates/website/eccm/html/goodsproperty/goodsproperty.html",
+	        "download": "/templates/dist/eccm.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
 	    },{
@@ -96,8 +96,8 @@
 	        "decription": " 简约、大气的类京东风格，适用于电商、金融或者其他领域！",
 	        "content_img": "img/main_10.png",
 	        "phone_img": "img/phone_3.jpg",
-	        "url": "../../website/eccm/html/pages/goodspublish/goodspublish.html",
-	        "download": "/dist/download/eccm.zip",
+	        "url": "/templates/website/eccm/html/goodspublish/goodspublish.html",
+	        "download": "/templates/dist/eccm.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
 	    },{
@@ -106,8 +106,8 @@
 	        "decription": "充分体现出sass的变量神器",
 	        "content_img": "img/main_1.png",
 	        "phone_img": "img/phone_1.jpg",
-	        "url": "../../website/hr/list.html",
-	        "download": "/dist/download/hr.zip",
+	        "url": "/templates/website/hr/list.html",
+	        "download": "/templates/dist/hr.zip",
 	        "using_times": "772",
 	        "for_area": ["互联网"]
 	    },{
@@ -116,8 +116,8 @@
 	        "decription": "专门的软件来完成Sass代码让浏览器识别和转换成CSS代码",
 	        "content_img": "img/main_2.png",
 	        "phone_img": "img/phone_2.jpg",
-	        "url": "../../website/hr/apply.html",
-	        "download": "/dist/download/hr.zip",
+	        "url": "/templates/website/hr/apply.html",
+	        "download": "/templates/dist/hr.zip",
 	        "using_times": "772",
 	        "for_area": ["互联网"]
 	    },{
@@ -126,8 +126,8 @@
 	        "decription": "高效解决日常办公、资产管理、业务管理、信息交流等常规协同",
 	        "content_img": "img/main_3.png",
 	        "phone_img": "img/phone_3.jpg",
-	        "url": "../../website/cooperating/index.html",
-	        "download": "/dist/download/cooperating.zip",
+	        "url": "/templates/website/cooperating/index.html",
+	        "download": "/templates/dist/cooperating.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","建筑"]
 	    },{
@@ -136,8 +136,8 @@
 	        "decription": "简易网页登录",
 	        "content_img": "img/main_14.png",
 	        "phone_img": "img/phone_3.jpg",
-	        "url": "../../website/login1/index-left.html",
-	        "download": "/dist/download/login1.zip",
+	        "url": "/templates/website/login1/index-left.html",
+	        "download": "/templates/dist/login1.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","建筑"]
 	    },{
@@ -146,8 +146,8 @@
 	        "decription": "简易网页登录",
 	        "content_img": "img/main_15.png",
 	        "phone_img": "img/phone_3.jpg",
-	        "url": "../../website/login1/index-center.html",
-	        "download": "/dist/download/login1.zip",
+	        "url": "/templates/website/login1/index-center.html",
+	        "download": "/templates/dist/login1.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","建筑"]
 	    },{
@@ -156,8 +156,8 @@
 	        "decription": "简易网页登录",
 	        "content_img": "img/main_16.png",
 	        "phone_img": "img/phone_3.jpg",
-	        "url": "../../website/login1/index-center.html",
-	        "download": "/dist/download/login1.zip",
+	        "url": "/templates/website/login1/index-center.html",
+	        "download": "/templates/dist/login1.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","建筑"]
 	    }

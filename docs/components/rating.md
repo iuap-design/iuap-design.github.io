@@ -24,8 +24,6 @@
     float: left;
 }
 </style></div>
-<div class="example-content"> <div class="u-rating" data-score="3" data-plugin="rating"></div>
-</div>
 <div class="example-content"><script>(function(document, window, $) {
     'use strict';
     
@@ -33,11 +31,11 @@
         targetKeep: true,
         icon: "font",
         starType: "i",
-        starOff: "icon fa fa-star",
-        starOn: "icon fa fa-star orange-600",
-        cancelOff: "icon fa fa-minus-circle",
-        cancelOn: "icon  fa fa-minus-circle orange-600",
-        starHalf: "icon fa fa-half-o orange-500"
+        starOff: "icon uf uf-star",
+        starOn: "icon uf uf-star orange-600",
+        cancelOff: "icon uf uf-minussigninsideablackcircle",
+        cancelOn: "icon  uf uf-minussigninsideablackcircle orange-600",
+        starHalf: "icon uf uf-starhalfempty orange-500"
       };
       $('[data-plugin="rating"]').each(function() {
           var $this = $(this);
@@ -48,6 +46,8 @@
     // });
   })(document, window, jQuery);
 </script></div>
+<div class="example-content"> <div class="u-rating" data-score="3" data-plugin="rating"></div>
+</div>
 <div class="examples-code"><pre><code>.content{
     padding: 10px;
 }
@@ -60,8 +60,6 @@
     float: left;
 }</code></pre>
 </div>
-<div class="examples-code"><pre><code> &lt;div class="u-rating" data-score="3" data-plugin="rating">&lt;/div></code></pre>
-</div>
 <div class="examples-code"><pre><code>(function(document, window, $) {
     'use strict';
     
@@ -69,11 +67,11 @@
         targetKeep: true,
         icon: "font",
         starType: "i",
-        starOff: "icon fa fa-star",
-        starOn: "icon fa fa-star orange-600",
-        cancelOff: "icon fa fa-minus-circle",
-        cancelOn: "icon  fa fa-minus-circle orange-600",
-        starHalf: "icon fa fa-half-o orange-500"
+        starOff: "icon uf uf-star",
+        starOn: "icon uf uf-star orange-600",
+        cancelOff: "icon uf uf-minussigninsideablackcircle",
+        cancelOn: "icon  uf uf-minussigninsideablackcircle orange-600",
+        starHalf: "icon uf uf-starhalfempty orange-500"
       };
       $('[data-plugin="rating"]').each(function() {
           var $this = $(this);
@@ -84,6 +82,8 @@
       // }
     // });
   })(document, window, jQuery);</code></pre>
+</div>
+<div class="examples-code"><pre><code> &lt;div class="u-rating" data-score="3" data-plugin="rating">&lt;/div></code></pre>
 </div>
 
 ##所个star的Rating
@@ -112,11 +112,11 @@
         targetKeep: true,
         icon: "font",
         starType: "i",
-        starOff: "icon fa fa-star",
-        starOn: "icon fa fa-star orange-600",
-        cancelOff: "icon fa fa-minus-circle",
-        cancelOn: "icon  fa fa-minus-circle orange-600",
-        starHalf: "icon fa fa-half-o orange-500"
+        starOff: "icon uf uf-star",
+        starOn: "icon uf uf-star orange-600",
+        cancelOff: "icon uf uf-minussigninsideablackcircle",
+        cancelOn: "icon  uf uf-minussigninsideablackcircle orange-600",
+        starHalf: "icon uf uf-starhalfempty orange-500"
       };
       $('[data-plugin="rating"]').each(function() {
           var $this = $(this);
@@ -155,11 +155,11 @@
         targetKeep: true,
         icon: "font",
         starType: "i",
-        starOff: "icon fa fa-star",
-        starOn: "icon fa fa-star orange-600",
-        cancelOff: "icon fa fa-minus-circle",
-        cancelOn: "icon  fa fa-minus-circle orange-600",
-        starHalf: "icon fa fa-half-o orange-500"
+        starOff: "icon uf uf-star",
+        starOn: "icon uf uf-star orange-600",
+        cancelOff: "icon uf uf-minussigninsideablackcircle",
+        cancelOn: "icon  uf uf-minussigninsideablackcircle orange-600",
+        starHalf: "icon uf uf-starhalfempty orange-500"
       };
       $('[data-plugin="rating"]').each(function() {
           var $this = $(this);
@@ -210,11 +210,11 @@ u-rating-lg u-rating-sm供尺寸的选择
         targetKeep: true,
         icon: "font",
         starType: "i",
-        starOff: "icon fa fa-star",
-        starOn: "icon fa fa-star orange-600",
-        cancelOff: "icon fa fa-minus-circle",
-        cancelOn: "icon  fa fa-minus-circle orange-600",
-        starHalf: "icon fa fa-half-o orange-500"
+        starOff: "icon uf uf-star",
+        starOn: "icon uf uf-star orange-600",
+        cancelOff: "icon uf uf-minussigninsideablackcircle",
+        cancelOn: "icon  uf uf-minussigninsideablackcircle orange-600",
+        starHalf: "icon uf uf-starhalfempty orange-500"
       };
       $('[data-plugin="rating"]').each(function() {
           var $this = $(this);
@@ -261,11 +261,11 @@ u-rating-lg u-rating-sm供尺寸的选择
         targetKeep: true,
         icon: "font",
         starType: "i",
-        starOff: "icon fa fa-star",
-        starOn: "icon fa fa-star orange-600",
-        cancelOff: "icon fa fa-minus-circle",
-        cancelOn: "icon  fa fa-minus-circle orange-600",
-        starHalf: "icon fa fa-half-o orange-500"
+        starOff: "icon uf uf-star",
+        starOn: "icon uf uf-star orange-600",
+        cancelOff: "icon uf uf-minussigninsideablackcircle",
+        cancelOn: "icon  uf uf-minussigninsideablackcircle orange-600",
+        starHalf: "icon uf uf-starhalfempty orange-500"
       };
       $('[data-plugin="rating"]').each(function() {
           var $this = $(this);
