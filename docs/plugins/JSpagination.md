@@ -18,9 +18,8 @@
 
 ##基础分页
 <div class="example-content"><div id='pagination' class='u-pagination'>
-</div>
-</div>
-<div class="example-content"><script>  var element = document.getElementById("pagination");
+</div></div>
+<div class="example-content ex-hide"><script>  var element = document.getElementById("pagination");
   var comp = new u.pagination({ el: element,showState:false });
   comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });
   this.comp.on('pageChange', function(pageIndex) {
@@ -47,9 +46,8 @@
 ##有间距的分页
 添加样式`pagination-gap`可以增加页码之间的间距
 <div class="example-content"><div id='paginationGap' class='u-pagination pagination-gap'>
-</div>
-</div>
-<div class="example-content"><script> var paginationGap = document.getElementById('paginationGap');
+</div></div>
+<div class="example-content ex-hide"><script> var paginationGap = document.getElementById('paginationGap');
 
  var comp = new u.pagination({ el: paginationGap, showState:false  });
 
@@ -83,9 +81,7 @@
 	    <td>pagination</td>
 	    <td>1.el:分页绑定的dom元素  2.jumppage：是否可跳转到某页。type为：boolean</td>
 	    <td>new u.pagination(paramter)</td>
-	    <td>创建一个分
-			页对象
-		</td>
+	    <td>创建一个分页对象</td>
 	    <td></td>
 	  </tr>
 	  <tr>
@@ -97,12 +93,7 @@
 			4.totalCount:总条数
  		</td>
 	    <td>
-	    	comp.update(
-			{totalPages: 100,
-			 pageSize:20,
-			currentPage:1,
-			totalCount:200
-			});
+	    	comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200});
 	    </td>
 	    <td>更新分页的一些属性</td>
 	    <td></td>

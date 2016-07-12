@@ -8,27 +8,27 @@
 
 # 用法
 
-1. 定义触发弹出事件的DOM
+1.定义触发弹出事件的DOM
 
 ```
 <button id="msgBtn" class="u-button" >Success</button>
 
 ```
-2. 定义弹出信息的具体内容
+2.定义弹出信息的具体内容
 
 ```
 var rightInfo='<i class="fa fa-check-circle margin-r-5"></i>成功信息!!!';
 
 ```
 
-3. js 获取dom
+3.js 获取dom
 
 ```
 var msgBtn = document.body.querySelector("#msgBtn");
 
 ```
 
-4. 绑定弹框事件
+4.绑定弹框事件
 
 ```
 u.on(msgBtn,'click', function(){ 
@@ -41,15 +41,14 @@ u.on(msgBtn,'click', function(){
 
 
 点击 Success 弹出提示消息
-<div class="example-content"><script>var msgBtn = document.body.querySelector("#msgBtn");
+<div class="example-content"><button id="msgBtn" class="u-button" >Success</button>
+</div>
+<div class="example-content ex-hide"><script>var msgBtn = document.body.querySelector("#msgBtn");
 var rightInfo='<i class="fa fa-check-circle margin-r-5"></i>成功信息!!!';
 u.on(msgBtn,'click', function(){ 
     u.showMessage({msg:rightInfo,position:"center"})
 })
 </script></div>
-<div class="example-content"><button id="msgBtn" class="u-button" >Success</button>
-
-</div>
 <div class="examples-code"><pre><code>var msgBtn = document.body.querySelector("#msgBtn");
 var rightInfo='&lt;i class="fa fa-check-circle margin-r-5">&lt;/i>成功信息!!!';
 u.on(msgBtn,'click', function(){ 
@@ -81,6 +80,7 @@ u.on(msgBtn,'click', function(){
 	    <td><i class="fa fa-check-circle margin-r-5"></i>成功信息!!!';</td>
 	    <td></td>
 	  </tr>
+	  <tr>
 	    <td>position</td>
 	    <td>string</td>
 	    <td>center</td>

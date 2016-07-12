@@ -27,7 +27,7 @@ js会根据`u-year`来定位dom，然后绑定事件。
 
 
 
-<div class="example-content"><style>.example .u-input{
+<div class="example-content ex-hide"><style>.example .u-input{
 	border: 1px solid rgba(0,0,0, 0.12);
 	width: 250px;
 }
@@ -36,8 +36,7 @@ js会根据`u-year`来定位dom，然后绑定事件。
 	<div class='u-year'>
 	    <input class="u-input" type="text">
 	</div>
-</div>
-</div>
+</div></div>
 <div class="examples-code"><pre><code>.example .u-input{
 	border: 1px solid rgba(0,0,0, 0.12);
 	width: 250px;
