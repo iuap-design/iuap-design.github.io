@@ -32,9 +32,8 @@ dataArray：下拉数据，数组形式如：`[{value:'01',name:'男'},{value:'0
         <input class="u-form-control" />
         <span class="u-form-control-feedback fa fa-angle-down" data-role="combo-button"></span>
     </div>
-</div>
-</div>
-<div class="example-content"><script>u.compMgr.updateComp();
+</div></div>
+<div class="example-content ex-hide"><script>u.compMgr.updateComp();
 document.getElementById('combo3')['u.Combo'].setComboData([{value:'01',name:'java'},{value:'02',name:'javascript'},{value:'03',name:'C'},{value:'04',name:'C++'}]);
 </script></div>
 <div class="examples-code"><pre><code>&lt;div class="u-combo mutil-select" id="combo3">
@@ -49,20 +48,16 @@ document.getElementById('combo3')['u.Combo'].setComboData([{value:'01',name:'jav
 </div>
 
 
-<div class="example-content"><script>u.compMgr.updateComp();
-document.getElementById('combo1')['u.Combo'].setComboData([{value:'01',name:'男'},{value:'02',name:'女'}]);
-</script></div>
 <div class="example-content"><div class="u-combo" id="combo1" style="margin: 10px">
     <div class="u-input-group u-has-feedback">
         <div class="u-input-group-before" style="color: red;">*</div>
         <input class="u-form-control" />
         <span class="u-form-control-feedback fa fa-angle-down" data-role="combo-button"></span>
     </div>
-</div>
-</div>
-<div class="examples-code"><pre><code>u.compMgr.updateComp();
-document.getElementById('combo1')['u.Combo'].setComboData([{value:'01',name:'男'},{value:'02',name:'女'}]);</code></pre>
-</div>
+</div></div>
+<div class="example-content ex-hide"><script>u.compMgr.updateComp();
+document.getElementById('combo1')['u.Combo'].setComboData([{value:'01',name:'男'},{value:'02',name:'女'}]);
+</script></div>
 <div class="examples-code"><pre><code>&lt;div class="u-combo" id="combo1" style="margin: 10px">
     &lt;div class="u-input-group u-has-feedback">
         &lt;div class="u-input-group-before" style="color: red;">*&lt;/div>
@@ -70,6 +65,9 @@ document.getElementById('combo1')['u.Combo'].setComboData([{value:'01',name:'男
         &lt;span class="u-form-control-feedback fa fa-angle-down" data-role="combo-button">&lt;/span>
     &lt;/div>
 &lt;/div></code></pre>
+</div>
+<div class="examples-code"><pre><code>u.compMgr.updateComp();
+document.getElementById('combo1')['u.Combo'].setComboData([{value:'01',name:'男'},{value:'02',name:'女'}]);</code></pre>
 </div>
 
 

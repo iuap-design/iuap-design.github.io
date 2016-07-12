@@ -2,421 +2,159 @@
 
 此为前端开发团队遵循和约定的 JavaScript 编码规范，意在提高代码的规范性和可维护性。
 
-## 目录
+## <a name='TOC'>内容列表</a>
 
-1. [空格](#空格)
-2. [换行](#换行)
-3. [变量](#变量)
-4. [字符串](#字符串)
-5. [块状代码](#块状代码)
-6. [类型检测](#类型检测)
-7. [条件判断](#条件判断)
-8. [命名](#命名)
-8. [注释](#注释)
-9. [其他](#其他)
+  1. [类型](#types)
+  1. [对象](#objects)
+  1. [数组](#arrays)
+  1. [字符串](#strings)
+  1. [函数](#functions)
+  1. [属性](#properties)
+  1. [变量](#variables)
+  1. [条件表达式和等号](#conditionals)
+  1. [块](#blocks)
+  1. [注释](#comments)
+  1. [空白](#whitespace)
+  1. [逗号](#commas)
+  1. [分号](#semicolons)
+  1. [类型转换](#type-coercion)
+  1. [命名约定](#naming-conventions)
+  1. [存取器](#accessors)
+  1. [构造器](#constructors)
+  1. [事件](#events)
+  1. [模块](#modules)
+  1. [jQuery](#jquery)
+  1. [ES5 兼容性](#es5)
+  1. [性能](#performance)
+  1. [资源](#resources)
+  1. [哪些人在使用](#in-the-wild)
+  1. [翻译](#translation)
+  1. [JavaScript风格指南](#guide-guide)
+  1. [贡献者](#contributors)
+  1. [许可](#license)
 
-## 空格
+## <a name='types'>类型</a>
 
-在特定的位置加上空格可以提高代码的可读性。
+  - **原始值**: 相当于传值
 
-* 必须「MUST」采用4个空格为一次缩进。
+    + `string`
+    + `number`
+    + `boolean`
+    + `null`
+    + `undefined`
 
     ```javascript
-    // bad
-    function() {
-    ∙∙var name;
-    }
+    var foo = 1,
+        bar = foo;
 
-    // bad
-    function() {
-    ∙var name;
-    }
+    bar = 9;
 
-    // good
-    function() {
-    ∙∙∙∙var name;
-    }
+    console.log(foo, bar); // => 1, 9
+    ```
+  - **复杂类型**: 相当于传引用
+
+    + `object`
+    + `array`
+    + `function`
+
+    ```javascript
+    var foo = [1, 2],
+        bar = foo;
+
+    bar[0] = 9;
+
+    console.log(foo[0], bar[0]); // => 9, 9
     ```
 
-* 在大括号开始处的前面必须「MUST」使用空格。
+    **[[⬆]](#TOC)**
+
+## <a name='objects'>对象</a>
+
+  - 使用字面值创建对象
 
     ```javascript
     // bad
-    function test(){
-        console.log('test');
-    }
+    var item = new Object();
 
     // good
-    function test() {
-        console.log('test');
-    }
-
-    // bad
-    dog.set('attr',{
-        age: '1 year',
-        breed: 'Bernese Mountain Dog'
-    });
-
-    // good
-    dog.set('attr', {
-        age: '1 year',
-        breed: 'Bernese Mountain Dog'
-    });
+    var item = {};
     ```
 
-* 在以下关键词后面必须「MUST」使用空格: if/else/for/while/do/try/catch/finanlly。
-
-    ```javascript
-    // good
-    if (condition) {
-        // statements
-    }
-
-    while (condition) {
-        // statements
-    }
-
-    for (var i = 0; i < 100; i++) {
-        // statements
-    }
-
-    if (true) {
-        // statements
-    } else {
-        // statements
-    }
-    ```
-
-* 在对象属性中的 `:` 后面「MUST」使用空格。
-* 在对象属性中的 `:` 前面不允许「MUST NOT」使用空格。
+  - 不要使用保留字 [reserved words](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Reserved_Words) 作为键
 
     ```javascript
     // bad
-    var obj = {
-        a : 1,
-        b:2,
-        c :3
+    var superman = {
+      class: 'superhero',
+      default: { clark: 'kent' },
+      private: true
     };
 
     // good
-    var obj = {
-        a: 1,
-        b: 2,
-        c: 3
+    var superman = {
+      klass: 'superhero',
+      defaults: { clark: 'kent' },
+      hidden: true
     };
     ```
-* 在二元运算符左右必须「MUST」使用空格。
+    **[[⬆]](#TOC)**
+
+## <a name='arrays'>数组</a>
+
+  - 使用字面值创建数组
 
     ```javascript
     // bad
-    var x=y+5;
+    var items = new Array();
 
     // good
-    var x = y + 5;
+    var items = [];
     ```
 
-* 一元运算符（如：!, ++ 等等）与操作对象之间不允许「MUST NOT」使用空格。
+  - 如果你不知道数组的长度，使用push
 
     ```javascript
-    // bad
-    var a = ! arr.length;
+    var someStack = [];
 
-    a ++;
+
+    // bad
+    someStack[someStack.length] = 'abracadabra';
 
     // good
-    var a = !arr.length;
-
-    a++;
+    someStack.push('abracadabra');
     ```
 
-* 关键字 `function` 参数的圆括号前面「MUST NOT」使用空格。
+  - 当你需要拷贝数组时使用slice. [jsPerf](http://jsperf.com/converting-arguments-to-an-array/7)
 
     ```javascript
+    var len = items.length,
+        itemsCopy = [],
+        i;
+
     // bad
-    var funcA = function () {
-        // statement
-    };
-
-    // good
-    var funcA = function() {
-        // statement
-    };
-
-    function funcA() {
-        // statement
-    }
-    ```
-
-* 函数参数与左右括号之间不允许「MUST NOT」使用空格。
-
-    ```javascript
-    // bad
-    function funA( a, b ) {
-
-    }
-
-    var funB = function( c ) {
-
-    };
-
-    funA( 1, 2 );
-    funB( 3 );
-
-    // good
-    function funA(a, b) {
-
-    }
-
-    var funB = function(c) {
-
-    };
-
-    funA(1, 2);
-    funB(3);
-    ```
-
-* if/while/switch/for关键词后面的左右括号，与条件体之间不允许「MUST NOT」使用空格。
-
-    ```javascript
-    // bad
-    if ( condition ) {
-        console.log('bad');
-    }
-
-    for ( var i = 0, length = 10; i < length; i++ ) {
-        console.log('bad');
+    for (i = 0; i < len; i++) {
+      itemsCopy[i] = items[i];
     }
 
     // good
-    if (condition) {
-        console.log('good');
-    }
-
-    for (var i = 0, length = 10; i < length; i++) {
-        console.log('bad');
-    }
+    itemsCopy = items.slice();
     ```
 
-* `,` 和 `;` 前面不允许「MUST NOT」使用空格。
+  - 使用slice将类数组的对象转成数组.
 
     ```javascript
-    // bad
-    callFunA(a , b) ;
-
-    // good
-    calFunA(a, b);
-    ```
-
-* 在行末和空行中不允许「MUST NOT」使用空格。
-
-**[⬆ Top](#目录)**
-
-## 换行
-
-适当的换行和空行可以提高代码可读性。
-
-* 每一行代码严格以 120 字符为最大长度，即一行包括前后的空格， 不应该「SHOULD NOT」超过 120 个字符。
-* 每个独立语句结束后面必须「MUST」使用换行。
-
-    ```javascript
-    // bad
-    api.callFunA(); api.callFunB();
-
-    // good
-    api.callFunA();
-    api.callFunB();
-    ```
-
-* 换行后不得「MUST NOT」让操作符位于位于新行行首。
-
-    ```javascript
-    // bad
-    a = 124343 + 34343
-        + 45454;
-
-    // good
-    a = 124343 + 34343 +
-        45454;
-
-    // bad
-    if (condition1
-        && condition2
-        && condition3) {
-
-    }
-
-    // good
-    if (condition1 &&
-        condition2 &&
-        condition3) {
-
-    }
-
-    // bad
-    function funA(firstArg, sencondArg
-        , thirdArg) {
-        // statement
-    }
-
-    // good
-    function funA(firstArg, sencondArg,
-        thirdArg) {
-        // statement
-    }
-    ```
-* 在文件结尾处应该「SHOULD」留一个空行。
-
-    ```javascript
-    // bad
-    (function(global) {
-        // ...stuff...
-    })(this);
-    ```
-
-    ```javascript
-    // good
-    (function(global) {
-        // ...stuff...
-    })(this);
-
-    ```
-
-* 链式调用较长时应当「SHOULD」采用缩进进行调整。
-
-    ```javascript
-    // bad
-    $('#items').find('.selected').highlight().end().find('.open').updateCount();
-
-    // good
-    $('#items')
-        .find('.selected')
-            .highlight()
-            .end()
-        .find('.open')
-            .updateCount();
-    ```
-
-* 块状代码与其他部分应该「SHOULD」使用至少一个空行分割。
-
-    ```javascript
-    // bad
-    callFunA();
-    if (condition) {
-        doSomeThings();
-    }
-    callFunB();
-
-    obj = {
-        a: 1,
-        b: 2,
-        c: function() {
-            // do some things.
-        },
-        d: {
-            x: 1,
-            y: 2
-        }
-    };
-
-    // good
-    callFunA();
-
-    if (condition) {
-        doSomeThings();
-    }
-
-    callFunB();
-
-    obj = {
-        a: 1,
-        b: 2,
-
-        c: function() {
-            // do some things.
-        },
-
-        d: {
-            x: 1,
-            y: 2
-        }
-    };
-
-    ```
-
-**[⬆ Top](#目录)**
-
-## 变量
-
-* 变量在使用前必须「MUST」使用 `var` 申明，不要污染到全局。
-
-    ```javascript
-    // bad
-    superPower = new SuperPower();
-
-    // good
-    var superPower = new SuperPower();
-    ```
-
-* 多个变量申明，应当「SHOULD」采用多个 `var` 来申明，每个 `var` 申明独占一行，且一次申明一个变量。
-
-    ```javascript
-    // bad
-    var items = getItems(),
-        goSportsTeam = true,
-        dragonball = 'z';
-
-    // good
-    var items = getItems();
-    var goSportsTeam = true;
-    var dragonball = 'z';
-    ```
-
-* 多个非赋值的变量申明可以「MAY」共用一个 `var`，但是单行不得超出120个字符字符。
-
-    ```javascript
-    // good.
-    var a = 1;
-    var b = 2;
-    var c, d, e, f, g;
-    ```
-
-* 同一个作用域下的变量应当「SHOULD」统一在 `function` 头部申明。
-
-    ```javascript
-    // bad
-    function funA(arg) {
-        doSomething();
-
-        var a = 3;
-
-        if (condition) {
-            var b = 2;
-        }
-
-        var c = 1;
-    }
-
-    // good
-    function funA(arg) {
-        var a = 3;
-        var c = 1;
-        var b;
-
-        doSomething();
-
-        if (condition) {
-            b = 2;
-        }
+    function trigger() {
+      var args = Array.prototype.slice.call(arguments);
+      ...
     }
     ```
 
-更多关于 [oneVar](http://benalman.com/news/2012/05/multiple-var-statements-javascript/)的讨论。
+    **[[⬆]](#TOC)**
 
-**[⬆ Top](#目录)**
 
-## 字符串
+## <a name='strings'>字符串</a>
 
-* 必须「MUST」统一采用单引号 `''`。
+  - 对字符串使用单引号 `''`
 
     ```javascript
     // bad
@@ -432,217 +170,283 @@
     var fullName = 'Bob ' + this.lastName;
     ```
 
-* 超长字符串应当「SHOULD」使用 `+` 进行换行。
+  - 超过80个字符的字符串应该使用字符串连接换行
+  - 注: 如果过度使用，长字符串连接可能会对性能有影响. [jsPerf](http://jsperf.com/ya-string-concat) & [Discussion](https://github.com/airbnb/javascript/issues/40)
 
     ```javascript
-    // 正确
-    var myString = 'A rather long string of English text, an error message ' +
-                 'actually that just keeps going and going -- an error ' +
-                 'message to make the Energizer bunny blush (right through ' +
-                 'those Schwarzenegger shades)! Where was I? Oh yes, ' +
-                 'you\'ve got an error and all the extraneous whitespace is ' +
-                 'just gravy.  Have a nice day.';
+    // bad
+    var errorMessage = 'This is a super long error that was thrown because of Batman. When you stop to think about how Batman had anything to do with this, you would get nowhere fast.';
 
-    // 错误
-    var myString = 'A rather long string of English text, an error message \
-                  actually that just keeps going and going -- an error \
-                  message to make the Energizer bunny blush (right through \
-                  those Schwarzenegger shades)! Where was I? Oh yes, \
-                  you\'ve got an error and all the extraneous whitespace is \
-                  just gravy.  Have a nice day.';
+    // bad
+    var errorMessage = 'This is a super long error that \
+    was thrown because of Batman. \
+    When you stop to think about \
+    how Batman had anything to do \
+    with this, you would get nowhere \
+    fast.';
+
+
+    // good
+    var errorMessage = 'This is a super long error that ' +
+      'was thrown because of Batman.' +
+      'When you stop to think about ' +
+      'how Batman had anything to do ' +
+      'with this, you would get nowhere ' +
+      'fast.';
     ```
 
-**[⬆ Top](#目录)**
+  - 编程时使用join而不是字符串连接来构建字符串，特别是IE: [jsPerf](http://jsperf.com/string-vs-array-concat/2).
 
-## 块状代码
+    ```javascript
+    var items,
+        messages,
+        length, i;
 
-所有的**多行**块状代码应当「SHOULD」使用大括号括起来。
+    messages = [{
+        state: 'success',
+        message: 'This one worked.'
+    },{
+        state: 'success',
+        message: 'This one worked as well.'
+    },{
+        state: 'error',
+        message: 'This one did not work.'
+    }];
 
-```javascript
-// bad
-if (test)
-  return false;
+    length = messages.length;
 
-// good
-if (test) return false;
+    // bad
+    function inbox(messages) {
+      items = '<ul>';
 
-// good
-if (test) {
-    return false;
-}
+      for (i = 0; i < length; i++) {
+        items += '<li>' + messages[i].message + '</li>';
+      }
 
-// bad
-function() { return false; }
+      return items + '</ul>';
+    }
 
-// good
-function() {
-    return false;
-}
-```
+    // good
+    function inbox(messages) {
+      items = [];
 
-**[⬆ Top](#目录)**
+      for (i = 0; i < length; i++) {
+        items[i] = messages[i].message;
+      }
 
-## 类型检测
+      return '<ul><li>' + items.join('</li><li>') + '</li></ul>';
+    }
+    ```
 
-### 基本类型检测
+    **[[⬆]](#TOC)**
 
-* String: `typeof variable === 'string'`
-* Number: `typeof variable === 'number'`
-* Boolean: `typeof variable === 'boolean'`
-* Object: `typeof variable === 'object'`
-* Array: 如果支持，使用：`Array.isArray( arrayLikeObject )`
-* Node: `elem.nodeType === 1`
-* null: `variable === null`
-* null or undefined:: `variable == null`
-* undefined
-    * 全局变量: `typeof variable === 'undefined'`
-    * 局部变量: `variable === undefined`
-    * 属性:
 
-        ```javascript
-        object.prop === undefined
-        object.hasOwnProperty( prop )
-        'prop' in object
-        ```
+## <a name='functions'>函数</a>
 
-### 强制类型转换
+  - 函数表达式:
 
-以下是一些常见的类型装换的例子，推荐使用。
+    ```javascript
+    // 匿名函数表达式
+    var anonymous = function() {
+      return true;
+    };
 
-```javascript
-var number = 1,
-  string = '1',
-  bool = false;
+    // 有名函数表达式
+    var named = function named() {
+      return true;
+    };
 
-number;
-// 1
+    // 立即调用函数表达式
+    (function() {
+      console.log('Welcome to the Internet. Please follow me.');
+    })();
+    ```
 
-number + '';
-// '1'
+  - 绝对不要在一个非函数块里声明一个函数，把那个函数赋给一个变量。浏览器允许你这么做，但是它们解析不同。
+  - **注:** ECMA-262定义把`块`定义为一组语句，函数声明不是一个语句。[阅读ECMA-262对这个问题的说明](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf#page=97).
 
-string;
-// '1'
+    ```javascript
+    // bad
+    if (currentUser) {
+      function test() {
+        console.log('Nope.');
+      }
+    }
 
-+string;
-// 1
+    // good
+    if (currentUser) {
+      var test = function test() {
+        console.log('Yup.');
+      };
+    }
+    ```
 
-+string++;
-// 1
+  - 绝对不要把参数命名为 `arguments`, 这将会逾越函数作用域内传过来的 `arguments` 对象.
 
-string;
-// 2
+    ```javascript
+    // bad
+    function nope(name, options, arguments) {
+      // ...stuff...
+    }
 
-bool;
-// false
+    // good
+    function yup(name, options, args) {
+      // ...stuff...
+    }
+    ```
 
-+bool;
-// 0
+    **[[⬆]](#TOC)**
 
-bool + '';
-// 'false'
-```
 
-```javascript
-var number = 1,
-  string = '1',
-  bool = true;
+## <a name='properties'>属性</a>
 
-string === number;
-// false
+  - 当使用变量访问属性时使用中括号.
 
-string === number + '';
-// true
+    ```javascript
+    var luke = {
+      jedi: true,
+      age: 28
+    };
 
-+string === number;
-// true
+    function getProp(prop) {
+      return luke[prop];
+    }
 
-bool === number;
-// false
+    var isJedi = getProp('jedi');
+    ```
 
-+bool === number;
-// true
+    **[[⬆]](#TOC)**
 
-bool === string;
-// false
 
-bool === !!string;
-// true
-```
+## <a name='variables'>变量</a>
 
-```javascript
-var array = [ 'a', 'b', 'c' ];
+  - 总是使用 `var` 来声明变量，如果不这么做将导致产生全局变量，我们要避免污染全局命名空间。
 
-!!~array.indexOf('a');
-// true
+    ```javascript
+    // bad
+    superPower = new SuperPower();
 
-!!~array.indexOf('b');
-// true
+    // good
+    var superPower = new SuperPower();
+    ```
 
-!!~array.indexOf('c');
-// true
+  - 使用一个 `var` 以及新行声明多个变量，缩进4个空格。
 
-!!~array.indexOf('d');
-// false
-```
+    ```javascript
+    // bad
+    var items = getItems();
+    var goSportsTeam = true;
+    var dragonball = 'z';
 
-```javascript
-var num = 2.5;
+    // good
+    var items = getItems(),
+        goSportsTeam = true,
+        dragonball = 'z';
+    ```
 
-parseInt(num, 10);
+  - 最后再声明未赋值的变量，当你想引用之前已赋值变量的时候很有用。
 
-// is the same as...
+    ```javascript
+    // bad
+    var i, len, dragonball,
+        items = getItems(),
+        goSportsTeam = true;
 
-~~num;
+    // bad
+    var i, items = getItems(),
+        dragonball,
+        goSportsTeam = true,
+        len;
 
-num >> 0;
+    // good
+    var items = getItems(),
+        goSportsTeam = true,
+        dragonball,
+        length,
+        i;
+    ```
 
-num >>> 0;
+  - 在作用域顶部声明变量，避免变量声明和赋值引起的相关问题。
 
-// All result in 2
+    ```javascript
+    // bad
+    function() {
+      test();
+      console.log('doing stuff..');
 
-// Keep in mind however, that negative numbers will be treated differently...
+      //..other stuff..
 
-var neg = -2.5;
+      var name = getName();
 
-parseInt(neg, 10);
+      if (name === 'test') {
+        return false;
+      }
 
-// is the same as...
+      return name;
+    }
 
-~~neg;
+    // good
+    function() {
+      var name = getName();
 
-neg >> 0;
+      test();
+      console.log('doing stuff..');
 
-// All result in -2
-// However...
+      //..other stuff..
 
-neg >>> 0;
+      if (name === 'test') {
+        return false;
+      }
 
-// Will result in 4294967294
-```
+      return name;
+    }
 
-**注意** 使用`parseInt`进行数字类型转换的时候，应当「SHOULD」指定第二个参数，以免误当八进制解析。
+    // bad
+    function() {
+      var name = getName();
 
-**[⬆ Top](#目录)**
+      if (!arguments.length) {
+        return false;
+      }
 
-## 条件判断
+      return true;
+    }
 
-* 应当「SHOULD」使用 `===` 和 `!==` 代替 `==` 和 `!=`。
-* 条件判断遵循以下规则
-    * **Objects** 等同于 **true**
-    * **Undefined** 等同于 **false**
-    * **Null** 等同于 **false**
-    * **Booleans** 等同于**此布尔变量的值**
-    * **Numbers** 如果是 **+0, -0, 或者 NaN** 等同于 **false**，其他情况等同于 **true**。
-    * **Strings**，当字符是空字符串 `''` 时，等同于 **flase**，其他情况等同于 **true**。
+    // good
+    function() {
+      if (!arguments.length) {
+        return false;
+      }
+
+      var name = getName();
+
+      return true;
+    }
+    ```
+
+    **[[⬆]](#TOC)**
+
+
+## <a name='conditionals'>条件表达式和等号</a>
+
+  - 适当使用 `===` 和 `!==` 以及 `==` 和 `!=`.
+  - 条件表达式的强制类型转换遵循以下规则：
+
+    + **对象** 被计算为 **true**
+    + **Undefined** 被计算为 **false**
+    + **Null** 被计算为 **false**
+    + **布尔值** 被计算为 **布尔的值**
+    + **数字** 如果是 **+0, -0, or NaN** 被计算为 **false** , 否则为 **true**
+    + **字符串** 如果是空字符串 `''` 则被计算为 **false**, 否则为 **true**
 
     ```javascript
     if ([0]) {
       // true
-      // 数组属于Objects,等同于true
+      // An array is an object, objects evaluate to true
     }
     ```
 
-* 应当「SHOULD」使用最简捷的方式判断。
+  - 使用快捷方式.
 
     ```javascript
     // bad
@@ -666,191 +470,795 @@ neg >>> 0;
     }
     ```
 
-更多信息请查看 [Truth Equality and JavaScript](http://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/#more-2108)。
+  - 阅读 [Truth Equality and JavaScript](http://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/#more-2108) 了解更多
 
-**[⬆ Top](#目录)**
+    **[[⬆]](#TOC)**
 
-## 命名
 
-**说明**
+## <a name='blocks'>块</a>
 
-* camel 命名法，形如 thisIsAnApple
-* pascal 命名法，形如 ThisIsAnApple
-* 下划线命名法，形如 `this_is_an_apple`
-
-根据不同类型的内容， 必须「MUST」严格采用如下的命名法：
-
-* **变量名：**
-    必须「MUST」使用 camel 命名法
-* **参数名：**
-    必须「MUST」使用 camel 命名法
-* **函数名：**
-    必须「MUST」使用 camel 命名法
-* **方法、属性：**
-    必须「MUST」使用 camel 命名法
-* **私有成员、方法：**
-    必须「MUST」以下划线 `_` 开头
-* **数据库相关表名、字段名、网络参数、地址：**
-    必须「MUST」使用 下划线 命名法
-* **常量名：**
-    必须「MUST」使用全部大写的下划线命名法，如 IS_DEBUG_ENABLED
-* **类名：**
-    必须「MUST」使用 pascal 命名法
-* **专有名词：**
-    必须「MUST」使用官方写法，如 `HTML`，而不是 `Html`
-
-### 语义
-
-命名同时还需要关注语义，如：
-
-* 变量名 应当「SHOULD」使用名词
-* **Boolean** 类型的 应当「SHOULD」使用 **is**、**has** 等起头，表示其类型
-* 函数名 应当「SHOULD」用动宾短语
-* 类名 应当「SHOULD」用名词
-
-**[⬆ Top](#目录)**
-
-## 注释
-
-* JS 文档注释，每个 JS 文件顶部都应当「SHOULD」包含关于 JS 文件功能的注释信息。
+  - 给所有多行的块使用大括号
 
     ```javascript
+    // bad
+    if (test)
+      return false;
+
+    // good
+    if (test) return false;
+
+    // good
+    if (test) {
+      return false;
+    }
+
+    // bad
+    function() { return false; }
+
+    // good
+    function() {
+      return false;
+    }
+    ```
+
+    **[[⬆]](#TOC)**
+
+
+## <a name='comments'>注释</a>
+
+  - 使用 `/** ... */` 进行多行注释，包括描述，指定类型以及参数值和返回值
+
+    ```javascript
+    // bad
+    // make() returns a new element
+    // based on the passed in tag name
+    //
+    // @param <String> tag
+    // @return <Element> element
+    function make(tag) {
+
+      // ...stuff...
+
+      return element;
+    }
+
+    // good
     /**
-     * @fileoverview 文件功能描述或一些其他相关信息.
+     * make() returns a new element
+     * based on the passed in tag name
+     *
+     * @param <String> tag
+     * @return <Element> element
      */
-    ```
+    function make(tag) {
 
-* 单行注释：以两个斜线开始，以行尾结束，两个斜线与内容之间必须「MUST」使用一个空格。
+      // ...stuff...
 
-    ```javascript
-    // 这是一个注释
-    ```
-
-    单行注释分以下两种：
-
-    1. 独占一行，用来解释下一行代码。这行注释之前应当「SHOULD」有一个空行，且缩进层级和下一行代码必须「MUST」保持一致。
-    1. 在代码行的尾部添加，代码结束到注释之间必须「MUST」至少有一个缩进。注释（包括前面的代码部分）不能「MUST NOT」超过单行最大字符数限制，如果超过则改成第一种注释。
-
-    ```javascript
-    function doSomething() {
-        var a = 3;    // 这变量用来存长度
-
-        // 这个变量用来存宽度
-        var b;
-
-        // 这个变量用来存高度
-        var c;
-
-        if (condition) {
-
-            // 如果代码执行到这，则说明通过安全验证。
-            popupDialog();
-        }
+      return element;
     }
     ```
 
-* 多行注释：当内容比较多用单行注释不能满足需求时，应当「SHOULD」使用多行注释，格式如下，前面应当「MUST」有个空格。
-
-    ```javascript
-    /*
-     * 我的注释
-     * 注释中的第二段
-     */
-    if (condition) {
-        statement
-    }
-    ```
-
-* 避免多余的注释，当代码很明了时不应当「SHOULD NOT」添加注释。
-
-    ```
-    // 不必要的注释
-
-    // 初始化count
-    var count = 10;
-    ```
-
-Doc 注释待完善，参考 [Doc生成工具](https://github.com/2betop/gmudoc)。
-
-**[⬆ Top](#目录)**
-
-## 其他
-
-* 创建 Object/Array 时，应当「SHOULD」采用字面量方式。
+  - 使用 `//` 进行单行注释，在评论对象的上面进行单行注释，注释前放一个空行.
 
     ```javascript
     // bad
-    var item = new Object();
+    var active = true;  // is current tab
 
     // good
-    var item = {};
+    // is current tab
+    var active = true;
 
     // bad
-    var items = new Array();
+    function getType() {
+      console.log('fetching type...');
+      // set the default type to 'no type'
+      var type = this._type || 'no type';
+
+      return type;
+    }
 
     // good
-    var items = [];
-    ```
+    function getType() {
+      console.log('fetching type...');
 
-*  for-in 循环体中应当「SHOULD」用 hasOwnProperty 方法检查成员是否为自身成员。避免来自原型链上的污染。
+      // set the default type to 'no type'
+      var type = this._type || 'no type';
 
-    ```javascript
-    // good
-    for (name in object) {
-
-        if (object.hasOwnProperty(name)) {
-            doSomething();
-        }
+      return type;
     }
     ```
 
-* 不得「MUST NOT」使用 with, void, eval。
-* 函数定义不得「MUST NOT」在 if、for、while 等代码块中定义函数，在函数中定义内嵌函数时应该把函数定义放在顶部，闭包除外。
+  - 如果你有一个问题需要重新来看一下或如果你建议一个需要被实现的解决方法的话需要在你的注释前面加上 `FIXME` 或 `TODO` 帮助其他人迅速理解
+
+    ```javascript
+    function Calculator() {
+
+      // FIXME: shouldn't use a global here
+      total = 0;
+
+      return this;
+    }
+    ```
+
+    ```javascript
+    function Calculator() {
+
+      // TODO: total should be configurable by an options param
+      this.total = 0;
+
+      return this;
+    }
+  ```
+
+    **[[⬆]](#TOC)**
+
+
+## <a name='whitespace'>空白</a>
+
+  - 将tab设为4个空格
 
     ```javascript
     // bad
-    function outerFunc(va) {
-        va = va || 0;
+    function() {
+    ∙∙var name;
+    }
 
-        if (va) {
-            function innerFunc() {
-                //to do....
-            }
-
-            innerFunc();
-        }
+    // bad
+    function() {
+    ∙var name;
     }
 
     // good
-    function outerFunc(va) {
-        va = va || 0;
-
-        function innerFunc() {
-            //to do....
-        }
-
-        if (va) {
-            innerFunc();
-        }
+    function() {
+    ∙∙∙∙var name;
     }
     ```
-
-* 立即执行函数应当「SHOULD」统一采用以下方式。更多信息请查看 [jsperf](http://jsperf.com/bang-function)。
+  - 大括号前放一个空格
 
     ```javascript
+    // bad
+    function test(){
+      console.log('test');
+    }
+
+    // good
+    function test() {
+      console.log('test');
+    }
+
+    // bad
+    dog.set('attr',{
+      age: '1 year',
+      breed: 'Bernese Mountain Dog'
+    });
+
+    // good
+    dog.set('attr', {
+      age: '1 year',
+      breed: 'Bernese Mountain Dog'
+    });
+    ```
+
+  - 在做长方法链时使用缩进.
+
+    ```javascript
+    // bad
+    $('#items').find('.selected').highlight().end().find('.open').updateCount();
+
+    // good
+    $('#items')
+      .find('.selected')
+        .highlight()
+        .end()
+      .find('.open')
+        .updateCount();
+
+    // bad
+    var leds = stage.selectAll('.led').data(data).enter().append('svg:svg').class('led', true)
+        .attr('width',  (radius + margin) * 2).append('svg:g')
+        .attr('transform', 'translate(' + (radius + margin) + ',' + (radius + margin) + ')')
+        .call(tron.led);
+
+    // good
+    var leds = stage.selectAll('.led')
+        .data(data)
+      .enter().append('svg:svg')
+        .class('led', true)
+        .attr('width',  (radius + margin) * 2)
+      .append('svg:g')
+        .attr('transform', 'translate(' + (radius + margin) + ',' + (radius + margin) + ')')
+        .call(tron.led);
+    ```
+
+    **[[⬆]](#TOC)**
+
+## <a name='commas'>逗号</a>
+
+  - 不要将逗号放前面
+
+    ```javascript
+    // bad
+    var once
+      , upon
+      , aTime;
+
+    // good
+    var once,
+        upon,
+        aTime;
+
+    // bad
+    var hero = {
+        firstName: 'Bob'
+      , lastName: 'Parr'
+      , heroName: 'Mr. Incredible'
+      , superPower: 'strength'
+    };
+
+    // good
+    var hero = {
+      firstName: 'Bob',
+      lastName: 'Parr',
+      heroName: 'Mr. Incredible',
+      superPower: 'strength'
+    };
+    ```
+
+  - 不要加多余的逗号，这可能会在IE下引起错误，同时如果多一个逗号某些ES3的实现会计算多数组的长度。
+
+    ```javascript
+    // bad
+    var hero = {
+      firstName: 'Kevin',
+      lastName: 'Flynn',
+    };
+
+    var heroes = [
+      'Batman',
+      'Superman',
+    ];
+
+    // good
+    var hero = {
+      firstName: 'Kevin',
+      lastName: 'Flynn'
+    };
+
+    var heroes = [
+      'Batman',
+      'Superman'
+    ];
+    ```
+
+    **[[⬆]](#TOC)**
+
+
+## <a name='semicolons'>分号</a>
+
+  - 语句结束一定要加分号
+
+    ```javascript
+    // bad
+    (function() {
+      var name = 'Skywalker'
+      return name
+    })()
+
     // good
     (function() {
-        // skiped
+      var name = 'Skywalker';
+      return name;
     })();
 
-    // bad
-    +function() {
-        // skiped
-    }();
-
-    !function() {
-        // skiped
-    }();
+    // good
+    ;(function() {
+      var name = 'Skywalker';
+      return name;
+    })();
     ```
 
-**[⬆ Top](#目录)**
+    **[[⬆]](#TOC)**
+
+
+## <a name='type-coercion'>类型转换</a>
+
+  - 在语句的开始执行类型转换.
+  - 字符串:
+
+    ```javascript
+    //  => this.reviewScore = 9;
+
+    // bad
+    var totalScore = this.reviewScore + '';
+
+    // good
+    var totalScore = '' + this.reviewScore;
+
+    // bad
+    var totalScore = '' + this.reviewScore + ' total score';
+
+    // good
+    var totalScore = this.reviewScore + ' total score';
+    ```
+
+  - 对数字使用 `parseInt` 并且总是带上类型转换的基数.
+
+    ```javascript
+    var inputValue = '4';
+
+    // bad
+    var val = new Number(inputValue);
+
+    // bad
+    var val = +inputValue;
+
+    // bad
+    var val = inputValue >> 0;
+
+    // bad
+    var val = parseInt(inputValue);
+
+    // good
+    var val = Number(inputValue);
+
+    // good
+    var val = parseInt(inputValue, 10);
+
+    // good
+    /**
+     * parseInt was the reason my code was slow.
+     * Bitshifting the String to coerce it to a
+     * Number made it a lot faster.
+     */
+    var val = inputValue >> 0;
+    ```
+
+  - 布尔值:
+
+    ```javascript
+    var age = 0;
+
+    // bad
+    var hasAge = new Boolean(age);
+
+    // good
+    var hasAge = Boolean(age);
+
+    // good
+    var hasAge = !!age;
+    ```
+
+    **[[⬆]](#TOC)**
+
+
+## <a name='naming-conventions'>命名约定</a>
+
+  - 避免单个字符名，让你的变量名有描述意义。
+
+    ```javascript
+    // bad
+    function q() {
+      // ...stuff...
+    }
+
+    // good
+    function query() {
+      // ..stuff..
+    }
+    ```
+
+  - 当命名对象、函数和实例时使用驼峰命名规则
+
+    ```javascript
+    // bad
+    var OBJEcttsssss = {};
+    var this_is_my_object = {};
+    var this-is-my-object = {};
+    function c() {};
+    var u = new user({
+      name: 'Bob Parr'
+    });
+
+    // good
+    var thisIsMyObject = {};
+    function thisIsMyFunction() {};
+    var user = new User({
+      name: 'Bob Parr'
+    });
+    ```
+
+  - 当命名构造函数或类时使用驼峰式大写
+
+    ```javascript
+    // bad
+    function user(options) {
+      this.name = options.name;
+    }
+
+    var bad = new user({
+      name: 'nope'
+    });
+
+    // good
+    function User(options) {
+      this.name = options.name;
+    }
+
+    var good = new User({
+      name: 'yup'
+    });
+    ```
+
+  - 命名私有属性时前面加个下划线 `_`
+
+    ```javascript
+    // bad
+    this.__firstName__ = 'Panda';
+    this.firstName_ = 'Panda';
+
+    // good
+    this._firstName = 'Panda';
+    ```
+
+  - 当保存对 `this` 的引用时使用 `_this`.
+
+    ```javascript
+    // bad
+    function() {
+      var self = this;
+      return function() {
+        console.log(self);
+      };
+    }
+
+    // bad
+    function() {
+      var that = this;
+      return function() {
+        console.log(that);
+      };
+    }
+
+    // good
+    function() {
+      var _this = this;
+      return function() {
+        console.log(_this);
+      };
+    }
+    ```
+
+    **[[⬆]](#TOC)**
+
+
+## <a name='accessors'>存取器</a>
+
+  - 属性的存取器函数不是必需的
+  - 如果你确实有存取器函数的话使用getVal() 和 setVal('hello')
+
+    ```javascript
+    // bad
+    dragon.age();
+
+    // good
+    dragon.getAge();
+
+    // bad
+    dragon.age(25);
+
+    // good
+    dragon.setAge(25);
+    ```
+
+  - 如果属性是布尔值，使用isVal() 或 hasVal()
+
+    ```javascript
+    // bad
+    if (!dragon.age()) {
+      return false;
+    }
+
+    // good
+    if (!dragon.hasAge()) {
+      return false;
+    }
+    ```
+
+  - 可以创建get()和set()函数，但是要保持一致
+
+    ```javascript
+    function Jedi(options) {
+      options || (options = {});
+      var lightsaber = options.lightsaber || 'blue';
+      this.set('lightsaber', lightsaber);
+    }
+
+    Jedi.prototype.set = function(key, val) {
+      this[key] = val;
+    };
+
+    Jedi.prototype.get = function(key) {
+      return this[key];
+    };
+    ```
+
+    **[[⬆]](#TOC)**
+
+
+## <a name='constructors'>构造器</a>
+
+  - 给对象原型分配方法，而不是用一个新的对象覆盖原型，覆盖原型会使继承出现问题。
+
+    ```javascript
+    function Jedi() {
+      console.log('new jedi');
+    }
+
+    // bad
+    Jedi.prototype = {
+      fight: function fight() {
+        console.log('fighting');
+      },
+
+      block: function block() {
+        console.log('blocking');
+      }
+    };
+
+    // good
+    Jedi.prototype.fight = function fight() {
+      console.log('fighting');
+    };
+
+    Jedi.prototype.block = function block() {
+      console.log('blocking');
+    };
+    ```
+
+  - 方法可以返回 `this` 帮助方法可链。
+
+    ```javascript
+    // bad
+    Jedi.prototype.jump = function() {
+      this.jumping = true;
+      return true;
+    };
+
+    Jedi.prototype.setHeight = function(height) {
+      this.height = height;
+    };
+
+    var luke = new Jedi();
+    luke.jump(); // => true
+    luke.setHeight(20) // => undefined
+
+    // good
+    Jedi.prototype.jump = function() {
+      this.jumping = true;
+      return this;
+    };
+
+    Jedi.prototype.setHeight = function(height) {
+      this.height = height;
+      return this;
+    };
+
+    var luke = new Jedi();
+
+    luke.jump()
+      .setHeight(20);
+    ```
+
+
+  - 可以写一个自定义的toString()方法，但是确保它工作正常并且不会有副作用。
+
+    ```javascript
+    function Jedi(options) {
+      options || (options = {});
+      this.name = options.name || 'no name';
+    }
+
+    Jedi.prototype.getName = function getName() {
+      return this.name;
+    };
+
+    Jedi.prototype.toString = function toString() {
+      return 'Jedi - ' + this.getName();
+    };
+    ```
+
+    **[[⬆]](#TOC)**
+
+
+## <a name='events'>事件</a>
+
+  - 当给事件附加数据时，传入一个哈希而不是原始值，这可以让后面的贡献者加入更多数据到事件数据里而不用找出并更新那个事件的事件处理器
+
+    ```js
+    // bad
+    $(this).trigger('listingUpdated', listing.id);
+
+    ...
+
+    $(this).on('listingUpdated', function(e, listingId) {
+      // do something with listingId
+    });
+    ```
+
+    更好:
+
+    ```js
+    // good
+    $(this).trigger('listingUpdated', { listingId : listing.id });
+
+    ...
+
+    $(this).on('listingUpdated', function(e, data) {
+      // do something with data.listingId
+    });
+    ```
+
+  **[[⬆]](#TOC)**
+
+
+## <a name='modules'>模块</a>
+
+  - 模块应该以 `!` 开始，这保证了如果一个有问题的模块忘记包含最后的分号在合并后不会出现错误
+  - 这个文件应该以驼峰命名，并在同名文件夹下，同时导出的时候名字一致
+  - 加入一个名为noConflict()的方法来设置导出的模块为之前的版本并返回它
+  - 总是在模块顶部声明 `'use strict';`
+
+    ```javascript
+    // fancyInput/fancyInput.js
+
+    !function(global) {
+      'use strict';
+
+      var previousFancyInput = global.FancyInput;
+
+      function FancyInput(options) {
+        this.options = options || {};
+      }
+
+      FancyInput.noConflict = function noConflict() {
+        global.FancyInput = previousFancyInput;
+        return FancyInput;
+      };
+
+      global.FancyInput = FancyInput;
+    }(this);
+    ```
+
+    **[[⬆]](#TOC)**
+
+
+## <a name='jquery'>jQuery</a>
+
+  - 缓存jQuery查询
+
+    ```javascript
+    // bad
+    function setSidebar() {
+      $('.sidebar').hide();
+
+      // ...stuff...
+
+      $('.sidebar').css({
+        'background-color': 'pink'
+      });
+    }
+
+    // good
+    function setSidebar() {
+      var $sidebar = $('.sidebar');
+      $sidebar.hide();
+
+      // ...stuff...
+
+      $sidebar.css({
+        'background-color': 'pink'
+      });
+    }
+    ```
+
+  - 对DOM查询使用级联的 `$('.sidebar ul')` 或 `$('.sidebar ul')`，[jsPerf](http://jsperf.com/jquery-find-vs-context-sel/16)
+  - 对有作用域的jQuery对象查询使用 `find`
+
+    ```javascript
+    // bad
+    $('.sidebar', 'ul').hide();
+
+    // bad
+    $('.sidebar').find('ul').hide();
+
+    // good
+    $('.sidebar ul').hide();
+
+    // good
+    $('.sidebar > ul').hide();
+
+    // good (slower)
+    $sidebar.find('ul');
+
+    // good (faster)
+    $($sidebar[0]).find('ul');
+    ```
+
+    **[[⬆]](#TOC)**
+
+
+## <a name='es5'>ECMAScript 5兼容性</a>
+
+  - 参考[Kangax](https://twitter.com/kangax/)的 ES5 [compatibility table](http://kangax.github.com/es5-compat-table/)
+
+  **[[⬆]](#TOC)**
+
+
+
+## <a name='performance'>性能</a>
+
+  - [On Layout & Web Performance](http://kellegous.com/j/2013/01/26/layout-performance/)
+  - [String vs Array Concat](http://jsperf.com/string-vs-array-concat/2)
+  - [Try/Catch Cost In a Loop](http://jsperf.com/try-catch-in-loop-cost)
+  - [Bang Function](http://jsperf.com/bang-function)
+  - [jQuery Find vs Context, Selector](http://jsperf.com/jquery-find-vs-context-sel/13)
+  - [innerHTML vs textContent for script text](http://jsperf.com/innerhtml-vs-textcontent-for-script-text)
+  - [Long String Concatenation](http://jsperf.com/ya-string-concat)
+  - Loading...
+
+  **[[⬆]](#TOC)**
+
+
+## <a name='resources'>资源</a>
+
+**Read This**
+
+  - [Annotated ECMAScript 5.1](http://es5.github.com/)
+
+**其它规范**
+
+  - [Google JavaScript Style Guide](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml)
+  - [jQuery Core Style Guidelines](http://docs.jquery.com/JQuery_Core_Style_Guidelines)
+  - [Principles of Writing Consistent, Idiomatic JavaScript](https://github.com/rwldrn/idiomatic.js/)
+
+**其它风格**
+
+  - [Naming this in nested functions](https://gist.github.com/4135065) - Christian Johansen
+  - [Conditional Callbacks](https://github.com/airbnb/javascript/issues/52)
+
+**阅读更多**
+
+  - [Understanding JavaScript Closures](http://javascriptweblog.wordpress.com/2010/10/25/understanding-javascript-closures/) - Angus Croll
+
+**书籍**
+
+  - [JavaScript: The Good Parts](http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742) - Douglas Crockford
+  - [JavaScript Patterns](http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752) - Stoyan Stefanov
+  - [Pro JavaScript Design Patterns](http://www.amazon.com/JavaScript-Design-Patterns-Recipes-Problem-Solution/dp/159059908X)  - Ross Harmes and Dustin Diaz
+  - [High Performance Web Sites: Essential Knowledge for Front-End Engineers](http://www.amazon.com/High-Performance-Web-Sites-Essential/dp/0596529309) - Steve Souders
+  - [Maintainable JavaScript](http://www.amazon.com/Maintainable-JavaScript-Nicholas-C-Zakas/dp/1449327680) - Nicholas C. Zakas
+  - [JavaScript Web Applications](http://www.amazon.com/JavaScript-Web-Applications-Alex-MacCaw/dp/144930351X) - Alex MacCaw
+  - [Pro JavaScript Techniques](http://www.amazon.com/Pro-JavaScript-Techniques-John-Resig/dp/1590597273) - John Resig
+  - [Smashing Node.js: JavaScript Everywhere](http://www.amazon.com/Smashing-Node-js-JavaScript-Everywhere-Magazine/dp/1119962595) - Guillermo Rauch
+
+**博客**
+
+  - [Adam Lu](http://adamlu.com/)
+  - [DailyJS](http://dailyjs.com/)
+  - [JavaScript Weekly](http://javascriptweekly.com/)
+  - [JavaScript, JavaScript...](http://javascriptweblog.wordpress.com/)
+  - [Bocoup Weblog](http://weblog.bocoup.com/)
+  - [Adequately Good](http://www.adequatelygood.com/)
+  - [NCZOnline](http://www.nczonline.net/)
+  - [Perfection Kills](http://perfectionkills.com/)
+  - [Ben Alman](http://benalman.com/)
+  - [Dmitry Baranovskiy](http://dmitry.baranovskiy.com/)
+  - [Dustin Diaz](http://dustindiaz.com/)
+  - [nettuts](http://net.tutsplus.com/?s=javascript)
+
+  **[[⬆]](#TOC)**
+
+# 声明
+
+
+> 本规范由`github`上`adamlu`同学翻译自`airbnb`出品的前端代码规范，[点这里查看原文](https://github.com/GuoYongfeng/javascript)

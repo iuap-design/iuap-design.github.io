@@ -29,6 +29,8 @@
 });
 </script></div>
 <div class="examples-code"><pre><code>&lt;div id="p1" class="u-progress">&lt;/div></code></pre>
+<div class="examples-code"><pre><code>&lt;div id="p2" class="u-progress u-progress__indeterminate">&lt;/div>
+&lt;/p></code></pre>
 </div>
 <div class="examples-code"><pre><code>u.on(window, 'load', function() {
     'use strict';
@@ -47,13 +49,13 @@
 
 });
 </script></div>
-<div class="examples-code"><pre><code>&lt;div id="p3" class="u-progress">&lt;/div></code></pre>
-</div>
 <div class="examples-code"><pre><code>u.on(window, 'load', function() {
     'use strict';
     document.querySelector('#p3')['u.Progress'].setProgress(33).setBuffer(87);
 
 });</code></pre>
+</div>
+<div class="examples-code"><pre><code>&lt;div id="p3" class="u-progress">&lt;/div></code></pre>
 </div>
 
 

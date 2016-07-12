@@ -13,6 +13,11 @@
 
 "/"为分隔符,并添加Home icon
 
+<div class="example-content ex-hide"><style>.md-home:before {
+    content: "\e6a2";
+    font-family: 'uf';
+}
+</style></div>
 <div class="example-content">
 <ol class="u-breadcrumb">
     <li><a class="icon md-home u-link" href="javascript:void(0)">Home</a></li>
@@ -22,13 +27,7 @@
     <li><a class="icon md-home u-link" href="javascript:void(0)">Home</a></li>
     <li><a class="u-link" href="javascript:void(0)">Library</a></li>
     <li class="active">Data</li>
-</ol>
-</div>
-<div class="example-content"><style>.md-home:before {
-    content: "\e6a2";
-    font-family: 'uf';
-}
-</style></div>
+</ol></div>
 <div class="examples-code"><pre><code>
 &lt;ol class="u-breadcrumb">
     &lt;li>&lt;a class="icon md-home u-link" href="javascript:void(0)">Home&lt;/a>&lt;/li>
@@ -60,7 +59,6 @@
     <li><a class="u-link" href="javascript:void(0)">Library</a></li>
     <li class="active">Data</li>
 </ol>
-
 </div>
 <div class="examples-code"><pre><code>
 &lt;ol class="u-breadcrumb">
@@ -80,7 +78,7 @@
 
 ">>"为分隔符
 
-<div class="example-content"><style>.md-home:before {
+<div class="example-content ex-hide"><style>.md-home:before {
     content: "\e6a2";
     font-family: 'uf';
 }
@@ -94,8 +92,7 @@
     <li><a class="u-link" href="javascript:void(0)">Home</a></li>
     <li><a class="u-link" href="javascript:void(0)">Library</a></li>
     <li class="active">Data</li>
-</ol>
-</div>
+</ol></div>
 <div class="examples-code"><pre><code>.md-home:before {
     content: "\e6a2";
     font-family: 'uf';

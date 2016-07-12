@@ -51,7 +51,7 @@
 ##基础Rating
 
 常用于评级评分
-<div class="example-content"><style>.content{
+<div class="example-content ex-hide"><style>.content{
     padding: 10px;
 }
 .example{
@@ -63,9 +63,8 @@
     float: left;
 }
 </style></div>
-<div class="example-content"> <div class="u-rating" data-score="3" data-plugin="rating"></div>
-</div>
-<div class="example-content"><script>(function(document, window, $) {
+<div class="example-content"> <div class="u-rating" data-score="3" data-plugin="rating"></div></div>
+<div class="example-content ex-hide"><script>(function(document, window, $) {
     'use strict';
     
       var  defaults= {
