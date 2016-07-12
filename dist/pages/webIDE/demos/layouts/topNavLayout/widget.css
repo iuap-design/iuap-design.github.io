@@ -260,7 +260,7 @@
      position: relative;
      display: inline-block;
      margin-left: 5px;
-     font-family: 'FontAwesome';
+     font-family: 'uf';
      font-style: normal;
      font-weight: 400;
      -webkit-transition: -webkit-transform .15s;
@@ -277,7 +277,8 @@
  }
  
  .site-menu-arrow:before {
-     content: "\f107";
+     // content: "\f107";
+     content: "\e611";
  }
  
  .dropdown-menu {
@@ -630,7 +631,8 @@
          right: 30px;
      }
      .site-menu-arrow:before {
-         content: "\f054";
+         // content: "\f054";
+         content: "\e611";
      }
      .site-menu > .site-menu-item {
          display: block;

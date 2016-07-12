@@ -63,8 +63,8 @@
 }
 
 .u-filter-more .u-filter-menu-title:after {
-    content: "\f107";
-    font-family: FontAwesome;
+    content: "\e608";
+    font-family: uf;
     font-style: normal;
     font-weight: normal;
     text-decoration: inherit;

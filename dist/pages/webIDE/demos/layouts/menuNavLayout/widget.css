@@ -99,6 +99,7 @@ ul.nav-menu {
     display: block;
     height: 50px;
     padding-left: 20px;
+    color: #ddd;
 }
 
 .page-small-sidebar {
@@ -136,7 +137,7 @@ ul.nav-menu {
     color: #A6ACB4;
 }
 
-.nav-li i.fa {
+.nav-li i.uf {
     font-size: 16px;
     color: #A6ACB4;
 }
