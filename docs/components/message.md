@@ -14,7 +14,7 @@
 
 消息类型对应不同class属性则显示不同的背景色
 
-<div class="example-content"><style>.margin-r-10{
+<div class="example-content ex-hide"><style>.margin-r-10{
     margin-right: 10px; 
 }
 .example .u-message{
@@ -42,8 +42,7 @@
         <span class="u-msg-close uf uf-removesymbol"></span>
         Warning!
     </div>
-</div>
-</div>
+</div></div>
 <div class="examples-code"><pre><code>.margin-r-10{
     margin-right: 10px; 
 }
@@ -81,6 +80,13 @@
 
 消息类型对应相应的icon
 
+<div class="example-content ex-hide"><style>.margin-r-10{
+    margin-right: 10px; 
+}
+.example .u-message{
+    position: inherit;
+}
+</style></div>
 <div class="example-content"><div class="example">
     <div class="u-message dark u-mesnews active" >    
         <span class="u-msg-close uf uf-removesymbol"></span>
@@ -102,15 +108,14 @@
         <span class="u-msg-close uf uf-removesymbol"></span>
         <i class="fa fa-warning margin-r-10"></i>Warning!
     </div>
-</div>
-</div>
-<div class="example-content"><style>.margin-r-10{
+</div></div>
+<div class="examples-code"><pre><code>.margin-r-10{
     margin-right: 10px; 
 }
 .example .u-message{
     position: inherit;
-}
-</style></div>
+}</code></pre>
+</div>
 <div class="examples-code"><pre><code>&lt;div class="example">
     &lt;div class="u-message dark u-mesnews active" >    
         &lt;span class="u-msg-close uf uf-removesymbol">&lt;/span>
@@ -133,79 +138,6 @@
         &lt;i class="fa fa-warning margin-r-10">&lt;/i>Warning!
     &lt;/div>
 &lt;/div></code></pre>
-</div>
-<div class="examples-code"><pre><code>.margin-r-10{
-    margin-right: 10px; 
-}
-.example .u-message{
-    position: inherit;
-}</code></pre>
-</div>
-
-##点击触发Message
-<div class="example-content"><style>.margin-r-10{
-    margin-right: 10px; 
-}
-.example .u-message{
-    position: inherit;
-}
-.example{
-	width: 300px;
-}
-</style></div>
-<div class="example-content"><script>var msgBtn = document.body.querySelector("#msgBtn");
-var errorBtn = document.body.querySelector("#errorBtn");
-var warnBtn = document.body.querySelector("#warnBtn");
-var rightInfo='<i class="uf uf-checkedsymbol margin-r-5"></i>成功信息!!!';
-u.on(msgBtn,'click', function(){ 
-    u.showMessage({msg:rightInfo,position:"center"})
-})
-
-var errorInfo='<i class="uf uf-crossmarkonablackcirclebackground margin-r-5"></i>错误信息!!!'
-u.on(errorBtn,'click', function(){ 
-    u.showMessage({msg:errorInfo,position:"center",msgType:"error"})
-})
-
-var warningInfo='<i class="uf uf-exclamationsign margin-r-5"></i>警告信息!!!';
-u.on(warnBtn,'click', function(){ 
-    u.showMessage({msg:warningInfo,position:"center",msgType:"warning"})
-})
-</script></div>
-<div class="example-content"><button id="msgBtn" class="u-button" >Success</button>
-<button id="errorBtn" class="u-button" >Error</button>
-<button id="warnBtn" class="u-button" >Warning</button>
-</div>
-<div class="examples-code"><pre><code>.margin-r-10{
-    margin-right: 10px; 
-}
-.example .u-message{
-    position: inherit;
-}
-.example{
-	width: 300px;
-}</code></pre>
-</div>
-<div class="examples-code"><pre><code>var msgBtn = document.body.querySelector("#msgBtn");
-var errorBtn = document.body.querySelector("#errorBtn");
-var warnBtn = document.body.querySelector("#warnBtn");
-var rightInfo='&lt;i class="uf uf-checkedsymbol margin-r-5">&lt;/i>成功信息!!!';
-u.on(msgBtn,'click', function(){ 
-    u.showMessage({msg:rightInfo,position:"center"})
-})
-
-var errorInfo='&lt;i class="uf uf-crossmarkonablackcirclebackground margin-r-5">&lt;/i>错误信息!!!'
-u.on(errorBtn,'click', function(){ 
-    u.showMessage({msg:errorInfo,position:"center",msgType:"error"})
-})
-
-var warningInfo='&lt;i class="uf uf-exclamationsign margin-r-5">&lt;/i>警告信息!!!';
-u.on(warnBtn,'click', function(){ 
-    u.showMessage({msg:warningInfo,position:"center",msgType:"warning"})
-})</code></pre>
-</div>
-<div class="examples-code"><pre><code>&lt;button id="msgBtn" class="u-button" >Success&lt;/button>
-&lt;button id="errorBtn" class="u-button" >Error&lt;/button>
-&lt;button id="warnBtn" class="u-button" >Warning&lt;/button></code></pre>
 </div>
 
 
