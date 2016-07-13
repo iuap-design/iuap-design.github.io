@@ -92,21 +92,25 @@
                     <!-- Add ".scroll" class to anchor tag to enable smooth scrolling -->
                     <li class="active"><a class="scrollup" href="#"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
                     <li><a class="scroll" href="#features" data-offset-top="80"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
-                    <li><a class="scroll" href="#gallery" data-offset-top="80"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
-                    <li><a class="scroll" href="#versions" data-offset-top="85"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                    <li><a class="scroll" href="#gallery" data-offset-top="80"><i class="" aria-hidden="true"></i></a></li>
+                    <li><a class="scroll" href="#versions" data-offset-top="85"><i class="" aria-hidden="true"></i></a></li>
+                    <li><a class="scroll" href="#versions" data-offset-top="85"><i class="" aria-hidden="true"></i></a></li>
                     <li><a class="scroll" href="#team" data-offset-top="80"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
                     <li><a class="scroll" href="#web-app" data-offset-top="80"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                     <li><a class="scroll" href="#web-app" data-offset-top="80"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
                     <li><a class="scroll" href="#web-app" data-offset-top="80"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
                     <li><a class="scroll" href="#web-app" data-offset-top="80"><i class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
                   </ul>
                   <ul class="pages">
                     <li><a href="/dist/pages/getting-started/index.html">开始使用</a></li>
                     <li><a href="/dist/pages/design-language/iuapdesign.html">设计语言</a></li>
+                    <li><a href="/dist/pages/neoUI/index.html">neoUI</a></li>
                     <li><a href="/dist/pages/global-style/index.html">样式</a></li>
                     <li><a href="/dist/pages/components/index.html">组件</a></li>
                     <li><a href="/dist/pages/plugins/index.html">JS 插件</a></li>
                     <li><a href="/dist/pages/template/index.html">模板库</a></li>
-                    <li><a href="/dist/pages/webIDE/index.html">WebIDE</a></li>
+                    <li><a href="/dist/pages/webIDE/index.html">设计器</a></li>           
+                    <li><a href="/dist/pages/webIDE/index.html">样式版</a></li>
                     <li><a href="/dist/pages/kero/index.html">Kero</a></li>
                 </ul>
                 </div>
@@ -126,16 +130,27 @@
 		iUAP Design
 		</a>
 		<div class="toolbar">
-      <a href="/dist/pages/getting-started/index.html" class="action-btn">开始使用</a>
-      <a href="/dist/pages/design-language/iuapdesign.html" class="action-btn">设计语言
-      <a href="/dist/pages/global-style/index.html" class="action-btn">全局css样式</a>
-      <a href="/dist/pages/components/index.html" class="action-btn">组件</a>
-      <a href="/dist/pages/plugins/index.html" class="action-btn">JS 插件</a>
-      <a href="/dist/pages/template/index.html" class="action-btn" target="_blank">模板库</a>
-      <a href="/dist/pages/webIDE/index.html" class="action-btn"  target="_blank">WebIDE</a>
-      <a href="/dist/pages/kero/index.html" class="action-btn">Kero</a>
-      <a href="/dist/pages/custom/index.html" class="btn btn-ghost btn-primary btn-sm icon-left"> 定制 </a>
-      <div class="nav-toggle" data-offcanvas="open"><i class="flaticon-list26"></i></div>
+      <ul>
+          <li ><a href="/dist/pages/getting-started/index.html" class="action-btn">开始使用</a></li>
+          <li><a href="/dist/pages/design-language/iuapdesign.html" class="action-btn">设计语言</a></li>
+          <li class="tool-con-par"><a href="/dist/pages/neoUI/index.html" class="action-btn">neoUI</a>
+              <div class="sub">
+                  <div class="rows"></div>
+                  <a href="/dist/pages/global-style/index.html" class=" li">全局css样式</a>
+                  
+                  <a href="/dist/pages/components/index.html" class=" li">组件</a>
+                  <a href="/dist/pages/plugins/index.html" class=" li">JS 插件</a>
+              </div>
+          </li>
+          <li><a href="/dist/pages/template/index.html" class="action-btn" target="_blank">模板库</a></li>
+           <li><a href="/dist/pages/template/index.html" class="action-btn" target="_blank">设计器</a></li>
+          <li><a href="/dist/pages/webIDE/index.html" class="action-btn" target="_blank">样式版</a></li>
+          <li><a href="/dist/pages/kero/index.html" class="action-btn">Kero</a></li>
+          <li><a href="/dist/pages/custom/index.html" class="btn btn-ghost btn-primary btn-sm icon-left"> 定制 </a></li>
+          <li>
+               <div class="nav-toggle" data-offcanvas="open"><i class="flaticon-list26"></i></div>
+          </li>
+      </ul>
 		</div>
 	</div>
 </header><!-- Navbar End -->
@@ -260,20 +275,41 @@
     </div>
 </div>
 <!-- 引入footer -->
+<!--Footer Begin -->
 <footer class="footer">
-	<div class="container space-top">
-	<!-- Footer Head -->
-
-	<div class="body">
-		<!-- Copyright -->
-		<div class="column copyright">
-			<p>2016 &copy; <a href="http://www.yonyou.com/" target="_blank">用友网络</a>. iUAP Design</p>
-		</div>
-		<!-- Gadget (Middle Column) --></div>
-	</div>
-</footer><!-- Footer End -->
-
+    <div class="container space-top">
+        <!-- Footer Head -->
+        <div class="body">
+            <!-- Copyright -->
+            <div class="column copyright w-40">
+                <p>2016 &copy; <a href="http://www.yonyou.com/" target="_blank">用友网络</a>. iUAP Design</p>
+                <p>前端集成解决方案，为企业级应用开发而生</p>
+            </div>
+            <!-- Gadget (Middle Column) -->
+            <div class="column w-20">
+                <ul>
+                    <li class="foot-con-info"><a href="" style="    cursor: none;">关于我们</a></li>
+                    <li class="foot-con-info"><a href="">人才招聘</a></li>
+                    <li class="foot-con-info"><a href="" style="    cursor: none;">反馈意见</a></li>
+                </ul>
+            </div>
+            <div class="column w-40 code-2d">
+                <ul>
+                    <li>
+                        <img src="/dist/static/img/git-2d-code.png" width="113px" height="113px">
+                        <div class="dec-2d">git地址</div>
+                    </li>
+                    <li><img src="/dist/static/img/qq-2d-code.png" width="113px" height="113px">
+                        <div class="dec-2d">qq群</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--Footer End -->
 <!-- Javascript (jQuery) Libraries and Plugins -->
+
 <script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://design.yyuap.com/static/knockout/knockout-3.2.0.debug.js"></script>
 <script src="http://design.yyuap.com/static/uui-original/1.0.2/js/u-polyfill.min.js"></script>
