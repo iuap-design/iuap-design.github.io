@@ -5,9 +5,13 @@
 # 插件依赖
 
 http://design.yyuap.com/static/uui/latest/css/font-awesome.css
+
 http://design.yyuap.com/static/uui/latest/css/u.css
+
 http://design.yyuap.com/static/jquery/jquery-1.9.1.min.js
+
 http://design.yyuap.com/static/uui/latest/js/u-polyfill.js
+
 http://design.yyuap.com/static/uui/latest/js/u.js
 
 # 如何使用
@@ -20,7 +24,7 @@ http://design.yyuap.com/static/uui/latest/js/u.js
 2、创建column对象
 
     var colu = [{
-        field: "id",
+         field: "id",
         title: "id"
     }, {
         field: "pid",
@@ -73,18 +77,125 @@ http://design.yyuap.com/static/uui/latest/js/u.js
         parentKeyField: 'pid',
         columns: colu
     });
-
+    
 # 示例
 
-replaceExamp
 
-<!--### 示例1
 
-示例1说明
+<div class="example-content"><div class="grid-body">
+	<div class="grid" id="grid-comp1"></div>
+</div></div>
+<div class="example-content ex-hide"><script>$(document).ready(function () {
+	var data1 = {
+        values: [{
+            column1: "11",
+            column2: "12",
+            column3: "13",
+            id: '0',
+            pid: ''
+        }, {
+            column1: "21",
+            column2: "22",
+            column3: "23",
+            id: '1',
+            pid: '0'
+        }, {
+            column1: "31",
+            column2: "32",
+            column3: "33",
+            id: '3',
+            pid: '1'
+        }
+        ]
+    };
 
-### 示例2
+    var colu = [{
+        field: "id",
+        title: "id"
+    }, {
+        field: "pid",
+        title: "pid"
+    }, {
+        field: "column1",
+        title: "column1"
+    }, {
+        field: "column2",
+        title: "column2"
+    }, {
+        field: "column3",
+        title: "column3"
+    }
+    ];
 
-示例2说-->
+    $("#grid-comp1").grid({
+        dataSource: data1,
+        id: 'case-g1',
+        editable: true,
+        keyField: 'id',
+        parentKeyField: 'pid',
+        columns: colu
+
+    });
+});
+</script></div>
+<div class="examples-code"><pre><code>&lt;div class="grid-body">
+	&lt;div class="grid" id="grid-comp1">&lt;/div>
+&lt;/div></code></pre>
+</div>
+<div class="examples-code"><pre><code>$(document).ready(function () {
+	var data1 = {
+        values: [{
+            column1: "11",
+            column2: "12",
+            column3: "13",
+            id: '0',
+            pid: ''
+        }, {
+            column1: "21",
+            column2: "22",
+            column3: "23",
+            id: '1',
+            pid: '0'
+        }, {
+            column1: "31",
+            column2: "32",
+            column3: "33",
+            id: '3',
+            pid: '1'
+        }
+        ]
+    };
+
+    var colu = [{
+        field: "id",
+        title: "id"
+    }, {
+        field: "pid",
+        title: "pid"
+    }, {
+        field: "column1",
+        title: "column1"
+    }, {
+        field: "column2",
+        title: "column2"
+    }, {
+        field: "column3",
+        title: "column3"
+    }
+    ];
+
+    $("#grid-comp1").grid({
+        dataSource: data1,
+        id: 'case-g1',
+        editable: true,
+        keyField: 'id',
+        parentKeyField: 'pid',
+        columns: colu
+
+    });
+});</code></pre>
+</div>
+
 
 # API
 
@@ -94,8 +205,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -109,8 +220,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -124,8 +235,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -139,8 +250,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -154,8 +265,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -169,8 +280,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -184,8 +295,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -199,8 +310,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -214,8 +325,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -229,8 +340,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -244,8 +355,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -259,8 +370,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -274,8 +385,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -289,8 +400,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -304,8 +415,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -319,8 +430,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -334,8 +445,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -349,8 +460,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -364,7 +475,7 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">属性</td>
+        <td>属性</td>
 		  <td >说明</td>
     </tr>
     <tr>
@@ -385,8 +496,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -400,7 +511,7 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">属性</td>
+        <td>属性</td>
 		  <td >说明</td>
     </tr>
     <tr>
@@ -421,8 +532,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -436,7 +547,7 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">属性</td>
+        <td>属性</td>
 		  <td >说明</td>
     </tr>
     <tr>
@@ -457,8 +568,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -472,7 +583,7 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">属性</td>
+        <td>属性</td>
 		  <td >说明</td>
     </tr>
     <tr>
@@ -493,8 +604,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -508,7 +619,7 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">属性</td>
+        <td>属性</td>
 		  <td >说明</td>
     </tr>
     <tr>
@@ -525,8 +636,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -540,7 +651,7 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">属性</td>
+        <td>属性</td>
 		  <td >说明</td>
     </tr>
     <tr>
@@ -557,8 +668,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -572,7 +683,7 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">属性</td>
+        <td>属性</td>
 		  <td >说明</td>
     </tr>
     <tr>
@@ -589,8 +700,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -604,7 +715,7 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">属性</td>
+        <td>属性</td>
 		  <td >说明</td>
     </tr>
     <tr>
@@ -621,8 +732,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -636,7 +747,7 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">属性</td>
+        <td>属性</td>
 		  <td >说明</td>
     </tr>
     <tr>
@@ -657,8 +768,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -672,7 +783,7 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">属性</td>
+        <td>属性</td>
 		  <td >说明</td>
     </tr>
     <tr>
@@ -693,8 +804,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -708,7 +819,7 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">属性</td>
+        <td>属性</td>
 		  <td >说明</td>
     </tr>
     <tr>
@@ -729,8 +840,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -744,7 +855,7 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">属性</td>
+        <td>属性</td>
 		  <td >说明</td>
     </tr>
     <tr>
@@ -765,8 +876,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -780,7 +891,7 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">属性</td>
+        <td>属性</td>
 		  <td >说明</td>
     </tr>
     <tr>
@@ -809,8 +920,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -824,7 +935,7 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">属性</td>
+        <td>属性</td>
 		  <td >说明</td>
     </tr>
     <tr>
@@ -845,8 +956,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -860,7 +971,7 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">属性</td>
+        <td>属性</td>
 		  <td >说明</td>
     </tr>
     <tr>
@@ -885,8 +996,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -900,7 +1011,7 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">属性</td>
+        <td>属性</td>
 		  <td >说明</td>
     </tr>
     <tr>
@@ -921,8 +1032,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -938,8 +1049,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -953,8 +1064,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -968,8 +1079,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -983,8 +1094,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -998,8 +1109,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1013,8 +1124,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1028,8 +1139,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1043,8 +1154,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1058,8 +1169,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1073,8 +1184,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1088,8 +1199,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1103,8 +1214,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1118,8 +1229,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1133,8 +1244,8 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1160,9 +1271,9 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1203,9 +1314,9 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1236,9 +1347,9 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1263,9 +1374,9 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1290,9 +1401,9 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1317,9 +1428,9 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1350,9 +1461,9 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1383,9 +1494,9 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1435,9 +1546,9 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1477,9 +1588,9 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1519,9 +1630,9 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1565,9 +1676,9 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1592,9 +1703,9 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1619,9 +1730,9 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1661,9 +1772,9 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1706,9 +1817,9 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1733,9 +1844,9 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1800,9 +1911,9 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1827,9 +1938,9 @@ replaceExamp
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1884,9 +1995,9 @@ focus行对应的index
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1911,9 +2022,9 @@ focus行对应的index
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1944,9 +2055,9 @@ focus行对应的index
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -1977,9 +2088,9 @@ focus行对应的index
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -2004,9 +2115,9 @@ focus行对应的index
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -2031,9 +2142,9 @@ focus行对应的index
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -2058,9 +2169,9 @@ focus行对应的index
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -2085,9 +2196,9 @@ focus行对应的index
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -2118,9 +2229,9 @@ focus行对应的index
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -2145,9 +2256,9 @@ focus行对应的index
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -2172,9 +2283,9 @@ focus行对应的index
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -2211,9 +2322,9 @@ focus行对应的index
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>
@@ -2238,9 +2349,9 @@ focus行对应的index
 
 <table>
     <tr>
-        <td width="50">参数</td>
-		  <td width="50">类型</td>
-		  <td width="50">默认值</td>
+        <td>参数</td>
+		  <td>类型</td>
+		  <td>默认值</td>
 		  <td>说明</td>
     </tr>
     <tr>

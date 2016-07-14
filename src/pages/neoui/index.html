@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NeoUI</title>
+    <link rel="stylesheet" type="text/css" href="http://design.yyuap.com/static/uui/3.0.6/css/u.min.css">
+    <link rel="stylesheet" href="http://design.yyuap.com/static/uui/3.0.6/css/u-extend.min.css">
+    <link rel="stylesheet" href="http://design.yyuap.com/static/uui/3.0.6//css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/neoui.css">
+    <link href="/dist/static/css/style.css" rel="stylesheet" media="screen">
+    <link href="/dist/static/ionicons/ionicons.css" rel="stylesheet" media="screen">
+    
+</head>
+
+<body>
+    <!-- 引入head -->
+    {{include '../common/header'}}
+    <div id="content">
+        <div id="head">
+            <div class="banner">
+                <div class="u-container">
+                    <div class="banner-content">
+                        <h1>NeoUI</h1>
+                        <p class="info">neoui 是基于 UI 设计语言 iUAP Design 实现的前端框架，开放自由、易学易用、美观大气，为开发者提供从产品界面设计到前端开发的完整生态。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="u-main-container neo">
+                <div class="u-container u-page-content">
+                    <div class="u-row">
+                        <div class="big-services-box col-sm-4 col-md-4">
+                            <div>
+                                <div class="big-icon bg bounceIn" ><i class="fa fa-picture-o"></i></div>
+                                <h4 class="title animated bounceIn">全局CSS样式</h4>
+                                <div class="text-small animated bounceInLeft">
+                                    <div class="neo-brief-desc">基本的 HTML 元素均可以通过 class 设置样式并得到增强效果
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <br>
+                                    <button class="u-button primary raised more-btn" onclick="window.open('http://design.yyuap.com/dist/pages/global-style/index.html','_self');">了解详情</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="big-services-box col-sm-4 col-md-4">
+                            <div>
+                                <div class="big-icon bg bounceIn" ><i class="fa fa-wrench"></i></div>
+                                <h4 class="title animated bounceIn">组件</h4>
+                                <div class="text-small animated bounceInLeft">
+                                    <div class="neo-brief-desc">
+                                        提供丰富的组件，助力快速产出易用美观的界面
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <br>
+                                    <button class="u-button primary raised more-btn" onclick="window.open('http://design.yyuap.com/dist/pages/components/index.html','_self');">了解详情</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="big-services-box col-sm-4 col-md-4">
+                            <div>
+                                <div class="big-icon bg bounceIn" ><i class="fa fa-bug"></i></div>
+                                <h4 class="title animated bounceIn">Javascript插件</h4>
+                                <div class="text-small animated bounceInLeft">
+                                    <div class="neo-brief-desc">
+                                        20+个官方插件，并在持续开发中，满足你的功能需求
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <br>
+                                    <button class="u-button primary raised more-btn" onclick="window.open('http://design.yyuap.com/dist/pages/plugins/index.html','_self');">了解详情</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="u-row">
+                        <div class="col-sm-4 col-md-4">
+                            <h4 class="neo-desc">CSS样式描述</h4>
+                            <div class="neo-dec-content">
+                                CSS样式提供了基础样式、布局、色彩、辅助类、字体图标、以及基本控件。开发者只需调用相应的样式即可，操作很方便。
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4">
+                            <h4 class="neo-desc">组件描述</h4>
+                            <div class="neo-dec-content">
+                                把一些常见的网页组件拆分成不同的部分，进行类似 Web Components 的封装，包括分页、下拉菜单、进度条、弹出框等更多功能。
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4">
+                            <h4 class="neo-desc">Javascript插件描述</h4>
+                            <div class="neo-dec-content">
+                                Javascript插件包括了时间、模态框、分页、页签、grid、进度条等多种插件。使用方式及其简单，具体细节请查看各个组件的文档
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 引入footer -->
+    {{include '../common/footer'}}
+    <script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src = "js/neoui.js"></script>
+    <script src="http://design.yyuap.com/static/knockout/knockout-3.2.0.debug.js"></script>
+    <script src="http://design.yyuap.com/static/uui/3.0.6/js/u-polyfill.min.js"></script>
+    <script src="http://design.yyuap.com/static/uui/3.0.6/js/u.min.js"></script>
+</body>
+
+</html>
