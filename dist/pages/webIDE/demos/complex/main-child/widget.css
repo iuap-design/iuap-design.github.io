@@ -1,0 +1,51 @@
+#PlusIcon span.button.switch.noline_close:after{
+	content:'\e6ed';
+}
+#PlusIcon span.button.switch.noline_open:after{
+	content:'\e6ce';
+}
+#markIcon li span.button.ico_open:after{
+	content:'\e62b';
+}
+#markIcon li span.button.ico_close:after{
+	content:'\e62b';
+}
+#markIcon li span.button.ico_docu:after{
+	content:'\e62b';
+}
+#badgeIcon li span.button.noline_close:after{
+	content: '\e658';
+}
+#badgeIcon li span.button.noline_open:after{
+	content: '\e63e';
+}
+#badgeIcon li span.button.ico_docu:after{
+	content:'\e752';
+}
+#badgeIcon .badge{
+	float: right;
+    margin-right: 30px;
+    display: inline-block;
+    min-width: 10px;
+    padding: 5px 6px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1;
+    color: #76838f;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #e4eaec;
+    border-radius: 10px;
+}
+#ExpIcon .u-button-borded{
+	border: 1px solid #eee;
+}
+#SearchIcon .searchTree {
+	border-radius: 4px;
+    border: 1px solid #eee;
+    padding: 5px 15px;
+}
+.seached a{
+	color:blue !important;
+}
