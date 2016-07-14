@@ -4,11 +4,140 @@
       <div class="u-widget p-md">
         <h4>基本元素</h4>
         <form>
-          <div class="u-form-group">
-            <label>一般输入框</label>
-            <input type="text" class="u-form-control">
+          <div class="u-row">
+            <div class="u-col-4 margin-bottom-30">
+              <div class="u-form-group">
+                <h4>ROUNDED INPUT</h4>
+                <input type="text" class="u-form-control round">
+              </div>
+            </div>
+            <div class="u-col-4 margin-bottom-30">
+              <div class="u-form-group">
+                <h4>DISABLE</h4>
+                <input type="text" class="u-form-control" placeholder="Disabled input here" disabled>
+              </div>
+            </div>
+            <div class="u-col-4 margin-bottom-30">
+              <div class="u-form-group">
+                <h4>INPUT FOCUS</h4>
+                <input type="text" class="u-form-control focus">
+              </div>
+            </div>
           </div>
-          <div class="u-form-group">
+          <div class="u-row">
+            <div class="u-col-4 margin-bottom-30">
+              <div class="u-form-group">
+                <h4>PLACEHOLDER</h4>
+                <input type="text" class="u-form-control" placeholder="placehoder">
+              </div>
+            </div>
+            <div class="u-col-4 margin-bottom-30">
+              <div class="u-form-group">
+                <h4>STATIC CONTROL</h4>
+                <p class="form-control-static">email@example.com</p>
+              </div>
+            </div>
+            <div class="u-col-4 margin-bottom-30">
+              <div class="u-form-group">
+                <h4>FILE UPLOAD</h4>
+                <div class="u-input-group u-has-feedback">
+                    <input type="text" class="u-form-control">
+                    <span class="u-form-control-feedback leftborder u-button-file">
+                        <i class="icon uf uf-upload" aria-hidden="true"></i>
+                        <input type="file" name="" multiple="">
+                    </span>
+                </div>
+                <div class="u-input-group u-has-feedback">
+                    <input type="text" class="u-form-control">
+                    <span class="u-form-control-feedback leftborder u-button-file u-button-success">
+                        <i class="icon uf uf-upload" aria-hidden="true"></i>
+                        <input type="file" name="" multiple="">
+                    </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="u-row">
+            <div class="u-col-4 margin-bottom-30">
+              <div class="u-form-group">
+                <h4>WITH HELP</h4>
+                <input type="text" class="u-form-control">
+                <span class="help-block">
+                  A block of help text that breaks onto a new line and may extend
+                  beyond one line.
+                </span>
+              </div>
+            </div>
+            <div class="u-col-4 margin-bottom-30">
+              <div class="u-form-group">
+                <h4>SEARCH</h4>
+                <div class="u-input-group u-has-feedback">
+                    <input type="text" class="u-form-control" placeholder="Search...">
+                    <span class="u-form-control-feedback u-button-success">
+                        <i class="icon uf uf-magnifyingglass" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="u-input-group u-has-feedback">
+                    <input type="text" class="u-form-control round" placeholder="Search...">
+                    <span class="u-form-control-feedback noborder">
+                        <i class="icon uf uf-magnifyingglass" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="u-input-group u-has-feedback u-input-dark u-input-search">
+                    <span class="u-form-control-feedback u-input-icon-left noborder">
+                        <i class="icon uf uf-magnifyingglass" aria-hidden="true"></i>
+                    </span>
+                    <input type="text" class="u-form-control round" placeholder="Search...">
+                    <span class="u-form-control-feedback noborder">
+                        <i class="icon uf uf-removesymbol" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="u-input-group u-has-feedback u-input-search">
+                    <span class="u-form-control-feedback u-input-icon-left noborder">
+                        <i class="icon uf uf-magnifyingglass" aria-hidden="true"></i>
+                    </span>
+                    <input type="text" class="u-form-control round" placeholder="Search...">
+                    <span class="u-form-control-feedback noborder">
+                        <i class="icon uf uf-removesymbol" aria-hidden="true"></i>
+                    </span>
+                </div>
+              </div>
+            </div>
+            <div class="u-col-4 margin-bottom-30">
+              <div class="u-form-group">
+                <h4>Size</h4>
+                
+                <input type="text" class="u-form-control u-input-sm margin-bottom-15" placeholder="Small">
+                <input type="text" class="u-form-control margin-bottom-15" placeholder="Normal">
+                <input type="text" class="u-form-control u-input-lg" placeholder="Big">
+
+              </div>
+            </div>
+          </div>
+          <div class="u-row">
+            <div class="u-col-6 margin-bottom-30">
+              <h4>SELECT</h4>
+              <select class="u-form-control margin-bottom-15">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+              <select class="u-form-control" multiple>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="u-col-6 margin-bottom-30">
+              <h4>TEXTAREA</h4>
+              <textarea class="u-form-control" rows="3"></textarea>
+            </div>
+          </div>
+          <!-- <div class="u-form-group">
             <label>一般输入框 必输</label>
             <div class="u-input-group u-has-feedback">
                 <div class="u-input-group-before" style="color: red;">*</div>
@@ -23,14 +152,14 @@
               <label>搜索输入框</label>
               <div class="u-input-group u-has-feedback">
                 <input type="text" class="u-form-control" placeholder="搜索">
-                 <span class="u-form-control-feedback uf uf-magnifyingglass"></span>
+                 <span class="u-form-control-feedback leftborder uf uf-magnifyingglass"></span>
               </div>
           </div>
           <div class="u-form-group">
               <label>参照输入框</label>
               <div class="u-input-group u-has-feedback">
                   <input type="text" class="u-form-control">
-                  <span class="u-form-control-feedback uf uf-listwithdots refer"></span>
+                  <span class="u-form-control-feedback leftborder uf uf-listwithdots refer"></span>
               </div>
           </div>
           <div class="u-form-group">
@@ -38,14 +167,14 @@
               <div class="u-input-group u-has-feedback">
                   <div class="u-input-group-before" style="color: red;">*</div>
                   <input type="text" class="u-form-control">
-                  <span class="u-form-control-feedback uf uf-listwithdots refer"></span>
+                  <span class="u-form-control-feedback leftborder uf uf-listwithdots refer"></span>
               </div>
           </div>
           <div class="u-form-group">
               <label>下拉单选</label>
               <div class="u-input-group u-has-feedback u-combo">
                  <input type="text" class="u-form-control"/>
-                 <span class="u-form-control-feedback uf uf-anglearrowdown" data-role="combo-button"></span>
+                 <span class="u-form-control-feedback leftborder uf uf-anglearrowdown" data-role="combo-button"></span>
                  <option value="01">男</option>
                  <option value="02">女</option>
               </div>
@@ -54,35 +183,35 @@
               <label>日期</label>
               <div class="u-input-group u-has-feedback u-datepicker">
                  <input type="text" class="u-form-control"/>
-                 <span class="u-form-control-feedback uf uf-calendarwithspringbinderanddateblocks" data-role="date-button"></span>
+                 <span class="u-form-control-feedback leftborder uf uf-calendarwithspringbinderanddateblocks" data-role="date-button"></span>
               </div>
           </div>
           <div class="u-form-group">
               <label>日期时间</label>
               <div class="u-input-group u-has-feedback u-datepicker time">
                  <input type="text" class="u-form-control"/>
-                 <span class="u-form-control-feedback uf uf-calendarwithspringbinderanddateblocks" data-role="date-button"></span>
+                 <span class="u-form-control-feedback leftborder uf uf-calendarwithspringbinderanddateblocks" data-role="date-button"></span>
               </div>
           </div>
           <div class="u-form-group">
               <label>年</label>
               <div class="u-input-group u-has-feedback u-year">
                  <input type="text" class="u-form-control"/>
-                 <span class="u-form-control-feedback uf uf-calendarwithspringbinderanddateblocks" data-role="date-button"></span>
+                 <span class="u-form-control-feedback leftborder uf uf-calendarwithspringbinderanddateblocks" data-role="date-button"></span>
               </div>
           </div>
           <div class="u-form-group">
               <label>月</label>
               <div class="u-input-group u-has-feedback u-month">
                  <input type="text" class="u-form-control"/>
-                 <span class="u-form-control-feedback uf uf-calendarwithspringbinderanddateblocks" data-role="date-button"></span>
+                 <span class="u-form-control-feedback leftborder uf uf-calendarwithspringbinderanddateblocks" data-role="date-button"></span>
               </div>
           </div>
           <div class="u-form-group">
               <label>年月</label>
               <div class="u-input-group u-has-feedback u-yearmonth">
                  <input type="text" class="u-form-control"/>
-                 <span class="u-form-control-feedback uf uf-calendarwithspringbinderanddateblocks" data-role="date-button"></span>
+                 <span class="u-form-control-feedback leftborder uf uf-calendarwithspringbinderanddateblocks" data-role="date-button"></span>
               </div>
           </div>
           <div class="u-form-group">
@@ -106,6 +235,64 @@
                 <input type="checkbox" class="u-switch-input">
                 <span class="u-switch-label">switch</span>
             </label>
+          </div> -->
+        </form>
+      </div>
+    </div>
+    <div class="u-col-12">
+      <div class="u-widget p-md">
+        <h4>输入框组</h4>
+        <form>
+          <div class="u-row">
+            <div class="u-col-4 margin-bottom-30">
+              <div class="u-form-group">
+                <h4>CHECKBOX AND RADI</h4>
+                <div class="u-input-group u-has-feedback margin-bottom-15">
+                    <span class="u-form-control-feedback u-input-icon-left rightborder">
+                        <label  class="u-checkbox">
+                            <input type="checkbox" class="u-checkbox-input" checked>
+                        </label>
+                    </span>
+                    <input type="text" class="u-form-control">
+                </div>
+                <div class="u-input-group u-has-feedback">
+                    <span class="u-form-control-feedback u-input-icon-left rightborder">
+                        <label  class="u-radio" for="option-1">
+                            <input type="radio" class="u-radio-button" name="options" checked>
+                        </label>
+                    </span>
+                    <input type="text" class="u-form-control">
+                </div>
+              </div>
+            </div>
+            <div class="u-col-6 margin-bottom-30">
+              <div class="u-form-group">
+                <h4>Text ADDON</h4>
+                <div class="u-input-group u-has-feedback margin-bottom-15">
+                    
+                    <input type="text" class="u-form-control">
+                    <span class="u-form-control-feedback leftborder input-group-addon">
+                        @example.com
+                    </span>
+                </div>
+                <div class="u-input-group u-has-feedback">
+                    <span class="u-form-control-feedback u-input-icon-left rightborder">
+                        $
+                    </span>
+                    <input type="text" class="u-form-control">
+                </div>
+                <div class="u-input-group u-has-feedback">
+                    <span class="u-form-control-feedback u-input-icon-left rightborder">
+                        $
+                    </span>
+                    <input type="text" class="u-form-control">
+                    <span class="u-form-control-feedback leftborder input-group-addon">
+                        @example.com
+                    </span>
+                </div>
+              </div>
+            </div>
+
           </div>
         </form>
       </div>
