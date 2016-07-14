@@ -3629,6 +3629,11 @@ label.hover {
     width: 40%;
 }
 
+.column.w-30 {
+    width: 30%;
+}
+
+
 @media screen and (max-width: 768px) {
     .fw-container,
     .column,
@@ -6735,9 +6740,10 @@ a.icon-block {
     color: #4da3ff;
 }
 
-li.tool-con-par:hover .sub {
-    display: block;
-}
+// neo下的二级目录暂时隐藏
+// li.tool-con-par:hover .sub {
+//     display: block;
+// }
 
 .footer {
     background-color: #e0e0e0;
@@ -6750,6 +6756,10 @@ li.tool-con-par:hover .sub {
 
 .footer .body .column.w-20 {
     width: 20%;
+}
+
+.footer .body .column.w-30 {
+    width: 30%;
 }
 
 
@@ -6767,13 +6777,8 @@ li.tool-con-par:hover .sub {
     color: #8e8e93;
 }
 
-.footer .body .column ul .foot-con-info a {
-    cursor: pointer;
-    color: inherit;
-}
-
-.footer .body .column ul .foot-con-info a:hover {
-    color: #007aff;
+.footer .body .code-2d {
+    text-align: right;
 }
 
 .footer .body .code-2d li {
@@ -6789,7 +6794,25 @@ li.tool-con-par:hover .sub {
     text-align: center;
 }
 
+.body .copyright {
+    display: table-row;
+}
 .copyright p {
     margin-bottom: 10px;
     padding-top: 0px;
+    font-size: 13px;
+}
+
+
+.footer-col-title {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.footer-col-content {
+    letter-spacing: 2px;
+}
+
+.footer-col-content p{
+    margin-bottom: 0px;
+    font-size: 13px;
 }
