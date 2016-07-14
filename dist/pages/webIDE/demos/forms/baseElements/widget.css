@@ -1,0 +1,116 @@
+.u-form-group h4{
+	line-height: 0px;
+    font-weight: normal;
+}
+.margin-bottom-30{
+	margin-bottom: 30px;
+}
+.margin-bottom-15{
+	margin-bottom: 15px;
+}
+
+/*需要删除 测试完后再删除*/
+
+/*.u-form-control.round{
+	border-radius: 20px;
+}
+.u-form-control {
+	border-radius: 4px;
+}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: #f3f7f9;
+    opacity: 1;
+}
+.u-form-control.focus, .u-form-control:focus {
+    border-color: #62a8ea;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.form-control-static {
+    min-height: 36px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-bottom: 0;
+}
+
+.u-input-group {
+    margin-bottom:10px;
+}
+.u-button-file input[type=file] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+    text-align: 0;
+    cursor: pointer;
+    opacity: 0;
+}
+.u-form-control-feedback.u-button-success{
+	border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    color: #fff;
+}
+.help-block {
+    display: block;
+    color: #bcc2c8;
+    margin-top: 7px;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+.noborder{
+	border:none;
+}
+.u-input-dark .u-form-control{
+	background: #f3f7f9;
+}
+.u-input-icon-left{
+	left: 0 !important;
+}
+.u-input-icon-left + .u-form-control{
+	padding-left: 30px;
+}
+.u-input-search .uf-removesymbol:hover{
+	color: #7C7A7A;
+}
+.u-input-sm {
+    height: 32px;
+    padding: 6px 13px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 2px;
+}
+.u-input-lg {
+    height: 46px;
+    padding: 10px 18px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 4px;
+}
+select[multiple]{
+    overflow-y: auto;
+    height: auto;
+}
+textarea.u-form-control{
+	height: auto;
+}
+.u-input-icon-left label.u-checkbox{
+	margin-left: 10px;
+    margin-top: 6px;
+}
+.u-input-icon-left label.u-radio{
+    margin-top: 2px;
+    position: inherit;
+    margin-left: -9px;
+}
+.rightborder{
+    border-right: 1px solid #CECECE;
+}
+.leftborder{
+    border-left: 1px solid #CECECE;
+}
+.input-group-addon{
+	width: auto;
+	padding: 0 5px;
+}*/

@@ -1,6 +1,5 @@
 * [提示消息 message](message.md)
 * [分页 pagination](pagination.md)
-* [开关 switch](switchButton.md)
 * [消息 message](message.md)
 * [提示 tooltip](tooltip.md)
 * [面包屑 breadcrumb](breadcrumb.md)

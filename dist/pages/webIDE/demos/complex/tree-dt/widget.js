@@ -6,13 +6,13 @@ var viewModel = {
         },
         callback:{
             onClick:function(e,id,node){
-                alert(id)
-                alert(node)
+                // alert(id)
+                // alert(node)
+                var rightInfo = node.name + '被选中';
+                u.showMessage({msg:rightInfo,position:"top"})
+
+
             }
-        },
-        check: {
-            enable: true,
-            chkboxType:{ "Y" : "ps", "N" : "ps" }
         }
     },
     dataTable: new u.DataTable({
@@ -30,7 +30,7 @@ var viewModel = {
     })
 };
 var app = u.createApp({
-    el: '.demo',
+    el: document.body,
     model: viewModel
 })
 var data = {
@@ -42,7 +42,7 @@ var data = {
       "data": {
         "id": "01",
         "pid": "root",
-        "title": "f1"
+        "title": "Parent1"
       }
     },
     {
@@ -50,7 +50,7 @@ var data = {
       "data": {
         "id": "02",
         "pid": "root",
-        "title": "f2"
+        "title": "Parent2"
       }
     },
     {
@@ -58,7 +58,7 @@ var data = {
       "data": {
         "id": "101",
         "pid": "01",
-        "title": "f11"
+        "title": "Child11"
       }
     },
     {
@@ -66,7 +66,7 @@ var data = {
       "data": {
         "id": "102",
         "pid": "01",
-        "title": "f12"
+        "title": "mChild12"
       }
     },
     {
@@ -74,35 +74,62 @@ var data = {
       "data": {
         "id": "201",
         "pid": "02",
-        "title": "f21"
+        "title": "Child21"
       }
     }
   ]
 }
 viewModel.dataTable.setData(data);
 
-var addOneRow1 = document.querySelector('#addOneRow1'),
-    deleteOneRow = document.querySelector('#deleteOneRow'),
-    deleteAllRows = document.querySelector('#deleteAllRows');
-u.on(addOneRow1, "click",function(){
-    var row={
-        "status": "nrm",
-        "data": {
-            "id": "202",
-            "pid": "02",
-            "title": "f22"
-        }};
-    //先创建行模型，然后将数据插入行
-    var r=new u.Row({parent:viewModel.dataTable});
-    r.setData(row);
-    //新增一行
-    viewModel.dataTable.addRow(r);
-});
+var Expanding = document.querySelector('#Expanding'),
+    Collapsing = document.querySelector('#Collapsing');
+    Searching = document.querySelector('#SearchTreeNode');
 
-u.on(deleteOneRow, "click",function(){
-    var indices=viewModel.dataTable.getSelectedIndices();
-    viewModel.dataTable.removeRows(indices)
-});
-u.on(deleteAllRows, "click",function(){
-    viewModel.dataTable.removeAllRows();
-})
+    /*
+       展开全部节点
+    */
+    u.on(Expanding, "click",function(){
+        $("#tree5")[0]['u-meta'].tree.expandAll(true);
+    });
+    /*
+       合上全部节点
+    */
+    u.on(Collapsing, "click",function(){
+       
+        $("#tree5")[0]['u-meta'].tree.expandAll(false);
+    });
+    /*
+       实时过滤节点
+    */
+    u.on(Searching, "keyup",function(){
+
+       var searchkey = $(this).val();
+       if(searchkey !== ""){
+          console.log(searchkey);
+
+          // 定义过滤条件
+          var filter = function(node){
+              return node.name.indexOf(searchkey)>-1;
+          }
+          // 过滤出节点
+          var nodes = $("#tree6")[0]['u-meta'].tree.getNodesByFilter(filter);
+
+          // 没有匹配，去掉被搜索状态
+          if(nodes.length === 0){
+            $(".selected").removeClass("seached");
+          }
+          // 循环匹配节点 展开父节点并添加搜索状态
+          for(var n=0;n<nodes.length;n++){
+            $("#tree6")[0]['u-meta'].tree.expandNode(nodes[n].getParentNode(),true,true,true);
+            $("#"+nodes[n].tId).addClass("seached")
+          }
+       }else{
+          // searchkey为空 则去掉被搜索状态
+          $(".selected").removeClass("seached");
+       }
+        
+    });
+
+
+
+
