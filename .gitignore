@@ -22,6 +22,12 @@ dist/pages/plugins/
 dist/pages/custom/temp
 dist/pages/globalstyle/
 
+# render ignore
+dist/pages/neoUI
+dist/pages/template
+dist/pages/custom
+dist/pages/common
+
 generate-uui/
 dist/download/
 
