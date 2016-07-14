@@ -3,14 +3,14 @@
   * [Kero概述](overview.md)
   * [Knockout资料](knockout.md)
 * 快速入门
-  * [单向绑定](example1.md)
+  * [数据绑定](example1.md)
   * [双向绑定](example2.md)
 * Kero语法
   * [基本设置](dataTableUse.md)
   * [数据模型](datatable.md)
   * [绑定语法](syntax.md)
-* [核心API](core.md)
-* 控件API
+* [基本API](core.md)
+* 控件API(module.md)
   * [字符 string](string.md)
   * [整数 integer](integer.md)
   * [浮点 float](float.md)
