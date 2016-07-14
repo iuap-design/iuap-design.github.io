@@ -2,7 +2,7 @@
 	"list":[
 	    {
 	        "title": "金融理财模板",
-	        "id": "0004",
+	        "id": "0101",
 	        "decription": "深耕银行、券商等金融机构的高净值客户，致力于打造专业的媒体管理模板",
 	        "content_img": "img/main_6.png",
 	        "phone_img": "img/phone_3.jpg",
@@ -12,7 +12,7 @@
 	        "for_area": ["互联网","金融"]
 	    },{
 	        "title": "菜单布局模板",
-	        "id": "005",
+	        "id": "0201",
 	        "decription": "可伸缩导航布局，伸展时展示全部nav，收起显示具体图标",
 	        "content_img": "img/main_13.png",
 	        "phone_img": "img/phone_3.jpg",
@@ -22,7 +22,7 @@
 	        "for_area": ["互联网","金融"]
 	    },{
 	        "title": "运维管理模板",
-	        "id": "005",
+	        "id": "0301",
 	        "decription": "发展可持续、完善易有序、拓展能稳定",
 	        "content_img": "img/main_5.png",
 	        "phone_img": "img/phone_3.jpg",
@@ -32,7 +32,7 @@
 	        "for_area": ["互联网","金融"]
 	    },{
 	        "title": "运维管理模板",
-	        "id": "005",
+	        "id": "0102",
 	        "decription": "发展可持续、完善易有序、拓展能稳定",
 	        "content_img": "img/main_12.png",
 	        "phone_img": "img/phone_3.jpg",
@@ -42,7 +42,7 @@
 	        "for_area": ["互联网","金融"]
 	    },{
 	        "title": "电商模板",
-	        "id": "006",
+	        "id": "0401",
 	        "decription": "站在用户的角度，针对性的为用户提供刚需",
 	        "content_img": "img/main_4.png",
 	        "phone_img": "img/phone_4.jpg",
@@ -52,7 +52,7 @@
 	        "for_area": ["电商"]
 	    },{
 	        "title": "金融理财模板",
-	        "id": "007",
+	        "id": "0501",
 	        "decription": "犹如纸上办公，胜似之！方便！快捷！高效！",
 	        "content_img": "img/main_7.png",
 	        "phone_img": "img/phone_3.jpg",
@@ -62,7 +62,7 @@
 	        "for_area": ["互联网","金融"]
 	    },{
 	        "title": "数字营销模板",
-	        "id": "008",
+	        "id": "0601",
 	        "decription": " 简约、大气的类京东风格，适用于电商、金融或者其他领域！",
 	        "content_img": "img/main_8.png",
 	        "phone_img": "img/phone_3.jpg",
@@ -72,7 +72,7 @@
 	        "for_area": ["互联网","金融"]
 	    },{
 	        "title": "数字营销模板",
-	        "id": "008",
+	        "id": "0602",
 	        "decription": " 简约、大气的类京东风格，适用于电商、金融或者其他领域！",
 	        "content_img": "img/main_11.png",
 	        "phone_img": "img/phone_3.jpg",
@@ -82,7 +82,7 @@
 	        "for_area": ["互联网","金融"]
 	    },{
 	        "title": "数字营销模板",
-	        "id": "008",
+	        "id": "0603",
 	        "decription": " 简约、大气的类京东风格，适用于电商、金融或者其他领域！",
 	        "content_img": "img/main_9.png",
 	        "phone_img": "img/phone_3.jpg",
@@ -92,7 +92,7 @@
 	        "for_area": ["互联网","金融"]
 	    },{
 	        "title": "数字营销模板",
-	        "id": "008",
+	        "id": "0604",
 	        "decription": " 简约、大气的类京东风格，适用于电商、金融或者其他领域！",
 	        "content_img": "img/main_10.png",
 	        "phone_img": "img/phone_3.jpg",
@@ -102,7 +102,7 @@
 	        "for_area": ["互联网","金融"]
 	    },{
 	        "title": "SAAS应用类模板",
-	        "id": "0001",
+	        "id": "0701",
 	        "decription": "充分体现出sass的变量神器",
 	        "content_img": "img/main_1.png",
 	        "phone_img": "img/phone_1.jpg",
@@ -112,7 +112,7 @@
 	        "for_area": ["互联网"]
 	    },{
 	        "title": "SAAS应用类模板",
-	        "id": "002",
+	        "id": "0702",
 	        "decription": "专门的软件来完成Sass代码让浏览器识别和转换成CSS代码",
 	        "content_img": "img/main_2.png",
 	        "phone_img": "img/phone_2.jpg",
@@ -122,7 +122,7 @@
 	        "for_area": ["互联网"]
 	    },{
 	        "title": "协同办公模板",
-	        "id": "003",
+	        "id": "0801",
 	        "decription": "高效解决日常办公、资产管理、业务管理、信息交流等常规协同",
 	        "content_img": "img/main_3.png",
 	        "phone_img": "img/phone_3.jpg",
@@ -132,7 +132,7 @@
 	        "for_area": ["互联网","建筑"]
 	    },{
 	        "title": "登录模板",
-	        "id": "0031",
+	        "id": "0901",
 	        "decription": "简易网页登录",
 	        "content_img": "img/main_14.png",
 	        "phone_img": "img/phone_3.jpg",
@@ -142,7 +142,7 @@
 	        "for_area": ["互联网","建筑"]
 	    },{
 	        "title": "登录模板",
-	        "id": "0031",
+	        "id": "0902",
 	        "decription": "简易网页登录",
 	        "content_img": "img/main_15.png",
 	        "phone_img": "img/phone_3.jpg",
@@ -152,7 +152,7 @@
 	        "for_area": ["互联网","建筑"]
 	    },{
 	        "title": "登录模板",
-	        "id": "0031",
+	        "id": "0903",
 	        "decription": "简易网页登录",
 	        "content_img": "img/main_16.png",
 	        "phone_img": "img/phone_3.jpg",
