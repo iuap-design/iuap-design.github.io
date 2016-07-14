@@ -24,7 +24,9 @@
   * [复选 checkbox](checkbox.md)
   * [单选 radio](radio.md)
   * [进度条 progress](progress.md)
-  * [表格 grid](grid.md)
+  * 表格插件
+    * [基础说明](grid.md) 
+    * [表格校验](gridValidate.md) 
   * [树 tree](tree.md)
 * 数据API
   * [u.DataTable](udatatable.md)
