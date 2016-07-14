@@ -142,9 +142,7 @@
           var filterName = obj.rowObj.value.name;
           var newData = filterData(data2,filterName);
           console.log(newData.length);
-          debugger;
           $("#grid-comp2").data("gridComp").setDataSource(newData);
-          // gridObj.setDataSource(newData);
         }
 
     });
