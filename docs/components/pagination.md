@@ -15,10 +15,10 @@
 <div class="example-content ex-hide"><script>  var element = document.getElementById("pagination");
   var comp = new u.pagination({ el: element,showState:false });
   comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });
-  this.comp.on('pageChange', function(pageIndex) {
+  comp.on('pageChange', function(pageIndex) {
       console.log('新的页号为' + pageIndex);
   });
-  this.comp.on('sizeChange', function(arg) {
+  comp.on('sizeChange', function(arg) {
       console.log('每页显示条数为' + arg[0]);
   });
 </script></div>
@@ -28,10 +28,10 @@
 <div class="examples-code"><pre><code>  var element = document.getElementById("pagination");
   var comp = new u.pagination({ el: element,showState:false });
   comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });
-  this.comp.on('pageChange', function(pageIndex) {
+  comp.on('pageChange', function(pageIndex) {
       console.log('新的页号为' + pageIndex);
   });
-  this.comp.on('sizeChange', function(arg) {
+  comp.on('sizeChange', function(arg) {
       console.log('每页显示条数为' + arg[0]);
   });</code></pre>
 </div>
@@ -101,16 +101,6 @@ var comp = new u.pagination({el:paginationSm,jumppage:true,showState:false});
 comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200});
 
 </script></div>
-<div class="examples-code"><pre><code>&lt;p>大尺寸&lt;/p>
-&lt;div id='paginationLg' class='u-pagination pagination-lg'>
-&lt;/div>
-&lt;p>默认尺寸&lt;/p>
-&lt;div id='paginationDefault' class='u-pagination'>
-&lt;/div>
-&lt;p>小尺寸&lt;/p>
-&lt;div id='paginationSm' class='u-pagination pagination-sm'>
-&lt;/div></code></pre>
-</div>
 <div class="examples-code"><pre><code>var paginationLg = document.getElementById("paginationLg");
 var comp = new u.pagination({el:paginationLg,showState:false});
 comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200});
@@ -122,6 +112,16 @@ var comp = new u.pagination({el:paginationSm,jumppage:true,showState:false});
 
 comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200});
 </code></pre>
+</div>
+<div class="examples-code"><pre><code>&lt;p>大尺寸&lt;/p>
+&lt;div id='paginationLg' class='u-pagination pagination-lg'>
+&lt;/div>
+&lt;p>默认尺寸&lt;/p>
+&lt;div id='paginationDefault' class='u-pagination'>
+&lt;/div>
+&lt;p>小尺寸&lt;/p>
+&lt;div id='paginationSm' class='u-pagination pagination-sm'>
+&lt;/div></code></pre>
 </div>
 
 
