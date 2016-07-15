@@ -6782,6 +6782,11 @@ a.icon-block {
     text-align: right;
     padding-top: 20px;
 }
+@media screen and (max-width: 768px) {
+    .footer .body .code-2d {
+        text-align: center;
+    }
+}
 
 .footer .body .code-2d li {
     display: inline-block;
@@ -6828,6 +6833,6 @@ a.icon-block {
     font-size: 13px;
 }
 
-.footer .contract-info-con{
-    padding-top: 20px;
-}
+// .footer .contract-info-con{
+//     padding-top: 20px;
+// }
