@@ -138,6 +138,12 @@
     }, {
         "name": "穿梭框",
         "url": "demos/complex/transfer-dt"
+    }, {
+        "name": "主子表",
+        "url": "demos/complex/main-child"
+    }, {
+        "name": "左树右表",
+        "url": "demos/complex/tree-table"
     }]
 }, {
     "name": "表格",

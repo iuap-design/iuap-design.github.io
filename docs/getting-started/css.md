@@ -2,7 +2,7 @@
 
 ## 完善的全局样式
 
-iuap-design是基于设计语言iUAP Design实现的前端框架，我们提供完善的全局样式，包括重置样式、栅格、布局、辅助类、色彩、图标字体等。
+NeoUI是基于设计语言iUAP Design实现的前端框架，我们提供完善的全局样式，包括基本样式、样式重置、栅格、布局、辅助类、色彩、图标字体等。
 
 更多详细的精彩内容请访问[这里](http://design.yyuap.com/dist/pages/global-style/index.html)
 

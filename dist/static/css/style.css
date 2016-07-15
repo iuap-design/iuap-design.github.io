@@ -6383,6 +6383,7 @@ a.icon-block {
     width: 100%;
     z-index: 10;
     background-color: #fff;
+    font-family: 'Microsoft YaHei';
 }
 
 .fixed-footer .footer-fixed-bottom {
@@ -6746,8 +6747,8 @@ a.icon-block {
 // }
 
 .footer {
-    background-color: #e0e0e0;
-    padding-top: 25px;
+    background-color: #333;
+    padding-top: 15px;
 }
 
 .footer .body .column.w-40 {
@@ -6773,8 +6774,8 @@ a.icon-block {
 }
 .footer .body .column ul {
     line-height: 1.8;
-    font-size: 14px;
-    color: #353538;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .footer .body .code-2d {
@@ -6793,7 +6794,6 @@ a.icon-block {
 
 .dec-2d {
     text-align: center;
-    margin-top: 30px;
 }
 .dec-2d a,.dec-2d a:hover{
     color: inherit;
@@ -6803,16 +6803,19 @@ a.icon-block {
 .copyright p {
     margin-bottom: 10px;
     padding-top: 0px;
-    font-size: 13px;
+    font-size: 12px;
     text-align: center;
     margin-top: 15px;
-    color: #353538;
+    color: rgba(255, 255, 255, 0.6);
 }
-
+.copyright .right-con{
+    // background: #bbb;
+    padding: 5px;
+}
 
 .footer-col-title {
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
 }
 .footer-col-content {
@@ -6823,4 +6826,8 @@ a.icon-block {
 .footer-col-content p{
     margin-bottom: 5px;
     font-size: 13px;
+}
+
+.footer .contract-info-con{
+    padding-top: 20px;
 }
