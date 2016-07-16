@@ -31,6 +31,7 @@ dist/pages/common
 generate-uui/
 dist/download/
 
+
 # Folder config file
 Desktop.ini
 
@@ -106,6 +107,8 @@ build/Release
 # Dependency directory
 node_modules
 docs/_book
+docs/kero/_book
+_book
 
 # Optional npm cache directory
 .npm
