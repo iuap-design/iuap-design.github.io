@@ -1,0 +1,427 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <title>提示消息 message · iUAP Design</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-iuap-design/iuap-design.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="pagination.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="message.html">
+            
+                <a href="message.html">
+            
+                    
+                    提示消息 message
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="pagination.html">
+            
+                <a href="pagination.html">
+            
+                    
+                    分页 pagination
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="message.html">
+            
+                <a href="message.html">
+            
+                    
+                    消息 message
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="tooltip.html">
+            
+                <a href="tooltip.html">
+            
+                    
+                    提示 tooltip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="breadcrumb.html">
+            
+                <a href="breadcrumb.html">
+            
+                    
+                    面包屑 breadcrumb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="panel.html">
+            
+                <a href="panel.html">
+            
+                    
+                    面板 panel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="pearls.html">
+            
+                <a href="pearls.html">
+            
+                    
+                    流程 pearls
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >提示消息 message</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="message&#x63A7;&#x4EF6;">message&#x63A7;&#x4EF6;</h1><p>&#x7528;&#x4E8E;&#x5373;&#x65F6;&#x4FE1;&#x606F;&#x7684;&#x63D0;&#x793A;&#xFF0C;&#x6D88;&#x606F;&#x80CC;&#x666F;&#x8272;&#x53D6;&#x51B3;&#x4E8E;&#x6D88;&#x606F;&#x7C7B;&#x578B;&#xFF0C;&#x6613;&#x53EF;&#x6DFB;&#x52A0;&#x76F8;&#x5BF9;&#x5E94;&#x7684;<code>icon</code></p><h1 id="&#x5982;&#x4F55;&#x4F7F;&#x7528;">&#x5982;&#x4F55;&#x4F7F;&#x7528;</h1><p>&#x7ED9;&#x7236;&#x5143;&#x7D20;&#x6DFB;&#x52A0;<code>.u-message</code>&#x7C7B;
+&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#x80CC;&#x666F;  &#x4F8B;&#x5982;new  &#x5728;&#x7236;&#x5143;&#x7D20;&#x6DFB;&#x52A0;<code>.u-mesnews</code>&#x7C7B;</p><h1 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h1><h2 id="&#x57FA;&#x7840;message">&#x57FA;&#x7840;Message</h2><p>&#x6D88;&#x606F;&#x7C7B;&#x578B;&#x5BF9;&#x5E94;&#x4E0D;&#x540C;class&#x5C5E;&#x6027;&#x5219;&#x663E;&#x793A;&#x4E0D;&#x540C;&#x7684;&#x80CC;&#x666F;&#x8272;</p><div class="example-content ex-hide"><style>.margin-r-10{
+    margin-right: 10px; 
+}
+.example .u-message{
+    position: inherit;
+}
+</style></div>
+<div class="example-content"><div class="example">
+    <div class="u-message u-mesnews active">    
+        <span class="u-msg-close uf uf-removesymbol"></span>
+        News!
+    </div>
+    <div class="u-message u-mesinfo active">
+        <span class="u-msg-close uf uf-removesymbol"></span>
+        Info!
+    </div>
+    <div class="u-message u-messuccess active">    
+        <span class="u-msg-close uf uf-removesymbol"></span>
+        Success!
+    </div>
+    <div class="u-message u-mesdanger active">
+        <span class="u-msg-close uf uf-removesymbol"></span>
+        Danger!
+    </div>
+    <div class="u-message u-meswarning active">
+        <span class="u-msg-close uf uf-removesymbol"></span>
+        Warning!
+    </div>
+</div></div>
+<div class="examples-code"><pre><code>.margin-r-10{
+    margin-right: 10px; 
+}
+.example .u-message{
+    position: inherit;
+}</code></pre>
+</div>
+<div class="examples-code"><pre><code>&lt;div class=&quot;example&quot;&gt;
+    &lt;div class=&quot;u-message u-mesnews active&quot; &gt;    
+        &lt;span class=&quot;u-msg-close uf uf-removesymbol&quot;&gt;&lt;/span&gt;
+        News!
+    &lt;/div&gt;
+    &lt;div class=&quot;u-message u-mesinfo active&quot;&gt;
+        &lt;span class=&quot;u-msg-close uf uf-removesymbol&quot;&gt;&lt;/span&gt;
+        Info!
+    &lt;/div&gt;
+    &lt;div class=&quot;u-message u-messuccess active&quot;&gt;    
+        &lt;span class=&quot;u-msg-close uf uf-removesymbol&quot;&gt;&lt;/span&gt;
+        Success!
+    &lt;/div&gt;
+    &lt;div class=&quot;u-message u-mesdanger active&quot;&gt;
+        &lt;span class=&quot;u-msg-close uf uf-removesymbol&quot;&gt;&lt;/span&gt;
+        Danger!
+    &lt;/div&gt;
+    &lt;div class=&quot;u-message u-meswarning active&quot;&gt;
+        &lt;span class=&quot;u-msg-close uf uf-removesymbol&quot;&gt;&lt;/span&gt;
+        Warning!
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+
+<h2 id="&#x5E26;icon&#x7684;&#x52A0;&#x6DF1;&#x989C;&#x8272;&#x7248;message">&#x5E26;<code>icon</code>&#x7684;&#x52A0;&#x6DF1;&#x989C;&#x8272;&#x7248;Message</h2><p>&#x80CC;&#x666F;&#x8272;&#x52A0;&#x6DF1; <code>.dark</code>&#x7C7B;&#x63D0;&#x4F9B;&#x4E86;&#x9009;&#x62E9;</p><p>&#x6D88;&#x606F;&#x7C7B;&#x578B;&#x5BF9;&#x5E94;&#x76F8;&#x5E94;&#x7684;icon</p><div class="example-content ex-hide"><style>.margin-r-10{
+    margin-right: 10px; 
+}
+.example .u-message{
+    position: inherit;
+}
+</style></div>
+<div class="example-content"><div class="example">
+    <div class="u-message dark u-mesnews active">    
+        <span class="u-msg-close uf uf-removesymbol"></span>
+        <i class="uf uf-bellmusicaltool margin-r-10"></i>News!
+    </div>
+    <div class="u-message dark u-mesinfo active">
+        <span class="u-msg-close uf uf-removesymbol"></span>
+        <i class="fa fa-info-circle margin-r-10"></i>Info!
+    </div>
+    <div class="u-message dark u-messuccess active">    
+        <span class="u-msg-close uf uf-removesymbol"></span>
+        <i class="uf uf-checkedsymbol margin-r-10"></i>Success!
+    </div>
+    <div class="u-message dark u-mesdanger active">
+        <span class="u-msg-close uf uf-removesymbol"></span>
+        <i class="uf uf-crossmarkonablackcirclebackground margin-r-10"></i>Danger!
+    </div>
+    <div class="u-message dark u-meswarning active">
+        <span class="u-msg-close uf uf-removesymbol"></span>
+        <i class="fa fa-warning margin-r-10"></i>Warning!
+    </div>
+</div></div>
+<div class="examples-code"><pre><code>.margin-r-10{
+    margin-right: 10px; 
+}
+.example .u-message{
+    position: inherit;
+}</code></pre>
+</div>
+<div class="examples-code"><pre><code>&lt;div class=&quot;example&quot;&gt;
+    &lt;div class=&quot;u-message dark u-mesnews active&quot; &gt;    
+        &lt;span class=&quot;u-msg-close uf uf-removesymbol&quot;&gt;&lt;/span&gt;
+        &lt;i class=&quot;uf uf-bellmusicaltool margin-r-10&quot;&gt;&lt;/i&gt;News!
+    &lt;/div&gt;
+    &lt;div class=&quot;u-message dark u-mesinfo active&quot;&gt;
+        &lt;span class=&quot;u-msg-close uf uf-removesymbol&quot;&gt;&lt;/span&gt;
+        &lt;i class=&quot;fa fa-info-circle margin-r-10&quot;&gt;&lt;/i&gt;Info!
+    &lt;/div&gt;
+    &lt;div class=&quot;u-message dark u-messuccess active&quot;&gt;    
+        &lt;span class=&quot;u-msg-close uf uf-removesymbol&quot;&gt;&lt;/span&gt;
+        &lt;i class=&quot;uf uf-checkedsymbol margin-r-10&quot;&gt;&lt;/i&gt;Success!
+    &lt;/div&gt;
+    &lt;div class=&quot;u-message dark u-mesdanger active&quot;&gt;
+        &lt;span class=&quot;u-msg-close uf uf-removesymbol&quot;&gt;&lt;/span&gt;
+        &lt;i class=&quot;uf uf-crossmarkonablackcirclebackground margin-r-10&quot;&gt;&lt;/i&gt;Danger!
+    &lt;/div&gt;
+    &lt;div class=&quot;u-message dark u-meswarning active&quot;&gt;
+        &lt;span class=&quot;u-msg-close uf uf-removesymbol&quot;&gt;&lt;/span&gt;
+        &lt;i class=&quot;fa fa-warning margin-r-10&quot;&gt;&lt;/i&gt;Warning!
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+
+
+<!--### 示例1
+
+示例1说明
+
+### 示例2
+
+示例2说-->
+
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="pagination.html" class="navigation navigation-next " aria-label="Next page: 分页 pagination">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"提示消息 message","level":"1.2","depth":1,"next":{"title":"分页 pagination","level":"1.3","depth":1,"path":"pagination.md","ref":"pagination.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchor-navigation","expandable-chapters","-search","-livereload","-fontsettings","-sharing","highlight","iuap-design"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"iuap-design":{"title":"组件","desc":"提供丰富的组件，助力快速产出易用美观的界面"},"anchor-navigation":{},"expandable-chapters":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"github":null,"theme":"node_modules/gitbook-plugin-iuap-design/theme/","githubHost":"https://github.com/iuap-design/iuap-design","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iUAP Design","language":"zh-hans","gitbook":"*","description":"UI Framework For Enterprise","extension":null},"file":{"path":"message.md","mtime":"2016-07-16T07:09:41.898Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-07-16T07:37:40.154Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-iuap-design/iuap-design.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+
+    </body>
+</html>
+

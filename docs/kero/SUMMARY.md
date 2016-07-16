@@ -17,4 +17,5 @@
 * 表格插件
   * [基础说明](grid.md) 
   * [表格校验](gridValidate.md) 
-
+* 树插件
+  * [基础说明](tree.md) 

@@ -1,0 +1,443 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <title>提示 tooltip · iUAP Design</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-iuap-design/iuap-design.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="breadcrumb.html" />
+    
+    
+    <link rel="prev" href="message.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="message.html">
+            
+                <a href="message.html">
+            
+                    
+                    提示消息 message
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="pagination.html">
+            
+                <a href="pagination.html">
+            
+                    
+                    分页 pagination
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="message.html">
+            
+                <a href="message.html">
+            
+                    
+                    消息 message
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="tooltip.html">
+            
+                <a href="tooltip.html">
+            
+                    
+                    提示 tooltip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="breadcrumb.html">
+            
+                <a href="breadcrumb.html">
+            
+                    
+                    面包屑 breadcrumb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="panel.html">
+            
+                <a href="panel.html">
+            
+                    
+                    面板 panel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="pearls.html">
+            
+                <a href="pearls.html">
+            
+                    
+                    流程 pearls
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >提示 tooltip</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="tooltip&#x63A7;&#x4EF6;">tooltip&#x63A7;&#x4EF6;</h1><p>&#x5F53;&#x60A8;&#x60F3;&#x8981;&#x63CF;&#x8FF0;&#x4E00;&#x4E2A;&#x94FE;&#x63A5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x63D0;&#x793A;&#x5DE5;&#x5177;&#xFF08;Tooltip&#xFF09;&#x5C31;&#x663E;&#x5F97;&#x975E;&#x5E38;&#x6709;&#x7528;&#x3002;</p><h1 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h1><h2 id="&#x56DB;&#x4E2A;&#x65B9;&#x5411;tooltip">&#x56DB;&#x4E2A;&#x65B9;&#x5411;tooltip</h2><div class="example-content ex-hide"><style> #example3,#example2{
+    margin: 10px;
+    float: left;
+}
+#example2 .tooltip,#example3 .tooltip{
+    position: relative;
+}
+</style></div>
+<div class="example-content"><div id="example2">
+    <div class="tooltip top active" role="tooltip">
+      <div class="tooltip-arrow"></div>
+      <div class="tooltip-inner">&#x9ED8;&#x8BA4;&#x5411;&#x4E0A;&#x663E;&#x793A;</div>
+  </div>
+</div>
+<div id="example2">
+  <div class="tooltip bottom active" role="tooltip">
+      <div class="tooltip-arrow"></div>
+      <div class="tooltip-inner">&#x5411;&#x4E0B;&#x663E;&#x793A;</div>
+  </div>
+</div>
+<div id="example2">
+  <div class="tooltip left active" role="tooltip">
+      <div class="tooltip-arrow"></div>
+      <div class="tooltip-inner">&#x5411;&#x5DE6;&#x663E;&#x793A;</div>
+  </div>
+</div>
+<div id="example2">
+  <div class="tooltip right active" role="tooltip">
+      <div class="tooltip-arrow"></div>
+      <div class="tooltip-inner">&#x5411;&#x53F3;&#x663E;&#x793A;</div>
+  </div>
+</div></div>
+<div class="examples-code"><pre><code>&lt;div id=&apos;example2&apos;&gt;
+    &lt;div class=&quot;tooltip top active&quot; role=&quot;tooltip&quot; &gt;
+      &lt;div class=&quot;tooltip-arrow&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;tooltip-inner&quot;&gt;&#x9ED8;&#x8BA4;&#x5411;&#x4E0A;&#x663E;&#x793A;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&apos;example2&apos;&gt;
+  &lt;div class=&quot;tooltip bottom active&quot; role=&quot;tooltip&quot;&gt;
+      &lt;div class=&quot;tooltip-arrow&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;tooltip-inner&quot;&gt;&#x5411;&#x4E0B;&#x663E;&#x793A;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&apos;example2&apos;&gt;
+  &lt;div class=&quot;tooltip left active&quot; role=&quot;tooltip&quot;&gt;
+      &lt;div class=&quot;tooltip-arrow&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;tooltip-inner&quot;&gt;&#x5411;&#x5DE6;&#x663E;&#x793A;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&apos;example2&apos;&gt;
+  &lt;div class=&quot;tooltip right active&quot; role=&quot;tooltip&quot;&gt;
+      &lt;div class=&quot;tooltip-arrow&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;tooltip-inner&quot;&gt;&#x5411;&#x53F3;&#x663E;&#x793A;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<div class="examples-code"><pre><code> #example3,#example2{
+    margin: 10px;
+    float: left;
+}
+#example2 .tooltip,#example3 .tooltip{
+    position: relative;
+}</code></pre>
+</div>
+
+
+
+<h2 id="&#x591A;&#x79CD;&#x989C;&#x8272;tooltip">&#x591A;&#x79CD;&#x989C;&#x8272;tooltip</h2><div class="example-content ex-hide"><style> #example3,#example2{
+    margin: 10px;
+    float: left;
+}
+#example2 .tooltip,#example3 .tooltip{
+    position: relative;
+}
+</style></div>
+<div class="example-content"><div id="example3">
+    <div class="tooltip tooltip-primary top active" role="tooltip">
+        <div class="tooltip-arrow"></div>
+        <div class="tooltip-inner">primary tooltip</div>
+    </div>
+</div>
+<div id="example3">
+    <div class="tooltip tooltip-info top active" role="tooltip">
+        <div class="tooltip-arrow"></div>
+        <div class="tooltip-inner">info tooltip</div>
+    </div>
+</div>
+<div id="example3">
+    <div class="tooltip tooltip-warning top active" role="tooltip">
+        <div class="tooltip-arrow"></div>
+        <div class="tooltip-inner">warning tooltip</div>
+    </div>
+</div>
+<div id="example3">
+    <div class="tooltip tooltip-success top active" role="tooltip">
+        <div class="tooltip-arrow"></div>
+        <div class="tooltip-inner">success tooltip</div>
+    </div>
+</div>
+<div id="example3">
+    <div class="tooltip tooltip-danger top active" role="tooltip">
+        <div class="tooltip-arrow"></div>
+        <div class="tooltip-inner">danger tooltip</div>
+    </div>
+</div></div>
+<div class="examples-code"><pre><code> #example3,#example2{
+    margin: 10px;
+    float: left;
+}
+#example2 .tooltip,#example3 .tooltip{
+    position: relative;
+}</code></pre>
+</div>
+<div class="examples-code"><pre><code>&lt;div id=&apos;example3&apos;&gt;
+    &lt;div class=&quot;tooltip tooltip-primary top active&quot; role=&quot;tooltip&quot;&gt;
+        &lt;div class=&quot;tooltip-arrow&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;tooltip-inner&quot;&gt;primary tooltip&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&apos;example3&apos;&gt;
+    &lt;div class=&quot;tooltip tooltip-info top active&quot; role=&quot;tooltip&quot;&gt;
+        &lt;div class=&quot;tooltip-arrow&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;tooltip-inner&quot;&gt;info tooltip&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&apos;example3&apos;&gt;
+    &lt;div class=&quot;tooltip tooltip-warning top active&quot; role=&quot;tooltip&quot;&gt;
+        &lt;div class=&quot;tooltip-arrow&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;tooltip-inner&quot;&gt;warning tooltip&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&apos;example3&apos;&gt;
+    &lt;div class=&quot;tooltip tooltip-success top active&quot; role=&quot;tooltip&quot;&gt;
+        &lt;div class=&quot;tooltip-arrow&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;tooltip-inner&quot;&gt;success tooltip&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&apos;example3&apos;&gt;
+    &lt;div class=&quot;tooltip tooltip-danger top active&quot; role=&quot;tooltip&quot; &gt;
+        &lt;div class=&quot;tooltip-arrow&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;tooltip-inner&quot;&gt;danger tooltip&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+
+
+
+
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="message.html" class="navigation navigation-prev " aria-label="Previous page: 消息 message">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="breadcrumb.html" class="navigation navigation-next " aria-label="Next page: 面包屑 breadcrumb">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"提示 tooltip","level":"1.5","depth":1,"next":{"title":"面包屑 breadcrumb","level":"1.6","depth":1,"path":"breadcrumb.md","ref":"breadcrumb.md","articles":[]},"previous":{"title":"消息 message","level":"1.4","depth":1,"path":"message.md","ref":"message.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchor-navigation","expandable-chapters","-search","-livereload","-fontsettings","-sharing","highlight","iuap-design"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"iuap-design":{"title":"组件","desc":"提供丰富的组件，助力快速产出易用美观的界面"},"anchor-navigation":{},"expandable-chapters":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"github":null,"theme":"node_modules/gitbook-plugin-iuap-design/theme/","githubHost":"https://github.com/iuap-design/iuap-design","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iUAP Design","language":"zh-hans","gitbook":"*","description":"UI Framework For Enterprise","extension":null},"file":{"path":"tooltip.md","mtime":"2016-07-16T07:09:41.913Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-07-16T07:37:40.154Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-iuap-design/iuap-design.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+
+    </body>
+</html>
+
