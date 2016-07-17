@@ -89,6 +89,9 @@
         }, {
             "name": "色带",
             "url": "demos/ui/ribbon"
+        }, {
+            "name": "步骤",
+            "url": "demos/ui/step"
         }
     ]
 }, {
