@@ -13,6 +13,8 @@ bin/grid/
 bin/datetimepicker/
 bin/dist/
 
+_book/
+
 dist/pages/components/
 dist/pages/design-language/
 dist/pages/getting-started/
@@ -121,4 +123,3 @@ generate-uui
 
 # file
 dist/download/*
-
