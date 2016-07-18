@@ -12,10 +12,9 @@ Javascript插件包括了时间、模态框、分页、页签、grid、进度条
 
 ###引入文件
 
-1、 在header标签内引入u.css、u-extend.css
+1、 在header标签内引入u.css
 
 	<link rel="stylesheet" type="text/css" href="yourPath/css/u.css">
-	<link rel="stylesheet" type="text/css" href="yourPath/css/u-extend.css">
 如需要用到表格grid相关插件，需要加载grid.css
 
 ```
@@ -30,10 +29,9 @@ Javascript插件包括了时间、模态框、分页、页签、grid、进度条
 
 也可以通过cdn进行加载
 
-	<link rel="stylesheet" type="text/css" href="//design.yyuap.com/static/uui/3.0.6/css/u.css">
-	<link rel="stylesheet" type="text/css" href="//design.yyuap.com/static/uui/3.0.6/css/u-extend.css">
-	<link rel="stylesheet" type="text/css" href="//design.yyuap.com/static/uui/3.0.6/css/grid.css">
-	<link rel="stylesheet" type="text/css" href="//design.yyuap.com/static/uui/3.0.6/css/tree.css">
+	<link rel="stylesheet" type="text/css" href="//design.yyuap.com/static/uui/latest/css/u.css">
+	<link rel="stylesheet" type="text/css" href="//design.yyuap.com/static/uui/latest/css/grid.css">
+	<link rel="stylesheet" type="text/css" href="//design.yyuap.com/static/uui/latest/css/tree.css">
 
 2、引入u.js文件
 
@@ -52,9 +50,9 @@ Javascript插件包括了时间、模态框、分页、页签、grid、进度条
 
 也可以通过cdn进行加载
 
-	<script src="//design.yyuap.com/static/uui/3.0.6/js/u.js"></script>
-	<script src="//design.yyuap.com/static/uui/3.0.6/js/u-grid.js"></script>
-	<script src="//design.yyuap.com/static/uui/3.0.6/js/u-tree.js"></script>
+	<script src="//design.yyuap.com/static/uui/latest/js/u.js"></script>
+	<script src="//design.yyuap.com/static/uui/latest/js/u-grid.js"></script>
+	<script src="//design.yyuap.com/static/uui/latest/js/u-tree.js"></script>
 
 ###编写代码
 
