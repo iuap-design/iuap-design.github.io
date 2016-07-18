@@ -7,7 +7,7 @@ iuap-design 支持所有的主流浏览器和平台的最新的、稳定的版�
 你可以使用我们官方提供的u-polyfill.js文件来进行兼容处理
 
 ```
-http://design.yyuap.com/static/iuap-design/3.0.1/js/u-polyfill.js
+http://design.yyuap.com/static/uui/latest/js/u-polyfill.js
 ```
 
 也可以添加一些第三方的 `JavaScript` 类库来处理 `iuap-design` 对Internet Explorer 8的支持，比如在项目中添加以下类库：
