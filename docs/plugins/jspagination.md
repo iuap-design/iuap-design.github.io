@@ -5,7 +5,7 @@
 
 # 插件依赖
 
-依赖于  http://design.yyuap.com/static/uui/3.0.6/js/u.js
+依赖于 http://design.yyuap.com/static/uui/latest/js/u.js
 
 # 用法
 
@@ -22,10 +22,10 @@
 <div class="example-content ex-hide"><script>  var element = document.getElementById("pagination");
   var comp = new u.pagination({ el: element,showState:false });
   comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });
-  this.comp.on('pageChange', function(pageIndex) {
+  comp.on('pageChange', function(pageIndex) {
       console.log('新的页号为' + pageIndex);
   });
-  this.comp.on('sizeChange', function(arg) {
+  comp.on('sizeChange', function(arg) {
       console.log('每页显示条数为' + arg[0]);
   });
 </script></div>
@@ -35,10 +35,10 @@
 <div class="examples-code"><pre><code>  var element = document.getElementById("pagination");
   var comp = new u.pagination({ el: element,showState:false });
   comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });
-  this.comp.on('pageChange', function(pageIndex) {
+  comp.on('pageChange', function(pageIndex) {
       console.log('新的页号为' + pageIndex);
   });
-  this.comp.on('sizeChange', function(arg) {
+  comp.on('sizeChange', function(arg) {
       console.log('每页显示条数为' + arg[0]);
   });</code></pre>
 </div>
@@ -100,5 +100,5 @@
 	  </tr>
 	</tbody>
 </table>
-	
+​	
 

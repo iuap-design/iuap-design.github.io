@@ -4,7 +4,7 @@
 
 # 插件依赖
 
-依赖于  http://design.yyuap.com/static/uui/3.0.6/js/u.js
+依赖于 http://design.yyuap.com/static/uui/latest/js/u.js
 
 # 用法
 
@@ -49,14 +49,14 @@ u.on(msgBtn,'click', function(){
     u.showMessage({msg:rightInfo,position:"center"})
 })
 </script></div>
+<div class="examples-code"><pre><code>&lt;button id="msgBtn" class="u-button" >Success&lt;/button>
+</code></pre>
+</div>
 <div class="examples-code"><pre><code>var msgBtn = document.body.querySelector("#msgBtn");
 var rightInfo='&lt;i class="fa fa-check-circle margin-r-5">&lt;/i>成功信息!!!';
 u.on(msgBtn,'click', function(){ 
     u.showMessage({msg:rightInfo,position:"center"})
 })</code></pre>
-</div>
-<div class="examples-code"><pre><code>&lt;button id="msgBtn" class="u-button" >Success&lt;/button>
-</code></pre>
 </div>
 
 
