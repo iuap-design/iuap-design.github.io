@@ -1,5 +1,24 @@
 # 概述
 
+## Kero依赖
+
+* 优先加载jQuery + Knockout,再引入u.js
+
+  ```
+   <script src="http://design.yyuap.com/static/jquery/jquery-1.9.1.min.js"></script>
+    <script src="http://design.yyuap.com/static/knockout/knockout-3.2.0.debug.js"></script>
+     <script src="http://design.yyuap.com/static/uui/latest/js/u.js"></script>
+  ```
+
+
+* 如需兼容ie8，需要单独引入`polyfill.js`
+
+  ```
+   <script src="http://design.yyuap.com/static/uui/latest/js/u-polyfill.js"></script>
+  ```
+
+  ​
+
 ## Kero定位
 
 Kero是一个包含了UI控件库以及模型结构(基于MVVM)的前端类库。主要解决问题：
