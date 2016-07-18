@@ -13,11 +13,19 @@ git clone git@github.com:iuap-design/iuap-design.git
 - 使用CDN
 
 ```
-http://design.yyuap.com/static/iuap-design/3.0.1/js/u-ui.js
-http://design.yyuap.com/static/iuap-design/3.0.1/js/u-polyfill.js
+<!--css-->
+http://design.yyuap.com/static/uui/latest/css/u.css
+<!--如需使用grid,tree插件，加载grid.css,tree.css-->
+http://design.yyuap.com/static/uui/latest/css/grid.css 
+http://design.yyuap.com/static/uui/latest/css/tree.css
 
-http://design.yyuap.com/static/iuap-design/3.0.1/css/u.css
-http://design.yyuap.com/static/iuap-design/3.0.1/css/u-extend.css
+<!--js-->
+http://design.yyuap.com/static/uui/latest/js/u.js
+http://design.yyuap.com/static/uui/latest/js/u-polyfill.js
+<!--如需使用grid,tree插件，加载u-grid.js,u-tree.js-->
+http://design.yyuap.com/static/uui/latest/js/u-grid.js
+http://design.yyuap.com/static/uui/latest/js/u-tree.js
+
 ```
 
 - 使用npm安装
@@ -41,7 +49,7 @@ npm install iuap-design
 ## 开发文档资源
 
 - [iuap-design docs on github](https://github.com/iuap-design/iuap-design.github.io/tree/master/docs)
-<!-- - [iuap-design detail develop docs](http://design.yyuap.com/) -->
+  <!-- - [iuap-design detail develop docs](http://design.yyuap.com/) -->
 
 ## 设计语言文档
 
@@ -94,7 +102,6 @@ iuap-design框架将提供40+个控件和30+个插件，[查看详细开发文�
     ├── u-ui.min.js
     ├── u.js
     └── u.min.js
-
 ```
 
 # 快速创建一个页面
