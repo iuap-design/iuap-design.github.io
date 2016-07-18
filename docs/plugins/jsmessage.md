@@ -17,7 +17,7 @@
 2.定义弹出信息的具体内容
 
 ```
-var rightInfo='<i class="fa fa-check-circle margin-r-5"></i>成功信息!!!';
+var rightInfo='<i class="uf uf-checkedsymbol margin-r-5"></i>成功信息!!!';
 
 ```
 
@@ -44,19 +44,19 @@ u.on(msgBtn,'click', function(){
 <div class="example-content"><button id="msgBtn" class="u-button" >Success</button>
 </div>
 <div class="example-content ex-hide"><script>var msgBtn = document.body.querySelector("#msgBtn");
-var rightInfo='<i class="fa fa-check-circle margin-r-5"></i>成功信息!!!';
+var rightInfo='<i class="uf uf-checkedsymbol margin-r-5"></i>成功信息!!!';
 u.on(msgBtn,'click', function(){ 
     u.showMessage({msg:rightInfo,position:"center"})
 })
 </script></div>
+<div class="examples-code"><pre><code>&lt;button id="msgBtn" class="u-button" >Success&lt;/button>
+</code></pre>
+</div>
 <div class="examples-code"><pre><code>var msgBtn = document.body.querySelector("#msgBtn");
-var rightInfo='&lt;i class="fa fa-check-circle margin-r-5">&lt;/i>成功信息!!!';
+var rightInfo='&lt;i class="uf uf-checkedsymbol margin-r-5">&lt;/i>成功信息!!!';
 u.on(msgBtn,'click', function(){ 
     u.showMessage({msg:rightInfo,position:"center"})
 })</code></pre>
-</div>
-<div class="examples-code"><pre><code>&lt;button id="msgBtn" class="u-button" >Success&lt;/button>
-</code></pre>
 </div>
 
 
@@ -77,7 +77,7 @@ u.on(msgBtn,'click', function(){
 	    <td>msg</td>
 	    <td>html片段</td>
 	    <td>无</td>
-	    <td><i class="fa fa-check-circle margin-r-5"></i>成功信息!!!';</td>
+	    <td><i class="uf uf-checkedsymbol margin-r-5"></i>成功信息!!!';</td>
 	    <td></td>
 	  </tr>
 	  <tr>
