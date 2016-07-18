@@ -30,7 +30,7 @@ dataArray：下拉数据，数组形式如：`[{value:'01',name:'男'},{value:'0
 <div class="example-content"><div class="u-combo mutil-select" id="combo3">
     <div class="u-input-group u-has-feedback">
         <input class="u-form-control" />
-        <span class="u-form-control-feedback fa fa-angle-down" data-role="combo-button"></span>
+        <span class="u-form-control-feedback uf uf-anglearrowdown" data-role="combo-button"></span>
     </div>
 </div></div>
 <div class="example-content ex-hide"><script>u.compMgr.updateComp();
@@ -42,7 +42,7 @@ document.getElementById('combo3')['u.Combo'].setComboData([{value:'01',name:'jav
 <div class="examples-code"><pre><code>&lt;div class="u-combo mutil-select" id="combo3">
     &lt;div class="u-input-group u-has-feedback">
         &lt;input class="u-form-control" />
-        &lt;span class="u-form-control-feedback fa fa-angle-down" data-role="combo-button">&lt;/span>
+        &lt;span class="u-form-control-feedback uf uf-anglearrowdown" data-role="combo-button">&lt;/span>
     &lt;/div>
 &lt;/div></code></pre>
 </div>
@@ -52,7 +52,7 @@ document.getElementById('combo3')['u.Combo'].setComboData([{value:'01',name:'jav
     <div class="u-input-group u-has-feedback">
         <div class="u-input-group-before" style="color: red;">*</div>
         <input class="u-form-control" />
-        <span class="u-form-control-feedback fa fa-angle-down" data-role="combo-button"></span>
+        <span class="u-form-control-feedback uf uf-anglearrowdown" data-role="combo-button"></span>
     </div>
 </div></div>
 <div class="example-content ex-hide"><script>u.compMgr.updateComp();
@@ -65,7 +65,7 @@ document.getElementById('combo1')['u.Combo'].setComboData([{value:'01',name:'男
     &lt;div class="u-input-group u-has-feedback">
         &lt;div class="u-input-group-before" style="color: red;">*&lt;/div>
         &lt;input class="u-form-control" />
-        &lt;span class="u-form-control-feedback fa fa-angle-down" data-role="combo-button">&lt;/span>
+        &lt;span class="u-form-control-feedback uf uf-anglearrowdown" data-role="combo-button">&lt;/span>
     &lt;/div>
 &lt;/div></code></pre>
 </div>
