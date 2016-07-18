@@ -4,10 +4,10 @@ loading 组件以一个圆环顺时针方向运动，用来传达某一事件已
 
 # 插件依赖
 
-首先依赖于 http://design.yyuap.com/static/uui/3.0.6/js/u.js
 
+首先依赖于 http://design.yyuap.com/static/uui/latest/js/u.js
 
-再引入js: http://design.yyuap.com/static/uui/3.0.6/js/u-date.js
+再引入js: http://design.yyuap.com/static/uui/latest/js/u-date.js
 
 # 用法
 
@@ -25,8 +25,7 @@ js会根据`u-loading`来定位dom，然后绑定事件。
 
 
 
-<div class="example-content"><div class="u-loading is-active u-loading-single-color"></div>
-</div>
+<div class="example-content"><div class="u-loading is-active u-loading-single-color"></div></div>
 <div class="examples-code"><pre><code>&lt;div class="u-loading is-active u-loading-single-color">&lt;/div></code></pre>
 </div>
 

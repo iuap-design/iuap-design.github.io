@@ -1,7 +1,7 @@
 # 插件
 
 ##基本介绍
-Javascript插件包括了时间、模态框、分页、页签、grid、进度条等多种插件。可以在 [WebIDE](http://design.yyuap.com/dist/pages/webIDE/index.html#/demos/ui/dialog/message) 中找到你想要的效果，并且可以直接copy代码，所见即所得，非常贴心方便。
+Javascript插件包括了时间、模态框、页签、grid、进度条等多种插件。可以在 [WebIDE](http://design.yyuap.com/dist/pages/webIDE/index.html#/demos/ui/dialog/message) 中找到你想要的效果，并且可以直接copy代码，所见即所得，非常贴心方便。
 
 ##具体使用
 

@@ -26,9 +26,11 @@ dist/pages/globalstyle/
 
 # render ignore
 dist/pages/neoUI
+dist/pages/neoui
 dist/pages/template
 dist/pages/custom
 dist/pages/common
+dist/*.html
 
 generate-uui/
 dist/download/

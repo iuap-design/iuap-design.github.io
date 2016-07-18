@@ -4,7 +4,7 @@
 
 # 插件依赖
 
-依赖于  http://design.yyuap.com/static/uui/3.0.6/js/u.js
+依赖于 http://design.yyuap.com/static/uui/latest/js/u.js
 
 # 用法
 
@@ -58,8 +58,7 @@ u.on(msgBtn2,'click', function(){
 通过`confirmDialog`方法调出模态框
 当点击取消或者保存，可在js中的方法里进行业务的回调 
 
-<div class="example-content"><button id="msgDialogBtn2" class="u-button raised accent">消息确认框</button>
-</div>
+<div class="example-content"><button id="msgDialogBtn2" class="u-button raised accent">消息确认框</button></div>
 <div class="example-content ex-hide"><script>u.compMgr.apply({
         el:'body'
 })
@@ -97,41 +96,6 @@ u.on(msgBtn2,'click', function(){
 })</code></pre>
 </div>
 
-##提示摸态框
-
-只有一个确认按钮
-通过`messageDialog`方法调出模态框
-
-
-<div class="example-content"><button id="msgDialogBtn" class="u-button raised accent">消息提示框</button>
-
-   
-</div>
-<div class="example-content ex-hide"><script>u.compMgr.apply({
-    el:'body'
-})
-var msgBtn = document.body.querySelector("#msgDialogBtn");
-u.on(msgBtn, 'click', function() {
-    //            u.showMessage("HELLO!!!");
-    u.messageDialog({ msg: "HELLO!!!", title: "测试提示", btnText: "OK!" });
-})
-
-</script></div>
-<div class="examples-code"><pre><code>&lt;button id="msgDialogBtn" class="u-button raised accent">消息提示框&lt;/button>
-
-   </code></pre>
-</div>
-<div class="examples-code"><pre><code>u.compMgr.apply({
-    el:'body'
-})
-var msgBtn = document.body.querySelector("#msgDialogBtn");
-u.on(msgBtn, 'click', function() {
-    //            u.showMessage("HELLO!!!");
-    u.messageDialog({ msg: "HELLO!!!", title: "测试提示", btnText: "OK!" });
-})
-</code></pre>
-</div>
-
 ##自定义摸态框
 
 通过`dialog`方法调出模态框
@@ -150,8 +114,7 @@ u.on(msgBtn, 'click', function() {
 		<button class="u-msg-ok u-button">保存<span class="u-button-container"><span class="u-ripple"></span></span></button>
 		<button class="u-msg-cancel u-button">取消<span class="u-button-container"><span class="u-ripple"></span></span></button>
 	</div>
-</div>
-</div>
+</div></div>
 <div class="example-content ex-hide"><script>u.compMgr.apply({
     el:'body'
 })
@@ -203,11 +166,45 @@ u.on(cancelButton,'click', function(){
 });</code></pre>
 </div>
 
+##提示摸态框
+
+只有一个确认按钮
+通过`messageDialog`方法调出模态框
+
+
+<div class="example-content"><button id="msgDialogBtn" class="u-button raised accent">消息提示框</button>
+
+   </div>
+<div class="example-content ex-hide"><script>u.compMgr.apply({
+    el:'body'
+})
+var msgBtn = document.body.querySelector("#msgDialogBtn");
+u.on(msgBtn, 'click', function() {
+    //            u.showMessage("HELLO!!!");
+    u.messageDialog({ msg: "HELLO!!!", title: "测试提示", btnText: "OK!" });
+})
+
+</script></div>
+<div class="examples-code"><pre><code>&lt;button id="msgDialogBtn" class="u-button raised accent">消息提示框&lt;/button>
+
+   </code></pre>
+</div>
+<div class="examples-code"><pre><code>u.compMgr.apply({
+    el:'body'
+})
+var msgBtn = document.body.querySelector("#msgDialogBtn");
+u.on(msgBtn, 'click', function() {
+    //            u.showMessage("HELLO!!!");
+    u.messageDialog({ msg: "HELLO!!!", title: "测试提示", btnText: "OK!" });
+})
+</code></pre>
+</div>
+
 
 
 # API
 
-##js方法
+##js方法与参数
 <table>
   <tbody>
   	  <tr>

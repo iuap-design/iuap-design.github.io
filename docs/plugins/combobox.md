@@ -4,7 +4,7 @@ combobox组合框是由一个文本输入控件和一个下拉菜单组成的，
 
 # 插件依赖
 
-依赖于 http://design.yyuap.com/static/uui/3.0.6/js/u.js
+首先依赖于 http://design.yyuap.com/static/uui/latest/js/u.js
 
 
 # 用法
@@ -58,6 +58,9 @@ document.getElementById('combo3')['u.Combo'].setComboData([{value:'01',name:'jav
 <div class="example-content ex-hide"><script>u.compMgr.updateComp();
 document.getElementById('combo1')['u.Combo'].setComboData([{value:'01',name:'男'},{value:'02',name:'女'}]);
 </script></div>
+<div class="examples-code"><pre><code>u.compMgr.updateComp();
+document.getElementById('combo1')['u.Combo'].setComboData([{value:'01',name:'男'},{value:'02',name:'女'}]);</code></pre>
+</div>
 <div class="examples-code"><pre><code>&lt;div class="u-combo" id="combo1" style="margin: 10px">
     &lt;div class="u-input-group u-has-feedback">
         &lt;div class="u-input-group-before" style="color: red;">*&lt;/div>
@@ -65,9 +68,6 @@ document.getElementById('combo1')['u.Combo'].setComboData([{value:'01',name:'男
         &lt;span class="u-form-control-feedback uf uf-anglearrowdown" data-role="combo-button">&lt;/span>
     &lt;/div>
 &lt;/div></code></pre>
-</div>
-<div class="examples-code"><pre><code>u.compMgr.updateComp();
-document.getElementById('combo1')['u.Combo'].setComboData([{value:'01',name:'男'},{value:'02',name:'女'}]);</code></pre>
 </div>
 
 
