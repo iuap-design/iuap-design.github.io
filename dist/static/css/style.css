@@ -6790,7 +6790,7 @@ a.icon-block {
 
 .footer .body .code-2d li {
     display: inline-block;
-    margin-left: 5px;
+    margin-left: 15px;
 }
 
 .footer .body .column {
@@ -6820,7 +6820,7 @@ a.icon-block {
 
 .footer-col-title {
     margin-bottom: 10px;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
 }
 .footer-col-content {
@@ -6830,7 +6830,7 @@ a.icon-block {
 
 .footer-col-content p{
     margin-bottom: 5px;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 // .footer .contract-info-con{

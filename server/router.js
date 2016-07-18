@@ -42,7 +42,7 @@ module.exports = {
         var styles = this.request.body.css_code;
         var htmls = this.request.body.html_code;
         var scripts = this.request.body.script_code;
-        var ctxPath='http://design.yyuap.com/static/uui/3.0.6';
+        var ctxPath='http://design.yyuap.com/static/uui/3.0.6/latest';
         var tpl = [
           '<!DOCTYPE html>',
           '<html lang="en">',

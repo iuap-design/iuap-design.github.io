@@ -11,8 +11,8 @@
 }
 
 .u-main-container {
-    margin: 20px;
-    min-height: 400px;
+    padding-top: 30px;
+    // min-height: 400px;
 }
 
 .neo .big-services-box {
@@ -20,13 +20,16 @@
     text-align: center;
 }
 
-.big-services-box .neo-part:hover{
-        transform: scale(1.01);
-        box-shadow: aqua;
-        -moz-box-shadow: 0px 5px 5px #999;
-        box-shadow: 0px 5px 5px #999;
-    }
-   
+.big-services-box .neo-part {
+    padding: 15px 5px;
+    border-radius: 10px;
+}
+
+.big-services-box .neo-part:hover {
+    // transform: scale(1.01);
+    -moz-box-shadow: 0px 0px 10px #999;
+    box-shadow: 0px 0px 10px #999;
+}
 
 .neo .more-btn {
     margin: 10px 10px 10px 0;
@@ -68,15 +71,15 @@
 
 .neo-brief-desc {
     min-height: 45px;
-     text-align: left;
-    text-indent: 18px;
+    text-align: left;
+    // text-indent: 18px;
     padding: 0px 10px;
-
 }
 
-.neo-brief-desc p{
+.neo-brief-desc p {
     margin-bottom: 5px;
 }
+
 .neo-dec-content {
     line-height: 1.5;
     margin-bottom: 20px;
