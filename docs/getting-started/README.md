@@ -70,17 +70,17 @@ iuap-design框架将提供40+个控件和30+个插件，[查看详细开发文�
 ```
 .
 ├── css
-│   ├── font-awesome.css
-│   ├── font-awesome.min.css
-│   ├── grid.css
-│   ├── grid.min.css
-│   ├── tree.css
-│   ├── tree.min.css
-│   ├── u-extend.css
-│   ├── u-extend.min.css
-│   ├── u.css
-│   └── u.min.css
-├── fonts
+│   ├── font-awesome.css    // 图标字体样式
+│   ├── font-awesome.min.css// 图标字体样式-压缩
+│   ├── grid.css            // grid图表相关插件样式
+│   ├── grid.min.css        // grid图表相关插件样式-压缩
+│   ├── tree.css            // tree目录嵌套相关插件样式
+│   ├── tree.min.css        // tree目录嵌套相关插件样式-压缩
+│   ├── u-extend.css        // 插件样式集合
+│   ├── u-extend.min.css    // 插件样式集合-压缩
+│   ├── u.css               // 核心样式（不包含grid,tree,font-awesome）
+│   └── u.min.css           // u.css压缩
+├── fonts // 图标字体，适配不同浏览器
 │   ├── FontAwesome.otf
 │   ├── fontawesome-webfont.eot
 │   ├── fontawesome-webfont.svg
@@ -88,20 +88,20 @@ iuap-design框架将提供40+个控件和30+个插件，[查看详细开发文�
 │   ├── fontawesome-webfont.woff
 │   └── fontawesome-webfont.woff2
 └── js
-    ├── u-date.js
-    ├── u-date.min.js
-    ├── u-grid.js
-    ├── u-grid.min.js
-    ├── u-model.js
-    ├── u-model.min.js
-    ├── u-polyfill.js
-    ├── u-polyfill.min.js
-    ├── u-tree.js
-    ├── u-tree.min.js
-    ├── u-ui.js
-    ├── u-ui.min.js
-    ├── u.js
-    └── u.min.js
+    ├── u-date.js        // 日期相关插件
+    ├── u-date.min.js    // 日期相关插件-压缩
+    ├── u-grid.js        // grid图表相关插件
+    ├── u-grid.min.js    // grid图表相关插件-压缩
+    ├── u-model.js       // 模型相关插件
+    ├── u-model.min.js   // 模型相关插件 -压缩
+    ├── u-polyfill.js    // ie8补丁
+    ├── u-polyfill.min.js// ie8补丁-压缩
+    ├── u-tree.js        // tree目录嵌套相关插件
+    ├── u-tree.min.js    // tree目录嵌套相关插件-压缩
+    ├── u-ui.js          // 常用核心插件集（不包含model模型，grid图表，tree嵌套，date日期）
+    ├── u-ui.min.js      // u-ui.js压缩
+    ├── u.js             // 核心插件集(不包含grid图表，tree嵌套)
+    └── u.min.js         // 核心插件集 - 压缩
 ```
 
 # 快速创建一个页面
@@ -124,21 +124,43 @@ iuap-design框架将提供40+个控件和30+个插件，[查看详细开发文�
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="iUAP Design"/>
+
+  <!-- 整体样式u.css,必须引入 -->
   <link rel="stylesheet" href="http://design.yyuap.com/static/iuap-design/3.0.1/css/u.css">
+  
+  <!-- 可选：使用字体图标，加载font-awesomecss -->
+  <link rel="stylesheet" type="text/css" href="http://design.yyuap.com/static/uui/latest/css/font-awesome.css">
+  
+  <!-- 可选：使用grid图表相关插件，加载grid.css -->
+  <link rel="stylesheet" type="text/css" href="http://design.yyuap.com/static/uui/latest/css/grid.css">
+  
+  <!-- 可选：使用tree相关插件，加载tree.css -->
+  <link rel="stylesheet" type="text/css" href="http://design.yyuap.com/static/uui/latest/css/tree.css">
+
 </head>
 <body>
   <h1> Hi, iUAP Design </h1>
 
   <!-- 你的代码 -->
 
-  <!--[if (gte IE 9)|!(IE)]><!-->
+  <!-- 依赖jQuery,必须在核心js加载前引入 -->
   <script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
-  <!--<![endif]-->
+
   <!--[if lte IE 8 ]>
+  <!-- 针对ie8,性能检测及Polyfill -->
   <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-  <script src="http://design.yyuap.com/static/iuap-design/3.0.1/js/u-polyfill.js"></script>
+  <script src="http://design.yyuap.com/static/uui/latest/js/u-polyfill.js"></script>
   <![endif]-->
-  <script src="http://design.yyuap.com/static/iuap-design/3.0.1/js/u-ui.js"></script>
+
+  <!-- 核心js 必须引入 -->
+  <script src="http://design.yyuap.com/static/uui/latest/js/u.js"></script>
+
+  <!-- 可选：使用grid图表相关插件，加载u-grid.js -->
+  <script src="http://design.yyuap.com/static/uui/latest/js/u-grid.js"></script>
+
+  <!-- 可选：使用tree相关插件，加载u-tree.js -->
+  <script src="http://design.yyuap.com/static/uui/latest/js/u-tree.js"></script>
+
 </body>
 </html>
 ```
