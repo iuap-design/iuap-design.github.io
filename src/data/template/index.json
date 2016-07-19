@@ -160,7 +160,28 @@
 	        "download": "/templates/dist/login1.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","建筑"]
+	    },{
+	        "title": "电商后台管理——列表页面",
+	        "id": "0402",
+	        "decription": "后端管理的列表页面",
+	        "content_img": "img/main_16.png",
+	        "phone_img": "img/phone_3.jpg",
+	        "url": "/templates/website/yuncai/index.html",
+	        "download": "/templates/dist/yuncai.zip",
+	        "using_times": "228",
+	        "for_area": ["互联网","电商"]
+	    },{
+	        "title": "电商后台管理——左树右表面",
+	        "id": "0403",
+	        "decription": "内容区左侧是树，右侧是tab页签里面有列表和表单内容",
+	        "content_img": "img/main_16.png",
+	        "phone_img": "img/phone_3.jpg",
+	        "url": "/templates/website/yuncai/departManager.html",
+	        "download": "/templates/dist/yuncai.zip",
+	        "using_times": "228",
+	        "for_area": ["互联网","电商"]
 	    }
+
 	]
 
 }
