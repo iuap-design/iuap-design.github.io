@@ -7,10 +7,10 @@ Thumbs.db
 ehthumbs.db
 
 bin/kero/
-bin/iuap-design/
-bin/tree/
-bin/grid/
-bin/datetimepicker/
+bin/neoui/
+bin/neoui-datetimepicker/
+bin/neoui-tree/
+bin/neoui-grid/
 bin/dist/
 
 _book/
