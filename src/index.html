@@ -41,12 +41,25 @@
       </div>
       <![endif]-->
     <!-- 启动logo  style="display:none;"-->
-    <div id="preloader">
-        <div class="logo">
-            <img src="/dist/static/img/logo-middle.png" alt="iUAP Design">
-            <span>iUAP Design</span>
+    <!--[if IE 8 ]> 
+        <div id="preloader" style="display:none">
+            <div class="logo">
+                <img src="/dist/static/img/logo-middle.png" alt="iUAP Design">
+                <span>iUAP Design</span>
+            </div>
         </div>
-    </div>
+    <![endif]-->
+
+    <!--[if (gte IE 9)|!(IE)]><!-->
+        <div id="preloader">
+            <div class="logo">
+                <img src="/dist/static/img/logo-middle.png" alt="iUAP Design">
+                <span>iUAP Design</span>
+            </div>
+        </div>
+    <!--<![endif]-->
+
+
     <!-- Fake scrollbar (when open popups/modals) -->
     <div class="fake-scrollbar"></div>
     <!-- Off-canvas Navigation -->
