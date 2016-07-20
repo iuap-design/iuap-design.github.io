@@ -97,9 +97,6 @@
 }, {
   "name":"辅助",
   "sub": [{
-    "name": "辅助样式",
-    "url": "demos/assist/styles"
-    }, {
         "name": "宽高",
         "url": "demos/assist/wh"
     }, {

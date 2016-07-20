@@ -9,8 +9,12 @@
     left: 0!important;
 }
 .u-btn-group-split-icon{
-    border-radius: 0;
-    height: 1.9rem!important;
+    height: auto;
+}
+
+.u-btn-group-split-icon .uf{
+   font-size:12px;
+   padding: 0px;
 }
 .u-menu-item-badge{
     top: 12px;

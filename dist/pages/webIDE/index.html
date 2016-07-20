@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="网站描述">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>WebIDE For iUAP Design</title>
+    <title>UIKIT</title>
     <!-- 安卓设备的Chrome添加到桌面的图标 -->
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="icon" sizes="192x192" href="../../static/logo-small.png">
@@ -45,8 +45,8 @@
         <div id="menubar" class=" u-menubar-open demo-drawer demo-folded u-navlayout-drawer u-navlayout-fixed-header u-navlayout-drawer-pc ">
             <header class="u-navlayout-header">
                 <a class="demo-drawer-nav-brand">
-                    <span class="u-color-text-white title-primary">WebIDE</span>
-                    <span class="u-color-text-white title-accent">For iUAP Design</span>
+                    <span class="u-color-text-white title-primary">UIKIT</span>
+                    
                 </a>
             </header>
             <div class=" iscroll-improve   demo-drawer-header-wrap u-color-white over-au">
@@ -54,7 +54,7 @@
                     <ul data-bind="foreach:{data: menuDT.rows(),as :'row'}">
                         <li>
                             <a class="u-nav-link" data-bind="css:{'u-nav-link-open': row.selected()}">
-                                <i class="fa   demo-icon" ></i>
+                                
                                 <span class="demo-hidden-folded" data-bind="text:row.ref('name')"></span>
                                 <span class="pull-right">
 							          <i class="fa fa-chevron-right"></i>
@@ -65,7 +65,7 @@
                                     <!-- url 为空 ，存在三级菜单 -->
                                     <!-- ko if:  !srow.ref('url')() -->
                                     <a class="u-nav-link" data-bind="css:{'u-nav-link-open': srow.selected()}">
-                                        <i class="fa  demo-icon"></i>
+                                        
                                         <span class="demo-hidden-folded " data-bind="text:srow.ref('name')"></span>
                                         <span class="pull-right">
 										          <i class="fa fa-chevron-right"></i>
