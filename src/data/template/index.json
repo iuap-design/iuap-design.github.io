@@ -113,7 +113,7 @@
 	    },{
 	        "title": "SAAS应用类模板",
 	        "id": "0701",
-	        "decription": "充分体现出sass的变量神器",
+	        "decription": "给企业提供一个数据平台，支持接入各种数据库，整理企业数据",
 	        "content_img": "img/main_1.png",
 	        "phone_img": "img/phone_1.jpg",
 	        "url": "/templates/website/hr/list.html",
@@ -123,7 +123,7 @@
 	    },{
 	        "title": "SAAS应用类模板",
 	        "id": "0702",
-	        "decription": "专门的软件来完成Sass代码让浏览器识别和转换成CSS代码",
+	        "decription": "致力于为企业 | 企业内部交流",
 	        "content_img": "img/main_2.png",
 	        "phone_img": "img/phone_2.jpg",
 	        "url": "/templates/website/hr/apply.html",
@@ -171,7 +171,7 @@
 	        "using_times": "228",
 	        "for_area": ["互联网","建筑"]
 	    },{
-	        "title": "电商后台管理——列表页面",
+	        "title": "电商后台管理——列表模板",
 	        "id": "0402",
 	        "decription": "后端管理的列表页面",
 	        "content_img": "img/main_17.png",
@@ -181,7 +181,7 @@
 	        "using_times": "228",
 	        "for_area": ["互联网","电商"]
 	    },{
-	        "title": "电商后台管理——左树右表面",
+	        "title": "电商后台管理——左树右表模板",
 	        "id": "0403",
 	        "decription": "内容区左侧是树，右侧是tab页签里面有列表和表单内容",
 	        "content_img": "img/main_18.png",
