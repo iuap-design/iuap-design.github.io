@@ -97,7 +97,7 @@ function gulpRun(app, cb){
 	var customizedCssFilePath = '../dist/pages/custom/customized.scss';
 	var setttingFilePath = baseURL + '/setting.txt';
 	//压缩包名称取package.json
-	var data = fs.readFileSync(getResolvePath('../bin/neoui/package.json'), 'utf8');
+	var data = fs.readFileSync(getResolvePath('../bin/neoui/package.json'));
 	var packageObj = JSON.parse( data );
 	var zipName = packageObj.name + '-' + packageObj.version + '.zip'; 
   	// 处理grid、tree、polyfill的压缩
