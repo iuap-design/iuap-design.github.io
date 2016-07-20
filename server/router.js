@@ -42,8 +42,8 @@ module.exports = {
         var styles = this.request.body.css_code;
         var htmls = this.request.body.html_code;
         var scripts = this.request.body.script_code;
-        // var ctxPath='http://design.yyuap.com/static/uui/latest';
-        var ctxPath='/dist/vendor/uui';
+        var ctxPath='http://design.yyuap.com/static/uui/latest';
+        // var ctxPath='/dist/vendor/uui';
         var tpl = [
           '<!DOCTYPE html>',
           '<html lang="en">',
