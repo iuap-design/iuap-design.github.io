@@ -4,37 +4,41 @@ define(function(){
      * 模块js代码集合
      * @type {{core: string[], ajax: string[], event: string[], renderUtil: string[], dateUtil: string[], formater: string[], hotKeys: string[], masker: string[], rsautils: string[], model: string[], polyfill: string[], ui: string[], textfield: string[], clockpicker: string[], time: string[], datetimepicker: string[], year: string[], month: string[], yearmonth: string[], checkbox: string[], combobox: string[], radio: string[], autocomplete: string[], switch: string[], button: string[], dialog: string[], message: string[], loading: string[], menu: string[], pagination: string[], progress: string[], datatable: string[], grid: string[], tree: string[], tooltip: string[], multilang: string[], palette: Array, refer: string[], ripple: string[], shadow: Array, tabs: string[], card: Array, navlayout: string[], gridlayout: Array, mdlayout: string[], validate: string[], palette: Array, gridBase: string[], ColumnMenu: string[], Drag: string[], Edit: string[], EditForm: string[], Fixed: string[], HeaderLevel: string[], OverWidthHidden: string[], Sort: string[], SumRow: string[], Swap: string[], Tree: string[]}}
      */
+
+    /**
+     * 7月20日与各个源码库同步路径
+     */
     var allJsObj = {
         core: [
-            '../bin/iuap-design/js/core/core.js',
-            '../bin/iuap-design/js/core/base.js',
-            '../bin/iuap-design/js/core/compMgr.js',
-            '../bin/iuap-design/js/utilities/jsExtensions.js',
-            '../bin/iuap-design/js/utilities/i18n.js'
+            '../bin/neoui/js/core/core.js',
+            '../bin/neoui/js/core/base.js',
+            '../bin/neoui/js/core/compMgr.js',
+            '../bin/neoui/js/utilities/jsExtensions.js',
+            '../bin/neoui/js/utilities/i18n.js'
         ],
         ajax: [
-            '../bin/iuap-design/js/core/ajax.js'
+            '../bin/neoui/js/core/ajax.js'
         ],
         event: [
-            '../bin/iuap-design/js/core/event.js'
+            '../bin/neoui/js/core/event.js'
         ],
         renderUtil: [
-            '../bin/iuap-design/js/utilities/dataRender.js'
+            '../bin/neoui/js/utilities/dataRender.js'
         ],
         dateUtil: [
-            '../bin/iuap-design/js/utilities/dateUtils.js'
+            '../bin/neoui/js/utilities/dateUtils.js'
         ],
         formater: [
-            '../bin/iuap-design/js/utilities/formater.js'
+            '../bin/neoui/js/utilities/formater.js'
         ],
         hotKeys: [
-            '../bin/iuap-design/js/utilities/hotKeys.js'
+            '../bin/neoui/js/utilities/hotKeys.js'
         ],
         masker: [
-            '../bin/iuap-design/js/utilities/masker.js'
+            '../bin/neoui/js/utilities/masker.js'
         ],
         rsautils: [
-            '../bin/iuap-design/js/utilities/rsautils.js'
+            '../bin/neoui/js/utilities/rsautils.js'
         ],
         model: [
             '../bin/kero/js/app.js',
@@ -44,70 +48,70 @@ define(function(){
             'hasPolyfill'
         ],
         ui: [
-            '../bin/iuap-design/js/core/BaseComponent.js',
-            '../bin/iuap-design/js/core/end.js'
+            '../bin/neoui/js/core/BaseComponent.js',
+            '../bin/neoui/js/core/end.js'
         ],
         textfield: [
-            '../bin/iuap-design/js/ui.textfield.js'
+            '../bin/neoui/js/ui.textfield.js'
         ],
         clockpicker: [
-            '../bin/datetimepicker/js/clockpicker.js'
+            '../bin/neoui-datetimepicker/js/clockpicker.js'
         ],
         time: [
-            '../bin/datetimepicker/js/time.js'
+            '../bin/neoui-datetimepicker/js/time.js'
         ],
         datetimepicker: [
-            '../bin/datetimepicker/js/datetimepicker.js'
+            '../bin/neoui-datetimepicker/js/datetimepicker.js'
         ],
         year: [
-            '../bin/datetimepicker/js/year.js'
+            '../bin/neoui-datetimepicker/js/year.js'
         ],
         month: [
-            '../bin/datetimepicker/js/month.js'
+            '../bin/neoui-datetimepicker/js/month.js'
         ],
         yearmonth: [
-            '../bin/datetimepicker/js/yearmonth.js'
+            '../bin/neoui-datetimepicker/js/yearmonth.js'
         ],
         checkbox: [
-            '../bin/iuap-design/js/ui.checkbox.js'
+            '../bin/neoui/js/ui.checkbox.js'
         ],
         combobox: [
-            '../bin/iuap-design/js/ui.combo.js'
+            '../bin/neoui/js/extend/ui.combo.js'
         ],
         radio: [
-            '../bin/iuap-design/js/ui.radio.js'
+            '../bin/neoui/js/ui.radio.js'
         ],
         autocomplete: [
-            '../bin/iuap-design/js/extend/autocomplete.js'
+            '../bin/neoui/js/extend/autocomplete.js'
         ],
         switch: [
-            '../bin/iuap-design/js/ui.switch.js'
+            '../bin/neoui/js/ui.switch.js'
         ],
         button: [
-            '../bin/iuap-design/js/ui.button.js'
+            '../bin/neoui/js/ui.button.js'
         ],
         dialog: [
-            '../bin/iuap-design/js/extend/messageDialog.js',
-            '../bin/iuap-design/js/extend/confirmDialog.js',
-            '../bin/iuap-design/js/extend/dialog.js'
+            '../bin/neoui/js/extend/messageDialog.js',
+            '../bin/neoui/js/extend/confirmDialog.js',
+            '../bin/neoui/js/extend/dialog.js'
         ],
         message: [
-            '../bin/iuap-design/js/ui.message.js'
+            '../bin/neoui/js/ui.message.js'
         ],
         loading: [
-            '../bin/iuap-design/js/ui.loading.js'
+            '../bin/neoui/js/extend/ui.loading.js'
         ],
         menu: [
-            '../bin/iuap-design/js/ui.menu.js'
+            '../bin/neoui/js/extend/ui.menu.js'
         ],
         pagination: [
-            '../bin/iuap-design/js/ui.pagination.js'
+            '../bin/neoui/js/extend/ui.pagination.js'
         ],
         progress: [
-            '../bin/iuap-design/js/ui.progress.js'
+            '../bin/neoui/js/ui.progress.js'
         ],
         datatable: [
-            '../bin/iuap-design/js/ui.table.js'
+            '../bin/neoui/js/ui.table.js'
         ],
         grid: [
             'hasGrid'
@@ -116,69 +120,69 @@ define(function(){
             'hasTree'
         ],
         tooltip: [
-            '../bin/iuap-design/js/ui.tooltip.js'
+            '../bin/neoui/js/ui.tooltip.js'
         ],
         multilang: [
-            '../bin/iuap-design/js/ui.multilang.js'
+            '../bin/neoui/js/extend/ui.multilang.js'
         ],
         palette: [],
         refer: [
-            '../bin/iuap-design/js/ui.refer.js'
+            '../bin/neoui/js/extend/ui.refer.js'
         ],
         ripple: [
-            '../bin/iuap-design/js/ripple.js'
+            '../bin/neoui/js/extend/ripple.js'
         ],
         shadow: [],
         tabs: [
-            '../bin/iuap-design/js/ui.tabs.js'
+            '../bin/neoui/js/ui.tabs.js'
         ],
         card: [],
         navlayout: [
-            '../bin/iuap-design/js/layout.nav.js'
+            '../bin/neoui/js/layout.nav.js'
         ],
         gridlayout: [],
         mdlayout: [
-            '../bin/iuap-design/js/layout.md.js'
+            '../bin/neoui/js/layout.md.js'
         ],
         validate: [
-            '../bin/iuap-design/js/validate.js'
+            '../bin/neoui/js/validate.js'
         ],
         palette: [],
         gridBase:[
-            '../bin/grid/js/gridComp.js'
+            '../bin/neoui-grid/js/gridComp.js'
         ],
         ColumnMenu:[
-            '../bin/grid/js/ColumnMenu.js'
+            '../bin/neoui-grid/js/ColumnMenu.js'
         ],
         Drag:[
-            '../bin/grid/js/Drag.js'
+            '../bin/neoui-grid/js/Drag.js'
         ],
         Edit:[
-            '../bin/grid/js/Edit.js'
+            '../bin/neoui-grid/js/Edit.js'
         ],
         EditForm:[
-            '../bin/grid/js/EditForm.js'
+            '../bin/neoui-grid/js/EditForm.js'
         ],
         Fixed:[
-            '../bin/grid/js/Fixed.js'
+            '../bin/neoui-grid/js/Fixed.js'
         ],
         HeaderLevel:[
-            '../bin/grid/js/HeaderLevel.js'
+            '../bin/neoui-grid/js/HeaderLevel.js'
         ],
         OverWidthHidden:[
-            '../bin/grid/js/OverWidthHidden.js'
+            '../bin/neoui-grid/js/OverWidthHidden.js'
         ],
         Sort:[
-            '../bin/grid/js/Sort.js'
+            '../bin/neoui-grid/js/Sort.js'
         ],
         SumRow:[
-            '../bin/grid/js/SumRow.js'
+            '../bin/neoui-grid/js/SumRow.js'
         ],
         Swap:[
-            '../bin/grid/js/Swap.js'
+            '../bin/neoui-grid/js/Swap.js'
         ],
         Tree:[
-            '../bin/grid/js/Tree.js'
+            '../bin/neoui-grid/js/Tree.js'
         ]
     };
     /**
@@ -359,111 +363,111 @@ define(function(){
      */
     var cssObj = {
         ui:[
-            '@import "../../../bin/iuap-design/scss/mixins/variables.scss"',
-            '@import "../../../bin/iuap-design/scss/mixins/mixins.scss"'
+            '@import "../../../bin/neoui/scss/mixins/variables.scss"',
+            '@import "../../../bin/neoui/scss/mixins/mixins.scss"'
         ],
         autocomplete: [
-            '@import "../../../bin/iuap-design/scss/extend/autocomplete.scss"'
+            '@import "../../../bin/neoui/scss/extend/autocomplete.scss"'
         ],
         button: [
-            '@import "../../../bin/iuap-design/scss/ui.button.scss"'
+            '@import "../../../bin/neoui/scss/ui.button.scss"'
         ],
         card: [
-            '@import "../../../bin/iuap-design/scss/card.scss"'
+            '@import "../../../bin/neoui/scss/extend/card.scss"'
         ],
         checkbox: [
-            '@import "../../../bin/iuap-design/scss/ui.checkbox.scss"'
+            '@import "../../../bin/neoui/scss/ui.checkbox.scss"'
         ],
         clockpicker: [
-            '@import "../../../bin/datetimepicker/css/clockpicker.scss"',
-            '@import "../../../bin/iuap-design/scss/ui.combo.scss"'
+            '@import "../../../bin/neoui-datetimepicker/css/clockpicker.scss"',
+            '@import "../../../bin/neoui/scss/extend/ui.combo.scss"'
         ],
         month:[
-            '@import "../../../bin/iuap-design/scss/ui.combo.scss"',
-            '@import "../../../bin/datetimepicker/css/datetimepicker.scss"',
-            '@import "../../../bin/iuap-design/scss/ui.textfield.scss"'
+            '@import "../../../bin/neoui/scss/extend/ui.combo.scss"',
+            '@import "../../../bin/neoui-datetimepicker/css/datetimepicker.scss"',
+            '@import "../../../bin/neoui/scss/ui.textfield.scss"'
         ],
         combobox: [
-            '@import "../../../bin/iuap-design/scss/ui.combo.scss"'
+            '@import "../../../bin/neoui/scss/extend/ui.combo.scss"'
         ],
         datatable: [
-            '@import "../../../bin/iuap-design/scss/ui.table.scss"'
+            '@import "../../../bin/neoui/scss/ui.table.scss"'
         ],
         datetimepicker: [
-            '@import "../../../bin/datetimepicker/css/datetimepicker.scss"'
+            '@import "../../../bin/neoui-datetimepicker/css/datetimepicker.scss"'
         ],
         dialog: [ 
-            '@import "../../../bin/iuap-design/scss/extend/dialog.scss"'
+            '@import "../../../bin/neoui/scss/extend/dialog.scss"'
         ],
         // grid: ['@import "grid/gridComp.scss"'],
         gridlayout: [
-            '@import "../../../bin/iuap-design/scss/layout.grid.scss"'
+            '@import "../../../bin/neoui/scss/layout.grid.scss"'
         ],
         loading: [
-            '@import "../../../bin/iuap-design/scss/ui.loading.scss"'
+            '@import "../../../bin/neoui/scss/extend/ui.loading.scss"'
         ],
         mdlayout: [
-            '@import "../../../bin/iuap-design/scss/layout.md.scss"'
+            '@import "../../../bin/neoui/scss/layout.md.scss"'
         ],
         menu: [
-            '@import "../../../bin/iuap-design/scss/ui.menu.scss"'
+            '@import "../../../bin/neoui/scss/extend/ui.menu.scss"'
         ],
         message: [
-            '@import "../../../bin/iuap-design/scss/ui.message.scss"'
+            '@import "../../../bin/neoui/scss/extend/ui.message.scss"'
         ],
         navlayout: [
-            '@import "../../../bin/iuap-design/scss/layout.nav.scss"'
+            '@import "../../../bin/neoui/scss/layout.nav.scss"'
         ],
         pagination: [
-            '@import "../../../bin/iuap-design/scss/ui.pagination.scss"'
+            '@import "../../../bin/neoui/scss/extend/ui.pagination.scss"'
         ],
         palette: [
-            '@import "../../../bin/iuap-design/scss/palette.scss"'
+            '@import "../../../bin/neoui/scss/palette.scss"'
         ],
         progress: [
-            '@import "../../../bin/iuap-design/scss/ui.progress.scss"'
+            '@import "../../../bin/neoui/scss/extend/ui.progress.scss"'
         ],
         radio: [
-            '@import "../../../bin/iuap-design/scss/ui.radio.scss"'
+            '@import "../../../bin/neoui/scss/ui.radio.scss"'
         ],
         ripple: [
-            '@import "../../../bin/iuap-design/scss/ripple.scss"'
+            '@import "../../../bin/neoui/scss/ripple.scss"'
         ],
         shadow: [
-            '@import "../../../bin/iuap-design/scss/utilities/shadow.scss"'
+            '@import "../../../bin/neoui/scss/utilities/shadow.scss"'
         ],
         tabs: [
-            '@import "../../../bin/iuap-design/scss/ui.tabs.scss"'
+            '@import "../../../bin/neoui/scss/extend/ui.tabs.scss"'
         ],
         textfield: [
-            '@import "../../../bin/iuap-design/scss/ui.textfield.scss"'
+            '@import "../../../bin/neoui/scss/ui.textfield.scss"'
         ],
         time: [
-            '@import "../../../bin/datetimepicker/css/time.scss"',
-            '@import "../../../bin/iuap-design/scss/ui.combo.scss"',
-            '@import "../../../bin/iuap-design/scss/ui.textfield.scss"',
-            '@import "../../../bin/iuap-design/scss/ui.button.scss"'
+            '@import "../../../bin/neoui-datetimepicker/css/time.scss"',
+            '@import "../../../bin/neoui/scss/extend/ui.combo.scss"',
+            '@import "../../../bin/neoui/scss/ui.textfield.scss"',
+            '@import "../../../bin/neoui/scss/ui.button.scss"'
         ],
         year:[
-            '@import "../../../bin/iuap-design/scss/ui.textfield.scss"',
-            '@import "../../../bin/iuap-design/scss/ui.combo.scss"',
-            '@import "../../../bin/iuap-design/scss/ui.button.scss"',
-            '@import "../../../bin/datetimepicker/css/datetimepicker.scss"'
+            '@import "../../../bin/neoui/scss/ui.textfield.scss"',
+            '@import "../../../bin/neoui/scss/extend/ui.combo.scss"',
+            '@import "../../../bin/neoui/scss/ui.button.scss"',
+            '@import "../../../bin/neoui-datetimepicker/css/datetimepicker.scss"'
         ],
         yearmonth:[
-            '@import "../../../bin/iuap-design/scss/ui.textfield.scss"',
-            '@import "../../../bin/iuap-design/scss/ui.combo.scss"',
-            '@import "../../../bin/iuap-design/scss/ui.button.scss"',
-            '@import "../../../bin/datetimepicker/css/datetimepicker.scss"'
+            '@import "../../../bin/neoui/scss/ui.textfield.scss"',
+            '@import "../../../bin/neoui/scss/extend/ui.combo.scss"',
+            '@import "../../../bin/neoui/scss/ui.button.scss"',
+            '@import "../../../bin/neoui-datetimepicker/css/datetimepicker.scss"'
         ],
         tooltip: [
-            '@import "../../../bin/iuap-design/scss/ui.tooltip.scss"'
+            '@import "../../../bin/neoui/scss/extend/ui.tooltip.scss"'
         ],
         switch: [
-            '@import "../../../bin/iuap-design/scss/ui.switch.scss"'
+            '@import "../../../bin/neoui/scss/extend/ui.switch.scss"'
         ],
         palette: [
-            '@import "../../../bin/iuap-design/scss/palette.scss"'
+            '@import "../../../bin/neoui/scss/palette.scss"'
         ]
     };
     /**

@@ -21,17 +21,17 @@ var AUTOPREFIXER_BROWSERS = [
 	'opera >= 35',
 	'ios >= 8'
 ];
-var gridCss = getResolvePath('../bin/grid/css/grid.css');
-var treeJs = [getResolvePath('../bin/tree/js/treeComp.js')]
+var gridCss = getResolvePath('../bin/neoui-grid/css/grid.css');
+var treeJs = [getResolvePath('../bin/neoui-tree/js/treeComp.js')]
 var modeTreeJs = [
-  	getResolvePath('../bin/tree/js/treeComp.js'),
+  	getResolvePath('../bin/neoui-tree/js/treeComp.js'),
   	getResolvePath('../bin/kero/js/dtJs/tree.js')
 ]
-var treeCss = getResolvePath('../bin/tree/css/tree.css');
+var treeCss = getResolvePath('../bin/neoui-tree/css/tree.css');
 var polyfillJs = [
-  	getResolvePath('../bin/iuap-design/vendor/polyfill/core.js'),
-  	getResolvePath('../bin/iuap-design/vendor/polyfill/JsExtensions.js'),
-  	getResolvePath('../bin/iuap-design/vendor/polyfill/respond.js')
+  	getResolvePath('../bin/neoui/vendor/polyfill/core.js'),
+  	getResolvePath('../bin/neoui/vendor/polyfill/JsExtensions.js'),
+  	getResolvePath('../bin/neoui/vendor/polyfill/respond.js')
 ]
 var assets = ''; //暂时没处理，后续考虑
 
@@ -81,13 +81,13 @@ function gulpRun(app, cb){
   			jsArr.push(baseJsArr[i]);
   		}
   	}
+
   	var	cssArr = params.cssArr?params.cssArr.split(','):[],
   		colorArr = params.colorArr?params.colorArr.split(','):[],
   		hasModel = jsArr.indexOf(getResolvePath('../bin/kero/js/app.js')),
   		jsHashStr = hash(params.jsArr + params.colorArr),
   		baseURL =  '../dist/pages/custom/temp/customized/' + jsHashStr,
   		settingStr = params.settingStr;
-
   	var colorStr = '$color-primary: ' + colorArr[0] + ',' + colorArr[1] + ',' + colorArr[2] + ' !default;';
 	colorStr += '$color-primary-dark: ' + colorArr[3] + ',' + colorArr[4] + ',' + colorArr[5] + ' !default;';
 	colorStr += '$color-accent: ' + colorArr[6] + ',' + colorArr[7] + ',' + colorArr[8] + ' !default;';
@@ -97,10 +97,9 @@ function gulpRun(app, cb){
 	var customizedCssFilePath = '../dist/pages/custom/customized.scss';
 	var setttingFilePath = baseURL + '/setting.txt';
 	//压缩包名称取package.json
-	var data = fs.readFileSync(getResolvePath('../bin/iuap-design/package.json'), 'utf8');
+	var data = fs.readFileSync(getResolvePath('../bin/neoui/package.json'), 'utf8');
 	var packageObj = JSON.parse( data );
 	var zipName = packageObj.name + '-' + packageObj.version + '.zip'; 
-
   	// 处理grid、tree、polyfill的压缩
 	gulp.task('customizedGridTreePolyfill',function(){
 		var hasGrid = jsArr.indexOf('hasGrid');
@@ -234,7 +233,6 @@ function gulpRun(app, cb){
 			fs.mkdirSync(getResolvePath('../dist/pages/custom/temp/customized'));
 		}
 	});
-
 	// 创建本次对应文件夹
 	fs.exists(getResolvePath(baseURL), function(exist) {
 		if(!exist){
