@@ -28,6 +28,7 @@
 	        "phone_img": "img/phone_3.jpg",
 	        "url": "/templates/website/tenxcloud/index.html",
 	        "download": "/templates/dist/tenxcloud.zip",
+	        "editurl": "http://design.yyuap.com/designer/#/preview/tenxcloud",
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
 	    },{
@@ -36,8 +37,9 @@
 	        "decription": "发展可持续、完善易有序、拓展能稳定",
 	        "content_img": "img/main_12.png",
 	        "phone_img": "img/phone_3.jpg",
-	        "url": "/templates/website/tenxcloud/create.html",
+	        "url": "/templates/website/tenxcloud1/index.html",
 	        "download": "/templates/dist/tenxcloud.zip",
+	        "editurl": "http://design.yyuap.com/designer/#/preview/tenxcloud1",
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
 	    },{
@@ -48,6 +50,7 @@
 	        "phone_img": "img/phone_4.jpg",
 	        "url": "/templates/website/e-commerce/index.html",
 	        "download": "/templates/dist/e-commerce.zip",
+	        "editurl": "http://design.yyuap.com/designer/#/preview/e-commerce",
 	        "using_times": "100",
 	        "for_area": ["电商"]
 	    },{
@@ -158,6 +161,7 @@
 	        "phone_img": "img/phone_3.jpg",
 	        "url": "/templates/website/login1/index-center.html",
 	        "download": "/templates/dist/login1.zip",
+	        "editurl": "http://design.yyuap.com/designer/#/preview/login1",
 	        "using_times": "228",
 	        "for_area": ["互联网","建筑"]
 	    }
