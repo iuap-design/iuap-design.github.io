@@ -45,16 +45,6 @@
     left: -15px;
 }
 
-.tree-parent {
-    width: 50%;
-    padding-right: 30px;
-    height: auto;
-    display: block;
-    position: relative;
-    top: -23px;
-    left: 92px;
-}
-
 .tree-leaf {
     height: auto;
     display: block;
@@ -189,19 +179,20 @@
     top: 10px;
 }
 .select-all{
-    width: 50%;
+    width: 200px;
     padding-right: 30px;
     height: auto;
     display: block;
-    position: relative;
-    top: 0;
-    left: 84%;
+    position: absolute;
+    right: 0px;
+    top: 40px;
+    
 }
 .download-top{
     background: #007aff;
     color: #fff;
     position: absolute;
-    top: 7px;
+    top: 36px;
     right: 0;
     z-index: 2;
 }

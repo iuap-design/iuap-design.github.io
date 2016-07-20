@@ -90,7 +90,8 @@
     <!--全选-->
         <div class="tree-whole-div" id="selectAll">
             <div class="tree-div">
-                <label class="u-checkbox tree-parent is-upgraded select-all" u-meta="{&quot;id&quot;:&quot;all&quot;,&quot;type&quot;:&quot;u-checkbox&quot;,&quot;data&quot;:&quot;treeData&quot;,&quot;field&quot;:&quot;all&quot;,&quot;checkedValue&quot;:true,&quot;unCheckedValue&quot;:false}">
+                <h2 class="title">iuap-design 框架资源定制</h2>
+                <label class="u-checkbox is-upgraded select-all" u-meta="{&quot;id&quot;:&quot;all&quot;,&quot;type&quot;:&quot;u-checkbox&quot;,&quot;data&quot;:&quot;treeData&quot;,&quot;field&quot;:&quot;all&quot;,&quot;checkedValue&quot;:true,&quot;unCheckedValue&quot;:false}">
                     <input type="checkbox" class="u-checkbox-input">
                     <span class="u-checkbox-label select">全选/反选</span>
                     <span class="u-checkbox-focus-helper"></span>
@@ -105,85 +106,92 @@
             </div>
         </div>
             <!--iUAP Design定制资源下载-->
-            <h2 class="title">iuap-design 框架资源定制</h2>
-            <div>
-                <div class="color-whole-div">
-                    <div class="second-title">主题颜色定制</div>
-                    <div class="color-head-div" id="colorModel">
+            
+            <div class="u-widget-body">
+                <div class="u-tabs">
+                    <div class="u-tabs__tab-bar">
+                        <a href="#tab-panel-1" class="u-tabs__tab is-active">主题颜色</a>
+                        <a href="#tab-panel-2" class="u-tabs__tab">模块定制</a>
+                        <a href="#tab-panel-3" class="u-tabs__tab">导入配置</a>
                     </div>
-                </div>
-                <div class="color-whole-div">
-                    <!--<h2>1.2核心模块</h2>-->
-                    <div  id="coreModel">
+                    <div class="u-tabs__panel is-active" id="tab-panel-1">
+                        <div class="color-head-div" id="colorModel"></div>
+                    </div>
+                    <div class="u-tabs__panel" id="tab-panel-2">
+                        <div class="color-whole-div">
+                            <!--<h2>1.2核心模块</h2>-->
+                            <div  id="coreModel">
 
-                    </div>
-                </div>
-                <div class="color-whole-div">
-                    <!--<h2>1.3工具模块</h2>-->
-                    <div  id="utilModel">
+                            </div>
+                        </div>
+                        <div class="color-whole-div">
+                            <!--<h2>1.3工具模块</h2>-->
+                            <div  id="utilModel">
 
-                    </div>
-                </div>
-                <div class="color-whole-div">
-                    <!--<h2>1.4布局模块</h2>-->
-                    <div id="layoutModel">
+                            </div>
+                        </div>
+                        <div class="color-whole-div">
+                            <!--<h2>1.4布局模块</h2>-->
+                            <div id="layoutModel">
 
-                    </div>
-                </div>
-                <div class="color-whole-div">
-                    <!--<h2>1.5其它模块</h2>-->
-                    <div  id="otherModel">
+                            </div>
+                        </div>
+                        <div class="color-whole-div">
+                            <!--<h2>1.5其它模块</h2>-->
+                            <div  id="otherModel">
 
-                    </div>
-                </div>
-                <div class="color-whole-div">
-                    <!--<h2>1.6控件模块</h2>-->
-                    <div  id="uiModel">
+                            </div>
+                        </div>
+                        <div class="color-whole-div">
+                            <!--<h2>1.6控件模块</h2>-->
+                            <div  id="uiModel">
 
-                    </div>
-                </div>
-            </div>
-            <!--插件下载-->
-            <h2 class="title">Kero 资源定制</h2>
-            <div id="plugin">
-                <div class="color-whole-div">
-                    <!--<h2>2.1模型模块</h2>-->
-                    <div  id="modelModel">
+                            </div>
+                        </div>
+                        <!--插件下载-->
+                        <h2 class="title">Kero 资源定制</h2>
+                        <div id="plugin">
+                            <div class="color-whole-div">
+                                <!--<h2>2.1模型模块</h2>-->
+                                <div  id="modelModel">
 
+                                </div>
+                            </div>
+                        </div>
+                        <!--kero资源定制下载-->
+                        <h2 class="title">JS 插件定制</h2>
+                        <div id="kero">
+                            <div class="color-whole-div">
+                                <!--<h2>表单控件</h2>-->
+                                <div  id="gridModel">
+                                </div>
+                            </div>
+                            <div class="color-whole-div">
+                                <!--<h2>树控件</h2>-->
+                                <div  id="treeModel">
+                                </div>
+                            </div>
+                            <div class="color-whole-div">
+                                <!--<h2>日期控件</h2>-->
+                                <div  id="dataTimeModel">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <!--kero资源定制下载-->
-            <h2 class="title">JS 插件定制</h2>
-            <div id="kero">
-                <div class="color-whole-div">
-                    <!--<h2>表单控件</h2>-->
-                    <div  id="gridModel">
+                    <div class="u-tabs__panel" id="tab-panel-3">
+                        <div id="set" class="set">
+                            <div class="color-whole-div">
+                                <div class="eval-head-div">下载文件setting.txt中保存了上次配置的信息，将信息复制至文本域中并点击执行可恢复上次配置。
+                                </div>
+                                <button id="eavl-button" class="u-button raised u-eval-button" data-upgraded=",u.Button">导入
+                                    <span class="u-button-container">
+                                        <span class="u-ripple"></span>
+                                    </span>
+                                </button>
+                                <textarea style="width: 100%;height: 70px;" u-meta="{&quot;id&quot;:&quot;str&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;data&quot;:&quot;evalData&quot;,&quot;field&quot;:&quot;str&quot;}" title=""></textarea>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="color-whole-div">
-                    <!--<h2>树控件</h2>-->
-                    <div  id="treeModel">
-                    </div>
-                </div>
-                <div class="color-whole-div">
-                    <!--<h2>日期控件</h2>-->
-                    <div  id="dataTimeModel">
-                    </div>
-                </div>
-            </div>
-            <!--配置-->
-            <h2 class="title">导入配置信息</h2>
-            <div id="set" class="set">
-                <div class="color-whole-div">
-                    <div class="eval-head-div">下载文件setting.txt中保存了上次配置的信息，将信息复制至文本域中并点击执行可恢复上次配置。
-                    </div>
-                    <button id="eavl-button" class="u-button raised u-eval-button" data-upgraded=",u.Button">导入
-                        <span class="u-button-container">
-                            <span class="u-ripple"></span>
-                        </span>
-                    </button>
-                    <textarea style="width: 100%;height: 70px;" u-meta="{&quot;id&quot;:&quot;str&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;data&quot;:&quot;evalData&quot;,&quot;field&quot;:&quot;str&quot;}" title=""></textarea>
                 </div>
             </div>
             <div class="btn-whole">
