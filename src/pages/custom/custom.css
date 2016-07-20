@@ -209,9 +209,9 @@
 .color-label{
     /*display: inline-block;
     position: absolute;
-    top: 4px;*/
+    top: 4px;
+    width: 40%;*/
     float: left;
     display: block;
-    width: 40%;
     line-height: 20px;
 }
