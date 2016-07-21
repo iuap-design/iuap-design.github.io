@@ -99,6 +99,9 @@
   "sub": [{
         "name": "宽高",
         "url": "demos/assist/wh"
+    },{
+        "name": "对齐方式",
+        "url": "demos/assist/align"
     }, {
         "name": "文字",
         "url": "demos/assist/text"

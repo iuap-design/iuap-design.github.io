@@ -1,10 +1,4 @@
-# tree控件
-
-tree控件
-
-# 如何使用
-
-暂无
+# 流程控件
 
 # 示例
 
@@ -222,18 +216,6 @@ pearls-xs pearls-sm pearls-lg 供尺寸的选择
         </div>
     </div>
 </div></div>
-<div class="examples-code"><pre><code>.content{
-    padding: 10px;
-}
-.example{
-    width: 60%;
-    margin: 80px;
-}
-.col-xs-4{
-    width: 33.3%;
-    float: left;
-}</code></pre>
-</div>
 <div class="examples-code"><pre><code>&lt;div class="example">
     &lt;div class="pearls pearls-xs row">
         &lt;div class="pearl done col-xs-4">
@@ -298,6 +280,18 @@ pearls-xs pearls-sm pearls-lg 供尺寸的选择
         &lt;/div>
     &lt;/div>
 &lt;/div></code></pre>
+</div>
+<div class="examples-code"><pre><code>.content{
+    padding: 10px;
+}
+.example{
+    width: 60%;
+    margin: 80px;
+}
+.col-xs-4{
+    width: 33.3%;
+    float: left;
+}</code></pre>
 </div>
 
 ##多状态Pearls
@@ -458,34 +452,3 @@ pearls-xs pearls-sm pearls-lg 供尺寸的选择
 </div>
 
 
-<!--### 示例1
-
-示例1说明
-
-### 示例2
-
-示例2说-->
-
-# API
-
-## 属性
-
-暂无
-<!--### 属性1
-
-属性1说明
-
-### 属性2
-
-属性2说明-->
-
-## 方法
-
-暂无
-<!--### 方法1
-
-方法1说明
-
-### 方法2
-
-方法2说明-->
