@@ -1,14 +1,15 @@
 {
   "name": "design-language",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "dependencies": {
+    "gitbook-plugin-search-pro": "^1.0.9"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "gitbook-plugin-search-pro": "^1.0.9"
-  }
+  "description": ""
 }
