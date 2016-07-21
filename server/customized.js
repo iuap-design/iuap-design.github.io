@@ -33,7 +33,9 @@ var polyfillJs = [
   	getResolvePath('../bin/neoui/vendor/polyfill/JsExtensions.js'),
   	getResolvePath('../bin/neoui/vendor/polyfill/respond.js')
 ]
-var assets = ''; //暂时没处理，后续考虑
+var assets = [getResolvePath('../bin/neoui/dist/fonts/*.*'),
+	getResolvePath('../bin/neoui/dist/fonts/font-awesome/fonts/**')]; 
+var templateS = [getResolvePath('../src/pages/custom/temp/*.*')]
 
 var baseColorStr = '$color-primary: $palette-indigo-500 !default;';
 	baseColorStr += '$color-primary-dark: $palette-indigo-700 !default;';
@@ -164,11 +166,16 @@ function gulpRun(app, cb){
 		        .pipe(gulp.dest(getResolvePath(baseURL + '/js')));
 		}
 	});
+	// 处理空模板
+	gulp.task('template',function(){
+		return 	gulp.src(templateS)
+					.pipe(gulp.dest(getResolvePath(baseURL)));
+	});
 
 	// 处理asset
-	gulp.task('customizedAssets',['customizedGridTreePolyfill'],function(){
+	gulp.task('customizedAssets',['customizedGridTreePolyfill','template'],function(){
 		return  gulp.src(assets)
-    				.pipe(gulp.dest(getResolvePath(baseURL)))
+    				.pipe(gulp.dest(getResolvePath(baseURL + '/fonts')))
 	});
 
 	// 处理css压缩
