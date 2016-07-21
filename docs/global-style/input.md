@@ -4,88 +4,29 @@
 # 示例
 
 
-##基础label
+##不可输入框
+在普通输入框中添加`disabled` 属性
 
-不同背景具有相应的class名
-例如 u-tab-default 默认灰色
-<div class="example-content ex-hide"><style>.margin-r-10{
-    margin-right: 10px; 
-}
-.example .u-message{
-    position: inherit;
-}
-.example{
-	width: 300px;
-}
-
-
-</style></div>
-<div class="example-content"><div class="u-text">
-    <input class="u-input"/>
-    <label class="u-label">这是一个文本框</label>
+<div class="example-content"><input type="text" class="u-form-control" id="exampleInput3" disabled placeholder="jane.doe@example.com">
 </div>
-</div>
-<div class="examples-code"><pre><code>.margin-r-10{
-    margin-right: 10px; 
-}
-.example .u-message{
-    position: inherit;
-}
-.example{
-	width: 300px;
-}
-
-</code></pre>
-</div>
-<div class="examples-code"><pre><code>&lt;div class="u-text">
-    &lt;input class="u-input"/>
-    &lt;label class="u-label">这是一个文本框&lt;/label>
-&lt;/div>
+<div class="examples-code"><pre><code>&lt;input type="text" class="u-form-control" id="exampleInput3" disabled placeholder="jane.doe@example.com">
 </code></pre>
 </div>
 
-##基础label
+##带有后缀的输入框
 
-不同背景具有相应的class名
-例如 u-tab-default 默认灰色
-<div class="example-content ex-hide"><style>.margin-r-10{
-    margin-right: 10px; 
-}
-.example .u-message{
-    position: inherit;
-}
-.example{
-	width: 300px;
-}
-</style></div>
-<div class="example-content"><div class="u-form-group">
-    <div class="u-input-group u-has-feedback">
-        <input type="text" class="u-form-control" id="exampleInput3" disabled placeholder="jane.doe@example.com">
-    </div>
-</div>
-</div>
-<div class="examples-code"><pre><code>.margin-r-10{
-    margin-right: 10px; 
-}
-.example .u-message{
-    position: inherit;
-}
-.example{
-	width: 300px;
-}</code></pre>
-</div>
-<div class="examples-code"><pre><code>&lt;div class="u-form-group">
-    &lt;div class="u-input-group u-has-feedback">
-        &lt;input type="text" class="u-form-control" id="exampleInput3" disabled placeholder="jane.doe@example.com">
-    &lt;/div>
-&lt;/div>
-</code></pre>
+<div class="example-content"><div class="u-input-group u-has-feedback">
+    <input type="email" class="u-form-control" placeholder="jane.doe@example.com">
+    <span class="u-form-control-feedback uf uf-magnifyingglass"></span>
+</div></div>
+<div class="examples-code"><pre><code>&lt;div class="u-input-group u-has-feedback">
+    &lt;input type="email" class="u-form-control" placeholder="jane.doe@example.com">
+    &lt;span class="u-form-control-feedback uf uf-magnifyingglass">&lt;/span>
+&lt;/div></code></pre>
 </div>
 
-##基础label
-
-不同背景具有相应的class名
-例如 u-tab-default 默认灰色
+##必输项input框
+当input框失去焦点时，校验输入的内容，如果内容长度大于0则隐藏必输字符`*`,否则显示
 <div class="example-content ex-hide"><style>.margin-r-10{
     margin-right: 10px; 
 }
@@ -136,15 +77,6 @@ if(mustinlen>0){
 	width: 300px;
 }</code></pre>
 </div>
-<div class="examples-code"><pre><code>&lt;div class="u-form-group">
-    &lt;label for="exampleInput3">必输:&lt;/label>
-    &lt;div class="u-input-group u-has-feedback must-in">
-        &lt;div class="u-input-group-before " style="color: red;">*&lt;/div>
-        &lt;input type="text" class="u-form-control" id="exampleInput3" placeholder="jane.doe@example.com">
-        &lt;span class="u-form-control-feedback uf uf-magnifyingglass">&lt;/span>
-    &lt;/div>
-&lt;/div></code></pre>
-</div>
 <div class="examples-code"><pre><code>var mustinDom=document.querySelectorAll('.must-in input');
 var mustinlen=mustinDom.length;
 var checkInput=function(){
@@ -165,6 +97,45 @@ if(mustinlen>0){
         });
     }
 }
+</code></pre>
+</div>
+<div class="examples-code"><pre><code>&lt;div class="u-form-group">
+    &lt;label for="exampleInput3">必输:&lt;/label>
+    &lt;div class="u-input-group u-has-feedback must-in">
+        &lt;div class="u-input-group-before " style="color: red;">*&lt;/div>
+        &lt;input type="text" class="u-form-control" id="exampleInput3" placeholder="jane.doe@example.com">
+        &lt;span class="u-form-control-feedback uf uf-magnifyingglass">&lt;/span>
+    &lt;/div>
+&lt;/div></code></pre>
+</div>
+
+##普通输入框
+在普通的input元素上添加`u-form-control`样式
+<div class="example-content ex-hide"><style>.margin-r-10{
+    margin-right: 10px; 
+}
+.example .u-message{
+    position: inherit;
+}
+.example{
+	width: 300px;
+}
+
+
+</style></div>
+<div class="example-content"><input type="text" class="u-form-control" id="exampleInput3"  placeholder="jane.doe@example.com"></div>
+<div class="examples-code"><pre><code>&lt;input type="text" class="u-form-control" id="exampleInput3"  placeholder="jane.doe@example.com"></code></pre>
+</div>
+<div class="examples-code"><pre><code>.margin-r-10{
+    margin-right: 10px; 
+}
+.example .u-message{
+    position: inherit;
+}
+.example{
+	width: 300px;
+}
+
 </code></pre>
 </div>
 
