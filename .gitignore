@@ -12,6 +12,10 @@ bin/neoui-datetimepicker/
 bin/neoui-tree/
 bin/neoui-grid/
 bin/dist/
+bin/datetimepicker/
+bin/grid/
+bin/iuap-design/
+bin/tree/
 
 _book/
 
