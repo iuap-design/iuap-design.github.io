@@ -4,7 +4,7 @@
 
 # 插件依赖
 
-依赖于  http://design.yyuap.com/static/uui/3.0.6/js/u.js
+依赖于 http://design.yyuap.com/static/uui/latest/js/u.js
 
 # 用法
 
@@ -12,13 +12,6 @@
 
 # 示例
 
-
-##不确定Progress
-<div class="example-content"><div id="p2" class="u-progress u-progress__indeterminate"></div>
-</p></div>
-<div class="examples-code"><pre><code>&lt;div id="p2" class="u-progress u-progress__indeterminate">&lt;/div>
-&lt;/p></code></pre>
-</div>
 
 ##基本Progress
 <div class="example-content"><div id="p1" class="u-progress"></div></div>
@@ -28,15 +21,20 @@
 
 });
 </script></div>
-<div class="examples-code"><pre><code>&lt;div id="p1" class="u-progress">&lt;/div></code></pre>
-<div class="examples-code"><pre><code>&lt;div id="p2" class="u-progress u-progress__indeterminate">&lt;/div>
-&lt;/p></code></pre>
-</div>
 <div class="examples-code"><pre><code>u.on(window, 'load', function() {
     'use strict';
     document.querySelector('#p1')['u.Progress'].setProgress(33);
 
 });</code></pre>
+</div>
+<div class="examples-code"><pre><code>&lt;div id="p1" class="u-progress">&lt;/div></code></pre>
+</div>
+
+##不确定Progress
+<div class="example-content"><div id="p2" class="u-progress u-progress__indeterminate"></div>
+</p></div>
+<div class="examples-code"><pre><code>&lt;div id="p2" class="u-progress u-progress__indeterminate">&lt;/div>
+&lt;/p></code></pre>
 </div>
 
 ##缓冲Progress
@@ -49,13 +47,13 @@
 
 });
 </script></div>
+<div class="examples-code"><pre><code>&lt;div id="p3" class="u-progress">&lt;/div></code></pre>
+</div>
 <div class="examples-code"><pre><code>u.on(window, 'load', function() {
     'use strict';
     document.querySelector('#p3')['u.Progress'].setProgress(33).setBuffer(87);
 
 });</code></pre>
-</div>
-<div class="examples-code"><pre><code>&lt;div id="p3" class="u-progress">&lt;/div></code></pre>
 </div>
 
 

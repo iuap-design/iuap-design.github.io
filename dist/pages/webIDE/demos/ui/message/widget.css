@@ -1,3 +1,14 @@
+.message-demo .u-widget-body{
+	min-height: 280px;
+}
+
+.margin-r-10{
+    margin-right: 10px; 
+}
+.example .u-message{
+    position: inherit;
+}
+
 .margin-r-5{
     margin-right: 5px; 
 }

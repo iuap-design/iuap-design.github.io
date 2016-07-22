@@ -43,13 +43,6 @@
         Warning!
     </div>
 </div></div>
-<div class="examples-code"><pre><code>.margin-r-10{
-    margin-right: 10px; 
-}
-.example .u-message{
-    position: inherit;
-}</code></pre>
-</div>
 <div class="examples-code"><pre><code>&lt;div class="example">
     &lt;div class="u-message u-mesnews active" >    
         &lt;span class="u-msg-close uf uf-removesymbol">&lt;/span>
@@ -73,6 +66,13 @@
     &lt;/div>
 &lt;/div></code></pre>
 </div>
+<div class="examples-code"><pre><code>.margin-r-10{
+    margin-right: 10px; 
+}
+.example .u-message{
+    position: inherit;
+}</code></pre>
+</div>
 
 ##带`icon`的加深颜色版Message
 
@@ -94,7 +94,7 @@
     </div>
     <div class="u-message dark u-mesinfo active">
         <span class="u-msg-close uf uf-removesymbol"></span>
-        <i class="fa fa-info-circle margin-r-10"></i>Info!
+        <i class="uf uf-informationbutton margin-r-10"></i>Info!
     </div>
     <div class="u-message dark u-messuccess active">    
         <span class="u-msg-close uf uf-removesymbol"></span>
@@ -106,16 +106,9 @@
     </div>
     <div class="u-message dark u-meswarning active">
         <span class="u-msg-close uf uf-removesymbol"></span>
-        <i class="fa fa-warning margin-r-10"></i>Warning!
+        <i class="uf uf-warningmd margin-r-10"></i>Warning!
     </div>
 </div></div>
-<div class="examples-code"><pre><code>.margin-r-10{
-    margin-right: 10px; 
-}
-.example .u-message{
-    position: inherit;
-}</code></pre>
-</div>
 <div class="examples-code"><pre><code>&lt;div class="example">
     &lt;div class="u-message dark u-mesnews active" >    
         &lt;span class="u-msg-close uf uf-removesymbol">&lt;/span>
@@ -123,7 +116,7 @@
     &lt;/div>
     &lt;div class="u-message dark u-mesinfo active">
         &lt;span class="u-msg-close uf uf-removesymbol">&lt;/span>
-        &lt;i class="fa fa-info-circle margin-r-10">&lt;/i>Info!
+        &lt;i class="uf uf-informationbutton margin-r-10">&lt;/i>Info!
     &lt;/div>
     &lt;div class="u-message dark u-messuccess active">    
         &lt;span class="u-msg-close uf uf-removesymbol">&lt;/span>
@@ -135,9 +128,16 @@
     &lt;/div>
     &lt;div class="u-message dark u-meswarning active">
         &lt;span class="u-msg-close uf uf-removesymbol">&lt;/span>
-        &lt;i class="fa fa-warning margin-r-10">&lt;/i>Warning!
+        &lt;i class="uf uf-warningmd margin-r-10">&lt;/i>Warning!
     &lt;/div>
 &lt;/div></code></pre>
+</div>
+<div class="examples-code"><pre><code>.margin-r-10{
+    margin-right: 10px; 
+}
+.example .u-message{
+    position: inherit;
+}</code></pre>
 </div>
 
 

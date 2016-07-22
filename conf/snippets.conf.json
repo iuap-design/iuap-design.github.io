@@ -40,7 +40,7 @@
         },
 
         {
-            "name": "时间选择器",
+            "name": "日期选择器",
             "url": "demos/ui/datetime/date"
         }, 
 	{
@@ -97,11 +97,11 @@
 }, {
   "name":"辅助",
   "sub": [{
-    "name": "辅助样式",
-    "url": "demos/assist/styles"
-    }, {
         "name": "宽高",
         "url": "demos/assist/wh"
+    },{
+        "name": "对齐方式",
+        "url": "demos/assist/align"
     }, {
         "name": "文字",
         "url": "demos/assist/text"

@@ -1,4 +1,4 @@
-# 基本示例 - 数据绑定
+# 基本示例
 
 本例通过简单的前端页面显示Hello World，展示如何进行数据绑定。
 
@@ -42,8 +42,6 @@ var r = viewModel.dt1.createEmptyRow();
 r.setValue('f1','Hello World');
 
 </script></div>
-<div class="examples-code"><pre><code>&lt;div data-bind="text:dt1.ref('f1')">&lt;/div></code></pre>
-</div>
 <div class="examples-code"><pre><code>var app,viewModel;
 viewModel = {
     dt1: new u.DataTable({
@@ -64,4 +62,6 @@ app = u.createApp({
 var r = viewModel.dt1.createEmptyRow();
 r.setValue('f1','Hello World');
 </code></pre>
+</div>
+<div class="examples-code"><pre><code>&lt;div data-bind="text:dt1.ref('f1')">&lt;/div></code></pre>
 </div>

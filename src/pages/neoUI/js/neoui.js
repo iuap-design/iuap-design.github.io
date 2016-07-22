@@ -3,6 +3,7 @@ window.onload = function() {
 	var neoui = {
 		init: function() {
 			this.navControl();
+            this.completeContentHeight();
 		},
 		
 		/**
@@ -28,6 +29,13 @@ window.onload = function() {
                 offcanvasNav.removeClass('open');
                 $('.offcanvas-backdrop').remove();
             });
+        },
+
+        // 计算内容高度
+        completeContentHeight: function(){
+            var minheight;
+            minheight=document.body.clientHeight-document.querySelector('footer').clientHeight-document.querySelector('header').clientHeight;
+            $('#content').css({ "min-height": minheight+'px'})
         }
 	}
 

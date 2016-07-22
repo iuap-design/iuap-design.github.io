@@ -7,11 +7,17 @@ Thumbs.db
 ehthumbs.db
 
 bin/kero/
+bin/neoui/
+bin/neoui-datetimepicker/
+bin/neoui-tree/
+bin/neoui-grid/
+bin/dist/
+bin/datetimepicker/
+bin/grid/
 bin/iuap-design/
 bin/tree/
-bin/grid/
-bin/datetimepicker/
-bin/dist/
+
+_book/
 
 dist/pages/components/
 dist/pages/design-language/
@@ -24,12 +30,15 @@ dist/pages/globalstyle/
 
 # render ignore
 dist/pages/neoUI
+dist/pages/neoui
 dist/pages/template
 dist/pages/custom
 dist/pages/common
+dist/*.html
 
 generate-uui/
 dist/download/
+
 
 # Folder config file
 Desktop.ini
@@ -106,6 +115,8 @@ build/Release
 # Dependency directory
 node_modules
 docs/_book
+docs/kero/_book
+_book
 
 # Optional npm cache directory
 .npm
@@ -118,4 +129,3 @@ generate-uui
 
 # file
 dist/download/*
-

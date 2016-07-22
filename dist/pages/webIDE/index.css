@@ -108,7 +108,7 @@ body {
 
 .demo-drawer-nav-brand {
     display: block;
-    padding-left: 45px;
+    padding-left: 40px;
     font-size: 18px;
     font-weight: bold;
     color: #FFF;
@@ -281,7 +281,8 @@ a.demo-drawer-nav-brand:focus, a.demo-drawer-nav-brand:hover {
 }
 
 .demo-drawer-nav-brand .title-primary {
-    margin-top: 10px;
+    // margin-top: 10px;
+    margin-top: 16px;
     display: block;
 }
 
@@ -364,4 +365,8 @@ a.demo-drawer-nav-brand:focus, a.demo-drawer-nav-brand:hover {
 
 .u-navlayout-drawer .u-nav .u-nav-link-open + .u-nav-sub {
     max-height: 1200px;
+}
+
+.u-navlayout-drawer .u-nav .u-nav-sub .u-nav-link{
+    padding-left: 54px;
 }

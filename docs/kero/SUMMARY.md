@@ -1,8 +1,6 @@
-* 概述
-  * [MVVM介绍](mvvm.md)
-  * [Kero概述](overview.md)
-  * [Knockout资料](knockout.md)
+* [Kero概述](overview.md)
 * 快速入门
+  * [引入依赖](depend.md)
   * [数据绑定](example1.md)
   * [双向绑定](example2.md)
 * Kero语法
@@ -17,4 +15,8 @@
 * 表格插件
   * [基础说明](grid.md) 
   * [表格校验](gridValidate.md) 
-
+* 树插件
+  * [基础说明](tree.md)
+* 学习资料
+  * [Knockout资料](knockout.md)
+  * [MVVM介绍](mvvm.md)

@@ -1,8 +1,8 @@
 # iuap-design 官网
 
-## 简介
+## 介绍
 
-iUAP Deisgn 的官网
+[iUAP Deisgn](http://design.yyuap.com/)官方网站请访问 `http://design.yyuap.com/`。官网内容包含`iUAP Design`的整体说明和开发指导、设计指导、`NeoUI`前端`UI`框架和定制功能、`Kero Library`使用教程、样式板、`Web`页面设计器等内容。
 
 ## 目录说明
 
