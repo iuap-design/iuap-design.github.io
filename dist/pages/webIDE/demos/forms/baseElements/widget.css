@@ -8,7 +8,17 @@
 .margin-bottom-15{
 	margin-bottom: 15px;
 }
-
+.u-button-file input[type=file] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+    text-align: 0;
+    cursor: pointer;
+    opacity: 0;
+}
 /*需要删除 测试完后再删除*/
 
 /*.u-form-control.round{

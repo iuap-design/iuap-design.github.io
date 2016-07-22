@@ -111,12 +111,13 @@
     }]
 },{
     "name": "表单",
-    "sub": [{
-        "name": "表单布局",
-        "url": "demos/forms/layout"
-    }, {
+    "sub": [
+    {
         "name": "基本元素",
         "url": "demos/forms/baseElements"
+    }, {
+        "name": "表单布局",
+        "url": "demos/forms/formLayout"
     }, {
         "name": "material 元素",
         "url": "demos/forms/materialElements"
@@ -234,6 +235,9 @@
     },{
         "name": "顶部菜单布局",
         "url": "demos/layouts/topNavLayout"
+    },{
+        "name": "导航栏",
+        "url": "demos/layouts/navbar"
     }]
 }, {
     "name": "页面模板",

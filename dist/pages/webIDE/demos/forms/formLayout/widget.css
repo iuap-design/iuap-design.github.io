@@ -1,0 +1,49 @@
+/*.u-form-group h4{
+	line-height: 0px;
+    font-weight: normal;
+}
+.margin-bottom-30{
+	margin-bottom: 30px;
+}
+.margin-bottom-15{
+	margin-bottom: 15px;
+}
+
+.u-form-group{
+    margin-right: 0;
+}
+.u-form-control{
+    border: 1px solid #E4EAEC;
+}*/
+.u-form-label{
+    line-height: 35px;
+    text-align: right;
+}
+.u-form-group{
+    margin-right: 0;
+}
+.margin-top-5{
+    margin-top: 5px;
+}
+.u-form-group-lg .u-form-label {
+    padding-top: 11px;
+    font-size: 18px;
+}
+.u-form-group-lg .u-form-control {
+    height: 46px;
+    padding: 10px 18px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 4px;
+}
+..u-form-group-sm .u-form-label {
+    padding-top: 7px;
+    font-size: 12px;
+}
+.u-form-group-sm .u-form-control {
+    height: 32px;
+    padding: 6px 13px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 2px;
+}

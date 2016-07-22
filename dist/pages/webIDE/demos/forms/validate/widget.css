@@ -5,3 +5,35 @@
 .err-info .u-form-control-info{
     position: absolute;
 }
+.u-form-group h4 {
+    line-height: 0px;
+    font-weight: normal;
+}
+.has-success .u-form-control {
+    border-color: #46be8a;
+}
+.has-success i{
+	color: #46be8a;
+}
+.has-warning i{
+	color: #f2a654;
+}
+.has-error i{
+	color: #f96868;
+}
+.has-warning .u-form-control {
+    border-color: #f2a654;
+}
+.has-error .u-form-control {
+    border-color: #f96868;
+}
+.padding-none{
+	padding-right: 0;
+	padding-left: 0;
+}
+.text-right{
+	text-align: right;
+}
+.margin-top-8{
+	margin-top: 8px;
+}

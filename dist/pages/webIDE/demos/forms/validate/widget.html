@@ -3,19 +3,135 @@
         <div class="u-col-md-12">
             <div class="u-widget  u-widget-right">
                 <div class="u-widget-heading">
-                    <h3 class="u-widget-title">普通input校验</h3>
+                    <h3 class="u-widget-title">验证类型</h3>
                 </div>
                 <div class="u-widget-body">
-                    <form class="u-form-inline">
-                        <div class="u-form-group">
-                            <label for="float1">String:</label>
-                            <div class="err-info">
-                                <input type="text" class="u-form-control" id="float1" placeholder="字符串长度大于3小于8" u-options='{"required":true,"tipId":"floatInfo","maxLength":8,"minLength":3,"successId":"floatsuccess"}'>
-                                <span id="floatsuccess" class="u-form-control-success uf uf-checkedsymbol"></span>
-                                <span class="u-form-control-info uf uf-exclamationsign " id='floatInfo'></span>
+                    <div class="u-col-4">
+                        <div class="u-form-group has-success">
+                            <h4>input with Success</h4>
+                            <div class="u-input-group u-has-feedback">
+                                <input type="text" class="u-form-control">
+                                <span class="u-form-control-feedback">
+                                    <i class="icon uf uf-correctsymbol" aria-hidden="true"></i>
+                                </span>
                             </div>
                         </div>
-                        <button class="u-button primary raised" id="validateBtn">普通校验</button>
+                    </div>
+                    <div class="u-col-4">
+                        <div class="u-form-group  has-warning">
+                            <h4>input with Warning</h4>
+                            <div class="u-input-group u-has-feedback">
+                                <input type="text" class="u-form-control">
+                                <span class="u-form-control-feedback">
+                                    <i class="icon uf uf-exclamationsign" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="u-col-4">
+                        <div class="u-form-group  has-error">
+                            <h4>input with Error</h4>
+                            <div class="u-input-group u-has-feedback">
+                                <input type="text" class="u-form-control">
+                                <span class="u-form-control-feedback">
+                                    <i class="icon uf uf-removesymbol" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="u-row">
+        <div class="u-col-md-6">
+            <div class="u-widget  u-widget-right">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">实时验证</h3>
+                </div>
+                <div class="u-widget-body">
+                    <form>
+                      <div class="u-row">
+                        <div class="u-col-12">
+                          <div class="u-form-group">
+                            <label class="u-col-3 padding-none margin-top-8 text-right u-form-label">Full Name:</label>
+                            <div class="u-col-8">
+                                <input type="text" class="u-form-control" placeholder="Full Name">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="u-col-12">
+                          <div class="u-form-group">
+                            <label class="u-col-3 padding-none margin-top-8 text-right u-form-label">Email:</label>
+                            <div class="u-col-8">
+                                <input type="text" class="u-form-control" placeholder="Email">
+                            </div>
+                          </div>
+                        </div>
+                        
+                        
+                        <div class="u-col-12">
+                          <div class="u-form-group">
+                            <label class="u-col-3 padding-none margin-top-8 text-right u-form-label">Content:</label>
+                            <div class="u-col-9">
+                                <textarea class="u-form-control" rows="3"></textarea>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="u-col-6 u-col-offset-4">
+                          <div class="u-form-group">
+                            <button class="u-button raised primary ">Sign Up
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="u-col-md-6">
+            <div class="u-widget  u-widget-right">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">最终验证</h3>
+                </div>
+                <div class="u-widget-body">
+                    <form>
+                      <div class="u-row">
+                        <div class="u-col-12">
+                          <div class="u-form-group">
+                            <label class="u-col-3 padding-none margin-top-8 text-right u-form-label">Full Name:</label>
+                            <div class="u-col-8">
+                                <input type="text" class="u-form-control" placeholder="Full Name">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="u-col-12">
+                          <div class="u-form-group">
+                            <label class="u-col-3 padding-none margin-top-8 text-right u-form-label">Email:</label>
+                            <div class="u-col-8">
+                                <input type="text" class="u-form-control" placeholder="Email">
+                            </div>
+                          </div>
+                        </div>
+                        
+                        
+                        <div class="u-col-12">
+                          <div class="u-form-group">
+                            <label class="u-col-3 padding-none margin-top-8 text-right u-form-label">Content:</label>
+                            <div class="u-col-9">
+                                <textarea class="u-form-control" rows="3"></textarea>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="u-col-6 u-col-offset-4">
+                          <div class="u-form-group">
+                            <button class="u-button raised primary ">Sign Up
+                            </button>
+                          </div>
+                        </div>
+                      </div>
                     </form>
                 </div>
             </div>
