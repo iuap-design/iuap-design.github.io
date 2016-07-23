@@ -2,9 +2,9 @@
 * [起步](getting-started.md)
 * [概述](overview.md)
 * 基本示例
-  * [数据绑定](example2.md)
   * [数据模型](datatable.md)
   * [基本设置](dataTableUse.md)
+  * [数据绑定](example2.md)
   * [绑定语法](syntax.md)
 * 典型场景开发
   * [表格插件基础说明](grid.md)
