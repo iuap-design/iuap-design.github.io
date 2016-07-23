@@ -1,4 +1,4 @@
-var viewModel = {
+﻿var viewModel = {
 	dataTable1: new u.DataTable({
 		meta: {
 			'person': {},
@@ -47,4 +47,4 @@ var data = {
     },
     "callbackType": null
 }
-viewModel.dataTable1.setSimpleData(res.data.data1);
+viewModel.dataTable1.setSimpleData(data.data.data1);

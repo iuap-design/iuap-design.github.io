@@ -37,16 +37,16 @@ js会根据`u-year`来定位dom，然后绑定事件。
 	    <input class="u-input" type="text">
 	</div>
 </div></div>
-<div class="examples-code"><pre><code>.example .u-input{
-	border: 1px solid rgba(0,0,0, 0.12);
-	width: 250px;
-}</code></pre>
-</div>
 <div class="examples-code"><pre><code>&lt;div class="example">
 	&lt;div class='u-year'>
 	    &lt;input class="u-input" type="text">
 	&lt;/div>
 &lt;/div></code></pre>
+</div>
+<div class="examples-code"><pre><code>.example .u-input{
+	border: 1px solid rgba(0,0,0, 0.12);
+	width: 250px;
+}</code></pre>
 </div>
 
 
