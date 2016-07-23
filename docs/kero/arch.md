@@ -1,38 +1,4 @@
-# Kero初衷
-
-Kero是希望基于NeoUI组件，快速实现数据绑定，提供完整前端解决方案。以下介绍前端发展，及流行的框架设计模式。
-
-
-
-##浏览器格局
-
-20世纪90年代，网景公司发布了Navigator浏览器，实现了内容的展示。为满足市场更多需求，网景仓促发布了：Javascript。
-
-浏览器的一时风靡，微软也很快推出自己的桌面浏览器Internet Exploer。凭借着承诺永久免费，率先支持CSS等新标准，IE迅速占领了市场，也宣告了网景浏览器的终结。
-
-开源方面的后起之秀随之也获得了强势的发展和极高的拥趸，以下为目前浏览器情况。
-
-![浏览器市场占有率](../../static/img/all/mainbrowser.png)
-
-
-
-## jQuery
-
-浏览器的纷争，对标准的实现也不尽相同，jQuery为我们实现了：
-
-* 解决跨浏览器兼容
-* DOM选择器
-* 链式表达式，让书写代码变得有趣
-* 简化AJAX操作
-* 生态完善，海量插件
-
-总体就是降低了前端的学习成本，提高了项目的效率。
-
-JavaScript 过于灵活，代码的组织过于零散，一旦需求变得复杂， JavaScript 代码将变得难以维护。特别是崇尚快速开发、快速试错的开发模式，臃肿、难以组织和维护的 JavaScript 代码成了一个需要重要解决的问题。
-
-
-
-##设计模式
+# 设计模式简介
 
 设计模式常见的有MVC，MVP，MVVM。有关他们的介绍，引用阮一峰的[MVC，MVP 和 MVVM 的图示](http://www.ruanyifeng.com/blog/2015/02/mvcmvp_mvvm.html)：
 
@@ -97,8 +63,6 @@ MVVM 模式将 Presenter 改名为 ViewModel，基本上与 MVP 模式完全一�
 ![img](http://image.beekka.com/blog/2015/bg2015020110.png)
 
 唯一的区别是，它采用双向绑定（data-binding）：View的变动，自动反映在 ViewModel，反之亦然。[Angular](https://angularjs.org/) 和 [Ember](http://emberjs.com/) 都采用这种模式。
-
-
 
 参考链接
 
