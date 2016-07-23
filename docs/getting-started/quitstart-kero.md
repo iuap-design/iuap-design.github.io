@@ -58,3 +58,7 @@ viewModel.dt1.setRowSelect(0);
 <br> 您输入的值为：
 <span data-bind="text:dt1.ref('field1')"></span>
 ```
+[试一试](../webIDE/index.html#/demos/quitstart/kero)
+
+以上只是基于kero的一个简单demo，深入了解kero请前往[kero文档](http://design.yyuap.com/dist/pages/kero/overview.html)进行学习
+

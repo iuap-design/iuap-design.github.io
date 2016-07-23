@@ -2,37 +2,6 @@
 
 此为前端开发团队遵循和约定的 JavaScript 编码规范，意在提高代码的规范性和可维护性。
 
-## <a name='TOC'>内容列表</a>
-
-  1. [类型](#types)
-  2. [对象](#objects)
-  3. [数组](#arrays)
-  4. [字符串](#strings)
-  5. [函数](#functions)
-  6. [属性](#properties)
-  7. [变量](#variables)
-  8. [条件表达式和等号](#conditionals)
-  9. [块](#blocks)
-  10. [注释](#comments)
-  11. [空白](#whitespace)
-  12. [逗号](#commas)
-  13. [分号](#semicolons)
-  14. [类型转换](#type-coercion)
-  15. [命名约定](#naming-conventions)
-  16. [存取器](#accessors)
-  17. [构造器](#constructors)
-  18. [事件](#events)
-  19. [模块](#modules)
-  20. [jQuery](#jquery)
-  21. [ES5 兼容性](#es5)
-  22. [性能](#performance)
-  23. [资源](#resources)
-  24. [哪些人在使用](#in-the-wild)
-  25. [翻译](#translation)
-  26. [JavaScript风格指南](#guide-guide)
-  27. [贡献者](#contributors)
-  28. [许可](#license)
-
 ## <a name='types'>类型</a>
 
 -   **原始值**: 相当于传值
@@ -66,7 +35,6 @@
     console.log(foo[0], bar[0]); // => 9, 9
     ```
 
-**[[⬆]](#TOC)**
 
 ## <a name='objects'>对象</a>
 
@@ -97,7 +65,6 @@
     hidden: true
   };
   ```
-**[[⬆]](#TOC)**
 
 ## <a name='arrays'>数组</a>
 
@@ -148,7 +115,6 @@
   }
   ```
 
-**[[⬆]](#TOC)**
 
 
 ## <a name='strings'>字符串</a>
@@ -172,26 +138,26 @@
 -   超过80个字符的字符串应该使用字符串连接换行
     - 注: 如果过度使用，长字符串连接可能会对性能有影响. [jsPerf](http://jsperf.com/ya-string-concat) & [Discussion](https://github.com/airbnb/javascript/issues/40)
 
-      ```javascript
-      // bad
-      var errorMessage = 'This is a super long error that was thrown because of Batman. When you stop to think about how Batman had anything to do with this, you would get nowhere fast.';
+    ```javascript
+    // bad
+    var errorMessage = 'This is a super long error that was thrown because of Batman. When you stop to think about how Batman had anything to do with this, you would get nowhere fast.';
 
-      // bad
-      var errorMessage = 'This is a super long error that \
-      was thrown because of Batman. \
-      When you stop to think about \
-      how Batman had anything to do \
-      with this, you would get nowhere \
-      fast.';
+    // bad
+    var errorMessage = 'This is a super long error that \
+    was thrown because of Batman. \
+    When you stop to think about \
+    how Batman had anything to do \
+    with this, you would get nowhere \
+    fast.';
 
-      // good
-      var errorMessage = 'This is a super long error that ' +
-      'was thrown because of Batman.' +
-      'When you stop to think about ' +
-      'how Batman had anything to do ' +
-      'with this, you would get nowhere ' +
-      'fast.';
-      ```
+    // good
+    var errorMessage = 'This is a super long error that ' +
+    'was thrown because of Batman.' +
+    'When you stop to think about ' +
+    'how Batman had anything to do ' +
+    'with this, you would get nowhere ' +
+    'fast.';
+    ```
 
 
 - 编程时使用join而不是字符串连接来构建字符串，特别是IE: [jsPerf](http://jsperf.com/string-vs-array-concat/2).
@@ -237,7 +203,6 @@
   }
   ```
 
-**[[⬆]](#TOC)**
 
 
 ## <a name='functions'>函数</a>
@@ -264,37 +229,36 @@
 -   绝对不要在一个非函数块里声明一个函数，把那个函数赋给一个变量。浏览器允许你这么做，但是它们解析不同。
     - **注:** ECMA-262定义把`块`定义为一组语句，函数声明不是一个语句。[阅读ECMA-262对这个问题的说明](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf#page=97).
 
-      ```javascript
-      // bad
-      if (currentUser) {
-        function test() {
-          console.log('Nope.');
-        }
+    ```javascript
+    // bad
+    if (currentUser) {
+      function test() {
+        console.log('Nope.');
       }
+    }
 
-      // good
-      if (currentUser) {
-        var test = function test() {
-          console.log('Yup.');
-        };
-      }
-      ```
+    // good
+    if (currentUser) {
+      var test = function test() {
+        console.log('Yup.');
+      };
+    }
+    ```
 
     - 绝对不要把参数命名为 `arguments`, 这将会逾越函数作用域内传过来的 `arguments` 对象.
 
-      ```javascript
-      // bad
-      function nope(name, options, arguments) {
-        // ...stuff...
-      }
+    ```javascript
+    // bad
+    function nope(name, options, arguments) {
+      // ...stuff...
+    }
 
-      // good
-      function yup(name, options, args) {
-        // ...stuff...
-      }
-      ```
+    // good
+    function yup(name, options, args) {
+      // ...stuff...
+    }
+    ```
 
-**[[⬆]](#TOC)**
 
 
 ## <a name='properties'>属性</a>
@@ -314,7 +278,6 @@
   var isJedi = getProp('jedi');
   ```
 
-**[[⬆]](#TOC)**
 
 
 ## <a name='variables'>变量</a>
@@ -345,85 +308,84 @@
 
     - 最后再声明未赋值的变量，当你想引用之前已赋值变量的时候很有用。
 
-      ```javascript
-      // bad
-      var i, len, dragonball,
-          items = getItems(),
-          goSportsTeam = true;
+    ```javascript
+    // bad
+    var i, len, dragonball,
+        items = getItems(),
+        goSportsTeam = true;
 
-      // bad
-      var i, items = getItems(),
-          dragonball,
-          goSportsTeam = true,
-          len;
+    // bad
+    var i, items = getItems(),
+        dragonball,
+        goSportsTeam = true,
+        len;
 
-      // good
-      var items = getItems(),
-          goSportsTeam = true,
-          dragonball,
-          length,
-          i;
-      ```
+    // good
+    var items = getItems(),
+        goSportsTeam = true,
+        dragonball,
+        length,
+        i;
+    ```
 
     - 在作用域顶部声明变量，避免变量声明和赋值引起的相关问题。
 
-      ```javascript
-      // bad
-      function() {
-        test();
-        console.log('doing stuff..');
+    ```javascript
+    // bad
+    function() {
+      test();
+      console.log('doing stuff..');
 
-        //..other stuff..
+      //..other stuff..
 
-        var name = getName();
+      var name = getName();
 
-        if (name === 'test') {
-          return false;
-        }
-
-        return name;
+      if (name === 'test') {
+        return false;
       }
 
-      // good
-      function() {
-        var name = getName();
+      return name;
+    }
 
-        test();
-        console.log('doing stuff..');
+    // good
+    function() {
+      var name = getName();
 
-        //..other stuff..
+      test();
+      console.log('doing stuff..');
 
-        if (name === 'test') {
-          return false;
-        }
+      //..other stuff..
 
-        return name;
+      if (name === 'test') {
+        return false;
       }
 
-      // bad
-      function() {
-        var name = getName();
+      return name;
+    }
 
-        if (!arguments.length) {
-          return false;
-        }
+    // bad
+    function() {
+      var name = getName();
 
-        return true;
+      if (!arguments.length) {
+        return false;
       }
 
-      // good
-      function() {
-        if (!arguments.length) {
-          return false;
-        }
+      return true;
+    }
 
-        var name = getName();
-
-        return true;
+    // good
+    function() {
+      if (!arguments.length) {
+        return false;
       }
-      ```
 
-**[[⬆]](#TOC)**
+      var name = getName();
+
+      return true;
+    }
+    ```
+
 
 
 ## <a name='conditionals'>条件表达式和等号</a>
@@ -471,7 +433,6 @@
 
     - 阅读 [Truth Equality and JavaScript](http://javascriptweblog.wordpress.com/2011/02/07/truth-equality-and-javascript/#more-2108) 了解更多
 
-**[[⬆]](#TOC)**
 
 
 ## <a name='blocks'>块</a>
@@ -500,7 +461,6 @@
   }
   ```
 
-**[[⬆]](#TOC)**
 
 
 ## <a name='comments'>注释</a>
@@ -567,27 +527,26 @@
 
     - 如果你有一个问题需要重新来看一下或如果你建议一个需要被实现的解决方法的话需要在你的注释前面加上 `FIXME` 或 `TODO` 帮助其他人迅速理解
 
-      ```javascript
-      function Calculator() {
+    ```javascript
+    function Calculator() {
 
-        // FIXME: shouldn't use a global here
-        total = 0;
+      // FIXME: shouldn't use a global here
+      total = 0;
 
-        return this;
-      }
-      ```
+      return this;
+    }
+    ```
 
-      ```javascript
-      function Calculator() {
+    ```javascript
+    function Calculator() {
 
-        // TODO: total should be configurable by an options param
-        this.total = 0;
+      // TODO: total should be configurable by an options param
+      this.total = 0;
 
-        return this;
-      }
-      ```
+      return this;
+    }
+    ```
 
-**[[⬆]](#TOC)**
 
 
 
@@ -639,36 +598,35 @@
 
     - 在做长方法链时使用缩进.
 
-      ```javascript
-      // bad
-      $('#items').find('.selected').highlight().end().find('.open').updateCount();
+    ```javascript
+    // bad
+    $('#items').find('.selected').highlight().end().find('.open').updateCount();
 
-      // good
-      $('#items')
-        .find('.selected')
-        .highlight()
-        .end()
-        .find('.open')
-        .updateCount();
+    // good
+    $('#items')
+      .find('.selected')
+      .highlight()
+      .end()
+      .find('.open')
+      .updateCount();
 
-      // bad
-      var leds = stage.selectAll('.led').data(data).enter().append('svg:svg').class('led', true)
-          .attr('width',  (radius + margin) * 2).append('svg:g')
-          .attr('transform', 'translate(' + (radius + margin) + ',' + (radius + margin) + ')')
-          .call(tron.led);
+    // bad
+    var leds = stage.selectAll('.led').data(data).enter().append('svg:svg').class('led', true)
+        .attr('width',  (radius + margin) * 2).append('svg:g')
+        .attr('transform', 'translate(' + (radius + margin) + ',' + (radius + margin) + ')')
+        .call(tron.led);
 
-      // good
-      var leds = stage.selectAll('.led')
-          .data(data)
-        	.enter().append('svg:svg')
-          .class('led', true)
-          .attr('width',  (radius + margin) * 2)
-        	.append('svg:g')
-          .attr('transform', 'translate(' + (radius + margin) + ',' + (radius + margin) + ')')
-          .call(tron.led);
-      ```
+    // good
+    var leds = stage.selectAll('.led')
+        .data(data)
+      	.enter().append('svg:svg')
+        .class('led', true)
+        .attr('width',  (radius + margin) * 2)
+      	.append('svg:g')
+        .attr('transform', 'translate(' + (radius + margin) + ',' + (radius + margin) + ')')
+        .call(tron.led);
+    ```
 
-**[[⬆]](#TOC)**
 
 ## <a name='commas'>逗号</a>
 
@@ -728,7 +686,6 @@
   ];
   ```
 
-**[[⬆]](#TOC)**
 
 
 ## <a name='semicolons'>分号</a>
@@ -755,7 +712,7 @@
   })();
   ```
 
-    **[[⬆]](#TOC)**
+  
 
 
 ## <a name='type-coercion'>类型转换</a>
@@ -781,52 +738,51 @@
 
     -  对数字使用 `parseInt` 并且总是带上类型转换的基数.
 
-       ```javascript
-       var inputValue = '4';
+   ```javascript
+   var inputValue = '4';
 
-       // bad
-       var val = new Number(inputValue);
+   // bad
+   var val = new Number(inputValue);
 
-       // bad
-       var val = +inputValue;
+   // bad
+   var val = +inputValue;
 
-       // bad
-       var val = inputValue >> 0;
+   // bad
+   var val = inputValue >> 0;
 
-       // bad
-       var val = parseInt(inputValue);
+   // bad
+   var val = parseInt(inputValue);
 
-       // good
-       var val = Number(inputValue);
+   // good
+   var val = Number(inputValue);
 
-       // good
-       var val = parseInt(inputValue, 10);
+   // good
+   var val = parseInt(inputValue, 10);
 
-       // good
-       /**
-       * parseInt was the reason my code was slow.
-       * Bitshifting the String to coerce it to a
-       * Number made it a lot faster.
-       */
-       var val = inputValue >> 0;
-       ```
+   // good
+   /**
+   * parseInt was the reason my code was slow.
+   * Bitshifting the String to coerce it to a
+   * Number made it a lot faster.
+   */
+   var val = inputValue >> 0;
+   ```
 
     - 布尔值:
 
-      ```javascript
-      var age = 0;
+    ```javascript
+    var age = 0;
 
-      // bad
-      var hasAge = new Boolean(age);
+    // bad
+    var hasAge = new Boolean(age);
 
-      // good
-      var hasAge = Boolean(age);
+    // good
+    var hasAge = Boolean(age);
 
-      // good
-      var hasAge = !!age;
-      ```
+    // good
+    var hasAge = !!age;
+    ```
 
-**[[⬆]](#TOC)**
 
 
 ## <a name='naming-conventions'>命名约定</a>
@@ -926,7 +882,6 @@
       }
       ```
 
-**[[⬆]](#TOC)**
 
 
 ## <a name='accessors'>存取器</a>
@@ -950,37 +905,36 @@
 
     - 如果属性是布尔值，使用isVal() 或 hasVal()
 
-      ```javascript
-      // bad
-      if (!dragon.age()) {
-        return false;
-      }
+    ```javascript
+    // bad
+    if (!dragon.age()) {
+      return false;
+    }
 
-      // good
-      if (!dragon.hasAge()) {
-        return false;
-      }
-      ```
+    // good
+    if (!dragon.hasAge()) {
+      return false;
+    }
+    ```
 
     - 可以创建get()和set()函数，但是要保持一致
 
-      ```javascript
-      function Jedi(options) {
-        options || (options = {});
-        var lightsaber = options.lightsaber || 'blue';
-        this.set('lightsaber', lightsaber);
-      }
+    ```javascript
+    function Jedi(options) {
+      options || (options = {});
+      var lightsaber = options.lightsaber || 'blue';
+      this.set('lightsaber', lightsaber);
+    }
 
-      Jedi.prototype.set = function(key, val) {
-        this[key] = val;
-      };
+    Jedi.prototype.set = function(key, val) {
+      this[key] = val;
+    };
 
-      Jedi.prototype.get = function(key) {
-        return this[key];
-      };
-      ```
+    Jedi.prototype.get = function(key) {
+      return this[key];
+    };
+    ```
 
-**[[⬆]](#TOC)**
 
 
 ## <a name='constructors'>构造器</a>
@@ -1065,7 +1019,6 @@
   };
   ```
 
-**[[⬆]](#TOC)**
 
 
 ## <a name='events'>事件</a>
@@ -1096,7 +1049,6 @@
   });
   ```
 
-**[[⬆]](#TOC)**
 
 
 ## <a name='modules'>模块</a>
@@ -1106,28 +1058,27 @@
     - 加入一个名为noConflict()的方法来设置导出的模块为之前的版本并返回它
     - 总是在模块顶部声明 `'use strict';`
 
-      ```javascript
-      // fancyInput/fancyInput.js
+    ```javascript
+    // fancyInput/fancyInput.js
 
-      !function(global) {
-        'use strict';
+    !function(global) {
+      'use strict';
 
-        var previousFancyInput = global.FancyInput;
+      var previousFancyInput = global.FancyInput;
 
-        function FancyInput(options) {
-          this.options = options || {};
-        }
+      function FancyInput(options) {
+        this.options = options || {};
+      }
 
-        FancyInput.noConflict = function noConflict() {
-          global.FancyInput = previousFancyInput;
-          return FancyInput;
-        };
+      FancyInput.noConflict = function noConflict() {
+        global.FancyInput = previousFancyInput;
+        return FancyInput;
+      };
 
-        global.FancyInput = FancyInput;
-      }(this);
-      ```
+      global.FancyInput = FancyInput;
+    }(this);
+    ```
 
-**[[⬆]](#TOC)**
 
 
 ## <a name='jquery'>jQuery</a>
@@ -1162,34 +1113,32 @@
 -   对DOM查询使用级联的 `$('.sidebar ul')` 或 `$('.sidebar ul')`，[jsPerf](http://jsperf.com/jquery-find-vs-context-sel/16)
     - 对有作用域的jQuery对象查询使用 `find`
 
-      ```javascript
-      // bad
-      $('.sidebar', 'ul').hide();
+    ```javascript
+    // bad
+    $('.sidebar', 'ul').hide();
 
-      // bad
-      $('.sidebar').find('ul').hide();
+    // bad
+    $('.sidebar').find('ul').hide();
 
-      // good
-      $('.sidebar ul').hide();
+    // good
+    $('.sidebar ul').hide();
 
-      // good
-      $('.sidebar > ul').hide();
+    // good
+    $('.sidebar > ul').hide();
 
-      // good (slower)
-      $sidebar.find('ul');
+    // good (slower)
+    $sidebar.find('ul');
 
-      // good (faster)
-      $($sidebar[0]).find('ul');
-      ```
+    // good (faster)
+    $($sidebar[0]).find('ul');
+    ```
 
-**[[⬆]](#TOC)**
 
 
 ## <a name='es5'>ECMAScript 5兼容性</a>
 
 - 参考[Kangax](https://twitter.com/kangax/)的 ES5 [compatibility table](http://kangax.github.com/es5-compat-table/)
 
-**[[⬆]](#TOC)**
 
 
 
@@ -1204,7 +1153,6 @@
     - [Long String Concatenation](http://jsperf.com/ya-string-concat)
     - Loading...
 
-**[[⬆]](#TOC)**
 
 
 ## <a name='resources'>资源</a>
@@ -1254,7 +1202,6 @@
     - [Dustin Diaz](http://dustindiaz.com/)
     - [nettuts](http://net.tutsplus.com/?s=javascript)
 
-**[[⬆]](#TOC)**
 
 # 声明
 
