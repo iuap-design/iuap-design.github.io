@@ -8,6 +8,7 @@
   * [表盘选择](clockpicker.md)
   * [年份选择](ex_year.md)
   * [年月选择](ex_yearmonth.md)
+  * [时间选择](ex_time.md)
   * [下拉选择](combobox_ex.md)
   * [金额转换](currency_ex.md)
   * [绑定语法](syntax.md)
