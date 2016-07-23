@@ -1,14 +1,12 @@
 * 快速入门
   * [基础开发](quitstart-ui.md)
-  * [kero数据模型开发](quitstartkero.md)
-  * [快速构建项目](quitstart-project.md)
+  * [kero数据模型开发](quitstart-kero.md)
 * 基础架构
+  * [项目脚手架](scaffold.md)
   * [CSS开发规范](specification-css.md)
   * [JS开发规范](specification-js.md)
-  * [项目脚手架](scaffold.md)
   * [开发工具](tools.md)
   * [浏览器兼容性](browser.md)
   * [性能优化](performance.md)
 * 交流和反馈
   * [BUG或Feature反馈](feedback.md)
-  * [常见问题](faq.md)
