@@ -1,5 +1,5 @@
 * [获取 Kero](install.md)
-* [起步](install.md)
+* [起步](getting-started.md)
 * [概述](overview.md)
 * 基本示例
   * [双向绑定](example2.md)
