@@ -6,6 +6,7 @@
   * [基本设置](dataTableUse.md)
   * [数据绑定](example2.md)
   * [表盘选择](clockpicker.md)
+  * [下拉选择](combobox_ex.md)
   * [绑定语法](syntax.md)
 * 典型场景开发
   * [表格插件基础说明](grid.md)
