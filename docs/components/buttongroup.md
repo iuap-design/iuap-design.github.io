@@ -9,20 +9,6 @@
 # 示例
 
 
-## 基础按钮组
-类`u-group-button`包裹类`u-button`的button
-<div class="example-content"><div class="u-button-group">	
-	<button class="u-button raised u-button-border default">BUTTON</button>
-	<button class="u-button raised u-button-border default">BUTTON</button>
-	<button class="u-button raised u-button-border default">BUTTON</button>
-</div></div>
-<div class="examples-code"><pre><code>&lt;div class="u-button-group">	
-	&lt;button class="u-button raised u-button-border default">BUTTON&lt;/button>
-	&lt;button class="u-button raised u-button-border default">BUTTON&lt;/button>
-	&lt;button class="u-button raised u-button-border default">BUTTON&lt;/button>
-&lt;/div></code></pre>
-</div>
-
 ## 嵌套
 
 按钮组里嵌套下拉
@@ -30,7 +16,7 @@
 	<button class="u-button raised u-button-border default">BUTTON</button>
 	<button class="u-button raised u-button-border default">BUTTON</button>
 	<button class="u-button raised u-button-border default" id="demo-menu-default">
-	    danger
+	    dropdown
 	    <span class="u-right-icon uf uf-anglearrowdown"></span>
 	</button>
 	<ul class="u-menu u-menu-bottom-right u-menu-danger" for="demo-menu-default">
@@ -45,7 +31,7 @@
 	&lt;button class="u-button raised u-button-border default">BUTTON&lt;/button>
 	&lt;button class="u-button raised u-button-border default">BUTTON&lt;/button>
 	&lt;button class="u-button raised u-button-border default" id="demo-menu-default">
-	    danger
+	    dropdown
 	    &lt;span class="u-right-icon uf uf-anglearrowdown">&lt;/span>
 	&lt;/button>
 	&lt;ul class="u-menu u-menu-bottom-right u-menu-danger" for="demo-menu-default">
@@ -56,6 +42,20 @@
 	&lt;/ul>
 &lt;/div>
 </code></pre>
+</div>
+
+## 基础按钮组
+类`u-group-button`包裹类`u-button`的button
+<div class="example-content"><div class="u-button-group">	
+	<button class="u-button raised u-button-border default">BUTTON</button>
+	<button class="u-button raised u-button-border default">BUTTON</button>
+	<button class="u-button raised u-button-border default">BUTTON</button>
+</div></div>
+<div class="examples-code"><pre><code>&lt;div class="u-button-group">	
+	&lt;button class="u-button raised u-button-border default">BUTTON&lt;/button>
+	&lt;button class="u-button raised u-button-border default">BUTTON&lt;/button>
+	&lt;button class="u-button raised u-button-border default">BUTTON&lt;/button>
+&lt;/div></code></pre>
 </div>
 
 ## 尺寸

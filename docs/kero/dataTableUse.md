@@ -141,7 +141,7 @@ r.setValue('f1','test txt');
 	<div class='u-datepicker' u-meta='{"id":"date1","type":"u-date","data":"dt2","field":"f2"}'>
 	    <input class="u-input" type="text">
 	</div>
-	<div class='u-datepicker' u-meta='{"id":"datetime2","type":"u-datetime","data":"dt2","field":"f3",}'>
+	<div class='u-datepicker' u-meta='{"id":"datetime2","type":"u-date","data":"dt2","field":"f3"}'>
 	    <input class="u-input" type="text">
 	    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
 		</span>
@@ -180,7 +180,7 @@ r.setValue('f3', "2016-2-13 4:58:58");
 	&lt;div class='u-datepicker' u-meta='{"id":"date1","type":"u-date","data":"dt2","field":"f2"}'>
 	    &lt;input class="u-input" type="text">
 	&lt;/div>
-	&lt;div class='u-datepicker' u-meta='{"id":"datetime2","type":"u-datetime","data":"dt2","field":"f3",}'>
+	&lt;div class='u-datepicker' u-meta='{"id":"datetime2","type":"u-date","data":"dt2","field":"f3"}'>
 	    &lt;input class="u-input" type="text">
 	    &lt;span class="input-group-addon">&lt;span class="glyphicon glyphicon-calendar">&lt;/span>
 		&lt;/span>
