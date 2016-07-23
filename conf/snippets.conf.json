@@ -257,4 +257,14 @@
             "url": "demos/patterns/order/detail"
         }]
     }]
+}, {
+    "name": "典型场景",
+	"sub": [{
+        "name": "单表格控件展现数据",
+        "url": "demos/scene/singGrid"
+    }, {
+        "name": "主（列表）子（表格控件）交互",
+        "url": "demos/scene/mainsub"
+    }]
+    
 }]
