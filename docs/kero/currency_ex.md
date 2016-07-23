@@ -1,14 +1,14 @@
-# 表盘选择
+# 输入转换
 
-本例展示kero与表盘clockpicker结合示例。
+本例展示输入数字后转换为对应钱币。
 
 
-##Clockpicker
+##Currency
 
 本例实现如下效果：
 
-* 默认数据绑定：`input`输入框绑定默认时间
-* 关联`clockpicker`控件
+* 输入数字转为钱币
+* 输入错误类型报错
 
 
 
@@ -20,25 +20,29 @@
 	type:创建组件对应的类型
 	data:指定数据模型中的数据集
 	field:绑定数据集中对应的字段
+	datasource:绑定数据模型对应的数据
 -->
-<div class="" u-meta='{"id":"t1","type":"u-clockpicker","data":"dt1","field":"f1"}'>
-    <input class="u-input"/>
-</div></div>
+人民币：
+<input  u-meta='{"id":"f1","type":"currency","data":"dt1","field":"f1"}' />
+美元：
+<input  u-meta='{"id":"f2","type":"currency","data":"dt1","field":"f2"}' /></div>
 <div class="example-content ex-hide"><script>// JS
 
 /**
  * viewModel 创建数据模型
  * dt1 创建的数据集
  * f1 创建数据集中的字段
- * type:指定数据对应的类型
+ * min 指定最小输入值，本例为50
+ * curSymbol 输入数据前自动添加符号类型，默认为"¥"
  */
-var app, viewModel;
+var app,viewModel;
 viewModel = {
     dt1: new u.DataTable({
         meta: {
-            f1: {type:'datetime'}
+            f1: {min:50},
+            f2: {curSymbol:"$"}
         }
-    }),
+    })
 };
 
 /**
@@ -47,14 +51,12 @@ viewModel = {
  * model 指定服务对应的数据模型
  */
 app = u.createApp({
-    el: 'body',
-    model: viewModel
+    el:'body',
+    model:viewModel
 });
 
-// 数据集dt1创建空行，并为字符f1赋值
+// 创建空行
 var r = viewModel.dt1.createEmptyRow();
-r.setValue('f1', "2016-2-7 12:32:34");
-viewModel.dt1.setRowSelect(0);
 
 
 </script></div>
@@ -66,10 +68,12 @@ viewModel.dt1.setRowSelect(0);
 	type:创建组件对应的类型
 	data:指定数据模型中的数据集
 	field:绑定数据集中对应的字段
+	datasource:绑定数据模型对应的数据
 -->
-&lt;div class="" u-meta='{"id":"t1","type":"u-clockpicker","data":"dt1","field":"f1"}'>
-    &lt;input class="u-input"/>
-&lt;/div></code></pre>
+人民币：
+&lt;input  u-meta='{"id":"f1","type":"currency","data":"dt1","field":"f1"}' />
+美元：
+&lt;input  u-meta='{"id":"f2","type":"currency","data":"dt1","field":"f2"}' /></code></pre>
 </div>
 <div class="examples-code"><pre><code>// JS
 
@@ -77,15 +81,17 @@ viewModel.dt1.setRowSelect(0);
  * viewModel 创建数据模型
  * dt1 创建的数据集
  * f1 创建数据集中的字段
- * type:指定数据对应的类型
+ * min 指定最小输入值，本例为50
+ * curSymbol 输入数据前自动添加符号类型，默认为"¥"
  */
-var app, viewModel;
+var app,viewModel;
 viewModel = {
     dt1: new u.DataTable({
         meta: {
-            f1: {type:'datetime'}
+            f1: {min:50},
+            f2: {curSymbol:"$"}
         }
-    }),
+    })
 };
 
 /**
@@ -94,14 +100,12 @@ viewModel = {
  * model 指定服务对应的数据模型
  */
 app = u.createApp({
-    el: 'body',
-    model: viewModel
+    el:'body',
+    model:viewModel
 });
 
-// 数据集dt1创建空行，并为字符f1赋值
+// 创建空行
 var r = viewModel.dt1.createEmptyRow();
-r.setValue('f1', "2016-2-7 12:32:34");
-viewModel.dt1.setRowSelect(0);
 
 </code></pre>
 </div>

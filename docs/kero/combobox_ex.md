@@ -1,14 +1,14 @@
-# 表盘选择
+# 下拉框
 
-本例展示kero与表盘clockpicker结合示例。
+本例展示下拉框示例。
 
 
-##Clockpicker
+##Combobox
 
 本例实现如下效果：
 
-* 默认数据绑定：`input`输入框绑定默认时间
-* 关联`clockpicker`控件
+* 实现下拉菜单效果
+* 实现JS更改下拉菜单默认数据`setComboData(arg)`
 
 
 
@@ -20,9 +20,12 @@
 	type:创建组件对应的类型
 	data:指定数据模型中的数据集
 	field:绑定数据集中对应的字段
+	datasource:绑定数据模型对应的数据
 -->
-<div class="" u-meta='{"id":"t1","type":"u-clockpicker","data":"dt1","field":"f1"}'>
+<div id="combo1" class="u-combo u-text u-label-floating" u-meta='{"id":"dt1","type":"u-combobox","data":"dt1","field":"f1","datasource":"comboData"}'>
     <input class="u-input"/>
+    <label class="u-label">label</label>
+    <span class="u-combo-icon"></span>
 </div></div>
 <div class="example-content ex-hide"><script>// JS
 
@@ -31,14 +34,17 @@
  * dt1 创建的数据集
  * f1 创建数据集中的字段
  * type:指定数据对应的类型
+ * comboData:指定默认的下拉数据集
  */
 var app, viewModel;
 viewModel = {
     dt1: new u.DataTable({
         meta: {
-            f1: {type:'datetime'}
+            f1: {},
+            f2: {}
         }
     }),
+    comboData:[{name:'cc',value:'03'},{name:'dd',value:'04'}]
 };
 
 /**
@@ -51,9 +57,19 @@ app = u.createApp({
     model: viewModel
 });
 
-// 数据集dt1创建空行，并为字符f1赋值
+
+/**
+ * 修改viewModel默认绑定的数据值
+ * @type {Array}
+ */
+var combo1Data = [{name:'cc1',value:'03'},{name:'dd1',value:'04'}];
+var combo1Obj = document.getElementById('combo1')['u.Combo'];
+
+combo1Obj.setComboData(combo1Data);
+
+// 创建空行，设置默认值
 var r = viewModel.dt1.createEmptyRow();
-r.setValue('f1', "2016-2-7 12:32:34");
+r.setValue('f1', "test1");
 viewModel.dt1.setRowSelect(0);
 
 
@@ -66,9 +82,12 @@ viewModel.dt1.setRowSelect(0);
 	type:创建组件对应的类型
 	data:指定数据模型中的数据集
 	field:绑定数据集中对应的字段
+	datasource:绑定数据模型对应的数据
 -->
-&lt;div class="" u-meta='{"id":"t1","type":"u-clockpicker","data":"dt1","field":"f1"}'>
+&lt;div id="combo1" class="u-combo u-text u-label-floating" u-meta='{"id":"dt1","type":"u-combobox","data":"dt1","field":"f1","datasource":"comboData"}'>
     &lt;input class="u-input"/>
+    &lt;label class="u-label">label&lt;/label>
+    &lt;span class="u-combo-icon">&lt;/span>
 &lt;/div></code></pre>
 </div>
 <div class="examples-code"><pre><code>// JS
@@ -78,14 +97,17 @@ viewModel.dt1.setRowSelect(0);
  * dt1 创建的数据集
  * f1 创建数据集中的字段
  * type:指定数据对应的类型
+ * comboData:指定默认的下拉数据集
  */
 var app, viewModel;
 viewModel = {
     dt1: new u.DataTable({
         meta: {
-            f1: {type:'datetime'}
+            f1: {},
+            f2: {}
         }
     }),
+    comboData:[{name:'cc',value:'03'},{name:'dd',value:'04'}]
 };
 
 /**
@@ -98,9 +120,19 @@ app = u.createApp({
     model: viewModel
 });
 
-// 数据集dt1创建空行，并为字符f1赋值
+
+/**
+ * 修改viewModel默认绑定的数据值
+ * @type {Array}
+ */
+var combo1Data = [{name:'cc1',value:'03'},{name:'dd1',value:'04'}];
+var combo1Obj = document.getElementById('combo1')['u.Combo'];
+
+combo1Obj.setComboData(combo1Data);
+
+// 创建空行，设置默认值
 var r = viewModel.dt1.createEmptyRow();
-r.setValue('f1', "2016-2-7 12:32:34");
+r.setValue('f1', "test1");
 viewModel.dt1.setRowSelect(0);
 
 </code></pre>
