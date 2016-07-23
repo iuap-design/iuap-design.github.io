@@ -4,8 +4,7 @@
     * [Kero概述](overview.md)
 * 基本示例语法
     * [引入依赖](depend.md)
-    * [数据绑定](example1.md)
-    * [双向绑定](example2.md)
+    * [数据绑定](example2.md)
     * [基本设置](dataTableUse.md)
     * [数据模型](datatable.md)
     * [绑定语法](syntax.md)
