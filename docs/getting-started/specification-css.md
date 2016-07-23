@@ -2,18 +2,11 @@
 
 此为前端开发团队遵循和约定的 CSS 编码规范，意在提高代码的规范性和可维护性。
 
-## 目录
-
-* [代码风格](#代码风格)
-* [组织格式](#组织格式)
-* [代码注释](#代码注释)
-* [样式重置](#样式重置)
-
 ## 代码风格
 
-* 代码应该「SHOULD」符合 CSS 语法有效性，可以使用 [W3C CSS validator](http://jigsaw.w3.org/css-validator/validator.html.zh-cn) 工具来验证。
+* 代码应该符合 CSS 语法有效性，可以使用 [W3C CSS validator](http://jigsaw.w3.org/css-validator/validator.html.zh-cn) 工具来验证。
 
-* ID 和 Class 应该「SHOULD」按照元素功能命名，不应该「SHOULD NOT」按照元素表现命名，命名应该「SHOULD」含义清晰。
+* ID 和 Class 应该按照元素功能命名，不应该按照元素表现命名，命名应该含义清晰。
 
     ```css
     /* bad: 含义不清 */
@@ -29,7 +22,7 @@
     .video {}
     ```
 
-* ID 和 Class 命名应该「SHOULD」在保持含义清晰的前提下尽可能简短。
+* ID 和 Class 命名应该在保持含义清晰的前提下尽可能简短。
 
     ```css
     /* bad */
@@ -41,7 +34,7 @@
     .author {}
     ```
 
-* ID 和 Class 命名中单词应该「SHOULD」全部小写，单词之间使用 `-` 作为分隔符。
+* ID 和 Class 命名中单词应该全部小写，单词之间使用 `-` 作为分隔符。
 
     ```css
     /* bad */
@@ -66,7 +59,7 @@
     .error {}
     ```
 
-* CSS 属性应该「SHOULD」尽可能使用简化方式书写，需注意简写时默认值的副作用，详细参考 [Shorthand properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties)。
+* CSS 属性应该尽可能使用简化方式书写，需注意简写时默认值的副作用，详细参考 [Shorthand properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties)。
 
     ```css
     /* bad */
@@ -85,7 +78,7 @@
     padding: 0 1em 2em;
     ```
 
-* CSS 属性中的 `0` 值不应该「SHOULD NOT」带单位。
+* CSS 属性中的 `0` 值不应该带单位。
 
     ```css
     /* bad */
@@ -97,7 +90,7 @@
     padding: 0;
     ```
 
-* CSS 属性中数值介于-1到1之间的小数应该「SHOULD」忽略开头的 `0`。
+* CSS 属性中数值介于-1到1之间的小数应该忽略开头的 `0`。
 
     ```css
     /* bad */
@@ -107,7 +100,7 @@
     font-size: .8em;
     ```
 
-* CSS 的色值应该「SHOULD」尽可能使用简化写法。
+* CSS 的色值应该尽可能使用简化写法。
 
     ```css
     /* bad */
@@ -117,13 +110,12 @@
     color: #ebc;
     ```
 
-**[⬆ Top](#目录)**
 
 ## 组织格式
 
-* 必须「MUST」采用 4 个空格为一次缩进。
+* 必须采用 4 个空格为一次缩进。
 
-* CSS 属性声明应该「SHOULD」按字母升序排列。
+* CSS 属性声明应该按字母升序排列。
 
     ```css
     /* good */
@@ -137,7 +129,7 @@
     text-indent: 2em;
     ```
 
-* CSS 每个代码块相对于父代码库必须「MUST」有缩进。
+* CSS 每个代码块相对于父代码库必须有缩进。
 
     ```css
     /*good*/
@@ -151,8 +143,8 @@
     }
     ```
 
-* CSS 属性声明必须「MUST」以分号结尾。
-* CSS 属性名冒号后必须「MUST」有一个空格。
+* CSS 属性声明必须以分号结尾。
+* CSS 属性名冒号后必须有一个空格。
 
     ```css
     /* bad */
@@ -162,8 +154,8 @@
     color: #ebc;
     ```
 
-* CSS 中的属性名建议「RECOMMENDED」按照字母顺序排列，可以使用 Sublime Text 的 F5 命令来自动格式化。
-* 最后的选择符与 `{` 之间必须「MUST」有一个空格。
+* CSS 中的属性名建议按照字母顺序排列，可以使用 Sublime Text 的 F5 命令来自动格式化。
+* 最后的选择符与 `{` 之间必须有一个空格。
 
     ```css
     /* bad */
@@ -181,7 +173,7 @@
     }
     ```
 
-* 多个并列的选择符必须「MUST」换行。
+* 多个并列的选择符必须换行。
 
     ```css
     /* bad */
@@ -198,7 +190,7 @@
     }
     ```
 
-* CSS 规则之间必须「MUST」以空白行分隔。
+* CSS 规则之间必须以空白行分隔。
 
     ```css
     /* good */
@@ -212,7 +204,7 @@
     }
     ```
 
-* CSS 属性值中所有使用到引号的位置必须「MUST」使用单引号。
+* CSS 属性值中所有使用到引号的位置必须使用单引号。
 
     ```css
     /* bad */
@@ -230,11 +222,10 @@
     }
     ```
 
-**[⬆ Top](#目录)**
 
 ## 代码注释
 
-* CSS规则段落之前应该「SHOULD」添加注释说明。
+* CSS规则段落之前应该添加注释说明。
 
     ```css
     /* good */
@@ -251,10 +242,8 @@
     .adw-gallery {}
     ```
 
-**[⬆ Top](#目录)**
 
 ## 样式重置
 
-* 应该「SHOULD」使用推荐的 `normalize.css` 进行样式重置。
+* 应该使用推荐的 `normalize.css` 进行样式重置。
 
-**[⬆ Top](#目录)**

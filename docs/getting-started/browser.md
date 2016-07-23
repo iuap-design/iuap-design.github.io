@@ -13,6 +13,7 @@ http://design.yyuap.com/static/uui/latest/js/u-polyfill.js
 也可以添加一些第三方的 `JavaScript` 类库来处理 `iuap-design` 对Internet Explorer 8的支持，比如在项目中添加以下类库：
 
 - The HTML5 shiv
+
 ```
 <!DOCTYPE html>
 <html>
@@ -46,7 +47,3 @@ https://github.com/chuckcarpenter/REM-unit-polyfill
 ```
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 ```
-
-## 移动设备
-
-## 桌面浏览器
