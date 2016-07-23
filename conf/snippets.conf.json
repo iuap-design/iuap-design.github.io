@@ -1,4 +1,10 @@
 [{
+    "name": "快速入门",
+    "sub": [{
+        "name": "kero",
+        "url": "demos/quitstart/kero"
+    }]
+}, {
     "name": "控件",
     "sub": [{
             "name": "消息框",
@@ -42,12 +48,10 @@
         {
             "name": "日期选择器",
             "url": "demos/ui/datetime/date"
-        }, 
-	{
+        }, {
             "name": "参照选择器",
             "url": "demos/ui/refer"
-        },
-        {
+        }, {
             "name": "参照框",
             "url": "demos/ui/refer/refer/his"
         }, {
@@ -95,11 +99,11 @@
         }
     ]
 }, {
-  "name":"辅助",
-  "sub": [{
+    "name": "辅助",
+    "sub": [{
         "name": "宽高",
         "url": "demos/assist/wh"
-    },{
+    }, {
         "name": "对齐方式",
         "url": "demos/assist/align"
     }, {
@@ -109,10 +113,9 @@
         "name": "颜色",
         "url": "demos/assist/color"
     }]
-},{
+}, {
     "name": "表单",
-    "sub": [
-    {
+    "sub": [{
         "name": "基本元素",
         "url": "demos/forms/baseElements"
     }, {
@@ -121,13 +124,13 @@
     }, {
         "name": "material 元素",
         "url": "demos/forms/materialElements"
-    },  {
+    }, {
         "name": "元素校验",
         "url": "demos/forms/validate"
-    },{
+    }, {
         "name": "按钮条",
         "url": "demos/forms/buttonBar"
-    },{
+    }, {
         "name": "浏览态表单",
         "url": "demos/forms/browse"
     }]
@@ -153,7 +156,7 @@
         "sub": [{
             "name": "简单表格",
             "url": "demos/tables/simple"
-        },{
+        }, {
             "name": "简单表格(DT)",
             "url": "demos/tables/simple-dt"
         }, {
@@ -163,45 +166,45 @@
             "name": "分页",
             "url": "demos/tables/pagination"
         }]
-    },{
+    }, {
         "name": "grid控件",
         "sub": [{
-                "name": "基础grid",
-                "url": "demos/grids/base"
-            },{
-                "name": "表头设置",
-                "url": "demos/grids/columnMenu"
-            },{
-                "name": "拖拽",
-                "url": "demos/grids/drag"
-            },{
-                "name": "编辑功能",
-                "url": "demos/grids/edit"
-            },{
-                "name": "表单形式编辑",
-                "url": "demos/grids/editForm"
-            },{
-                "name": "固定列",
-                "url": "demos/grids/fixed"
-            },{
-                "name": "二级表头",
-                "url": "demos/grids/headerLevel"
-            },{
-                "name": "宽度不足自动隐藏数据列",
-                "url": "demos/grids/overWidthHidden"
-            },{
-                "name": "排序",
-                "url": "demos/grids/sort"
-            },{
-                "name": "合计",
-                "url": "demos/grids/sumRow"
-            },{
-                "name": "交换列",
-                "url": "demos/grids/swap"
-            },{
-                "name": "树表",
-                "url": "demos/grids/tree"
-            }]
+            "name": "基础grid",
+            "url": "demos/grids/base"
+        }, {
+            "name": "表头设置",
+            "url": "demos/grids/columnMenu"
+        }, {
+            "name": "拖拽",
+            "url": "demos/grids/drag"
+        }, {
+            "name": "编辑功能",
+            "url": "demos/grids/edit"
+        }, {
+            "name": "表单形式编辑",
+            "url": "demos/grids/editForm"
+        }, {
+            "name": "固定列",
+            "url": "demos/grids/fixed"
+        }, {
+            "name": "二级表头",
+            "url": "demos/grids/headerLevel"
+        }, {
+            "name": "宽度不足自动隐藏数据列",
+            "url": "demos/grids/overWidthHidden"
+        }, {
+            "name": "排序",
+            "url": "demos/grids/sort"
+        }, {
+            "name": "合计",
+            "url": "demos/grids/sumRow"
+        }, {
+            "name": "交换列",
+            "url": "demos/grids/swap"
+        }, {
+            "name": "树表",
+            "url": "demos/grids/tree"
+        }]
     }]
 }, {
     "name": "搜索",
@@ -209,33 +212,33 @@
         "name": "高级搜索",
         "url": "demos/search/advsearch"
     }, {
-            "name": "筛选栏",
-            "url": "demos/search/filterBar"
-        }]
+        "name": "筛选栏",
+        "url": "demos/search/filterBar"
+    }]
 }, {
     "name": "布局",
     "sub": [{
         "name": "卡片式布局",
         "url": "demos/layouts/pageLayout"
-    },{
+    }, {
         "name": "面板",
         "url": "demos/layouts/panel"
-    },{
+    }, {
         "name": "栅格布局",
         "url": "demos/forms/layout/response"
-    },{
+    }, {
         "name": "基本页面框架布局",
         "url": "demos/layouts/frame"
-    },{
+    }, {
         "name": "悬浮页面框架布局",
         "url": "demos/layouts/iconFrame"
-    },{
+    }, {
         "name": "可伸缩菜单布局",
         "url": "demos/layouts/menuNavLayout"
-    },{
+    }, {
         "name": "顶部菜单布局",
         "url": "demos/layouts/topNavLayout"
-    },{
+    }, {
         "name": "导航栏",
         "url": "demos/layouts/navbar"
     }]
