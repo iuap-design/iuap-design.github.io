@@ -1,19 +1,12 @@
-* 基本开发
-  * [CSS样式](css.md)
-  * [典型页面](page.md)
-  * [浏览器兼容性](browser.md)
-  * [版本更新](version.md)
-* 项目开发
-  * [开发目录结构](dir.md)
-  * [JS插件库](js.md)
-  * [Kero](kero.md)
-  * [主题 Theme](theme.md)
+* 快速入门
+  * [基础开发](quitstart-ui.md)
+  * [kero数据模型开发](quitstart-kero.md)
 * 基础架构
+  * [项目脚手架](scaffold.md)
   * [CSS开发规范](specification-css.md)
   * [JS开发规范](specification-js.md)
-  * [项目脚手架](scaffold.md)
   * [开发工具](tools.md)
+  * [浏览器兼容性](browser.md)
   * [性能优化](performance.md)
 * 交流和反馈
   * [BUG或Feature反馈](feedback.md)
-  * [常见问题](faq.md)

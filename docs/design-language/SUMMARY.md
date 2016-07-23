@@ -13,4 +13,3 @@
  * [导航 Navigation](navigation.md)
  * [表单 Form](Form.md)
  * [表格 Table](Table.md)
-* 设计资源

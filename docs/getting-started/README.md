@@ -1,6 +1,6 @@
-# 关于 `iUAP Design` 的介绍
+# 关于 `iuap design` 的介绍
 
-![iUAP Design 前端集成解决方案](http://design.yyuap.com/dist/static/img/all/design.png)
+![iuap design 前端集成解决方案](http://design.yyuap.com/dist/static/img/all/design.png)
 
 # 获取iuap-design
 
@@ -37,31 +37,6 @@ npm install iuap-design
 - 使用bower下载
 
 暂未发布，敬请期待...
-
-# 开发文档
-
-## 概述
-
-为了给开发者提供良好的开发体验，我们在开发文档上投入了大量的工作。
-
-文档全部采用markdown格式编写，使用gitbook及其相应的插件完成编译输出。
-
-## 开发文档资源
-
-- [iuap-design docs on github](https://github.com/iuap-design/iuap-design.github.io/tree/master/docs)
-  <!-- - [iuap-design detail develop docs](http://design.yyuap.com/) -->
-
-## 设计语言文档
-
-`iUAP Design` 提供清晰、易用、高效、一致的用户体验。
-
-`iUAP Design` 注重产品逻辑交互的清晰，关注高效率的可用性、易用性 、 一致性，并提供悦目的审美展示。
-
-[查看iUAP Design设计语言详细说明](http://design.yyuap.com/dist/pages/design-language/iuapdesign.html)
-
-## 组件库文档
-
-iuap-design框架将提供40+个控件和30+个插件，[查看详细开发文档](http://design.yyuap.com/dist/pages/components/index.html)。
 
 # 目录及文件说明
 
@@ -104,66 +79,34 @@ iuap-design框架将提供40+个控件和30+个插件，[查看详细开发文�
     └── u.min.js         // 核心插件集 - 压缩
 ```
 
-# 快速创建一个页面
+# 开发文档
 
-```
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1">
-  <title>iUAP Design Demo</title>
+## 概述
 
-  <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-siteapp"/>
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="iUAP Design"/>
+为了给开发者提供良好的开发体验，我们在开发文档上投入了大量的工作。
 
-  <!-- 整体样式u.css,必须引入 -->
-  <link rel="stylesheet" href="http://design.yyuap.com/static/iuap-design/3.0.1/css/u.css">
-  
-  <!-- 可选：使用字体图标，加载font-awesomecss -->
-  <link rel="stylesheet" type="text/css" href="http://design.yyuap.com/static/uui/latest/css/font-awesome.css">
-  
-  <!-- 可选：使用grid图表相关插件，加载grid.css -->
-  <link rel="stylesheet" type="text/css" href="http://design.yyuap.com/static/uui/latest/css/grid.css">
-  
-  <!-- 可选：使用tree相关插件，加载tree.css -->
-  <link rel="stylesheet" type="text/css" href="http://design.yyuap.com/static/uui/latest/css/tree.css">
+文档全部采用markdown格式编写，使用gitbook及其相应的插件完成编译输出。
 
-</head>
-<body>
-  <h1> Hi, iUAP Design </h1>
+## 开发文档资源
 
-  <!-- 你的代码 -->
+- [iuap-design docs on github](https://github.com/iuap-design/iuap-design.github.io/tree/master/docs)
+  <!-- - [iuap-design detail develop docs](http://design.yyuap.com/) -->
 
-  <!-- 依赖jQuery,必须在核心js加载前引入 -->
-  <script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+## 设计语言文档
 
-  <!--[if lte IE 8 ]>
-  <!-- 针对ie8,性能检测及Polyfill -->
-  <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-  <script src="http://design.yyuap.com/static/uui/latest/js/u-polyfill.js"></script>
-  <![endif]-->
+`iuap design` 提供清晰、易用、高效、一致的用户体验。
 
-  <!-- 核心js 必须引入 -->
-  <script src="http://design.yyuap.com/static/uui/latest/js/u.js"></script>
+`iuap design` 注重产品逻辑交互的清晰，关注高效率的可用性、易用性 、 一致性，并提供悦目的审美展示。
 
-  <!-- 可选：使用grid图表相关插件，加载u-grid.js -->
-  <script src="http://design.yyuap.com/static/uui/latest/js/u-grid.js"></script>
+[查看iuap design设计语言详细说明](http://design.yyuap.com/dist/pages/design-language/iuapdesign.html)
 
-  <!-- 可选：使用tree相关插件，加载u-tree.js -->
-  <script src="http://design.yyuap.com/static/uui/latest/js/u-tree.js"></script>
+## neoui文档
 
-</body>
-</html>
-```
+iuap-design框架将提供40+个控件和30+个插件，[查看详细开发文档](http://design.yyuap.com/dist/pages/neoui/index.html)。
+
+## kero文档
+
+Kero实现数据和UI的双向绑定，帮助开发者快速构建数据驱动型应用，解决复杂数据交互问题，[查看详细开发文档](http://design.yyuap.com/dist/pages/kero/overview.html)。
 
 # 版本说明
 
