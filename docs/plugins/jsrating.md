@@ -6,7 +6,7 @@
 
 首先依赖于 http://design.yyuap.com/static/uui/latest/js/u.js
 
-再引入js: http://design.yyuap.com/static/raty/raty.js
+再引入js: http://design.yyuap.com/static/raty/rating.js
 
 
 # 用法
