@@ -12,14 +12,14 @@
   * [树插件](tree.md)
   * 弹框增删
   * 查询
-* Adapter UI插件说明
+* Adapter
   * adapter概述
   * [adapter文档](module.md)
-* API 文档
+* API文档
   * API概述
   * [u.DataTable](udatatable.md)
   * [u.Row](row.md)
   * [Kero 工具库](core.md)
-* Refrence 相关资料
+* Refrence相关资料
   * [设计模式](arch.md)
   * [knockout](knockout.md)
