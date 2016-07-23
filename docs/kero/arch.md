@@ -2,7 +2,7 @@
 
 设计模式常见的有MVC，MVP，MVVM。有关他们的介绍，引用阮一峰的[MVC，MVP 和 MVVM 的图示](http://www.ruanyifeng.com/blog/2015/02/mvcmvp_mvvm.html)：
 
-### MVC
+## MVC
 
 MVC模式的意思是，软件可以分成三个部分。
 
@@ -22,7 +22,7 @@ MVC模式的意思是，软件可以分成三个部分。
 
 所有通信都是单向的。
 
-### 互动模式
+## 互动模式
 
 接受用户指令时，MVC 可以分成两种方式。一种是通过 View 接受指令，传递给 Controller。
 
@@ -32,7 +32,7 @@ MVC模式的意思是，软件可以分成三个部分。
 
 ![img](http://image.beekka.com/blog/2015/bg2015020107.png)
 
-### 实例：Backbone
+## 实例：Backbone
 
 实际项目往往采用更灵活的方式，以 [Backbone.js](http://documentcloud.github.com/backbone) 为例。
 
@@ -44,7 +44,7 @@ MVC模式的意思是，软件可以分成三个部分。
 
 \3. Controller 非常薄，只起到路由的作用，而 View 非常厚，业务逻辑都部署在 View。所以，Backbone 索性取消了 Controller，只保留一个 Router（路由器） 。
 
-### MVP
+## MVP
 
 MVP 模式将 Controller 改名为 Presenter，同时改变了通信方向。
 
@@ -56,7 +56,7 @@ MVP 模式将 Controller 改名为 Presenter，同时改变了通信方向。
 
 \3. View 非常薄，不部署任何业务逻辑，称为"被动视图"（Passive View），即没有任何主动性，而 Presenter非常厚，所有逻辑都部署在那里。
 
-### MVVM
+## MVVM
 
 MVVM 模式将 Presenter 改名为 ViewModel，基本上与 MVP 模式完全一致。
 
@@ -64,6 +64,6 @@ MVVM 模式将 Presenter 改名为 ViewModel，基本上与 MVP 模式完全一�
 
 唯一的区别是，它采用双向绑定（data-binding）：View的变动，自动反映在 ViewModel，反之亦然。[Angular](https://angularjs.org/) 和 [Ember](http://emberjs.com/) 都采用这种模式。
 
-参考链接
+## 参考链接
 
 [MVC，MVP 和 MVVM 的图示](http://www.ruanyifeng.com/blog/2015/02/mvcmvp_mvvm.html)
