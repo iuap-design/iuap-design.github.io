@@ -15,8 +15,9 @@
   * [年份选择](ex_year.md)
   * [年月选择](ex_yearmonth.md)
   * [时间选择](ex_time.md)
-  * [下拉选择](combobox_ex.md)
   * [金额转换](currency_ex.md)
+  * [下拉列表](combobox_ex.md)
+  * [复选框](ex_checkbox.md)
 * 典型场景开发
   * [表格插件基础应用](grid.md)
   * [表格校验](gridValidate.md)
