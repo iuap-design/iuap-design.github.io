@@ -4,8 +4,9 @@
 
 # 插件依赖
 
-首先依赖于 http://design.yyuap.com/static/uui/latest/js/u.js
+依赖于 http://design.yyuap.com/static/uui/latest/js/u-date.js
 
+如果引入u.js就不必再引入u-date.js
 
 再引入js: http://design.yyuap.com/static/uui/latest/js/u-date.js
 
@@ -37,16 +38,16 @@ js会根据`u-clockpicker`来定位dom，然后绑定事件。
 	    <input class="u-input" type="text">
 	</div>
 </div></div>
-<div class="examples-code"><pre><code>.example .u-input{
-	border: 1px solid rgba(0,0,0, 0.12);
-	width: 250px;
-}</code></pre>
-</div>
 <div class="examples-code"><pre><code>&lt;div class="example">
 	&lt;div class='u-clockpicker'>
 	    &lt;input class="u-input" type="text">
 	&lt;/div>
 &lt;/div></code></pre>
+</div>
+<div class="examples-code"><pre><code>.example .u-input{
+	border: 1px solid rgba(0,0,0, 0.12);
+	width: 250px;
+}</code></pre>
 </div>
 
 
