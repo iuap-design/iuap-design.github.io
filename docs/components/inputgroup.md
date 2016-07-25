@@ -11,105 +11,7 @@
 
 
 
-<div class="example-content ex-hide"><style>.example-content .u-button-group{
-	margin: 5px;
-}
-</style></div>
-<div class="example-content"><!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Title</title>
-<link rel="stylesheet" href="http://iuap.yonyou.com/fe/vendor/font-awesome/css/font-awesome.css">
-<link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/u.css">
-<link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/u-extend.css">
-<link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/tree.css">
-<link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/grid.css">
-<link rel="stylesheet" type="text/css" href="widget.css">
-</head>
-<body>
-<div class="u-input-group u-input-group-lg">
-  <span class="u-input-group-addon">@</span>
-  <input type="text" class="u-form-control" placeholder="Username">
-</div>
-<div class="u-input-group">
-  <span class="u-input-group-addon">@</span>
-  <input type="text" class="u-form-control" placeholder="Username">
-</div>
-<div class="u-input-group u-input-group-sm">
-  <span class="u-input-group-addon">@</span>
-  <input type="text" class="u-form-control" placeholder="Username">
-</div>
-<script src="http://iuap.yonyou.com/fe/vendor/jquery/jquery-1.11.2.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/knockout/knockout-3.2.0.debug.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-polyfill.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/uui/js/u.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-tree.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-grid.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/requirejs/require.debug.js"></script>
-<script src="widget.js"></script>
-</body>
-</html></div>
-<div class="examples-code"><pre><code>.example-content .u-button-group{
-	margin: 5px;
-}</code></pre>
-</div>
-<div class="examples-code"><pre><code>&lt;!DOCTYPE html>
-&lt;html lang="en">
-&lt;head>
-&lt;meta charset="UTF-8">
-&lt;meta name="viewport" content="width=device-width, initial-scale=1">
-&lt;title>Title&lt;/title>
-&lt;link rel="stylesheet" href="http://iuap.yonyou.com/fe/vendor/font-awesome/css/font-awesome.css">
-&lt;link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/u.css">
-&lt;link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/u-extend.css">
-&lt;link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/tree.css">
-&lt;link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/grid.css">
-&lt;link rel="stylesheet" type="text/css" href="widget.css">
-&lt;/head>
-&lt;body>
-&lt;div class="u-input-group u-input-group-lg">
-  &lt;span class="u-input-group-addon">@&lt;/span>
-  &lt;input type="text" class="u-form-control" placeholder="Username">
-&lt;/div>
-&lt;div class="u-input-group">
-  &lt;span class="u-input-group-addon">@&lt;/span>
-  &lt;input type="text" class="u-form-control" placeholder="Username">
-&lt;/div>
-&lt;div class="u-input-group u-input-group-sm">
-  &lt;span class="u-input-group-addon">@&lt;/span>
-  &lt;input type="text" class="u-form-control" placeholder="Username">
-&lt;/div>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/jquery/jquery-1.11.2.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/knockout/knockout-3.2.0.debug.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-polyfill.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/uui/js/u.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-tree.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-grid.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/requirejs/require.debug.js">&lt;/script>
-&lt;script src="widget.js">&lt;/script>
-&lt;/body>
-&lt;/html></code></pre>
-</div>
-
-
-
-<div class="example-content"><!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Title</title>
-<link rel="stylesheet" href="http://iuap.yonyou.com/fe/vendor/font-awesome/css/font-awesome.css">
-<link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/u.css">
-<link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/u-extend.css">
-<link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/tree.css">
-<link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/grid.css">
-<link rel="stylesheet" type="text/css" href="widget.css">
-</head>
-<body>
-<div class="u-input-group">
+<div class="example-content"><div class="u-input-group">
   <span class="u-input-group-addon">@</span>
   <input type="text" class="u-form-control" placeholder="Username">
 </div>
@@ -122,32 +24,8 @@
   <input type="text" class="u-form-control" placeholder="Username">
   <span class="u-input-group-addon">.00</span>
 </div>
-
-<script src="http://iuap.yonyou.com/fe/vendor/jquery/jquery-1.11.2.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/knockout/knockout-3.2.0.debug.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-polyfill.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/uui/js/u.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-tree.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-grid.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/requirejs/require.debug.js"></script>
-<script src="widget.js"></script>
-</body>
-</html></div>
-<div class="examples-code"><pre><code>&lt;!DOCTYPE html>
-&lt;html lang="en">
-&lt;head>
-&lt;meta charset="UTF-8">
-&lt;meta name="viewport" content="width=device-width, initial-scale=1">
-&lt;title>Title&lt;/title>
-&lt;link rel="stylesheet" href="http://iuap.yonyou.com/fe/vendor/font-awesome/css/font-awesome.css">
-&lt;link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/u.css">
-&lt;link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/u-extend.css">
-&lt;link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/tree.css">
-&lt;link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/grid.css">
-&lt;link rel="stylesheet" type="text/css" href="widget.css">
-&lt;/head>
-&lt;body>
-&lt;div class="u-input-group">
+</div>
+<div class="examples-code"><pre><code>&lt;div class="u-input-group">
   &lt;span class="u-input-group-addon">@&lt;/span>
   &lt;input type="text" class="u-form-control" placeholder="Username">
 &lt;/div>
@@ -160,124 +38,14 @@
   &lt;input type="text" class="u-form-control" placeholder="Username">
   &lt;span class="u-input-group-addon">.00&lt;/span>
 &lt;/div>
-
-&lt;script src="http://iuap.yonyou.com/fe/vendor/jquery/jquery-1.11.2.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/knockout/knockout-3.2.0.debug.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-polyfill.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/uui/js/u.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-tree.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-grid.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/requirejs/require.debug.js">&lt;/script>
-&lt;script src="widget.js">&lt;/script>
-&lt;/body>
-&lt;/html></code></pre>
+</code></pre>
 </div>
 
 
 
-<div class="example-content"><!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Title</title>
-<link rel="stylesheet" href="http://iuap.yonyou.com/fe/vendor/font-awesome/css/font-awesome.css">
-<link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/u.css">
-<link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/u-extend.css">
-<link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/tree.css">
-<link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/grid.css">
-<link rel="stylesheet" type="text/css" href="widget.css">
-</head>
-<body>
-<div class="u-input-group">
-  <span class="u-input-group-addon">
-    <label  class="u-checkbox">
-        <input type="checkbox" class="u-checkbox-input" checked>
-    </label>
-  </span>
-  <input type="text" class="u-form-control">
-</div>
-<div class="u-input-group">
-  <span class="u-input-group-addon">
-    <label  class="u-radio">
-        <input type="radio" class="u-radio-button" checked>
-    </label>
-  </span>
-  <input type="text" class="u-form-control">
-</div>
-
-<script src="http://iuap.yonyou.com/fe/vendor/jquery/jquery-1.11.2.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/knockout/knockout-3.2.0.debug.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-polyfill.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/uui/js/u.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-tree.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-grid.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/requirejs/require.debug.js"></script>
-<script src="widget.js"></script>
-</body>
-</html></div>
-<div class="examples-code"><pre><code>&lt;!DOCTYPE html>
-&lt;html lang="en">
-&lt;head>
-&lt;meta charset="UTF-8">
-&lt;meta name="viewport" content="width=device-width, initial-scale=1">
-&lt;title>Title&lt;/title>
-&lt;link rel="stylesheet" href="http://iuap.yonyou.com/fe/vendor/font-awesome/css/font-awesome.css">
-&lt;link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/u.css">
-&lt;link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/u-extend.css">
-&lt;link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/tree.css">
-&lt;link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/grid.css">
-&lt;link rel="stylesheet" type="text/css" href="widget.css">
-&lt;/head>
-&lt;body>
-&lt;div class="u-input-group">
-  &lt;span class="u-input-group-addon">
-    &lt;label  class="u-checkbox">
-        &lt;input type="checkbox" class="u-checkbox-input" checked>
-    &lt;/label>
-  &lt;/span>
-  &lt;input type="text" class="u-form-control">
-&lt;/div>
-&lt;div class="u-input-group">
-  &lt;span class="u-input-group-addon">
-    &lt;label  class="u-radio">
-        &lt;input type="radio" class="u-radio-button" checked>
-    &lt;/label>
-  &lt;/span>
-  &lt;input type="text" class="u-form-control">
-&lt;/div>
-
-&lt;script src="http://iuap.yonyou.com/fe/vendor/jquery/jquery-1.11.2.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/knockout/knockout-3.2.0.debug.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-polyfill.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/uui/js/u.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-tree.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-grid.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/requirejs/require.debug.js">&lt;/script>
-&lt;script src="widget.js">&lt;/script>
-&lt;/body>
-&lt;/html></code></pre>
-</div>
-
-
-
-<div class="example-content"><!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Title</title>
-<link rel="stylesheet" href="http://iuap.yonyou.com/fe/vendor/font-awesome/css/font-awesome.css">
-<link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/u.css">
-<link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/u-extend.css">
-<link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/tree.css">
-<link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/grid.css">
-<link rel="stylesheet" type="text/css" href="widget.css">
-</head>
-<body>
-<div class="u-input-group">
+<div class="example-content"><div class="u-input-group">
     <div class="u-input-group-btn">
-   		 <button class="u-button  u-button-default" id="demo-menu">
+   		<button class="u-button  u-button-default" id="demo-menu">
             success
             <span class="u-right-icon uf uf-anglearrowdown"></span>
         </button>
@@ -293,7 +61,7 @@
 <div class="u-input-group">
 	<input type="text" class="u-form-control">
     <div class="u-input-group-btn">
-   		 <button class="u-button  u-button-u-button-default" id="demo-menu-sucess">
+   		<button class="u-button  u-button-u-button-default" id="demo-menu-sucess">
             success
             <span class="u-right-icon uf uf-anglearrowdown"></span>
         </button>
@@ -304,36 +72,10 @@
             <li class="u-menu-item"><a href="javascript:void(0)">action three</a></li>
         </ul>
     </div>
-    
-</div
-
-<script src="http://iuap.yonyou.com/fe/vendor/jquery/jquery-1.11.2.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/knockout/knockout-3.2.0.debug.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-polyfill.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/uui/js/u.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-tree.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-grid.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/requirejs/require.debug.js"></script>
-<script src="widget.js"></script>
-</body>
-</html></div>
-<div class="examples-code"><pre><code>&lt;!DOCTYPE html>
-&lt;html lang="en">
-&lt;head>
-&lt;meta charset="UTF-8">
-&lt;meta name="viewport" content="width=device-width, initial-scale=1">
-&lt;title>Title&lt;/title>
-&lt;link rel="stylesheet" href="http://iuap.yonyou.com/fe/vendor/font-awesome/css/font-awesome.css">
-&lt;link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/u.css">
-&lt;link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/u-extend.css">
-&lt;link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/tree.css">
-&lt;link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/grid.css">
-&lt;link rel="stylesheet" type="text/css" href="widget.css">
-&lt;/head>
-&lt;body>
-&lt;div class="u-input-group">
+</div</div>
+<div class="examples-code"><pre><code>&lt;div class="u-input-group">
     &lt;div class="u-input-group-btn">
-   		 &lt;button class="u-button  u-button-default" id="demo-menu">
+   		&lt;button class="u-button  u-button-default" id="demo-menu">
             success
             &lt;span class="u-right-icon uf uf-anglearrowdown">&lt;/span>
         &lt;/button>
@@ -349,7 +91,7 @@
 &lt;div class="u-input-group">
 	&lt;input type="text" class="u-form-control">
     &lt;div class="u-input-group-btn">
-   		 &lt;button class="u-button  u-button-u-button-default" id="demo-menu-sucess">
+   		&lt;button class="u-button  u-button-u-button-default" id="demo-menu-sucess">
             success
             &lt;span class="u-right-icon uf uf-anglearrowdown">&lt;/span>
         &lt;/button>
@@ -360,38 +102,84 @@
             &lt;li class="u-menu-item">&lt;a href="javascript:void(0)">action three&lt;/a>&lt;/li>
         &lt;/ul>
     &lt;/div>
-    
-&lt;/div
-
-&lt;script src="http://iuap.yonyou.com/fe/vendor/jquery/jquery-1.11.2.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/knockout/knockout-3.2.0.debug.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-polyfill.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/uui/js/u.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-tree.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-grid.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/requirejs/require.debug.js">&lt;/script>
-&lt;script src="widget.js">&lt;/script>
-&lt;/body>
-&lt;/html></code></pre>
+&lt;/div</code></pre>
 </div>
 
 
 
-<div class="example-content"><!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Title</title>
-<link rel="stylesheet" href="http://iuap.yonyou.com/fe/vendor/font-awesome/css/font-awesome.css">
-<link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/u.css">
-<link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/u-extend.css">
-<link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/tree.css">
-<link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/grid.css">
-<link rel="stylesheet" type="text/css" href="widget.css">
-</head>
-<body>
+<div class="example-content"><div class="u-input-group">
+  <span class="u-input-group-addon">
+    <label  class="u-checkbox">
+        <input type="checkbox" class="u-checkbox-input" checked>
+    </label>
+  </span>
+  <input type="text" class="u-form-control">
+</div>
 <div class="u-input-group">
+  <span class="u-input-group-addon">
+    <label  class="u-radio">
+        <input type="radio" class="u-radio-button" checked>
+    </label>
+  </span>
+  <input type="text" class="u-form-control">
+</div></div>
+<div class="examples-code"><pre><code>&lt;div class="u-input-group">
+  &lt;span class="u-input-group-addon">
+    &lt;label  class="u-checkbox">
+        &lt;input type="checkbox" class="u-checkbox-input" checked>
+    &lt;/label>
+  &lt;/span>
+  &lt;input type="text" class="u-form-control">
+&lt;/div>
+&lt;div class="u-input-group">
+  &lt;span class="u-input-group-addon">
+    &lt;label  class="u-radio">
+        &lt;input type="radio" class="u-radio-button" checked>
+    &lt;/label>
+  &lt;/span>
+  &lt;input type="text" class="u-form-control">
+&lt;/div></code></pre>
+</div>
+
+
+
+<div class="example-content ex-hide"><style>.example-content .u-button-group{
+	margin: 5px;
+}
+</style></div>
+<div class="example-content"><div class="u-input-group u-input-group-lg">
+  <span class="u-input-group-addon">@</span>
+  <input type="text" class="u-form-control" placeholder="Username">
+</div>
+<div class="u-input-group">
+  <span class="u-input-group-addon">@</span>
+  <input type="text" class="u-form-control" placeholder="Username">
+</div>
+<div class="u-input-group u-input-group-sm">
+  <span class="u-input-group-addon">@</span>
+  <input type="text" class="u-form-control" placeholder="Username">
+</div></div>
+<div class="examples-code"><pre><code>.example-content .u-button-group{
+	margin: 5px;
+}</code></pre>
+</div>
+<div class="examples-code"><pre><code>&lt;div class="u-input-group u-input-group-lg">
+  &lt;span class="u-input-group-addon">@&lt;/span>
+  &lt;input type="text" class="u-form-control" placeholder="Username">
+&lt;/div>
+&lt;div class="u-input-group">
+  &lt;span class="u-input-group-addon">@&lt;/span>
+  &lt;input type="text" class="u-form-control" placeholder="Username">
+&lt;/div>
+&lt;div class="u-input-group u-input-group-sm">
+  &lt;span class="u-input-group-addon">@&lt;/span>
+  &lt;input type="text" class="u-form-control" placeholder="Username">
+&lt;/div></code></pre>
+</div>
+
+
+
+<div class="example-content"><div class="u-input-group">
     <div class="u-input-group-btn">
     	<button class="u-button  u-button-default">
             success
@@ -411,7 +199,7 @@
 <div class="u-input-group">
 	<input type="text" class="u-form-control">
     <div class="u-input-group-btn">
-   		 <button class="u-button  u-button-default">
+   		<button class="u-button  u-button-default">
             info
         </button>
    		 <button class="u-button  u-button-default" id="demo-menu-info">
@@ -424,34 +212,8 @@
             <li class="u-menu-item"><a href="javascript:void(0)">action three</a></li>
         </ul>
     </div>
-    
-</div
-
-<script src="http://iuap.yonyou.com/fe/vendor/jquery/jquery-1.11.2.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/knockout/knockout-3.2.0.debug.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-polyfill.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/uui/js/u.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-tree.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-grid.js"></script>
-<script src="http://iuap.yonyou.com/fe/vendor/requirejs/require.debug.js"></script>
-<script src="widget.js"></script>
-</body>
-</html></div>
-<div class="examples-code"><pre><code>&lt;!DOCTYPE html>
-&lt;html lang="en">
-&lt;head>
-&lt;meta charset="UTF-8">
-&lt;meta name="viewport" content="width=device-width, initial-scale=1">
-&lt;title>Title&lt;/title>
-&lt;link rel="stylesheet" href="http://iuap.yonyou.com/fe/vendor/font-awesome/css/font-awesome.css">
-&lt;link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/u.css">
-&lt;link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/u-extend.css">
-&lt;link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/tree.css">
-&lt;link rel="stylesheet" type="text/css" href="http://iuap.yonyou.com/fe/vendor/uui/css/grid.css">
-&lt;link rel="stylesheet" type="text/css" href="widget.css">
-&lt;/head>
-&lt;body>
-&lt;div class="u-input-group">
+</div></div>
+<div class="examples-code"><pre><code>&lt;div class="u-input-group">
     &lt;div class="u-input-group-btn">
     	&lt;button class="u-button  u-button-default">
             success
@@ -471,7 +233,7 @@
 &lt;div class="u-input-group">
 	&lt;input type="text" class="u-form-control">
     &lt;div class="u-input-group-btn">
-   		 &lt;button class="u-button  u-button-default">
+   		&lt;button class="u-button  u-button-default">
             info
         &lt;/button>
    		 &lt;button class="u-button  u-button-default" id="demo-menu-info">
@@ -484,17 +246,5 @@
             &lt;li class="u-menu-item">&lt;a href="javascript:void(0)">action three&lt;/a>&lt;/li>
         &lt;/ul>
     &lt;/div>
-    
-&lt;/div
-
-&lt;script src="http://iuap.yonyou.com/fe/vendor/jquery/jquery-1.11.2.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/knockout/knockout-3.2.0.debug.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-polyfill.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/uui/js/u.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-tree.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/uui/js/u-grid.js">&lt;/script>
-&lt;script src="http://iuap.yonyou.com/fe/vendor/requirejs/require.debug.js">&lt;/script>
-&lt;script src="widget.js">&lt;/script>
-&lt;/body>
-&lt;/html></code></pre>
+&lt;/div></code></pre>
 </div>

@@ -22,7 +22,7 @@ var viewModel = {
 }
 
 viewModel.dataTable1.on('select', function(e) {
-	var costId = obj.rowObj.value.costId;
+	var costId = viewModel.dataTable1.getRowByRowId(e.rowIds[0]).getValue('costId')
 	
 // 正常情况请用下面的代码	
 //	app.serverEvent().addDataTable("dataTable2", "all").fire({
@@ -216,5 +216,4 @@ var data = {
 
 viewModel.dataTable1.setData(data.dataTables.dataTable1);
 
-
-})
+viewModel.dataTable1.setRowSelect(0);
