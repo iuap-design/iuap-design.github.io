@@ -9,3 +9,4 @@
 * [按钮组 buttongroup](buttongroup.md)
 * [输入框组 inputgroup](inputgroup.md)
 * [导航条 navbar](navbar.md)
+* [缩略图 thumbnail](thumbnail.md)
