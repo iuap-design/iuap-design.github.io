@@ -1,6 +1,6 @@
 * [获取 Kero](install.md)
 * [概述](overview.md)
-* [起步](getting-started.md)
+* [起步](gettingstarted.md)
 * 数据模型
   * [基础说明](datatable.md)
   * [基本设置](dataTableUse.md)
