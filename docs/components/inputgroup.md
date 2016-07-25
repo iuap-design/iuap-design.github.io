@@ -9,8 +9,8 @@
 # 示例
 
 
-## 基础按钮组
-类`u-group-button`包裹类`u-button`的button
+
+
 <div class="example-content"><div class="u-input-group">
   <span class="u-input-group-addon">@</span>
   <input type="text" class="u-form-control" placeholder="Username">
@@ -42,44 +42,7 @@
 </div>
 
 
-<div class="example-content"><div class="u-input-group">
-  <span class="u-input-group-addon">
-    <label  class="u-checkbox">
-        <input type="checkbox" class="u-checkbox-input" checked>
-    </label>
-  </span>
-  <input type="text" class="u-form-control">
-</div>
-<div class="u-input-group">
-  <span class="u-input-group-addon">
-    <label  class="u-radio">
-        <input type="radio" class="u-radio-button" checked>
-    </label>
-  </span>
-  <input type="text" class="u-form-control">
-</div>
-</div>
-<div class="examples-code"><pre><code>&lt;div class="u-input-group">
-  &lt;span class="u-input-group-addon">
-    &lt;label  class="u-checkbox">
-        &lt;input type="checkbox" class="u-checkbox-input" checked>
-    &lt;/label>
-  &lt;/span>
-  &lt;input type="text" class="u-form-control">
-&lt;/div>
-&lt;div class="u-input-group">
-  &lt;span class="u-input-group-addon">
-    &lt;label  class="u-radio">
-        &lt;input type="radio" class="u-radio-button" checked>
-    &lt;/label>
-  &lt;/span>
-  &lt;input type="text" class="u-form-control">
-&lt;/div>
-</code></pre>
-</div>
 
-## 尺寸
-`u-input-group`后添加尺寸类`u-input-group-lg`,'u-input-group-sm',不添加是默认尺寸
 <div class="example-content ex-hide"><style>.example-content .u-button-group{
 	margin: 5px;
 }
@@ -114,11 +77,47 @@
 &lt;/div></code></pre>
 </div>
 
-## 基础按钮组
-在 `u-button` 后添加`default`,`primary`,`u-button-danger`,`u-button-warning`,`u-button-info`,`u-button-success` ,来改变button背景
+
+
+<div class="example-content"><div class="u-input-group">
+  <span class="u-input-group-addon">
+    <label  class="u-checkbox">
+        <input type="checkbox" class="u-checkbox-input" checked>
+    </label>
+  </span>
+  <input type="text" class="u-form-control">
+</div>
+<div class="u-input-group">
+  <span class="u-input-group-addon">
+    <label  class="u-radio">
+        <input type="radio" class="u-radio-button" checked>
+    </label>
+  </span>
+  <input type="text" class="u-form-control">
+</div></div>
+<div class="examples-code"><pre><code>&lt;div class="u-input-group">
+  &lt;span class="u-input-group-addon">
+    &lt;label  class="u-checkbox">
+        &lt;input type="checkbox" class="u-checkbox-input" checked>
+    &lt;/label>
+  &lt;/span>
+  &lt;input type="text" class="u-form-control">
+&lt;/div>
+&lt;div class="u-input-group">
+  &lt;span class="u-input-group-addon">
+    &lt;label  class="u-radio">
+        &lt;input type="radio" class="u-radio-button" checked>
+    &lt;/label>
+  &lt;/span>
+  &lt;input type="text" class="u-form-control">
+&lt;/div></code></pre>
+</div>
+
+
+
 <div class="example-content"><div class="u-input-group">
     <div class="u-input-group-btn">
-   		 <button class="u-button  u-button-default" id="demo-menu">
+   		<button class="u-button  u-button-default" id="demo-menu">
             success
             <span class="u-right-icon uf uf-anglearrowdown"></span>
         </button>
@@ -130,11 +129,11 @@
         </ul>
     </div>
     <input type="text" class="u-form-control">
-</div
+</div>
 <div class="u-input-group">
 	<input type="text" class="u-form-control">
     <div class="u-input-group-btn">
-   		 <button class="u-button  u-button-u-button-default" id="demo-menu-sucess">
+   		<button class="u-button  u-button-u-button-default" id="demo-menu-sucess">
             success
             <span class="u-right-icon uf uf-anglearrowdown"></span>
         </button>
@@ -145,12 +144,10 @@
             <li class="u-menu-item"><a href="javascript:void(0)">action three</a></li>
         </ul>
     </div>
-    
-</div
-</div>
+</div></div>
 <div class="examples-code"><pre><code>&lt;div class="u-input-group">
     &lt;div class="u-input-group-btn">
-   		 &lt;button class="u-button  u-button-default" id="demo-menu">
+   		&lt;button class="u-button  u-button-default" id="demo-menu">
             success
             &lt;span class="u-right-icon uf uf-anglearrowdown">&lt;/span>
         &lt;/button>
@@ -162,11 +159,11 @@
         &lt;/ul>
     &lt;/div>
     &lt;input type="text" class="u-form-control">
-&lt;/div
+&lt;/div>
 &lt;div class="u-input-group">
 	&lt;input type="text" class="u-form-control">
     &lt;div class="u-input-group-btn">
-   		 &lt;button class="u-button  u-button-u-button-default" id="demo-menu-sucess">
+   		&lt;button class="u-button  u-button-u-button-default" id="demo-menu-sucess">
             success
             &lt;span class="u-right-icon uf uf-anglearrowdown">&lt;/span>
         &lt;/button>
@@ -177,13 +174,11 @@
             &lt;li class="u-menu-item">&lt;a href="javascript:void(0)">action three&lt;/a>&lt;/li>
         &lt;/ul>
     &lt;/div>
-    
-&lt;/div
-</code></pre>
+&lt;/div></code></pre>
 </div>
 
-## 基础按钮组
-在 `u-button` 后添加`default`,`primary`,`u-button-danger`,`u-button-warning`,`u-button-info`,`u-button-success` ,来改变button背景
+
+
 <div class="example-content"><div class="u-input-group">
     <div class="u-input-group-btn">
     	<button class="u-button  u-button-default">
@@ -200,11 +195,11 @@
         </ul>
     </div>
     <input type="text" class="u-form-control">
-</div
+</div>
 <div class="u-input-group">
 	<input type="text" class="u-form-control">
     <div class="u-input-group-btn">
-   		 <button class="u-button  u-button-default">
+   		<button class="u-button  u-button-default">
             info
         </button>
    		 <button class="u-button  u-button-default" id="demo-menu-info">
@@ -217,9 +212,7 @@
             <li class="u-menu-item"><a href="javascript:void(0)">action three</a></li>
         </ul>
     </div>
-    
-</div
-</div>
+</div></div>
 <div class="examples-code"><pre><code>&lt;div class="u-input-group">
     &lt;div class="u-input-group-btn">
     	&lt;button class="u-button  u-button-default">
@@ -236,11 +229,11 @@
         &lt;/ul>
     &lt;/div>
     &lt;input type="text" class="u-form-control">
-&lt;/div
+&lt;/div>
 &lt;div class="u-input-group">
 	&lt;input type="text" class="u-form-control">
     &lt;div class="u-input-group-btn">
-   		 &lt;button class="u-button  u-button-default">
+   		&lt;button class="u-button  u-button-default">
             info
         &lt;/button>
    		 &lt;button class="u-button  u-button-default" id="demo-menu-info">
@@ -253,9 +246,5 @@
             &lt;li class="u-menu-item">&lt;a href="javascript:void(0)">action three&lt;/a>&lt;/li>
         &lt;/ul>
     &lt;/div>
-    
-&lt;/div
-</code></pre>
+&lt;/div></code></pre>
 </div>
-
-
