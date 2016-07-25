@@ -1,7 +1,7 @@
 
 # 下载文件
 
-进入[iuap design 官网](http://design.yyuap.com/)，点击右下角的“体验下载 iuap design”按钮进行下载。
+进入[iuap design 官网](http://design.yyuap.com/)，点击右下角的“下载体验 iuap design”按钮进行下载。
 
 项目中需要引入的css、js文件可以从下载css、js目录中查找。以下为相关文件说明：
 
@@ -35,7 +35,7 @@
 
 ## 引入css文件
 
-在Header标签内，引入css文件。u.css文件是必要要引入的，其余的css文件可根据具体的需求引入。以cdn方式引入为例：
+在head标签内，引入css文件。u.css文件是必要要引入的，其余的css文件可根据具体的需求引入。以cdn方式引入为例：
 
 
 ```

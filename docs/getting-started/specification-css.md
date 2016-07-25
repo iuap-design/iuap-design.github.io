@@ -215,7 +215,7 @@
     }
 
     /* good */
-    @import url(//www.google.com/css/maia.css);
+    @import url('//www.google.com/css/maia.css');
 
     html {
       font-family: 'open sans', arial, sans-serif;
@@ -241,9 +241,4 @@
 
     .adw-gallery {}
     ```
-
-
-## 样式重置
-
-* 应该使用推荐的 `normalize.css` 进行样式重置。
 

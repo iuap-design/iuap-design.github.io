@@ -90,7 +90,7 @@
   someStack.push('abracadabra');
   ```
 
-- 当你需要拷贝数组时使用slice. [jsPerf](http://jsperf.com/converting-arguments-to-an-array/7)
+- 当你需要拷贝数组时使用slice
 
   ```javascript
   var len = items.length,
@@ -136,7 +136,7 @@
     ```
 
 -   超过80个字符的字符串应该使用字符串连接换行
-    - 注: 如果过度使用，长字符串连接可能会对性能有影响. [jsPerf](http://jsperf.com/ya-string-concat) & [Discussion](https://github.com/airbnb/javascript/issues/40)
+    - 注: 如果过度使用，长字符串连接可能会对性能有影响.
 
     ```javascript
     // bad
@@ -160,7 +160,7 @@
     ```
 
 
-- 编程时使用join而不是字符串连接来构建字符串，特别是IE: [jsPerf](http://jsperf.com/string-vs-array-concat/2).
+- 编程时使用join而不是字符串连接来构建字符串，特别是IE
 
   ```javascript
   var items,
@@ -1110,7 +1110,7 @@
     }
     ```
 
--   对DOM查询使用级联的 `$('.sidebar ul')` 或 `$('.sidebar ul')`，[jsPerf](http://jsperf.com/jquery-find-vs-context-sel/16)
+-   对DOM查询使用级联的 `$('.sidebar ul')` 或 `$('.sidebar ul')`
     - 对有作用域的jQuery对象查询使用 `find`
 
     ```javascript
@@ -1137,7 +1137,7 @@
 
 ## <a name='es5'>ECMAScript 5兼容性</a>
 
-- 参考[Kangax](https://twitter.com/kangax/)的 ES5 [compatibility table](http://kangax.github.com/es5-compat-table/)
+- 参考Kangax的 ES5 [compatibility table](http://kangax.github.com/es5-compat-table/)
 
 
 
