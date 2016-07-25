@@ -18,9 +18,10 @@
   * [下拉选择](combobox_ex.md)
   * [金额转换](currency_ex.md)
 * 典型场景开发
-  * [表格插件基础说明](grid.md)
+  * [表格插件基础应用](grid.md)
   * [表格校验](gridValidate.md)
   * [树插件](tree.md)
+  * [主子表](mainChild.md)
 * Refrence相关资料
   * [设计模式](arch.md)
   * [knockout](knockout.md)
