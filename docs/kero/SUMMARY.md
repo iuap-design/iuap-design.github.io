@@ -1,6 +1,6 @@
 * [获取 Kero](install.md)
 * [概述](overview.md)
-* [起步](getting-started.md)
+* [起步](gettingstarted.md)
 * 数据模型
   * [基础说明](datatable.md)
   * [基本设置](dataTableUse.md)
@@ -11,12 +11,16 @@
   * [基础说明](module.md)
   * [API](moduleapi.md)
 * 基本示例
-  * [表盘选择](clockpicker.md)
   * [年份选择](ex_year.md)
-  * [年月选择](ex_yearmonth.md)
+  * [月份选择](ex_month.md)
   * [时间选择](ex_time.md)
-  * [下拉选择](combobox_ex.md)
+  * [表盘选择](clockpicker.md)
+  * [年月选择](ex_yearmonth.md)
+  * [日期时间选择](ex_datetime.md)
   * [金额转换](currency_ex.md)
+  * [下拉列表](combobox_ex.md)
+  * [复选框](ex_checkbox.md)
+  * [复选框数据](ex_checkboxdata.md)
 * 典型场景开发
   * [表格插件基础应用](grid.md)
   * [表格校验](gridValidate.md)
