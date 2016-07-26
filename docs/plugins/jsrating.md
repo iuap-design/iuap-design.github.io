@@ -1,12 +1,14 @@
-# rating控件
+# raty插件
 
 评级评分
 
 # 插件依赖
 
-首先依赖于 http://design.yyuap.com/static/uui/latest/js/u.js
+http://design.yyuap.com/static/uui/latest/js/u.js
 
-再引入js: http://design.yyuap.com/static/raty/rating.js
+http://design.yyuap.com/static/uui/latest/css/u.css
+
+http://design.yyuap.com/static/raty/rating.js
 
 
 # 用法

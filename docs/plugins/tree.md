@@ -1,10 +1,12 @@
-# tree控件
+# tree插件
 
 多层嵌套节点显示
 
 # 插件依赖
 
-依赖于 http://design.yyuap.com/static/uui/latest/js/u.js
+http://design.yyuap.com/static/uui/latest/js/u.js
+
+http://design.yyuap.com/static/uui/latest/css/u.css
 
 # 用法
 

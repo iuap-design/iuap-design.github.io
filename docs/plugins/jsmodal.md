@@ -1,10 +1,12 @@
-# modal控件
+# modal插件
 
 区分与message,显示更多的信息,且自带确认取消回调。
 
 # 插件依赖
 
-依赖于 http://design.yyuap.com/static/uui/latest/js/u.js
+http://design.yyuap.com/static/uui/latest/js/u.js
+
+http://design.yyuap.com/static/uui/latest/css/u.css
 
 # 用法
 

@@ -1,10 +1,12 @@
-# progress控件
+# progress插件
 
 常用于跟踪进度
 
 # 插件依赖
 
-依赖于 http://design.yyuap.com/static/uui/latest/js/u.js
+http://design.yyuap.com/static/uui/latest/js/u.js
+
+http://design.yyuap.com/static/uui/latest/css/u.css
 
 # 用法
 

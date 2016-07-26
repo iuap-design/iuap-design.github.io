@@ -1,11 +1,13 @@
-# 分页控件
+# 分页插件
 
 分页控件提供了基础分页、无border分页、有间距的分页、多尺寸分页。
 
 
 # 插件依赖
 
-依赖于 http://design.yyuap.com/static/uui/latest/js/u.js
+http://design.yyuap.com/static/uui/latest/js/u.js
+
+http://design.yyuap.com/static/uui/latest/css/u.css
 
 # 用法
 

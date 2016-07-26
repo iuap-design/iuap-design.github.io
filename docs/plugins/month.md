@@ -4,9 +4,9 @@
 
 # 插件依赖
 
-依赖于 http://design.yyuap.com/static/uui/latest/js/u.js
+http://design.yyuap.com/static/uui/latest/js/u.js
 
-除了js文件还需引入u.css。
+http://design.yyuap.com/static/uui/latest/css/u.css
 
 # 用法
 

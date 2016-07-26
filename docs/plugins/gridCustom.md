@@ -1,4 +1,4 @@
-# 表格控件扩展说明
+# 表格插件扩展说明
 
 在使用表格控件过程中会存在需要修改css、调整div布局的情况，本文档针对目前表格控件支持的几类扩展机制进行说明。
 
@@ -15,7 +15,7 @@
 ## afterCreate
 
 表格参数afterCreate对应一个自定义的function，在表格每次渲染完成之后都会调用此方法，可以再此方法中对表格的div布局以及css样式进行调整。
-详见API：
+详见[API](http://design.yyuap.com/dist/pages/plugins/grid.html#aftercreate)
 
 ## 扩展表格方法
 

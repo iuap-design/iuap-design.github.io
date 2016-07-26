@@ -1,16 +1,12 @@
-# 表格控件
+# 表格插件
 
 表格控件将数据以表格的方式进行展示，同时提供了排序、交换列、数字列、复选、合计、自定义渲染、修改等复杂功能，满足了复杂场景下数据展示的需求。
 
 # 插件依赖
 
-http://design.yyuap.com/static/uui/latest/css/font-awesome.css
-
 http://design.yyuap.com/static/uui/latest/css/u.css
 
 http://design.yyuap.com/static/jquery/jquery-1.9.1.min.js
-
-http://design.yyuap.com/static/uui/latest/js/u-polyfill.js
 
 http://design.yyuap.com/static/uui/latest/js/u.js
 

@@ -12,7 +12,7 @@
 * [下拉框 combobox](combobox.md)
 * [提示消息 message](jsmessage.md)
 * [模态框 modal](jsmodal.md)
-* [页签 pagination](jspagination.md)
+* [分页 pagination](jspagination.md)
 * [提示消息 message](jsmessage.md)
 * [页签 tabs](jstabs.md)
 * [即时提示 tooltip](jstooltip.md)
