@@ -43,66 +43,38 @@
 
 
 
-<div class="example-content"><div class="u-input-group">
-    <div class="u-input-group-btn">
-   		<button class="u-button  u-button-default" id="demo-menu">
-            success
-            <span class="u-right-icon uf uf-anglearrowdown"></span>
-        </button>
-        <ul class="u-menu u-menu-default" for="demo-menu">
-            <li class="u-menu-item"><a href="javascript:void(0)">action zero</a></li>
-            <li class="u-menu-item"><a href="javascript:void(0)">action one</a></li>
-            <li class="u-menu-item"><a href="javascript:void(0)">action two</a></li>
-            <li class="u-menu-item"><a href="javascript:void(0)">action three</a></li>
-        </ul>
-    </div>
-    <input type="text" class="u-form-control">
-</div
+<div class="example-content ex-hide"><style>.example-content .u-button-group{
+	margin: 5px;
+}
+</style></div>
+<div class="example-content"><div class="u-input-group u-input-group-lg">
+  <span class="u-input-group-addon">@</span>
+  <input type="text" class="u-form-control" placeholder="Username">
+</div>
 <div class="u-input-group">
-	<input type="text" class="u-form-control">
-    <div class="u-input-group-btn">
-   		<button class="u-button  u-button-u-button-default" id="demo-menu-sucess">
-            success
-            <span class="u-right-icon uf uf-anglearrowdown"></span>
-        </button>
-        <ul class="u-menu u-menu-default" for="demo-menu-sucess">
-            <li class="u-menu-item"><a href="javascript:void(0)">action zero</a></li>
-            <li class="u-menu-item"><a href="javascript:void(0)">action one</a></li>
-            <li class="u-menu-item"><a href="javascript:void(0)">action two</a></li>
-            <li class="u-menu-item"><a href="javascript:void(0)">action three</a></li>
-        </ul>
-    </div>
-</div</div>
-<div class="examples-code"><pre><code>&lt;div class="u-input-group">
-    &lt;div class="u-input-group-btn">
-   		&lt;button class="u-button  u-button-default" id="demo-menu">
-            success
-            &lt;span class="u-right-icon uf uf-anglearrowdown">&lt;/span>
-        &lt;/button>
-        &lt;ul class="u-menu u-menu-default" for="demo-menu">
-            &lt;li class="u-menu-item">&lt;a href="javascript:void(0)">action zero&lt;/a>&lt;/li>
-            &lt;li class="u-menu-item">&lt;a href="javascript:void(0)">action one&lt;/a>&lt;/li>
-            &lt;li class="u-menu-item">&lt;a href="javascript:void(0)">action two&lt;/a>&lt;/li>
-            &lt;li class="u-menu-item">&lt;a href="javascript:void(0)">action three&lt;/a>&lt;/li>
-        &lt;/ul>
-    &lt;/div>
-    &lt;input type="text" class="u-form-control">
-&lt;/div
+  <span class="u-input-group-addon">@</span>
+  <input type="text" class="u-form-control" placeholder="Username">
+</div>
+<div class="u-input-group u-input-group-sm">
+  <span class="u-input-group-addon">@</span>
+  <input type="text" class="u-form-control" placeholder="Username">
+</div></div>
+<div class="examples-code"><pre><code>.example-content .u-button-group{
+	margin: 5px;
+}</code></pre>
+</div>
+<div class="examples-code"><pre><code>&lt;div class="u-input-group u-input-group-lg">
+  &lt;span class="u-input-group-addon">@&lt;/span>
+  &lt;input type="text" class="u-form-control" placeholder="Username">
+&lt;/div>
 &lt;div class="u-input-group">
-	&lt;input type="text" class="u-form-control">
-    &lt;div class="u-input-group-btn">
-   		&lt;button class="u-button  u-button-u-button-default" id="demo-menu-sucess">
-            success
-            &lt;span class="u-right-icon uf uf-anglearrowdown">&lt;/span>
-        &lt;/button>
-        &lt;ul class="u-menu u-menu-default" for="demo-menu-sucess">
-            &lt;li class="u-menu-item">&lt;a href="javascript:void(0)">action zero&lt;/a>&lt;/li>
-            &lt;li class="u-menu-item">&lt;a href="javascript:void(0)">action one&lt;/a>&lt;/li>
-            &lt;li class="u-menu-item">&lt;a href="javascript:void(0)">action two&lt;/a>&lt;/li>
-            &lt;li class="u-menu-item">&lt;a href="javascript:void(0)">action three&lt;/a>&lt;/li>
-        &lt;/ul>
-    &lt;/div>
-&lt;/div</code></pre>
+  &lt;span class="u-input-group-addon">@&lt;/span>
+  &lt;input type="text" class="u-form-control" placeholder="Username">
+&lt;/div>
+&lt;div class="u-input-group u-input-group-sm">
+  &lt;span class="u-input-group-addon">@&lt;/span>
+  &lt;input type="text" class="u-form-control" placeholder="Username">
+&lt;/div></code></pre>
 </div>
 
 
@@ -143,37 +115,65 @@
 
 
 
-<div class="example-content ex-hide"><style>.example-content .u-button-group{
-	margin: 5px;
-}
-</style></div>
-<div class="example-content"><div class="u-input-group u-input-group-lg">
-  <span class="u-input-group-addon">@</span>
-  <input type="text" class="u-form-control" placeholder="Username">
+<div class="example-content"><div class="u-input-group">
+    <div class="u-input-group-btn">
+   		<button class="u-button  u-button-default" id="demo-menu">
+            success
+            <span class="u-right-icon uf uf-anglearrowdown"></span>
+        </button>
+        <ul class="u-menu u-menu-default" for="demo-menu">
+            <li class="u-menu-item"><a href="javascript:void(0)">action zero</a></li>
+            <li class="u-menu-item"><a href="javascript:void(0)">action one</a></li>
+            <li class="u-menu-item"><a href="javascript:void(0)">action two</a></li>
+            <li class="u-menu-item"><a href="javascript:void(0)">action three</a></li>
+        </ul>
+    </div>
+    <input type="text" class="u-form-control">
 </div>
 <div class="u-input-group">
-  <span class="u-input-group-addon">@</span>
-  <input type="text" class="u-form-control" placeholder="Username">
-</div>
-<div class="u-input-group u-input-group-sm">
-  <span class="u-input-group-addon">@</span>
-  <input type="text" class="u-form-control" placeholder="Username">
+	<input type="text" class="u-form-control">
+    <div class="u-input-group-btn">
+   		<button class="u-button  u-button-u-button-default" id="demo-menu-sucess">
+            success
+            <span class="u-right-icon uf uf-anglearrowdown"></span>
+        </button>
+        <ul class="u-menu u-menu-default" for="demo-menu-sucess">
+            <li class="u-menu-item"><a href="javascript:void(0)">action zero</a></li>
+            <li class="u-menu-item"><a href="javascript:void(0)">action one</a></li>
+            <li class="u-menu-item"><a href="javascript:void(0)">action two</a></li>
+            <li class="u-menu-item"><a href="javascript:void(0)">action three</a></li>
+        </ul>
+    </div>
 </div></div>
-<div class="examples-code"><pre><code>.example-content .u-button-group{
-	margin: 5px;
-}</code></pre>
-</div>
-<div class="examples-code"><pre><code>&lt;div class="u-input-group u-input-group-lg">
-  &lt;span class="u-input-group-addon">@&lt;/span>
-  &lt;input type="text" class="u-form-control" placeholder="Username">
+<div class="examples-code"><pre><code>&lt;div class="u-input-group">
+    &lt;div class="u-input-group-btn">
+   		&lt;button class="u-button  u-button-default" id="demo-menu">
+            success
+            &lt;span class="u-right-icon uf uf-anglearrowdown">&lt;/span>
+        &lt;/button>
+        &lt;ul class="u-menu u-menu-default" for="demo-menu">
+            &lt;li class="u-menu-item">&lt;a href="javascript:void(0)">action zero&lt;/a>&lt;/li>
+            &lt;li class="u-menu-item">&lt;a href="javascript:void(0)">action one&lt;/a>&lt;/li>
+            &lt;li class="u-menu-item">&lt;a href="javascript:void(0)">action two&lt;/a>&lt;/li>
+            &lt;li class="u-menu-item">&lt;a href="javascript:void(0)">action three&lt;/a>&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+    &lt;input type="text" class="u-form-control">
 &lt;/div>
 &lt;div class="u-input-group">
-  &lt;span class="u-input-group-addon">@&lt;/span>
-  &lt;input type="text" class="u-form-control" placeholder="Username">
-&lt;/div>
-&lt;div class="u-input-group u-input-group-sm">
-  &lt;span class="u-input-group-addon">@&lt;/span>
-  &lt;input type="text" class="u-form-control" placeholder="Username">
+	&lt;input type="text" class="u-form-control">
+    &lt;div class="u-input-group-btn">
+   		&lt;button class="u-button  u-button-u-button-default" id="demo-menu-sucess">
+            success
+            &lt;span class="u-right-icon uf uf-anglearrowdown">&lt;/span>
+        &lt;/button>
+        &lt;ul class="u-menu u-menu-default" for="demo-menu-sucess">
+            &lt;li class="u-menu-item">&lt;a href="javascript:void(0)">action zero&lt;/a>&lt;/li>
+            &lt;li class="u-menu-item">&lt;a href="javascript:void(0)">action one&lt;/a>&lt;/li>
+            &lt;li class="u-menu-item">&lt;a href="javascript:void(0)">action two&lt;/a>&lt;/li>
+            &lt;li class="u-menu-item">&lt;a href="javascript:void(0)">action three&lt;/a>&lt;/li>
+        &lt;/ul>
+    &lt;/div>
 &lt;/div></code></pre>
 </div>
 
@@ -195,7 +195,7 @@
         </ul>
     </div>
     <input type="text" class="u-form-control">
-</div
+</div>
 <div class="u-input-group">
 	<input type="text" class="u-form-control">
     <div class="u-input-group-btn">
@@ -212,7 +212,8 @@
             <li class="u-menu-item"><a href="javascript:void(0)">action three</a></li>
         </ul>
     </div>
-</div></div>
+</div>
+</div>
 <div class="examples-code"><pre><code>&lt;div class="u-input-group">
     &lt;div class="u-input-group-btn">
     	&lt;button class="u-button  u-button-default">
@@ -229,7 +230,7 @@
         &lt;/ul>
     &lt;/div>
     &lt;input type="text" class="u-form-control">
-&lt;/div
+&lt;/div>
 &lt;div class="u-input-group">
 	&lt;input type="text" class="u-form-control">
     &lt;div class="u-input-group-btn">
@@ -246,5 +247,6 @@
             &lt;li class="u-menu-item">&lt;a href="javascript:void(0)">action three&lt;/a>&lt;/li>
         &lt;/ul>
     &lt;/div>
-&lt;/div></code></pre>
+&lt;/div>
+</code></pre>
 </div>
