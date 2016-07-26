@@ -22,6 +22,7 @@
   * [复选框](ex_checkbox.md)
   * [复选框数据](ex_checkboxdata.md)
   * [进度条](ex_progress.md)
+  * [自定义验证](ex_validate.md)
 * 典型场景开发
   * [表格插件基础应用](grid.md)
   * [表格校验](gridValidate.md)
