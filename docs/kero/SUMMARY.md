@@ -21,7 +21,9 @@
   * [下拉列表](combobox_ex.md)
   * [复选框](ex_checkbox.md)
   * [复选框数据](ex_checkboxdata.md)
+  * [数值百分比](ex_percent.md)
   * [进度条](ex_progress.md)
+  * [分页](ex_pagination.md)
   * [自定义验证](ex_validate.md)
 * 典型场景开发
   * [表格插件基础应用](grid.md)
