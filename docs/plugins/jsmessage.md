@@ -1,11 +1,12 @@
-# message控件
+# message插件
 
-用于即时信息的提示，消息背景色取决于消息类型，易可添加相对应的`icon`
+用于即时信息的提示，消息背景色取决于消息类型，也可添加相对应的`icon`
 
 # 插件依赖
 
-依赖于 http://design.yyuap.com/static/uui/latest/js/u.js
+http://design.yyuap.com/static/uui/latest/js/u.js
 
+http://design.yyuap.com/static/uui/latest/css/u.css
 # 用法
 
 1.定义触发弹出事件的DOM

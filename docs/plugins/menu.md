@@ -1,10 +1,12 @@
-# menu控件
+# menu插件
 
 动态弹出菜单
 
 # 插件依赖
 
-依赖于 http://design.yyuap.com/static/uui/latest/js/u.js
+http://design.yyuap.com/static/uui/latest/js/u.js
+
+http://design.yyuap.com/static/uui/latest/css/u.css
 
 # 用法
 

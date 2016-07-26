@@ -3,9 +3,11 @@
 用户可以自定义日期类型，返回日期默认是年月日，也可以返回年月日时分秒。
 
 # 插件依赖
-依赖于 http://design.yyuap.com/static/uui/latest/js/u.js
 
-除了js文件还需引入u.css。
+http://design.yyuap.com/static/uui/latest/js/u.js
+
+http://design.yyuap.com/static/uui/latest/css/u.css
+
 
 # 用法
 
