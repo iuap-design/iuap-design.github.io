@@ -3,57 +3,10 @@
 定义了一些图片的缩略图显示形式，及自定义添加内容的显示显示
 
 
-# 示例
+## 示例
 
 
-## 基础
-<div class="example-content"><div class="row">
-  <div class="col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="http://design.yyuap.com/static/img/thumimg.png">
-    </a>
-  </div>
-  <div class="col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="http://design.yyuap.com/static/img/thumimg.png">
-    </a>
-  </div>
-  <div class="col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="http://design.yyuap.com/static/img/thumimg.png">
-    </a>
-  </div>
-  <div class="col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="http://design.yyuap.com/static/img/thumimg.png">
-    </a>
-  </div>
-</div></div>
-<div class="examples-code"><pre><code>&lt;div class="row">
-  &lt;div class="col-md-3">
-    &lt;a href="#" class="thumbnail">
-      &lt;img src="http://design.yyuap.com/static/img/thumimg.png">
-    &lt;/a>
-  &lt;/div>
-  &lt;div class="col-md-3">
-    &lt;a href="#" class="thumbnail">
-      &lt;img src="http://design.yyuap.com/static/img/thumimg.png">
-    &lt;/a>
-  &lt;/div>
-  &lt;div class="col-md-3">
-    &lt;a href="#" class="thumbnail">
-      &lt;img src="http://design.yyuap.com/static/img/thumimg.png">
-    &lt;/a>
-  &lt;/div>
-  &lt;div class="col-md-3">
-    &lt;a href="#" class="thumbnail">
-      &lt;img src="http://design.yyuap.com/static/img/thumimg.png">
-    &lt;/a>
-  &lt;/div>
-&lt;/div></code></pre>
-</div>
 
-## 基础
 <div class="example-content"><div class="row">
   <div class="col-md-3">
     <a href="#" class="thumbnail">
