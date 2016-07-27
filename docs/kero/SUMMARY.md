@@ -3,7 +3,7 @@
 * [起步](gettingstarted.md)
 * 数据模型
   * [基础说明](datatable.md)
-  * [基本设置](dataTableUse.md)
+  * [基础设置](dataTableUse.md)
   * [DataTable API](udatatable.md)
   * [Row API](row.md)
   * [工具库](core.md)
