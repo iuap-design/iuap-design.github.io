@@ -15,12 +15,16 @@
 		"-livereload",
 		"-fontsettings",
 		"-sharing",
+		"search-pro",
 		"iuap-design"
 	],
 	"pluginsConfig": {
 		"iuap-design": {
 			"title": "Kero",
 			"desc": "Kero是一个基于knockout扩展的Library，做为MVVM架构中Model层的增强，主要用于处理企业级复杂数据交互。"
+		},
+		"search-pro": {
+        	"cutWordLib": "nodejieba"
 		}
 	}
 }
