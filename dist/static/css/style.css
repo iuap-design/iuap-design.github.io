@@ -2842,6 +2842,8 @@ label.hover {
 
 .navbar .toolbar a {
     font-size: 14px;
+    padding-bottom:20px;
+    display: block;
 }
 
 .navbar .toolbar span {
@@ -2861,6 +2863,7 @@ label.hover {
 .navbar .toolbar .action-btn:hover {
     color: #4da3ff;
     opacity: 1;
+    border-bottom:1px solid;
 }
 
 .navbar .nav-toggle {
