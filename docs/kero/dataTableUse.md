@@ -28,13 +28,13 @@ var dataTable1 = new u.DataTable({
 });
 ```
 
-
+更多设置参见 [validate](http://design.yyuap.com/dist/pages/kero/validateapi.html)
 
 ---
 
 ## 格式化
 
-示例如下：​
+示例如下：
 
 ```
 var dataTable1 = new u.DataTable({
@@ -76,7 +76,7 @@ dataTable1.on('valueChange',function(event){
 
 <div class="example-content"><!-- HTML -->
 <div id="demo1">
-	<input u-meta='{"data":"dt1","field":"f1"}' />	
+	<input u-meta='{"id":"hello","type":"string","data":"dt1","field":"f1"}' />	
 </div>
 </div>
 <div class="example-content ex-hide"><script>// JS
@@ -104,7 +104,7 @@ r.setValue('f1','test txt');
 </script></div>
 <div class="examples-code"><pre><code>&lt;!-- HTML -->
 &lt;div id="demo1">
-	&lt;input u-meta='{"data":"dt1","field":"f1"}' />	
+	&lt;input u-meta='{"id":"hello","type":"string","data":"dt1","field":"f1"}' />	
 &lt;/div>
 </code></pre>
 </div>
