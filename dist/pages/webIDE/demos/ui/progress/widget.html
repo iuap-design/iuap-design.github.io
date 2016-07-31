@@ -1,3 +1,4 @@
+<!-- progress -->
 <div class="u-container-fluid u-widget-bg">
     <div class="u-row">
         <div class="u-col-xs-12 u-col-md-4">
@@ -143,6 +144,57 @@
                         <button class="u-button u-button-info" id="finish">finish</button>
                         <button class="u-button u-button-info" id="reset">reset</button>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- loading -->
+
+<div class="u-container-fluid u-widget-bg">
+    <div class="u-row">
+        <div class="u-col-xs-12 u-col-md-4">
+            <div class="u-widget  u-widget-right">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">未激活loading</h3>
+                </div>
+                <div class="u-widget-body">
+                    <div class="u-loading"></div>
+                </div>
+            </div>
+        </div>
+        <div class="u-col-xs-12 u-col-md-4">
+            <div class="u-widget  u-widget-right">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">激活loading</h3>
+                </div>
+                <div class="u-widget-body">
+                    <div class="u-loading is-active"></div>
+                </div>
+            </div>
+        </div>
+        <div class="u-col-xs-12 u-col-md-4">
+            <div class="u-widget  u-widget-right">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">激活loading，使用单一颜色</h3>
+                </div>
+                <div class="u-widget-body">
+                    <div class="u-loading is-active u-loading-single-color"></div>激活loading，使用单一颜色
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="u-row">
+        <div class=" u-col-xs-12 u-col-md-8">
+            <div class="u-widget  u-widget-right">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">圆点加载条</h3>
+                </div>
+                <div class="u-widget-body">
+                    <button class="u-button  raised primary" id="add">添加遮罩层loader</button>
+                    <button class="u-button  raised primary" id="hide" style="z-index: 1000000">取消遮罩层loader</button>
+                    <div id='parentLoad'></div>
                 </div>
             </div>
         </div>
