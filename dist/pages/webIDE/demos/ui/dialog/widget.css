@@ -1,0 +1,55 @@
+/*消息框弹出开始*/
+
+/*消息框弹出结束*/
+
+/*消息提示开始*/
+.message-demo .u-widget-body{
+	min-height: 280px;
+}
+
+.margin-r-10{
+    margin-right: 10px; 
+}
+.example .u-message{
+    position: inherit;
+}
+
+.margin-r-5{
+    margin-right: 5px; 
+}
+/*消息提示结束*/
+
+/*工具提示开始*/
+.example{
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+.example>.tooltip{
+    opacity: 1;
+    position: absolute;
+}
+.tooltip-rotate{
+    filter: alpha(opacity=0);
+    opacity: 0!important;
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -ms-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+.rotate{
+    filter: alpha(opacity=100);
+    opacity: 1!important;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+/*工具提示结束*/

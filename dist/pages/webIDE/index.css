@@ -107,11 +107,23 @@ body {
 }
 
 .demo-drawer-nav-brand {
+    position:relative;
     display: block;
-    padding-left: 40px;
+    width:100%;
+    height:100%;
     font-size: 18px;
     font-weight: bold;
     color: #FFF;
+}
+
+.demo-drawer-nav-brand img{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:10px;
+    display: block;
+    text-align: center;
+    width:65%;
+
 }
 
 a.demo-drawer-nav-brand:focus, a.demo-drawer-nav-brand:hover {

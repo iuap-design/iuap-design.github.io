@@ -10,17 +10,17 @@
             "name": "消息框",
             "url": "demos/ui/dialog"
         }, {
-            "name": "下拉框",
+            "name": "Form表单",
             "url": "demos/ui/combobox"
         }, {
-            "name": "进度条",
+            "name": "加载进度条",
             "url": "demos/ui/progress"
 
         }, {
-            "name": "菜单",
+            "name": "菜单导航",
             "url": "demos/ui/menu"
         }, {
-            "name": "按钮",
+            "name": "按钮标签",
             "url": "demos/ui/button"
         }, {
             "name": "徽章",
@@ -29,37 +29,8 @@
             "name": "面包屑",
             "url": "demos/ui/breadcrumbs"
         }, {
-            "name": "标签",
-            "url": "demos/ui/label"
-        }, {
-            "name": "复选框",
-            "url": "demos/ui/checkbox"
-        }, {
-            "name": "单选框",
-            "url": "demos/ui/radio"
-        }, {
             "name": "switch",
             "url": "demos/ui/switch"
-        }, {
-            "name": "输入框",
-            "url": "demos/ui/textfield"
-        },
-
-        {
-            "name": "日期选择器",
-            "url": "demos/ui/datetime/date"
-        }, {
-            "name": "参照选择器",
-            "url": "demos/ui/refer"
-        }, {
-            "name": "参照框",
-            "url": "demos/ui/refer/refer/his"
-        }, {
-            "name": "加载条",
-            "url": "demos/ui/loading"
-        }, {
-            "name": "消息提示",
-            "url": "demos/ui/message"
         }, {
             "name": "表格",
             "url": "demos/ui/datatable"
@@ -67,26 +38,11 @@
             "name": "页签",
             "url": "demos/ui/tabs"
         }, {
-            "name": "导航菜单",
-            "url": "demos/ui/navmenu"
-        }, {
             "name": "分页",
             "url": "demos/ui/pagination"
         }, {
-            "name": "自动完成",
-            "url": "demos/ui/autocomplete"
-        }, {
-            "name": "hover菜单",
-            "url": "demos/ui/hoverNavmenu"
-        }, {
-            "name": "下拉菜单",
-            "url": "demos/ui/dropdown"
-        }, {
             "name": "列表",
             "url": "demos/ui/listgroup"
-        }, {
-            "name": "工具提示",
-            "url": "demos/ui/tooltip"
         }, {
             "name": "图片",
             "url": "demos/ui/image"

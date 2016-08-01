@@ -10,7 +10,7 @@
 	"theme":"node_modules/gitbook-plugin-iuap-design/theme/",
 	"plugins":[
 		"anchor-navigation",
-		"expandable-chapters",
+		"-expandable-chapters",
 		"-search",
 		"-livereload",
 		"-fontsettings",

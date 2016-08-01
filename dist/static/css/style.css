@@ -2842,6 +2842,8 @@ label.hover {
 
 .navbar .toolbar a {
     font-size: 14px;
+    padding-bottom:20px;
+    display: block;
 }
 
 .navbar .toolbar span {
@@ -2861,6 +2863,7 @@ label.hover {
 .navbar .toolbar .action-btn:hover {
     color: #4da3ff;
     opacity: 1;
+    border-bottom:1px solid;
 }
 
 .navbar .nav-toggle {
@@ -2901,7 +2904,7 @@ label.hover {
         display: none;
     }
     .navbar .nav-toggle {
-        margin-top: 15px;
+        margin-top: 17px;
     }
 }
 
@@ -6476,7 +6479,7 @@ a.icon-block {
     vertical-align: bottom;
 }
 
-// .copyright p {
+/*// .copyright p {
 //     font-size: 14px;
 //     color: #8e8e93;
 //     margin-bottom: 30px;
@@ -6488,7 +6491,7 @@ a.icon-block {
 
 // .copyright a:hover {
 //     color: #007aff;
-// }
+// }*/
 
 .footer .gadget {
     width: 370px;
@@ -6741,10 +6744,10 @@ a.icon-block {
     color: #4da3ff;
 }
 
-// neo下的二级目录暂时隐藏
+/*// neo下的二级目录暂时隐藏
 // li.tool-con-par:hover .sub {
 //     display: block;
-// }
+// }*/
 
 .footer {
     background-color: #333;
@@ -6814,7 +6817,7 @@ a.icon-block {
     color: rgba(255, 255, 255, 0.6);
 }
 .copyright .right-con{
-    // background: #bbb;
+    /* background: #bbb;*/
     padding: 5px;
 }
 
@@ -6833,6 +6836,73 @@ a.icon-block {
     font-size: 12px;
 }
 
-// .footer .contract-info-con{
-//     padding-top: 20px;
-// }
+/* .footer .contract-info-con{
+     padding-top: 20px;
+ }*/
+
+ /*github fork*/
+ .github-fork-ribbon img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+    width:125px;
+ }
+
+ .github-fork-button{
+    display: none;
+ }
+
+ .github-fork-button a{
+    display: inline-block;
+    padding: 0px 5px;
+    margin-top:32px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #333;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #eee;
+    background-image: -webkit-linear-gradient(#fcfcfc, #eee);
+    background-image: linear-gradient(#fcfcfc, #eee);
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+ }
+ .github-fork-button a .octicon{
+    vertical-align: text-top;
+    overflow: hidden;
+    display: inline-block;
+    fill: currentColor;
+ }
+
+
+ @media screen and (max-width:1450px) {
+    .github-fork-ribbon{
+        display: none;
+    }
+
+    .github-fork-button{
+        display: table-cell;
+        float:right;
+        margin-right:10px;
+    } 
+ }
+
+@media screen and (max-width:1000px) {
+    .github-fork-button{
+        margin-right:-20px;
+    }
+}
+
+
+
+
