@@ -75,3 +75,11 @@
 
 /*输入框开始*/
 /*输入框结束*/
+
+/*自动完成开始*/
+
+	.demo .u-badge, .demo .u-avatar {
+	    display: inline-block;
+	}
+
+/*自动完成结束*/

@@ -20,7 +20,7 @@
             "name": "菜单导航",
             "url": "demos/ui/menu"
         }, {
-            "name": "按钮",
+            "name": "按钮标签",
             "url": "demos/ui/button"
         }, {
             "name": "徽章",
@@ -29,17 +29,8 @@
             "name": "面包屑",
             "url": "demos/ui/breadcrumbs"
         }, {
-            "name": "标签",
-            "url": "demos/ui/label"
-        }, {
             "name": "switch",
             "url": "demos/ui/switch"
-        }, {
-            "name": "参照框",
-            "url": "demos/ui/refer/refer/his"
-        }, {
-            "name": "消息提示",
-            "url": "demos/ui/message"
         }, {
             "name": "表格",
             "url": "demos/ui/datatable"
@@ -50,14 +41,8 @@
             "name": "分页",
             "url": "demos/ui/pagination"
         }, {
-            "name": "自动完成",
-            "url": "demos/ui/autocomplete"
-        }, {
             "name": "列表",
             "url": "demos/ui/listgroup"
-        }, {
-            "name": "工具提示",
-            "url": "demos/ui/tooltip"
         }, {
             "name": "图片",
             "url": "demos/ui/image"
