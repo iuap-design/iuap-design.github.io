@@ -266,6 +266,15 @@ require(['mod'], function (mod) {
             if (color2) {
                 colorRow.setValue('color2', color2);
             }
+
+            var mainColorEles = document.querySelectorAll('.main-color-show');
+            var assistColorEles = document.querySelectorAll('.assist-color-show');
+            for(var i=0; i<mainColorEles.length; i++){
+                mainColorEles[i].style.backgroundColor = 'rgb(' + color0 + ')';
+                mainColorEles[i].style.borderColor = 'rgb(' + color0 + ')';
+                assistColorEles[i].style.backgroundColor = 'rgb(' + color2 + ')';
+                assistColorEles[i].style.borderColor = 'rgb(' + color2 + ')';
+            }
         }
     });
     /* 处理全部 */
@@ -304,6 +313,27 @@ require(['mod'], function (mod) {
 
     var evalRow = viewModel.evalData.createEmptyRow();
     viewModel.evalData.setRowSelect(0);
+
+    /**
+     * valuechange
+     */
+    var valueAry = {};
+    viewModel.colorData.on('valueChange', function(event){
+        valueAry[event.field] = event.newValue;
+        var color0 = valueAry['color0'];
+        var color1 = valueAry['color1'];
+        var color2 = valueAry['color2'];
+
+        var mainColorEles = document.querySelectorAll('.main-color-show');
+        var assistColorEles = document.querySelectorAll('.assist-color-show');
+        for(var i=0; i<mainColorEles.length; i++){
+            mainColorEles[i].style.backgroundColor = 'rgb(' + color0 + ')';
+            mainColorEles[i].style.borderColor = 'rgb(' + color0 + ')';
+            assistColorEles[i].style.backgroundColor = 'rgb(' + color2 + ')';
+            assistColorEles[i].style.borderColor = 'rgb(' + color2 + ')';
+        }
+    });
+
     /*按钮处理begin*/
     function clickFun() {
         var r = viewModel.modelData.rows()[0];
