@@ -7,45 +7,45 @@
 
 
 
-<div class="example-content"><div class="row">
-  <div class="col-md-3">
+<div class="example-content"><div class="u-row">
+  <div class="u-col-md-3">
     <a href="#" class="thumbnail">
       <img src="http://design.yyuap.com/static/img/thumimg.png">
     </a>
   </div>
-  <div class="col-md-3">
+  <div class="u-col-md-3">
     <a href="#" class="thumbnail">
       <img src="http://design.yyuap.com/static/img/thumimg.png">
     </a>
   </div>
-  <div class="col-md-3">
+  <div class="u-col-md-3">
     <a href="#" class="thumbnail">
       <img src="http://design.yyuap.com/static/img/thumimg.png">
     </a>
   </div>
-  <div class="col-md-3">
+  <div class="u-col-md-3">
     <a href="#" class="thumbnail">
       <img src="http://design.yyuap.com/static/img/thumimg.png">
     </a>
   </div>
 </div></div>
-<div class="examples-code"><pre><code>&lt;div class="row">
-  &lt;div class="col-md-3">
+<div class="examples-code"><pre><code>&lt;div class="u-row">
+  &lt;div class="u-col-md-3">
     &lt;a href="#" class="thumbnail">
       &lt;img src="http://design.yyuap.com/static/img/thumimg.png">
     &lt;/a>
   &lt;/div>
-  &lt;div class="col-md-3">
+  &lt;div class="u-col-md-3">
     &lt;a href="#" class="thumbnail">
       &lt;img src="http://design.yyuap.com/static/img/thumimg.png">
     &lt;/a>
   &lt;/div>
-  &lt;div class="col-md-3">
+  &lt;div class="u-col-md-3">
     &lt;a href="#" class="thumbnail">
       &lt;img src="http://design.yyuap.com/static/img/thumimg.png">
     &lt;/a>
   &lt;/div>
-  &lt;div class="col-md-3">
+  &lt;div class="u-col-md-3">
     &lt;a href="#" class="thumbnail">
       &lt;img src="http://design.yyuap.com/static/img/thumimg.png">
     &lt;/a>
@@ -54,8 +54,55 @@
 </div>
 
 
-<div class="example-content"><div class="row">
-  <div class="col-md-4">
+<div class="example-content"><div class="u-row">
+  <div class="u-col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="http://design.yyuap.com/static/img/thumimg.png">
+    </a>
+  </div>
+  <div class="u-col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="http://design.yyuap.com/static/img/thumimg.png">
+    </a>
+  </div>
+  <div class="u-col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="http://design.yyuap.com/static/img/thumimg.png">
+    </a>
+  </div>
+  <div class="u-col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="http://design.yyuap.com/static/img/thumimg.png">
+    </a>
+  </div>
+</div></div>
+<div class="examples-code"><pre><code>&lt;div class="u-row">
+  &lt;div class="u-col-md-3">
+    &lt;a href="#" class="thumbnail">
+      &lt;img src="http://design.yyuap.com/static/img/thumimg.png">
+    &lt;/a>
+  &lt;/div>
+  &lt;div class="u-col-md-3">
+    &lt;a href="#" class="thumbnail">
+      &lt;img src="http://design.yyuap.com/static/img/thumimg.png">
+    &lt;/a>
+  &lt;/div>
+  &lt;div class="u-col-md-3">
+    &lt;a href="#" class="thumbnail">
+      &lt;img src="http://design.yyuap.com/static/img/thumimg.png">
+    &lt;/a>
+  &lt;/div>
+  &lt;div class="u-col-md-3">
+    &lt;a href="#" class="thumbnail">
+      &lt;img src="http://design.yyuap.com/static/img/thumimg.png">
+    &lt;/a>
+  &lt;/div>
+&lt;/div></code></pre>
+</div>
+
+
+<div class="example-content"><div class="u-row">
+  <div class="u-col-md-4">
         <div class="thumbnail">
                 <img src="http://design.yyuap.com/static/img/thumimg1.png" alt="...">
                 <div class="caption">
@@ -70,7 +117,7 @@
                 </div>
         </div>
   </div>
-  <div class="col-md-4">
+  <div class="u-col-md-4">
         <div class="thumbnail">
                 <img src="http://design.yyuap.com/static/img/thumimg1.png" alt="...">
                 <div class="caption">
@@ -85,7 +132,7 @@
                 </div>
         </div>
   </div>
-  <div class="col-md-4">
+  <div class="u-col-md-4">
         <div class="thumbnail">
                 <img src="http://design.yyuap.com/static/img/thumimg1.png" alt="...">
                 <div class="caption">
@@ -100,8 +147,8 @@
         </div>
   </div>
 </div></div>
-<div class="examples-code"><pre><code>&lt;div class="row">
-  &lt;div class="col-md-4">
+<div class="examples-code"><pre><code>&lt;div class="u-row">
+  &lt;div class="u-col-md-4">
         &lt;div class="thumbnail">
                 &lt;img src="http://design.yyuap.com/static/img/thumimg1.png" alt="...">
                 &lt;div class="caption">
@@ -116,7 +163,7 @@
                 &lt;/div>
         &lt;/div>
   &lt;/div>
-  &lt;div class="col-md-4">
+  &lt;div class="u-col-md-4">
         &lt;div class="thumbnail">
                 &lt;img src="http://design.yyuap.com/static/img/thumimg1.png" alt="...">
                 &lt;div class="caption">
@@ -131,7 +178,7 @@
                 &lt;/div>
         &lt;/div>
   &lt;/div>
-  &lt;div class="col-md-4">
+  &lt;div class="u-col-md-4">
         &lt;div class="thumbnail">
                 &lt;img src="http://design.yyuap.com/static/img/thumimg1.png" alt="...">
                 &lt;div class="caption">
