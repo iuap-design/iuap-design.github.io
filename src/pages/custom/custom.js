@@ -267,14 +267,14 @@ require(['mod'], function (mod) {
                 colorRow.setValue('color2', color2);
             }
 
-            var mainColorEles = document.querySelectorAll('.main-color-show');
-            var assistColorEles = document.querySelectorAll('.assist-color-show');
-            for(var i=0; i<mainColorEles.length; i++){
-                mainColorEles[i].style.backgroundColor = 'rgb(' + color0 + ')';
-                mainColorEles[i].style.borderColor = 'rgb(' + color0 + ')';
-                assistColorEles[i].style.backgroundColor = 'rgb(' + color2 + ')';
-                assistColorEles[i].style.borderColor = 'rgb(' + color2 + ')';
-            }
+            // var mainColorEles = document.querySelectorAll('.main-color-show');
+            // var assistColorEles = document.querySelectorAll('.assist-color-show');
+            // for(var i=0; i<mainColorEles.length; i++){
+            //     mainColorEles[i].style.backgroundColor = 'rgb(' + color0 + ')';
+            //     mainColorEles[i].style.borderColor = 'rgb(' + color0 + ')';
+            //     assistColorEles[i].style.backgroundColor = 'rgb(' + color2 + ')';
+            //     assistColorEles[i].style.borderColor = 'rgb(' + color2 + ')';
+            // }
         }
     });
     /* 处理全部 */
