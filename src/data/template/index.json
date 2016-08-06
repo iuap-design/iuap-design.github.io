@@ -24,7 +24,7 @@
 	        "title": "landing page模板",
 	        "id": "1001",
 	        "decription": "模块化的宣传，合理的防治图片和内容，利于产品的推广",
-	        "content_img": "img/main_19.png",
+	        "content_img": "img/main_21.png",
 	        "phone_img": "img/phone_3.jpg",
 	        "url": "/templates/website/productHome/index.html",
 	        "download": "/templates/dist/productHome.zip",
@@ -32,22 +32,22 @@
 	        "for_area": ["互联网","金融"]
 	    },{
 	        "title": "landing page模板",
-	        "id": "1001",
+	        "id": "1002",
 	        "decription": "模块化的宣传，合理的防治图片和内容，利于产品的推广",
-	        "content_img": "img/main_19.png",
+	        "content_img": "img/main_20.png",
 	        "phone_img": "img/phone_3.jpg",
-	        "url": "/templates/website/productHome/index.html",
-	        "download": "/templates/dist/productHome.zip",
+	        "url": "/templates/website/indexHome/index.html",
+	        "download": "/templates/dist/indexHome.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
 	    },{
 	        "title": "左侧菜单布局模板",
-	        "id": "0202",
+	        "id": "0201",
 	        "decription": "可伸缩导航布局，伸展时展示全部nav，显示全部内容",
-	        "content_img": "img/main_20.png",
+	        "content_img": "img/main_19.png",
 	        "phone_img": "img/phone_3.jpg",
-	        "url": "/templates/website/talentHome/index.html",
-	        "download": "/templates/dist/talentHome.zip",
+	        "url": "/templates/website/left-menu-layout-1/index.html",
+	        "download": "/templates/dist/left-menu-layout-1.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","电商"]
 	    },{
