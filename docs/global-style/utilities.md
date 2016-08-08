@@ -10,7 +10,7 @@
 根据文档说明，添加对应样式即可。例如向左浮动只需添加`pull-left`就能达到向左浮动效果
 #示例
  
-#水平居中
+#块级元素水平居中
 添加`.center-block`实现水平居中
 <div class="example-content"> <div class="example example-box">
 	<div class="h-64 w-64 bg-blue center-block ">
@@ -24,7 +24,23 @@
 &lt;/div></code></pre>
 </div>
 
-##垂直对齐
+##浮动
+浮动是创建各种布局的基础。但是浮动需要被清理。下面的类将帮助你设置基本的布局
+
+* `.pull-left`: 向左浮动
+* `.pull-right`: 向右浮动
+* `.clearfix`: 清除浮动 
+<div class="example-content"><div class="example example-box">
+  <button type="button" class="u-button  u-button-success ">Left</button>
+  <button type="button" class="u-button  u-button-success  pull-right" >Pull right</button>
+</div></div>
+<div class="examples-code"><pre><code>&lt;div class="example example-box">
+  &lt;button type="button" class="u-button  u-button-success ">Left&lt;/button>
+  &lt;button type="button" class="u-button  u-button-success  pull-right" >Pull right&lt;/button>
+&lt;/div></code></pre>
+</div>
+
+##行内块级元素垂直对齐
 添加如下样式即可实现垂直居中、垂直向下。
 
 * `.vertical-align`:添加这个样式到父元素上，该父元素需要指定高度
@@ -49,6 +65,10 @@
 		</div>
 	</div>
 </div></div>
+<div class="examples-code"><pre><code>.vertical-align-bottom.u-button{
+	vertical-align: bottom;
+}</code></pre>
+</div>
 <div class="examples-code"><pre><code>&lt;div class="example example-box u-container-fluid">
 	&lt;div class="u-row">
 
@@ -64,10 +84,6 @@
 		&lt;/div>
 	&lt;/div>
 &lt;/div></code></pre>
-</div>
-<div class="examples-code"><pre><code>.vertical-align-bottom.u-button{
-	vertical-align: bottom;
-}</code></pre>
 </div>
 
 ##字体大小
@@ -161,6 +177,10 @@
         </div>
     </div>
 </div></div>
+<div class="examples-code"><pre><code>.vertical-align-bottom.u-button {
+    vertical-align: bottom;
+}</code></pre>
+</div>
 <div class="examples-code"><pre><code>&lt;p>文字是否包裹换行&lt;/p>
 &lt;div class="example example-box u-container-fluid " style="width:500px">
     &lt;div class="u-row">
@@ -186,10 +206,6 @@
         &lt;/div>
     &lt;/div>
 &lt;/div></code></pre>
-</div>
-<div class="examples-code"><pre><code>.vertical-align-bottom.u-button {
-    vertical-align: bottom;
-}</code></pre>
 </div>
 
 ##文字对齐
@@ -266,6 +282,22 @@
 * `.height-auto`: height高度为auto
 * `.height-full`: height高度为100%
 
+##外间距
+margin提供了如下数值：0，3，5，10, 15, 20, 25, 30, 35, 40, 45, 50.
+
+以外边距5为例说明具体margin的使用方式
+
+
+| 样式名        | 描述           |
+| ------------- |:-------------:|
+| .margin-5   | margin:为5px |
+| .margin-vertical-5    | margin-top和margin-bottom均为 5px   |
+| .margin-horizontal-5 | margin-left和margin-right均为 5px    | 
+| .margin-top-5    | margin-top为 5px   |
+| .margin-right-5 | margin-right为 5px    | 
+| .margin-bottom-5   | margin-bottom为 5px   |
+| .margin-left-5 | margin-left为 5px    | 
+
 ##内间距
 padding提供了如下数值：0，3，5，10, 15, 20, 25, 30, 35, 40, 45, 50.
 
@@ -332,35 +364,3 @@ padding提供了如下数值：0，3，5，10, 15, 20, 25, 30, 35, 40, 45, 50.
 |.visible-*-inline|display: inline|
 |.visible-*-inline-block|display: inline-block|
 
-
-##外间距
-margin提供了如下数值：0，3，5，10, 15, 20, 25, 30, 35, 40, 45, 50.
-
-以外边距5为例说明具体margin的使用方式
-
-
-| 样式名        | 描述           |
-| ------------- |:-------------:|
-| .margin-5   | margin:为5px |
-| .margin-vertical-5    | margin-top和margin-bottom均为 5px   |
-| .margin-horizontal-5 | margin-left和margin-right均为 5px    | 
-| .margin-top-5    | margin-top为 5px   |
-| .margin-right-5 | margin-right为 5px    | 
-| .margin-bottom-5   | margin-bottom为 5px   |
-| .margin-left-5 | margin-left为 5px    | 
-
-##浮动
-浮动是创建各种布局的基础。但是浮动需要被清理。下面的类将帮助你设置基本的布局
-
-* `.pull-left`: 向左浮动
-* `.pull-right`: 向右浮动
-* `.clearfix`: 清除浮动 
-<div class="example-content"><div class="example example-box">
-  <button type="button" class="u-button  u-button-success ">Left</button>
-  <button type="button" class="u-button  u-button-success  pull-right" >Pull right</button>
-</div></div>
-<div class="examples-code"><pre><code>&lt;div class="example example-box">
-  &lt;button type="button" class="u-button  u-button-success ">Left&lt;/button>
-  &lt;button type="button" class="u-button  u-button-success  pull-right" >Pull right&lt;/button>
-&lt;/div></code></pre>
-</div>
