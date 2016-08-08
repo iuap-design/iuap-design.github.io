@@ -122,7 +122,8 @@ body {
     margin-top:10px;
     display: block;
     text-align: center;
-    width:65%;
+    width:50%;
+    /*width:65%;*/
 
 }
 
@@ -246,8 +247,9 @@ a.demo-drawer-nav-brand:focus, a.demo-drawer-nav-brand:hover {
 }
 
 #menubutton {
-    height: 64px;
-    line-height: 64px;
+    /*height: 64px;*/
+     height: 50px;
+    line-height: 50px;
     position: absolute;
     left: 5px;
     font-size: 20px;
@@ -259,12 +261,14 @@ a.demo-drawer-nav-brand:focus, a.demo-drawer-nav-brand:hover {
  }
 
 .u-tabs__tab-bar {
-    height: 64px;
+    /*height: 64px;*/
+    height: 50px;
 }
 
 .u-tabs__tab {
-    height: 64px;
-    line-height: 64px;
+    /*height: 64px;*/
+    height: 50px;
+    line-height: 50px;
 }
 
 .u-tabs_header {
@@ -379,6 +383,11 @@ a.demo-drawer-nav-brand:focus, a.demo-drawer-nav-brand:hover {
     max-height: 1200px;
 }
 
-.u-navlayout-drawer .u-nav .u-nav-sub .u-nav-link{
+.u-navlayout-drawer .u-nav .u-nav-sub .u-nav-link {
     padding-left: 54px;
+}
+
+
+.u-navlayout-header {
+    min-height: 50px;
 }

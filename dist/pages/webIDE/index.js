@@ -134,7 +134,8 @@ var routerFunc = function(row, subRow, ssRow, url){
 
 var resizeEditor = function(){
 	var _bodyHeight = document.body.offsetHeight;
-	var editorHeight = _bodyHeight - 64 - 49;
+	var editorHeight = _bodyHeight - 44;
+	// var editorHeight = _bodyHeight - 64 - 49;
 	// $('.u-navlayout-container').css('height',_bodyHeight - 61);
 	$('#tab-panel-1').css('height',editorHeight);
 	$('#tab-panel-2').css('height',editorHeight);
