@@ -73,6 +73,7 @@
 .color-input-div {
     padding-bottom: 20px;
     margin-left: 0;
+    margin-right: 0;
 }
 
 .color-input {
@@ -82,6 +83,11 @@
     padding-top: 0;
     padding-bottom: 0;
     margin-bottom: -15px;
+    padding-left: 0;
+}
+
+.color-input.color-visible{
+    visibility: hidden;
 }
 
 .color-content-div {

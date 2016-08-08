@@ -64,7 +64,7 @@ window.onload = function() {
             var btnAry = document.getElementById('templateContainer').querySelectorAll('.btn_1');
             for(var i = 0, btnLength = btnAry.length; i < btnLength; i++) {
                 var hrefValue = btnAry[i].getAttribute('href');
-                if( hrefValue === 'javascript:;' ) {
+                if( hrefValue === 'javascript:;' || hrefValue==="") {
                     btnAry[i].style.display = 'none';
                 }
             }

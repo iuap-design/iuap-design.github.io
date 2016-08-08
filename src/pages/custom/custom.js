@@ -154,6 +154,7 @@ require(['mod'], function (mod) {
             msgInner:'color-head-div',/*头部信息内部div类名*/
             areaInput:'color-input-div u-row',/*颜色输入区域类名*/
             lineDiv:'u-text color-input u-col-md-4',/*横线外盒子类名*/
+            lineDivHide:'u-text color-input u-col-md-4 color-visible',
             lineInput:'color-in',/*横线input类名*/
             area:'color-content-div',//颜色区域类名
             areaLeft:'color-left-div',//颜色区域左侧类名
@@ -180,7 +181,7 @@ require(['mod'], function (mod) {
         colorStr = '<div class='+'"'+colorClassName.msgOut+'"'+'><div class='+colorClassName.msgInner+'>设置主题颜色，左侧选中主色，右侧选择辅色。通过点击色块进行选中，也可在输入框中输入rgb格式的颜色编码。</div>';
     colorStr += '<div class='+'"'+colorClassName.areaInput+'"'+'>';
     colorStr += '<div class='+'"'+colorClassName.lineDiv+'"'+'  u-meta=\'{"id":"color1","type":"u-text","data":"colorData","field":"color0"}\'>' +'<label for="color0" class="color-label">主色</label><input id="color0" value="63,81,181" class='+'"'+colorClassName.lineInput+'"'+'/></div>';
-    colorStr += '<div class='+'"'+colorClassName.lineDiv+'"'+'  u-meta=\'{"id":"color1","type":"u-text","data":"colorData","field":"color1"}\'>' +'<label for="color1" class="color-label">主色加深</label><input id="color1" value="48,63,159" class='+'"'+colorClassName.lineInput+'"'+'/></div>';
+    colorStr += '<div class='+'"'+colorClassName.lineDivHide+'"'+'  u-meta=\'{"id":"color1","type":"u-text","data":"colorData","field":"color1"}\'>' +'<label for="color1" class="color-label">主色加深</label><input id="color1" value="48,63,159" class='+'"'+colorClassName.lineInput+'"'+'/></div>';
     colorStr += '<div class='+'"'+colorClassName.lineDiv+'"'+'  u-meta=\'{"id":"color1","type":"u-text","data":"colorData","field":"color2"}\'>' +'<label for="color2" class="color-label">辅色</label><input id="color2" value="83,109,254" class='+'"'+colorClassName.lineInput+'"'+'/></div>';
     colorStr += '</div>';
     colorStr += '<div class='+colorClassName.area+'>';
@@ -266,6 +267,15 @@ require(['mod'], function (mod) {
             if (color2) {
                 colorRow.setValue('color2', color2);
             }
+
+            // var mainColorEles = document.querySelectorAll('.main-color-show');
+            // var assistColorEles = document.querySelectorAll('.assist-color-show');
+            // for(var i=0; i<mainColorEles.length; i++){
+            //     mainColorEles[i].style.backgroundColor = 'rgb(' + color0 + ')';
+            //     mainColorEles[i].style.borderColor = 'rgb(' + color0 + ')';
+            //     assistColorEles[i].style.backgroundColor = 'rgb(' + color2 + ')';
+            //     assistColorEles[i].style.borderColor = 'rgb(' + color2 + ')';
+            // }
         }
     });
     /* 处理全部 */
@@ -304,6 +314,27 @@ require(['mod'], function (mod) {
 
     var evalRow = viewModel.evalData.createEmptyRow();
     viewModel.evalData.setRowSelect(0);
+
+    /**
+     * valuechange
+     */
+    var valueAry = {};
+    viewModel.colorData.on('valueChange', function(event){
+        valueAry[event.field] = event.newValue;
+        var color0 = valueAry['color0'];
+        var color1 = valueAry['color1'];
+        var color2 = valueAry['color2'];
+
+        var mainColorEles = document.querySelectorAll('.main-color-show');
+        var assistColorEles = document.querySelectorAll('.assist-color-show');
+        for(var i=0; i<mainColorEles.length; i++){
+            mainColorEles[i].style.backgroundColor = 'rgb(' + color0 + ')';
+            mainColorEles[i].style.borderColor = 'rgb(' + color0 + ')';
+            assistColorEles[i].style.backgroundColor = 'rgb(' + color2 + ')';
+            assistColorEles[i].style.borderColor = 'rgb(' + color2 + ')';
+        }
+    });
+
     /*按钮处理begin*/
     function clickFun() {
         var r = viewModel.modelData.rows()[0];
