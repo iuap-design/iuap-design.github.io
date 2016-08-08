@@ -36,7 +36,7 @@
 	        "decription": "模块化的宣传，合理的防治图片和内容，利于产品的推广",
 	        "content_img": "img/main_20.png",
 	        "phone_img": "img/phone_3.jpg",
-	        "url": "/templates/website/indexHome/index.html",
+	        "url": "/templates/website/talentHome/index.html",
 	        "download": "/templates/dist/indexHome.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
