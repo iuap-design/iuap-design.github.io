@@ -180,7 +180,7 @@
 	        "decription": "简易网页登录",
 	        "content_img": "img/main_14.png",
 	        "phone_img": "img/phone_3.jpg",
-	        "url": "/templates/website/login1/index-left.html",
+	        "url": "/templates/website/login1/index-center.html",
 	        "download": "/templates/dist/login1.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","建筑"]
@@ -190,7 +190,7 @@
 	        "decription": "简易网页登录",
 	        "content_img": "img/main_15.png",
 	        "phone_img": "img/phone_3.jpg",
-	        "url": "/templates/website/login1/index-center.html",
+	        "url": "/templates/website/login1/index-left.html",
 	        "download": "/templates/dist/login1.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","建筑"]
@@ -200,7 +200,7 @@
 	        "decription": "简易网页登录",
 	        "content_img": "img/main_16.png",
 	        "phone_img": "img/phone_3.jpg",
-	        "url": "/templates/website/login1/index-center.html",
+	        "url": "/templates/website/login1/index.html",
 	        "download": "/templates/dist/login1.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","建筑"]
