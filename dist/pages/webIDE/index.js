@@ -10,6 +10,7 @@ var viewModel = {
 	menuDT : new u.DataTable({
 		meta:{
 			name:{},
+			url:{},
 			sub:{type:'child',meta:{
 				name:{},
 				url:{},
@@ -112,8 +113,14 @@ var routerFunc = function(row, subRow, ssRow, url){
 				viewModel.title(ssRow.getValue('name'));
 				viewModel.currentRow = ssRow;
 			}else{
-				viewModel.title(subRow.getValue('name'));
-				viewModel.currentRow = subRow;
+				if(subRow){
+					viewModel.title(subRow.getValue('name'));
+					viewModel.currentRow = subRow;
+				}else{
+					viewModel.title(row.getValue('name'));
+					viewModel.currentRow = row;
+				}
+				
 			}
 			viewModel.currentUrl = url;
 			$.ajax({
@@ -191,6 +198,14 @@ $(function(){
 						}else{
 							router.on(url, routerFunc(row, subRow,null, url));
 						}
+				}
+				//如果没有子类，获取父类的url并注册路由
+				if(subRows.length===0){
+					var parurl = row.getValue('url');
+					if(parurl){
+						router.on(parurl, routerFunc(row, null,null, parurl));
+					}
+					
 				}
 			}
 			router.init();

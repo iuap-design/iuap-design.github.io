@@ -53,6 +53,8 @@
                 <nav class="demo-navigation u-nav" id="demo-navigation">
                     <ul data-bind="foreach:{data: menuDT.rows(),as :'row'}">
                         <li>
+                            <!-- url 为空 ，存在子菜单 -->
+                            <!-- ko if:  !row.ref('url')() -->
                             <a class="u-nav-link" data-bind="css:{'u-nav-link-open': row.selected()}">
                                 
                                 <span class="demo-hidden-folded" data-bind="text:row.ref('name')"></span>
@@ -60,6 +62,14 @@
 							          <i class="fa fa-chevron-right"></i>
 							    </span>
                             </a>
+                            <!-- /ko -->
+                            <!-- ko if:  row.ref('url')() -->
+                            <a class="u-nav-link" data-bind="css:{'u-nav-link-open': row.selected()},attr:{href:'#/' + row.ref('url')()}">
+                                
+                                <span class="demo-hidden-folded" data-bind="text:row.ref('name')"></span>
+                                
+                            </a>
+                            <!-- /ko -->
                             <ul class="u-nav-sub" data-bind="foreach:{data: row.ref('sub'), as :'srow'}">
                                 <li>
                                     <!-- url 为空 ，存在三级菜单 -->
@@ -67,6 +77,7 @@
                                     <a class="u-nav-link" data-bind="css:{'u-nav-link-open': srow.selected()}">
                                         
                                         <span class="demo-hidden-folded " data-bind="text:srow.ref('name')"></span>
+
                                         <span class="pull-right">
 										          <i class="fa fa-chevron-right"></i>
 										        </span>

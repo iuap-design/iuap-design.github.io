@@ -1,0 +1,77 @@
+<div class="u-container-fluid u-widget-bg">
+    <div class="u-row">
+        <div class="u-col-md-12">
+            <div class="u-widget  u-widget-right">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">筛选栏</h3>
+                </div>
+                <div class="u-widget-body">
+                    <div class="u-container-fluid">
+                        <div class="u-widget  u-widget-right">
+                            <div class="u-row">
+                                <div class="u-col-md-3">
+                                    <button class="u-button raised primary">新增</button>
+                                    <button class="u-button raised">保存</button>
+                                </div>
+                                <div class="u-col-md-9">
+                                    <form class="u-form-inline" style="float:right;">
+                                        <div class="u-form-group u-has-feedback search-input">
+                                            <input type="text" class="u-form-control" placeholder="">
+                                            <span class="u-form-control-feedback uf uf-magnifyingglass"></span>
+                                        </div>
+                                        <span class="u-link" id="condition-toggle"><span>高级</span><i class="uf uf-anglearrowdown"></i></span>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="u-row u-border-top u-not-visible" id="condition-row">
+                                <form class="u-form-inline">
+                                    <div class="u-form-group search-input">
+                                        <label>项目名称:</label>
+                                        <input type="text" class="u-form-control">
+                                    </div>
+                                    <div class="u-form-group search-input">
+                                        <label>商品名称:</label>
+                                        <input type="text" class="u-form-control" placeholder="">
+                                    </div>
+                                    <button class="u-button raised primary">搜索</button>
+                                    <button class="u-button raised">清空</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="u-widget  u-widget-right">
+                            <div class="u-row">
+                                <ul class="u-filter">
+                                    <li class="u-filter-single"><a href="#">全部</a></li>
+                                    <li class="u-filter-single"><a href="#">待发布（2）</a></li>
+                                    <li class="u-filter-single"><a href="#">调价中</a></li>
+                                    <li class="u-filter-single"><a href="#">已定价（2）</a></li>
+                                    <li class="u-filter-single"><a href="#">已下单</a></li>
+                                    <li class="u-noPointer">|</li>
+                                    <li class="u-filter-more">
+                                        <a id="u-filter-menu-first" class="u-filter-menu-title">
+           操作
+        </a>
+                                        <ul class="u-menu u-menu-bottom-left" for="u-filter-menu-first">
+                                            <li class="u-menu-item"><a href="#">新增</a></li>
+                                            <li class="u-menu-item"><a href="#">修改</a></li>
+                                            <li class="u-menu-item"><a href="#">审核</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="u-filter-more">
+                                        <a id="u-filter-menu-second" class="u-filter-menu-title">
+           状态
+        </a>
+                                        <ul class="u-menu u-menu-bottom-left" for="u-filter-menu-second">
+                                            <li class="u-menu-item"><a href="#">已发布</a></li>
+                                            <li class="u-menu-item"><a href="#">已完成</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
