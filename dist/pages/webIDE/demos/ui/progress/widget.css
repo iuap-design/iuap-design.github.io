@@ -1,11 +1,22 @@
-.u-widget-body{
-	min-height: 255px;
+.u-widget-body {
+    min-height: 250px;
+    text-align: center;
 }
 
+.u-widget-body .u-progress-vertical {
+	margin-right: 25px;
+}
+
+
 /*圆点加载条*/
-#parentLoad{
-	width: 300px;
-	height: 300px;
-	position: relative;
-	background: #E2E3EA;
+
+#parentLoad {
+    /*width: 300px;*/
+    height: 300px;
+    position: relative;
+    background: #E2E3EA;
+}
+
+.u-widget-body.height-100{
+	min-height: 100px;
 }
