@@ -5,35 +5,30 @@
         "url": "demos/quitstart/kero"
     }]
 }, {
-    "name": "控件",
+    "name": "基本控件",
     "sub": [{
             "name": "消息框",
             "url": "demos/ui/dialog"
-        }, {
-            "name": "Form表单",
-            "url": "demos/ui/combobox"
         }, {
             "name": "加载进度条",
             "url": "demos/ui/progress"
 
         }, {
-            "name": "菜单导航",
+            "name": "工具提示",
+            "url": "demos/ui/tooltip"
+
+        }, {
+            "name": "下拉框",
             "url": "demos/ui/menu"
         }, {
-            "name": "按钮标签",
+            "name": "按钮",
             "url": "demos/ui/button"
         }, {
-            "name": "徽章",
+            "name": "徽章标签",
             "url": "demos/ui/badge"
         }, {
             "name": "面包屑",
             "url": "demos/ui/breadcrumbs"
-        }, {
-            "name": "switch",
-            "url": "demos/ui/switch"
-        }, {
-            "name": "表格",
-            "url": "demos/ui/datatable"
         }, {
             "name": "页签",
             "url": "demos/ui/tabs"
@@ -52,22 +47,25 @@
         }, {
             "name": "步骤",
             "url": "demos/ui/step"
+        }, {
+            "name": "辅助",
+            "url": "demos/assist"
         }
     ]
 }, {
-    "name": "辅助",
+    "name": "复杂控件",
     "sub": [{
-        "name": "宽高",
-        "url": "demos/assist/wh"
+        "name": "树",
+        "url": "demos/complex/tree-dt"
     }, {
-        "name": "对齐方式",
-        "url": "demos/assist/align"
+        "name": "穿梭框",
+        "url": "demos/complex/transfer-dt"
+    },{
+        "name": "高级搜索",
+        "url": "demos/complex/advsearch"
     }, {
-        "name": "文字",
-        "url": "demos/assist/text"
-    }, {
-        "name": "颜色",
-        "url": "demos/assist/color"
+        "name": "筛选栏",
+        "url": "demos/complex/filterBar"
     }]
 }, {
     "name": "表单",
@@ -78,32 +76,11 @@
         "name": "表单布局",
         "url": "demos/forms/formLayout"
     }, {
-        "name": "material 元素",
-        "url": "demos/forms/materialElements"
-    }, {
         "name": "元素校验",
         "url": "demos/forms/validate"
     }, {
-        "name": "按钮条",
-        "url": "demos/forms/buttonBar"
-    }, {
         "name": "浏览态表单",
         "url": "demos/forms/browse"
-    }]
-}, {
-    "name": "复杂控件",
-    "sub": [{
-        "name": "树",
-        "url": "demos/complex/tree-dt"
-    }, {
-        "name": "穿梭框",
-        "url": "demos/complex/transfer-dt"
-    }, {
-        "name": "主子表",
-        "url": "demos/complex/main-child"
-    }, {
-        "name": "左树右表",
-        "url": "demos/complex/tree-table"
     }]
 }, {
     "name": "表格",
@@ -121,6 +98,12 @@
         }, {
             "name": "分页",
             "url": "demos/tables/pagination"
+        }, {
+            "name": "主子表",
+            "url": "demos/tables/main-child"
+        }, {
+            "name": "左树右表",
+            "url": "demos/tables/tree-table"
         }]
     }, {
         "name": "grid控件",
@@ -160,16 +143,13 @@
         }, {
             "name": "树表",
             "url": "demos/grids/tree"
+        },{
+            "name": "单表格控件展现数据",
+            "url": "demos/grids/singGrid"
+        }, {
+            "name": "主（列表）子（表格控件）交互",
+            "url": "demos/grids/mainsub"
         }]
-    }]
-}, {
-    "name": "搜索",
-    "sub": [{
-        "name": "高级搜索",
-        "url": "demos/search/advsearch"
-    }, {
-        "name": "筛选栏",
-        "url": "demos/search/filterBar"
     }]
 }, {
     "name": "布局",
@@ -200,27 +180,5 @@
     }]
 }, {
     "name": "页面模板",
-    "sub": [{
-        "name": "空页面",
-        "url": "demos/patterns/blank"
-    }, {
-        "name": "订单",
-        "sub": [{
-            "name": "订单列表",
-            "url": "demos/patterns/order/list"
-        }, {
-            "name": "订单详细",
-            "url": "demos/patterns/order/detail"
-        }]
-    }]
-}, {
-    "name": "典型场景",
-	"sub": [{
-        "name": "单表格控件展现数据",
-        "url": "demos/scene/singGrid"
-    }, {
-        "name": "主（列表）子（表格控件）交互",
-        "url": "demos/scene/mainsub"
-    }]
-    
+    "url": "demos/patterns/blank"
 }]

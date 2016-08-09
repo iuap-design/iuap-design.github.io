@@ -10,6 +10,7 @@ var viewModel = {
 	menuDT : new u.DataTable({
 		meta:{
 			name:{},
+			url:{},
 			sub:{type:'child',meta:{
 				name:{},
 				url:{},
@@ -112,8 +113,14 @@ var routerFunc = function(row, subRow, ssRow, url){
 				viewModel.title(ssRow.getValue('name'));
 				viewModel.currentRow = ssRow;
 			}else{
-				viewModel.title(subRow.getValue('name'));
-				viewModel.currentRow = subRow;
+				if(subRow){
+					viewModel.title(subRow.getValue('name'));
+					viewModel.currentRow = subRow;
+				}else{
+					viewModel.title(row.getValue('name'));
+					viewModel.currentRow = row;
+				}
+				
 			}
 			viewModel.currentUrl = url;
 			$.ajax({
@@ -134,7 +141,8 @@ var routerFunc = function(row, subRow, ssRow, url){
 
 var resizeEditor = function(){
 	var _bodyHeight = document.body.offsetHeight;
-	var editorHeight = _bodyHeight - 64 - 49;
+	var editorHeight = _bodyHeight - 44;
+	// var editorHeight = _bodyHeight - 64 - 49;
 	// $('.u-navlayout-container').css('height',_bodyHeight - 61);
 	$('#tab-panel-1').css('height',editorHeight);
 	$('#tab-panel-2').css('height',editorHeight);
@@ -190,6 +198,14 @@ $(function(){
 						}else{
 							router.on(url, routerFunc(row, subRow,null, url));
 						}
+				}
+				//如果没有子类，获取父类的url并注册路由
+				if(subRows.length===0){
+					var parurl = row.getValue('url');
+					if(parurl){
+						router.on(parurl, routerFunc(row, null,null, parurl));
+					}
+					
 				}
 			}
 			router.init();

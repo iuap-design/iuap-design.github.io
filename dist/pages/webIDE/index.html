@@ -53,6 +53,8 @@
                 <nav class="demo-navigation u-nav" id="demo-navigation">
                     <ul data-bind="foreach:{data: menuDT.rows(),as :'row'}">
                         <li>
+                            <!-- url 为空 ，存在子菜单 -->
+                            <!-- ko if:  !row.ref('url')() -->
                             <a class="u-nav-link" data-bind="css:{'u-nav-link-open': row.selected()}">
                                 
                                 <span class="demo-hidden-folded" data-bind="text:row.ref('name')"></span>
@@ -60,6 +62,14 @@
 							          <i class="fa fa-chevron-right"></i>
 							    </span>
                             </a>
+                            <!-- /ko -->
+                            <!-- ko if:  row.ref('url')() -->
+                            <a class="u-nav-link" data-bind="css:{'u-nav-link-open': row.selected()},attr:{href:'#/' + row.ref('url')()}">
+                                
+                                <span class="demo-hidden-folded" data-bind="text:row.ref('name')"></span>
+                                
+                            </a>
+                            <!-- /ko -->
                             <ul class="u-nav-sub" data-bind="foreach:{data: row.ref('sub'), as :'srow'}">
                                 <li>
                                     <!-- url 为空 ，存在三级菜单 -->
@@ -67,6 +77,7 @@
                                     <a class="u-nav-link" data-bind="css:{'u-nav-link-open': srow.selected()}">
                                         
                                         <span class="demo-hidden-folded " data-bind="text:srow.ref('name')"></span>
+
                                         <span class="pull-right">
 										          <i class="fa fa-chevron-right"></i>
 										        </span>
@@ -108,11 +119,11 @@
                     <a href="#tab-panel-2" class="u-tabs__tab">CSS</a>
                     <a href="#tab-panel-3" class="u-tabs__tab">JavaScript</a>
                     <a href="#tab-panel-4" class="u-tabs__tab">View</a>
-                    <button type="button" data-bind="click:run" class="u-button raised primary" style="position:absolute;right:0px;top:15px;margin-right:40px;"><i class="fa fa-play-circle" style="font-size:18px;padding-right:5px;"></i>运行</button>
+                    <button type="button" data-bind="click:run" class="u-button raised primary" style="position:absolute;right:0px;top:8px;margin-right:40px;"><i class="fa fa-play-circle" style="font-size:18px;padding-right:5px;"></i>运行</button>
                 </div>
-                <div class="bread-info u-tabs_header">
+                <!-- <div class="bread-info u-tabs_header">
                     <span data-bind="text:title"></span>
-                </div>
+                </div> -->
                 <div class="u-tabs__panel is-active" id="tab-panel-1">
                     <div id="html_code_edit" style="width:100%;height:100%;font-size:16px;">
                     </div>

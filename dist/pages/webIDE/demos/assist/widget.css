@@ -1,0 +1,22 @@
+.u-widget-body.height div{
+	width: 50px;
+	margin:0px 15px;
+    border:solid 1px red;
+    background:#EF0;
+    display:inline-block;
+}
+
+.u-widget-body.width div{
+	height:50px;
+	margin:0px 15px;
+    border:solid 1px red;
+    background:#EF0;
+    display:inline-block;
+}
+
+.desc{
+    position:absolute;
+    bottom:0px;
+    font-size:12px;
+    
+}
