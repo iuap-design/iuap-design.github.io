@@ -85,7 +85,7 @@
 }, {
     "name": "表格",
     "sub": [{
-        "name": "table",
+        "name": "基础表格",
         "sub": [{
             "name": "简单表格",
             "url": "demos/tables/simple"
@@ -179,6 +179,6 @@
         "url": "demos/layouts/navbar"
     }]
 }, {
-    "name": "页面模板",
+    "name": "空页面",
     "url": "demos/patterns/blank"
 }]

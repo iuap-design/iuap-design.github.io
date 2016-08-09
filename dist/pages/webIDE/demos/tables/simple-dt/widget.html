@@ -1,71 +1,76 @@
 <div class="u-container-fluid u-widget-bg">
-	<div class="u-row">
-		<div class="u-col-12">
-			<div class="u-widget">
-				<h4>表格复选</h4>
-				<table class="u-table" style="width:100%;">
-					<thead>
-						<tr>
-							<th>
-								<label class="u-checkbox only-style" data-bind="click: listData.toggleAllSelect.bind(listData), css:{'is-checked': listData.allSelected()}">
-									<input id="checkInput" type="checkbox" class="u-checkbox-input">
-									<span class="u-checkbox-label"></span>
-								</label>
-							</th>
-							<th>对账单</th>
-							<th>对账日期</th>
-							<th>采购公司</th>
-							<th>对账总金额</th>
-							<th>可开发票金额</th>
-						</tr>
-					</thead>
-					<tbody data-bind="foreach:{data:listData.rows(), as: 'row', afterAdd: afterAdd}">
-						<tr data-bind="css: { 'is-selected' : row.selected() }, attr: {'rowindex': $index}">
-							<td>
-								<label class="u-checkbox only-style" data-bind="click: row.multiSelect, css:{'is-checked': row.selected()}">
-									<input type="checkbox" class="u-checkbox-input">
-									<span class="u-checkbox-label"></span>
-								</label>
-							</td>
-							<td data-bind="text: row.ref('field1')"></td>
-							<td data-bind="text: row.ref('field2')"></td>
-							<td data-bind="text: row.ref('field3')"></td>
-							<td data-bind="text: row.ref('field4')"></td>
-							<td data-bind="text: row.ref('field5')"></td>
-						</tr>
-					</tbody>
-				</table>
-
-			</div>
-		</div>
-	</div>
-
-	<div class="u-row">
-		<div class="u-col-12">
-			<div class="u-widget">
-				<h4>表格单选</h4>
-				<table class="u-table" style="width:100%;">
-					<thead>
-						<tr>
-							<th>对账单</th>
-							<th>对账日期</th>
-							<th>采购公司</th>
-							<th>对账总金额</th>
-							<th>可开发票金额</th>
-						</tr>
-					</thead>
-					<tbody data-bind="foreach:{data:listData.rows(), as: 'row', afterAdd: afterAdd}">
-						<tr data-bind="click: row.singleSelect,css: { 'is-selected' : row.selected() }, attr: {'rowindex': $index}">
-							<td data-bind="text: row.ref('field1')"></td>
-							<td data-bind="text: row.ref('field2')"></td>
-							<td data-bind="text: row.ref('field3')"></td>
-							<td data-bind="text: row.ref('field4')"></td>
-							<td data-bind="text: row.ref('field5')"></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</div>
-
+    <div class="u-row">
+        <div class="u-col-12">
+            <div class="u-widget">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">表格复选</h3>
+                </div>
+                <div class="u-widget-body">
+                    <table class="u-table" style="width:100%;">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <label class="u-checkbox only-style" data-bind="click: listData.toggleAllSelect.bind(listData), css:{'is-checked': listData.allSelected()}">
+                                        <input id="checkInput" type="checkbox" class="u-checkbox-input">
+                                        <span class="u-checkbox-label"></span>
+                                    </label>
+                                </th>
+                                <th>对账单</th>
+                                <th>对账日期</th>
+                                <th>采购公司</th>
+                                <th>对账总金额</th>
+                                <th>可开发票金额</th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach:{data:listData.rows(), as: 'row', afterAdd: afterAdd}">
+                            <tr data-bind="css: { 'is-selected' : row.selected() }, attr: {'rowindex': $index}">
+                                <td>
+                                    <label class="u-checkbox only-style" data-bind="click: row.multiSelect, css:{'is-checked': row.selected()}">
+                                        <input type="checkbox" class="u-checkbox-input">
+                                        <span class="u-checkbox-label"></span>
+                                    </label>
+                                </td>
+                                <td data-bind="text: row.ref('field1')"></td>
+                                <td data-bind="text: row.ref('field2')"></td>
+                                <td data-bind="text: row.ref('field3')"></td>
+                                <td data-bind="text: row.ref('field4')"></td>
+                                <td data-bind="text: row.ref('field5')"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="u-row">
+        <div class="u-col-12">
+            <div class="u-widget">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">表格单选</h3>
+                </div>
+                <div class="u-widget-body">
+                    <table class="u-table" style="width:100%;">
+                        <thead>
+                            <tr>
+                                <th>对账单</th>
+                                <th>对账日期</th>
+                                <th>采购公司</th>
+                                <th>对账总金额</th>
+                                <th>可开发票金额</th>
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach:{data:listData.rows(), as: 'row', afterAdd: afterAdd}">
+                            <tr data-bind="click: row.singleSelect,css: { 'is-selected' : row.selected() }, attr: {'rowindex': $index}">
+                                <td data-bind="text: row.ref('field1')"></td>
+                                <td data-bind="text: row.ref('field2')"></td>
+                                <td data-bind="text: row.ref('field3')"></td>
+                                <td data-bind="text: row.ref('field4')"></td>
+                                <td data-bind="text: row.ref('field5')"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
