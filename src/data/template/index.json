@@ -1,56 +1,16 @@
 {
 	"list":[
 	    {
-	        "title": "金融理财模板",
-	        "id": "0101",
-	        "decription": "深耕银行、券商等金融机构的高净值客户，致力于打造专业的媒体管理模板",
-	        "content_img": "img/main_6.png",
+	        "title": "主题模板",
+	        "id": "1101",
+	        "decription": "模块化的宣传主题，整个网站围绕一个中心，效果较有冲击感",
+	        "content_img": "img/main_22.png",
 	        "phone_img": "img/phone_3.jpg",
-	        "url": "http://design.yyuap.com/ficloud/home/statistics",
-	        "download": "javascript:;",
-	        "using_times": "228",
-	        "for_area": ["互联网","金融"]
-	    },{
-	        "title": "菜单布局模板",
-	        "id": "0201",
-	        "decription": "可伸缩导航布局，伸展时展示全部nav，收起显示具体图标",
-	        "content_img": "img/main_13.png",
-	        "phone_img": "img/phone_3.jpg",
-	        "url": "/templates/website/menuNavLayout/index.html",
-	        "download": "/templates/dist/menuNavLayout.zip",
-	        "using_times": "228",
-	        "for_area": ["互联网","金融"]
-	    },{
-	        "title": "landing page模板",
-	        "id": "1001",
-	        "decription": "模块化的宣传，合理的防治图片和内容，利于产品的推广",
-	        "content_img": "img/main_21.png",
-	        "phone_img": "img/phone_3.jpg",
-	        "url": "/templates/website/productHome/index.html",
-	        "download": "/templates/dist/productHome.zip",
-	        "using_times": "228",
-	        "for_area": ["互联网","金融"]
-	    },{
-	        "title": "landing page模板",
-	        "id": "1002",
-	        "decription": "模块化的宣传，合理的防治图片和内容，利于产品的推广",
-	        "content_img": "img/main_20.png",
-	        "phone_img": "img/phone_3.jpg",
-	        "url": "/templates/website/talentHome/index.html",
-	        "editurl": "http://design.yyuap.com/designer/#/preview/talentHome",
-	        "download": "/templates/dist/talentHome.zip",
-	        "using_times": "228",
-	        "for_area": ["互联网","金融"]
-	    },{
-	        "title": "左侧菜单布局模板",
-	        "id": "0201",
-	        "decription": "可伸缩导航布局，伸展时展示全部nav，显示全部内容",
-	        "content_img": "img/main_19.png",
-	        "phone_img": "img/phone_3.jpg",
-	        "url": "/templates/website/left-menu-layout-1/index.html",
-	        "download": "/templates/dist/left-menu-layout-1.zip",
-	        "using_times": "228",
-	        "for_area": ["互联网","电商"]
+	        "url": "/templates/website/liyue/index.html",
+	        "download": "/templates/dist/liyue.zip",
+	        "editurl": "http://design.yyuap.com/designer/#/preview/liyue",
+	        "using_times": "298",
+	        "for_area": ["互联网","体育"]
 	    },{
 	        "title": "运维管理模板",
 	        "id": "0301",
@@ -74,6 +34,17 @@
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
 	    },{
+	        "title": "landing page模板",
+	        "id": "1002",
+	        "decription": "模块化的宣传，合理的防治图片和内容，利于产品的推广",
+	        "content_img": "img/main_20.png",
+	        "phone_img": "img/phone_3.jpg",
+	        "url": "/templates/website/talentHome/index.html",
+	        "editurl": "http://design.yyuap.com/designer/#/preview/talentHome",
+	        "download": "/templates/dist/talentHome.zip",
+	        "using_times": "228",
+	        "for_area": ["互联网","金融"]
+	    },{
 	        "title": "电商模板",
 	        "id": "0401",
 	        "decription": "站在用户的角度，针对性的为用户提供刚需",
@@ -84,6 +55,46 @@
 	        "editurl": "http://design.yyuap.com/designer/#/preview/e-commerce",
 	        "using_times": "100",
 	        "for_area": ["电商"]
+	    },{
+	        "title": "菜单布局模板",
+	        "id": "0201",
+	        "decription": "可伸缩导航布局，伸展时展示全部nav，收起显示具体图标",
+	        "content_img": "img/main_13.png",
+	        "phone_img": "img/phone_3.jpg",
+	        "url": "/templates/website/menuNavLayout/index.html",
+	        "download": "/templates/dist/menuNavLayout.zip",
+	        "using_times": "228",
+	        "for_area": ["互联网","金融"]
+	    },{
+	        "title": "landing page模板",
+	        "id": "1001",
+	        "decription": "模块化的宣传，合理的防治图片和内容，利于产品的推广",
+	        "content_img": "img/main_21.png",
+	        "phone_img": "img/phone_3.jpg",
+	        "url": "/templates/website/productHome/index.html",
+	        "download": "/templates/dist/productHome.zip",
+	        "using_times": "228",
+	        "for_area": ["互联网","金融"]
+	    },{
+	        "title": "金融理财模板",
+	        "id": "0101",
+	        "decription": "深耕银行、券商等金融机构的高净值客户，致力于打造专业的媒体管理模板",
+	        "content_img": "img/main_6.png",
+	        "phone_img": "img/phone_3.jpg",
+	        "url": "http://design.yyuap.com/ficloud/home/statistics",
+	        "download": "javascript:;",
+	        "using_times": "228",
+	        "for_area": ["互联网","金融"]
+	    },{
+	        "title": "左侧菜单布局模板",
+	        "id": "0201",
+	        "decription": "可伸缩导航布局，伸展时展示全部nav，显示全部内容",
+	        "content_img": "img/main_19.png",
+	        "phone_img": "img/phone_3.jpg",
+	        "url": "/templates/website/left-menu-layout-1/index.html",
+	        "download": "/templates/dist/left-menu-layout-1.zip",
+	        "using_times": "228",
+	        "for_area": ["互联网","电商"]
 	    },{
 	        "title": "金融理财模板",
 	        "id": "0501",
