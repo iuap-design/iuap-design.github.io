@@ -34,6 +34,17 @@
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
 	    },{
+	        "title": "空模板",
+	        "id": "1302",
+	        "decription": "为设计器预置",
+	        "content_img": "img/main_23.png",
+	        "phone_img": "img/phone_3.jpg",
+	        "url": "/templates/website/blank/index.html",
+	        "editurl": "http://design.yyuap.com/designer/#/preview/blank",
+	        "download": "/templates/dist/blank.zip",
+	        "using_times": "228",
+	        "for_area": ["互联网","金融"]
+	    },{
 	        "title": "landing page模板",
 	        "id": "1002",
 	        "decription": "模块化的宣传，合理的防治图片和内容，利于产品的推广",
@@ -53,6 +64,16 @@
 	        "url": "/templates/website/e-commerce/index.html",
 	        "download": "/templates/dist/e-commerce.zip",
 	        "using_times": "100",
+	        "for_area": ["电商"]
+	    },{
+	        "title": "电商模板",
+	        "id": "0402",
+	        "decription": "站在用户的角度，针对性的为用户提供刚需",
+	        "content_img": "img/main_24.png",
+	        "phone_img": "img/phone_4.jpg",
+	        "url": "/templates/website/chinaMobile/index.html",
+	        "download": "/templates/dist/chinaMobile.zip",
+	        "using_times": "120",
 	        "for_area": ["电商"]
 	    },{
 	        "title": "菜单布局模板",
@@ -180,7 +201,7 @@
 	        "decription": "简易网页登录",
 	        "content_img": "img/main_14.png",
 	        "phone_img": "img/phone_3.jpg",
-	        "url": "/templates/website/login1/index-left.html",
+	        "url": "/templates/website/login1/index-center.html",
 	        "download": "/templates/dist/login1.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","建筑"]
@@ -190,7 +211,7 @@
 	        "decription": "简易网页登录",
 	        "content_img": "img/main_15.png",
 	        "phone_img": "img/phone_3.jpg",
-	        "url": "/templates/website/login1/index-center.html",
+	        "url": "/templates/website/login1/index-left.html",
 	        "download": "/templates/dist/login1.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","建筑"]
@@ -200,7 +221,7 @@
 	        "decription": "简易网页登录",
 	        "content_img": "img/main_16.png",
 	        "phone_img": "img/phone_3.jpg",
-	        "url": "/templates/website/login1/index-center.html",
+	        "url": "/templates/website/login1/index.html",
 	        "download": "/templates/dist/login1.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","建筑"]
