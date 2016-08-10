@@ -6,7 +6,7 @@
 	        "decription": "模块化的宣传主题，整个网站围绕一个中心，效果较有冲击感",
 	        "content_img": "img/main_22.png",
 	        "phone_img": "img/phone_3.jpg",
-	        "url": "/templates/website/liyue/index.html",
+	        "url": "/templates/website/liyue-static/index.html",
 	        "download": "/templates/dist/liyue.zip",
 	        "editurl": "http://design.yyuap.com/designer/#/preview/liyue",
 	        "using_times": "298",
