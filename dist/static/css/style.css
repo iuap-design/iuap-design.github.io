@@ -2830,6 +2830,11 @@ label.hover {
     vertical-align: middle;
 }
 
+.navbar .logo img.second {
+    width: 110px;
+}
+
+
 .navbar .social-buttons {
     display: inline-block;
 }
