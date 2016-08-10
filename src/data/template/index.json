@@ -34,6 +34,17 @@
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
 	    },{
+	        "title": "空模板",
+	        "id": "1302",
+	        "decription": "为设计器预置",
+	        "content_img": "img/main_23.png",
+	        "phone_img": "img/phone_3.jpg",
+	        "url": "/templates/website/blank/index.html",
+	        "editurl": "http://design.yyuap.com/designer/#/preview/blank",
+	        "download": "/templates/dist/blank.zip",
+	        "using_times": "228",
+	        "for_area": ["互联网","金融"]
+	    },{
 	        "title": "landing page模板",
 	        "id": "1002",
 	        "decription": "模块化的宣传，合理的防治图片和内容，利于产品的推广",
