@@ -66,6 +66,16 @@
 	        "using_times": "100",
 	        "for_area": ["电商"]
 	    },{
+	        "title": "电商模板",
+	        "id": "0402",
+	        "decription": "站在用户的角度，针对性的为用户提供刚需",
+	        "content_img": "img/main_24.png",
+	        "phone_img": "img/phone_4.jpg",
+	        "url": "/templates/website/chinaMobile/index.html",
+	        "download": "/templates/dist/chinaMobile.zip",
+	        "using_times": "120",
+	        "for_area": ["电商"]
+	    },{
 	        "title": "菜单布局模板",
 	        "id": "0201",
 	        "decription": "可伸缩导航布局，伸展时展示全部nav，收起显示具体图标",
