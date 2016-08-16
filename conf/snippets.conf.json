@@ -12,11 +12,9 @@
         }, {
             "name": "加载进度条",
             "url": "demos/ui/progress"
-
         }, {
             "name": "工具提示",
             "url": "demos/ui/tooltip"
-
         }, {
             "name": "下拉框",
             "url": "demos/ui/menu"
@@ -27,6 +25,9 @@
             "name": "徽章标签",
             "url": "demos/ui/badge"
         }, {
+            "name": "卡片",
+            "url": "demos/ui/cards"
+        }, {
             "name": "面包屑",
             "url": "demos/ui/breadcrumbs"
         }, {
@@ -35,6 +36,12 @@
         }, {
             "name": "分页",
             "url": "demos/ui/pagination"
+        },  {
+            "name": "天气",
+            "url": "demos/ui/weather"
+        }, {
+            "name": "图表",
+            "url": "demos/ui/chart"
         }, {
             "name": "列表",
             "url": "demos/ui/listgroup"

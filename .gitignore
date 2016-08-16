@@ -129,3 +129,6 @@ generate-uui
 
 # file
 dist/download/*
+
+# IDE
+.idea
