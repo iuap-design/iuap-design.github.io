@@ -1,11 +1,17 @@
 
 # u.Row
 
+## rowId
+
+获取当前行的属性值rowId
+
+	row.rowId
+
 ## setValue
 
-设置当前行的字段值
+设置当前行row的字段值
 
-	datatable.setValue(fieldName, value)
+	row.setValue(fieldName, value)
 
 
 **params:**
@@ -17,9 +23,9 @@
 ---
 ## getValue  
 
-获取当前行字段的值
+获取当前行row字段的值
 
-	datatable.getValue(fieldName)
+	row.getValue(fieldName)
 
 **params:**
 
@@ -29,26 +35,26 @@
 
 ## setSimpleData
 
-设置Row中的数据
+设置当前行row中的数据
 
 	
-	Row.setSimpleData({"field1":"v1","field2":"v2"})
+	row.setSimpleData({"field1":"v1","field2":"v2"})
  
 ---
 
 ## getSimpleData
 
-获取Row中的数据
+获取当前行row中的数据
 
 	
-	Row.getSimpleData()
+	row.getSimpleData()
  
 ---
 ## ref
 
 以knockout语法做双向绑定，显示此行的字段值
 
-	<label data-bind="text: Row.ref('fieldName')"></label>
+	<label data-bind="text: row.ref('fieldName')"></label>
 
 *params:*
 

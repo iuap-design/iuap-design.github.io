@@ -53,7 +53,7 @@
 ---
 ## setSimpleData
 
-设置dataTable中的数据，将原有数据清除
+将原有数据清除,并设置新数据，
 
 
 	dataTable.setSimpleData([
@@ -64,7 +64,7 @@
 ---
 ## addSimpleData
 
-在dataTable中添加数据，原有数据不变
+在原有数据的基础上，添加新数据
 
 
 	dataTable.addSimpleData([
@@ -134,7 +134,7 @@
 
 ## setRowSelect
 
-设置行选中
+清除之前选中行，并设置新的选中行
 
 	dataTable.setRowSelect(index)
 
@@ -146,7 +146,7 @@
 
 ## setRowsSelect
 
-设置多行选中
+清除之前选中行，并设置多行选中
 
 	dataTable.setRowsSelect(indices)
 
@@ -158,7 +158,7 @@
 
 ## addRowSelect
 
-追加行选中
+在原有选中行的基础上，追加新的选中行
 
 	dataTable.addRowSelect(index)
 
@@ -170,8 +170,9 @@
 
 ## addRowsSelect
 
-追加行选中
-​	
+
+在原有选中行的基础上，追加多个新的选中行
+
 	dataTable.addRowsSelect(indices)
 
 *params*:

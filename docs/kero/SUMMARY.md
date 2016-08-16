@@ -1,16 +1,16 @@
-* [获取 Kero](install.md)
 * [概述](overview.md)
+* [获取 Kero](install.md)
 * [起步](gettingstarted.md)
-* 控件模型
-  * [基础说明](module.md)
-  * [API](moduleapi.md)
 * 数据模型
   * [基础说明](datatable.md)
   * [基础设置](dataTableUse.md)
-  * [校验设置](validateapi.md)
   * [DataTable API](udatatable.md)
   * [Row API](row.md)
+  * [校验设置](validateapi.md)
   * [工具库](core.md)
+* 控件模型
+  * [基础说明](module.md)
+  * [API](moduleapi.md)
 * 基本示例
   * [年份选择](ex_year.md)
   * [月份选择](ex_month.md)

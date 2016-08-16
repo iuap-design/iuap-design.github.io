@@ -20,9 +20,17 @@
 		})
 
 
-meta中是模型的字段信息，字段名对应的对象为字段的属性定义。没有字段属性时，可以为空对象。
+meta中是模型的字段信息，字段名对应的对象为字段的属性定义。没有字段属性时，可以为空对象。例如：
 
-字段的属性值在控件模型中被使用到，主要用于控制表单输入、字段显示格式等业务特性。
+		var dataTable = new u.DataTable({
+			meta:{
+				id:{},
+				name:{}
+			}
+		})
+上面代码定义了一个名字为dataTable的数据模型，它有2个字段分别为id和name。下面会以这个dataTable为例进行一些方法的说明。
+
+字段的属性值在控件模型中被使用到，主要用于控制表单输入、字段显示格式等业务特性。具体属性值请参考[基础设置文档](./dataTableUse.html)
 
 
 
@@ -42,22 +50,24 @@ meta中是模型的字段信息，字段名对应的对象为字段的属性定�
 
 ### 新增数据行并赋值
 
-	var row = dataTable.createEmptyRow();
-	row.setValue('id','003')
+	var row = dataTable.createEmptyRow();//创建一个空行row
+	row.setValue('id','003');//对空行的id字段赋值
 
 新增的数据在dataTable中表现为新增一个`Row`对象。调用`setValue`对其中字段赋值。
 
 ### 修改已存在的行中数据
 
-	var row = dataTable.getRow(index);
+	var row = dataTable.getRow(index);//index指第几行，从0行开始计算。
 	row.setValue('name','jerry');
+
+修改已存在的行数据需要先获取指定行`row`，在调用`row`的setValue方法。
 
 
 ## 数据的删除
 
 ### 删除某一行数据
 
-	dataTable.removeRow(index);
+	dataTable.removeRow(index);//index指第几行，从0行开始计算。
 
 ### 删除所有行数据
 
