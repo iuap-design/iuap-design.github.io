@@ -1,0 +1,167 @@
+.page-content {
+    padding: 30px 30px;
+}
+.u-cards{
+    border-radius: 3px;
+    position: relative;
+    margin-bottom: 30px;
+    background-color: #fff;
+}
+.u-cards-content{
+
+}
+.padding-25{
+    padding: 25px!important;
+}
+.counter{
+    text-align: center;
+}
+.counter .counter-number-group, .counter>.counter-number {
+    font-size: 20px;
+    color:#424242;
+}
+.counter-lg .counter-number-group, .counter-lg>.counter-number {
+    font-size: 40px;
+    color:#424242;
+}
+.counter-md .counter-number-group, .counter-md>.counter-number {
+    font-size: 30px;
+    color:#424242;
+}
+.counter-sm .counter-number-group, .counter-sm>.counter-number {
+    font-size: 14px;
+}
+.counter-inverse .counter-number-group, .counter-inverse>.counter-number{
+    color: #fff;
+}
+.counter-label {
+    display: block;
+}
+.text-uppercase {
+    text-transform: uppercase!important;
+}
+
+.counter-inverse {
+    color: #fff;
+}
+.u-row.no-space {
+    margin-right: 0;
+    margin-left: 0;
+}
+.counter-md .counter-icon {
+    font-size: 30px;
+}
+
+.icon.icon-2x {
+    /* font-size: 2em; */
+}
+.icon.icon-circle {
+    position: relative;
+    margin: .5em;
+}
+
+[class*=" md-"], [class^=md-] {
+    position: relative;
+    display: inline-block;
+    font-family: Material-Design-Iconic-Font;
+    font-style: normal;
+    font-weight: 400;
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+    text-rendering: auto;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon {
+    position: relative;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon.icon-circle:before {
+    position: relative;
+    z-index: 1;
+}
+.counter-sm .counter-icon {
+    font-size: 14px;
+}
+.counter-md .counter-icon {
+    font-size: 30px;
+}
+.icon.icon-circle:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    width: 2em;
+    height: 2em;
+    content: "";
+    background-color: inherit;
+    border-radius: 100%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.icon.icon-circle:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    width: 2em;
+    height: 2em;
+    content: "";
+    background-color: inherit;
+    border-radius: 100%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.u-cards-watermark {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    line-height: 1;
+    opacity: .1;
+}
+.u-cards-watermark.darker {
+    color: #000;
+}
+.u-cards-watermark .uf{
+    font-size: 40px;
+}
+
+
+/**自定义公共样式*/
+.uf{
+    font-size: 32px;
+}
+.u-row.no-space>[class*=u-col-] {
+    padding-right: 0;
+    padding-left: 0;
+}

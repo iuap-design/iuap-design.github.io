@@ -245,6 +245,46 @@
 	        "download": "/templates/dist/yuncai.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","电商"]
+	    },{
+	        "title": "忘记密码模版",
+	        "id": "1401",
+	        "decription": "简易的忘记密码模版",
+	        "content_img": "img/main_25.png",
+	        "phone_img": "img/phone_3.jpg",
+	        "url": "/templates/website/forgot-password/index.html",
+	        "download": "/templates/dist/forgot-password.zip",
+	        "using_times": "228",
+	        "for_area": ["互联网"]
+	    },{
+	        "title": "注册模版",
+	        "id": "1501",
+	        "decription": "简易的网页注册模版",
+	        "content_img": "img/main_26.png",
+	        "phone_img": "img/phone_3.jpg",
+	        "url": "/templates/website/register2/index.html",
+	        "download": "/templates/dist/register2.zip",
+	        "using_times": "228",
+	        "for_area": ["互联网"]
+	    },{
+	        "title": "注册模版",
+	        "id": "1502",
+	        "decription": "简易的网页注册模版",
+	        "content_img": "img/main_27.png",
+	        "phone_img": "img/phone_3.jpg",
+	        "url": "/templates/website/register2/index-left.html",
+	        "download": "/templates/dist/register2.zip",
+	        "using_times": "228",
+	        "for_area": ["互联网"]
+	    },{
+	        "title": "注册模版",
+	        "id": "1503",
+	        "decription": "简易的网页注册模版",
+	        "content_img": "img/main_28.png",
+	        "phone_img": "img/phone_3.jpg",
+	        "url": "/templates/website/register2/index-center.html",
+	        "download": "/templates/dist/register2.zip",
+	        "using_times": "228",
+	        "for_area": ["互联网"]
 	    }
 
 	]
