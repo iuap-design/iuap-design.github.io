@@ -1,6 +1,13 @@
 # 关于 `iuap design` 的介绍
 
-![iuap design 前端集成解决方案](http://design.yyuap.com/dist/static/img/all/design.png)
+`iuap design`是面向企业级应用开发的前端集成解决方案，聚焦前端，提供前端开发全链路生态。`iuap design`包含设计语言、前端基础库`sparrow.js`、前端UI框架`neoui`（样式系统、组件、插件）、应用数据管理`kero`、集成开发工具`uba`、前端模板库、前端`mvvm`框架`helix`、可视化页面设计器、组件库等一系列技术产品。
+
+`iuap design`关注产品经理、设计师、前端工程师、全栈工程师等各种用户角色。
+
+**iuap design 核心产品家族亮相**
+
+![enter image description here](http://design.yyuap.com/dist/static/img/all/design.png)
+
 
 # 获取iuap-design
 
@@ -16,7 +23,7 @@ git clone git@github.com:iuap-design/iuap-design.git
 <!--css-->
 http://design.yyuap.com/static/uui/latest/css/u.css
 <!--如需使用grid,tree插件，加载grid.css,tree.css-->
-http://design.yyuap.com/static/uui/latest/css/grid.css 
+http://design.yyuap.com/static/uui/latest/css/grid.css
 http://design.yyuap.com/static/uui/latest/css/tree.css
 
 <!--js-->

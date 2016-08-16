@@ -1,6 +1,17 @@
 {
 	"list":[
 	    {
+	        "title": "空模板",
+	        "id": "1302",
+	        "decription": "为设计器预置",
+	        "content_img": "img/main_23.png",
+	        "phone_img": "img/phone_3.jpg",
+	        "url": "/templates/website/blank/index.html",
+	        "editurl": "http://design.yyuap.com/designer/#/preview/blank",
+	        "download": "/templates/dist/blank.zip",
+	        "using_times": "228",
+	        "for_area": ["互联网","金融"]
+	    },{
 	        "title": "主题模板",
 	        "id": "1101",
 	        "decription": "模块化的宣传主题，整个网站围绕一个中心，效果较有冲击感",
@@ -31,17 +42,6 @@
 	        "url": "/templates/website/tenxcloud1/index.html",
 	        "download": "/templates/dist/tenxcloud.zip",
 	        "editurl": "http://design.yyuap.com/designer/#/preview/tenxcloud1",
-	        "using_times": "228",
-	        "for_area": ["互联网","金融"]
-	    },{
-	        "title": "空模板",
-	        "id": "1302",
-	        "decription": "为设计器预置",
-	        "content_img": "img/main_23.png",
-	        "phone_img": "img/phone_3.jpg",
-	        "url": "/templates/website/blank/index.html",
-	        "editurl": "http://design.yyuap.com/designer/#/preview/blank",
-	        "download": "/templates/dist/blank.zip",
 	        "using_times": "228",
 	        "for_area": ["互联网","金融"]
 	    },{

@@ -45,11 +45,11 @@
 		                        <span>Dropdown</span><i class="uf uf-sortdown"></i>
 		                    </button>
 		                    <ul class="u-menu " for="demo-menu-lower-right6">
-		                        <li class="u-menu-item"><span>Action</spa></li>
-		                        <li class="u-menu-item"><spa>Another action</spa></li>
-		                        <li class="u-menu-item"><spa>Something else here</spa></li>
-		                        <li class="u-menu-item"><spa>Separated link</spa></li>
-		                        <li class="u-menu-item"><spa>One more separated link</spa></li>
+		                        <li class="u-menu-item"><span>Action</span></li>
+		                        <li class="u-menu-item"><span>Another action</span></li>
+		                        <li class="u-menu-item"><span>Something else here</span></li>
+		                        <li class="u-menu-item"><span>Separated link</span></li>
+		                        <li class="u-menu-item"><span>One more separated link</span></li>
 		                    </ul>
 			          	</div>
 			          	<div class="u-col-2">
@@ -60,11 +60,11 @@
 						        </span>
 		                    </button>
 		                    <ul class="u-menu " for="demo-menu-lower-right7">
-		                        <li class="u-menu-item"><span>Action</spa></li>
-		                        <li class="u-menu-item"><spa>Another action</spa></li>
-		                        <li class="u-menu-item"><spa>Something else here</spa></li>
-		                        <li class="u-menu-item"><spa>Separated link</spa></li>
-		                        <li class="u-menu-item"><spa>One more separated link</spa></li>
+		                        <li class="u-menu-item"><span>Action</span></li>
+		                        <li class="u-menu-item"><span>Another action</span></li>
+		                        <li class="u-menu-item"><span>Something else here</span></li>
+		                        <li class="u-menu-item"><span>Separated link</span></li>
+		                        <li class="u-menu-item"><span>One more separated link</span></li>
 		                    </ul>
 			          	</div>
 			          	<div class="u-col-2">
@@ -74,11 +74,11 @@
 								</div>
 		                    </button>
 		                    <ul class="u-menu " for="demo-menu-lower-right8">
-		                        <li class="u-menu-item"><span>Action</spa></li>
-		                        <li class="u-menu-item"><spa>Another action</spa></li>
-		                        <li class="u-menu-item"><spa>Something else here</spa></li>
-		                        <li class="u-menu-item"><spa>Separated link</spa></li>
-		                        <li class="u-menu-item"><spa>One more separated link</spa></li>
+		                        <li class="u-menu-item"><span>Action</span></li>
+		                        <li class="u-menu-item"><span>Another action</span></li>
+		                        <li class="u-menu-item"><span>Something else here</span></li>
+		                        <li class="u-menu-item"><span>Separated link</span></li>
+		                        <li class="u-menu-item"><span>One more separated link</span></li>
 		                    </ul>
 			          	</div>
 			          	<div class="u-col-2">
@@ -211,11 +211,7 @@
 				                	</i>
 				            	</a>
 				          	</li>
-				          	<li id="toggleMenubar">
-				            	<span>
-				            		<i class="uf uf-magnifyingglass"></i>
-				            	</span>
-				          	</li>
+				          	
 				        </ul>
 				        <div class="u-navlayout-toolbar u-col-md-5 padding-none">
 				          	
@@ -224,11 +220,11 @@
 			                        <span>Dropdown</span><i class="uf uf-sortdown"></i>
 			                    </button>
 			                    <ul class="u-menu " for="demo-menu-lower-right1">
-			                        <li class="u-menu-item"><span>Action</spa></li>
-			                        <li class="u-menu-item"><spa>Another action</spa></li>
-			                        <li class="u-menu-item"><spa>Something else here</spa></li>
-			                        <li class="u-menu-item"><spa>Separated link</spa></li>
-			                        <li class="u-menu-item"><spa>One more separated link</spa></li>
+			                        <li class="u-menu-item"><span>Action</span></li>
+			                        <li class="u-menu-item"><span>Another action</span></li>
+			                        <li class="u-menu-item"><span>Something else here</span></li>
+			                        <li class="u-menu-item"><span>Separated link</span></li>
+			                        <li class="u-menu-item"><span>One more separated link</span></li>
 			                    </ul>
 				          	</div>
 				          	<div class="u-col-2">
@@ -239,11 +235,11 @@
 							        </span>
 			                    </button>
 			                    <ul class="u-menu " for="demo-menu-lower-right2">
-			                        <li class="u-menu-item"><span>Action</spa></li>
-			                        <li class="u-menu-item"><spa>Another action</spa></li>
-			                        <li class="u-menu-item"><spa>Something else here</spa></li>
-			                        <li class="u-menu-item"><spa>Separated link</spa></li>
-			                        <li class="u-menu-item"><spa>One more separated link</spa></li>
+			                        <li class="u-menu-item"><span>Action</span></li>
+			                        <li class="u-menu-item"><span>Another action</span></li>
+			                        <li class="u-menu-item"><span>Something else here</span></li>
+			                        <li class="u-menu-item"><span>Separated link</span></li>
+			                        <li class="u-menu-item"><span>One more separated link</span></li>
 			                    </ul>
 				          	</div>
 				          	<div class="u-col-2">
@@ -253,11 +249,11 @@
 									</div>
 			                    </button>
 			                    <ul class="u-menu " for="demo-menu-lower-right3">
-			                        <li class="u-menu-item"><span>Action</spa></li>
-			                        <li class="u-menu-item"><spa>Another action</spa></li>
-			                        <li class="u-menu-item"><spa>Something else here</spa></li>
-			                        <li class="u-menu-item"><spa>Separated link</spa></li>
-			                        <li class="u-menu-item"><spa>One more separated link</spa></li>
+			                        <li class="u-menu-item"><span>Action</span></li>
+			                        <li class="u-menu-item"><span>Another action</span></li>
+			                        <li class="u-menu-item"><span>Something else here</span></li>
+			                        <li class="u-menu-item"><span>Separated link</span></li>
+			                        <li class="u-menu-item"><span>One more separated link</span></li>
 			                    </ul>
 				          	</div>
 				          	<div class="u-col-2">
@@ -294,11 +290,7 @@
 				                	&lt;/i>
 				            	&lt;/a>
 				          	&lt;/li>
-				          	&lt;li id="toggleMenubar">
-				            	&lt;span>
-				            		&lt;i class="uf uf-magnifyingglass">&lt;/i>
-				            	&lt;/span>
-				          	&lt;/li>
+				          	
 				        &lt;/ul>
 				        &lt;div class="u-navlayout-toolbar u-col-md-5 padding-none">
 				          	
@@ -402,11 +394,11 @@
 						        </span>
 		                    </button>
 		                    <ul class="u-menu " for="demo-menu-lower-right7">
-		                        <li class="u-menu-item"><span>Action</spa></li>
-		                        <li class="u-menu-item"><spa>Another action</spa></li>
-		                        <li class="u-menu-item"><spa>Something else here</spa></li>
-		                        <li class="u-menu-item"><spa>Separated link</spa></li>
-		                        <li class="u-menu-item"><spa>One more separated link</spa></li>
+		                        <li class="u-menu-item"><span>Action</span></li>
+		                        <li class="u-menu-item"><span>Another action</span></li>
+		                        <li class="u-menu-item"><span>Something else here</span></li>
+		                        <li class="u-menu-item"><span>Separated link</span></li>
+		                        <li class="u-menu-item"><span>One more separated link</span></li>
 		                    </ul>
 			          	</div>
 			          	<div class="u-col-1">
@@ -416,11 +408,11 @@
 								</div>
 		                    </button>
 		                    <ul class="u-menu " for="demo-menu-lower-right8">
-		                        <li class="u-menu-item"><span>Action</spa></li>
-		                        <li class="u-menu-item"><spa>Another action</spa></li>
-		                        <li class="u-menu-item"><spa>Something else here</spa></li>
-		                        <li class="u-menu-item"><spa>Separated link</spa></li>
-		                        <li class="u-menu-item"><spa>One more separated link</spa></li>
+		                        <li class="u-menu-item"><span>Action</span></li>
+		                        <li class="u-menu-item"><span>Another action</span></li>
+		                        <li class="u-menu-item"><span>Something else here</span></li>
+		                        <li class="u-menu-item"><span>Separated link</span></li>
+		                        <li class="u-menu-item"><span>One more separated link</span></li>
 		                    </ul>
 			          	</div>
 			          	<div class="u-col-1">
@@ -521,7 +513,7 @@
 	<div class="u-widget-body" style="background:#F1F4F5">
 		<div class="u-frame-navlayout u-navlayout-fixed-drawer u-navlayout-fixed-header inverse">
 			<header class="u-navlayout-header demo-header">
-				<div class="u-navlayout-header-row" style="padding-left:0;">
+				<div class="u-navlayout-header-row" style="padding-lefFt:0;">
 					<ul class="u-navlayout-toolbar u-col-md-7" style="padding-left:0">
 			          	
 			          	<li class="" style="padding-top: 8px;margin-top:7px;">
