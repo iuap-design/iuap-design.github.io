@@ -1,4 +1,4 @@
-# tabs插件
+# tabs控件
 
 多内容分类切换显示
 
@@ -15,10 +15,9 @@
 # 示例
 
 
-##线性tabs
+##背景tabs
 
-切换 线性跟随作为`active`状态
-
+切换 背景色跟随作为`active`状态
 <div class="example-content ex-hide"><style>.ws{
 	width: 60px;
 	display: inline-block;
@@ -117,10 +116,9 @@
 &lt;/div></code></pre>
 </div>
 
-##背景tabs
+##线性tabs
 
-
-切换 背景色跟随作为`active`状态
+切换 线性跟随作为`active`状态
 <div class="example-content ex-hide"><style>.ws{
 	width: 60px;
 	display: inline-block;

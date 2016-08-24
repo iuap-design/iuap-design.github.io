@@ -72,17 +72,7 @@
 .grey-200 {
     color: #eee!important;
 }
-.input-sm {
-    padding: 6px 11px;
-}
-.form-control {
-    padding: 6px 13px;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    -webkit-transition: -webkit-box-shadow .25s linear,border .25s linear,color .25s linear,background-color .25s linear;
-    -o-transition: box-shadow .25s linear,border .25s linear,color .25s linear,background-color .25s linear;
-    transition: box-shadow .25s linear,border .25s linear,color .25s linear,background-color .25s linear;
-}
+
 .input-sm {
     height: 32px;
     padding: 6px 13px;
@@ -108,20 +98,7 @@
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
-button, input, select, textarea {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-}
 
-input {
-    line-height: normal;
-}
-button, input, optgroup, select, textarea {
-    margin: 0;
-    font: inherit;
-    color: inherit;
-}
 .input-search-btn {
     position: absolute;
     top: 0;
@@ -135,22 +112,7 @@ button, input, optgroup, select, textarea {
 .input-search-btn>.icon {
     margin: 0 3px;
 }
-button, input, select, textarea {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-}
 
-button, html input[type=button], input[type=reset], input[type=submit] {
-    -webkit-appearance: button;
-    cursor: pointer;
-}
-button, select {
-    text-transform: none;
-}
-button {
-    overflow: visible;
-}
 .icon {
     position: relative;
     display: inline-block;
@@ -165,21 +127,6 @@ button {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
-[class^="wi-"], [class*=" wi-"] {
-    position: relative;
-    display: inline-block;
-    font-family: 'weathericons';
-    font-style: normal;
-    font-weight: normal;
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
-    transform: translate(0, 0);
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
 .weather-day {
     height: 150px;
     border-left: 1px solid rgba(0, 0, 0, .05);
@@ -187,3 +134,6 @@ button {
 .overlay-background {
     background: rgba(0,0,0,.5);
 }
+
+
+

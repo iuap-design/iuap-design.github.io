@@ -132,3 +132,5 @@ dist/download/*
 
 # IDE
 .idea
+# test
+test
