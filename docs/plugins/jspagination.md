@@ -1,13 +1,11 @@
-# 分页插件
+# 分页控件
 
 分页控件提供了基础分页、无border分页、有间距的分页、多尺寸分页。
 
 
 # 插件依赖
 
-http://design.yyuap.com/static/uui/latest/js/u.js
-
-http://design.yyuap.com/static/uui/latest/css/u.css
+依赖于 http://design.yyuap.com/static/uui/latest/js/u.js
 
 # 用法
 
@@ -17,56 +15,7 @@ http://design.yyuap.com/static/uui/latest/css/u.css
 
 # 示例
 
-
-##基础分页
-<div class="example-content"><div id='pagination' class='u-pagination'>
-</div></div>
-<div class="example-content ex-hide"><script>  var element = document.getElementById("pagination");
-  var comp = new u.pagination({ el: element,showState:false });
-  comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });
-  comp.on('pageChange', function(pageIndex) {
-      console.log('新的页号为' + pageIndex);
-  });
-  comp.on('sizeChange', function(arg) {
-      console.log('每页显示条数为' + arg[0]);
-  });
-</script></div>
-<div class="examples-code"><pre><code>&lt;div id='pagination' class='u-pagination'>
-&lt;/div></code></pre>
-</div>
-<div class="examples-code"><pre><code>  var element = document.getElementById("pagination");
-  var comp = new u.pagination({ el: element,showState:false });
-  comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });
-  comp.on('pageChange', function(pageIndex) {
-      console.log('新的页号为' + pageIndex);
-  });
-  comp.on('sizeChange', function(arg) {
-      console.log('每页显示条数为' + arg[0]);
-  });</code></pre>
-</div>
-
-##有间距的分页
-添加样式`pagination-gap`可以增加页码之间的间距
-<div class="example-content"><div id='paginationGap' class='u-pagination pagination-gap'>
-</div></div>
-<div class="example-content ex-hide"><script> var paginationGap = document.getElementById('paginationGap');
-
- var comp = new u.pagination({ el: paginationGap, showState:false  });
-
- comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });
-
-</script></div>
-<div class="examples-code"><pre><code>&lt;div id='paginationGap' class='u-pagination pagination-gap'>
-&lt;/div></code></pre>
-</div>
-<div class="examples-code"><pre><code> var paginationGap = document.getElementById('paginationGap');
-
- var comp = new u.pagination({ el: paginationGap, showState:false  });
-
- comp.update({ totalPages: 100, pageSize: 20, currentPage: 1, totalCount: 200 });
-</code></pre>
-</div>
-
+replaceExamp
 
 # API
 ##js方法与参数
@@ -76,7 +25,7 @@ http://design.yyuap.com/static/uui/latest/css/u.css
 	    <td>名称</td>
 	    <td>方法参数</td>
 	    <td>用法</td>
-	    <td>描述</td>
+	    <td style="width:10%">描述</td>
 	    <td></td>
 	  </tr>
 	  <tr>

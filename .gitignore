@@ -132,3 +132,6 @@ dist/download/*
 
 # IDE
 .idea
+# test
+test
+dist/vendor/uui

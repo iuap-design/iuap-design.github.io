@@ -7,58 +7,60 @@
 }, {
     "name": "基本控件",
     "sub": [{
-            "name": "消息框",
-            "url": "demos/ui/dialog"
-        }, {
-            "name": "加载进度条",
-            "url": "demos/ui/progress"
-        }, {
-            "name": "工具提示",
-            "url": "demos/ui/tooltip"
-        }, {
-            "name": "下拉框",
-            "url": "demos/ui/menu"
-        }, {
-            "name": "按钮",
-            "url": "demos/ui/button"
-        }, {
-            "name": "徽章标签",
-            "url": "demos/ui/badge"
-        }, {
-            "name": "卡片",
-            "url": "demos/ui/cards"
-        }, {
-            "name": "面包屑",
-            "url": "demos/ui/breadcrumbs"
-        }, {
-            "name": "页签",
-            "url": "demos/ui/tabs"
-        }, {
-            "name": "分页",
-            "url": "demos/ui/pagination"
-        },  {
-            "name": "天气",
-            "url": "demos/ui/weather"
-        }, {
-            "name": "图表",
-            "url": "demos/ui/chart"
-        }, {
-            "name": "列表",
-            "url": "demos/ui/listgroup"
-        }, {
-            "name": "图片",
-            "url": "demos/ui/image"
-        }, {
-            "name": "色带",
-            "url": "demos/ui/ribbon"
-        }, {
-            "name": "步骤",
-            "url": "demos/ui/step"
-        }, {
-            "name": "辅助",
-            "url": "demos/assist"
-        }
-    ]
+        "name": "消息框",
+        "url": "demos/ui/dialog"
+    }, {
+        "name": "加载进度条",
+        "url": "demos/ui/progress"
+    }, {
+        "name": "工具提示",
+        "url": "demos/ui/tooltip"
+    }, {
+        "name": "下拉框",
+        "url": "demos/ui/menu"
+    }, {
+        "name": "按钮",
+        "url": "demos/ui/button"
+    }, {
+        "name": "徽章标签",
+        "url": "demos/ui/badge"
+    }, {
+        "name": "卡片",
+        "url": "demos/ui/cards"
+    }, {
+        "name": "面包屑",
+        "url": "demos/ui/breadcrumbs"
+    }, {
+        "name": "页签",
+        "url": "demos/ui/tabs"
+    }, {
+        "name": "分页",
+        "url": "demos/ui/pagination"
+    }, {
+        "name": "天气",
+        "url": "demos/ui/weather"
+    }, {
+        "name": "图表",
+        "url": "demos/ui/chart"
+    }, {
+        "name": "列表",
+        "url": "demos/ui/listgroup"
+    }, {
+        "name": "图片",
+        "url": "demos/ui/image"
+    }, {
+        "name": "色带",
+        "url": "demos/ui/ribbon"
+    }, {
+        "name": "步骤",
+        "url": "demos/ui/step"
+    }, {
+        "name": "上传控件",
+        "url": "demos/ui/uploader"
+    }, {
+        "name": "辅助",
+        "url": "demos/assist"
+    }]
 }, {
     "name": "复杂控件",
     "sub": [{
@@ -67,7 +69,7 @@
     }, {
         "name": "穿梭框",
         "url": "demos/complex/transfer-dt"
-    },{
+    }, {
         "name": "高级搜索",
         "url": "demos/complex/advsearch"
     }, {
@@ -150,7 +152,7 @@
         }, {
             "name": "树表",
             "url": "demos/grids/tree"
-        },{
+        }, {
             "name": "单表格控件展现数据",
             "url": "demos/grids/singGrid"
         }, {
