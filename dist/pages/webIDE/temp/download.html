@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Title</title>
+<link rel="stylesheet" href="http://design.yyuap.com/static/uploader/css/webuploader.css">
+<link rel="stylesheet" href="http://design.yyuap.com/static/uui/latest/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="http://design.yyuap.com/static/uui/latest/css/u.css">
+<link rel="stylesheet" type="text/css" href="http://design.yyuap.com/static/uui/latest/css/u-extend.css">
+<link rel="stylesheet" type="text/css" href="http://design.yyuap.com/static/uui/latest/css/tree.css">
+<link rel="stylesheet" type="text/css" href="http://design.yyuap.com/static/uui/latest/css/grid.css">
+<style id="demo-style" media="screen">
+.u-widget-body {
+    min-height: 250px;
+    text-align: center;
+}
+
+.u-widget-body .u-progress-vertical {
+	margin-right: 25px;
+}
+
+
+/*圆点加载条*/
+
+#parentLoad {
+    /*width: 300px;*/
+    height: 300px;
+    position: relative;
+    background: #E2E3EA;
+}
+
+.u-widget-body.height-100{
+	min-height: 100px;
+}
+
+</style>
+</head>
+<body style="background-color: #eceff1;padding-left: 20px;width: calc(100% - 20px );">
+<!-- progress -->
+<div class="u-container-fluid u-widget-bg">
+    <div class="u-row">
+        <div class="u-col-xs-12 u-col-md-4">
+            <div class="u-widget  u-widget-middle">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">默认进度条</h3>
+                </div>
+                <div class="u-widget-body">
+                    <!-- 简单进度条 -->
+                    <div id="p1" class="u-progress"></div>
+                </div>
+            </div>
+        </div>
+        <div class="u-col-xs-12 u-col-md-4">
+            <div class="u-widget  u-widget-middle">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">不同颜色的进度条</h3>
+                </div>
+                <div class="u-widget-body">
+                    <div id="p11" class="u-progress"></div>
+                    <br/>
+                    <div id="p12" class="u-progress u-progress-primary"></div>
+                    <br/>
+                    <div id="p13" class="u-progress u-progress-danger"></div>
+                    <br/>
+                    <div id="p14" class="u-progress u-progress-info"></div>
+                    <br/>
+                    <div id="p15" class="u-progress u-progress-success"></div>
+                    <br/>
+                    <div id="p16" class="u-progress u-progress-warning"></div>
+                    <br/>
+                    <div id="p17" class="u-progress u-progress-dark"></div>
+                </div>
+            </div>
+        </div>
+        <div class="u-col-xs-12 u-col-md-4">
+            <div class="u-widget  u-widget-middle">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">不同尺寸的进度条</h3>
+                </div>
+                <div class="u-widget-body">
+                    <div id="p22" class="u-progress u-progress-lg"></div>
+                    <br/>
+                    <div id="p23" class="u-progress u-progress-md"></div>
+                    <br/>
+                    <div id="p24" class="u-progress u-progress-sm"></div>
+                    <br/>
+                    <div id="p25" class="u-progress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="u-row">
+        <div class="u-col-xs-12 u-col-md-4">
+            <div class="u-widget  u-widget-middle">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">不同样式的进度条</h3>
+                </div>
+                <div class="u-widget-body">
+                    <div id="p2" class="u-progress u-progress__indeterminate"></div>
+                    <br>
+                    <div id="p3" class="u-progress"></div>
+                    <br>
+                    <div id="p21" class="u-progress u-progress-lg  u-progress-symbol"></div>
+                    <br>
+                    <div id="p26" class="u-progress u-progress-lg  u-progress-striped"></div>
+                </div>
+            </div>
+        </div>
+        <div class="u-col-xs-12 u-col-md-4">
+            <div class="u-widget  u-widget-middle">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">不同形状的进度条</h3>
+                </div>
+                <div class="u-widget-body">
+                    <div id="p27" class="u-progress u-progress-lg u-progress-info u-progress-square"></div>
+                    <br>
+                    <div id="p28" class="u-progress u-progress-lg u-progress-info"></div>
+                    <br>
+                    <div id="p29" class="u-progress u-progress-lg u-progress-info u-progress-circle"></div>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="u-col-xs-12 u-col-md-4">
+            <div class="u-widget  u-widget-middle">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">竖向的进度条</h3>
+                </div>
+                <div class="u-widget-body">
+                    <div id="p31" class="u-progress u-progress-vertical"></div>
+                    <div id="p32" class="u-progress u-progress-vertical u-progress-primary"></div>
+                    <div id="p33" class="u-progress u-progress-vertical u-progress-danger"></div>
+                    <div id="p34" class="u-progress u-progress-vertical u-progress-info"></div>
+                    <div id="p35" class="u-progress u-progress-vertical u-progress-success"></div>
+                    <div id="p36" class="u-progress u-progress-vertical u-progress-warning"></div>
+                    <div id="p37" class="u-progress u-progress-vertical u-progress-dark"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="u-row">
+        <div class="u-col-xs-12 u-col-md-4">
+            <div class="u-widget  u-widget-middle">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">竖向不同尺寸的进度条</h3>
+                </div>
+                <div class="u-widget-body">
+                    <div id="p38" class="u-progress u-progress-lg u-progress-vertical "></div>
+                    <div id="p39" class="u-progress u-progress-md u-progress-vertical "></div>
+                    <div id="p40" class="u-progress u-progress-sm u-progress-vertical "></div>
+                    <div id="p41" class="u-progress u-progress-vertical "></div>
+                </div>
+            </div>
+        </div>
+        <div class="u-col-xs-12 u-col-md-4">
+            <div class="u-widget  u-widget-middle">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">竖向不同样式的进度条</h3>
+                </div>
+                <div class="u-widget-body">
+                    <div class="u-progress u-progress-vertical u-progress__indeterminate  "></div>
+                    <!--<div id="p44" class="u-progress u-progress-lg u-progress-vertical "></div>-->
+                    <div id="p45" class="u-progress u-progress-lg u-progress-vertical  u-progress-symbol"></div>
+                    <div id="p46" class="u-progress u-progress-lg u-progress-vertical u-progress-striped"></div>
+                </div>
+            </div>
+        </div>
+        <div class="u-col-xs-12 u-col-md-4">
+            <div class="u-widget  u-widget-middle">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">点击按钮控制进度</h3>
+                </div>
+                <div class="u-widget-body">
+                    <div id="p52" class="u-progress u-progress-lg  u-progress-striped"></div>
+                    <br>
+                    <div id="p51" class="u-progress u-progress-lg  u-progress-symbol"></div>
+                    <br>
+                    <div id="p53" class="u-progress u-progress-danger"></div>
+                    <br/>
+                    <div>
+                        <button class="u-button u-button-info" id="half">half</button>
+                        <button class="u-button u-button-info" id="finish">finish</button>
+                        <button class="u-button u-button-info" id="reset">reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- loading -->
+
+<div class="u-container-fluid u-widget-bg">
+    <div class="u-row">
+        <div class="u-col-xs-12 u-col-md-4">
+            <div class="u-widget  u-widget-right">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">未激活loading</h3>
+                </div>
+                <div class="u-widget-body height-100">
+                    <div class="u-loading"></div>
+                </div>
+            </div>
+        </div>
+        <div class="u-col-xs-12 u-col-md-4">
+            <div class="u-widget  u-widget-right">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">激活loading</h3>
+                </div>
+                <div class="u-widget-body height-100">
+                    <div class="u-loading is-active"></div>
+                </div>
+            </div>
+        </div>
+        <div class="u-col-xs-12 u-col-md-4">
+            <div class="u-widget  u-widget-right">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">激活loading，使用单一颜色</h3>
+                </div>
+                <div class="u-widget-body height-100">
+                    <div class="u-loading is-active u-loading-single-color"></div>激活loading，使用单一颜色
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="u-row">
+        <div class=" u-col-xs-12 u-col-md-8">
+            <div class="u-widget  u-widget-right">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">圆点加载条</h3>
+                </div>
+                <div class="u-widget-body">
+                    <button class="u-button  raised primary" id="add">添加遮罩层loader</button>
+                    <button class="u-button  raised primary" id="hide" style="z-index: 1000000">取消遮罩层loader</button>
+                    <div id='parentLoad' class="margin-top-15"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="http://design.yyuap.com/static/jquery/jquery-1.11.2.js"></script>
+<script src="http://design.yyuap.com/static/uploader/js/webuploader.js"></script>
+<script src="http://design.yyuap.com/static/knockout/knockout-3.2.0.debug.js"></script>
+<script src="http://design.yyuap.com/static/uui/latest/js/u-polyfill.js"></script>
+<script src="http://design.yyuap.com/static/uui/latest/js/u.js"></script>
+<script src="http://design.yyuap.com/static/uui/latest/js/u-tree.js"></script>
+<script src="http://design.yyuap.com/static/uui/latest/js/u-grid.js"></script>
+<script src="http://design.yyuap.com/static/requirejs/require.debug.js"></script>
+<script>
+u.on(window, 'load', function() {
+	document.querySelector('#p1')['u.Progress'].setProgress(69);
+	document.querySelector('#p3')['u.Progress'].setProgress(33).setBuffer(87);
+	document.querySelector('#p11')['u.Progress'].setProgress(69);
+	document.querySelector('#p12')['u.Progress'].setProgress(69);
+	document.querySelector('#p13')['u.Progress'].setProgress(69);
+	document.querySelector('#p14')['u.Progress'].setProgress(69);
+	document.querySelector('#p15')['u.Progress'].setProgress(69);
+	document.querySelector('#p16')['u.Progress'].setProgress(69);
+	document.querySelector('#p17')['u.Progress'].setProgress(69);
+	document.querySelector('#p21')['u.Progress'].setProgress(69);
+	document.querySelector('#p21')['u.Progress'].setProgressHTML('69%');
+	document.querySelector('#p22')['u.Progress'].setProgress(69);
+	document.querySelector('#p23')['u.Progress'].setProgress(69);
+	document.querySelector('#p24')['u.Progress'].setProgress(69);
+	document.querySelector('#p25')['u.Progress'].setProgress(69);
+	document.querySelector('#p26')['u.Progress'].setProgress(69);
+	document.querySelector('#p27')['u.Progress'].setProgress(69);
+	document.querySelector('#p28')['u.Progress'].setProgress(69);
+	document.querySelector('#p29')['u.Progress'].setProgress(69);
+	document.querySelector('#p31')['u.Progress'].setProgressHeight(10);
+	document.querySelector('#p32')['u.Progress'].setProgressHeight(20);
+	document.querySelector('#p33')['u.Progress'].setProgressHeight(30);
+	document.querySelector('#p34')['u.Progress'].setProgressHeight(40);
+	document.querySelector('#p35')['u.Progress'].setProgressHeight(50);
+	document.querySelector('#p36')['u.Progress'].setProgressHeight(60);
+	document.querySelector('#p37')['u.Progress'].setProgressHeight(69);
+	document.querySelector('#p38')['u.Progress'].setProgressHeight(69);
+	document.querySelector('#p39')['u.Progress'].setProgressHeight(69);
+	document.querySelector('#p40')['u.Progress'].setProgressHeight(69);
+	document.querySelector('#p41')['u.Progress'].setProgressHeight(69);
+//        document.querySelector('#p44')['u.Progress'].setProgressHeight(69);
+	document.querySelector('#p45')['u.Progress'].setProgressHeight(69);
+	document.querySelector('#p45')['u.Progress'].setProgressHTML('6<br>9<br>%<br>');
+	document.querySelector('#p46')['u.Progress'].setProgressHeight(69);
+	document.querySelector('#p51')['u.Progress'].setProgress(10);
+	document.querySelector('#p51')['u.Progress'].setProgressHTML('10%');
+	document.querySelector('#p52')['u.Progress'].setProgress(10);
+	document.querySelector('#p53')['u.Progress'].setProgress(10);
+});
+$('#half').on('click',function(){move(50)});
+$('#finish').on('click',function(){move(100)});
+$('#reset').on('click',function(){move(10)});
+function move(target) {
+	document.querySelector('#p52')['u.Progress'].setProgress(target);
+	document.querySelector('#p53')['u.Progress'].setProgress(target);
+	document.querySelector('#p51')['u.Progress'].setProgress(target);
+	var html=parseInt($('#p51').children('div').eq(0).html());
+	var htmlTimer=window.setInterval(function () {
+		if(html>target){html-=10;}else{html+=10;}
+		if(html=target){
+			window.clearInterval(htmlTimer);
+		}
+		document.querySelector('#p51')['u.Progress'].setProgressHTML(html+'%');
+	},10);
+}
+
+
+//圆点加载条
+var parLoad=document.getElementById('parentLoad');
+var addBtn=document.getElementById('add');
+var hideBtn=document.getElementById('hide');
+var options={
+	hasback:false,//不含有遮罩层
+	parEle:parLoad//加载条的父元素
+}
+u.showLoader(options);
+// 显示
+u.on(addBtn,'click',function(){
+	var centerContent='<i class="uf uf-fluffycloudsilhouette u-loader-centerContent"></i>';
+	var opt1={
+		hasback:true,
+		hasDesc:true,//是否含有加载内容描述
+		centerContent:centerContent
+	};
+	u.showLoader(opt1);
+});
+// 隐藏
+u.on(hideBtn,'click',function(){
+	u.hideLoader();
+});
+</script>
+</body>
+</html>

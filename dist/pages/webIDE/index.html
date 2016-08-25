@@ -107,6 +107,9 @@
                 <input type="hidden" name="css_code" id="css_code">
                 <input type="hidden" name="script_code" id="script_code">
             </form>
+            <form method="post" action="../../../downloadDemo" id="download" style="display:none">
+                <input type="hidden" name="view_code" id="view_code">
+            </form>
             <div class=" u-tabs" style="height:100%" id="codeTab">
                 <div class="u-tabs__tab-bar">
                     <a id="menubutton"  role="button" class=" waves-effect waves-light waves-round">
@@ -119,7 +122,8 @@
                     <a href="#tab-panel-2" class="u-tabs__tab">CSS</a>
                     <a href="#tab-panel-3" class="u-tabs__tab">JavaScript</a>
                     <a href="#tab-panel-4" class="u-tabs__tab">View</a>
-                    <button type="button" data-bind="click:run" class="u-button raised primary" style="position:absolute;right:0px;top:8px;margin-right:40px;"><i class="fa fa-play-circle" style="font-size:18px;padding-right:5px;"></i>运行</button>
+                    <button type="button" data-bind="click:run" class="u-button raised primary" style="position:absolute;right:0px;top:8px;margin-right:100px;"><i class="fa fa-play-circle" style="font-size:18px;padding-right:5px;"></i>运行</button>
+                    <button type="button" data-bind="click:download" class="u-button raised primary" style="position:absolute;right:5px;top:8px;">下载</button>
                 </div>
                 <!-- <div class="bread-info u-tabs_header">
                     <span data-bind="text:title"></span>
