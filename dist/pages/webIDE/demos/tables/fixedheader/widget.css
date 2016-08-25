@@ -3,3 +3,9 @@
 	height: 350px;
 	overflow-y: auto;
 }
+.table-fixedheader label{
+	vertical-align: text-top;
+}
+.table-fixedheader-body tr td label{
+	vertical-align: text-top;
+}
