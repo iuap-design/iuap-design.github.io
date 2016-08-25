@@ -42,8 +42,8 @@ module.exports = {
         var styles = this.request.body.css_code;
         var htmls = this.request.body.html_code;
         var scripts = this.request.body.script_code;
-        var ctxPath='http://design.yyuap.com/static/uui/latest';
-        // var ctxPath='/dist/vendor/uui';
+        /*var ctxPath='http://design.yyuap.com/static/uui/latest';*/
+        var ctxPath='/dist/vendor/uui';
         var tpl = [
           '<!DOCTYPE html>',
           '<html lang="en">',
@@ -55,7 +55,7 @@ module.exports = {
           '<link rel="stylesheet" href="'+ ctxPath +'/css/font-awesome.css">',
           '<link rel="stylesheet" type="text/css" href="'+ ctxPath +'/css/u.css">',
           '<link rel="stylesheet" type="text/css" href="'+ ctxPath +'/css/u-extend.css">',
-		      '<link rel="stylesheet" type="text/css" href="'+ ctxPath +'/css/tree.css">',
+          '<link rel="stylesheet" type="text/css" href="'+ ctxPath +'/css/tree.css">',
           '<link rel="stylesheet" type="text/css" href="'+ ctxPath +'/css/grid.css">',
           '<style id="demo-style" media="screen">',
           styles,
