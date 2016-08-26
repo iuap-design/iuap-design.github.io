@@ -3,6 +3,10 @@
     text-align: center;
 }
 
+.u-widget-body>p{
+    text-align: left;
+}
+
 .u-widget-body .u-progress-vertical {
 	margin-right: 25px;
 }
