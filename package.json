@@ -22,6 +22,7 @@
   "devDependencies": {
     "art-template": "^3.0.3",
     "copy-dir": "^0.3.0",
+    "cz-conventional-changelog": "^1.2.0",
     "del": "^2.2.1",
     "gitbook-cli": "^2.2.0",
     "gulp": "^3.9.1",
@@ -47,5 +48,10 @@
     "koa-router": "^5.4.0",
     "koa-static": "^2.0.0",
     "node-native-zip": "^1.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

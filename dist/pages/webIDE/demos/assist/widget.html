@@ -54,8 +54,11 @@
                         添加.center-block来居中代码
                     </p>
                     <div class="example example-box">
+                        <div class="h-64 w-64 bg-red">
+                            参照内容
+                        </div>
                         <div class="h-64 w-64 bg-blue center-block ">
-                            我是内容
+                            居中内容
                         </div>
                     </div>
                 </div>
@@ -71,7 +74,13 @@
                          默认左浮动，添加.pull-right来右浮动
                     </p>
                     <div class="example example-box">
-                      <button type="button" class="u-button  u-button-success ">Left</button>
+                        <button type="button" class="u-button  u-button-success ">Left</button>
+                        <button type="button" class="u-button  u-button-success " >right</button>
+                    </div>
+                    <br/>
+                    <br/>
+                    <div class="example example-box">
+                      <button type="button" class="u-button  u-button-success pull-left">Left</button>
                       <button type="button" class="u-button  u-button-success  pull-right" >Pull right</button>
                     </div>
                 </div>
@@ -186,22 +195,27 @@
                         <div class="text-hide height-50" style="border:1px solid #e6e8ea;">
                             我被隐藏了
                         </div>
-
-
-                        <div class="text-truncate height-50" style="border:1px solid #e6e8ea;">
-                            内容显示一行，超出的内容使用“...”代替 This is text truncate.This is text truncate.
-                        </div>
-
-
-                        <div class="text-break height-50 " style="border:1px solid #e6e8ea;">
-                            This-is-text-break.This-is-text-break.This-is-text-break.This-is-text-break.
-                        </div>
-
-
-                        <div class="text-nowrap height-50" style="border:1px solid #e6e8ea;overflow: hidden;">
-                            内容显示一行，不换行 This is text nowrap.This is text nowrap.
-                        </div>
-
+                    <div class="u-row">
+                        <div class="u-col-md-3 text-center">CLASS</div>
+                        <div class="u-col-md-9 height-50 text-center">Description</div>
+                    </div>
+                    <div class="u-row">
+                        <div class="u-col-md-3"><span class="u-tag u-tag-primary u-tag-outline">.text-hide</span></div>
+                        <div class="u-col-md-9 height-80">用背景图像替换元素的文本内容。Replace an element's text content with a
+                            backgroundimage.</div>
+                    </div>
+                    <div class="u-row">
+                        <div class="u-col-md-3"><span class="u-tag u-tag-primary u-tag-outline">.text-truncate</span></div>
+                        <div class="u-col-md-9 height-50 text-truncate">防止文本过长，斩断Prevents text from wrapping intomultiplelines,truncating it instead.</div>
+                    </div>
+                    <div class="u-row">
+                        <div class="u-col-md-3"><span class="u-tag u-tag-primary u-tag-outline">.text-break</span></div>
+                        <div class="u-col-md-9 height-50 text-break">自动回行 Breads strings if their length exceeds thewidthof their container.</div>
+                    </div>
+                    <div class="u-row">
+                        <div class="u-col-md-3"><span class="u-tag u-tag-primary u-tag-outline">.text-nowrap</span></div>
+                        <div class="u-col-md-9 height-50 text-nowrap" style="overflow: hidden">避免折行Prevents text from wrapping into  multiple lines</div>
+                    </div>
                 </div>
 
             </div>
