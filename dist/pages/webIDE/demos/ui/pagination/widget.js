@@ -33,3 +33,8 @@
     var paginationSm = document.getElementById('paginationSm');
     var comp = new u.pagination({el:paginationSm,jumppage:true});
     comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200,showState:false});
+
+    //更换颜色分页
+   var paginationSm = document.getElementById('paginationColor');
+   var comp = new u.pagination({el:paginationSm,jumppage:true});
+   comp.update({totalPages: 100,pageSize:20,currentPage:1,totalCount:200,showState:false});

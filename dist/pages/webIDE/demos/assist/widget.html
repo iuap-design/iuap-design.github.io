@@ -1,14 +1,16 @@
 <div class="u-container-fluid u-widget-bg">
     <h3>宽高</h3>
     <div class="u-row">
-        
+
         <div class="u-col-md-12">
             <div class="u-widget p-b-md">
                 <div class="u-widget-heading">
                     <h3 class="u-widget-title">不同高度（数值： 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, auto, 100%）</h3>
                 </div>
                 <div class="u-widget-body height">
-                    
+                    <p>
+                        通过添加.height-*获得不同高度
+                    </p>
                     <div class="height-50"><span class="desc">高50px</span></div>
                     <div class="height-100"><span class="desc">高100px</span></div>
                     <div class="height-150"><span class="desc">高150px</span></div>
@@ -23,12 +25,14 @@
                     <h3 class="u-widget-title">不同宽度（数值：50, 100, 150, 200, 250, 300, 350, 400, 450, 500, auto, 100%）</h3>
                 </div>
                 <div class="u-widget-body width">
-                    
+                    <p>
+                        通过添加.width-*获得不同宽度
+                    </p>
                     <div class="width-50"><span class="desc">宽50px</span></div>
                     <div class="width-100"><span class="desc">宽100px</span></div>
                     <div class="width-150"><span class="desc">宽150px</span></div>
                     <div class="width-200"><span class="desc">宽200px</span></div>
-                
+
                 </div>
             </div>
         </div>
@@ -46,6 +50,9 @@
                     <h3 class="u-widget-title">居中代码块</h3>
                 </div>
                 <div class="u-widget-body">
+                    <p>
+                        添加.center-block来居中代码
+                    </p>
                     <div class="example example-box">
                         <div class="h-64 w-64 bg-blue center-block ">
                             我是内容
@@ -60,6 +67,9 @@
                     <h3 class="u-widget-title">浮动</h3>
                 </div>
                 <div class="u-widget-body">
+                    <p>
+                         默认左浮动，添加.pull-right来右浮动
+                    </p>
                     <div class="example example-box">
                       <button type="button" class="u-button  u-button-success ">Left</button>
                       <button type="button" class="u-button  u-button-success  pull-right" >Pull right</button>
@@ -74,6 +84,9 @@
                     <h3 class="u-widget-title">垂直对齐</h3>
                 </div>
                 <div class="u-widget-body">
+                    <p>
+                        在父元素添加.vertical-align类，在子元素添加.vertical-align-middle、.vertical-align-bottom类实现垂直居中和垂直向下
+                    </p>
                 <div class="u-row">
                     <div class="u-col-6">
                         <div class="vertical-align h bg-grey" >
@@ -86,7 +99,7 @@
                         </div>
                     </div>
                 </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -100,6 +113,9 @@
                         字号大小数值（0，10，12，14，16，18，20，24，26，30，40，50，60，70，80）单位:px</h3>
                 </div>
                 <div class="u-widget-body">
+                    <p>
+                        添加.font-size-*改变字号
+                    </p>
                    <p class="font-size-12">字号12px</p>
                     <p class="font-size-14">字号14px</p>
                      <p class="font-size-16">字号16px</p>
@@ -114,6 +130,9 @@
                     <h3 class="u-widget-title">字重——粗细数值：unset、100、200、300、400、500、600、700、800、900</h3>
                 </div>
                 <div class="u-widget-body">
+                    <p>
+                        添加.font-weight-*改变字体粗细
+                    </p>
                    <p class="font-weight-200">font-weight值为200</p>
                    <p class="font-weight-400">font-weight值为400</p>
                    <p class="font-weight-600">font-weight值为600</p>
@@ -129,6 +148,9 @@
                     <h3 class="u-widget-title">文字对齐</h3>
                 </div>
                 <div class="u-widget-body">
+                    <p>
+                        添加.text-top .text-middle .text-bottom类实现文本垂直对齐改变，<br> 添加.text-left .text-right .text-center .text-justify类实现文本水平对齐方式的改变
+                    </p>
                     <div class="row">
                         <div class="col-md-4 m-b-sm bg-grey h-64">
                             <img src="/dist/static/img/logo-middle.png" height="64" width="64" style="vertical-align:top">
@@ -158,32 +180,34 @@
                     <h3 class="u-widget-title">文字包裹</h3>
                 </div>
                 <div class="u-widget-body">
-                  
+                        <p>
+                            添加.text-hide类隐藏文字，添加.text-truncate类实现文字省略，添加.text-break类实现文本换行，添加.text-nowrap类实现文本不换行。
+                        </p>
                         <div class="text-hide height-50" style="border:1px solid #e6e8ea;">
                             我被隐藏了
                         </div>
-                    
-                    
+
+
                         <div class="text-truncate height-50" style="border:1px solid #e6e8ea;">
                             内容显示一行，超出的内容使用“...”代替 This is text truncate.This is text truncate.
                         </div>
-                    
-                    
+
+
                         <div class="text-break height-50 " style="border:1px solid #e6e8ea;">
                             This-is-text-break.This-is-text-break.This-is-text-break.This-is-text-break.
                         </div>
-                    
-                    
+
+
                         <div class="text-nowrap height-50" style="border:1px solid #e6e8ea;overflow: hidden;">
                             内容显示一行，不换行 This is text nowrap.This is text nowrap.
                         </div>
-                    
+
                 </div>
-               
+
             </div>
         </div>
-        
-        
+
+
         <div class="clearfix"></div>
         <div class="u-col-md-6 u-col-xs-12">
             <div class="u-widget">
@@ -191,6 +215,9 @@
                     <h3 class="u-widget-title">大小写转换</h3>
                 </div>
                 <div class="u-widget-body">
+                    <p>
+                        添加.text-lowercase .text-uppercase .text-capitalize来实现字母大小写
+                    </p>
                     <p class="text-lowercase">Lowercased text.</p>
                     <p class="text-uppercase">Uppercased text.</p>
                     <p class="text-capitalize">Capitalized text.</p>
@@ -203,12 +230,15 @@
                     <h3 class="u-widget-title">变色字体</h3>
                 </div>
                 <div class="u-widget-body">
+                    <p>
+                        添加.text-muted .text-muted-dk .text-muted-lt类改变文字深浅
+                    </p>
                    <span class="text-muted">我是一段文字</span>
                     <span class="text-muted-dk">我是一段文字</span>
                     <span class="text-muted-lt">我是一段文字</span>
                 </div>
             </div>
         </div>
-         
+
     </div>
 </div>

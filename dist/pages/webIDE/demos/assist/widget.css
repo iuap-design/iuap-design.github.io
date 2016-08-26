@@ -14,9 +14,14 @@
     display:inline-block;
 }
 
+.u-widget-body p{
+	margin-top: -10px;
+	margin-bottom: 30px;
+}
+
 .desc{
     position:absolute;
     bottom:0px;
     font-size:12px;
-    
+
 }
