@@ -60,6 +60,9 @@
     }, {
         "name": "辅助",
         "url": "demos/assist"
+    }, {
+        "name": "导航条",
+        "url": "demos/ui/navbar"
     }]
 }, {
     "name": "复杂控件",
