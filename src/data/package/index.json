@@ -1,0 +1,74 @@
+{
+
+    "mod":{
+
+        "polyfill": {
+            "title": "IE8 Polyfill模块",
+            "description": "用于兼容ie8,包含respond,html5,及框架基础函数支持",
+            "list":[
+                {
+                    "name": "polyfill整体",
+                    "file": "u-polyfill.js"
+                }
+            ]
+        },
+
+        "neoui": {
+            "title": "NeoUI组件模块",
+            "description": "UI控件",
+            "list":[
+                {"name": "autocomplete","file": " neoui-autocomplete.js"},
+                {"name": "button","file": " neoui-button.js"},
+                {"name": "checkbox","file": " neoui-checkbox.js"},
+                {"name": "clockpicker","file": " neoui-clockpicker.js"},
+                {"name": "combo","file": " neoui-combo.js"},
+                {"name": "combobox","file": " neoui-combobox.js"},
+                {"name": "data-table","file": " neoui-data-table.js"},
+                {"name": "datetimepicker","file": " neoui-datetimepicker.js"},
+                {"name": "dialog","file": " neoui-dialog.js"},
+                {"name": "layout.md","file": " neoui-layout.md.js"},
+                {"name": "layout.nav","file": " neoui-layout.nav.js"},
+                {"name": "loader","file": " neoui-loader.js"},
+                {"name": "loading","file": " neoui-loading.js"},
+                {"name": "menu","file": " neoui-menu.js"},
+                {"name": "message","file": " neoui-message.js"},
+                {"name": "month","file": " neoui-month.js"},
+                {"name": "multilang","file": " neoui-multilang.js"},
+                {"name": "navmenu","file": " neoui-navmenu.js"},
+                {"name": "pagination","file": " neoui-pagination.js"},
+                {"name": "progress","file": " neoui-progress.js"},
+                {"name": "radio","file": " neoui-radio.js"},
+                {"name": "refer","file": " neoui-refer.js"},
+                {"name": "slidePanel","file": " neoui-slidePanel.js"},
+                {"name": "switch","file": " neoui-switch.js"},
+                {"name": "tabs","file": " neoui-tabs.js"},
+                {"name": "textfield","file": " neoui-textfield.js"},
+                {"name": "time","file": " neoui-time.js"},
+                {"name": "tooltip","file": " neoui-tooltip.js"},
+                {"name": "validate","file": " neoui-validate.js"},
+                {"name": "year","file": " neoui-year.js"},
+                {"name": "yearmonth","file": " neoui-yearmonth.js "}
+            ]
+        },
+
+        "kero-adapter": {
+            "title": "数据绑定模块",
+            "description": "选择需要的组件进行数据绑定",
+            "list":[
+                {
+                    "name": "test3",
+                    "file": "test3.js"
+                },
+                {
+                    "name": "test4",
+                    "file": "test4.js"
+                }
+            ]
+        }
+
+    }
+
+}
+
+
+

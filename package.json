@@ -22,6 +22,7 @@
   "devDependencies": {
     "art-template": "^3.0.3",
     "copy-dir": "^0.3.0",
+    "cz-conventional-changelog": "^1.2.0",
     "del": "^2.2.1",
     "gitbook-cli": "^2.2.0",
     "gulp": "^3.9.1",
@@ -35,16 +36,27 @@
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^1.5.3",
     "gulp-util": "^3.0.1",
+    "gulp-watch": "^4.3.9",
     "gulp-zip": "^3.2.0",
     "rimraf": "^2.5.3"
   },
   "dependencies": {
+    "kero-adapter": "^1.5.7",
     "koa": "^1.1.2",
     "koa-body": "^1.4.0",
     "koa-bodyparser": "^2.0.1",
     "koa-cache-control": "^1.0.0",
     "koa-gzip": "^0.1.0",
     "koa-router": "^5.4.0",
-    "koa-static": "^2.0.0"
+    "koa-static": "^2.0.0",
+    "neoui": "^4.1.6",
+    "neoui-grid": "^1.0.4",
+    "neoui-polyfill": "^1.2.6",
+    "neoui-tree": "^1.0.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

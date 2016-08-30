@@ -105,6 +105,13 @@ module.exports = {
 
     });
 
+    // 新定制
+    router.post('/package', function *(next) {
+      var self = this;
+      this.body = this.request.body;
+      console.log(this.request.body);
+    });
+
     router.post('/downloadDemo',function *(next) {
         var viewCode = "",zipName='';
         var styles = this.request.body.cssCode;
