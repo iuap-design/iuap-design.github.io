@@ -19,3 +19,7 @@
 .example-bottom-reverse {
     padding: 15px 50px 50px 15px;
 }
+.u-widget-body .desc {
+    margin-top: -10px;
+    margin-bottom: 30px;
+}

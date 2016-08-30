@@ -1,62 +1,52 @@
   var data1 = {
-    values: 
+    values:
       [
         {
-            date: "2015-05-15 00:00:00",
             type: "加班打车费用",
             detail: "加班",
             name: '李一',
             count: '60'
         }, {
-            date: "2015-05-15 00:00:00",
             type: "加班打车费用",
             detail: "加班",
             name: '李二',
             count: '60'
         }, {
-            date: "2015-05-15 00:00:00",
             type: "加班打车费用",
             detail: "加班",
             name: '李三',
             count: '60'
         }, {
-            date: "2015-05-15 00:00:00",
             type: "加班打车费用",
             detail: "加班",
             name: '张四',
             count: '60'
         }, {
-            date: "2015-05-15 00:00:00",
             type: "加班打车费用",
             detail: "加班",
             name: '张三',
             count: '60'
         }, {
-            date: "2015-05-15 00:00:00",
             type: "加班打车费用",
             detail: "加班",
             name: '王五',
             count: '60'
         }, {
-            date: "2015-05-15 00:00:00",
             type: "加班打车费用",
             detail: "加班",
             name: '郭六',
             count: '60'
         }, {
-            date: "2015-05-15 00:00:00",
             type: "加班打车费用",
             detail: "加班",
             name: '郭七',
             count: '60'
         }, {
-            date: "2015-05-15 00:00:00",
             type: "加班打车费用",
             detail: "加班",
             name: '田七',
             count: '60'
         }, {
-            date: "2015-05-15 00:00:00",
             type: "加班打车费用",
             detail: "加班",
             name: '田八',
@@ -70,9 +60,6 @@
         field: "name",
         title: "报销人"
     }, {
-        field: "date",
-        title: "日期"
-    }, {
         field: "type",
         title: "费用类型"
     }, {
@@ -83,7 +70,7 @@
         title: "报销金额"
     }
     ];
-    
+
     $("#grid-comp1").grid({
         dataSource: data1,
         id: 'case-g1',

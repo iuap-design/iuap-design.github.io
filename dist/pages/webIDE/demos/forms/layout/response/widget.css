@@ -10,3 +10,14 @@
     background-color: rgb(189,189,189);
     border-radius: 0;
 }
+.example .deep {
+    background-color: rgb(211,211,211);
+}
+code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #5683ad;
+    background-color: rgba(232,241,248,.1);
+    border-radius: 3px;
+    border: 1px solid rgb(211,211,211);
+}
