@@ -1984,6 +1984,9 @@ label.hover {
 
 .btn.icon-left {
     padding-left: 23px;
+    padding-top: 6px;
+    padding-right: 23px;
+    margin-top: 7px;
 }
 
 .btn.icon-right {
@@ -6870,7 +6873,7 @@ a.icon-block {
  .github-fork-button a{
     display: inline-block;
     padding: 0px 5px;
-    margin-top:32px;
+    margin-top:28px;
     font-size: 12px;
     line-height: 18px;
     color: #333;
@@ -6944,3 +6947,12 @@ a.icon-block {
           margin-bottom: 25px;
       }
     }
+
+.u-navbar-toolbar > li > a {
+    color: #424242;
+    font-size: 14px;
+}
+.u-navbar-toolbar > li > a:hover {
+    color: #007aff;
+    border-bottom: 1px solid #007aff;
+}
