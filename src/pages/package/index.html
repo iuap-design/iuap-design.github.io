@@ -166,7 +166,7 @@
                     <div class="color-whole-div">
                         <h2 class="second-title">{{value.title}}</h2>
                         <p>{{value.description}}</p>
-                        <span class="u-checkbox tree-parent is-upgraded" u-meta='{"id":"xxxx","type":"u-checkbox","data":"treeData","field":"xxxx","checkedValue":true,"unCheckedValue":false}'>
+                        <span class="u-checkbox tree-parent is-upgraded">
                             <input type="checkbox" class="u-checkbox-input">
                             <span class="u-checkbox-label select-module">全选</span>
                         </span>
@@ -174,9 +174,9 @@
                             <div class="tree-whole-div">
                                 <ul class="tree-div u-row textDiv">
                                     {{each value.list as lival j}}
-                                        <li class="u-checkbox tree-leaf u-col-md-4" u-mate='{"id":"xxxx","type":"u-checkbox","data":"modelData","field":"xxxx","checkedValue":true,"unCheckedValue":false}'>
+                                        <li class="u-checkbox tree-leaf u-col-md-4" data-catlog="{{value.catlog}}" data-file='{{lival.file}}'>
                                             <input type="checkbox" class="u-checkbox-input">
-                                            <span class="u-checkbox-label select-module" data-file='{{lival.file}}'>{{lival.name}}</span>
+                                            <span class="u-checkbox-label select-module">{{lival.name}}</span>
                                         </li>
                                     {{/each}}
                                 </ul>

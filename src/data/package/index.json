@@ -5,10 +5,11 @@
         "polyfill": {
             "title": "IE8 Polyfill模块",
             "description": "用于兼容ie8,包含respond,html5,及框架基础函数支持",
+            "catlog": "polyselect",
             "list":[
                 {
                     "name": "polyfill整体",
-                    "file": "u-polyfill.js"
+                    "file": "u-polyfill"
                 }
             ]
         },
@@ -16,44 +17,46 @@
         "neoui": {
             "title": "NeoUI组件模块",
             "description": "UI控件",
+            "catlog": "neoselect",
             "list":[
-                {"name": "autocomplete","file": " neoui-autocomplete.js"},
-                {"name": "button","file": " neoui-button.js"},
-                {"name": "checkbox","file": " neoui-checkbox.js"},
-                {"name": "clockpicker","file": " neoui-clockpicker.js"},
-                {"name": "combo","file": " neoui-combo.js"},
-                {"name": "combobox","file": " neoui-combobox.js"},
-                {"name": "data-table","file": " neoui-data-table.js"},
-                {"name": "datetimepicker","file": " neoui-datetimepicker.js"},
-                {"name": "dialog","file": " neoui-dialog.js"},
-                {"name": "layout.md","file": " neoui-layout.md.js"},
-                {"name": "layout.nav","file": " neoui-layout.nav.js"},
-                {"name": "loader","file": " neoui-loader.js"},
-                {"name": "loading","file": " neoui-loading.js"},
-                {"name": "menu","file": " neoui-menu.js"},
-                {"name": "message","file": " neoui-message.js"},
-                {"name": "month","file": " neoui-month.js"},
-                {"name": "multilang","file": " neoui-multilang.js"},
-                {"name": "navmenu","file": " neoui-navmenu.js"},
-                {"name": "pagination","file": " neoui-pagination.js"},
-                {"name": "progress","file": " neoui-progress.js"},
-                {"name": "radio","file": " neoui-radio.js"},
-                {"name": "refer","file": " neoui-refer.js"},
-                {"name": "slidePanel","file": " neoui-slidePanel.js"},
-                {"name": "switch","file": " neoui-switch.js"},
-                {"name": "tabs","file": " neoui-tabs.js"},
-                {"name": "textfield","file": " neoui-textfield.js"},
-                {"name": "time","file": " neoui-time.js"},
-                {"name": "tooltip","file": " neoui-tooltip.js"},
-                {"name": "validate","file": " neoui-validate.js"},
-                {"name": "year","file": " neoui-year.js"},
-                {"name": "yearmonth","file": " neoui-yearmonth.js "}
+                {"name":"autocomplete","file":"neoui-autocomplete"},
+                {"name":"button","file":"neoui-button"},
+                {"name":"checkbox","file":"neoui-checkbox"},
+                {"name":"clockpicker","file":"neoui-clockpicker"},
+                {"name":"combo","file":"neoui-combo"},
+                {"name":"combobox","file":"neoui-combobox"},
+                {"name":"data-table","file":"neoui-data-table"},
+                {"name":"datetimepicker","file":"neoui-datetimepicker"},
+                {"name":"dialog","file":"neoui-dialog"},
+                {"name":"layout.md","file":"neoui-layout.md"},
+                {"name":"layout.nav","file":"neoui-layout.nav"},
+                {"name":"loader","file":"neoui-loader"},
+                {"name":"loading","file":"neoui-loading"},
+                {"name":"menu","file":"neoui-menu"},
+                {"name":"message","file":"neoui-message"},
+                {"name":"month","file":"neoui-month"},
+                {"name":"multilang","file":"neoui-multilang"},
+                {"name":"navmenu","file":"neoui-navmenu"},
+                {"name":"pagination","file":"neoui-pagination"},
+                {"name":"progress","file":"neoui-progress"},
+                {"name":"radio","file":"neoui-radio"},
+                {"name":"refer","file":"neoui-refer"},
+                {"name":"slidePanel","file":"neoui-slidePanel"},
+                {"name":"switch","file":"neoui-switch"},
+                {"name":"tabs","file":"neoui-tabs"},
+                {"name":"textfield","file":"neoui-textfield"},
+                {"name":"time","file":"neoui-time"},
+                {"name":"tooltip","file":"neoui-tooltip"},
+                {"name":"validate","file":"neoui-validate"},
+                {"name":"year","file":"neoui-year"},
+                {"name":"yearmonth","file":"neoui-yearmonth"}
             ]
         },
 
         "kero-adapter": {
             "title": "数据绑定模块",
             "description": "选择需要的组件进行数据绑定",
+            "catlog": "keroselect",
             "list":[
                 {
                     "name": "test3",
@@ -65,10 +68,5 @@
                 }
             ]
         }
-
     }
-
 }
-
-
-
