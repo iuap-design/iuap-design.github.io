@@ -53,10 +53,6 @@
 ***************************************
 @import url(http://fonts.useso.com/css?family=Open+Sans:400,600,700,300,800);/
 
-/** Bootstrap Styles
-**************************************/
-
-/*@import'vendor/bootstrap.min.css';*/
 
 /** Brand Icons (Social Networks)
 *************************************/
@@ -86,6 +82,12 @@
  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
  * http://cssreset.com
  */
+
+ * {
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+ }
 
 html,
 body,
@@ -6914,3 +6916,31 @@ a.icon-block {
         margin-right:-20px;
     }
 }
+
+
+
+.nav-tabs > li.active {
+    background-color: transparent;
+    color: #fff;
+}
+.tab-content > div.active {
+    background-color: transparent;
+}
+
+.offcanvas-nav .nav-link ul li.active{
+    background-color: transparent;
+}
+.team-member span.refill-margin{
+    margin-bottom: 25px;
+}
+@media screen and (max-width: 990px) {
+    .team-member span.refill-margin{
+        margin-bottom: 41px;
+    }
+  }
+
+  @media screen and (max-width: 769px) {
+      .team-member span.refill-margin{
+          margin-bottom: 25px;
+      }
+    }
