@@ -6,6 +6,9 @@ var concat = require('gulp-concat');
 var webpack = require('gulp-webpack');
 var rename = require('gulp-rename');
 
+// 获取Neoui的scss & js目录 
+// var neouijson = require('./neoui.json');
+
 
 module.exports = function(data){
 
@@ -64,38 +67,40 @@ module.exports = function(data){
 		  neouiJs.push(neouiBasePath + '/js/' + dataJson.neoselect[i] + '.js');
 		}
 	}
-	
 
-	gulp.task('concat', function() {
+	// sass部分
+	gulp.task('sass', function() {
 		return gulp.src(neouiCss)
-			.pipe(concat('te'))
+			.pipe(sass())
+			.pipe(concat('u.css'))
 			.pipe(gulp.dest(path.resolve(__dirname,'../')))
 	});
 
+	// js部分
+	gulp.task('webpack', ['sass'], function() {
+		return gulp.src(path.resolve(__dirname, '../entry.js'))
+			.pipe(webpack({
+				module:{
+					loaders:[
+						{
+							test: /(\.jsx|\.js)$/,
+							loader: 'babel',
+							exclude: /(node_modules|bower_components)/ 
+						}
+					]				
+				},
+				output:{
+					filename:'u.js',
+					libraryTarget:'umd',
+					umdNamedDefine: true
+				},
+				resolve:{
+					extensions: ['','.js','.jsx']
+				}
+			}))
+			.pipe(gulp.dest(path.resolve(__dirname,'../')));
+	});
 
+	gulp.run('webpack');
 
-
-
-	/**
-	 * webpack部分
-	 */
-
-	// gulp.task('webpack', function() {
-	// 	return gulp.src('')
-	// 		.pipe(webpack(
-	// 			module:{
-
-	// 			},
-	// 			output:{
-
-	// 			},
-	// 			resolve:{
-					
-	// 			}	// 		))
-	// 		.pipe(gulp.dest(''));
-	// })
-
-
-
-	gulp.run('concat');
 };

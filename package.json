@@ -59,6 +59,7 @@
     "neoui": "^4.1.6",
     "neoui-grid": "^1.0.4",
     "neoui-polyfill": "^1.2.6",
+    "neoui-sparrow": "^1.4.7",
     "neoui-tree": "^1.0.4"
   },
   "config": {
