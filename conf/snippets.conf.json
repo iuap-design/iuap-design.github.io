@@ -187,8 +187,8 @@
         "name": "顶部菜单布局",
         "url": "demos/layouts/topNavLayout"
     }, {
-        "name": "导航栏",
-        "url": "demos/layouts/navbar"
+        "name": "导航布局",
+        "url": "demos/layouts/navLayout"
     }]
 }, {
     "name": "空页面",
