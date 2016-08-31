@@ -40,7 +40,8 @@
 		"neoui-textfield.scss",
 		"neoui-tooltip.scss",
 		"neoui-weather.scss",
-		"neoui-widget.scss" ],
+		"neoui-widget.scss"
+	],
 	"js":[
 		"neoui-autocomplete.js",
 		"neoui-button.js",
@@ -72,5 +73,21 @@
 		"neoui-tooltip.js",
 		"neoui-validate.js",
 		"neoui-year.js",
-		"neoui-yearmonth.js" ]
+		"neoui-yearmonth.js"
+	],
+	"es6":{
+		"neoui-autocomplete": {
+			"Autocomplete": "import {Autocomplete} from 'neoui/js/neoui-autocomplete';"
+		},
+		"neoui-button": {
+			"Button": "import {Button} from 'neoui/js/neoui-button';"
+		},
+		"neoui-dialog": {
+			"messageDialog": "import {messageDialog} from 'neoui/js/neoui-dialog';",
+			"confirmDialog": "import {confirmDialog} from 'neoui/js/neoui-dialog';",
+			"dialogMode": "import {dialogMode} from 'neoui/js/neoui-dialog';",
+			"dialog": "import {dialog} from 'neoui/js/neoui-dialog';",
+			"dialogWizard": "import {dialogWizard} from 'neoui/js/neoui-dialog';"
+		}
+	}
 }
