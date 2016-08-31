@@ -7,10 +7,8 @@
             "description": "用于兼容ie8,包含respond,html5,及框架基础函数支持",
             "catlog": "polyselect",
             "list":[
-                {
-                    "name": "polyfill整体",
-                    "file": "u-polyfill"
-                }
+                {"name":"核心函数支持","file":"core"},
+                {"name":"响应式支持","file":"respond"}
             ]
         },
 
