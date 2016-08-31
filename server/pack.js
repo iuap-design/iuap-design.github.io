@@ -46,33 +46,31 @@ module.exports = function(data){
 			}
 		});
 
-		gulp.run('poly');
+		if(dataJson.length != 0) {
+			gulp.run('poly');
+		};
 	};
 	polyFun();
 	
-
-	
-
-
-
 	/**
 	 * neoui定制部分
 	 */
-	// var neouiBasePath = path.resolve(__dirname,basePath + 'neoui');
-	// var neouiCss =[];
-	// var neouiJs =[];
-	// if(dataJson.neoselect) {
-	// 	for(var i=0; i<dataJson.neoselect.length; i++) {
-	// 	  neouiCss.push(neouiBasePath + '/scss/ui/' + dataJson.neoselect[i] + '.scss');
-	// 	  neouiJs.push(neouiBasePath + '/js/' + dataJson.neoselect[i] + '.js');
-	// 	}
-	// }
+	var neouiBasePath = path.resolve(__dirname,basePath + 'neoui');
+	var neouiCss =[];
+	var neouiJs =[];
+	if(dataJson.neoselect) {
+		for(var i=0; i<dataJson.neoselect.length; i++) {
+		  neouiCss.push(neouiBasePath + '/scss/ui/' + dataJson.neoselect[i] + '.scss');
+		  neouiJs.push(neouiBasePath + '/js/' + dataJson.neoselect[i] + '.js');
+		}
+	}
+	
 
-	// gulp.task('concat', function() {
-	// 	return gulp.src(neouiCss)
-	// 		.pipe(concat('te'))
-	// 		.pipe(gulp.dest(path.resolve(__dirname,'../')))
-	// });
+	gulp.task('concat', function() {
+		return gulp.src(neouiCss)
+			.pipe(concat('te'))
+			.pipe(gulp.dest(path.resolve(__dirname,'../')))
+	});
 
 
 
@@ -99,5 +97,5 @@ module.exports = function(data){
 
 
 
-	// gulp.run('concat');
+	gulp.run('concat');
 };
