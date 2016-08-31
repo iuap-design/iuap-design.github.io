@@ -6916,7 +6916,7 @@ a.icon-block {
 
 @media screen and (max-width:1000px) {
     .github-fork-button{
-        margin-right:-20px;
+        margin-right: 18px;
     }
 }
 
@@ -6955,4 +6955,10 @@ a.icon-block {
 .u-navbar-toolbar > li > a:hover {
     color: #007aff;
     border-bottom: 1px solid #007aff;
+}
+
+@media screen and (max-width: 1000px) {
+    .u-navbar-toolbar span, .u-navbar-toolbar .btn, .u-navbar-toolbar .action-btn {
+        display: none;
+    }
 }
