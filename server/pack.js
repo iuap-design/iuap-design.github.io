@@ -156,4 +156,6 @@ module.exports = function(data){
 
 	gulp.run('webpack');
 
+	return dataJson;
+
 };

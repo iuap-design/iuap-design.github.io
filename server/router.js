@@ -113,11 +113,11 @@ module.exports = {
 
       var data = this.request.body;
       var pack = require('./pack.js');
-      pack(data);
+      // pack(data);
 
       
 
-      this.body = data;
+      this.body = pack(data);
     });
 
     router.post('/downloadDemo',function *(next) {
