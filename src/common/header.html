@@ -46,7 +46,7 @@
         </div>
   </div>
 
-<header class="navbar gray navbar-sticky">
+<header class="navbar gray navbar-sticky u-navbar u-navbar-default" style="margin-bottom: 0">
 
 
 	<div class="u-container">
@@ -63,14 +63,37 @@
       <ul class="nav-list u-navbar-toolbar u-navbar-right u-navbar-toolbar-right" style="padding-top: 14px">
           <li ><a href="/dist/pages/getting-started/index.html" class="action-btn">开始使用</a></li>
           <li><a href="/dist/pages/design-language/iuapdesign.html" class="action-btn">设计语言</a></li>
-          <li class="tool-con-par"><a href="/dist/pages/neoui/index.html" class="action-btn">NeoUI</a>
-              <div class="sub">
-                  <div class="rows"></div>
-                  <a href="/dist/pages/global-style/index.html" class=" li">全局css样式</a>
+          <!-- <li >
+                                   <a class="dropdown-button" id="demo-menu-lower-right6">
+                                       <span>Dropdown</span><i class="uf uf-sortdown"></i>
+                                   </a>
 
-                  <a href="/dist/pages/components/index.html" class=" li">组件</a>
-                  <a href="/dist/pages/plugins/index.html" class=" li">JS 插件</a>
-              </div>
+
+
+                                 </li> -->
+          <li class="dropdown">
+              <a  class="action-btn dropdown-toggle u-button-hover" id="neoui-dropdown-button">NeoUI</a>
+              <ul class="u-dropdown-menu " for="neoui-dropdown-button">
+                  <li>
+                      <a
+                      href="/dist/pages/global-style/index.html">
+                      全局css样式
+                  </a>
+                  </li>
+                  <li>
+                      <a
+                      href="/dist/pages/components/index.html">
+                      组件
+                  </a>
+                  </li>
+                  <li>
+                      <a
+                      href="/dist/pages/plugins/index.html">
+                      JS 插件
+                  </a>
+              </li>
+
+              </ul>
           </li>
           <li><a href="/dist/pages/template/index.html" class="action-btn" target="_blank">模板库</a></li>
           <li><a href="/dist/pages/webIDE/index.html" class="action-btn" target="_blank">样式板</a></li>
