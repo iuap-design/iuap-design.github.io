@@ -19,7 +19,7 @@ module.exports = {
 
     var getTpl = function(styles,htmls,scripts){
 
-      var ctxPath='http://design.yyuap.com/static/uui/latest';
+      var ctxPath='http://design.yyuap.com/static/uui-original/stable';
       // var ctxPath='/dist/vendor/uui';
       var tpl = [
         '<!DOCTYPE html>',
@@ -31,14 +31,13 @@ module.exports = {
         '<link rel="stylesheet" href="http://design.yyuap.com/static/uploader/css/webuploader.css">',
         '<link rel="stylesheet" href="'+ ctxPath +'/css/font-awesome.css">',
         '<link rel="stylesheet" type="text/css" href="'+ ctxPath +'/css/u.css">',
-        '<link rel="stylesheet" type="text/css" href="'+ ctxPath +'/css/u-extend.css">',
         '<link rel="stylesheet" type="text/css" href="'+ ctxPath +'/css/tree.css">',
         '<link rel="stylesheet" type="text/css" href="'+ ctxPath +'/css/grid.css">',
         '<style id="demo-style" media="screen">',
         styles,
         '</style>',
         '</head>',
-        '<body style="background-color: #eceff1;padding-left: 20px;width: calc(100% - 20px );">',
+        '<body style="background-color: #eceff1;margin-left: 20px;width: calc(100% - 20px );">',
         htmls,
         '<script src="http://design.yyuap.com/static/jquery/jquery-1.11.2.js"></script>',
         '<script src="http://design.yyuap.com/static/uploader/js/webuploader.js"></script>',

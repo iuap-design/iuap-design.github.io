@@ -46,45 +46,73 @@
         </div>
   </div>
 
-<header class="navbar gray navbar-sticky">
+<header class="navbar gray navbar-sticky u-navbar u-navbar-default" style="margin-bottom: 0">
 
 
-	<div class="container">
-		<a href="/" class="logo scrollup">
-		<img src="/dist/static/img/logo-small.png" alt="iuap design">
-		<img src="http://design.yyuap.com/static/img/designer/logo2x.png" class="second">
-		</a>
-		<div class="toolbar">
-      <ul>
+	<div class="u-container">
+        <div class="u-navbar-header">
+            <a href="/" class="logo scrollup">
+    		<img src="/dist/static/img/logo-small.png" alt="iuap design">
+    		<img src="http://design.yyuap.com/static/img/designer/logo2x.png" class="second">
+    		</a>
+        </div>
+
+
+		<div class="u-collapse u-navbar-collapse u-navbar-collapse-group">
+
+      <ul class="nav-list u-navbar-toolbar u-navbar-right u-navbar-toolbar-right" style="padding-top: 14px">
           <li ><a href="/dist/pages/getting-started/index.html" class="action-btn">开始使用</a></li>
           <li><a href="/dist/pages/design-language/iuapdesign.html" class="action-btn">设计语言</a></li>
-          <li class="tool-con-par"><a href="/dist/pages/neoui/index.html" class="action-btn">NeoUI</a>
-              <div class="sub">
-                  <div class="rows"></div>
-                  <a href="/dist/pages/global-style/index.html" class=" li">全局css样式</a>
+          <!-- <li >
+                                   <a class="dropdown-button" id="demo-menu-lower-right6">
+                                       <span>Dropdown</span><i class="uf uf-sortdown"></i>
+                                   </a>
 
-                  <a href="/dist/pages/components/index.html" class=" li">组件</a>
-                  <a href="/dist/pages/plugins/index.html" class=" li">JS 插件</a>
-              </div>
+
+
+                                 </li> -->
+          <li class="dropdown">
+              <a  class="action-btn dropdown-toggle u-button-hover" id="neoui-dropdown-button">NeoUI</a>
+              <ul class="u-dropdown-menu " for="neoui-dropdown-button">
+                  <li>
+                      <a
+                      href="/dist/pages/global-style/index.html">
+                      全局css样式
+                  </a>
+                  </li>
+                  <li>
+                      <a
+                      href="/dist/pages/components/index.html">
+                      组件
+                  </a>
+                  </li>
+                  <li>
+                      <a
+                      href="/dist/pages/plugins/index.html">
+                      JS 插件
+                  </a>
+              </li>
+
+              </ul>
           </li>
           <li><a href="/dist/pages/template/index.html" class="action-btn" target="_blank">模板库</a></li>
           <li><a href="/dist/pages/webIDE/index.html" class="action-btn" target="_blank">样式板</a></li>
           <li><a href="/dist/pages/kero/install.html" class="action-btn">Kero</a></li>
           <li><a href="/dist/pages/custom/index.html" class="btn btn-ghost btn-primary btn-sm icon-left"> 定制 </a></li>
           <li>
-               <div class="nav-toggle" data-offcanvas="open"><i class="flaticon-list26"></i></div>
+               <div class="nav-toggle" data-offcanvas="open" style="margin-top:14px"><i class="flaticon-list26"></i></div>
           </li>
       </ul>
+      <div class="github-fork-button">
+        <a class="" href="https://github.com/iuap-design">
+          <svg aria-hidden="true" class="octicon octicon-repo-forked" height="14" version="1.1" viewBox="0 0 10 16" width="10">
+            <path d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path>
+          </svg>
+          Fork
+        </a>
+      </div>
 		</div>
-    <div class="github-fork-button">
-      <a class="" href="https://github.com/iuap-design">
-        <svg aria-hidden="true" class="octicon octicon-repo-forked" height="14" version="1.1" viewBox="0 0 10 16" width="10">
-          <path d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path>
-        </svg>
-        Fork
-      </a>
-    </div>
-      
+
 	</div>
 
   <a href="https://github.com/iuap-design" class="github-fork-ribbon">
