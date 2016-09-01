@@ -6,8 +6,6 @@ var concat = require('gulp-concat');
 var webpack = require('gulp-webpack');
 var rename = require('gulp-rename');
 
-var fse = require('fs-extra');
-
 // 获取Neoui es6模块依赖关系
 var neojson = require('./neoui.json');
 var neoModule = neojson.es6;
@@ -17,7 +15,9 @@ module.exports = function(data){
 
 	/**
 	 * Poly Match: polyselect
-	 * Neoui Match: neoselect
+	 * Neoui Match: neoselect  已作废
+	 * CSS Match:cssselect
+	 * JS Match: jsselect
 	 */
 	var dataJson = data;
 	var basePath = '../node_modules/';
@@ -61,24 +61,38 @@ module.exports = function(data){
 	/**
 	 * neoui定制部分
 	 */
+	// 数组填充
 	var neouiBasePath = path.resolve(__dirname,basePath + 'neoui');
 	var neouiCss =[];
 	var neouiJs =[];
-	if(dataJson.neoselect) {
-		for(var i=0; i<dataJson.neoselect.length; i++) {
-		  neouiCss.push(neouiBasePath + '/scss/ui/' + dataJson.neoselect[i] + '.scss');
-		  neouiJs.push(neouiBasePath + '/js/' + dataJson.neoselect[i] + '.js');
+	// if(dataJson.neoselect) {
+	// 	for(var i=0; i<dataJson.neoselect.length; i++) {
+	// 	  neouiCss.push(neouiBasePath + '/scss/ui/' + dataJson.neoselect[i] + '.scss');
+	// 	  neouiJs.push(neouiBasePath + '/js/' + dataJson.neoselect[i] + '.js');
+	// 	}
+	// }
+	if(dataJson.cssselect) {
+		for (var ci=0; ci<dataJson.cssselect.length; ci++) {
+			neouiCss.push(neouiBasePath + '/scss/ui/' + dataJson.cssselect[ci] + '.scss');
+		}
+	}
+	if(dataJson.jsselect) {
+		for (var ji=0; ji<dataJson.jsselect.length; ji++) {
+			neouiCss.push(neouiBasePath + '/scss/ui/' + dataJson.jsselect[ji] + '.scss');
+			neouiJs.push(neouiBasePath + '/js/' + dataJson.jsselect[ji] + '.js');
 		}
 	}
 
+
+
 	// 入口文件内容
 	var entryPath = path.resolve(__dirname,'../entry.js');
-	var dataNeo = [];
+	var dataNeo = ["import {extend} from \'neoui-sparrow/lib/extend\';"];
 	var ex = {};
 
 	var entryFun = function() {
-		for(var i=0, neoLength = dataJson.neoselect.length; i < neoLength; i++ ) {
-			var pluginModule = neoModule[dataJson.neoselect[i]];
+		for(var i=0, neoLength = dataJson.jsselect.length; i < neoLength; i++ ) {
+			var pluginModule = neoModule[dataJson.jsselect[i]];
 			for (var key in pluginModule) {
 				dataNeo.push(pluginModule[key]);
 				ex[key] = key;
@@ -89,7 +103,7 @@ module.exports = function(data){
 
 	// 写入入口文件
 	var dataNeoStr = dataNeo.join('\n');
-	fs.appendFileSync(entryPath,dataNeoStr);
+	fs.writeFileSync(entryPath,dataNeoStr);
 	var exBefore = '\nvar ex = ';
 	var exStr = JSON.stringify(ex);
 	var exAfter = [

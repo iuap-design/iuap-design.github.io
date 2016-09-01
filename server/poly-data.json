@@ -1,0 +1,11 @@
+{
+	"polyfill": {
+	    "title": "IE8 Polyfill模块",
+	    "description": "用于兼容ie8,包含respond,html5,及框架基础函数支持",
+	    "catlog": "polyselect",
+	    "list":[
+	        {"name":"核心函数支持","file":"u-polyfill-core"},
+	        {"name":"响应式支持","file":"u-polyfill-respond"}
+	    ]
+	}		
+}

@@ -1,0 +1,17 @@
+{
+    "kero-adapter": {
+        "title": "数据绑定模块",
+        "description": "选择需要的组件进行数据绑定",
+        "catlog": "keroselect",
+        "list":[
+            {
+                "name": "test3",
+                "file": "test3.js"
+            },
+            {
+                "name": "test4",
+                "file": "test4.js"
+            }
+        ]
+    }    
+}

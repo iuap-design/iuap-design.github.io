@@ -168,7 +168,7 @@
 			"DateTimePicker": "import {DateTimePicker} from 'neoui/js/neoui-datetimepicker';"
 		},
 		"neoui-time": {
-			"Time": "import {Time} from 'neoui/js/neoui-time';",
+			"Time": "import {Time} from 'neoui/js/neoui-time';"
 		},
 		"neoui-clockpicker": {
 			"ClockPicker": "import {ClockPicker} from 'neoui/js/neoui-clockpicker';"

@@ -50,10 +50,12 @@ window.onload = function() {
             var dataJson = {};
             var checkedUnit = document.querySelectorAll('#tab-panel-2 .coreModel li.is-checked');
             var checkedData = function(checkele) {
+                // data-catlog对应不同类别组件，如polyfill,css组件
                 var checkClass = checkele.getAttribute('data-catlog');
                 if(!dataJson[checkClass]){
                     dataJson[checkClass] = [];
                 }
+                // 添加选中的组件进入相应类别
                 var checkFile = checkele.getAttribute('data-file');
                 dataJson[checkClass].push(checkFile);
             };
