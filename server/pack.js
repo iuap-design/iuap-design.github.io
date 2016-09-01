@@ -28,35 +28,30 @@ module.exports = function(data){
 	var polyBasePath = path.resolve(__dirname, basePath + 'neoui-polyfill');
 	var polyJs = [];
 
-	var polyFun = function(){
-		if(dataJson.polyselect) {
-			for(var i = 0, polyLen = dataJson.polyselect.length; i < polyLen; i++) {
-				polyJs.push(polyBasePath + '/dist/' + dataJson.polyselect[i] + '.js');
-			}
+	if(dataJson.polyselect) {
+		for(var pi = 0, polyLen = dataJson.polyselect.length; pi < polyLen; pi++) {
+			polyJs.push(polyBasePath + '/dist/' + dataJson.polyselect[pi] + '.js');
 		}
-		
-		gulp.task('poly', function(){
-
-			if(polyJs.length === 2){
-				return gulp.src(polyJs)
-					.pipe(concat('u-polyfill.js'))
-					.pipe(gulp.dest(path.resolve(__dirname,'../')));
-			} else if (polyJs.length === 1 && polyJs[0] === 'u-polyfill-core') {
-				return gulp.src(polyJs)
-					.pipe(rename('u-polyfill.js'))
-					.pipe(gulp.dest(path.resolve(__dirname,'../')));
-			} else if (polyJs.length === 1 && polyJs[0] === 'u-polyfill-repsond') {
-				return gulp.src(polyJs)
-					.pipe(rename('u-polyfill.js'))
-					.pipe(gulp.dest(path.resolve(__dirname,'../')));
-			}
-		});
-
-		if(dataJson.length != 0) {
-			gulp.run('poly');
-		};
-	};
-	polyFun();
+	}
+	console.log(dataJson.polyselect);
+	gulp.task('poly', function(){
+		if(polyJs.length === 2){
+			return gulp.src(polyJs)
+				.pipe(concat('u-polyfill.js'))
+				.pipe(gulp.dest(path.resolve(__dirname,'../')));
+		} else if (polyJs.length === 1 && dataJson.polyselect[0] === 'u-polyfill-core') {
+			return gulp.src(polyJs)
+				.pipe(rename('u-polyfill.js'))
+				.pipe(gulp.dest(path.resolve(__dirname,'../')));
+		} else if (polyJs.length === 1 && dataJson.polyselect[0] === 'u-polyfill-respond') {
+			return gulp.src(polyJs)
+				.pipe(rename('u-polyfill.js'))
+				.pipe(gulp.dest(path.resolve(__dirname,'../')));
+		} else {
+			return ;
+		}
+	});
+	
 	
 	/**
 	 * neoui定制部分
@@ -130,7 +125,7 @@ module.exports = function(data){
 	});
 
 	// js部分
-	gulp.task('webpack', ['sass'], function() {
+	gulp.task('webpack', ['sass','poly'], function() {
 		return gulp.src(path.resolve(__dirname, '../entry.js'))
 			.pipe(webpack({
 				module:{
