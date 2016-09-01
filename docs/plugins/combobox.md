@@ -2,10 +2,9 @@
 
 combobox组合框是由一个文本输入控件和一个下拉菜单组成的，类似于select元素。用户可以从一个预先定义的列表里选择一个或者多个选项。
 
-# 示例
 
 
-默认单选下拉框
+## 默认单选下拉框
 <div class="example-content"><div class="u-combo" id="combo1">
     <div class="u-input-group u-has-feedback">
         <input class="u-form-control" />
@@ -25,6 +24,7 @@ document.getElementById('combo1')['u.Combo'].setComboData([{value:'01',name:'男
 <div class="examples-code"><pre><code>document.getElementById('combo1')['u.Combo'].setComboData([{value:'01',name:'男'},{value:'02',name:'女'}]);</code></pre>
 </div>
 
+## 多选下拉框
 添加 `mutil-select`样式 支持多选
 <div class="example-content"><div class="u-combo mutil-select" id="combo3">
     <div class="u-input-group u-has-feedback">
@@ -46,10 +46,11 @@ document.getElementById('combo3')['u.Combo'].setComboData([{value:'01',name:'jav
 </div>
 
 
+[试一试](http://design.yyuap.com/dist/pages/webIDE/index.html#/demos/ui/combobox)
 
 # API
 
-## Combo
+## \# Combo下拉框对象
 
 * 类型：`Object`
 * 说明： Combo表示一个下拉对象
@@ -63,7 +64,7 @@ var comboObject = document.getElementById('domId')['u.Combo'];
 
 ```
 
-## Combo.setComboData(dataArray)
+## \# setComboData 设置数据源
 
 * 类型： `Function`
 * 说明：给下拉框对象添加数据源
