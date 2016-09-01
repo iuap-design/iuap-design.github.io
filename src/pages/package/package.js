@@ -63,15 +63,17 @@ window.onload = function() {
 
             $.ajax({
                 type: 'post',
-                dataType: 'json',
+                dataType: 'text',
                 data: dataJson,
                 url: '/package',
                 success: function (patch) {
-                    console.log(patch);
+                    alert(patch);
+                    location.href = patch;
                     console.log('success')
                 },
                 error: function (patch) {
-                    console.log(patch);
+                    location.href = patch.responseText;
+                    console.error(patch);
                 }
             });
 

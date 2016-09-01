@@ -5,13 +5,16 @@ var path = require('path');
 var concat = require('gulp-concat');
 var webpack = require('gulp-webpack');
 var rename = require('gulp-rename');
+var zip = require('gulp-zip');
 
 // 获取Neoui es6模块依赖关系
 var neojson = require('./neoui.json');
 var neoModule = neojson.es6;
 
+var zipPath;
 
-module.exports = function(data){
+
+module.exports = function(data, self, cb){
 
 	/**
 	 * Poly Match: polyselect
@@ -33,20 +36,19 @@ module.exports = function(data){
 			polyJs.push(polyBasePath + '/dist/' + dataJson.polyselect[pi] + '.js');
 		}
 	}
-	console.log(dataJson.polyselect);
 	gulp.task('poly', function(){
 		if(polyJs.length === 2){
 			return gulp.src(polyJs)
 				.pipe(concat('u-polyfill.js'))
-				.pipe(gulp.dest(path.resolve(__dirname,'../')));
+				.pipe(gulp.dest(path.resolve(__dirname,'../download')));
 		} else if (polyJs.length === 1 && dataJson.polyselect[0] === 'u-polyfill-core') {
 			return gulp.src(polyJs)
 				.pipe(rename('u-polyfill.js'))
-				.pipe(gulp.dest(path.resolve(__dirname,'../')));
+				.pipe(gulp.dest(path.resolve(__dirname,'../download')));
 		} else if (polyJs.length === 1 && dataJson.polyselect[0] === 'u-polyfill-respond') {
 			return gulp.src(polyJs)
 				.pipe(rename('u-polyfill.js'))
-				.pipe(gulp.dest(path.resolve(__dirname,'../')));
+				.pipe(gulp.dest(path.resolve(__dirname,'../download')));
 		} else {
 			return ;
 		}
@@ -121,7 +123,7 @@ module.exports = function(data){
 		return gulp.src(neouiCss)
 			.pipe(sass())
 			.pipe(concat('u.css'))
-			.pipe(gulp.dest(path.resolve(__dirname,'../')))
+			.pipe(gulp.dest(path.resolve(__dirname,'../download')))
 	});
 
 	// js部分
@@ -146,11 +148,26 @@ module.exports = function(data){
 					extensions: ['','.js','.jsx']
 				}
 			}))
-			.pipe(gulp.dest(path.resolve(__dirname,'../')));
+			.pipe(gulp.dest(path.resolve(__dirname,'../download')));
 	});
 
-	gulp.run('webpack');
+	// zip压缩
+	gulp.task('zip', ['webpack'], function() {
+		var downFiles = path.resolve(__dirname, '../download/');
+		return gulp.src([downFiles + '/*.js', downFiles + '/*.css'])
+			.pipe(zip('down.zip'))
+			.pipe(gulp.dest(path.resolve(__dirname, '../download')));
+	});
 
-	return dataJson;
+	gulp.run('zip', function(){
+		zipPath = '/download/down.zip';
+		console.log(zipPath);
+		self.body = zipPath;
+		cb(null,"");
+	});
+	// gulp.watch(path.resolve(__dirname, '../entry.js'), ['zip']);
+
+
+	
 
 };
