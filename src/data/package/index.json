@@ -72,6 +72,14 @@
                 {"name":"neoui-year","file":"neoui-year"},
                 {"name":"neoui-yearmonth","file":"neoui-yearmonth"}
             ]
+        },
+        "keroadapter": {
+            "title": "KeroAdapter",
+            "description": "实现Neoui数据绑定",
+            "catlog": "polyselect",
+            "list":[
+                {"name":"keroadapter","file":"keroadapter"}
+            ]
         }
     }
 }

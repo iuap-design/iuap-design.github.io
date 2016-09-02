@@ -62,12 +62,6 @@ module.exports = function(data, self, cb){
 	var neouiBasePath = path.resolve(__dirname,basePath + 'neoui');
 	var neouiCss =[];
 	var neouiJs =[];
-	// if(dataJson.neoselect) {
-	// 	for(var i=0; i<dataJson.neoselect.length; i++) {
-	// 	  neouiCss.push(neouiBasePath + '/scss/ui/' + dataJson.neoselect[i] + '.scss');
-	// 	  neouiJs.push(neouiBasePath + '/js/' + dataJson.neoselect[i] + '.js');
-	// 	}
-	// }
 	if(dataJson.cssselect) {
 		for (var ci=0; ci<dataJson.cssselect.length; ci++) {
 			neouiCss.push(neouiBasePath + '/scss/ui/' + dataJson.cssselect[ci] + '.scss');
