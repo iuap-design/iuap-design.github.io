@@ -19,6 +19,10 @@ bin/tree/
 
 _book/
 
+# 下载
+download/
+
+
 dist/pages/components/
 dist/pages/design-language/
 dist/pages/getting-started/

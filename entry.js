@@ -1,6 +1,6 @@
 import {extend} from 'neoui-sparrow/lib/extend';
-import {Button} from 'neoui/js/neoui-button';
-var ex = {"Button":Button}
+import {slidePanel} from 'neoui/js/neoui-slidePanel';
+var ex = {"slidePanel":slidePanel}
 extend(ex,window.u || {});
 window.u = ex;
 export {ex as u};

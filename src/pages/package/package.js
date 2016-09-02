@@ -67,12 +67,9 @@ window.onload = function() {
                 data: dataJson,
                 url: '/package',
                 success: function (patch) {
-                    alert(patch);
                     location.href = patch;
-                    console.log('success')
                 },
                 error: function (patch) {
-                    location.href = patch.responseText;
                     console.error(patch);
                 }
             });

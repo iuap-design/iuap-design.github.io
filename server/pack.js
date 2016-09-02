@@ -80,8 +80,6 @@ module.exports = function(data, self, cb){
 		}
 	}
 
-
-
 	// 入口文件内容
 	var entryPath = path.resolve(__dirname,'../entry.js');
 	var dataNeo = ["import {extend} from \'neoui-sparrow/lib/extend\';"];
