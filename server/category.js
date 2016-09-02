@@ -3,6 +3,11 @@ const path = require('path');
 const scssPath = path.resolve(__dirname,'../node_modules/neoui/scss/ui');
 const jsPath = path.resolve(__dirname, '../node_modules/neoui/js');
 
+// 获取插件中文名
+const neouiJson = require('./neoui.json');
+const neouiJsonStyle = neouiJson.stylePlugin;
+const neouiJsonJs = neouiJson.jsPlugin;
+
 var stylePlugin, jsPlugin, styleAry, jsAry;
 stylePlugin = [];
 styleAry = [];
@@ -140,7 +145,8 @@ fs.readdir(scssPath, function(err, scssFiles) {
 		];
 		for(var si = 0, sLen = stylePlugin.length; si < sLen; si ++) {
 			var siStr;
-			si < sLen - 1 ? siStr = `                {"name":"${stylePlugin[si]}","file":"${stylePlugin[si]}"},` : siStr = `                {"name":"${stylePlugin[si]}","file":"${stylePlugin[si]}"}`;
+			var siName = neouiJsonStyle[stylePlugin[si]];
+			si < sLen - 1 ? siStr = `                {"name":"${siName}","file":"${stylePlugin[si]}"},` : siStr = `                {"name":"${siName}","file":"${stylePlugin[si]}"}`;
 			styleDataAry.push(siStr);
 		}
 		var styleEndAry = [
@@ -159,7 +165,8 @@ fs.readdir(scssPath, function(err, scssFiles) {
 		];
 		for(var ji = 0, jLen = jsPlugin.length; ji < jLen; ji ++) {
 			var jiStr;
-			ji < jLen - 1 ? jiStr = `                {"name":"${jsPlugin[ji]}","file":"${jsPlugin[ji]}"},` : jiStr = `                {"name":"${jsPlugin[ji]}","file":"${jsPlugin[ji]}"}`;
+			var jsName = neouiJsonJs[jsPlugin[ji]];
+			ji < jLen - 1 ? jiStr = `                {"name":"${jsName}","file":"${jsPlugin[ji]}"},` : jiStr = `                {"name":"${jsName}","file":"${jsPlugin[ji]}"}`;
 			jsDataAry.push(jiStr);
 		}
 		var jsEndAry = [

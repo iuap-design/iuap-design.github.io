@@ -80,14 +80,16 @@ module.exports = function(data, self, cb){
 	var ex = {};
 
 	var entryFun = function() {
-		for(var i=0, neoLength = dataJson.jsselect.length; i < neoLength; i++ ) {
-			var pluginModule = neoModule[dataJson.jsselect[i]];
-			for (var key in pluginModule) {
-				dataNeo.push(pluginModule[key]);
-				ex[key] = key;
+		if(dataJson.jsselect){
+			for(var i=0, neoLength = dataJson.jsselect.length; i < neoLength; i++ ) {
+				var pluginModule = neoModule[dataJson.jsselect[i]];
+				for (var key in pluginModule) {
+					dataNeo.push(pluginModule[key]);
+					ex[key] = key;
+				}
 			}
 		}
-	}
+	};
 	entryFun();
 
 	// 写入入口文件
@@ -151,7 +153,7 @@ module.exports = function(data, self, cb){
 			.pipe(gulp.dest(path.resolve(__dirname, '../download')));
 	});
 
-	gulp.run('zip', function(){
+	gulp.start('zip', function(){
 		zipPath = '/download/down.zip';
 		console.log(zipPath);
 		self.body = zipPath;

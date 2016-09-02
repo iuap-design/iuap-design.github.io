@@ -1,7 +1,7 @@
 window.onload = function() {
 
     /**
-     * 选中元素
+     * 选中元素,执行ajax
      */
     var cs = {
         init: function(){
