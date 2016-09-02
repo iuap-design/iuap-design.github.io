@@ -6,6 +6,7 @@ var concat = require('gulp-concat');
 var webpack = require('gulp-webpack');
 var rename = require('gulp-rename');
 var zip = require('gulp-zip');
+var clean = require('gulp-clean');
 
 // 获取Neoui es6模块依赖关系
 var neojson = require('./neoui.json');
@@ -145,15 +146,21 @@ module.exports = function(data, self, cb){
 			.pipe(gulp.dest(path.resolve(__dirname,'../download')));
 	});
 
+	var downFiles = path.resolve(__dirname, '../download/');
 	// zip压缩
 	gulp.task('zip', ['webpack'], function() {
-		var downFiles = path.resolve(__dirname, '../download/');
+		
 		return gulp.src([downFiles + '/*.js', downFiles + '/*.css'])
 			.pipe(zip('down.zip'))
 			.pipe(gulp.dest(path.resolve(__dirname, '../download')));
 	});
 
-	gulp.start('zip', function(){
+	gulp.task('clean',['zip'], function(){
+		return gulp.src([downFiles + '/*.js', downFiles + '/*.css'])
+			.pipe(clean());
+	})
+
+	gulp.start('clean', function(){
 		zipPath = '/download/down.zip';
 		console.log(zipPath);
 		self.body = zipPath;
