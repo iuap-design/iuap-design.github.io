@@ -164,21 +164,21 @@ fs.readdir(scssPath, function(err, scssFiles) {
 		}
 		var jsEndAry = [
 			'            ]',
-			'        },',
+			'        }',
 		];
 		var jsDataConcat = jsDataAry.concat(jsEndAry);
 
 		// keroadapter
-		var adapterDataAry = [
-			'        "keroadapter": {',
-			'            "title": "KeroAdapter",',
-			'            "description": "实现Neoui数据绑定",',
-			'            "catlog": "adselect",',
-			'            "list":[',
-			'                {"name":"keroadapter","file":"keroadapter"}',
-			'            ]',
-			'        }'
-		];
+		// var adapterDataAry = [
+		// 	'        "keroadapter": {',
+		// 	'            "title": "KeroAdapter",',
+		// 	'            "description": "实现Neoui数据绑定",',
+		// 	'            "catlog": "adselect",',
+		// 	'            "list":[',
+		// 	'                {"name":"keroadapter","file":"keroadapter"}',
+		// 	'            ]',
+		// 	'        }'
+		// ];
 		
 		// 数据底部
 		var dataEndAry = ['    }',
@@ -186,7 +186,7 @@ fs.readdir(scssPath, function(err, scssFiles) {
 		];
 
 		// 合并所有数据
-		var totalConcat = dataHeadAry.concat(polyDataAry, styleDataConcat, jsDataConcat, adapterDataAry, dataEndAry).join('\n');
+		var totalConcat = dataHeadAry.concat(polyDataAry, styleDataConcat, jsDataConcat, dataEndAry).join('\n');
 
 		// 写入文件
 		var indexPath = path.resolve(__dirname,'../src/data/package/index.json')
