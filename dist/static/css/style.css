@@ -56,6 +56,8 @@
 
 /** Brand Icons (Social Networks)
 *************************************/
+/*暂时引入bootStrap，因为后面的文档徐亚*/
+@import'vendor/bootstrap.min.css'; 
 
 @import'vendor/brand-icons.css';
 
