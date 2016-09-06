@@ -7,6 +7,7 @@ const jsPath = path.resolve(__dirname, '../node_modules/neoui/js');
 const neouiJson = require('./neoui.json');
 const neouiJsonStyle = neouiJson.stylePlugin;
 const neouiJsonJs = neouiJson.jsPlugin;
+const neouiJsonTheme = neouiJson.theme;
 
 var stylePlugin, jsPlugin, styleAry, jsAry;
 stylePlugin = [];
@@ -117,12 +118,32 @@ fs.readdir(scssPath, function(err, scssFiles) {
 
 		// 数据整体包含:头部 + 内容 + 底部
 		// 数据头部
-		var dataHeadAry =['{',
-			'    "mod":{'
-		];
+		var dataHeadAry =['{'];
 
-		// 内容部分：polyfill + css组件 + js组件
-		// polyfill组件
+		/**
+		 * panel1:主题color内容
+		 */
+		var themeHead = ['    "theme":{'];
+		var themeAry   = ['        "list":[',];
+		for(var ti=0,theLen = neouiJsonTheme.length; ti < theLen; ti++){
+			var tiStr;
+			var tiStrVal = JSON.stringify(neouiJsonTheme[ti]);
+			console.log(tiStrVal);
+			ti < theLen -1 ? tiStr = `            ${tiStrVal},`: tiStr = `            ${tiStrVal}`;
+			themeAry.push(tiStr);
+		}
+		var themeEndAry = [
+			'        ]',
+			'    },',
+		];
+		var panelTheme = themeHead.concat(themeAry,themeEndAry);
+
+		/**
+		 * panel2:勾选面板内容
+		 */
+		var checkHead = ['    "mod":{'];
+
+		// polyfill start
 		var polyDataAry = [
 			'        "polyfill": {',
 			'            "title": "IE8 Polyfill模块",',
@@ -134,8 +155,9 @@ fs.readdir(scssPath, function(err, scssFiles) {
 			'            ]',
 			'        },',
 		];
+		// polyfill end
 
-		// css组件
+		// css plugin start
 		var styleDataAry = [
 			'        "neocss": {',
 			'            "title": "CSS组件",',
@@ -154,8 +176,9 @@ fs.readdir(scssPath, function(err, scssFiles) {
 			'        },',
 		];
 		var styleDataConcat = styleDataAry.concat(styleEndAry);
+		// css plugin end
 
-		// js组件
+		// js start
 		var jsDataAry = [
 			'        "neojs": {',
 			'            "title": "JS组件",',
@@ -174,6 +197,8 @@ fs.readdir(scssPath, function(err, scssFiles) {
 			'        }',
 		];
 		var jsDataConcat = jsDataAry.concat(jsEndAry);
+		// js end
+
 
 		// keroadapter
 		// var adapterDataAry = [
@@ -187,13 +212,14 @@ fs.readdir(scssPath, function(err, scssFiles) {
 		// 	'        }'
 		// ];
 		
+		var checkEnd = ['    }'];
+		var panelCheck = checkHead.concat(polyDataAry, styleDataConcat, jsDataConcat, checkEnd);
+
 		// 数据底部
-		var dataEndAry = ['    }',
-			'}'
-		];
+		var dataEndAry = ['}'];
 
 		// 合并所有数据
-		var totalConcat = dataHeadAry.concat(polyDataAry, styleDataConcat, jsDataConcat, dataEndAry).join('\n');
+		var totalConcat = dataHeadAry.concat(panelTheme, panelCheck, dataEndAry).join('\n');
 
 		// 写入文件
 		var indexPath = path.resolve(__dirname,'../src/data/package/index.json')
