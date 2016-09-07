@@ -216,135 +216,192 @@
                     <!-- 颜色选择器 -->
                     <div class="color-head-div" id="colorModel">
                         <div class="color-whole-div">
-                            <div class="color-head-div">设置主题颜色，左侧选中主色，右侧选择辅色。通过点击色块进行选中，也可在输入框中输入rgb格式的颜色编码。</div>
+                            <div class="color-head-div">选择主题色:</div>
                             <div class="color-input-div u-row">
                                 <div class="u-text color-input u-col-md-4 is-upgraded is-dirty">
-                                    <label for="color0" class="color-label">主色</label>
-                                    <input id="color0" value="63,81,181" class="color-in" title="244,67,54">
+                                    <!-- <label for="color0" class="color-label">主色</label> -->
+                                    <input id="color0" value="rgb(63,81,181)" class="color-in" title="244,67,54">
+                                    <div id="colorGroup">
+                                        <ul>
+                                            
+                                                <li class=bg-red data-color=rgb(244,67,54)></li>
+                                            
+                                                <li class=bg-pink data-color=rgb(233,30,99)></li>
+                                            
+                                                <li class=bg-purple data-color=rgb(156,39,176)></li>
+                                            
+                                                <li class=bg-deep-purple data-color=rgb(103,58,183)></li>
+                                            
+                                                <li class=bg-indigo data-color=rgb(63,81,181)></li>
+                                            
+                                                <li class=bg-blue data-color=rgb(33,150,243)></li>
+                                            
+                                                <li class=bg-light-blue data-color=rgb(3,169,244)></li>
+                                            
+                                                <li class=bg-cyan data-color=rgb(0,188,212)></li>
+                                            
+                                                <li class=bg-teal data-color=rgb(0,150,136)></li>
+                                            
+                                                <li class=bg-green data-color=rgb(76,175,80)></li>
+                                            
+                                                <li class=bg-light-green data-color=rgb(139,195,74)></li>
+                                            
+                                                <li class=bg-lime data-color=rgb(205,220,57)></li>
+                                            
+                                                <li class=bg-yellow data-color=rgb(255,235,59)></li>
+                                            
+                                                <li class=bg-amber data-color=rgb(255,193,7)></li>
+                                            
+                                                <li class=bg-orange data-color=rgb(255,152,0)></li>
+                                            
+                                                <li class=bg-deep-orange data-color=rgb(255,87,34)></li>
+                                            
+                                                <li class=bg-brown data-color=rgb(121,85,72)></li>
+                                            
+                                                <li class=bg-grey data-color=rgb(158,158,158)></li>
+                                            
+                                                <li class=bg-blue-grey data-color=rgb(96,125,139)></li>
+                                            
+                                                <li class=bg-black data-color=rgb(0,0,0)></li>
+                                            
+                                        </ul>
+                                        <div id="colorShow">
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <ul>
-                                        
-                                        <li>
-                                            <p><b>rgb(244,67,54)</b>bg-red</p>
-                                        </li>
-                                        
-                                        <li>
-                                            <p><b>rgb(233,30,99)</b>bg-pink</p>
-                                        </li>
-                                        
-                                        <li>
-                                            <p><b>rgb(156,39,176)</b>bg-purple</p>
-                                        </li>
-                                        
-                                        <li>
-                                            <p><b>rgb(103,58,183)</b>bg-deep-purple</p>
-                                        </li>
-                                        
-                                        <li>
-                                            <p><b>rgb(63,81,181)</b>bg-indigo</p>
-                                        </li>
-                                        
-                                        <li>
-                                            <p><b>rgb(33,150,243)</b>bg-blue</p>
-                                        </li>
-                                        
-                                        <li>
-                                            <p><b>rgb(3,169,244)</b>bg-light-blue</p>
-                                        </li>
-                                        
-                                        <li>
-                                            <p><b>rgb(0,188,212)</b>bg-cyan</p>
-                                        </li>
-                                        
-                                        <li>
-                                            <p><b>rgb(0,150,136)</b>bg-teal</p>
-                                        </li>
-                                        
-                                        <li>
-                                            <p><b>rgb(76,175,80)</b>bg-green</p>
-                                        </li>
-                                        
-                                        <li>
-                                            <p><b>rgb(139,195,74)</b>bg-light-green</p>
-                                        </li>
-                                        
-                                        <li>
-                                            <p><b>rgb(205,220,57)</b>bg-lime</p>
-                                        </li>
-                                        
-                                        <li>
-                                            <p><b>rgb(255,235,59)</b>bg-yellow</p>
-                                        </li>
-                                        
-                                        <li>
-                                            <p><b>rgb(255,193,7)</b>bg-amber</p>
-                                        </li>
-                                        
-                                        <li>
-                                            <p><b>rgb(255,152,0)</b>bg-orange</p>
-                                        </li>
-                                        
-                                        <li>
-                                            <p><b>rgb(255,87,34)</b>bg-deep-orange</p>
-                                        </li>
-                                        
-                                        <li>
-                                            <p><b>rgb(121,85,72)</b>bg-brown</p>
-                                        </li>
-                                        
-                                        <li>
-                                            <p><b>rgb(158,158,158)</b>bg-grey</p>
-                                        </li>
-                                        
-                                        <li>
-                                            <p><b>rgb(96,125,139)</b>bg-blue-grey</p>
-                                        </li>
-                                        
-                                        <li>
-                                            <p><b>rgb(0,0,0)</b>bg-black</p>
-                                        </li>
-                                        
-                                    </ul>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
                     
-                    <div class="color-head-div">主色辅色切换后效果见下：</div>
+                    <div class="color-head-div">选择主题色后样式预览：</div>
                     <!-- 按钮 -->
                     <div class="u-container-fluid u-widget-bg">
                             <div class="u-row">
+                                <!-- 导航 -->
                                 <div class="u-col-md-12">
-                                    <div class="u-widget  u-widget-right">
+                                    <div class="u-widget">
+                                        <div class="u-widget-heading">
+                                            <h3 class="u-widget-title">对比导航</h3>
+                                        </div>
+                                        <div class="u-widget-body">
+                                             <nav class="u-navbar u-navbar-inverse" role="navigation" data-theme="rgb(63,81,181)">
+                                                <div class="u-container-fluid">
+                                                    <div class="u-navbar-header">
+                                                        <button type="button" class="u-navbar-toggle u-hamburger u-hamburger-close u-collapsed" data-target="#example-inverse-collapse" data-toggle="collapse">
+                                                            <!-- <span class="sr-only">Toggle navigation</span> -->
+                                                            <span class="u-hamburger-bar"></span>
+                                                        </button>
+                                                       
+                                                        <a class="u-navbar-brand" href="javascript:void(0)">Brand</a>
+                                                    </div>
+                                                    <ul class="nav-list u-navbar-nav hidden-xs">
+                                                        <li>
+                                                            <a href="javascript:void(0)">
+                                                                <i class="uf uf-book" aria-hidden="true"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="hidden-xs">
+                                                            <a class="uf uf-bellmusicaltool" data-toggle="fullscreen" href="#" role="button">
+                                                                <!-- <span class="sr-only">Toggle fullscreen</span> -->
+                                                            </a>
+                                                        </li>
+                                                        <li class="hidden-xs">
+                                                            <a class="uf uf-zoomin" data-toggle="collapse" href="#example-default-search" role="button">
+                                                                <!-- <span class="sr-only">Toggle Search</span> -->
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="u-collapse u-navbar-collapse u-navbar-collapse-group" id="example-inverse-collapse">
+                                                        <ul class="nav-list u-navbar-toolbar u-navbar-right u-navbar-toolbar-right">
+                                                            <li class="dropdown">
+                                                                <a class="u-avatar w-32  u-avatar-online">
+                                                                    <img src="http://design.yyuap.com/static/img/navimg1.jpg" alt="..." class="img-circle">
+                                                                    <i></i>
+                                                                </a>
+                                                              
+                                                            </li>
+                                                            <li class="dropdown">
+                                                                <a class="u-badge w-20 m" data-badge="1">
+                                                                    <i class="uf uf-bellmusicaltool"></i>
+                                                                </a>
+                                                                
+                                                            </li>
+                                                            <li class="dropdown">
+                                                                <a class="u-badge u-badge-info w-20 m" data-badge="3">
+                                                                    <i class="uf uf-envelope"></i>
+                                                                </a>
+                                                               
+                                                            </li>
+                                                        </ul>
+                                                    </div>   
+                                                </div>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- 按钮 -->
+                                <div class="u-col-md-12">
+                                    <div class="u-widget">
                                         <div class="u-widget-heading">
                                             <h3 class="u-widget-title">基础按钮</h3>
                                         </div>
                                         <div class="u-widget-body">
-                                            <button class="u-button raised primary main-color-show">BUTTON</button>
+                                            <button class="u-button raised primary main-color-show" data-theme="rgb(63,81,181)">BUTTON</button>
                                             <button class="u-button raised accent assist-color-show">BUTTON</button>
                                             <button class="u-button raised">BUTTON</button>
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- 进度条 -->
                                 <div class="u-col-md-12">
-                                    <div class="u-widget  u-widget-right">
+                                    <div class="u-widget ">
                                         <div class="u-widget-heading">
-                                            <h3 class="u-widget-title">圆形按钮</h3>
+                                            <h3 class="u-widget-title">不同尺寸的进度条</h3>
                                         </div>
                                         <div class="u-widget-body">
-                                            <button class="u-button floating primary main-color-show">
-                                                <i class="uf uf-plusblacksymbol"></i>
-                                            </button>
-                                            <button class="u-button floating accent assist-color-show">
-                                                <i class="uf uf-plusblacksymbol"></i>
-                                            </button>
-                                            <button class="u-button floating">
-                                                <i class="uf uf-plusblacksymbol"></i>
-                                            </button>
+                                            <div id="p22" class="u-progress u-progress-lg"></div>
+                                            <br/>
+                                            <div id="p23" class="u-progress u-progress-md"></div>
+                                            <br/>
+                                            <div id="p24" class="u-progress u-progress-sm"></div>
+                                            <br/>
+                                            <div id="p25" class="u-progress"></div>
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- switch -->
+                                <div class="u-col-md-12">
+                                    <div class="u-widget">
+                                        <div class="u-widget-heading">
+                                            <h3 class="u-widget-title">switch</h3>
+                                        </div>
+                                        <div class="u-widget-body">
+                                            <label class="u-switch" for="switch-1">
+                                                <input type="checkbox" id="switch-1" class="u-switch-input">
+                                                <span class="u-switch-label"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 默认分页 -->
+                                <div class="u-col-md-12">
+                                    <div class="u-widget">
+                                        <div class="u-widget-heading">
+                                            <h3 class="u-widget-title">默认分页</h3>
+                                        </div>
+                                        <div class="u-widget-body">
+                                            <div id='pagination' class='u-pagination'>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
                             </div>
                     </div>
                 </div>

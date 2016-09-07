@@ -121,59 +121,154 @@
                     <!-- 颜色选择器 -->
                     <div class="color-head-div" id="colorModel">
                         <div class="color-whole-div">
-                            <div class="color-head-div">设置主题颜色，左侧选中主色，右侧选择辅色。通过点击色块进行选中，也可在输入框中输入rgb格式的颜色编码。</div>
+                            <div class="color-head-div">选择主题色:</div>
                             <div class="color-input-div u-row">
                                 <div class="u-text color-input u-col-md-4 is-upgraded is-dirty">
-                                    <label for="color0" class="color-label">主色</label>
-                                    <input id="color0" value="63,81,181" class="color-in" title="244,67,54">
+                                    <!-- <label for="color0" class="color-label">主色</label> -->
+                                    <input id="color0" value="rgb(63,81,181)" class="color-in" title="244,67,54">
+                                    <div id="colorGroup">
+                                        <ul>
+                                            {{each theme.list as value}}
+                                                <li class={{value.class}} data-color={{value.color}}></li>
+                                            {{/each}}
+                                        </ul>
+                                        <div id="colorShow">
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <ul>
-                                        {{each theme.list as value i}}
-                                        <li>
-                                            <p><b>{{value.color}}</b>{{value.class}}</p>
-                                        </li>
-                                        {{/each}}
-                                    </ul>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
                     
-                    <div class="color-head-div">主色辅色切换后效果见下：</div>
+                    <div class="color-head-div">选择主题色后样式预览：</div>
                     <!-- 按钮 -->
                     <div class="u-container-fluid u-widget-bg">
                             <div class="u-row">
+                                <!-- 导航 -->
                                 <div class="u-col-md-12">
-                                    <div class="u-widget  u-widget-right">
+                                    <div class="u-widget">
+                                        <div class="u-widget-heading">
+                                            <h3 class="u-widget-title">对比导航</h3>
+                                        </div>
+                                        <div class="u-widget-body">
+                                             <nav class="u-navbar u-navbar-inverse" role="navigation" data-theme="rgb(63,81,181)">
+                                                <div class="u-container-fluid">
+                                                    <div class="u-navbar-header">
+                                                        <button type="button" class="u-navbar-toggle u-hamburger u-hamburger-close u-collapsed" data-target="#example-inverse-collapse" data-toggle="collapse">
+                                                            <!-- <span class="sr-only">Toggle navigation</span> -->
+                                                            <span class="u-hamburger-bar"></span>
+                                                        </button>
+                                                       
+                                                        <a class="u-navbar-brand" href="javascript:void(0)">Brand</a>
+                                                    </div>
+                                                    <ul class="nav-list u-navbar-nav hidden-xs">
+                                                        <li>
+                                                            <a href="javascript:void(0)">
+                                                                <i class="uf uf-book" aria-hidden="true"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="hidden-xs">
+                                                            <a class="uf uf-bellmusicaltool" data-toggle="fullscreen" href="#" role="button">
+                                                                <!-- <span class="sr-only">Toggle fullscreen</span> -->
+                                                            </a>
+                                                        </li>
+                                                        <li class="hidden-xs">
+                                                            <a class="uf uf-zoomin" data-toggle="collapse" href="#example-default-search" role="button">
+                                                                <!-- <span class="sr-only">Toggle Search</span> -->
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="u-collapse u-navbar-collapse u-navbar-collapse-group" id="example-inverse-collapse">
+                                                        <ul class="nav-list u-navbar-toolbar u-navbar-right u-navbar-toolbar-right">
+                                                            <li class="dropdown">
+                                                                <a class="u-avatar w-32  u-avatar-online">
+                                                                    <img src="http://design.yyuap.com/static/img/navimg1.jpg" alt="..." class="img-circle">
+                                                                    <i></i>
+                                                                </a>
+                                                              
+                                                            </li>
+                                                            <li class="dropdown">
+                                                                <a class="u-badge w-20 m" data-badge="1">
+                                                                    <i class="uf uf-bellmusicaltool"></i>
+                                                                </a>
+                                                                
+                                                            </li>
+                                                            <li class="dropdown">
+                                                                <a class="u-badge u-badge-info w-20 m" data-badge="3">
+                                                                    <i class="uf uf-envelope"></i>
+                                                                </a>
+                                                               
+                                                            </li>
+                                                        </ul>
+                                                    </div>   
+                                                </div>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- 按钮 -->
+                                <div class="u-col-md-12">
+                                    <div class="u-widget">
                                         <div class="u-widget-heading">
                                             <h3 class="u-widget-title">基础按钮</h3>
                                         </div>
                                         <div class="u-widget-body">
-                                            <button class="u-button raised primary main-color-show">BUTTON</button>
+                                            <button class="u-button raised primary main-color-show" data-theme="rgb(63,81,181)">BUTTON</button>
                                             <button class="u-button raised accent assist-color-show">BUTTON</button>
                                             <button class="u-button raised">BUTTON</button>
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- 进度条 -->
                                 <div class="u-col-md-12">
-                                    <div class="u-widget  u-widget-right">
+                                    <div class="u-widget ">
                                         <div class="u-widget-heading">
-                                            <h3 class="u-widget-title">圆形按钮</h3>
+                                            <h3 class="u-widget-title">不同尺寸的进度条</h3>
                                         </div>
                                         <div class="u-widget-body">
-                                            <button class="u-button floating primary main-color-show">
-                                                <i class="uf uf-plusblacksymbol"></i>
-                                            </button>
-                                            <button class="u-button floating accent assist-color-show">
-                                                <i class="uf uf-plusblacksymbol"></i>
-                                            </button>
-                                            <button class="u-button floating">
-                                                <i class="uf uf-plusblacksymbol"></i>
-                                            </button>
+                                            <div id="p22" class="u-progress u-progress-lg"></div>
+                                            <br/>
+                                            <div id="p23" class="u-progress u-progress-md"></div>
+                                            <br/>
+                                            <div id="p24" class="u-progress u-progress-sm"></div>
+                                            <br/>
+                                            <div id="p25" class="u-progress"></div>
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- switch -->
+                                <div class="u-col-md-12">
+                                    <div class="u-widget">
+                                        <div class="u-widget-heading">
+                                            <h3 class="u-widget-title">switch</h3>
+                                        </div>
+                                        <div class="u-widget-body">
+                                            <label class="u-switch" for="switch-1">
+                                                <input type="checkbox" id="switch-1" class="u-switch-input">
+                                                <span class="u-switch-label"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 默认分页 -->
+                                <div class="u-col-md-12">
+                                    <div class="u-widget">
+                                        <div class="u-widget-heading">
+                                            <h3 class="u-widget-title">默认分页</h3>
+                                        </div>
+                                        <div class="u-widget-body">
+                                            <div id='pagination' class='u-pagination'>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
                             </div>
                     </div>
                 </div>
