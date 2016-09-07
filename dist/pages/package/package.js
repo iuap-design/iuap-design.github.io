@@ -1,6 +1,6 @@
 window.onload = function() {
     /**
-     * 颜色选中弹出picker
+     * 主题颜色交互
      */
     var inColor = document.getElementById('color0');
     var colorGroup = document.getElementById('colorGroup');
@@ -60,16 +60,18 @@ window.onload = function() {
         corhover: function(ele){
             ele.addEventListener('mouseenter', function(event){
                 var eleCor = ele.getAttribute('data-color');
-                colorShow.style.backgroundColor = eleCor;
+                var eleRGB = 'rgb(' + eleCor + ')';
+                colorShow.style.backgroundColor = eleRGB;
             },true);
         },
         corselect: function(ele){
             var self = this;
             ele.addEventListener('click', function(event){
                 var eleCor = ele.getAttribute('data-color');
+                var eleRGB = 'rgb(' + eleCor + ')';
                 colorGroup.style.display = 'none';
                 inColor.value = eleCor;
-                self.uichange(eleCor);
+                self.uichange(eleRGB);
 
                 event.stopPropagation();
             },true);
@@ -157,6 +159,11 @@ window.onload = function() {
                 dataJson[checkClass].push(checkFile);
             };
             checkedUnit.forEach(checkedData);
+
+            // 增加主题颜色
+            var colorVal = inColor.value;
+            dataJson.themeColor = colorVal;
+            console.log(dataJson);
 
             $.ajax({
                 type: 'post',

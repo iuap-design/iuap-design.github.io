@@ -54,7 +54,17 @@ module.exports = function(data, self, cb){
 			return ;
 		}
 	});
-	
+
+	/**
+	 * 模板颜色定制部分
+	 */
+	var dataColor = dataJson.themeColor;
+	var corPath = path.resolve(__dirname, basePath + 'neoui/scss/core/minxin-themeColors.scss');
+	var corData = fs.readFileSync(corPath, 'utf-8');
+	console.log("corData",corData);
+	var corNewData = corData.replace(/(\$color-primary: ).*(;)/g,`$1"${dataColor}"$2`);
+	console.log("corNewData",corNewData);
+	fs.writeFileSync(corPath,corNewData, 'utf-8');
 	
 	/**
 	 * neoui定制部分
