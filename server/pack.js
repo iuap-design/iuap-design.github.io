@@ -166,7 +166,7 @@ module.exports = function(data, self, cb){
 						{
 							test: /(\.jsx|\.js)$/,
 							loader: 'babel',
-							exclude: /(node_modules|bower_components)/ 
+							exclude: /(bower_components)/ 
 						}
 					]				
 				},
