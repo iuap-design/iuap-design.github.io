@@ -13,3 +13,4 @@
 * [媒体对象 meida](media.md)
 * [列表组 listgroup](listgroup.md)
 * [图片画廊 gallery](gallery.md)
+* [卡片](statisticWidget.md)

@@ -61,13 +61,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports.DataTable = exports.u = undefined;
 
-	var _index = __webpack_require__(128);
+	var _index = __webpack_require__(126);
 
-	var _index2 = __webpack_require__(130);
+	var _index2 = __webpack_require__(128);
 
 	var neoui = _interopRequireWildcard(_index2);
 
-	var _index3 = __webpack_require__(148);
+	var _index3 = __webpack_require__(146);
 
 	var _index4 = __webpack_require__(75);
 
@@ -3240,7 +3240,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 	exports.Events = undefined;
 
@@ -3256,13 +3256,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	var Events = function Events() {
-	    _classCallCheck(this, Events);
+	  _classCallCheck(this, Events);
 
-	    this.on = _events.on;
-	    this.off = _events.off;
-	    this.one = _events.one;
-	    this.trigger = _events.trigger;
-	    this.getEvent = _events.getEvent;
+	  this.on = _events.on;
+	  this.off = _events.off;
+	  this.one = _events.one;
+	  this.trigger = _events.trigger;
+	  this.getEvent = _events.getEvent;
 	};
 
 	exports.Events = Events;
@@ -6994,55 +6994,51 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _baseAdapter = __webpack_require__(76);
 
-	var _checkbox = __webpack_require__(77);
+	var _keroaCheckbox = __webpack_require__(77);
 
-	var _ckeditor = __webpack_require__(88);
+	var _keroaCkeditor = __webpack_require__(88);
 
-	var _combobox = __webpack_require__(89);
+	var _keroaCombo = __webpack_require__(89);
 
-	var _currency = __webpack_require__(92);
+	var _keroaCurrency = __webpack_require__(92);
 
-	var _datetime = __webpack_require__(96);
+	var _keroaDatetimepicker = __webpack_require__(96);
 
-	var _float = __webpack_require__(94);
+	var _keroaFloat = __webpack_require__(94);
 
-	var _grid = __webpack_require__(98);
+	var _keroaGrid = __webpack_require__(98);
 
-	var _integer = __webpack_require__(101);
+	var _keroaInteger = __webpack_require__(101);
 
-	var _month = __webpack_require__(108);
+	var _keroaMonth = __webpack_require__(108);
 
-	var _nativeCheckbox = __webpack_require__(110);
+	var _keroaPagination = __webpack_require__(110);
 
-	var _nativeRadio = __webpack_require__(111);
+	var _keroaPassword = __webpack_require__(105);
 
-	var _pagination = __webpack_require__(112);
+	var _keroaPercent = __webpack_require__(106);
 
-	var _password = __webpack_require__(105);
+	var _keroaString = __webpack_require__(100);
 
-	var _percent = __webpack_require__(106);
+	var _keroaProgress = __webpack_require__(112);
 
-	var _string = __webpack_require__(100);
+	var _keroaRadio = __webpack_require__(102);
 
-	var _progress = __webpack_require__(114);
+	var _keroaSwitch = __webpack_require__(114);
 
-	var _radio = __webpack_require__(102);
+	var _keroaTextarea = __webpack_require__(116);
 
-	var _switch = __webpack_require__(116);
+	var _keroaTextfield = __webpack_require__(117);
 
-	var _textarea = __webpack_require__(118);
+	var _keroaTime = __webpack_require__(118);
 
-	var _textfield = __webpack_require__(119);
+	var _keroaUrl = __webpack_require__(104);
 
-	var _time = __webpack_require__(120);
+	var _keroaYear = __webpack_require__(121);
 
-	var _url = __webpack_require__(104);
+	var _keroaYearmonth = __webpack_require__(123);
 
-	var _year = __webpack_require__(123);
-
-	var _yearmonth = __webpack_require__(125);
-
-	var _tree = __webpack_require__(127);
+	var _keroaTree = __webpack_require__(125);
 
 	var _enableMixin = __webpack_require__(79);
 
@@ -7056,29 +7052,27 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var ex = {
 		BaseAdapter: _baseAdapter.BaseAdapter,
-		CheckboxAdapter: _checkbox.CheckboxAdapter,
-		CkEditorAdapter: _ckeditor.CkEditorAdapter,
-		ComboboxAdapter: _combobox.ComboboxAdapter,
-		CurrencyAdapter: _currency.CurrencyAdapter,
-		DateTimeAdapter: _datetime.DateTimeAdapter,
-		FloatAdapter: _float.FloatAdapter,
-		IntegerAdapter: _integer.IntegerAdapter,
-		MonthAdapter: _month.MonthAdapter,
-		NativeCheckAdapter: _nativeCheckbox.NativeCheckAdapter,
-		NativeRadioAdapter: _nativeRadio.NativeRadioAdapter,
-		PaginationAdapter: _pagination.PaginationAdapter,
-		PassWordAdapter: _password.PassWordAdapter,
-		PercentAdapter: _percent.PercentAdapter,
-		StringAdapter: _string.StringAdapter,
-		ProgressAdapter: _progress.ProgressAdapter,
-		RadioAdapter: _radio.RadioAdapter,
-		SwitchAdapter: _switch.SwitchAdapter,
-		TextAreaAdapter: _textarea.TextAreaAdapter,
-		TextFieldAdapter: _textfield.TextFieldAdapter,
-		TimeAdapter: _time.TimeAdapter,
-		UrlAdapter: _url.UrlAdapter,
-		YearAdapter: _year.YearAdapter,
-		YearMonthAdapter: _yearmonth.YearMonthAdapter,
+		CheckboxAdapter: _keroaCheckbox.CheckboxAdapter,
+		CkEditorAdapter: _keroaCkeditor.CkEditorAdapter,
+		ComboboxAdapter: _keroaCombo.ComboboxAdapter,
+		CurrencyAdapter: _keroaCurrency.CurrencyAdapter,
+		DateTimeAdapter: _keroaDatetimepicker.DateTimeAdapter,
+		FloatAdapter: _keroaFloat.FloatAdapter,
+		IntegerAdapter: _keroaInteger.IntegerAdapter,
+		MonthAdapter: _keroaMonth.MonthAdapter,
+		PaginationAdapter: _keroaPagination.PaginationAdapter,
+		PassWordAdapter: _keroaPassword.PassWordAdapter,
+		PercentAdapter: _keroaPercent.PercentAdapter,
+		StringAdapter: _keroaString.StringAdapter,
+		ProgressAdapter: _keroaProgress.ProgressAdapter,
+		RadioAdapter: _keroaRadio.RadioAdapter,
+		SwitchAdapter: _keroaSwitch.SwitchAdapter,
+		TextAreaAdapter: _keroaTextarea.TextAreaAdapter,
+		TextFieldAdapter: _keroaTextfield.TextFieldAdapter,
+		TimeAdapter: _keroaTime.TimeAdapter,
+		UrlAdapter: _keroaUrl.UrlAdapter,
+		YearAdapter: _keroaYear.YearAdapter,
+		YearMonthAdapter: _keroaYearmonth.YearMonthAdapter,
 		EnableMixin: _enableMixin.EnableMixin,
 		RequiredMixin: _requiredMixin.RequiredMixin,
 		ValidateMixin: _validateMixin.ValidateMixin,
@@ -7091,7 +7085,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	(0, _extend.extend)(ex, window.u || {});
-
+	window.u = ex;
 	exports.u = ex;
 
 /***/ },
@@ -7221,6 +7215,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var self = this;
 	        // CheckboxAdapter.superclass.initialize.apply(this, arguments); 
 	        this.isGroup = this.options['isGroup'] === true || this.options['isGroup'] === 'true';
+	        this.otherValue = this.options['otherValue'] || 'ovOV~!';
 	        if (this.options['datasource'] || this.options['hasOther']) {
 	            // 存在datasource或者有其他选项，将当前dom元素保存，以后用于复制新的dom元素
 	            this.checkboxTemplateArray = [];
@@ -7301,21 +7296,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	                modelValue = modelValue ? modelValue : '';
 	                var valueArr = modelValue == '' ? [] : modelValue.split(',');
 	                if (comp._inputElement.checked) {
-	                    var oldIndex = valueArr.indexOf(comp._inputElement.oldValue);
+	                    var oldIndex = valueArr.indexOf(self.otherInput.oldValue);
 	                    if (oldIndex > -1) {
 	                        valueArr.splice(oldIndex, 1);
 	                    }
-	                    if (comp._inputElement.value) {
-	                        valueArr.push(comp._inputElement.value);
+	                    if (self.otherInput.value) {
+	                        valueArr.push(self.otherInput.value);
 	                    }
+	                    var otherValueIndex = valueArr.indexOf(self.otherValue);
+	                    if (otherValueIndex < 0) {
+	                        valueArr.push(self.otherValue);
+	                    }
+
 	                    // 选中后可编辑
 	                    comp.element.querySelectorAll('input[type="text"]').forEach(function (ele) {
 	                        ele.removeAttribute('disabled');
 	                    });
 	                } else {
-	                    var index = valueArr.indexOf(comp._inputElement.value);
+	                    var index = valueArr.indexOf(self.otherInput.value);
 	                    if (index > -1) {
 	                        valueArr.splice(index, 1);
+	                    }
+
+	                    var otherValueIndex = valueArr.indexOf(self.otherValue);
+	                    if (otherValueIndex > -1) {
+	                        valueArr.splice(otherValueIndex, 1);
 	                    }
 
 	                    // 未选中则不可编辑
@@ -7329,12 +7334,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	            });
 
 	            (0, _event.on)(self.otherInput, 'blur', function (e) {
-	                self.lastCheck.oldValue = self.lastCheck.value;
 	                self.lastCheck.value = this.value;
 	                self.otherComp.trigger('change');
+	                this.oldValue = this.value;
 	            });
 	            (0, _event.on)(self.otherInput, 'click', function (e) {
-	                stopEvent(e);
+	                (0, _event.stopEvent)(e);
 	            });
 	        }
 
@@ -7408,10 +7413,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	                }
 	            });
 	            if (this.options.hasOther) {
+	                if (otherVal.indexOf(this.otherValue + ',') > -1) {
+	                    self.lastCheck.value = this.otherValue;
+	                    otherVal = otherVal.replace(this.otherValue + ',', '');
+	                }
 	                otherVal = otherVal.replace(/\,/g, '');
 	                if (otherVal) {
-	                    self.lastCheck.value = otherVal;
+	                    self.otherInput.oldValue = otherVal;
 	                    self.otherInput.value = otherVal;
+	                    self.otherInput.removeAttribute('disabled');
 	                }
 	            }
 	        } else {
@@ -9402,7 +9412,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            this.enable = false;
 	            this.element.setAttribute('readonly', 'readonly');
 	            this.comp._input.setAttribute('readonly', 'readonly');
-	            addClass(this.element.parentNode, 'disablecover');
+	            (0, _dom.addClass)(this.element.parentNode, 'disablecover');
 	            (0, _event.off)(this.comp._input, 'focus');
 	            if (this.comp.iconBtn) {
 	                (0, _event.off)(this.comp.iconBtn, 'click');
@@ -10088,7 +10098,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _formater = __webpack_require__(93);
 
-	var _float = __webpack_require__(94);
+	var _keroaFloat = __webpack_require__(94);
 
 	var _compMgr = __webpack_require__(4);
 
@@ -10105,7 +10115,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * Date	  : 2016-08-09 13:42:14
 	 */
 
-	var CurrencyAdapter = _float.FloatAdapter.extend({
+	var CurrencyAdapter = _keroaFloat.FloatAdapter.extend({
 	    init: function init() {
 	        var self = this;
 	        CurrencyAdapter.superclass.init.apply(this);
@@ -11375,11 +11385,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        self._fillYear();
 	        stopEvent(e)
 	    });
-	     on(this._headerMonth, 'click', function(e){
+	      on(this._headerMonth, 'click', function(e){
 	        self._fillMonth();
 	        stopEvent(e)
 	    });    
-	     on(this._headerTime, 'click', function(e){
+	      on(this._headerTime, 'click', function(e){
 	        self._fillTime();
 	        stopEvent(e)
 	    });*/
@@ -11464,11 +11474,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        self._fillYear();
 	        stopEvent(e)
 	    });
-	     on(this._headerMonth, 'click', function(e){
+	      on(this._headerMonth, 'click', function(e){
 	        self._fillMonth();
 	        stopEvent(e)
 	    });    
-	     on(this._headerTime, 'click', function(e){
+	      on(this._headerTime, 'click', function(e){
 	        self._fillTime();
 	        stopEvent(e)
 	    });*/
@@ -12384,27 +12394,27 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _event = __webpack_require__(6);
 
-	var _string = __webpack_require__(100);
+	var _keroaString = __webpack_require__(100);
 
-	var _integer = __webpack_require__(101);
+	var _keroaInteger = __webpack_require__(101);
 
-	var _checkbox = __webpack_require__(77);
+	var _keroaCheckbox = __webpack_require__(77);
 
-	var _combobox = __webpack_require__(89);
+	var _keroaCombo = __webpack_require__(89);
 
-	var _radio = __webpack_require__(102);
+	var _keroaRadio = __webpack_require__(102);
 
-	var _float = __webpack_require__(94);
+	var _keroaFloat = __webpack_require__(94);
 
-	var _currency = __webpack_require__(92);
+	var _keroaCurrency = __webpack_require__(92);
 
-	var _datetime = __webpack_require__(96);
+	var _keroaDatetimepicker = __webpack_require__(96);
 
-	var _url = __webpack_require__(104);
+	var _keroaUrl = __webpack_require__(104);
 
-	var _password = __webpack_require__(105);
+	var _keroaPassword = __webpack_require__(105);
 
-	var _percent = __webpack_require__(106);
+	var _keroaPercent = __webpack_require__(106);
 
 	var _neouiValidate = __webpack_require__(82);
 
@@ -12415,6 +12425,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _i18n = __webpack_require__(85);
 
 	var _core = __webpack_require__(71);
+
+	var _dom = __webpack_require__(5);
+
+	/**
+	 * Module : Kero Grid Adapter
+	 * Author : Kvkens(yueming@yonyou.com)
+	 * Date	  : 2016-08-09 16:17:17
+	 */
 
 	var GridAdapter = _baseAdapter.BaseAdapter.extend({
 		initialize: function initialize(options) {
@@ -13170,7 +13188,7 @@ return /******/ (function(modules) { // webpackBootstrap
 					compDiv.addClass("eType-input");
 				}
 				eOptions.dataType = 'string';
-				comp = new _string.StringAdapter({
+				comp = new _keroaString.StringAdapter({
 					el: compDiv[0],
 					options: eOptions,
 					model: viewModel
@@ -13181,7 +13199,7 @@ return /******/ (function(modules) { // webpackBootstrap
 					compDiv.addClass("eType-input");
 				}
 				eOptions.dataType = 'integer';
-				comp = new _integer.IntegerAdapter({
+				comp = new _keroaInteger.IntegerAdapter({
 					el: compDiv[0],
 					options: eOptions,
 					model: viewModel
@@ -13195,7 +13213,7 @@ return /******/ (function(modules) { // webpackBootstrap
 				if ($.CheckboxComp) {
 					comp = new $.CheckboxComp(compDiv.find("input")[0], eOptions, viewModel);
 				} else {
-					comp = new _checkbox.CheckboxAdapter({
+					comp = new _keroaCheckbox.CheckboxAdapter({
 						el: compDiv[0],
 						options: eOptions,
 						model: viewModel
@@ -13217,7 +13235,7 @@ return /******/ (function(modules) { // webpackBootstrap
 					compDiv = $('<div class="input-group  form_date u-grid-edit-item-comb"><div  type="text" class="form-control grid-combox"></div><i class="input-group-addon" ><i class="uf uf-anglearrowdown"></i></i></div>');
 					comp = new $.Combobox(compDiv[0], eOptions, viewModel);
 				} else {
-					comp = new _combobox.ComboboxAdapter({
+					comp = new _keroaCombo.ComboboxAdapter({
 						el: compDiv[0],
 						options: eOptions,
 						model: viewModel
@@ -13237,7 +13255,7 @@ return /******/ (function(modules) { // webpackBootstrap
 				} else {
 					compDiv = $('<div class="u-grid-edit-item-radio"><input type="radio" name="identity" /><i data-role="name"></i></div>');
 					//comp = new $.compManager.plugs.radio(compDiv[0],eOptions,viewModel);
-					comp = new _radio.RadioAdapter({
+					comp = new _keroaRadio.RadioAdapter({
 						el: compDiv[0],
 						options: eOptions,
 						model: viewModel
@@ -13250,7 +13268,7 @@ return /******/ (function(modules) { // webpackBootstrap
 				}
 				//comp = new $.compManager.plugs.float(compDiv.find("input")[0],eOptions,viewModel);
 				eOptions.dataType = 'float';
-				comp = new _float.FloatAdapter({
+				comp = new _keroaFloat.FloatAdapter({
 					el: compDiv[0],
 					options: eOptions,
 					model: viewModel
@@ -13262,7 +13280,7 @@ return /******/ (function(modules) { // webpackBootstrap
 				}
 				//comp = new $.compManager.plugs.currency(compDiv.find("input")[0],eOptions,viewModel);
 				eOptions.dataType = 'currency';
-				comp = new _currency.CurrencyAdapter({
+				comp = new _keroaCurrency.CurrencyAdapter({
 					el: compDiv[0],
 					options: eOptions,
 					model: viewModel
@@ -13274,7 +13292,7 @@ return /******/ (function(modules) { // webpackBootstrap
 				if ($.DateTime) {
 					comp = new $.DateTime(compDiv[0], eOptions, viewModel);
 				} else {
-					comp = new _datetime.DateTimeAdapter({
+					comp = new _keroaDatetimepicker.DateTimeAdapter({
 						el: compDiv[0],
 						options: eOptions,
 						model: viewModel
@@ -13295,7 +13313,7 @@ return /******/ (function(modules) { // webpackBootstrap
 					comp = new $.DateComp(compDiv[0], eOptions, viewModel);
 				} else {
 					eOptions.type = 'u-date';
-					comp = new _datetime.DateTimeAdapter({
+					comp = new _keroaDatetimepicker.DateTimeAdapter({
 						el: compDiv[0],
 						options: eOptions,
 						model: viewModel
@@ -13314,7 +13332,7 @@ return /******/ (function(modules) { // webpackBootstrap
 					compDiv.addClass("eType-input");
 				}
 				eOptions.dataType = 'url';
-				comp = new _url.UrlAdapter({
+				comp = new _keroaUrl.UrlAdapter({
 					el: compDiv[0],
 					options: eOptions,
 					model: viewModel
@@ -13326,7 +13344,7 @@ return /******/ (function(modules) { // webpackBootstrap
 					compDiv.addClass("eType-input");
 				}
 				eOptions.dataType = 'password';
-				comp = new _password.PassWordAdapter({
+				comp = new _keroaPassword.PassWordAdapter({
 					el: compDiv[0],
 					options: eOptions,
 					model: viewModel
@@ -13340,25 +13358,13 @@ return /******/ (function(modules) { // webpackBootstrap
 				}
 				//comp = new $.compManager.plugs.float(compDiv.find("input")[0],eOptions,viewModel);
 				eOptions.dataType = 'precent';
-				comp = new _percent.PercentAdapter({
+				comp = new _keroaPercent.PercentAdapter({
 					el: compDiv[0],
 					options: eOptions,
 					model: viewModel
 				});
 			}
-			// input输入blur时显示下一个编辑控件
-			$('input', $(compDiv)).on('keydown', function (e) {
-				var keyCode = e.keyCode;
-				if (e.keyCode == 13 || e.keyCode == 9) {
-					// 回车
-					this.blur(); //首先触发blur来将修改值反应到datatable中
-					// IE11会导致先触发nextEditShow后触发blur的处理
-					setTimeout(function () {
-						oThis.grid.nextEditShow();
-					}, 100);
-					(0, _event.stopEvent)(e);
-				}
-			});
+
 			if (comp && comp.dataAdapter) {
 				comp = comp.dataAdapter;
 			}
@@ -13408,8 +13414,8 @@ return /******/ (function(modules) { // webpackBootstrap
 			    evalStr = '',
 			    rowMsg = '',
 			    wholeMsg = '',
-			    columnShowMsg = '';
-			hasErrow = false;
+			    columnShowMsg = '',
+			    hasErrow = false;
 
 			// 遍历所有列
 			for (var j = 0; j < gridColumnArr.length; j++) {
@@ -13463,7 +13469,8 @@ return /******/ (function(modules) { // webpackBootstrap
 					min: min,
 					maxNotEq: maxNotEq,
 					minNotEq: minNotEq,
-					reg: reg
+					reg: reg,
+					showFix: true
 				});
 				for (var i = 0; i < rows.length; i++) {
 					var value = rows[i].value[field];
@@ -13480,12 +13487,10 @@ return /******/ (function(modules) { // webpackBootstrap
 						var row = contentDiv.querySelectorAll('tr')[i];
 						var td = row.querySelectorAll('td')[index];
 						var div = td.querySelector('div');
-						addClass(td, 'u-grid-err-td');
-						addClass(div, 'u-grid-err-td');
-						evalStr = 'if(typeof obj' + i + ' == \'undefined\'){var obj' + i + '= {}; MsgArr.push(obj' + i + ');obj' + i + '.rowNum = ' + i + '; obj' + i + '.arr = new Array();}';
-						eval(evalStr);
+						(0, _dom.addClass)(td, 'u-grid-err-td');
+						(0, _dom.addClass)(div, 'u-grid-err-td');
 						var msg = '(' + title + ')' + result.Msg + ';';
-						evalStr = 'obj' + i + '.arr.push(msg)';
+						evalStr = 'if(typeof obj' + i + ' == \'undefined\'){var obj' + i + '= {}; MsgArr.push(obj' + i + ');obj' + i + '.rowNum = ' + i + '; obj' + i + '.arr = new Array();}obj' + i + '.arr.push(msg)';
 						eval(evalStr);
 					}
 				}
@@ -13528,12 +13533,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	//if ($.compManager)
 	//	$.compManager.addPlug(Grid)
-
-	/**
-	 * Module : Kero Grid Adapter
-	 * Author : Kvkens(yueming@yonyou.com)
-	 * Date	  : 2016-08-09 16:17:17
-	 */
 
 	_compMgr.compMgr.addDataAdapter({
 		adapter: GridAdapter,
@@ -13843,6 +13842,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var self = this;
 	        //RadioAdapter.superclass.initialize.apply(this, arguments);
 	        this.dynamic = false;
+	        this.otherValue = this.options['otherValue'] || 'ovOV~!';
 	        if (this.options['datasource'] || this.options['hasOther']) {
 	            // 存在datasource或者有其他选项，将当前dom元素保存，以后用于复制新的dom元素
 	            this.radioTemplateArray = [];
@@ -13896,7 +13896,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	            self.otherComp = comp;
 	            comp.on('change', function () {
 	                if (comp._btnElement.checked) {
-	                    self.dataModel.setValue(self.field, comp._btnElement.value);
+	                    if (self.otherInput.value) {
+	                        self.dataModel.setValue(self.field, self.otherInput.value);
+	                    } else {
+	                        self.dataModel.setValue(self.field, self.otherValue);
+	                    }
 	                    // 选中后可编辑
 	                    comp.element.querySelectorAll('input[type="text"]').forEach(function (ele) {
 	                        ele.removeAttribute('disabled');
@@ -13909,8 +13913,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	            });
 
 	            (0, _event.on)(self.otherInput, 'blur', function (e) {
-	                self.lastRadio.oldValue = self.lastRadio.value;
-	                self.lastRadio.value = this.value;
 	                self.otherComp.trigger('change');
 	            });
 	            (0, _event.on)(self.otherInput, 'click', function (e) {
@@ -13998,7 +14000,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	            }
 	            u.addClass(this.lastLabel, 'is-checked');
 	            this.lastRadio.checked = true;
-	            this.otherInput.value = value;
+	            if (value != this.otherValue) {
+	                this.otherInput.value = value;
+	            }
+	            this.lastRadio.removeAttribute('disabled');
+	            this.otherInput.removeAttribute('disabled');
 	            if (!this.enable) {
 	                this.lastRadio.setAttribute('disabled', true);
 	            }
@@ -14287,13 +14293,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports.UrlAdapter = undefined;
 
-	var _string = __webpack_require__(100);
+	var _keroaString = __webpack_require__(100);
 
 	var _dom = __webpack_require__(5);
 
 	var _compMgr = __webpack_require__(4);
 
-	var UrlAdapter = _string.StringAdapter.extend({
+	var UrlAdapter = _keroaString.StringAdapter.extend({
 	    init: function init() {
 	        UrlAdapter.superclass.init.apply(this);
 	        this.validType = 'url';
@@ -14356,7 +14362,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports.PassWordAdapter = undefined;
 
-	var _string = __webpack_require__(100);
+	var _keroaString = __webpack_require__(100);
 
 	var _util = __webpack_require__(10);
 
@@ -14369,7 +14375,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	/**
 	 * 密码控件
 	 */
-	var PassWordAdapter = _string.StringAdapter.extend({
+	var PassWordAdapter = _keroaString.StringAdapter.extend({
 	    init: function init() {
 	        PassWordAdapter.superclass.init.apply(this);
 	        var oThis = this;
@@ -14430,7 +14436,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports.PercentAdapter = undefined;
 
-	var _float = __webpack_require__(94);
+	var _keroaFloat = __webpack_require__(94);
 
 	var _formater = __webpack_require__(93);
 
@@ -14443,7 +14449,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	/**
 	 * 百分比控件
 	 */
-	var PercentAdapter = _float.FloatAdapter.extend({
+	var PercentAdapter = _keroaFloat.FloatAdapter.extend({
 	  init: function init() {
 	    PercentAdapter.superclass.init.apply(this);
 	    this.validType = 'float';
@@ -14861,255 +14867,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.NativeCheckAdapter = undefined;
-
-	var _baseAdapter = __webpack_require__(76);
-
-	var _valueMixin = __webpack_require__(78);
-
-	var _enableMixin = __webpack_require__(79);
-
-	var _util = __webpack_require__(10);
-
-	var _event = __webpack_require__(6);
-
-	var _compMgr = __webpack_require__(4);
-
-	/**
-	 * Module : Kero native-checkbox
-	 * Author : Kvkens(yueming@yonyou.com)
-	 * Date	  : 2016-08-09 18:55:51
-	 */
-
-	var NativeCheckAdapter = _baseAdapter.BaseAdapter.extend({
-	    mixins: [_valueMixin.ValueMixin, _enableMixin.EnableMixin],
-	    init: function init() {
-	        var self = this;
-	        this.isGroup = false;
-	        //如果存在datasource，动态创建checkbox
-	        if (this.options['datasource']) {
-	            this.isGroup = true;
-	            var datasource = (0, _util.getJSObject)(this.viewModel, this.options['datasource']);
-
-	            this.checkboxTemplateArray = [];
-	            for (var i = 0, count = this.element.childNodes.length; i < count; i++) {
-	                this.checkboxTemplateArray.push(this.element.childNodes[i]);
-	            }
-	            this.setComboData(datasource);
-	        } else {
-	            this.checkedValue = this.options['checkedValue'] || 'Y';
-	            this.unCheckedValue = this.options["unCheckedValue"] || 'N';
-	            (0, _event.on)(this.element, 'click', function () {
-	                if (this.checked) {
-	                    self.dataModel.setValue(self.field, self.checkedValue);
-	                } else {
-	                    self.dataModel.setValue(self.field, self.unCheckedValue);
-	                }
-	            });
-	        }
-	    },
-	    setComboData: function setComboData(comboData) {
-	        var self = this;
-	        this.element.innerHTML = '';
-	        for (var i = 0, len = comboData.length; i < len; i++) {
-	            for (var j = 0; j < this.checkboxTemplateArray.length; j++) {
-	                try {
-	                    this.element.appendChild(this.checkboxTemplateArray[j].cloneNode());
-	                } catch (e) {}
-	            }
-	            //this.radioTemplate.clone().appendTo(this.element)
-	        }
-
-	        var allCheck = this.element.querySelectorAll('[type=checkbox]');
-	        var allName = this.element.querySelectorAll('[data-role=name]');
-	        for (var k = 0; k < allCheck.length; k++) {
-	            allCheck[k].value = comboData[k].pk || comboData[k].value;
-	            allName[k].innerHTML = comboData[k].name;
-	        }
-
-	        this.element.querySelectorAll('[type=checkbox]').forEach(function (ele) {
-	            (0, _event.on)(ele, 'click', function () {
-	                var modelValue = self.dataModel.getValue(self.field);
-
-	                var valueArr = modelValue == '' ? [] : modelValue.split(',');
-
-	                if (this.checked) {
-	                    valueArr.push(this.value);
-	                } else {
-	                    var index = valueArr.indexOf(this.value);
-	                    valueArr.splice(index, 1);
-	                }
-	                self.slice = true;
-	                self.dataModel.setValue(self.field, valueArr.join(','));
-	                self.slice = false;
-	            });
-	        });
-	    },
-	    modelValueChange: function modelValueChange(val) {
-	        var self = this;
-	        if (this.slice) return;
-	        if (this.isGroup) {
-	            this.element.querySelectorAll('[type=checkbox]').forEach(function (ele) {
-	                if (ele.checked != (val + ',').indexOf(ele.value) > -1) {
-	                    self.slice = true;
-	                    ele.checked = !ele.checked;
-	                    self.slice = false;
-	                }
-	            });
-	        } else {
-	            if (this.element.checked != (val === this.checkedValue)) {
-	                this.slice = true;
-	                this.element.checked = !this.element.checked;
-	                this.slice = false;
-	            }
-	        }
-	    },
-	    setValue: function setValue(value) {
-	        this.trueValue = value;
-	        this.element.querySelectorAll('[type=checkbox]').forEach(function (ele) {
-	            if (ele.value == value) {
-	                ele.checked = true;
-	            } else {
-	                ele.checked = false;
-	            }
-	        });
-	        this.slice = true;
-	        this.dataModel.setValue(this.field, this.trueValue);
-	        this.slice = false;
-	    },
-	    getValue: function getValue() {
-	        return this.trueValue;
-	    }
-
-	});
-
-	_compMgr.compMgr.addDataAdapter({
-	    adapter: NativeCheckAdapter,
-	    name: 'checkbox'
-	});
-	exports.NativeCheckAdapter = NativeCheckAdapter;
-
-/***/ },
-/* 111 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.NativeRadioAdapter = undefined;
-
-	var _baseAdapter = __webpack_require__(76);
-
-	var _valueMixin = __webpack_require__(78);
-
-	var _enableMixin = __webpack_require__(79);
-
-	var _util = __webpack_require__(10);
-
-	var _event = __webpack_require__(6);
-
-	var _compMgr = __webpack_require__(4);
-
-	/**
-	 * Module : Kero native-radio
-	 * Author : Kvkens(yueming@yonyou.com)
-	 * Date	  : 2016-08-09 19:03:30
-	 */
-
-	var NativeRadioAdapter = _baseAdapter.BaseAdapter.extend({
-	    mixins: [_valueMixin.ValueMixin, _enableMixin.EnableMixin],
-	    init: function init() {
-	        this.isDynamic = false;
-	        //如果存在datasource，动态创建radio
-	        if (this.options['datasource']) {
-	            this.isDynamic = true;
-	            var datasource = (0, _util.getJSObject)(this.viewModel, this.options['datasource']);
-	            //if(!u.isArray(datasource)) return;
-
-	            this.radioTemplateArray = [];
-	            for (var i = 0, count = this.element.childNodes.length; i < count; i++) {
-	                this.radioTemplateArray.push(this.element.childNodes[i]);
-	            }
-	            this.setComboData(datasource);
-	        } else {}
-	    },
-	    setComboData: function setComboData(comboData) {
-	        var self = this;
-	        //if(!this.radioTemplate.is(":radio")) return;
-	        this.element.innerHTML = '';
-	        for (var i = 0, len = comboData.length; i < len; i++) {
-	            for (var j = 0; j < this.radioTemplateArray.length; j++) {
-	                try {
-	                    this.element.appendChild(this.radioTemplateArray[j].cloneNode(true));
-	                } catch (e) {}
-	            }
-	            //this.radioTemplate.clone().appendTo(this.element)
-	        }
-
-	        var allRadio = this.element.querySelectorAll('[type=radio]');
-	        var allName = this.element.querySelectorAll('[data-role=name]');
-	        for (var k = 0; k < allRadio.length; k++) {
-	            allRadio[k].value = comboData[k].pk || comboData[k].value;
-	            allName[k].innerHTML = comboData[k].name;
-	        }
-
-	        this.radioInputName = allRadio[0].name;
-
-	        this.element.querySelectorAll('[type=radio][name="' + this.radioInputName + '"]').forEach(function (ele) {
-	            (0, _event.on)(ele, 'click', function () {
-	                if (this.checked) {
-	                    self.setValue(this.value);
-	                }
-	            });
-	        });
-	    },
-	    modelValueChange: function modelValueChange(value) {
-	        if (this.slice) return;
-	        this.setValue(value);
-	    },
-	    setValue: function setValue(value) {
-	        this.trueValue = value;
-	        this.element.querySelectorAll('[type=radio][name="' + this.radioInputName + '"]').forEach(function (ele) {
-	            if (ele.value == value) {
-	                ele.checked = true;
-	            } else {
-	                ele.checked = false;
-	            }
-	        });
-	        this.slice = true;
-	        this.dataModel.setValue(this.field, this.trueValue);
-	        this.slice = false;
-	    },
-	    getValue: function getValue() {
-	        return this.trueValue;
-	    }
-
-	});
-
-	_compMgr.compMgr.addDataAdapter({
-	    adapter: NativeRadioAdapter,
-	    name: 'radio'
-	});
-	exports.NativeRadioAdapter = NativeRadioAdapter;
-
-/***/ },
-/* 112 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
 	exports.PaginationAdapter = undefined;
 
 	var _baseAdapter = __webpack_require__(76);
 
 	var _extend = __webpack_require__(8);
 
-	var _neouiPagination = __webpack_require__(113);
+	var _neouiPagination = __webpack_require__(111);
 
 	var _util = __webpack_require__(10);
 
@@ -15126,7 +14890,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.options.pageSize = this.dataModel.pageSize() || this.options.pageSize;
 	        //this.$element.pagination(options);
 	        //this.comp = this.$element.data('u.pagination');
-	        var options = (0, _extend.extend)({}, { el: this.element, jumppage: true }, this.options);
+	        var options = (0, _extend.extend)({}, { el: this.element }, this.options);
 	        this.comp = new _neouiPagination.pagination(options);
 	        this.element['u.pagination'] = this.comp;
 	        this.comp.dataModel = this.dataModel;
@@ -15211,7 +14975,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.PaginationAdapter = PaginationAdapter;
 
 /***/ },
-/* 113 */
+/* 111 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15617,7 +15381,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.pagination = pagination;
 
 /***/ },
-/* 114 */
+/* 112 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15629,7 +15393,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _baseAdapter = __webpack_require__(76);
 
-	var _neouiProgress = __webpack_require__(115);
+	var _neouiProgress = __webpack_require__(113);
 
 	var _compMgr = __webpack_require__(4);
 
@@ -15663,7 +15427,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.ProgressAdapter = ProgressAdapter;
 
 /***/ },
-/* 115 */
+/* 113 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15790,7 +15554,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.Progress = Progress;
 
 /***/ },
-/* 116 */
+/* 114 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15802,7 +15566,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _baseAdapter = __webpack_require__(76);
 
-	var _neouiSwitch = __webpack_require__(117);
+	var _neouiSwitch = __webpack_require__(115);
 
 	var _compMgr = __webpack_require__(4);
 
@@ -15858,7 +15622,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.SwitchAdapter = SwitchAdapter;
 
 /***/ },
-/* 117 */
+/* 115 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16049,7 +15813,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.Switch = Switch;
 
 /***/ },
-/* 118 */
+/* 116 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16103,7 +15867,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.TextAreaAdapter = TextAreaAdapter;
 
 /***/ },
-/* 119 */
+/* 117 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16119,11 +15883,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _neouiTextfield = __webpack_require__(91);
 
-	var _float = __webpack_require__(94);
+	var _keroaFloat = __webpack_require__(94);
 
-	var _string = __webpack_require__(100);
+	var _keroaString = __webpack_require__(100);
 
-	var _integer = __webpack_require__(101);
+	var _keroaInteger = __webpack_require__(101);
 
 	var _compMgr = __webpack_require__(4);
 
@@ -16149,11 +15913,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.element['u.Text'] = this.comp;
 
 	        if (dataType === 'float') {
-	            this.trueAdpt = new _float.FloatAdapter(options);
+	            this.trueAdpt = new _keroaFloat.FloatAdapter(options);
 	        } else if (dataType === 'string') {
-	            this.trueAdpt = new _string.StringAdapter(options);
+	            this.trueAdpt = new _keroaString.StringAdapter(options);
 	        } else if (dataType === 'integer') {
-	            this.trueAdpt = new _integer.IntegerAdapter(options);
+	            this.trueAdpt = new _keroaInteger.IntegerAdapter(options);
 	        } else {
 	            throw new Error("'u-text' only support 'float' or 'string' or 'integer' field type, not support type: '" + dataType + "', field: '" + this.field + "'");
 	        }
@@ -16187,7 +15951,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.TextFieldAdapter = TextFieldAdapter;
 
 /***/ },
-/* 120 */
+/* 118 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16215,9 +15979,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _dateUtils = __webpack_require__(70);
 
-	var _neouiClockpicker = __webpack_require__(121);
+	var _neouiClockpicker = __webpack_require__(119);
 
-	var _neouiTime = __webpack_require__(122);
+	var _neouiTime = __webpack_require__(120);
 
 	var _compMgr = __webpack_require__(4);
 
@@ -16298,7 +16062,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.TimeAdapter = TimeAdapter;
 
 /***/ },
-/* 121 */
+/* 119 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16764,7 +16528,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.ClockPicker = ClockPicker;
 
 /***/ },
-/* 122 */
+/* 120 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17006,7 +16770,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.Time = Time;
 
 /***/ },
-/* 123 */
+/* 121 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17018,7 +16782,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _baseAdapter = __webpack_require__(76);
 
-	var _neouiYear = __webpack_require__(124);
+	var _neouiYear = __webpack_require__(122);
 
 	var _compMgr = __webpack_require__(4);
 
@@ -17060,7 +16824,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.YearAdapter = YearAdapter;
 
 /***/ },
-/* 124 */
+/* 122 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17307,7 +17071,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.Year = Year;
 
 /***/ },
-/* 125 */
+/* 123 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17319,7 +17083,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _baseAdapter = __webpack_require__(76);
 
-	var _neouiYearmonth = __webpack_require__(126);
+	var _neouiYearmonth = __webpack_require__(124);
 
 	var _compMgr = __webpack_require__(4);
 
@@ -17361,7 +17125,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.YearMonthAdapter = YearMonthAdapter;
 
 /***/ },
-/* 126 */
+/* 124 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17685,7 +17449,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.YearMonth = YearMonth;
 
 /***/ },
-/* 127 */
+/* 125 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17697,7 +17461,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _baseAdapter = __webpack_require__(76);
 
-	var _neouiYear = __webpack_require__(124);
+	var _neouiYear = __webpack_require__(122);
 
 	var _util = __webpack_require__(10);
 
@@ -18075,7 +17839,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.TreeAdapter = TreeAdapter;
 
 /***/ },
-/* 128 */
+/* 126 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18119,7 +17883,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _ripple = __webpack_require__(87);
 
-	var _rsautils = __webpack_require__(129);
+	var _rsautils = __webpack_require__(127);
 
 	var _i18n = __webpack_require__(85);
 
@@ -18203,7 +17967,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.u = api;
 
 /***/ },
-/* 129 */
+/* 127 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -18909,7 +18673,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.twoDigit = twoDigit;
 
 /***/ },
-/* 130 */
+/* 128 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18919,51 +18683,51 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports.u = undefined;
 
-	var _extend = __webpack_require__(131);
+	var _extend = __webpack_require__(129);
 
-	var _neouiAutocomplete = __webpack_require__(133);
+	var _neouiAutocomplete = __webpack_require__(131);
 
-	var _neouiButton = __webpack_require__(134);
+	var _neouiButton = __webpack_require__(132);
 
 	var _neouiCheckbox = __webpack_require__(86);
 
 	var _neouiCombo = __webpack_require__(90);
 
-	var _neouiCombobox = __webpack_require__(135);
+	var _neouiCombobox = __webpack_require__(133);
 
-	var _neouiDataTable = __webpack_require__(136);
+	var _neouiDataTable = __webpack_require__(134);
 
-	var _neouiDialog = __webpack_require__(137);
+	var _neouiDialog = __webpack_require__(135);
 
-	var _neouiLayout = __webpack_require__(138);
+	var _neouiLayout = __webpack_require__(136);
 
-	var _neouiLayout2 = __webpack_require__(139);
+	var _neouiLayout2 = __webpack_require__(137);
 
-	var _neouiLoader = __webpack_require__(140);
+	var _neouiLoader = __webpack_require__(138);
 
-	var _neouiLoading = __webpack_require__(141);
+	var _neouiLoading = __webpack_require__(139);
 
-	var _neouiMenu = __webpack_require__(142);
+	var _neouiMenu = __webpack_require__(140);
 
 	var _neouiMessage = __webpack_require__(107);
 
-	var _neouiMultilang = __webpack_require__(143);
+	var _neouiMultilang = __webpack_require__(141);
 
-	var _neouiNavmenu = __webpack_require__(144);
+	var _neouiNavmenu = __webpack_require__(142);
 
-	var _neouiPagination = __webpack_require__(113);
+	var _neouiPagination = __webpack_require__(111);
 
-	var _neouiProgress = __webpack_require__(115);
+	var _neouiProgress = __webpack_require__(113);
 
 	var _neouiRadio = __webpack_require__(103);
 
-	var _neouiRefer = __webpack_require__(145);
+	var _neouiRefer = __webpack_require__(143);
 
-	var _neouiSlidePanel = __webpack_require__(146);
+	var _neouiSlidePanel = __webpack_require__(144);
 
-	var _neouiSwitch = __webpack_require__(117);
+	var _neouiSwitch = __webpack_require__(115);
 
-	var _neouiTabs = __webpack_require__(147);
+	var _neouiTabs = __webpack_require__(145);
 
 	var _neouiTextfield = __webpack_require__(91);
 
@@ -18973,15 +18737,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _neouiDatetimepicker = __webpack_require__(97);
 
-	var _neouiTime = __webpack_require__(122);
+	var _neouiTime = __webpack_require__(120);
 
-	var _neouiClockpicker = __webpack_require__(121);
+	var _neouiClockpicker = __webpack_require__(119);
 
 	var _neouiMonth = __webpack_require__(109);
 
-	var _neouiYear = __webpack_require__(124);
+	var _neouiYear = __webpack_require__(122);
 
-	var _neouiYearmonth = __webpack_require__(126);
+	var _neouiYearmonth = __webpack_require__(124);
 
 	/**
 	 * Module : Neoui webpack entry index
@@ -19124,7 +18888,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.u = ex;
 
 /***/ },
-/* 131 */
+/* 129 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19146,7 +18910,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    * Date	  : 2016-07-27 21:46:50
 	    */
 
-	var _enumerables = __webpack_require__(132);
+	var _enumerables = __webpack_require__(130);
 
 	/**
 	 * 复制对象属性
@@ -19182,7 +18946,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.extend = extend;
 
 /***/ },
-/* 132 */
+/* 130 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -19220,7 +18984,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.U_USERCODE = U_USERCODE;
 
 /***/ },
-/* 133 */
+/* 131 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19822,7 +19586,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.Autocomplete = Autocomplete;
 
 /***/ },
-/* 134 */
+/* 132 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19884,7 +19648,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.Button = Button;
 
 /***/ },
-/* 135 */
+/* 133 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20411,7 +20175,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.Combobox = Combobox;
 
 /***/ },
-/* 136 */
+/* 134 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20525,7 +20289,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.Table = Table;
 
 /***/ },
-/* 137 */
+/* 135 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20543,7 +20307,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _extend = __webpack_require__(8);
 
-	var _neouiButton = __webpack_require__(134);
+	var _neouiButton = __webpack_require__(132);
 
 	var _compMgr = __webpack_require__(4);
 
@@ -20842,7 +20606,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.dialogWizard = dialogWizard;
 
 /***/ },
-/* 138 */
+/* 136 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20862,7 +20626,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _env = __webpack_require__(7);
 
-	var _neouiButton = __webpack_require__(134);
+	var _neouiButton = __webpack_require__(132);
 
 	var _compMgr = __webpack_require__(4);
 
@@ -21078,7 +20842,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.MDLayout = MDLayout;
 
 /***/ },
-/* 139 */
+/* 137 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21584,7 +21348,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.NavLayoutTab = NavLayoutTab;
 
 /***/ },
-/* 140 */
+/* 138 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -21642,7 +21406,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.hideLoader = hideLoader;
 
 /***/ },
-/* 141 */
+/* 139 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21773,7 +21537,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.removeWaiting = removeWaiting;
 
 /***/ },
-/* 142 */
+/* 140 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22207,7 +21971,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.Menu = Menu;
 
 /***/ },
-/* 143 */
+/* 141 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22377,7 +22141,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.Multilang = Multilang;
 
 /***/ },
-/* 144 */
+/* 142 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22485,7 +22249,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.NavMenu = NavMenu;
 
 /***/ },
-/* 145 */
+/* 143 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22505,7 +22269,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _util = __webpack_require__(10);
 
-	var _neouiDialog = __webpack_require__(137);
+	var _neouiDialog = __webpack_require__(135);
 
 	/**
 	 * Module : neoui-refer
@@ -22677,7 +22441,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.refer = refer;
 
 /***/ },
-/* 146 */
+/* 144 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22754,7 +22518,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.slidePanel = slidePanel;
 
 /***/ },
-/* 147 */
+/* 145 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22902,7 +22666,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.Tabs = Tabs;
 
 /***/ },
-/* 148 */
+/* 146 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
