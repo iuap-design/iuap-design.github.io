@@ -128,7 +128,7 @@ fs.readdir(scssPath, function(err, scssFiles) {
 		for(var ti=0,theLen = neouiJsonTheme.length; ti < theLen; ti++){
 			var tiStr;
 			var tiStrVal = JSON.stringify(neouiJsonTheme[ti]);
-			console.log(tiStrVal);
+			// console.log(tiStrVal);
 			ti < theLen -1 ? tiStr = `            ${tiStrVal},`: tiStr = `            ${tiStrVal}`;
 			themeAry.push(tiStr);
 		}
@@ -194,26 +194,26 @@ fs.readdir(scssPath, function(err, scssFiles) {
 		}
 		var jsEndAry = [
 			'            ]',
-			'        }',
+			'        },',
 		];
 		var jsDataConcat = jsDataAry.concat(jsEndAry);
 		// js end
 
 
 		// keroadapter
-		// var adapterDataAry = [
-		// 	'        "keroadapter": {',
-		// 	'            "title": "KeroAdapter",',
-		// 	'            "description": "实现Neoui数据绑定",',
-		// 	'            "catlog": "adselect",',
-		// 	'            "list":[',
-		// 	'                {"name":"keroadapter","file":"keroadapter"}',
-		// 	'            ]',
-		// 	'        }'
-		// ];
+		var adapterDataAry = [
+			'        "keroadapter": {',
+			'            "title": "KeroAdapter",',
+			'            "description": "实现Neoui数据绑定",',
+			'            "catlog": "adselect",',
+			'            "list":[',
+			'                {"name":"UI组件数据绑定","file":"keroadapter"}',
+			'            ]',
+			'        }'
+		];
 		
 		var checkEnd = ['    }'];
-		var panelCheck = checkHead.concat(polyDataAry, styleDataConcat, jsDataConcat, checkEnd);
+		var panelCheck = checkHead.concat(polyDataAry, styleDataConcat, jsDataConcat, adapterDataAry, checkEnd);
 
 		// 数据底部
 		var dataEndAry = ['}'];

@@ -96,6 +96,14 @@
                 {"name":"年份","file":"neoui-year"},
                 {"name":"年月","file":"neoui-yearmonth"}
             ]
+        },
+        "keroadapter": {
+            "title": "KeroAdapter",
+            "description": "实现Neoui数据绑定",
+            "catlog": "adselect",
+            "list":[
+                {"name":"UI组件数据绑定","file":"keroadapter"}
+            ]
         }
     }
 }

@@ -11,6 +11,7 @@ var clean = require('gulp-clean');
 // 获取Neoui es6模块依赖关系
 var neojson = require('./neoui.json');
 var neoModule = neojson.es6;
+var koModule = neojson.ko;
 
 var zipPath;
 
@@ -24,6 +25,7 @@ module.exports = function(data, self, cb){
 	 * JS Match: jsselect
 	 */
 	var dataJson = data;
+	console.log(dataJson);
 	var basePath = '../node_modules/';
 
 	/**
@@ -61,9 +63,7 @@ module.exports = function(data, self, cb){
 	var dataColor = dataJson.themeColor;
 	var corPath = path.resolve(__dirname, basePath + 'neoui/scss/core/minxin-themeColors.scss');
 	var corData = fs.readFileSync(corPath, 'utf-8');
-	console.log("corData",corData);
 	var corNewData = corData.replace(/(\$color-primary: ).*(;)/g,`$1"${dataColor}"$2`);
-	console.log("corNewData",corNewData);
 	fs.writeFileSync(corPath,corNewData, 'utf-8');
 	
 	/**
@@ -83,9 +83,14 @@ module.exports = function(data, self, cb){
 			neouiCss.push(neouiBasePath + '/scss/ui/' + dataJson.jsselect[ji] + '.scss');
 			neouiJs.push(neouiBasePath + '/js/' + dataJson.jsselect[ji] + '.js');
 		}
+
+		if(dataJson.adselect){
+			console.log('选择ko');
+		}
 	}
 
-	// 入口文件内容
+
+	// js内容
 	var entryPath = path.resolve(__dirname,'../entry.js');
 	var dataNeo = ["import {extend} from \'neoui-sparrow/lib/extend\';"];
 	var ex = {};
@@ -103,9 +108,26 @@ module.exports = function(data, self, cb){
 	};
 	entryFun();
 
+	// kero-adapter内容
+	var dataKo = [""];
+	var koFun = function(){
+		if(dataJson.adselect && dataJson.jsselect) {
+			for(var i=0, neoLength = dataJson.jsselect.length; i < neoLength; i++ ) {
+				var koName = 'keroa-' + dataJson.jsselect[i].substr(6);
+				var koObj = koModule[koName];
+				for(var key in koObj) {
+					dataKo.push(koObj[key]);
+					ex[key] = key;
+				}
+			}
+		}		
+	};
+	koFun();
+
 	// 写入入口文件
-	var dataNeoStr = dataNeo.join('\n');
-	fs.writeFileSync(entryPath,dataNeoStr);
+	var dataImport = dataNeo.concat(dataKo).join('\n');
+	// var dataNeoStr = dataNeo.join('\n');
+	fs.writeFileSync(entryPath,dataImport);
 	var exBefore = '\nvar ex = ';
 	var exStr = JSON.stringify(ex);
 	var exAfter = [
@@ -120,6 +142,10 @@ module.exports = function(data, self, cb){
 	var dataFsOrigin = fs.readFileSync(entryPath, 'utf-8');
 	var dataFs = dataFsOrigin.replace(/:"([\w-]+)"/g,":$1");
 	fs.writeFileSync(entryPath, dataFs);
+
+
+
+
 	
 	
 

@@ -155,7 +155,7 @@
 			"NavMenu": "import {NavMenu} from 'neoui/js/neoui-navmenu';"
 		},
 		"neoui-pagination": {
-			"neoui-pagination": "import {pagination} from 'neoui/js/neoui-pagination';"
+			"pagination": "import {pagination} from 'neoui/js/neoui-pagination';"
 		},
 		"neoui-progress": {
 			"Progress": "import {Progress} from 'neoui/js/neoui-progress';"
@@ -203,6 +203,77 @@
 		},
 		"neoui-yearmonth": {
 			"YearMonth": "import {YearMonth} from 'neoui/js/neoui-yearmonth';"
+		}
+	},
+	"ko":{
+		"keroa-checkbox":{
+			"CheckboxAdapter":"import {CheckboxAdapter} from 'kero-adapter/js/component/keroa-checkbox';"
+		},
+		"keroa-ckeditor":{
+			"CkEditorAdapter":"import {CkEditorAdapter} from 'kero-adapter/js/component/keroa-ckeditor';"
+		},
+		"keroa-combo":{
+			"ComboboxAdapter":"import {ComboboxAdapter} from 'kero-adapter/js/component/keroa-combo';"
+		},
+		"keroa-currency":{
+			"CurrencyAdapter":"import {CurrencyAdapter} from 'kero-adapter/js/component/keroa-currency';"
+		},
+		"keroa-datetimepicker":{
+			"DateTimeAdapter":"import {DateTimeAdapter} from 'kero-adapter/js/component/keroa-datetimepicker';"
+		},
+		"keroa-float":{
+			"FloatAdapter":"import {FloatAdapter} from 'kero-adapter/js/component/keroa-float';"
+		},
+		"keroa-grid":{
+			"GridAdapter":"import {GridAdapter} from 'kero-adapter/js/component/keroa-grid';"
+		},
+		"keroa-integer":{
+			"IntegerAdapter":"import {IntegerAdapter} from 'kero-adapter/js/component/keroa-integer';"
+		},
+		"keroa-month":{
+			"MonthAdapter":"import {MonthAdapter} from 'kero-adapter/js/component/keroa-month';"
+		},
+		"keroa-pagination":{
+			"PaginationAdapter":"import {PaginationAdapter} from 'kero-adapter/js/component/keroa-pagination';"
+		},
+		"keroa-password":{
+			"PassWordAdapter":"import {PassWordAdapter} from 'kero-adapter/js/component/keroa-password';"
+		},
+		"keroa-percent":{
+			"PercentAdapter":"import {PercentAdapter} from 'kero-adapter/js/component/keroa-percent';"
+		},
+		"keroa-progress":{
+			"ProgressAdapter":"import {ProgressAdapter} from 'kero-adapter/js/component/keroa-progress';"
+		},
+		"keroa-radio":{
+			"RadioAdapter":"import {RadioAdapter} from 'kero-adapter/js/component/keroa-radio';"
+		},
+		"keroa-string":{
+			"StringAdapter":"import {StringAdapter} from 'kero-adapter/js/component/keroa-string';"
+		},
+		"keroa-switch":{
+			"SwitchAdapter":"import {SwitchAdapter} from 'kero-adapter/js/component/keroa-switch';"
+		},
+		"keroa-textarea":{
+			"TextAreaAdapter":"import {TextAreaAdapter} from 'kero-adapter/js/component/keroa-textarea';"
+		},
+		"keroa-textfield":{
+			"TextFieldAdapter":"import {TextFieldAdapter} from 'kero-adapter/js/component/keroa-textfield';"
+		},
+		"keroa-time":{
+			"TimeAdapter":"import {TimeAdapter} from 'kero-adapter/js/component/keroa-time';"
+		},
+		"keroa-tree":{
+			"TreeAdapter":"import {TreeAdapter} from 'kero-adapter/js/component/keroa-tree';"
+		},
+		"keroa-url":{
+			"UrlAdapter":"import {UrlAdapter} from 'kero-adapter/js/component/keroa-url';"
+		},
+		"keroa-year":{
+			"YearAdapter":"import {YearAdapter} from 'kero-adapter/js/component/keroa-year';"
+		},
+		"keroa-yearmonth":{
+			"YearMonthAdapter":"import {YearMonthAdapter} from 'kero-adapter/js/component/keroa-yearmonth';"
 		}
 	}
 }
