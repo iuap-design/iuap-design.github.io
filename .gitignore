@@ -140,3 +140,4 @@ dist/download/*
 test
 dist/vendor/uui
 download/
+entry.js

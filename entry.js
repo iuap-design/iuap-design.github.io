@@ -1,8 +1,9 @@
 import {extend} from 'neoui-sparrow/lib/extend';
 import {Autocomplete} from 'neoui/js/neoui-autocomplete';
-import {YearMonth} from 'neoui/js/neoui-yearmonth';
+import {Switch} from 'neoui/js/neoui-switch';
 
-var ex = {"Autocomplete":Autocomplete,"YearMonth":YearMonth}
+import {SwitchAdapter} from 'kero-adapter/js/component/keroa-switch';
+var ex = {"Autocomplete":Autocomplete,"Switch":Switch,"SwitchAdapter":SwitchAdapter}
 extend(ex,window.u || {});
 window.u = ex;
 export {ex as u};
