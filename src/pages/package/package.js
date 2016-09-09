@@ -23,9 +23,12 @@ window.onload = function() {
                 self.corselect(ele);
             });
 
-            // document.addEventListener('click',function(){
-            //     colorGroup.style.display = 'none';
-            // },false);
+            document.addEventListener('click',function(event){
+                var eleid = event.target.id;
+                var isColorWrap = eleid != 'color0' || eleid != 'colorGroup';
+                console.log(isColorWrap);
+                eleid != 'color0' && eleid != 'colorGroup' ? colorGroup.style.display = 'none' : '';
+            },false);
         },
         init_ui: function(){
             var progress = document.querySelectorAll('#tab-panel-1 .progressbar');
