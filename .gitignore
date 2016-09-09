@@ -135,3 +135,4 @@ dist/download/*
 # test
 test
 dist/vendor/uui
+download/
