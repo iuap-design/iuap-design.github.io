@@ -31,6 +31,7 @@ dist/pages/kero/
 dist/pages/plugins/
 dist/pages/custom/temp
 dist/pages/globalstyle/
+dist/pages/package/
 
 # render ignore
 dist/pages/neoUI
