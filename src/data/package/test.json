@@ -1,0 +1,101 @@
+{
+    "theme":{
+        "list":[
+            {"bg-red":"rgb(244,67,54)"},
+            {"bg-pink":"rgb(233,30,99)"},
+            {"bg-purple":"rgb(156,39,176)"},
+            {"bg-deep-purple":"rgb(103,58,183)"},
+            {"bg-indigo":"rgb(63,81,181)"},
+            {"bg-blue":"rgb(33,150,243)"},
+            {"bg-light-blue":"rgb(3,169,244)"},
+            {"bg-cyan":"rgb(0,188,212)"},
+            {"bg-teal":"rgb(0,150,136)"},
+            {"bg-green":"rgb(76,175,80)"},
+            {"bg-light-green":"rgb(139,195,74)"},
+            {"bg-lime":"rgb(205,220,57)"},
+            {"bg-yellow":"rgb(255,235,59)"},
+            {"bg-amber":"rgb(255,193,7)"},
+            {"bg-orange":"rgb(255,152,0)"},
+            {"bg-deep-orange":"rgb(255,87,34)"},
+            {"bg-brown":"rgb(121,85,72)"},
+            {"bg-grey":"rgb(158,158,158)"},
+            {"bg-blue-grey":"rgb(96,125,139)"},
+            {"bg-black":"rgb(0,0,0)"}
+        ]
+    },
+    "mod":{
+        "polyfill": {
+            "title": "IE8 Polyfill模块",
+            "description": "用于兼容ie8,包含respond,html5,及框架基础函数支持",
+            "catlog": "polyselect",
+            "list":[
+                {"name":"核心函数支持","file":"u-polyfill-core"},
+                {"name":"响应式支持","file":"u-polyfill-respond"}
+            ]
+        },
+        "neocss": {
+            "title": "CSS组件",
+            "description": "CSS组件描述",
+            "catlog": "cssselect",
+            "list":[
+                {"name":"头像","file":"neoui-avatar"},
+                {"name":"徽章","file":"neoui-badge"},
+                {"name":"面包屑","file":"neoui-breadcrumbs"},
+                {"name":"卡片","file":"neoui-card"},
+                {"name":"数据统计","file":"neoui-counter"},
+                {"name":"下拉菜单","file":"neoui-dropdown"},
+                {"name":"表单","file":"neoui-forms"},
+                {"name":"图片","file":"neoui-img"},
+                {"name":"表格布局","file":"neoui-layout.grid"},
+                {"name":"面板布局","file":"neoui-layout.slidepanel"},
+                {"name":"列表","file":"neoui-list-group"},
+                {"name":"导航","file":"neoui-nav"},
+                {"name":"面板","file":"neoui-panel"},
+                {"name":"步骤","file":"neoui-pearls"},
+                {"name":"评分","file":"neoui-rating"},
+                {"name":"色带","file":"neoui-ribbon"},
+                {"name":"标签","file":"neoui-tags"},
+                {"name":"天气","file":"neoui-weather"},
+                {"name":"挂件","file":"neoui-widget"}
+            ]
+        },
+        "neojs": {
+            "title": "JS组件",
+            "description": "JS组件描述",
+            "catlog": "jsselect",
+            "list":[
+                {"name":"自动完成","file":"neoui-autocomplete"},
+                {"name":"按钮","file":"neoui-button"},
+                {"name":"checkbox框","file":"neoui-checkbox"},
+                {"name":"表盘选择器","file":"neoui-clockpicker"},
+                {"name":"combo","file":"neoui-combo"},
+                {"name":"combobox","file":"neoui-combobox"},
+                {"name":"数据表","file":"neoui-data-table"},
+                {"name":"日期选择器","file":"neoui-datetimepicker"},
+                {"name":"对话框","file":"neoui-dialog"},
+                {"name":"md布局","file":"neoui-layout.md"},
+                {"name":"nav布局","file":"neoui-layout.nav"},
+                {"name":"进度loader","file":"neoui-loader"},
+                {"name":"进度loading","file":"neoui-loading"},
+                {"name":"菜单","file":"neoui-menu"},
+                {"name":"消息框","file":"neoui-message"},
+                {"name":"月份","file":"neoui-month"},
+                {"name":"多语言","file":"neoui-multilang"},
+                {"name":"导航菜单","file":"neoui-navmenu"},
+                {"name":"分页","file":"neoui-pagination"},
+                {"name":"进度条","file":"neoui-progress"},
+                {"name":"单选框","file":"neoui-radio"},
+                {"name":"refer","file":"neoui-refer"},
+                {"name":"slidePanel","file":"neoui-slidePanel"},
+                {"name":"开关","file":"neoui-switch"},
+                {"name":"标签组","file":"neoui-tabs"},
+                {"name":"文本框","file":"neoui-textfield"},
+                {"name":"时间","file":"neoui-time"},
+                {"name":"提示tip","file":"neoui-tooltip"},
+                {"name":"验证","file":"neoui-validate"},
+                {"name":"年份","file":"neoui-year"},
+                {"name":"年月","file":"neoui-yearmonth"}
+            ]
+        }
+    }
+}

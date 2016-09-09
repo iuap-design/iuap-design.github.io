@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个性化定制 | iuap design</title>
+    <link rel="stylesheet" type="text/css" href="http://design.yyuap.com/static/uui/latest/css/u.min.css">
+    <link rel="stylesheet" href="http://design.yyuap.com/static/uui/latest/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="package.css">
+    <link href="/dist/static/css/style.css" rel="stylesheet" media="screen">
+    <link href="/dist/static/ionicons/ionicons.css" rel="stylesheet" media="screen">
+</head>
+<body>
+<div id="offId" class="offcanvas-nav">
+    <div class="nav-head">
+        <div class="top-bar">
+            <div class="nav-toggle" data-offcanvas="close"><i class="flaticon-list26" id="offIdI"></i></div>
+        </div>
+    </div>
+    <div class="nav-body">
+        <div class="overflow mCustomScrollbar _mCS_1" style="height: 190px; position: relative; overflow: visible;">
+            <div id="mCSB_1" class="mCustomScrollBox mCS-dark mCSB_vertical mCSB_outside" tabindex="0">
+                <div id="mCSB_1_container" class="mCSB_container" style="position:relative; top:0; left:0;" dir="ltr">
+                    <div class="inner">
+                        <!-- Navigation -->
+                        <nav class="nav-link">
+                            <div class="scroll-nav">
+                                <ul>
+                                    <!-- Add ".scroll" class to anchor tag to enable smooth scrolling -->
+                                    <li class="active"><a class="scrollup" href="#"><i
+                                            class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                                    <li><a class="scroll" href="#features" data-offset-top="80"><i
+                                            class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                                    <li><a class="scroll" href="#gallery" data-offset-top="80"><i
+                                            class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                                    <li><a class="scroll" href="#versions" data-offset-top="85"><i
+                                            class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                                    <li><a class="scroll" href="#team" data-offset-top="80"><i
+                                            class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                                    <li><a class="scroll" href="#web-app" data-offset-top="80"><i
+                                            class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                                    <li><a class="scroll" href="#web-app" data-offset-top="80"><i
+                                            class="icon ion-android-radio-button-on" aria-hidden="true"></i></a></li>
+                                </ul>
+                                <ul class="pages">
+                                    <li><a href="/dist/pages/getting-started/index.html">开始使用</a></li>
+                                    <li><a href="/dist/pages/design-language/iuapdesign.html">设计语言</a></li>
+                                    <li><a href="/dist/pages/components/index.html">CSS 组件</a></li>
+                                    <li><a href="/dist/pages/plugins/index.html">JS 插件</a></li>
+                                    <li><a href="＃">模板库</a></li>
+                                    <li><a href="/dist/pages/webIDE/index.html">WebIDE</a></li>
+                                    <li><a href="/dist/pages/kero/index.html">Kero</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div id="mCSB_1_scrollbar_vertical"
+                 class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark mCSB_scrollTools_vertical" style="display: block;">
+                <div class="mCSB_draggerContainer">
+                    <div id="mCSB_1_dragger_vertical" class="mCSB_dragger"
+                         style="position: absolute; min-height: 30px; height: 177px; top: 0px; display: block; max-height: 180px;"
+                         oncontextmenu="return false;">
+                        <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                    </div>
+                    <div class="mCSB_draggerRail"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 引入head -->
+{{include '../common/header'}}
+
+<!-- Content -->
+<div id="content">
+    <div id="head">
+        <div class="banner">
+            <div class="u-container">
+                <div class="banner-content">
+                    <h1>个性化定制</h1>
+                    <p class="info">定制你想要的iuap design的主题颜色，轻松一键换肤；任意定制下载特定的功能模块，只加载你想要的资源；导入之前选择的配置，轻松进行更新操作</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="u-container">
+        <!--全选-->
+        <div class="tree-whole-div" id="selectAll">
+            <div class="tree-div">
+                <h2 class="title">iuap design 资源定制</h2>
+                <label class="u-checkbox is-upgraded select-all" u-meta="{&quot;id&quot;:&quot;all&quot;,&quot;type&quot;:&quot;u-checkbox&quot;,&quot;data&quot;:&quot;treeData&quot;,&quot;field&quot;:&quot;all&quot;,&quot;checkedValue&quot;:true,&quot;unCheckedValue&quot;:false}">
+                    <input type="checkbox" class="u-checkbox-input">
+                    <span class="u-checkbox-label select">全选/反选</span>
+                    <span class="u-checkbox-focus-helper"></span>
+                    <span class="u-checkbox-outline custom-checkbox">
+                        <span class="u-checkbox-tick-outline"></span>
+                    </span>
+                    <span style="overflow: hidden; position: relative;">
+                        <span class="u-ripple"></span>
+                    </span>
+                </label>
+                <button class="u-button download-top" id="buttonTop">下载</button>
+            </div>
+        </div>
+
+
+        <!-- 主题内容，切换标签 -->
+        <div class="u-widget-body">
+            <div class="u-tabs">
+                <!-- tab头部切换 -->
+                <div class="u-tabs__tab-bar">
+                    <a href="#tab-panel-1" class="u-tabs__tab is-active">主题颜色</a>
+                    <a href="#tab-panel-2" class="u-tabs__tab">模块定制</a>
+                    <!-- <a href="#tab-panel-3" class="u-tabs__tab">导入配置</a> -->
+                </div>
+
+                <!-- 面板1 -->
+                <div class="u-tabs__panel is-active" id="tab-panel-1">
+                    <!-- 颜色选择器 -->
+                    <div class="color-head-div" id="colorModel">
+                        <div class="color-whole-div">
+                            <div class="color-head-div">选择主题色:</div>
+                            <div class="color-input-div u-row">
+                                <div class="u-text color-input u-col-md-4 is-upgraded is-dirty">
+                                    <!-- <label for="color0" class="color-label">主色</label> -->
+                                    <input id="color0" value="63,81,181" class="color-in">
+                                    <div id="colorGroup">
+                                        <ul>
+                                            {{each theme.list as value}}
+                                                <li class={{value.class}} data-color={{value.color}}></li>
+                                            {{/each}}
+                                        </ul>
+                                        <div id="colorShow">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="color-head-div">选择主题色后样式预览：</div>
+                    <!-- 按钮 -->
+                    <div class="u-container-fluid u-widget-bg">
+                            <div class="u-row">
+                                <!-- 导航 -->
+                                <div class="u-col-md-12">
+                                    <div class="u-widget">
+                                        <div class="u-widget-heading">
+                                            <h3 class="u-widget-title">对比导航</h3>
+                                        </div>
+                                        <div class="u-widget-body">
+                                             <nav class="u-navbar u-navbar-inverse" role="navigation" data-theme="rgb(63,81,181)">
+                                                <div class="u-container-fluid">
+                                                    <div class="u-navbar-header">
+                                                        <button type="button" class="u-navbar-toggle u-hamburger u-hamburger-close u-collapsed" data-target="#example-inverse-collapse" data-toggle="collapse">
+                                                            <!-- <span class="sr-only">Toggle navigation</span> -->
+                                                            <span class="u-hamburger-bar"></span>
+                                                        </button>
+                                                       
+                                                        <a class="u-navbar-brand" href="javascript:void(0)">Brand</a>
+                                                    </div>
+                                                    <ul class="nav-list u-navbar-nav hidden-xs">
+                                                        <li>
+                                                            <a href="javascript:void(0)">
+                                                                <i class="uf uf-book" aria-hidden="true"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="hidden-xs">
+                                                            <a class="uf uf-bellmusicaltool" data-toggle="fullscreen" href="#" role="button">
+                                                                <!-- <span class="sr-only">Toggle fullscreen</span> -->
+                                                            </a>
+                                                        </li>
+                                                        <li class="hidden-xs">
+                                                            <a class="uf uf-zoomin" data-toggle="collapse" href="#example-default-search" role="button">
+                                                                <!-- <span class="sr-only">Toggle Search</span> -->
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="u-collapse u-navbar-collapse u-navbar-collapse-group" id="example-inverse-collapse">
+                                                        <ul class="nav-list u-navbar-toolbar u-navbar-right u-navbar-toolbar-right">
+                                                            <li class="dropdown">
+                                                                <a class="u-avatar w-32  u-avatar-online">
+                                                                    <img src="http://design.yyuap.com/static/img/navimg1.jpg" alt="..." class="img-circle">
+                                                                    <i></i>
+                                                                </a>
+                                                              
+                                                            </li>
+                                                            <li class="dropdown">
+                                                                <a class="u-badge w-20 m" data-badge="1">
+                                                                    <i class="uf uf-bellmusicaltool"></i>
+                                                                </a>
+                                                                
+                                                            </li>
+                                                            <li class="dropdown">
+                                                                <a class="u-badge u-badge-info w-20 m" data-badge="3">
+                                                                    <i class="uf uf-envelope"></i>
+                                                                </a>
+                                                               
+                                                            </li>
+                                                        </ul>
+                                                    </div>   
+                                                </div>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- 按钮 -->
+                                <div class="u-col-md-12">
+                                    <div class="u-widget">
+                                        <div class="u-widget-heading">
+                                            <h3 class="u-widget-title">基础按钮</h3>
+                                        </div>
+                                        <div class="u-widget-body">
+                                            <button class="u-button raised primary main-color-show" data-theme="rgb(63,81,181)">BUTTON</button>
+                                            <button class="u-button raised accent assist-color-show">BUTTON</button>
+                                            <button class="u-button raised">BUTTON</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 进度条 -->
+                                <div class="u-col-md-12">
+                                    <div class="u-widget ">
+                                        <div class="u-widget-heading">
+                                            <h3 class="u-widget-title">不同尺寸的进度条</h3>
+                                        </div>
+                                        <div class="u-widget-body">
+                                            <div id="p22" class="u-progress u-progress-lg"></div>
+                                            <br/>
+                                            <div id="p23" class="u-progress u-progress-md"></div>
+                                            <br/>
+                                            <div id="p24" class="u-progress u-progress-sm"></div>
+                                            <br/>
+                                            <div id="p25" class="u-progress"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- switch -->
+                                <div class="u-col-md-12">
+                                    <div class="u-widget">
+                                        <div class="u-widget-heading">
+                                            <h3 class="u-widget-title">switch</h3>
+                                        </div>
+                                        <div class="u-widget-body">
+                                            <label class="u-switch" for="switch-1">
+                                                <input type="checkbox" id="switch-1" class="u-switch-input">
+                                                <span class="u-switch-label"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 默认分页 -->
+                                <div class="u-col-md-12">
+                                    <div class="u-widget">
+                                        <div class="u-widget-heading">
+                                            <h3 class="u-widget-title">默认分页</h3>
+                                        </div>
+                                        <div class="u-widget-body">
+                                            <div id='pagination' class='u-pagination'>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                    </div>
+                </div>
+
+                <!-- 面板2 -->
+                <div class="u-tabs__panel" id="tab-panel-2">
+
+                    {{each mod as value i}}
+                    <div class="color-whole-div">
+                        <h2 class="second-title">{{value.title}}</h2>
+                        <p>{{value.description}}</p>
+                        <span class="u-checkbox tree-parent is-upgraded">
+                            <input type="checkbox" class="u-checkbox-input">
+                            <span class="u-checkbox-label select-module">全选</span>
+                        </span>
+                        <div class="coreModel">
+                            <div class="tree-whole-div">
+                                <ul class="tree-div u-row textDiv">
+                                    {{each value.list as lival j}}
+                                        <li class="u-checkbox tree-leaf u-col-md-4" data-catlog="{{value.catlog}}" data-file='{{lival.file}}'>
+                                            <input type="checkbox" class="u-checkbox-input">
+                                            <span class="u-checkbox-label select-module">{{lival.name}}</span>
+                                        </li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+
+                </div>
+
+                <!-- 面板3 -->
+                <!-- <div class="u-tabs__panel" id="tab-panel-3">
+                    <div id="set" class="set">
+                        <div class="color-whole-div">
+                            <div class="eval-head-div">下载文件setting.txt中保存了上次配置的信息，将信息复制至文本域中并点击执行可恢复上次配置。
+                            </div>
+                            <button id="eavl-button" class="u-button raised u-eval-button" data-upgraded=",u.Button">导入
+                                <span class="u-button-container">
+                                    <span class="u-ripple"></span>
+                                </span>
+                            </button>
+                            <textarea style="width: 100%;height: 70px;" u-meta="{&quot;id&quot;:&quot;str&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;data&quot;:&quot;evalData&quot;,&quot;field&quot;:&quot;str&quot;}" title=""></textarea>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+        <!-- 下载长按钮 -->
+        <div class="btn-whole">
+            <button id="button" class="u-button u-button-block u-button-xg u-bottom-button">下载</button>
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- 引入footer -->
+{{include '../common/footer'}}
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://design.yyuap.com/static/knockout/knockout-3.2.0.debug.js"></script>
+<!--[if lt IE 8]>
+<script src="http://design.yyuap.com/static/uui/latest/js/u-polyfill.min.js"></script>
+<![endif]-->
+<script src="http://design.yyuap.com/static/uui/latest/js/u.min.js"></script>
+<script src="package.js"></script>
+</body>
+</html>
+
+
+
+

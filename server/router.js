@@ -7,6 +7,10 @@ var zip = require('gulp-zip');
 var customized = require("./customized");
 var down = require("./down");
 
+// 新定制
+var concat = require('gulp-concat');
+var fs = require('fs');
+
 
 
 module.exports = {
@@ -80,9 +84,6 @@ module.exports = {
       this.body = datas;
     });
 
-    
-
-
     router.post('/runDemo', function *(next) {
         // this.request.body;
         // console.log(this.request.body.html_code);
@@ -102,6 +103,19 @@ module.exports = {
           customized.run(self,cb);
       }
 
+    });
+
+    // 新定制
+    router.post('/package', function *(next) {
+      var self = this;
+      console.log(this.request.body);
+
+      var data = this.request.body;
+      var pack = require('./pack.js');
+      yield function(cb) {
+        pack(data,self,cb);
+      };
+      // this.body = pack(data);
     });
 
     router.post('/downloadDemo',function *(next) {
