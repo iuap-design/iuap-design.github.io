@@ -165,12 +165,18 @@ window.onload = function() {
             dataJson.themeColor = colorVal;
             console.log(dataJson);
 
+            var options={
+                hasback:true//不含有遮罩层
+            };
+            u.showLoader(options);
+
             $.ajax({
                 type: 'post',
                 dataType: 'text',
                 data: dataJson,
                 url: '/package',
                 success: function (patch) {
+                    u.hideLoader();
                     location.href = patch;
                 },
                 error: function (patch) {
