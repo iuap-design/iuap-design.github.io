@@ -19,6 +19,10 @@ bin/tree/
 
 _book/
 
+# 下载
+download/
+
+
 dist/pages/components/
 dist/pages/design-language/
 dist/pages/getting-started/
@@ -27,6 +31,7 @@ dist/pages/kero/
 dist/pages/plugins/
 dist/pages/custom/temp
 dist/pages/globalstyle/
+dist/pages/package/
 
 # render ignore
 dist/pages/neoUI
@@ -135,3 +140,5 @@ dist/download/*
 # test
 test
 dist/vendor/uui
+download/
+entry.js
