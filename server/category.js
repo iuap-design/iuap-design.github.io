@@ -223,9 +223,7 @@ fs.readdir(scssPath, function(err, scssFiles) {
 
 		// 写入文件
 		var indexPath = path.resolve(__dirname,'../src/data/package/index.json')
-		fs.writeFile(indexPath, totalConcat, 'utf-8', function(err){
-			return;
-		});
+		fs.writeFileSync(indexPath, totalConcat, 'utf-8', 'w');
 
 	});
 });
