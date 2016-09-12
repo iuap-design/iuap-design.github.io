@@ -3210,40 +3210,6 @@ u.date= {
         if (isNaN(_date)){
             // IE的话对"2016-2-13 12:13:22"进行处理
             var index1,index2,index3,s1,s2,s3;
-<<<<<<< HEAD
-            index1 = value.indexOf('-');
-            index2 = value.indexOf(':');
-            index3 = value.indexOf(' ');
-            if(index1 > 0 || index2 > 0 || index3 > 0){
-                _date = new Date();
-                if(index3 > 0){
-                    s3 = value.split(' ');
-                    s1 = s3[0].split('-');
-                    s2 = s3[1].split(':'); 
-                }else if(index1 > 0){
-                    s1 = value.split('-');
-                }else if(index2 > 0){
-                    s2 = value.split(':');
-                }
-                if(s1 && s1.length > 0){
-                    _date.setYear(s1[0]);
-                    _date.setMonth(parseInt(s1[1] -1));
-                    _date.setDate(s1[2]?s1[2]:0);
-                    dateFlag = true;
-                }
-                if(s2 && s2.length > 0){
-                    _date.setHours(s2[0]?s2[0]:0);
-                    _date.setMinutes(s2[1]?s2[1]:0);
-                    _date.setSeconds(s2[2]?s2[2]:0);
-                    dateFlag = true;
-                }
-            }else{
-                _date = new Date(parseInt(value))
-                if (isNaN(_date)) {
-                    throw new TypeError('invalid Date parameter');
-                }else{
-                    dateFlag = true;
-=======
             if(value.indexOf){
                 index1 = value.indexOf('-');
                 index2 = value.indexOf(':');
@@ -3278,7 +3244,6 @@ u.date= {
                     }else{
                         dateFlag = true;
                     }
->>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
                 }
             }
         }else{
@@ -7865,14 +7830,6 @@ u.Combo = u.BaseComponent.extend({
                 position:"bottomLeft"
             });
         }else{
-<<<<<<< HEAD
-            this.element.parentNode.appendChild(this._ul);
-            var left = this.element.offsetLeft,
-            inputHeight = this.element.offsetHeight,
-            top = this.element.offsetTop + inputHeight;
-            this._ul.style.left = left + 'px';
-            this._ul.style.top = top + 'px';
-=======
             // this.element.parentNode.appendChild(this._ul);
             // var left = this.element.offsetLeft,
             // inputHeight = this.element.offsetHeight,
@@ -7896,7 +7853,6 @@ u.Combo = u.BaseComponent.extend({
             
             this._ul.style.left = this.left + 'px';
             this._ul.style.top = this.top + 'px'; 
->>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
         }
 	    this._ul.style.width = width + 'px';
         u.addClass(this._ul, 'is-animating');
@@ -8655,12 +8611,8 @@ u.Tooltip.prototype = {
         viewport: {
             selector: 'body',
             padding: 0
-<<<<<<< HEAD
-        }
-=======
         },
         showFix: false
->>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
     },
     init: function (element,options) {
 		this.element = element
@@ -8722,23 +8674,6 @@ u.Tooltip.prototype = {
         var self = this;
         this.tipDom.querySelector('.tooltip-inner').innerHTML = this.options.title;
         this.tipDom.style.zIndex = u.getZIndex();
-<<<<<<< HEAD
-        this.container.appendChild(this.tipDom);
-
-        u.addClass(this.tipDom,'active');
-        var inputLeft = this.element.offsetLeft;
-        var inputTop = this.element.offsetTop;
-        var inputWidth = this.element.offsetWidth;
-        var inputHeight = this.element.offsetHeight;
-        var topWidth = this.tipDom.offsetWidth;
-        var topHeight = this.tipDom.offsetHeight;
-        if(this.options.placement == 'top'){
-            this.left = this.element.offsetLeft + inputWidth/2;
-            this.top = this.element.offsetTop - topHeight;
-        }
-        this.tipDom.style.left = this.left + 'px';
-        this.tipDom.style.top = this.top + 'px';
-=======
 
         if(this.options.showFix){
             document.body.appendChild(this.tipDom);
@@ -8773,7 +8708,6 @@ u.Tooltip.prototype = {
 
         u.addClass(this.tipDom,'active');
         
->>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
         // var placement = this.options.placement;
         // var pos = this.getPosition()
         // var actualWidth = this.tipDom.offsetWidth
@@ -8784,12 +8718,6 @@ u.Tooltip.prototype = {
 
     },
     hide: function(){
-<<<<<<< HEAD
-		if (this.container.contains(this.tipDom)){
-			u.removeClass(this.tipDom, 'active');
-			this.container.removeChild(this.tipDom);
-		}
-=======
         if(this.options.showFix){
             if (document.body.contains(this.tipDom)){
                 u.removeClass(this.tipDom, 'active');
@@ -8802,7 +8730,6 @@ u.Tooltip.prototype = {
             }
         }
 		
->>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
     },
     applyPlacement: function(offset, placement){
         var width = this.tipDom.offsetWidth
@@ -8951,11 +8878,8 @@ u.Tooltip.prototype = {
 	        this.notipFlag = this.options['notipFlag']; // 错误信息提示方式是否为tip，默认为true
 	        this.hasSuccess = this.options['hasSuccess']; //是否含有正确提示
 
-<<<<<<< HEAD
-=======
 	        this.showFix = this.options['showFix'];
 
->>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	        //提示div的id 为空时使用tooltop来提示
 	        this.tipId = this.options['tipId'] ? this.options['tipId'] : null
 	            //校验成功提示信息的div
@@ -9319,12 +9243,8 @@ u.Tooltip.prototype = {
 				"title": msg,
 				"trigger": "manual",
 				"selector": "validtip",
-<<<<<<< HEAD
-				"placement": this.placement
-=======
 				"placement": this.placement,
 				"showFix": this.showFix
->>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 			}
 			if (this.options.tipTemplate)
 				tipOptions.template = this.options.tipTemplate
@@ -11562,16 +11482,6 @@ u.YearMonth.fn._fillMonth = function(){
         new URipple(cells[i]);
     }
     var oThis = this;
-<<<<<<< HEAD
-    u.on(monthPage, 'click', function(e){
-        var _m = e.target._value;
-        oThis.month = _m;
-        monthPage.querySelector('.u-date-content-title').innerHTML = _m + '月';
-        oThis.setValue(oThis.year + '-' + oThis.month);
-        oThis.hide();
-    });
-    
-=======
        
     u.on(monthPage, 'click', function(e){
         var _m = e.target._value;
@@ -11582,7 +11492,6 @@ u.YearMonth.fn._fillMonth = function(){
         oThis.setValue(oThis.year + '-' + oThis.month);
         oThis.hide();
     });
->>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
     this.preBtn.style.display = 'none';
 	this.nextBtn.style.display = 'none';
 	this._zoomIn(monthPage);
