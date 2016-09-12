@@ -1,4 +1,4 @@
-/*.example {
+.example {
     position: relative;
     padding: 50px 15px 15px 50px;
     background-color: #f3f7fa;
@@ -6,7 +6,7 @@
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
     margin-top: 20px;
     margin-bottom: 20px;
-}*/
+}
 
 .example-bottom {
     padding: 15px 15px 50px 50px;
