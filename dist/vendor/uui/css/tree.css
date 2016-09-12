@@ -1,12 +1,5 @@
 /** 
- * generate-uui v3.1.0
- * 合并构建UUI
- * author : guoyongfeng
- * homepage : https://github.com/iuap-design/generate-uui#readme
- * bugs : https://github.com/iuap-design/generate-uui/issues
- **/ 
-/** 
- * tree v3.0.6
+ * neoui-tree v1.0.5
  * tree
  * author : yonyou FED
  * homepage : https://github.com/iuap-design/tree#readme
@@ -70,7 +63,7 @@ website:    http://code.google.com/p/jquerytree/
 }
 /*.ztree li:hover >span{
     color:#3949AB;
-    
+
 }*/
 .ztree li a.focusNode {
     /*background-color: #eee;*/
@@ -196,7 +189,7 @@ website:    http://code.google.com/p/jquerytree/
   background-position: -42px -56px;
 }
 .ztree li span.button.switch {
-  
+
   // width: 21px;
   // height: 15px;
   width: 21px;
@@ -207,13 +200,13 @@ website:    http://code.google.com/p/jquerytree/
 }
 .ztree li span.button.root_close {
   background-image:none;
-  line-height:18px; 
+  line-height:18px;
   background-position: -74px -54px;
 }
 .ztree li span.button.root_close:after{
     font-family:'uf';
     content:'\e6ce';
-    
+
 }
 .ztree li span.button.roots_open {
   background-image:none;
@@ -224,38 +217,38 @@ website:    http://code.google.com/p/jquerytree/
     font-family:'uf';
     content:'\e6ce';
     color:#ccc;
-    
+
 }
 .ztree li span.button.roots_close {
     background-image:none;
-    line-height:18px;   
+    line-height:18px;
     background-position: -74px -54px;
 }
 .ztree li span.button.roots_close:after{
     font-family:'uf';
     content:'\e6ed';
-    
+
 }
 .ztree li span.button.center_open,.ztree li span.button.bottom_open {
     background-image:none;
-    line-height:18px;   
+    line-height:18px;
     background-position: -74px -54px;
 }
 .ztree li span.button.center_open:after,.ztree li span.button.bottom_open:after{
     font-family:'uf';
     content:'\e6ce';
     color:#ccc;
-    
+
 }
 .ztree li span.button.center_close,.ztree li span.button.bottom_close {
     background-image:none;
-    line-height:18px;   
+    line-height:18px;
     background-position: -74px -54px;
 }
 .ztree li span.button.center_close:after {
     font-family:'uf';
     content:'\e6ed';
-    
+
 }
 .ztree li span.button.bottom_close:after{
     font-family:'uf';
@@ -316,14 +309,14 @@ website:    http://code.google.com/p/jquerytree/
 .ztree li span.button.ico_close:after {
     font-family:'uf';
     content:'\e688';
-    
+
     position: absolute;
     top: 3px;
 }
 .ztree li span.button.ico_docu {
  background-image:none;
    font-size: 14px;
- 
+
   vertical-align: top;
   *vertical-align: middle;
   overflow: hidden;
@@ -475,8 +468,8 @@ ul.ztree.zTreeDragUL {
 }
 
 .ztree li span.button.switch.noline_open:after {
-    /*-webkit-transform: rotate(90deg); 
-    transform: rotate(90deg); 
+    /*-webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
     content: '';
     display: inline-block;
     position: absolute;
@@ -514,11 +507,11 @@ ul.ztree.zTreeDragUL {
   top:1px;
 }
 .basic li span.button.ico_close{
-  margin-right: 10px; 
+  margin-right: 10px;
   /*color:#757575;*/
 }
 .basic li span.button.ico_open{
-  margin-right: 10px; 
+  margin-right: 10px;
   /*color:#757575;*/
 }
 .basic li span.button.ico_docu{

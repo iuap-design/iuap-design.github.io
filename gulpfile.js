@@ -130,6 +130,11 @@ gulp.task('clone', function() {
     }
 });
 
+gulp.task('watcher', function() {
+    gulp.watch('./src/**/*.html',['del']);
+});
+
+
 
 gulp.task('newpack', ['clone']);
 gulp.task('default', ['del']);

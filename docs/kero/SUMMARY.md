@@ -12,6 +12,8 @@
   * [基础说明](module.md)
   * [API](moduleapi.md)
 * 基本示例
+  * [单选框](ex_radio.md)
+  * [复选框](ex_checkbox.md)
   * [年份选择](ex_year.md)
   * [月份选择](ex_month.md)
   * [时间选择](ex_time.md)

@@ -1,5 +1,5 @@
 /** 
- * grid v3.0.6
+ * neoui-grid v1.0.6
  * grid
  * author : yonyou FED
  * homepage : https://github.com/iuap-design/grid#readme
@@ -340,14 +340,15 @@
 			if($('#' + this.options.id)[0])
 				$('#' + this.options.id)[0].innerHTML = '';
 			var htmlStr = '<div id="' + this.options.id + '_grid" class="u-grid-grid">';
-				htmlStr += this.createColumnMenu();
+				// htmlStr += this.createColumnMenu();
 				htmlStr += this.createHeader();
 			htmlStr += this.createContent();
 			htmlStr += '</div>';
 			if($('#' + this.options.id)[0])
 				$('#' + this.options.id).html(htmlStr);
-			this.headerFirstClassFun();
+			$(document.body).append(this.createColumnMenu());
 			this.initGridEventFun();
+			this.headerFirstClassFun();
 			this.showType = 'grid';
 			this.afterGridDivsCreate();
 			this.createGridFlag = true;
@@ -379,7 +380,9 @@
 			if(!this.options.showHeader)
 				headerShowStr = 'style="display:none;"';
 			var htmlStr = '<div class="u-grid-header" id="' + this.options.id + '_header" ' + headerShowStr + '><div class="u-grid-header-wrap" id="' + this.options.id + '_header_wrap" data-role="resizable" ' + wrapStr + '>';
-			htmlStr += '<div class="u-grid-header-columnmenu uf uf-reorderoption"></div>';
+			if (this.options.columnMenu){
+				htmlStr += '<div class="u-grid-header-columnmenu uf uf-reorderoption"></div>';
+			}
 			if (this.options.multiSelect || this.options.showNumCol) {
 				htmlStr += '<div id="' + this.options.id + '_header_left" class="u-grid-header-left" style="width:' + this.leftW + 'px;">';
 				if (this.options.multiSelect) {
@@ -555,8 +558,8 @@
 				htmlStr += '<div class="u-grid-content-left" id="' + this.options.id + '_content_numCol" style="width:' + this.numWidth + 'px;left:' + left + 'px;' + hStr + '">';
 				// 遍历生成所有行
 				if (this.dataSourceObj.rows) {
-					$.each(this.dataSourceObj.rows, function(i) {
-						htmlStr += oThis.createContentLeftNumColRow(i);
+					$.each(this.dataSourceObj.rows, function(i, row) {
+						htmlStr += oThis.createContentLeftNumColRow(i, row.value);
 					});
 				}
 				htmlStr += '</div>';
@@ -1318,7 +1321,7 @@
 				var oldWidth = this.lastVisibleColumn.options.width;
 				this.lastVisibleColumnWidth = oldWidth + (this.contentMinWidth - this.contentRealWidth);
 				// modfied by tianxq1 最后一列自动扩展
-				this.lastVisibleColumn.options.width = this.lastVisibleColumnWidth-20;
+				this.lastVisibleColumn.options.width = this.lastVisibleColumnWidth;
 			}else{
 				this.contentWidth = this.contentRealWidth;
 			}
@@ -1686,7 +1689,38 @@
 				this.resetThVariable();
 				this.saveGridCompColumnArrToLocal();
 			}
-		},				
+		},
+
+		/*
+		 * 根据field设置宽度
+		 */			
+		setCoulmnWidthByField: function(field, newWidth){
+			var column = this.getColumnByField(field);
+			this.setColumnWidth(column, newWidth);
+		},	
+
+		/*
+		 * 根据column对象设置宽度
+		 */	
+		setColumnWidth: function(column, newWidth){
+			if(column != this.lastVisibleColumn){
+				if (newWidth > this.minColumnWidth) {
+					var nowVisibleThIndex = this.getVisibleIndexOfColumn(column),
+					oldWidth = column.options.width,
+					changeWidth  = newWidth - oldWidth,
+					cWidth = this.contentWidth + changeWidth;
+					this.contentWidth = this.contentWidthChange(cWidth);
+					$('#' + this.options.id + '_header_table col:eq(' + nowVisibleThIndex + ')').css('width', newWidth + "px");
+					$('#' + this.options.id + '_content_table col:eq(' + nowVisibleThIndex + ')').css('width', newWidth + "px");
+
+					column.options.width = newWidth;
+					column.options.realWidth = newWidth;
+
+					this.resetThVariable();
+					this.saveGridCompColumnArrToLocal();
+				}
+			}
+		},	
 		/*
 		 * 对宽度和高度进行处理
 		 */
@@ -1841,33 +1875,36 @@
 		addOneRow:function(row,index){
 			var oThis = this,displayFlag = 'none',rowObj = {},parentIndex,
 				parentChildLength = 0,l = this.dataSourceObj.rows.length,endFlag = false;
-				rowObj.value = row
+				rowObj.value = row;
+
+			index = this.addOneRowTree(row,index,rowObj);
+			if(index != 0){
+				if(index && index > 0){
+					if(l < index)
+						index = l;
+				}else{
+					index = 0;
+				}
+			}
+			if(l == index){
+				endFlag = true;
+			}
+			rowObj.valueIndex = index;
+			rowObj.value = row;
+			this.dataSourceObj.rows.splice(index,0,rowObj);
+			// 如果是在中间插入需要将后续的valueIndex + 1；
+			if(this.dataSourceObj.rows.length > (index + 1)){
+				$.each(this.dataSourceObj.rows,function(i){
+					if(i > index){
+						this.valueIndex =  this.valueIndex + 1;
+					}
+				});
+			}
+
 			if(this.showType == 'grid'){ //只有grid展示的时候才处理div，针对隐藏情况下还要添加数据
 				this.editClose();
-				index = this.addOneRowTree(row,index,rowObj);
-				if(index != 0){
-					if(index && index > 0){
-						if(l < index)
-							index = l;
-					}else{
-						index = 0;
-					}
-				}
-				if(l == index){
-					endFlag = true;
-				}
-				rowObj.valueIndex = index;
-				rowObj.value = row;
-				this.dataSourceObj.rows.splice(index,0,rowObj);
+				
 				this.updateEditRowIndex('+', index);
-				// 如果是在中间插入需要将后续的valueIndex + 1；
-				if(this.dataSourceObj.rows.length > (index + 1)){
-					$.each(this.dataSourceObj.rows,function(i){
-						if(i > index){
-							this.valueIndex =  this.valueIndex + 1;
-						}
-					});
-				}
 				try{
 					var htmlStr = this.createContentOneRow(rowObj,'normal',displayFlag);
 					if(endFlag){
@@ -1914,7 +1951,7 @@
 					}
 				}
 				if (this.options.showNumCol) {
-					var htmlStr = this.createContentLeftNumColRow(l);
+					var htmlStr = this.createContentLeftNumColRow(l, row);
 					if(endFlag){
 						$('#' + this.options.id + '_content_numCol')[0].insertAdjacentHTML('beforeEnd',htmlStr);
 					}else{
@@ -2004,14 +2041,14 @@
 				});
 			}
 			if(this.showType == 'grid' && $('#' + this.options.id + '_content_div tbody')[0]){ //只有grid展示的时候才处理div，针对隐藏情况下还要添加数据 //lyk--需要完善隐藏之后再显示同事添加数据操作
-				$.each(rowObjArr, function(i) {
+				$.each(rowObjArr, function(i, row) {
 					htmlStr += oThis.createContentOneRow(this);
 					htmlStrFixed += oThis.createContentOneRowFixed(this);
 					if(oThis.options.multiSelect){
 						htmlStrmultiSelect += oThis.createContentLeftMultiSelectRow(this);
 					}
 					if(oThis.options.showNumCol){
-						htmlStrNumCol += oThis.createContentLeftNumColRow(l + i);
+						htmlStrNumCol += oThis.createContentLeftNumColRow(l + i,row.value);
 					}
 				});
 				try{
@@ -2976,7 +3013,7 @@
 
 		$(document).on('click',function(){
 			if(oThis.columnMenuMove == false && oThis.ele.createColumnMenuFlag == false){
-				$('#' + oThis.options.id + '_column_menu',oThis.$ele).css('display','none');
+				$('#' + oThis.options.id + '_column_menu').css('display','none');
 			}
 			oThis.ele.createColumnMenuFlag = false;
 		});

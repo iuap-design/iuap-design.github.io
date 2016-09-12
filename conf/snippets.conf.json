@@ -9,6 +9,9 @@
     "sub": [{
         "name": "消息框",
         "url": "demos/ui/dialog"
+    },{
+        "name": "单选框",
+        "url": "demos/ui/radio"
     }, {
         "name": "加载进度条",
         "url": "demos/ui/progress"
@@ -84,6 +87,12 @@
     }, {
         "name": "筛选栏",
         "url": "demos/complex/filterBar"
+    }]
+}, {
+    "name": "kero",
+    "sub": [{
+        "name": "单选框",
+        "url": "demos/kero/radio"
     }]
 }, {
     "name": "表单",

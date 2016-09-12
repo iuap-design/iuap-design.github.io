@@ -5,308 +5,85 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Title</title>
 <link rel="stylesheet" href="http://design.yyuap.com/static/uploader/css/webuploader.css">
-<link rel="stylesheet" href="/dist/vendor/uui/css/font-awesome.css">
-<link rel="stylesheet" type="text/css" href="/dist/vendor/uui/css/u.css">
-<link rel="stylesheet" type="text/css" href="/dist/vendor/uui/css/u-extend.css">
-<link rel="stylesheet" type="text/css" href="/dist/vendor/uui/css/tree.css">
-<link rel="stylesheet" type="text/css" href="/dist/vendor/uui/css/grid.css">
+<link rel="stylesheet" href="http://design.yyuap.com/static/uui-original/stable/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="http://design.yyuap.com/static/uui-original/stable/css/u.css">
+<link rel="stylesheet" type="text/css" href="http://design.yyuap.com/static/uui-original/stable/css/tree.css">
+<link rel="stylesheet" type="text/css" href="http://design.yyuap.com/static/uui-original/stable/css/grid.css">
 <style id="demo-style" media="screen">
-
+.u-widget {
+    padding: 20px;
+}
 </style>
 </head>
-<body style="background-color: #eceff1;padding-left: 20px;width: calc(100% - 20px );">
-<h3>导航条</h3>
+<body style="background-color: #eceff1;margin-left: 20px;width: calc(100% - 20px );">
 <div class="u-container-fluid u-widget-bg">
     <div class="u-row">
         <div class="u-col-md-12">
-            <div class="u-widget">
-                <div class="u-widget-heading">
-                    <h3 class="u-widget-title">基础导航</h3>
-                </div>
-                <div class="u-widget-body">
-                     <nav class="u-navbar u-navbar-default" role="navigation">
-                        <div class="u-container-fluid">
-                            <div class="u-navbar-header">
-                                <button type="button" class="u-navbar-toggle u-hamburger u-hamburger-close  u-collapsed" data-target="#example-default-collapse" data-toggle="collapse">
-                                    <!-- <span class="sr-only">Toggle navigation</span> -->
-                                    <span class="u-hamburger-bar"></span>
-                                </button>
-                               
-                                <a class="u-navbar-brand" href="javascript:void(0)">Brand</a>
-                            </div>
-                            <ul class="nav-list u-navbar-nav hidden-xs">
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <i class="uf uf-book" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                                <li class="hidden-xs">
-                                    <a class="uf uf-bellmusicaltool" data-toggle="fullscreen" href="#" role="button">
-                                        
-                                    </a>
-                                </li>
-                                <li class="hidden-xs">
-                                    <a class="uf uf-zoomin" data-toggle="collapse" href="#example-default-search" role="button">
-                                        <!-- <span class="sr-only">Toggle Search</span> -->
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="u-collapse u-navbar-collapse u-navbar-collapse-group" id="example-default-collapse">
-                                <ul class="nav-list u-navbar-toolbar u-navbar-right u-navbar-toolbar-right">
-                                    <li class="dropdown">
-                                        <a class="u-avatar w-32 u-avatar-online">
-                                            <img src="http://design.yyuap.com/static/img/navimg1.jpg" alt="..." class="img-circle">
-                                            <i></i>
-                                        </a>
-                                        
-                                    </li>
-                                    <li class="dropdown">
-                                        <a class="u-badge w-20 m" data-badge="1">
-                                            <i class="uf uf-bellmusicaltool"></i>
-                                        </a>
-                                       
-                                    </li>
-                                    <li class="dropdown">
-                                        <a class="u-badge u-badge-info w-20 m" data-badge="3">
-                                            <i class="uf uf-envelope"></i>
-                                        </a>
-                                        
-                                    </li>
-                                </ul>
-                                
-                            </div>
-                           
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-        <div class="u-col-md-12">
-            <div class="u-widget">
-                <div class="u-widget-heading">
-                    <h3 class="u-widget-title">对比导航</h3>
-                </div>
-                <div class="u-widget-body">
-                     <nav class="u-navbar u-navbar-inverse" role="navigation">
-                        <div class="u-container-fluid">
-                            <div class="u-navbar-header">
-                                <button type="button" class="u-navbar-toggle u-hamburger u-hamburger-close u-collapsed" data-target="#example-inverse-collapse" data-toggle="collapse">
-                                    <!-- <span class="sr-only">Toggle navigation</span> -->
-                                    <span class="u-hamburger-bar"></span>
-                                </button>
-                               
-                                <a class="u-navbar-brand" href="javascript:void(0)">Brand</a>
-                            </div>
-                            <ul class="nav-list u-navbar-nav hidden-xs">
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <i class="uf uf-book" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                                <li class="hidden-xs">
-                                    <a class="uf uf-bellmusicaltool" data-toggle="fullscreen" href="#" role="button">
-                                        <!-- <span class="sr-only">Toggle fullscreen</span> -->
-                                    </a>
-                                </li>
-                                <li class="hidden-xs">
-                                    <a class="uf uf-zoomin" data-toggle="collapse" href="#example-default-search" role="button">
-                                        <!-- <span class="sr-only">Toggle Search</span> -->
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="u-collapse u-navbar-collapse u-navbar-collapse-group" id="example-inverse-collapse">
-                                <ul class="nav-list u-navbar-toolbar u-navbar-right u-navbar-toolbar-right">
-                                    <li class="dropdown">
-                                        <a class="u-avatar w-32  u-avatar-online">
-                                            <img src="http://design.yyuap.com/static/img/navimg1.jpg" alt="..." class="img-circle">
-                                            <i></i>
-                                        </a>
-                                      
-                                    </li>
-                                    <li class="dropdown">
-                                        <a class="u-badge w-20 m" data-badge="1">
-                                            <i class="uf uf-bellmusicaltool"></i>
-                                        </a>
-                                        
-                                    </li>
-                                    <li class="dropdown">
-                                        <a class="u-badge u-badge-info w-20 m" data-badge="3">
-                                            <i class="uf uf-envelope"></i>
-                                        </a>
-                                       
-                                    </li>
-                                </ul>
-                            </div>   
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-        <div class="u-col-md-12">
-            <div class="u-widget">
-                <div class="u-widget-heading">
-                    <h3 class="u-widget-title">工具导航</h3>
-                </div>
-                <div class="u-widget-body">
-                     <nav class="u-navbar u-navbar-default" role="navigation">
-                        <div class="u-container-fluid">
-                            <div class="u-navbar-header">
-                                <button type="button" class="u-navbar-toggle u-hamburger u-hamburger-close u-collapsed" data-target="#example-toolbar-1" data-toggle="collapse">
-                                    <!-- <span class="sr-only">Toggle navigation</span> -->
-                                    <span class="u-hamburger-bar"></span>
-                                </button>
-                               
-                                <a class="u-navbar-brand" href="javascript:void(0)">Brand</a>
-                            </div>
-                            
-                            <div class="u-collapse u-navbar-search u-navbar-left" id="example-search-1">
-                              <div class="u-input-group u-has-feedback">
-                                  <input type="text" class="u-form-control round noborder bluebg" placeholder="Search...">
-                                  <span class="u-form-control-feedback noborder">
-                                      <i class="icon uf uf-magnifyingglass" aria-hidden="true"></i>
-                                  </span>
-                              </div>
-                            </div>
-
-                            
-                            <div class="u-collapse u-navbar-collapse u-navbar-collapse-group" id="example-toolbar-1">
-                                <ul class="nav-list u-navbar-toolbar u-navbar-right u-navbar-toolbar-right">
-                                    <li class="dropdown">
-                                        <a class="u-avatar w-32  u-avatar-online">
-                                            <img src="http://design.yyuap.com/static/img/navimg1.jpg" alt="..." class="img-circle">
-                                            <i></i>
-                                        </a>
-                                     
-                                    </li>
-                                    <li class="dropdown">
-                                        <a class="u-badge w-20 m" data-badge="1">
-                                            <i class="uf uf-bellmusicaltool"></i>
-                                        </a>
-                                       
-                                    </li>
-                                    <li class="dropdown">
-                                        <a class="u-badge u-badge-info w-20 m" data-badge="3">
-                                            <i class="uf uf-envelope"></i>
-                                        </a>
-                                      
-                                    </li>
-                                </ul>
-                                <ul class="nav-list u-navbar-toolbar u-navbar-right">
-                                  <li class="active"><a href="javascript:void(0)">Link </a></li>
-                                  <li><a href="javascript:void(0)">Link</a></li>
-                                  <li><a href="javascript:void(0)">Link</a></li>
-                                  <li class="dropdown">
-                                    <a class="dropdown-button" id="demo-menu-lower-right6">
-                                        <span>Dropdown</span><i class="uf uf-sortdown"></i>
-                                    </a>
-                                    <ul class="u-menu " for="demo-menu-lower-right6">
-                                        <li class="u-menu-item"><span>Action</spa></li>
-                                        <li class="u-menu-item"><spa>Another action</spa></li>
-                                        <li class="u-menu-item"><spa>Something else here</spa></li>
-                                        <li class="u-menu-item"><spa>Separated link</spa></li>
-                                        <li class="u-menu-item"><spa>One more separated link</spa></li>
-                                    </ul>
-
-                                   
-                                  </li>
-                                </ul>
-                              
-                            </div>
-                            
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-        <div class="u-col-md-12">
-            <div class="u-widget">
-                <div class="u-widget-heading">
-                    <h3 class="u-widget-title">图片导航</h3>
-                </div>
-                <div class="u-widget-body">
-                     <nav class="u-navbar u-navbar-default" role="navigation">
-                      <div class="u-container-fluid">
-                        <div class="u-navbar-header">
-                          <a class="u-navbar-brand" href="javascript:void(0)">
-                            <img src="http://design.yyuap.com/static/img/navimg1.jpg" alt="Brand" height="20">
-                          </a>
-                        </div>
-                      </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-        <div class="u-col-md-12">
-            <div class="u-widget">
-                <div class="u-widget-heading">
-                    <h3 class="u-widget-title">不同颜色导航</h3>
-                </div>
-                <div class="u-widget-body">
-                    <div class="u-col-md-6">
-                        <nav class="u-navbar u-navbar-inverse bg-cyan-700" role="navigation">
-                            <div class="u-container-fluid">
-                              <div class="u-navbar-header">
-                               
-                                <a class="u-navbar-brand" href="javascript:void(0)">Brand</a>
-                              </div>
-                            </div>
-                        </nav>
-                    </div>
-                    <div class="u-col-md-6">
-                        <nav class="u-navbar u-navbar-inverse bg-blue-600" role="navigation">
-                            <div class="u-container-fluid">
-                              <div class="u-navbar-header">
-                               
-                                <a class="u-navbar-brand" href="javascript:void(0)">Brand</a>
-                              </div>
-                            </div>
-                        </nav>
-                    </div>
-                    <div class="u-col-md-6">
-                        <nav class="u-navbar u-navbar-inverse bg-teal-600" role="navigation">
-                            <div class="u-container-fluid">
-                              <div class="u-navbar-header">
-                               
-                                <a class="u-navbar-brand" href="javascript:void(0)">Brand</a>
-                              </div>
-                            </div>
-                        </nav>
-                    </div>
-                    <div class="u-col-md-6">
-                        <nav class="u-navbar u-navbar-default" role="navigation">
-                            <div class="u-container-fluid">
-                              <div class="u-navbar-header">
-                               
-                                <a class="u-navbar-brand" href="javascript:void(0)">Brand</a>
-                              </div>
-                            </div>
-                        </nav>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
+            <div class="u-widget  u-widget-right">
+				<!-- 
+					HTML
+					u-meta:框架特有标记，框架通过识别此标记创建对应UI组件，以及进行数据绑定 
+					id,type.data,field为必选项
+					id:创建组件唯一标识
+					type:创建组件对应的类型,单选框对应的type为u-radio
+					data:指定数据模型中的数据集
+					field:绑定数据集中对应的字段
+					datasource:绑定数据
+				-->
+				<div u-meta='{"id":"r1","type":"u-radio","data":"dt1","field":"f1","datasource":"radiodata"}'>
+				    <label  class="u-radio" >
+				        <input type="radio" class="u-radio-button" name="options">
+				        <span class="u-radio-label"></span>
+				    </label>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 <script src="http://design.yyuap.com/static/jquery/jquery-1.11.2.js"></script>
 <script src="http://design.yyuap.com/static/uploader/js/webuploader.js"></script>
 <script src="http://design.yyuap.com/static/knockout/knockout-3.2.0.debug.js"></script>
-<script src="/dist/vendor/uui/js/u-polyfill.js"></script>
-<script src="/dist/vendor/uui/js/u.js"></script>
-<script src="/dist/vendor/uui/js/u-tree.js"></script>
-<script src="/dist/vendor/uui/js/u-grid.js"></script>
+<script src="http://design.yyuap.com/static/uui-original/stable/js/u-polyfill.js"></script>
+<script src="http://design.yyuap.com/static/uui-original/stable/js/u.js"></script>
+<script src="http://design.yyuap.com/static/uui-original/stable/js/u-tree.js"></script>
+<script src="http://design.yyuap.com/static/uui-original/stable/js/u-grid.js"></script>
 <script src="http://design.yyuap.com/static/requirejs/require.debug.js"></script>
 <script>
-u.on(window, 'load', function() {
-    'use strict';
-   $('.u-hamburger').click(function(){
-      var attrTarget = $(this).attr('data-target');
-      var $targetDom = $(attrTarget);
-      $(this).toggleClass("u-collapsed");
-      $targetDom.toggleClass("in");
 
-   });
+// JS
+
+/**
+ * viewModel 创建数据模型
+ * dt1 创建的数据集
+ * f1 创建数据集中的字段
+ * type:指定数据对应的类型
+ * radiodata:自定义单选框数据，用于绑定数据
+ */
+var app,viewModel;
+viewModel = {
+    dt1: new u.DataTable({
+        meta:{
+        f1:{},
+        f2:{}
+        }
+     }),
+    radiodata:[{value:'01',name:'男'},{value:'02',name:'女'}]
+};
+
+/**
+ * app 创建框架服务
+ * el 指定服务对应的顶层DOM
+ * model 指定服务对应的数据模型
+ */
+app = u.createApp({
+    el:'body',
+    model:viewModel
 });
+
+// 创建空行,绑定默认值
+var r = viewModel.dt1.createEmptyRow();
+r.setValue('f1',"01");
+viewModel.dt1.setRowSelect(0);
 </script>
 </body>
 </html>
