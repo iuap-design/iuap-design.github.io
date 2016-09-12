@@ -53,13 +53,11 @@
 ***************************************
 @import url(http://fonts.useso.com/css?family=Open+Sans:400,600,700,300,800);/
 
-/** Bootstrap Styles
-**************************************/
-
-@import'vendor/bootstrap.min.css';
 
 /** Brand Icons (Social Networks)
 *************************************/
+/*暂时引入bootStrap，因为后面的文档徐亚*/
+@import'vendor/bootstrap.min.css'; 
 
 @import'vendor/brand-icons.css';
 
@@ -86,6 +84,12 @@
  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
  * http://cssreset.com
  */
+
+ * {
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+ }
 
 html,
 body,
@@ -244,6 +248,7 @@ body {
 .space-top-3x {
     margin-top: 72px;
 }
+
 
 .space-bottom {
     margin-bottom: 24px;
@@ -634,7 +639,7 @@ ol {
     }
 }
 
-.page-heading .container {
+.page-heading .u-container {
     position: relative;
 }
 
@@ -1742,6 +1747,7 @@ label.hover {
     background: linear-gradient(to bottom, rgb(73, 73, 73) 0%, rgb(49, 49, 49) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#494949', endColorstr='#313131', GradientType=0);
     border-color: rgb(73, 73, 73);
+    text-transform: none;
 }
 
 .btn-default:hover {
@@ -1980,6 +1986,9 @@ label.hover {
 
 .btn.icon-left {
     padding-left: 23px;
+    padding-top: 6px;
+    padding-right: 23px;
+    margin-top: 7px;
 }
 
 .btn.icon-right {
@@ -2114,6 +2123,11 @@ label.hover {
     opacity: 1 !important;
 }
 
+.light-color .u-button {
+    opacity: 1 !important;
+}
+
+
 .btn-block {
     display: block;
     width: 100%;
@@ -2240,7 +2254,7 @@ label.hover {
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#3a1cff', endColorstr='#ff3a30', GradientType=0);
 }
 
-.intro .container {
+.intro .u-container {
     position: relative;
     z-index: 10;
 }
@@ -2649,7 +2663,7 @@ label.hover {
 }
 
 @media screen and (max-width: 991px) {
-    .intro .container {
+    .intro .u-container {
         width: 100%;
     }
     .intro.transformed .logo {
@@ -2895,7 +2909,7 @@ label.hover {
     .navbar.navbar-fixed-top + .page-heading {
         padding-top: 120px;
     }
-    .navbar .container {
+    .navbar .u-container {
         width: 100%;
         padding: 0 20px;
     }
@@ -2914,7 +2928,7 @@ label.hover {
 }
 
 @media screen and (max-width: 768px) {
-    .navbar .container {
+    .navbar .u-container {
         padding: 0 15px;
     }
 }
@@ -3460,7 +3474,7 @@ label.hover {
     background-position: center top;
 }
 
-.fw-bg .container {
+.fw-bg .u-container {
     position: relative;
     z-index: 10;
 }
@@ -4050,7 +4064,7 @@ label.hover {
     border: none;
 }
 
-.modal-dialog .container {
+.modal-dialog .u-container {
     padding: 90px 15px 50px 15px;
 }
 
@@ -6692,13 +6706,13 @@ a.icon-block {
 }
 
 @media (min-width: 992px) {
-    .navbar .container {
+    .navbar .u-container {
         width: auto;
     }
 }
 
 @media (min-width: 1200px) {
-    .navbar .container {
+    .navbar .u-container {
         width: 1170px;
     }
 }
@@ -6861,7 +6875,7 @@ a.icon-block {
  .github-fork-button a{
     display: inline-block;
     padding: 0px 5px;
-    margin-top:32px;
+    margin-top:28px;
     font-size: 12px;
     line-height: 18px;
     color: #333;
@@ -6899,15 +6913,101 @@ a.icon-block {
         display: table-cell;
         float:right;
         margin-right:10px;
-    } 
+    }
  }
 
 @media screen and (max-width:1000px) {
     .github-fork-button{
-        margin-right:-20px;
+        margin-right: 18px;
     }
 }
 
 
 
+.nav-tabs > li.active {
+    background-color: transparent;
+    color: #fff;
+}
+.tab-content > div.active {
+    background-color: transparent;
+}
 
+.offcanvas-nav .nav-link ul li.active{
+    background-color: transparent;
+}
+.team-member span.refill-margin{
+    margin-bottom: 25px;
+}
+@media screen and (max-width: 990px) {
+    .team-member span.refill-margin{
+        margin-bottom: 41px;
+    }
+  }
+
+  @media screen and (max-width: 769px) {
+      .team-member span.refill-margin{
+          margin-bottom: 25px;
+      }
+    }
+
+.u-navbar-toolbar > li > a {
+    color: #424242;
+    font-size: 14px;
+}
+.u-navbar-default .u-navbar-toolbar > li > a:hover {
+    color: #007aff;
+    background-color: transparent;
+    border-bottom: 1px solid #007aff;
+}
+.u-navbar-default .u-navbar-toolbar > li > a.btn:hover {
+    background-color: #007aff;
+}
+
+@media screen and (max-width: 1000px) {
+    .u-navbar-toolbar span, .u-navbar-toolbar .btn, .u-navbar-toolbar .action-btn {
+        display: none;
+    }
+}
+
+.u-dropdown-menu {
+    -webkit-transition: .25s;
+    -o-transition: .25s;
+    transition: .25s;
+    position: absolute;
+    top: 88%;
+    right: 325px;
+    z-index: 1200;
+    display: none;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+.u-dropdown-menu>li {
+    margin: 2px 0;
+}
+
+.u-dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.57142857;
+    color: #757575;
+    white-space: nowrap;
+    text-decoration: none;
+}
+.u-dropdown-menu>li>a:focus, .u-dropdown-menu>li>a:hover {
+    color: #757575;
+    text-decoration: none;
+    background-color: #eee;
+}

@@ -50,6 +50,21 @@ var viewModel = {
 			tab.show('tab-panel-4');
 		}
 	},
+	download: function(){
+	
+		//将对应的css、js、html代码传给后端，并将后端返回的zip地址进行下载
+		$.ajax({
+				type:'post',
+				url:'/downloadDemo',
+				data:{cssCode:cssEditor.getValue(),jsCode:scriptEditor.getValue(),htmlCode:htmlEditor.getValue()},
+				success:function(data){
+					console.log('----'+data);
+
+					location.href = "../../"+data+'?tmp='+Date.parse(new Date());
+				}
+
+			})
+	},
 	switchToDt: function() {
 		var hasDt = viewModel.currentRow.getValue('hasDt') || false;
 		if (!hasDt){

@@ -9,6 +9,9 @@
     "sub": [{
         "name": "消息框",
         "url": "demos/ui/dialog"
+    },{
+        "name": "单选框",
+        "url": "demos/ui/radio"
     }, {
         "name": "加载进度条",
         "url": "demos/ui/progress"
@@ -16,11 +19,14 @@
         "name": "工具提示",
         "url": "demos/ui/tooltip"
     }, {
-        "name": "下拉框",
+        "name": "下拉菜单",
         "url": "demos/ui/menu"
     }, {
         "name": "按钮",
         "url": "demos/ui/button"
+    }, {
+        "name": "下拉框",
+        "url": "demos/ui/combobox"
     }, {
         "name": "徽章标签",
         "url": "demos/ui/badge"
@@ -60,6 +66,9 @@
     }, {
         "name": "辅助",
         "url": "demos/assist"
+    }, {
+        "name": "导航条",
+        "url": "demos/ui/navbar"
     }]
 }, {
     "name": "复杂控件",
@@ -75,6 +84,12 @@
     }, {
         "name": "筛选栏",
         "url": "demos/complex/filterBar"
+    }]
+}, {
+    "name": "kero",
+    "sub": [{
+        "name": "单选框",
+        "url": "demos/kero/radio"
     }]
 }, {
     "name": "表单",
@@ -184,8 +199,8 @@
         "name": "顶部菜单布局",
         "url": "demos/layouts/topNavLayout"
     }, {
-        "name": "导航栏",
-        "url": "demos/layouts/navbar"
+        "name": "导航布局",
+        "url": "demos/layouts/navLayout"
     }]
 }, {
     "name": "空页面",

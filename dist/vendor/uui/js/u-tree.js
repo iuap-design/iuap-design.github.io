@@ -1,5 +1,9 @@
 /** 
+<<<<<<< HEAD
  * tree v3.0.6
+=======
+ * neoui-tree v1.0.6
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
  * tree
  * author : yonyou FED
  * homepage : https://github.com/iuap-design/tree#readme
@@ -3570,6 +3574,7 @@
 		return (!root.curEditNode) && (_uCanDo ? _uCanDo.apply(view, arguments) : true);
 	}
 })(jQuery);
+<<<<<<< HEAD
 
 /** 
  * kero v3.0.3
@@ -3946,3 +3951,5 @@ u.compMgr.addDataAdapter(
         name: 'tree'
         //dataType: 'float'
     })
+=======
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c

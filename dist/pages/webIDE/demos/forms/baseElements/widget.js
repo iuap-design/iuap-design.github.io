@@ -80,4 +80,6 @@ document.getElementById('combo2')['u.Combo'].setComboData([{value:'01',name:'男
 		}
 	});
 // 自动完成结束
+
+
   

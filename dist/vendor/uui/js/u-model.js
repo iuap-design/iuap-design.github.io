@@ -381,6 +381,7 @@ u.extend(u, {
 			top = top + eleHeight;
 		}
         
+<<<<<<< HEAD
         // if((left + panelWidth) > bodyWidth)
         //     left = bodyWidth - panelWidth;
         // if(left < 0)
@@ -390,6 +391,17 @@ u.extend(u, {
         //     top = bodyHeight - panelHeight;
         // if(top < 0)
         //     top = 0;
+=======
+        if((left + panelWidth) > bodyWidth)
+            left = bodyWidth - panelWidth;
+        if(left < 0)
+            left = 0;
+
+        if((top + panelHeight) > bodyHeight)
+            top = bodyHeight - panelHeight;
+        if(top < 0)
+            top = 0;
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
         panel.style.left = left + 'px';
         panel.style.top = top + 'px';
 	},
@@ -6816,6 +6828,10 @@ u.RequiredMixin = {
 
 u.ValidateMixin = {
     init: function(){
+<<<<<<< HEAD
+=======
+        this.showFix = this.getOption('showFix');
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
         this.placement = this.getOption('placement');
         this.tipId = this.getOption('tipId');
         this.tipAliveTime = this.getOption('tipAliveTime');
@@ -6847,7 +6863,12 @@ u.ValidateMixin = {
                 min: this.min,
                 maxNotEq: this.maxNotEq,
                 minNotEq: this.minNotEq,
+<<<<<<< HEAD
                 reg: this.regExp
+=======
+                reg: this.regExp,
+                showFix: this.showFix
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
             });
         // };
 
@@ -7567,7 +7588,11 @@ u.CheckboxAdapter = u.BaseAdapter.extend({
             var nameDivs = this.element.querySelectorAll('[data-role=name]');
             self.lastNameDiv = nameDivs[nameDivs.length -1];
             self.lastNameDiv.innerHTML = '其他';
+<<<<<<< HEAD
             self.otherInput = u.makeDOM('<input type="text">');
+=======
+            self.otherInput = u.makeDOM('<input disabled type="text">');
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
             self.lastNameDiv.parentNode.appendChild(self.otherInput);
             self.lastCheck.value = '';
            
@@ -7590,13 +7615,32 @@ u.CheckboxAdapter = u.BaseAdapter.extend({
                     if(oldIndex > -1){
                         valueArr.splice(oldIndex, 1);
                     }
+<<<<<<< HEAD
                     if(comp._inputElement.value)
                         valueArr.push(comp._inputElement.value)
+=======
+                    if(comp._inputElement.value){
+                        valueArr.push(comp._inputElement.value)
+                    }
+
+                    // 选中后可编辑
+                    comp.element.querySelectorAll('input[type="text"]').forEach(function(ele){
+                        ele.removeAttribute('disabled');
+                    });
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
                 } else {
                     var index = valueArr.indexOf(comp._inputElement.value);
                     if(index > -1){
                         valueArr.splice(index, 1);
                     }
+<<<<<<< HEAD
+=======
+
+                    // 未选中则不可编辑
+                    comp.element.querySelectorAll('input[type="text"]').forEach(function(ele){
+                        ele.setAttribute('disabled','true');
+                    });
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
                 }
                 //self.slice = true;
                 self.dataModel.setValue(self.field, valueArr.join(','));
@@ -7822,8 +7866,14 @@ u.ComboboxAdapter = u.BaseAdapter.extend({
         if (value === null || typeof value == "undefined")
             value = "";
         this.comp.setValue(value);
+<<<<<<< HEAD
         // this.trueValue = this.formater ? this.formater.format(value) : value;
         // this.element.trueValue = this.trueValue;
+=======
+        //下面两句会在校验中用到
+        this.trueValue = this.formater ? this.formater.format(value) : value;
+        this.element.trueValue = this.trueValue;
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
         // this.showValue = this.masker ? this.masker.format(this.trueValue).value : this.trueValue;
         // this.setShowValue(this.showValue);
     },
@@ -7921,7 +7971,11 @@ u.RadioAdapter = u.BaseAdapter.extend({
             var nameDivs = this.element.querySelectorAll('.u-radio-label');
             self.lastNameDiv = nameDivs[nameDivs.length -1];
             self.lastNameDiv.innerHTML = '其他';
+<<<<<<< HEAD
             self.otherInput = u.makeDOM('<input type="text" style="height:32px;box-sizing:border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;">');
+=======
+            self.otherInput = u.makeDOM('<input disabled type="text" style="height:32px;box-sizing:border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;">');
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
             self.lastNameDiv.parentNode.appendChild(self.otherInput);
             self.lastRadio.value = '';
            
@@ -7937,7 +7991,22 @@ u.RadioAdapter = u.BaseAdapter.extend({
             comp.on('change', function(){
                 if (comp._btnElement.checked){
                     self.dataModel.setValue(self.field, comp._btnElement.value);
+<<<<<<< HEAD
                 }
+=======
+
+                    // 选中后可编辑
+                    comp.element.querySelectorAll('input[type="text"]').forEach(function(ele){
+                        ele.removeAttribute('disabled');
+                    });
+                } else {
+                    comp.element.querySelectorAll('input[type="text"]').forEach(function(ele){
+                        ele.setAttribute('disabled',true);
+                    });
+                }
+
+                
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
             });
             
             u.on(self.otherInput,'blur',function(e){
@@ -7984,6 +8053,28 @@ u.RadioAdapter = u.BaseAdapter.extend({
                 if (comp._btnElement.checked){
                     self.dataModel.setValue(self.field, comp._btnElement.value);
                 }
+<<<<<<< HEAD
+=======
+
+                // 其他元素input输入框不能进行编辑
+                var allChild = comp.element.parentNode.children;
+                var siblingAry =[];
+                for(var i=0; i<allChild.length; i++){
+                    if(allChild[i] == comp.element){
+
+                    } else {
+                        siblingAry.push(allChild[i])
+                    }
+                }
+                siblingAry.forEach(function(children){
+                    var childinput = children.querySelectorAll('input[type="text"]')
+                    if(childinput){
+                        childinput.forEach(function(inputele){
+                            inputele.setAttribute('disabled','true')
+                        });
+                    }
+                });
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
             });
         })
     },
@@ -7998,6 +8089,10 @@ u.RadioAdapter = u.BaseAdapter.extend({
                 var inptuValue = comp._btnElement.value;
                 if (inptuValue && inptuValue == value) {
                     fetch = true;
+<<<<<<< HEAD
+=======
+                    u.addClass(comp.element,'is-checked')
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
                     comp._btnElement.click();
                 }
             })
@@ -8005,13 +8100,29 @@ u.RadioAdapter = u.BaseAdapter.extend({
             if (this.eleValue == value){
                 fetch = true;
                 this.slice = true;
+<<<<<<< HEAD
+=======
+                u.addClass(this.comp.element,'is-checked')
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
                 this.comp._btnElement.click();
                 this.slice = false;
             }
         }
         if(this.options.hasOther && !fetch && value){
+<<<<<<< HEAD
             this.lastRadio.checked = true;
             this.otherInput.value = value;
+=======
+            if(!this.enable){
+                this.lastRadio.removeAttribute('disabled');
+            }
+            u.addClass(this.lastLabel,'is-checked')
+            this.lastRadio.checked = true;
+            this.otherInput.value = value;
+            if(!this.enable){
+                this.lastRadio.setAttribute('disabled',true);
+            }
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
         }
     },
 

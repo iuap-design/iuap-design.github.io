@@ -8,6 +8,7 @@
                     <h3 class="u-widget-title">默认下拉框</h3>
                 </div>
                 <div class="u-widget-body">
+                    <div style="font-size: 12px">基本下拉框</div>
                     <div class="u-combo" id="combo1" style="margin: 10px">
                         <div class="u-input-group u-has-feedback">
                             <div class="u-input-group-before" style="color: red;">*</div>
@@ -17,6 +18,7 @@
                     </div>
                     <br>
                     <br>
+                    <div style="font-size: 12px">线性下拉框</div>
                     <div class="u-combo" id="combo2">
                         <input class="u-input" />
                         <label class="u-label"></label>
@@ -31,18 +33,39 @@
                     <h3 class="u-widget-title">多选下拉框</h3>
                 </div>
                 <div class="u-widget-body">
-                    <div class="u-combo mutil-select" id="combo3">
+                    <div style="font-size: 12px">基本下拉框</div>
+                    <div class="u-combo mutil-select" id="combo3" style="margin: 10px">
                         <div class="u-input-group u-has-feedback">
                             <input class="u-form-control" />
                             <span class="u-form-control-feedback uf uf-anglearrowdown" data-role="combo-button"></span>
                         </div>
                     </div>
-                    <br>
-                    <br>
+                    <br/>
+                    <br/>
+                    <div style="font-size: 12px">线性下拉框</div>
                     <div class="u-combo mutil-select" id="combo4">
                         <input class="u-input" />
                         <label class="u-label"></label>
                         <span class="u-combo-icon"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="u-row">
+        <div class="u-col-xm-12 u-col-md-6">
+            <div class="u-widget  u-widget-middle">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">必输项</h3>
+                </div>
+                <div class="u-widget-body">
+                    <div style="font-size: 14px">性别<span style="color: red;">*</span></div>
+                    <div class="u-combo" id="combo5" style="margin: 10px">
+                        <div class="u-input-group u-has-feedback">
+                            <input class="u-form-control" />
+                            <span class="u-form-control-feedback uf uf-anglearrowdown" data-role="combo-button"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -133,23 +156,24 @@
                 </div>
             </div>
         </div>
-        <div class="u-col-xm-12 u-col-md-6">
+        <!--<div class="u-col-xm-12 u-col-md-6">
             <div class="u-widget  u-widget-right">
                 <div class="u-widget-heading">
                     <h3 class="u-widget-title">图片checkbox</h3>
                 </div>
                 <div class="u-widget-body">
-                    <label class="u-checkbox w-64">
+                    &lt;!&ndash;<label class="u-checkbox w-64">
                         <input type="checkbox" class="u-checkbox-input" checked>
                         <span class="u-checkbox-label"><img src="/dist/static/img/website/checkbox/checkbox-1.png" height="30" width="30"></span>
                     </label>
                     <label class="u-checkbox w-64">
                         <input type="checkbox" class="u-checkbox-input">
                         <span class="u-checkbox-label"><img src="/dist/static/img/website/checkbox/checkbox-2.png" height="30" width="30"></span>
-                    </label>
+                    </label>&ndash;&gt;
+                    <div></div>
                 </div>
             </div>
-        </div>
+        </div>-->
         <div class="u-col-xm-12 u-col-md-6">
             <div class="u-widget  u-widget-right">
                 <div class="u-widget-heading">
@@ -274,11 +298,34 @@
         <div class="u-col-xm-12 u-col-md-6">
             <div class="u-widget  u-widget-right">
                 <div class="u-widget-heading">
-                    <h3 class="u-widget-title">短型输入框</h3>
+                    <h3 class="u-widget-title">不同长度输入框</h3>
                 </div>
                 <div class="u-widget-body">
                     <div class="u-form-group">
                         <div class="u-input-group u-has-feedback sw">
+                            <input type="text" class="u-form-control" id="exampleInput3" placeholder="jane.doe@example.com">
+                            <span class="u-form-control-feedback uf uf-magnifyingglass"></span>
+                        </div>
+                        <div class="u-input-group u-has-feedback mw">
+                            <input type="text" class="u-form-control" id="exampleInput3" placeholder="jane.doe@example.com">
+                            <span class="u-form-control-feedback uf uf-magnifyingglass"></span>
+                        </div>
+                        <div class="u-input-group u-has-feedback lw">
+                            <input type="text" class="u-form-control" id="exampleInput3" placeholder="jane.doe@example.com">
+                            <span class="u-form-control-feedback uf uf-magnifyingglass"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="u-col-xm-12 u-col-md-6">
+            <div class="u-widget  u-widget-right">
+                <div class="u-widget-heading">
+                    <h3 class="u-widget-title">自适应输入框</h3>
+                </div>
+                <div class="u-widget-body">
+                    <div class="u-form-group">
+                        <div class="u-input-group u-has-feedback" style="width:100%">
                             <input type="text" class="u-form-control" id="exampleInput3" placeholder="jane.doe@example.com">
                             <span class="u-form-control-feedback uf uf-magnifyingglass"></span>
                         </div>
@@ -322,7 +369,7 @@
                 <div class="u-widget-body demo">
                     <div class="u-form-group" id="refer1">
                         <div class="u-input-group u-has-feedback">
-                            <input type="text" class="u-form-control">
+                            <input type="text" class="u-form-control" style="border-radius: 0">
                             <span class="u-form-control-feedback uf uf-listwithdots"></span>
                         </div>
                     </div>

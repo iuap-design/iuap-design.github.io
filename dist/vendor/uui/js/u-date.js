@@ -1852,6 +1852,7 @@ u.YearMonth.fn._fillMonth = function(){
         new URipple(cells[i]);
     }
     var oThis = this;
+<<<<<<< HEAD
     u.on(monthPage, 'click', function(e){
         var _m = e.target._value;
         oThis.month = _m;
@@ -1860,6 +1861,18 @@ u.YearMonth.fn._fillMonth = function(){
         oThis.hide();
     });
     
+=======
+       
+    u.on(monthPage, 'click', function(e){
+        var _m = e.target._value;
+        if(_m){
+            oThis.month = _m;
+        }
+        monthPage.querySelector('.u-date-content-title').innerHTML = oThis.month + '月';
+        oThis.setValue(oThis.year + '-' + oThis.month);
+        oThis.hide();
+    });
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
     this.preBtn.style.display = 'none';
 	this.nextBtn.style.display = 'none';
 	this._zoomIn(monthPage);

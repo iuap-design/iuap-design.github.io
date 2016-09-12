@@ -1,4 +1,18 @@
+<<<<<<< HEAD
 /******/ (function(modules) { // webpackBootstrap
+=======
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else {
+		var a = factory();
+		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
+	}
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 
@@ -51,6 +65,7 @@
 	});
 	exports.DataTable = exports.u = undefined;
 
+<<<<<<< HEAD
 	var _index = __webpack_require__(128);
 
 	var _index2 = __webpack_require__(130);
@@ -58,6 +73,15 @@
 	var neoui = _interopRequireWildcard(_index2);
 
 	var _index3 = __webpack_require__(148);
+=======
+	var _index = __webpack_require__(126);
+
+	var _index2 = __webpack_require__(128);
+
+	var neoui = _interopRequireWildcard(_index2);
+
+	var _index3 = __webpack_require__(146);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 
 	var _index4 = __webpack_require__(75);
 
@@ -128,7 +152,11 @@
 	  this.dataTables = {};
 	  // adjustMetaFunc
 	  this.adjustMetaFunc = _adjustMetaFunc.adjustMetaFunc;
+<<<<<<< HEAD
 	  // dataTable
+=======
+	  // dataTable 
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	  this.addDataTable = _dataTable.addDataTable;
 	  this.getDataTable = _dataTable.getDataTable;
 	  this.getDataTables = _dataTable.getDataTables;
@@ -2156,7 +2184,11 @@
 	        notPassedArr = new Array();
 	    for (var i = 0; i < comps.length; i++) {
 	        if (comps[i].doValidate) {
+<<<<<<< HEAD
 	            var result = comps[i].doValidate({ trueValue: true, showMsg: showMsg });
+=======
+	            result = comps[i].doValidate({ trueValue: true, showMsg: showMsg });
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	            // 如果passed为true,result.passed为false说明第一次出现错误校验
 	            if (passed && !result.passed) {
 	                var off = (0, _dom.getOffset)(comps[i].element);
@@ -2263,6 +2295,7 @@
 	 */
 
 	var getEnvironment = function getEnvironment() {
+<<<<<<< HEAD
 	    return u.core.collectEnvironment();
 	};
 
@@ -2272,6 +2305,17 @@
 
 	var getClientAttribute = function getClientAttribute(k) {
 	    return u.core.getClientAttributes()[k];
+=======
+	    return window.iweb.Core.collectEnvironment();
+	};
+
+	var setClientAttribute = function setClientAttribute(k, v) {
+	    window.iweb.Core.setClientAttribute(k, v);
+	};
+
+	var getClientAttribute = function getClientAttribute(k) {
+	    return window.iweb.Core.getClientAttributes()[k];
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	};
 
 	exports.getEnvironment = getEnvironment;
@@ -2329,7 +2373,11 @@
 	            deferred.reject();
 	        }
 	    };
+<<<<<<< HEAD
 	    if (params.data) params.data.environment = ko.utils.stringifyJson(u.core.collectEnvironment());else params.data = { environment: ko.utils.stringifyJson(u.core.collectEnvironment()) };
+=======
+	    if (params.data) params.data.environment = ko.utils.stringifyJson(window.iweb.Core.collectEnvironment());else params.data = { environment: ko.utils.stringifyJson(window.iweb.Core.collectEnvironment()) };
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	    return params;
 	};
 
@@ -2587,13 +2635,22 @@
 	    this.datas = {};
 	    this.params = {};
 	    this.event = null;
+<<<<<<< HEAD
 	    this.ent = u.core.collectEnvironment();
 	    if (!u.debugMode) {
+=======
+	    this.ent = window.iweb.Core.collectEnvironment();
+	    if (!iweb.debugMode) {
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	        //此处需要修改
 	        this.compression = true;
 	    }
 
+<<<<<<< HEAD
 	    // dataTable
+=======
+	    // dataTable 
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	    this.addDataTable = _serverDataTable.addDataTable;
 	    this.addDataTables = _serverDataTable.addDataTables;
 	    this.addAllDataTables = _serverDataTable.addAllDataTables;
@@ -2602,7 +2659,10 @@
 	    // fire
 	    this.fire = _serverFire.fire;
 	    this.setSuccessFunc = _serverFire.setSuccessFunc;
+<<<<<<< HEAD
 	    this._successFunc = _serverFire._successFunc;
+=======
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 
 	    // processXHRError
 	    this.processXHRError = _serverProcessXHRError.processXHRError;
@@ -2708,7 +2768,11 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+<<<<<<< HEAD
 	exports.setSuccessFunc = exports._successFunc = exports.fire = undefined;
+=======
+	exports.setSuccessFunc = exports.fire = undefined;
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 
 	var _extend = __webpack_require__(8);
 
@@ -2783,7 +2847,10 @@
 	};
 
 	exports.fire = fire;
+<<<<<<< HEAD
 	exports._successFunc = _successFunc;
+=======
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	exports.setSuccessFunc = setSuccessFunc;
 
 /***/ },
@@ -2832,6 +2899,7 @@
 
 	var _event = __webpack_require__(6);
 
+<<<<<<< HEAD
 	var _env = __webpack_require__(7);
 
 	var setCompression = function setCompression(compression) {
@@ -2842,6 +2910,16 @@
 	    * Date   : 2016-07-29 09:34:01
 	    */
 
+=======
+	/**
+	 * Module : kero app serverEvent util
+	 * Author : liuyk(liuyk@yonyou.com)
+	 * Date   : 2016-07-29 09:34:01
+	 */
+	var setCompression = function setCompression(compression) {
+	    if (!iweb.browser.isIE8 && !window.pako && compression == true) iweb.log.error("can't compression, please include  pako!");else this.compression = compression;
+	};
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 
 	var addParameter = function addParameter(key, value) {
 	    this.params[key] = value;
@@ -2871,7 +2949,11 @@
 	        datasJson = window.trimServerEventData(datasJson);
 	    }
 	    if (this.compression) {
+<<<<<<< HEAD
 	        if (!_env.env.isIE8 && window.pako) {
+=======
+	        if (!iweb.browser.isIE8 && window.pako) {
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	            envJson = encodeBase64(window.pako.gzip(envJson));
 	            datasJson = encodeBase64(window.pako.gzip(datasJson));
 	            compression = true;
@@ -2934,8 +3016,11 @@
 	});
 	exports.DataTable = undefined;
 
+<<<<<<< HEAD
 	var _extend = __webpack_require__(8);
 
+=======
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	var _indexEvents = __webpack_require__(30);
 
 	var _copyRow = __webpack_require__(32);
@@ -2984,6 +3069,7 @@
 
 	var _util = __webpack_require__(48);
 
+<<<<<<< HEAD
 	var _events = __webpack_require__(31);
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } } /**
@@ -3167,6 +3253,192 @@
 	    //util
 	    this.isChanged = _util.isChanged;
 	};
+=======
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Module : Kero webpack entry dataTable index
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Author : liuyk(liuyuekai@yonyou.com)
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Date   : 2016-08-09 15:24:46
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+	var DataTable = function (_Events) {
+	    _inherits(DataTable, _Events);
+
+	    function DataTable(options) {
+	        _classCallCheck(this, DataTable);
+
+	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(DataTable).call(this));
+
+	        options = options || {};
+	        _this.id = options['id'];
+	        _this.strict = options['strict'] || false;
+	        _this.meta = DataTable.createMetaItems(options['meta']);
+	        _this.enable = options['enable'] || DataTable.DEFAULTS.enable;
+	        _this.pageSize = ko.observable(options['pageSize'] || DataTable.DEFAULTS.pageSize);
+	        _this.pageIndex = ko.observable(options['pageIndex'] || DataTable.DEFAULTS.pageIndex);
+	        _this.totalPages = ko.observable(options['totalPages'] || DataTable.DEFAULTS.totalPages);
+	        _this.totalRow = ko.observable();
+	        _this.pageCache = options['pageCache'] === undefined ? DataTable.DEFAULTS.pageCache : options['pageCache'];
+	        _this.rows = ko.observableArray([]);
+	        _this.selectedIndices = ko.observableArray([]);
+	        _this._oldCurrentIndex = -1;
+	        _this.focusIndex = ko.observable(-1);
+	        _this.cachedPages = [];
+	        _this.metaChange = {};
+	        _this.valueChange = {}; //ko.observable(1);
+	        _this.currentRowChange = ko.observable(1);
+	        _this.enableChange = ko.observable(1);
+	        _this.params = options['params'] || {};
+	        _this.master = options['master'] || '';
+	        _this.allSelected = ko.observable(false);
+	        if (options['root']) {
+	            _this.root = options['root'];
+	        } else {
+	            _this.root = _this;
+	        }
+	        if (options['ns']) {
+	            _this.ns = options['ns'];
+	        } else {
+	            _this.ns = '';
+	        }
+
+	        //copyRow
+	        _this.copyRow = _copyRow.copyRow;
+	        _this.copyRows = _copyRow.copyRows;
+
+	        //data
+	        _this.setData = _data.setData;
+	        _this.setValue = _data.setValue;
+
+	        //enable
+	        _this.isEnable = _enable.isEnable;
+	        _this.setEnable = _enable.setEnable;
+
+	        //getData
+	        _this.getData = _getData.getData;
+	        _this.getDataByRule = _getData.getDataByRule;
+	        _this.getRow = _getData.getRow;
+	        _this.getRowByRowId = _getData.getRowByRowId;
+	        _this.getRowIndex = _getData.getRowIndex;
+	        _this.getRowsByField = _getData.getRowsByField;
+	        _this.getRowByField = _getData.getRowByField;
+	        _this.getAllRows = _getData.getAllRows;
+	        _this.getAllPageRows = _getData.getAllPageRows;
+	        _this.getChangedDatas = _getData.getChangedDatas;
+	        _this.getChangedRows = _getData.getChangedRows;
+	        _this.getValue = _getData.getValue;
+	        _this.getIndexByRowId = _getData.getIndexByRowId;
+	        _this.getAllDatas = _getData.getAllDatas;
+	        _this.getRowIdsByIndices = _getData.getRowIdsByIndices;
+
+	        //getCurrent
+	        _this.getCurrentRow = _getCurrent.getCurrentRow;
+	        _this.getCurrentIndex = _getCurrent.getCurrentIndex;
+
+	        //getFocus
+	        _this.getFocusRow = _getFocus.getFocusRow;
+	        _this.getFocusIndex = _getFocus.getFocusIndex;
+
+	        //getMeta
+	        _this.getMeta = _getMeta.getMeta;
+	        _this.getRowMeta = _getMeta.getRowMeta;
+
+	        //getPage
+	        _this.getPage = _getPage.getPage;
+	        _this.getPages = _getPage.getPages;
+
+	        //getParam
+	        _this.getParam = _getParam.getParam;
+
+	        //getSelect
+	        _this.getSelectedIndex = _getSelect.getSelectedIndex;
+	        _this.getSelectedIndices = _getSelect.getSelectedIndices;
+	        _this.getSelectedIndexs = _getSelect.getSelectedIndexs;
+	        _this.getSelectedDatas = _getSelect.getSelectedDatas;
+	        _this.getSelectedRows = _getSelect.getSelectedRows;
+
+	        //getSimpleData
+	        _this.getSimpleData = _getSimpleData.getSimpleData;
+
+	        //meta
+	        _this.setMeta = _meta.setMeta;
+	        _this.updateMeta = _meta.updateMeta;
+	        _this.createField = _meta.createField;
+
+	        //page
+	        _this.setCurrentPage = _page.setCurrentPage;
+	        _this.updatePages = _page.updatePages;
+	        _this.setPages = _page.setPages;
+	        _this.hasPage = _page.hasPage;
+	        _this.clearCache = _page.clearCache;
+	        _this.cacheCurrentPage = _page.cacheCurrentPage;
+
+	        //param
+	        _this.addParam = _param.addParam;
+	        _this.addParams = _param.addParams;
+
+	        //ref
+	        _this.refSelectedRows = _ref.refSelectedRows;
+	        _this.ref = _ref.ref;
+	        _this.refMeta = _ref.refMeta;
+	        _this.refRowMeta = _ref.refRowMeta;
+	        _this.refEnable = _ref.refEnable;
+
+	        //row
+	        _this.setRows = _row.setRows;
+	        _this.addRow = _row.addRow;
+	        _this.addRows = _row.addRows;
+	        _this.insertRow = _row.insertRow;
+	        _this.insertRows = _row.insertRows;
+	        _this.createEmptyRow = _row.createEmptyRow;
+
+	        //removeRow
+	        _this.removeRowByRowId = _removeRow.removeRowByRowId;
+	        _this.removeRow = _removeRow.removeRow;
+	        _this.removeAllRows = _removeRow.removeAllRows;
+	        _this.removeRows = _removeRow.removeRows;
+	        _this.clear = _removeRow.clear;
+
+	        //rowCurrent
+	        _this.updateCurrIndex = _rowCurrent.updateCurrIndex;
+
+	        //rowDelete
+	        _this.setRowDelete = _rowDelete.setRowDelete;
+	        _this.setAllRowsDelete = _rowDelete.setAllRowsDelete;
+	        _this.setRowsDelete = _rowDelete.setRowsDelete;
+
+	        //rowFocus
+	        _this.setRowFocus = _rowFocus.setRowFocus;
+	        _this.setRowUnFocus = _rowFocus.setRowUnFocus;
+	        _this.updateFocusIndex = _rowFocus.updateFocusIndex;
+
+	        //rowSelect
+	        _this.setAllRowsSelect = _rowSelect.setAllRowsSelect;
+	        _this.setRowSelect = _rowSelect.setRowSelect;
+	        _this.setRowsSelect = _rowSelect.setRowsSelect;
+	        _this.addRowSelect = _rowSelect.addRowSelect;
+	        _this.addRowsSelect = _rowSelect.addRowsSelect;
+	        _this.setAllRowsUnSelect = _rowSelect.setAllRowsUnSelect;
+	        _this.setRowUnSelect = _rowSelect.setRowUnSelect;
+	        _this.setRowsUnSelect = _rowSelect.setRowsUnSelect;
+	        _this.toggleAllSelect = _rowSelect.toggleAllSelect;
+	        _this.updateSelectedIndices = _rowSelect.updateSelectedIndices;
+
+	        //simpleData
+	        _this.setSimpleData = _simpleData.setSimpleData;
+	        _this.addSimpleData = _simpleData.addSimpleData;
+
+	        //util
+	        _this.isChanged = _util.isChanged;
+	        return _this;
+	    }
+
+	    return DataTable;
+	}(_indexEvents.Events);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 
 	DataTable.DEFAULTS = {
 	    pageSize: 20,
@@ -3221,7 +3493,11 @@
 	    for (var key in metas) {
 	        var meta = metas[key];
 	        if (typeof meta == 'string') meta = {};
+<<<<<<< HEAD
 	        newMetas[key] = (0, _extend.extend)({}, DataTable.META_DEFAULTS, meta);
+=======
+	        newMetas[key] = u.extend({}, DataTable.META_DEFAULTS, meta);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	    }
 	    return newMetas;
 	};
@@ -3235,7 +3511,11 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
+<<<<<<< HEAD
 	    value: true
+=======
+	  value: true
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	});
 	exports.Events = undefined;
 
@@ -3251,6 +3531,7 @@
 
 
 	var Events = function Events() {
+<<<<<<< HEAD
 	    _classCallCheck(this, Events);
 
 	    this.on = _events.on;
@@ -3258,6 +3539,15 @@
 	    this.one = _events.one;
 	    this.trigger = _events.trigger;
 	    this.getEvent = _events.getEvent;
+=======
+	  _classCallCheck(this, Events);
+
+	  this.on = _events.on;
+	  this.off = _events.off;
+	  this.one = _events.one;
+	  this.trigger = _events.trigger;
+	  this.getEvent = _events.getEvent;
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	};
 
 	exports.Events = Events;
@@ -3319,7 +3609,11 @@
 
 	/**
 	 * 解绑事件
+<<<<<<< HEAD
 	 *
+=======
+	 * 
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	**/
 	var off = function off(name, callback) {
 	    if (Object.prototype.toString.call(name) == '[object Array]') {
@@ -3351,7 +3645,11 @@
 	};
 
 	/**
+<<<<<<< HEAD
 	 *
+=======
+	 * 
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	**/
 	var one = function one(name, callback) {
 	    this.on(name, callback, 1);
@@ -3430,7 +3728,11 @@
 	 * Date	  : 2016-07-30 14:34:01
 	 */
 
+<<<<<<< HEAD
 	/**
+=======
+	/** 
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	 *设置数据
 	 *
 	 */
@@ -5519,7 +5821,11 @@
 	    function Row(options) {
 	        _classCallCheck(this, Row);
 
+<<<<<<< HEAD
 	        var _this = _possibleConstructorReturn(this, (Row.__proto__ || Object.getPrototypeOf(Row)).call(this));
+=======
+	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Row).call(this));
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 
 	        var self = _this;
 	        _this.rowId = options['id'] || Row.getRandomRowId();
@@ -5702,9 +6008,15 @@
 
 	/**
 	 * [_setData description]
+<<<<<<< HEAD
 	 * @param {[type]} sourceData
 	 * @param {[type]} targetData
 	 * @param {[type]} subscribe
+=======
+	 * @param {[type]} sourceData 
+	 * @param {[type]} targetData 
+	 * @param {[type]} subscribe  
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	 * @param {[type]} parentKey  [父项key，数据项为数组时获取meta值用]
 	 */
 	var _setData = function _setData(rowObj, sourceData, targetData, subscribe, parentKey) {
@@ -5716,10 +6028,14 @@
 	        if ((typeof valueObj === 'undefined' ? 'undefined' : _typeof(valueObj)) != 'object') rowObj.parent.createField(key);
 	        //if (typeof this.parent.meta[key] === 'undefined') continue;
 	        if (valueObj == null || (typeof valueObj === 'undefined' ? 'undefined' : _typeof(valueObj)) != 'object') {
+<<<<<<< HEAD
 	            // 子表的话只有valueObj为datatable的时候才赋值
 	            if (!targetData[key].isChild) {
 	                targetData[key]['value'] = rowObj.formatValue(key, valueObj);
 	            }
+=======
+	            targetData[key]['value'] = rowObj.formatValue(key, valueObj);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	            if (subscribe === true && oldValue !== targetData[key]['value']) {
 	                (0, _rowUtil._triggerChange)(rowObj, key, oldValue);
 	            }
@@ -5756,7 +6072,11 @@
 
 	/**
 	 *设置Row数据
+<<<<<<< HEAD
 	 *@subscribe 是否触发监听
+=======
+	 *@subscribe 是否触发监听  
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	 */
 	var setData = function setData(data, subscribe) {
 	    this.status = data.status;
@@ -6696,7 +7016,11 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
+<<<<<<< HEAD
 	    value: true
+=======
+		value: true
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	});
 	exports.core = undefined;
 
@@ -6725,6 +7049,7 @@
 
 	var fn = {};
 	var maskerMeta = {
+<<<<<<< HEAD
 	    'float': {
 	        precision: 2
 	    },
@@ -6747,13 +7072,38 @@
 	    'integer': {
 	        precision: 0
 	    }
+=======
+		'float': {
+			precision: 2
+		},
+		'datetime': {
+			format: 'YYYY-MM-DD HH:mm:ss',
+			metaType: 'DateTimeFormatMeta',
+			speratorSymbol: '-'
+		},
+		'time': {
+			format: 'HH:mm'
+		},
+		'date': {
+			format: 'YYYY-MM-DD'
+		},
+		'currency': {
+			precision: 2,
+			curSymbol: '￥'
+		},
+		'percent': {}
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	};
 	/**
 	 * 获取环境信息
 	 * @return {environment}
 	 */
 	fn.getEnvironment = function () {
+<<<<<<< HEAD
 	    return (0, _util.createShellObject)(environment);
+=======
+		return (0, _util.createShellObject)(environment);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	};
 
 	/**
@@ -6761,6 +7111,7 @@
 	 * @return {clientAttributes}
 	 */
 	fn.getClientAttributes = function () {
+<<<<<<< HEAD
 	    var exf = function exf() {};
 	    return (0, _util.createShellObject)(clientAttributes);
 	};
@@ -6770,6 +7121,17 @@
 	};
 	fn.getContextPath = function (contextPath) {
 	    return environment[IWEB_CONTEXT_PATH];
+=======
+		var exf = function exf() {};
+		return (0, _util.createShellObject)(clientAttributes);
+	};
+
+	fn.setContextPath = function (contextPath) {
+		return environment[IWEB_CONTEXT_PATH] = contextPath;
+	};
+	fn.getContextPath = function (contextPath) {
+		return environment[IWEB_CONTEXT_PATH];
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	};
 	/**
 	 * 设置客户端参数对象
@@ -6777,15 +7139,24 @@
 	 * @param {Object} v 对象值(建议使用简单类型)
 	 */
 	fn.setClientAttribute = function (k, v) {
+<<<<<<< HEAD
 	    clientAttributes[k] = v;
+=======
+		clientAttributes[k] = v;
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	};
 	/**
 	 * 获取会话级参数对象
 	 * @return {clientAttributes}
 	 */
 	fn.getSessionAttributes = function () {
+<<<<<<< HEAD
 	    var exf = function exf() {};
 	    return (0, _util.createShellObject)(sessionAttributes);
+=======
+		var exf = function exf() {};
+		return (0, _util.createShellObject)(sessionAttributes);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	};
 
 	/**
@@ -6794,8 +7165,13 @@
 	 * @param {Object} v 对象值(建议使用简单类型)
 	 */
 	fn.setSessionAttribute = function (k, v) {
+<<<<<<< HEAD
 	    sessionAttributes[k] = v;
 	    (0, _cookies.setCookie)("ISES_" + k, v);
+=======
+		sessionAttributes[k] = v;
+		(0, _cookies.setCookie)("ISES_" + k, v);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	};
 
 	/**
@@ -6803,30 +7179,46 @@
 	 * @param {Object} k 对象名称
 	 */
 	fn.removeClientAttribute = function (k) {
+<<<<<<< HEAD
 	    clientAttributes[k] = null;
 	    execIgnoreError(function () {
 	        delete clientAttributes[k];
 	    });
+=======
+		clientAttributes[k] = null;
+		execIgnoreError(function () {
+			delete clientAttributes[k];
+		});
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	};
 
 	/**
 	 * 获取地区信息编码
 	 */
 	fn.getLocale = function () {
+<<<<<<< HEAD
 	    return this.getEnvironment().locale;
+=======
+		return this.getEnvironment().locale;
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	};
 
 	/**
 	 * 获取多语信息
 	 */
 	fn.getLanguages = function () {
+<<<<<<< HEAD
 	    return this.getEnvironment().languages;
+=======
+		return this.getEnvironment().languages;
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	};
 	/**
 	 * 收集环境信息(包括客户端参数)
 	 * @return {Object}
 	 */
 	fn.collectEnvironment = function () {
+<<<<<<< HEAD
 	    var _env = this.getEnvironment();
 	    var _ses = this.getSessionAttributes();
 
@@ -6835,6 +7227,16 @@
 	    }
 	    _env.clientAttributes = _ses;
 	    return _env;
+=======
+		var _env = this.getEnvironment();
+		var _ses = this.getSessionAttributes();
+
+		for (var i in clientAttributes) {
+			_ses[i] = clientAttributes[i];
+		}
+		_env.clientAttributes = _ses;
+		return _env;
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	};
 
 	/**
@@ -6843,6 +7245,7 @@
 	 * @param {Object} meta
 	 */
 	fn.setMaskerMeta = function (type, meta) {
+<<<<<<< HEAD
 	    if (typeof type == 'function') {
 	        getMetaFunc = type;
 	    } else {
@@ -6858,6 +7261,23 @@
 	        var meta = getMetaFunc.call(this);
 	        return meta[type];
 	    } else return (0, _extend.extend)({}, maskerMeta[type]);
+=======
+		if (typeof type == 'function') {
+			getMetaFunc = type;
+		} else {
+			if (!maskerMeta[type]) maskerMeta[type] = meta;else {
+				if ((typeof meta === 'undefined' ? 'undefined' : _typeof(meta)) != 'object') maskerMeta[type] = meta;else for (var key in meta) {
+					maskerMeta[type][key] = meta[key];
+				}
+			}
+		}
+	};
+	fn.getMaskerMeta = function (type) {
+		if (typeof getMetaFunc == 'function') {
+			var meta = getMetaFunc.call(this);
+			return meta[type];
+		} else return (0, _extend.extend)({}, maskerMeta[type]);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	};
 	environment.languages = (0, _cookies.getCookie)(_enumerables.U_LANGUAGES) ? (0, _cookies.getCookie)(_enumerables.U_LANGUAGES).split(',') : navigator.language ? navigator.language : 'zh-CN';
 	if (environment.languages == 'zh-cn') environment.languages = 'zh-CN';
@@ -6869,7 +7289,11 @@
 	environment.usercode = (0, _cookies.getCookie)(_enumerables.U_USERCODE);
 	//init session attribute
 	document.cookie.replace(/ISES_(\w*)=([^;]*);?/ig, function (a, b, c) {
+<<<<<<< HEAD
 	    sessionAttributes[b] = c;
+=======
+		sessionAttributes[b] = c;
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	});
 
 	var Core = function Core() {};
@@ -6995,6 +7419,7 @@
 
 	var _baseAdapter = __webpack_require__(76);
 
+<<<<<<< HEAD
 	var _checkbox = __webpack_require__(77);
 
 	var _ckeditor = __webpack_require__(88);
@@ -7044,6 +7469,53 @@
 	var _yearmonth = __webpack_require__(108);
 
 	var _tree = __webpack_require__(127);
+=======
+	var _keroaCheckbox = __webpack_require__(77);
+
+	var _keroaCkeditor = __webpack_require__(88);
+
+	var _keroaCombo = __webpack_require__(89);
+
+	var _keroaCurrency = __webpack_require__(92);
+
+	var _keroaDatetimepicker = __webpack_require__(96);
+
+	var _keroaFloat = __webpack_require__(94);
+
+	var _keroaGrid = __webpack_require__(98);
+
+	var _keroaInteger = __webpack_require__(101);
+
+	var _keroaMonth = __webpack_require__(108);
+
+	var _keroaPagination = __webpack_require__(110);
+
+	var _keroaPassword = __webpack_require__(105);
+
+	var _keroaPercent = __webpack_require__(106);
+
+	var _keroaString = __webpack_require__(100);
+
+	var _keroaProgress = __webpack_require__(112);
+
+	var _keroaRadio = __webpack_require__(102);
+
+	var _keroaSwitch = __webpack_require__(114);
+
+	var _keroaTextarea = __webpack_require__(116);
+
+	var _keroaTextfield = __webpack_require__(117);
+
+	var _keroaTime = __webpack_require__(118);
+
+	var _keroaUrl = __webpack_require__(104);
+
+	var _keroaYear = __webpack_require__(121);
+
+	var _keroaYearmonth = __webpack_require__(123);
+
+	var _keroaTree = __webpack_require__(125);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 
 	var _enableMixin = __webpack_require__(79);
 
@@ -7057,6 +7529,7 @@
 
 	var ex = {
 		BaseAdapter: _baseAdapter.BaseAdapter,
+<<<<<<< HEAD
 		CheckboxAdapter: _checkbox.CheckboxAdapter,
 		CkEditorAdapter: _ckeditor.CkEditorAdapter,
 		ComboboxAdapter: _combobox.ComboboxAdapter,
@@ -7080,6 +7553,29 @@
 		UrlAdapter: _url.UrlAdapter,
 		YearAdapter: _year.YearAdapter,
 		YearMonthAdapter: _yearmonth.YearMonthAdapter,
+=======
+		CheckboxAdapter: _keroaCheckbox.CheckboxAdapter,
+		CkEditorAdapter: _keroaCkeditor.CkEditorAdapter,
+		ComboboxAdapter: _keroaCombo.ComboboxAdapter,
+		CurrencyAdapter: _keroaCurrency.CurrencyAdapter,
+		DateTimeAdapter: _keroaDatetimepicker.DateTimeAdapter,
+		FloatAdapter: _keroaFloat.FloatAdapter,
+		IntegerAdapter: _keroaInteger.IntegerAdapter,
+		MonthAdapter: _keroaMonth.MonthAdapter,
+		PaginationAdapter: _keroaPagination.PaginationAdapter,
+		PassWordAdapter: _keroaPassword.PassWordAdapter,
+		PercentAdapter: _keroaPercent.PercentAdapter,
+		StringAdapter: _keroaString.StringAdapter,
+		ProgressAdapter: _keroaProgress.ProgressAdapter,
+		RadioAdapter: _keroaRadio.RadioAdapter,
+		SwitchAdapter: _keroaSwitch.SwitchAdapter,
+		TextAreaAdapter: _keroaTextarea.TextAreaAdapter,
+		TextFieldAdapter: _keroaTextfield.TextFieldAdapter,
+		TimeAdapter: _keroaTime.TimeAdapter,
+		UrlAdapter: _keroaUrl.UrlAdapter,
+		YearAdapter: _keroaYear.YearAdapter,
+		YearMonthAdapter: _keroaYearmonth.YearMonthAdapter,
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 		EnableMixin: _enableMixin.EnableMixin,
 		RequiredMixin: _requiredMixin.RequiredMixin,
 		ValidateMixin: _validateMixin.ValidateMixin,
@@ -7220,7 +7716,11 @@
 	    mixins: [_valueMixin.ValueMixin, _enableMixin.EnableMixin, _requiredMixin.RequiredMixin, _validateMixin.ValidateMixin],
 	    init: function init(options) {
 	        var self = this;
+<<<<<<< HEAD
 	        // CheckboxAdapter.superclass.initialize.apply(this, arguments);
+=======
+	        // CheckboxAdapter.superclass.initialize.apply(this, arguments); 
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	        this.isGroup = this.options['isGroup'] === true || this.options['isGroup'] === 'true';
 	        this.otherValue = this.options['otherValue'] || 'ovOV~!';
 	        if (this.options['datasource'] || this.options['hasOther']) {
@@ -7799,7 +8299,11 @@
 					this.$element.parentNode.appendChild(this.successId);
 				}
 			}
+<<<<<<< HEAD
 			//不是默认的tip提示方式并且tipId没有定义时创建默认tipid
+=======
+			//不是默认的tip提示方式并且tipId没有定义时创建默认tipid	
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 			if (this.notipFlag && !this.tipId) {
 				this.tipId = (0, _dom.makeDOM)('<span class="u-form-control-info uf uf-exclamationsign "></span>');
 				this.$element.parentNode.appendChild(this.tipId);
@@ -7863,8 +8367,12 @@
 		"integer": /^-?\d+$/,
 		"float": /^-?\d+(\.\d+)?$/,
 		"zipCode": /^[0-9]{6}$/,
+<<<<<<< HEAD
 		// "phone": /^13[0-9]{9}$|14[0-9]{9}|15[0-9]{9}$|18[0-9]{9}$/,
 		"phone": /^1[3|4|5|7|8]\d{9}$/,
+=======
+		"phone": /^13[0-9]{9}$|14[0-9]{9}|15[0-9]{9}$|18[0-9]{9}$/,
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 		"landline": /^(0[0-9]{2,3}\-)?([2-9][0-9]{6,7})+(\-[0-9]{1,4})?$/,
 		"email": /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/,
 		"url": /^(\w+:\/\/)?\w+(\.\w+)+.*$/,
@@ -8777,6 +9285,10 @@
 	        (0, _dom.addClass)(tickOutline, this._CssClasses.TICK_OUTLINE);
 
 	        boxOutline.appendChild(tickOutline);
+<<<<<<< HEAD
+=======
+
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	        this.element.appendChild(tickContainer);
 	        this.element.appendChild(boxOutline);
 
@@ -8807,11 +9319,17 @@
 	        //this.element.addEventListener('mouseup', this.boundElementMouseUp);
 	        if (!(0, _dom.hasClass)(this.element, 'only-style')) {
 	            (0, _event.on)(this.element, 'click', function (e) {
+<<<<<<< HEAD
 	                if (e.target.nodeName != 'INPUT') {
 	                    if (!this._inputElement.disabled) {
 	                        this.toggle();
 	                        (0, _event.stopEvent)(e);
 	                    }
+=======
+	                if (!this._inputElement.disabled) {
+	                    this.toggle();
+	                    (0, _event.stopEvent)(e);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	                }
 	            }.bind(this));
 	        }
@@ -9492,12 +10010,15 @@
 
 	        this.setComboData(datas);
 	        this._input = this.element.querySelector("input");
+<<<<<<< HEAD
 
 	        if (this.mutilSelect) {
 	            this.nowWidth = 0;
 	            this.fullWidth = this._input.offsetWidth;
 	        }
 
+=======
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	        if (this.onlySelect || _env.env.isMobile) {
 	            setTimeout(function () {
 	                self._input.setAttribute('readonly', 'readonly');
@@ -9713,7 +10234,11 @@
 
 	            if (flag == '+') {
 	                var nameDiv = (0, _dom.makeDOM)('<div class="u-combo-name" key="' + val + '">' + name + /*<a href="javascript:void(0)" class="remove">x</a>*/'</div>');
+<<<<<<< HEAD
 	                var parNameDiv = (0, _dom.makeDOM)('<div class="u-combo-name-par" style="position:absolute;width:' + this.fullWidth + 'px;"></div>');
+=======
+	                var parNameDiv = (0, _dom.makeDOM)('<div class="u-combo-name-par" style="position:absolute"></div>');
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	                /*var _a = nameDiv.querySelector('a');
 	                on(_a, 'click', function(){
 	                    var values = self.value.split(',');
@@ -9728,6 +10253,7 @@
 	                    this._combo_name_par = parNameDiv;
 	                }
 	                this._combo_name_par.appendChild(nameDiv);
+<<<<<<< HEAD
 	                var nWidth = nameDiv.offsetWidth + 20;
 	                this.nowWidth += nWidth;
 	                if (this.nowWidth > this.fullWidth) {
@@ -9744,6 +10270,12 @@
 	                        this.nowWidth -= nWidth;
 	                        (0, _dom.removeClass)(this._combo_name_par, 'u-combo-overwidth');
 	                    }
+=======
+	            } else {
+	                if (this._combo_name_par) {
+	                    var comboDiv = this._combo_name_par.querySelector('[key="' + val + '"]');
+	                    if (comboDiv) this._combo_name_par.removeChild(comboDiv);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	                }
 	            }
 
@@ -9770,12 +10302,18 @@
 	                }
 	            }
 	            /*根据多选区域div的高度调整input的高度*/
+<<<<<<< HEAD
 	            /*实际上input的高度并不需要调整*/
 	            /*var h = this._combo_name_par.offsetHeight;
 	            if(h < 25){
 	                h = 25;
 	                this._input.style.height = h + 'px';
 	            }*/
+=======
+	            var h = this._combo_name_par.offsetHeight;
+	            if (h < 25) h = 25;
+	            this._input.style.height = h + 'px';
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	        } else {
 	            for (var i = 0; i < lis.length; i++) {
 	                if (this.value == this.comboDatas[i].value) {
@@ -10128,7 +10666,11 @@
 
 	var _formater = __webpack_require__(93);
 
+<<<<<<< HEAD
 	var _float = __webpack_require__(94);
+=======
+	var _keroaFloat = __webpack_require__(94);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 
 	var _compMgr = __webpack_require__(4);
 
@@ -10145,7 +10687,11 @@
 	 * Date	  : 2016-08-09 13:42:14
 	 */
 
+<<<<<<< HEAD
 	var CurrencyAdapter = _float.FloatAdapter.extend({
+=======
+	var CurrencyAdapter = _keroaFloat.FloatAdapter.extend({
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	    init: function init() {
 	        var self = this;
 	        CurrencyAdapter.superclass.init.apply(this);
@@ -10379,7 +10925,11 @@
 	        (0, _event.on)(this.element, 'keydown', function (e) {
 	            if (self.enable) {
 	                var code = e.keyCode ? e.keyCode : e.which ? e.which : e.charCode;
+<<<<<<< HEAD
 	                if (!(code >= 48 && code <= 57 || code == 37 || code == 39 || code == 8 || code == 46 || code == 110 || code == 190)) {
+=======
+	                if (!(code >= 48 && code <= 57 || code == 37 || code == 39 || code == 8 || code == 46)) {
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	                    //阻止默认浏览器动作(W3C)
 	                    if (e && e.preventDefault) e.preventDefault();
 	                    //IE中阻止函数器默认动作的方式
@@ -11003,12 +11553,15 @@
 			if (!this.options['format']) {
 				if (this.options.type === 'u-date') {
 					this.options.format = "YYYY-MM-DD";
+<<<<<<< HEAD
 				} else if (this.options.type === 'year') {
 					this.options.format = "YYYY";
 				} else if (this.options.type === 'month') {
 					this.options.format = "MM";
 				} else if (this.options.type === 'yearmonth') {
 					this.options.format = "YYYY-MM";
+=======
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 				} else {
 					this.options.format = "YYYY-MM-DD HH:mm:ss";
 				}
@@ -11218,11 +11771,19 @@
 	    //new UText(this._element);
 	    this._input = this._element.querySelector("input");
 
+<<<<<<< HEAD
 	    // if(env.isMobile){
 	    //     // setTimeout(function(){
 	    //     //     self._input.setAttribute('readonly','readonly');
 	    //     // },1000);
 	    // }
+=======
+	    if (_env.env.isMobile) {
+	        // setTimeout(function(){
+	        //     self._input.setAttribute('readonly','readonly');
+	        // },1000);
+	    }
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 
 	    setTimeout(function () {
 	        self._input.setAttribute('readonly', 'readonly');
@@ -11230,8 +11791,12 @@
 
 	    (0, _event.on)(this._input, 'focus', function (e) {
 	        // 用来关闭键盘
+<<<<<<< HEAD
 	        /*if(env.isMobile)
 	            this.blur();*/
+=======
+	        if (_env.env.isMobile) this.blur();
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	        self._inputFocus = true;
 	        if (self.isShow !== true) {
 	            self.show(e);
@@ -11279,7 +11844,11 @@
 	    if (_env.env.isIE8 || _env.env.isIE9 || _env.env.isFF) {
 	        // this._dateContent.removeChild(this.contentPage);
 	        var pages = this._dateContent.querySelectorAll('.u-date-content-page');
+<<<<<<< HEAD
 	        for (var i = 0; i < pages.length; i++) {
+=======
+	        for (i = 0; i < pages.length; i++) {
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	            this._dateContent.removeChild(pages[i]);
 	        }
 	        this.contentPage = newPage;
@@ -11296,7 +11865,11 @@
 	            newPage.removeEventListener('webkitTransitionEnd', cleanup);
 	            // this._dateContent.removeChild(this.contentPage);
 	            var pages = this._dateContent.querySelectorAll('.u-date-content-page');
+<<<<<<< HEAD
 	            for (var i = 0; i < pages.length; i++) {
+=======
+	            for (i = 0; i < pages.length; i++) {
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	                this._dateContent.removeChild(pages[i]);
 	            }
 	            this.contentPage = newPage;
@@ -11331,7 +11904,11 @@
 	    this._dateContent.appendChild(newPage);
 	    if (_env.env.isIE8 || _env.env.isIE9 || _env.env.isFF) {
 	        var pages = this._dateContent.querySelectorAll('.u-date-content-page');
+<<<<<<< HEAD
 	        for (var i = 0; i < pages.length; i++) {
+=======
+	        for (i = 0; i < pages.length; i++) {
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	            this._dateContent.removeChild(pages[i]);
 	        }
 	        // this._dateContent.removeChild(this.contentPage);
@@ -11344,7 +11921,11 @@
 	            newPage.removeEventListener('webkitTransitionEnd', cleanup);
 	            // this._dateContent.removeChild(this.contentPage);
 	            var pages = this._dateContent.querySelectorAll('.u-date-content-page');
+<<<<<<< HEAD
 	            for (var i = 0; i < pages.length; i++) {
+=======
+	            for (i = 0; i < pages.length; i++) {
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	                this._dateContent.removeChild(pages[i]);
 	            }
 	            this.contentPage = newPage;
@@ -11422,17 +12003,29 @@
 	        self._fillYear();
 	        stopEvent(e)
 	    });
+<<<<<<< HEAD
 	     on(this._headerMonth, 'click', function(e){
 	        self._fillMonth();
 	        stopEvent(e)
 	    });
 	     on(this._headerTime, 'click', function(e){
+=======
+	      on(this._headerMonth, 'click', function(e){
+	        self._fillMonth();
+	        stopEvent(e)
+	    });    
+	      on(this._headerTime, 'click', function(e){
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	        self._fillTime();
 	        stopEvent(e)
 	    });*/
 
 	    yearDiv = yearPage.querySelector('.u-date-content-panel');
+<<<<<<< HEAD
 	    for (var i = 0; i < 12; i++) {
+=======
+	    for (i = 0; i < 12; i++) {
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 
 	        cell = (0, _dom.makeDOM)('<div class="u-date-content-year-cell">' + (this.startYear + i) + '</div>');
 	        new _ripple.URipple(cell);
@@ -11511,17 +12104,29 @@
 	        self._fillYear();
 	        stopEvent(e)
 	    });
+<<<<<<< HEAD
 	     on(this._headerMonth, 'click', function(e){
 	        self._fillMonth();
 	        stopEvent(e)
 	    });
 	     on(this._headerTime, 'click', function(e){
+=======
+	      on(this._headerMonth, 'click', function(e){
+	        self._fillMonth();
+	        stopEvent(e)
+	    });    
+	      on(this._headerTime, 'click', function(e){
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	        self._fillTime();
 	        stopEvent(e)
 	    });*/
 
 	    cells = monthPage.querySelectorAll('.u-date-content-year-cell');
+<<<<<<< HEAD
 	    for (var i = 0; i < cells.length; i++) {
+=======
+	    for (i = 0; i < cells.length; i++) {
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	        if (_month - 1 == i) {
 	            (0, _dom.addClass)(cells[i], 'current');
 	        }
@@ -11636,7 +12241,11 @@
 
 	    weekSpans = datePage.querySelectorAll('.u-date-week span');
 
+<<<<<<< HEAD
 	    for (var i = 0; i < 7; i++) {
+=======
+	    for (i = 0; i < 7; i++) {
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	        weekSpans[i].innerHTML = _dateUtils.date._dateLocale[language].weekdaysMin[i];
 	    }
 	    dateDiv = datePage.querySelector('.u-date-content-panel');
@@ -12171,6 +12780,7 @@
 	    var self = this;
 	    if (!this._panel) {
 	        this._panel = (0, _dom.makeDOM)(dateTimePickerTemplateArr.join(""));
+<<<<<<< HEAD
 	        /*if(env.isMobile){
 	            removeClass(this._panel,'u-date-panel')
 	            addClass(this._panel,'u-date-panel-mobile');
@@ -12179,6 +12789,16 @@
 	        // if (this.type === 'date' && !env.isMobile){
 	        //    this._dateNav.style.display = 'none';
 	        // }
+=======
+	        if (_env.env.isMobile) {
+	            (0, _dom.removeClass)(this._panel, 'u-date-panel');
+	            (0, _dom.addClass)(this._panel, 'u-date-panel-mobile');
+	        }
+	        this._dateNav = this._panel.querySelector('.u-date-nav');
+	        if (this.type === 'date' && !_env.env.isMobile) {
+	            this._dateNav.style.display = 'none';
+	        }
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	        this._dateContent = this._panel.querySelector('.u-date-content');
 	        if (this.type == 'datetime') {
 	            /*if(env.isMobile){
@@ -12252,12 +12872,21 @@
 	    (0, _event.on)(window, 'resize', function () {
 	        self._response();
 	    });
+<<<<<<< HEAD
 	    /*if(env.isMobile){
 	        this.overlayDiv = makeModal(this._panel);
 	        on(this.overlayDiv, 'click', function(){
 	            self.onCancel();
 	        })
 	    }*/
+=======
+	    if (_env.env.isMobile) {
+	        this.overlayDiv = (0, _dom.makeModal)(this._panel);
+	        (0, _event.on)(this.overlayDiv, 'click', function () {
+	            self.onCancel();
+	        });
+	    }
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	    (0, _dom.addClass)(this._panel, 'is-visible');
 	    if (!_env.env.isMobile) {
 	        if (this.options.showFix) {
@@ -12431,6 +13060,7 @@
 
 	var _event = __webpack_require__(6);
 
+<<<<<<< HEAD
 	var _string = __webpack_require__(100);
 
 	var _integer = __webpack_require__(101);
@@ -12462,6 +13092,33 @@
 	var _neouiValidate = __webpack_require__(82);
 
 	var _neouiMessage = __webpack_require__(113);
+=======
+	var _keroaString = __webpack_require__(100);
+
+	var _keroaInteger = __webpack_require__(101);
+
+	var _keroaCheckbox = __webpack_require__(77);
+
+	var _keroaCombo = __webpack_require__(89);
+
+	var _keroaRadio = __webpack_require__(102);
+
+	var _keroaFloat = __webpack_require__(94);
+
+	var _keroaCurrency = __webpack_require__(92);
+
+	var _keroaDatetimepicker = __webpack_require__(96);
+
+	var _keroaUrl = __webpack_require__(104);
+
+	var _keroaPassword = __webpack_require__(105);
+
+	var _keroaPercent = __webpack_require__(106);
+
+	var _neouiValidate = __webpack_require__(82);
+
+	var _neouiMessage = __webpack_require__(107);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 
 	var _compMgr = __webpack_require__(4);
 
@@ -12471,6 +13128,15 @@
 
 	var _dom = __webpack_require__(5);
 
+<<<<<<< HEAD
+=======
+	/**
+	 * Module : Kero Grid Adapter
+	 * Author : Kvkens(yueming@yonyou.com)
+	 * Date	  : 2016-08-09 16:17:17
+	 */
+
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	var GridAdapter = _baseAdapter.BaseAdapter.extend({
 		initialize: function initialize(options) {
 			// 初始options中包含grid的属性设置，还需要增加dataSource、columns、transMap以及事件处理
@@ -12556,7 +13222,11 @@
 				if (eType == '') eType = 'string';
 				if (eType == 'number') // 兼容之前版本
 					eType = 'integer';
+<<<<<<< HEAD
 				if (eType == 'string' || eType == 'integer' || eType == 'checkbox' || eType == 'combo' || eType == 'radio' || eType == 'float' || eType == 'currency' || eType == 'datetime' || eType == 'year' || eType == 'month' || eType == 'yearmonth' || eType == 'date' || eType == 'time' || eType == 'url' || eType == 'password' || eType == 'percent') {
+=======
+				if (eType == 'string' || eType == 'integer' || eType == 'checkbox' || eType == 'combo' || eType == 'radio' || eType == 'float' || eType == 'currency' || eType == 'datetime' || eType == 'date' || eType == 'time' || eType == 'url' || eType == 'password' || eType == 'percent') {
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 					oThis.createDefaultEdit(eType, eOptions, options, viewModel, column);
 					column.editType = function (obj) {
 						if (oThis.editComponentDiv[column.field] && oThis.editComponentDiv[column.field][0].childNodes.length > 0) {} else {
@@ -12794,13 +13464,21 @@
 								row.setValue(field, val);
 							});
 						});
+<<<<<<< HEAD
 						//					var comp = new $.compManager.plugs.radio(compDiv[0],eOptions,viewModel);
+=======
+						//					var comp = new $.compManager.plugs.radio(compDiv[0],eOptions,viewModel);					
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 						//					for( var i=0,length=rdo.length; i<length; i++){
 						//					   if(rdo[i].pk==value){
 						//					   	 obj.element.innerHTML = '<input type="radio" checked><i data-role="name">'+rdo[i].name+'</i>';
 						//					   	 break;
 						//					   }
+<<<<<<< HEAD
 						//					}
+=======
+						//					}				
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 						// 根据惊道需求增加renderType之后的处理,此处只针对grid.js中的默认render进行处理，非默认通过renderType进行处理
 						if (typeof afterRType == 'function') {
 							afterRType.call(this, obj);
@@ -12898,7 +13576,11 @@
 
 			/*
 	   * 处理viewModel与grid之间的绑定
+<<<<<<< HEAD
 	   *
+=======
+	   * 
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	   */
 			var onRowSelectedFun = this.gridOptions.onRowSelected;
 			// 选中
@@ -13018,7 +13700,11 @@
 			});
 
 			// 增行,只考虑viewModel传入grid
+<<<<<<< HEAD
 			//		var onRowInsertFun = this.gridOptions.onRowInsert;
+=======
+			//		var onRowInsertFun = this.gridOptions.onRowInsert; 
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 			//		this.gridOptions.onRowInsert = function(obj){
 			//			dataTable.insertRow(obj.index,obj.row);
 			//			if(onRowSelectedFun){
@@ -13225,7 +13911,11 @@
 					compDiv.addClass("eType-input");
 				}
 				eOptions.dataType = 'string';
+<<<<<<< HEAD
 				comp = new _string.StringAdapter({
+=======
+				comp = new _keroaString.StringAdapter({
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 					el: compDiv[0],
 					options: eOptions,
 					model: viewModel
@@ -13236,7 +13926,11 @@
 					compDiv.addClass("eType-input");
 				}
 				eOptions.dataType = 'integer';
+<<<<<<< HEAD
 				comp = new _integer.IntegerAdapter({
+=======
+				comp = new _keroaInteger.IntegerAdapter({
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 					el: compDiv[0],
 					options: eOptions,
 					model: viewModel
@@ -13250,7 +13944,11 @@
 				if ($.CheckboxComp) {
 					comp = new $.CheckboxComp(compDiv.find("input")[0], eOptions, viewModel);
 				} else {
+<<<<<<< HEAD
 					comp = new _checkbox.CheckboxAdapter({
+=======
+					comp = new _keroaCheckbox.CheckboxAdapter({
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 						el: compDiv[0],
 						options: eOptions,
 						model: viewModel
@@ -13272,7 +13970,11 @@
 					compDiv = $('<div class="input-group  form_date u-grid-edit-item-comb"><div  type="text" class="form-control grid-combox"></div><i class="input-group-addon" ><i class="uf uf-anglearrowdown"></i></i></div>');
 					comp = new $.Combobox(compDiv[0], eOptions, viewModel);
 				} else {
+<<<<<<< HEAD
 					comp = new _combobox.ComboboxAdapter({
+=======
+					comp = new _keroaCombo.ComboboxAdapter({
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 						el: compDiv[0],
 						options: eOptions,
 						model: viewModel
@@ -13292,7 +13994,11 @@
 				} else {
 					compDiv = $('<div class="u-grid-edit-item-radio"><input type="radio" name="identity" /><i data-role="name"></i></div>');
 					//comp = new $.compManager.plugs.radio(compDiv[0],eOptions,viewModel);
+<<<<<<< HEAD
 					comp = new _radio.RadioAdapter({
+=======
+					comp = new _keroaRadio.RadioAdapter({
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 						el: compDiv[0],
 						options: eOptions,
 						model: viewModel
@@ -13305,7 +14011,11 @@
 				}
 				//comp = new $.compManager.plugs.float(compDiv.find("input")[0],eOptions,viewModel);
 				eOptions.dataType = 'float';
+<<<<<<< HEAD
 				comp = new _float.FloatAdapter({
+=======
+				comp = new _keroaFloat.FloatAdapter({
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 					el: compDiv[0],
 					options: eOptions,
 					model: viewModel
@@ -13317,7 +14027,11 @@
 				}
 				//comp = new $.compManager.plugs.currency(compDiv.find("input")[0],eOptions,viewModel);
 				eOptions.dataType = 'currency';
+<<<<<<< HEAD
 				comp = new _currency.CurrencyAdapter({
+=======
+				comp = new _keroaCurrency.CurrencyAdapter({
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 					el: compDiv[0],
 					options: eOptions,
 					model: viewModel
@@ -13329,7 +14043,11 @@
 				if ($.DateTime) {
 					comp = new $.DateTime(compDiv[0], eOptions, viewModel);
 				} else {
+<<<<<<< HEAD
 					comp = new _datetime.DateTimeAdapter({
+=======
+					comp = new _keroaDatetimepicker.DateTimeAdapter({
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 						el: compDiv[0],
 						options: eOptions,
 						model: viewModel
@@ -13350,6 +14068,7 @@
 					comp = new $.DateComp(compDiv[0], eOptions, viewModel);
 				} else {
 					eOptions.type = 'u-date';
+<<<<<<< HEAD
 					comp = new _datetime.DateTimeAdapter({
 						el: compDiv[0],
 						options: eOptions,
@@ -13414,6 +14133,9 @@
 				} else {
 					eOptions.type = 'yearmonth';
 					comp = new _yearmonth.YearMonthAdapter({
+=======
+					comp = new _keroaDatetimepicker.DateTimeAdapter({
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 						el: compDiv[0],
 						options: eOptions,
 						model: viewModel
@@ -13432,7 +14154,11 @@
 					compDiv.addClass("eType-input");
 				}
 				eOptions.dataType = 'url';
+<<<<<<< HEAD
 				comp = new _url.UrlAdapter({
+=======
+				comp = new _keroaUrl.UrlAdapter({
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 					el: compDiv[0],
 					options: eOptions,
 					model: viewModel
@@ -13444,7 +14170,11 @@
 					compDiv.addClass("eType-input");
 				}
 				eOptions.dataType = 'password';
+<<<<<<< HEAD
 				comp = new _password.PassWordAdapter({
+=======
+				comp = new _keroaPassword.PassWordAdapter({
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 					el: compDiv[0],
 					options: eOptions,
 					model: viewModel
@@ -13458,7 +14188,11 @@
 				}
 				//comp = new $.compManager.plugs.float(compDiv.find("input")[0],eOptions,viewModel);
 				eOptions.dataType = 'precent';
+<<<<<<< HEAD
 				comp = new _percent.PercentAdapter({
+=======
+				comp = new _keroaPercent.PercentAdapter({
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 					el: compDiv[0],
 					options: eOptions,
 					model: viewModel
@@ -13634,12 +14368,15 @@
 	//if ($.compManager)
 	//	$.compManager.addPlug(Grid)
 
+<<<<<<< HEAD
 	/**
 	 * Module : Kero Grid Adapter
 	 * Author : Kvkens(yueming@yonyou.com)
 	 * Date	  : 2016-08-09 16:17:17
 	 */
 
+=======
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	_compMgr.compMgr.addDataAdapter({
 		adapter: GridAdapter,
 		name: 'grid'
@@ -13841,12 +14578,15 @@
 
 	var _validateMixin = __webpack_require__(81);
 
+<<<<<<< HEAD
 	var _core = __webpack_require__(71);
 
 	var _formater = __webpack_require__(93);
 
 	var _masker = __webpack_require__(95);
 
+=======
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	var _util = __webpack_require__(10);
 
 	var _event = __webpack_require__(6);
@@ -13855,12 +14595,15 @@
 
 	var _compMgr = __webpack_require__(4);
 
+<<<<<<< HEAD
 	/**
 	 * Module : Kero integer
 	 * Author : Kvkens(yueming@yonyou.com)
 	 * Date	  : 2016-08-09 18:29:59
 	 */
 
+=======
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	var IntegerAdapter = _baseAdapter.BaseAdapter.extend({
 	    mixins: [_valueMixin.ValueMixin, _enableMixin.EnableMixin, _requiredMixin.RequiredMixin, _validateMixin.ValidateMixin],
 	    init: function init() {
@@ -13869,9 +14612,13 @@
 	        if (!this.element) {
 	            throw new Error('not found INPUT element, u-meta:' + JSON.stringify(this.options));
 	        };
+<<<<<<< HEAD
 	        this.maskerMeta = _core.core.getMaskerMeta('integer') || {};
 	        this.validType = this.options['validType'] || 'integer';
 	        this.maskerMeta.precision = this.getOption('precision') || this.maskerMeta.precision;
+=======
+	        this.validType = this.options['validType'] || 'integer';
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	        this.max = this.options['max'];
 	        this.min = this.options['min'];
 	        this.maxNotEq = this.options['maxNotEq'];
@@ -13886,8 +14633,11 @@
 	            this.minLength = (0, _util.isNumber)(this.dataModel.getMeta(this.field, "minLength")) ? this.dataModel.getMeta(this.field, "minLength") : this.minLength;
 	            this.maxLength = (0, _util.isNumber)(this.dataModel.getMeta(this.field, "maxLength")) ? this.dataModel.getMeta(this.field, "maxLength") : this.maxLength;
 	        }
+<<<<<<< HEAD
 	        this.formater = new _formater.NumberFormater(this.maskerMeta.precision);
 	        this.masker = new _masker.NumberMasker(this.maskerMeta);
+=======
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	        (0, _event.on)(this.element, 'focus', function () {
 	            if (self.enable) {
 	                self.setShowValue(self.getValue());
@@ -13913,6 +14663,7 @@
 	                } else self.setValue(self.element.value);
 	            }
 	        });
+<<<<<<< HEAD
 
 	        (0, _event.on)(this.element, 'keydown', function (e) {
 	            if (self.enable) {
@@ -13928,6 +14679,15 @@
 	        });
 	    }
 	});
+=======
+	    }
+	}); /**
+	     * Module : Kero integer
+	     * Author : Kvkens(yueming@yonyou.com)
+	     * Date	  : 2016-08-09 18:29:59
+	     */
+
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	_compMgr.compMgr.addDataAdapter({
 	    adapter: IntegerAdapter,
 	    name: 'integer'
@@ -14421,6 +15181,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+<<<<<<< HEAD
 	exports.YearAdapter = undefined;
 
 	var _baseAdapter = __webpack_require__(76);
@@ -14473,6 +15234,67 @@
 	});
 
 	exports.YearAdapter = YearAdapter;
+=======
+	exports.UrlAdapter = undefined;
+
+	var _keroaString = __webpack_require__(100);
+
+	var _dom = __webpack_require__(5);
+
+	var _compMgr = __webpack_require__(4);
+
+	var UrlAdapter = _keroaString.StringAdapter.extend({
+	    init: function init() {
+	        UrlAdapter.superclass.init.apply(this);
+	        this.validType = 'url';
+
+	        /*
+	         * 因为需要输入，因此不显示为超链接
+	         */
+	    },
+	    // 如果enable为false则显示<a>标签
+	    setEnable: function setEnable(enable) {
+	        if (enable === true || enable === 'true') {
+	            this.enable = true;
+	            this.element.removeAttribute('readonly');
+	            (0, _dom.removeClass)(this.element.parentNode, 'disablecover');
+	            if (this.aDom) {
+	                this.aDom.style.display = 'none';
+	            }
+	        } else if (enable === false || enable === 'false') {
+	            this.enable = false;
+	            this.element.setAttribute('readonly', 'readonly');
+	            (0, _dom.addClass)(this.element.parentNode, 'disablecover');
+	            if (!this.aDom) {
+	                this.aDom = (0, _dom.makeDOM)('<div style="position:absolute;background:#fff;z-index:999;"><a href="' + this.trueValue + '" target="_blank" style="position:absolue;">' + this.trueValue + '</a></div>');
+	                var left = this.element.offsetLeft;
+	                var width = this.element.offsetWidth;
+	                var top = this.element.offsetTop;
+	                var height = this.element.offsetHeight;
+	                this.aDom.style.left = left + 'px';
+	                this.aDom.style.width = width + 'px';
+	                this.aDom.style.top = top + 'px';
+	                this.aDom.style.height = height + 'px';
+	                this.element.parentNode.appendChild(this.aDom);
+	            }
+	            var $a = $(this.aDom).find('a');
+	            $a.href = this.trueValue;
+	            $a.innerHTML = this.trueValue;
+	            this.aDom.style.display = 'block';
+	        }
+	    }
+	}); /**
+	     * Module : Kero url adapter
+	     * Author : Kvkens(yueming@yonyou.com)
+	     * Date	  : 2016-08-10 13:51:26
+	     */
+
+	_compMgr.compMgr.addDataAdapter({
+	    adapter: UrlAdapter,
+	    name: 'url'
+	});
+	exports.UrlAdapter = UrlAdapter;
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 
 /***/ },
 /* 105 */
@@ -14481,6 +15303,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
+<<<<<<< HEAD
 		value: true
 	});
 	exports.Year = undefined;
@@ -14723,6 +15546,209 @@
 
 /***/ },
 /* 106 */
+=======
+	    value: true
+	});
+	exports.PassWordAdapter = undefined;
+
+	var _keroaString = __webpack_require__(100);
+
+	var _util = __webpack_require__(10);
+
+	var _env = __webpack_require__(7);
+
+	var _event = __webpack_require__(6);
+
+	var _compMgr = __webpack_require__(4);
+
+	/**
+	 * 密码控件
+	 */
+	var PassWordAdapter = _keroaString.StringAdapter.extend({
+	    init: function init() {
+	        PassWordAdapter.superclass.init.apply(this);
+	        var oThis = this;
+	        if (_env.env.isIE8) {
+	            var outStr = this.element.outerHTML;
+	            var l = outStr.length;
+	            outStr = outStr.substring(0, l - 1) + ' type="password"' + outStr.substring(l - 1);
+	            var newEle = document.createElement(outStr);
+	            var parent = this.element.parentNode;
+	            parent.insertBefore(newEle, this.element.nextSibling);
+	            parent.removeChild(this.element);
+	            this.element = newEle;
+	        } else {
+	            this.element.type = "password";
+	        }
+	        oThis.element.title = '';
+	        this._element = this.element.parentNode;
+	        this.span = this._element.querySelector("span");
+	        if (_env.env.isIE8) {
+	            this.span.style.display = 'none';
+	        }
+	        if (this.span) {
+	            (0, _event.on)(this.span, 'click', function () {
+	                if (oThis.element.type == 'password') {
+	                    oThis.element.type = 'text';
+	                } else {
+	                    oThis.element.type = 'password';
+	                }
+	            });
+	        }
+	    },
+	    setShowValue: function setShowValue(showValue) {
+	        this.showValue = showValue;
+	        this.element.value = showValue;
+	        this.element.title = '';
+	    }
+	}); /**
+	     * Module : Kero password
+	     * Author : Kvkens(yueming@yonyou.com)
+	     * Date	  : 2016-08-09 19:19:33
+	     */
+
+	_compMgr.compMgr.addDataAdapter({
+	    adapter: PassWordAdapter,
+	    name: 'password'
+	});
+
+	exports.PassWordAdapter = PassWordAdapter;
+
+/***/ },
+/* 106 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.PercentAdapter = undefined;
+
+	var _keroaFloat = __webpack_require__(94);
+
+	var _formater = __webpack_require__(93);
+
+	var _masker = __webpack_require__(95);
+
+	var _core = __webpack_require__(71);
+
+	var _compMgr = __webpack_require__(4);
+
+	/**
+	 * 百分比控件
+	 */
+	var PercentAdapter = _keroaFloat.FloatAdapter.extend({
+	  init: function init() {
+	    PercentAdapter.superclass.init.apply(this);
+	    this.validType = 'float';
+	    this.maskerMeta = _core.core.getMaskerMeta('percent') || {};
+	    this.maskerMeta.precision = this.getOption('precision') || this.maskerMeta.precision;
+	    if (this.maskerMeta.precision) {
+	      this.maskerMeta.precision = parseInt(this.maskerMeta.precision) + 2;
+	    }
+	    this.formater = new _formater.NumberFormater(this.maskerMeta.precision);
+	    this.masker = new _masker.PercentMasker(this.maskerMeta);
+	  }
+	}); /**
+	     * Module : Kero percent
+	     * Author : Kvkens(yueming@yonyou.com)
+	     * Date	  : 2016-08-09 20:02:50
+	     */
+
+	_compMgr.compMgr.addDataAdapter({
+	  adapter: PercentAdapter,
+	  name: 'percent'
+	});
+	exports.PercentAdapter = PercentAdapter;
+
+/***/ },
+/* 107 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.showMessage = exports.showMessageDialog = undefined;
+
+	var _dom = __webpack_require__(5);
+
+	var _event = __webpack_require__(6);
+
+	/**
+	 * Module : neoui-message
+	 * Author : Kvkens(yueming@yonyou.com)
+	 * Date	  : 2016-08-02 19:40:59
+	 */
+
+	var messageTemplate = '<div class="u-message"><span class="u-msg-close uf uf-removesymbol"></span>{msg}</div>';
+
+	var showMessage = function showMessage(options) {
+		var msg, position, width, height, showSeconds, msgType, template;
+		if (typeof options === 'string') {
+			options = {
+				msg: options
+			};
+		}
+		msg = options['msg'] || "";
+		position = options['position'] || "bottom-right"; //center. top-left, top-center, top-right, bottom-left, bottom-center, bottom-right,
+		//TODO 后面改规则：没设宽高时，自适应
+		width = options['width'] || "";
+		// height = options['height'] || "100px";
+		msgType = options['msgType'] || 'info';
+		//默认为当用户输入的时间，当用户输入的时间为false并且msgType=='info'时，默认显示时间为2s
+		showSeconds = parseInt(options['showSeconds']) || (msgType == 'info' ? 2 : 0);
+
+		template = options['template'] || messageTemplate;
+
+		template = template.replace('{msg}', msg);
+		var msgDom = (0, _dom.makeDOM)(template);
+		(0, _dom.addClass)(msgDom, 'u-mes' + msgType);
+		msgDom.style.width = width;
+		// msgDom.style.height = height;
+		// msgDom.style.lineHeight = height;
+		if (position == 'bottom-right') {
+			msgDom.style.bottom = '10px';
+		}
+
+		if (position == 'center') {
+			msgDom.style.bottom = '50%';
+			msgDom.style.transform = 'translateY(50%)';
+		}
+		var closeBtn = msgDom.querySelector('.u-msg-close');
+		//new Button({el:closeBtn});
+		var closeFun = function closeFun() {
+			u.removeClass(msgDom, "active");
+			setTimeout(function () {
+				try {
+					document.body.removeChild(msgDom);
+				} catch (e) {}
+			}, 500);
+		};
+		u.on(closeBtn, 'click', closeFun);
+		document.body.appendChild(msgDom);
+
+		if (showSeconds > 0) {
+			setTimeout(function () {
+				closeFun();
+			}, showSeconds * 1000);
+		}
+
+		setTimeout(function () {
+			(0, _dom.addClass)(msgDom, "active");
+		}, showSeconds * 1);
+	};
+
+	var showMessageDialog = showMessage;
+
+	exports.showMessageDialog = showMessageDialog;
+	exports.showMessage = showMessage;
+
+/***/ },
+/* 108 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14734,6 +15760,7 @@
 
 	var _baseAdapter = __webpack_require__(76);
 
+<<<<<<< HEAD
 	var _neouiMonth = __webpack_require__(107);
 
 	var _compMgr = __webpack_require__(4);
@@ -14753,6 +15780,19 @@
 	        this.validType = 'month';
 
 	        this.comp = new _neouiMonth.Month({ el: this.element, showFix: this.options.showFix });
+=======
+	var _neouiMonth = __webpack_require__(109);
+
+	var _compMgr = __webpack_require__(4);
+
+	var MonthAdapter = _baseAdapter.BaseAdapter.extend({
+	    initialize: function initialize(comp, options) {
+	        var self = this;
+	        MonthAdapter.superclass.initialize.apply(this, arguments);
+	        this.validType = 'month';
+
+	        this.comp = new _neouiMonth.Month(this.element);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 
 	        this.comp.on('valueChange', function (event) {
 	            self.slice = true;
@@ -14783,7 +15823,11 @@
 	exports.MonthAdapter = MonthAdapter;
 
 /***/ },
+<<<<<<< HEAD
 /* 107 */
+=======
+/* 109 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14989,7 +16033,11 @@
 			(0, _dom.addClass)(this.panelDiv, 'is-visible');
 
 			var callback = function (e) {
+<<<<<<< HEAD
 				if (e !== evt && e.target !== this.input && !oThis.clickPanel(e.target) && oThis._inputFocus != true) {
+=======
+				if (e !== evt && e.target !== this.input && !oThis.clickPanel(e.target) && self._inputFocus != true) {
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 					(0, _event.off)(document, 'click', callback);
 					// document.removeEventListener('click', callback);
 					this.hide();
@@ -15031,7 +16079,11 @@
 	exports.Month = Month;
 
 /***/ },
+<<<<<<< HEAD
 /* 108 */
+=======
+/* 110 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15039,6 +16091,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+<<<<<<< HEAD
 	exports.YearMonthAdapter = undefined;
 
 	var _baseAdapter = __webpack_require__(76);
@@ -15935,20 +16988,14 @@
 
 /***/ },
 /* 116 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
+=======
 	exports.PaginationAdapter = undefined;
 
 	var _baseAdapter = __webpack_require__(76);
 
 	var _extend = __webpack_require__(8);
 
-	var _neouiPagination = __webpack_require__(117);
+	var _neouiPagination = __webpack_require__(111);
 
 	var _util = __webpack_require__(10);
 
@@ -16050,7 +17097,7 @@
 	exports.PaginationAdapter = PaginationAdapter;
 
 /***/ },
-/* 117 */
+/* 111 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16456,7 +17503,8 @@
 	exports.pagination = pagination;
 
 /***/ },
-/* 118 */
+/* 112 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16464,6 +17512,943 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+<<<<<<< HEAD
+	exports.PaginationAdapter = undefined;
+
+	var _baseAdapter = __webpack_require__(76);
+
+	var _extend = __webpack_require__(8);
+
+	var _neouiPagination = __webpack_require__(117);
+
+	var _util = __webpack_require__(10);
+
+	var _compMgr = __webpack_require__(4);
+
+	var PaginationAdapter = _baseAdapter.BaseAdapter.extend({
+	    initialize: function initialize(comp, options) {
+	        var self = this;
+	        PaginationAdapter.superclass.initialize.apply(this, arguments);
+
+	        //var Pagination = function(element, options, viewModel) {
+
+	        if (!this.dataModel.pageSize() && this.options.pageSize) this.dataModel.pageSize(this.options.pageSize);
+	        this.options.pageSize = this.dataModel.pageSize() || this.options.pageSize;
+	        //this.$element.pagination(options);
+	        //this.comp = this.$element.data('u.pagination');
+	        var options = (0, _extend.extend)({}, { el: this.element }, this.options);
+	        this.comp = new _neouiPagination.pagination(options);
+	        this.element['u.pagination'] = this.comp;
+	        this.comp.dataModel = this.dataModel;
+	        this.pageChange = (0, _util.getFunction)(this.viewModel, this.options['pageChange']);
+	        this.sizeChange = (0, _util.getFunction)(this.viewModel, this.options['sizeChange']);
+
+	        this.comp.on('pageChange', function (pageIndex) {
+	            if (typeof self.pageChange == 'function') {
+	                self.pageChange(pageIndex);
+	            } else {
+	                self.defaultPageChange(pageIndex);
+	            }
+	        });
+	        this.comp.on('sizeChange', function (size, pageIndex) {
+	            if (typeof self.sizeChange == 'function') {
+	                self.sizeChange(size, pageIndex);
+	            } else {
+	                self.defaultSizeChange(size, pageIndex);
+	                // showMessage({msg:"没有注册sizeChange事件"});
+	            }
+	        });
+
+	        this.dataModel.totalPages.subscribe(function (value) {
+	            self.comp.update({ totalPages: value });
+	        });
+
+	        this.dataModel.pageSize.subscribe(function (value) {
+	            self.comp.update({ pageSize: value });
+	        });
+
+	        this.dataModel.pageIndex.subscribe(function (value) {
+	            self.comp.update({ currentPage: value + 1 });
+	        });
+
+	        this.dataModel.totalRow.subscribe(function (value) {
+	            self.comp.update({ totalCount: value });
+	        });
+
+	        if (this.comp.options.pageList.length > 0) {
+	            this.comp.options.pageSize = this.comp.options.pageList[0];
+	            ///this.comp.trigger('sizeChange', options.pageList[0])
+	            this.dataModel.pageSize(this.comp.options.pageList[0]);
+	        }
+
+	        // 如果datatable已经创建则根据datatable设置分页组件
+	        // self.comp.update({totalPages: this.dataModel.totalPages()})
+	        // self.comp.update({pageSize: this.dataModel.pageSize()})
+	        // self.comp.update({currentPage: this.dataModel.pageIndex() + 1})
+	        // self.comp.update({totalCount: this.dataModel.totalRow()})
+	        self.comp.update({ totalPages: this.dataModel.totalPages(), pageSize: this.dataModel.pageSize(), currentPage: this.dataModel.pageIndex() + 1, totalCount: this.dataModel.totalRow() });
+	    },
+
+	    defaultPageChange: function defaultPageChange(pageIndex) {
+	        if (this.dataModel.hasPage(pageIndex)) {
+	            this.dataModel.setCurrentPage(pageIndex);
+	        } else {}
+	    },
+
+	    defaultSizeChange: function defaultSizeChange(size, pageIndex) {
+	        this.dataModel.pageSize(size);
+	    },
+
+	    disableChangeSize: function disableChangeSize() {
+	        this.comp.disableChangeSize();
+	    },
+
+	    enableChangeSize: function enableChangeSize() {
+	        this.comp.enableChangeSize();
+	    }
+	}); /**
+	     * Module : Kero pagination
+	     * Author : Kvkens(yueming@yonyou.com)
+	     * Date	  : 2016-08-09 19:09:39
+	     */
+
+
+	_compMgr.compMgr.addDataAdapter({
+	    adapter: PaginationAdapter,
+	    name: 'pagination'
+	});
+
+	exports.PaginationAdapter = PaginationAdapter;
+
+/***/ },
+/* 117 */
+=======
+	exports.ProgressAdapter = undefined;
+
+	var _baseAdapter = __webpack_require__(76);
+
+	var _neouiProgress = __webpack_require__(113);
+
+	var _compMgr = __webpack_require__(4);
+
+	var ProgressAdapter = _baseAdapter.BaseAdapter.extend({
+	    initialize: function initialize(options) {
+	        var self = this;
+	        ProgressAdapter.superclass.initialize.apply(this, arguments);
+
+	        this.comp = new _neouiProgress.Progress(this.element);
+	        this.element['u.Progress'] = this.comp;
+
+	        this.dataModel.ref(this.field).subscribe(function (value) {
+	            self.modelValueChange(value);
+	        });
+	    },
+
+	    modelValueChange: function modelValueChange(val) {
+	        this.comp.setProgress(val);
+	    }
+	}); /**
+	     * Module : Kero percent
+	     * Author : Kvkens(yueming@yonyou.com)
+	     * Date	  : 2016-08-09 20:02:50
+	     */
+
+	_compMgr.compMgr.addDataAdapter({
+	    adapter: ProgressAdapter,
+	    name: 'u-progress'
+	});
+
+	exports.ProgressAdapter = ProgressAdapter;
+
+/***/ },
+/* 113 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+<<<<<<< HEAD
+	exports.pagination = undefined;
+
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; }; /**
+	                                                                                                                                                                                                                                                   * Module : neoui-pagination
+	                                                                                                                                                                                                                                                   * Author : Kvkens(yueming@yonyou.com)
+	                                                                                                                                                                                                                                                   * Date	  : 2016-08-03 08:45:49
+	                                                                                                                                                                                                                                                   */
+
+	var _BaseComponent = __webpack_require__(83);
+
+	var _extend = __webpack_require__(8);
+
+	var _dom = __webpack_require__(5);
+
+	var _util = __webpack_require__(10);
+=======
+	exports.Progress = undefined;
+
+	var _BaseComponent = __webpack_require__(83);
+
+	var _dom = __webpack_require__(5);
+
+	var _env = __webpack_require__(7);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
+
+	var _event = __webpack_require__(6);
+
+	var _compMgr = __webpack_require__(4);
+
+<<<<<<< HEAD
+	var pagination = _BaseComponent.BaseComponent.extend({});
+
+	var PageProxy = function PageProxy(options, page) {
+		this.isCurrent = function () {
+			return page == options.currentPage;
+		};
+		this.isFirst = function () {
+			return page == 1;
+		};
+		this.isLast = function () {
+			return page == options.totalPages;
+		};
+		this.isPrev = function () {
+			return page == options.currentPage - 1;
+		};
+		this.isNext = function () {
+			return page == options.currentPage + 1;
+		};
+		this.isLeftOuter = function () {
+			return page <= options.outerWindow;
+		};
+		this.isRightOuter = function () {
+			return options.totalPages - page < options.outerWindow;
+		};
+		this.isInsideWindow = function () {
+			if (options.currentPage < options.innerWindow + 1) {
+				return page <= options.innerWindow * 2 + 1;
+			} else if (options.currentPage > options.totalPages - options.innerWindow) {
+				return options.totalPages - page <= options.innerWindow * 2;
+			} else {
+				return Math.abs(options.currentPage - page) <= options.innerWindow;
+			}
+		};
+		this.number = function () {
+			return page;
+		};
+		this.pageSize = function () {
+			return options.pageSize;
+		};
+	};
+
+	var View = {
+		firstPage: function firstPage(pagin, options, currentPageProxy) {
+			return '<li role="first"' + (currentPageProxy.isFirst() ? 'class="disabled"' : '') + '><a >' + options.first + '</a></li>';
+		},
+		prevPage: function prevPage(pagin, options, currentPageProxy) {
+			return '<li role="prev"' + (currentPageProxy.isFirst() ? 'class="disabled"' : '') + '><a  rel="prev">' + options.prev + '</a></li>';
+		},
+		nextPage: function nextPage(pagin, options, currentPageProxy) {
+			return '<li role="next"' + (currentPageProxy.isLast() ? 'class="disabled"' : '') + '><a  rel="next">' + options.next + '</a></li>';
+		},
+		lastPage: function lastPage(pagin, options, currentPageProxy) {
+
+			return '<li role="last"' + (currentPageProxy.isLast() ? 'class="disabled"' : '') + '><a >' + options.last + '</a></li>';
+		},
+		gap: function gap(pagin, options) {
+			return '<li role="gap" class="disabled"><a href="#">' + options.gap + '</a></li>';
+		},
+		page: function page(pagin, options, pageProxy) {
+			return '<li role="page"' + (pageProxy.isCurrent() ? 'class="active"' : '') + '><a ' + (pageProxy.isNext() ? ' rel="next"' : '') + (pageProxy.isPrev() ? 'rel="prev"' : '') + '>' + pageProxy.number() + '</a></li>';
+		}
+	};
+
+	//pagination.prototype.compType = 'pagination';
+	pagination.prototype.init = function (element, options) {
+		var self = this;
+		var element = this.element;
+		this.$element = element;
+		this.options = (0, _extend.extend)({}, this.DEFAULTS, this.options);
+		this.$ul = this.$element; //.find("ul");
+		this.render();
+	};
+
+	pagination.prototype.DEFAULTS = {
+		currentPage: 1,
+		totalPages: 1,
+		pageSize: 10,
+		pageList: [5, 10, 20, 50, 100],
+		innerWindow: 2,
+		outerWindow: 0,
+		first: '&laquo;',
+		prev: '<i class="uf uf-anglepointingtoleft"></i>',
+		next: '<i class="uf uf-anglearrowpointingtoright"></i>',
+		last: '&raquo;',
+		gap: '···',
+		//totalText: '合计:',
+		totalText: '共',
+		truncate: false,
+		showState: true,
+		showTotal: true, //初始默认显示总条数 “共xxx条”
+		showColumn: true, //初始默认显示每页条数 “显示xx条”
+		showJump: true, //初始默认显示跳转信息 “到xx页 确定”
+		page: function page(_page) {
+			return true;
+		}
+	};
+
+	pagination.prototype.update = function (options) {
+		this.$ul.innerHTML = "";
+		this.options = (0, _extend.extend)({}, this.options, options);
+		this.render();
+	};
+	pagination.prototype.render = function () {
+		var a = new Date().valueOf();
+
+		var options = this.options;
+
+		if (!options.totalPages) {
+			this.$element.style.display = "none";
+			return;
+		} else {
+			this.$element.style.display = "block";
+		}
+
+		var htmlArr = [];
+		var currentPageProxy = new PageProxy(options, options.currentPage);
+
+		//update pagination by pengyic@yonyou.com
+		//预设显示页码数
+		var windows = 2;
+		var total = options.totalPages - 0;
+		var current = options.currentPage - 0;
+		//预设显示页码数截断修正
+		var fix = 0;
+		var pageProxy;
+		if (current - 2 <= windows + 1) {
+			for (var i = 1; i <= current; i++) {
+				pageProxy = new PageProxy(options, i);
+				htmlArr.push(View.page(this, options, pageProxy));
+			}
+
+			fix = windows - (current - 1) < 0 ? 0 : windows - (current - 1);
+
+			if (total - current - fix <= windows + 1) {
+				for (var i = current + 1; i <= total; i++) {
+					pageProxy = new PageProxy(options, i);
+					htmlArr.push(View.page(this, options, pageProxy));
+				}
+			} else {
+				for (var i = current + 1; i <= current + windows + fix; i++) {
+					pageProxy = new PageProxy(options, i);
+					htmlArr.push(View.page(this, options, pageProxy));
+				}
+				//添加分割'...'
+				htmlArr.push(View.gap(this, options));
+
+				pageProxy = new PageProxy(options, total);
+				htmlArr.push(View.page(this, options, pageProxy));
+			}
+		} else {
+			if (total - current <= windows + 1) {
+				fix = windows - (total - current) < 0 ? 0 : windows - (total - current);
+
+				for (var i = current - windows - fix; i <= total; i++) {
+					pageProxy = new PageProxy(options, i);
+					htmlArr.push(View.page(this, options, pageProxy));
+				}
+				if (i >= 2) {
+					//添加分割'...'
+					htmlArr.unshift(View.gap(this, options));
+					pageProxy = new PageProxy(options, 1);
+					htmlArr.unshift(View.page(this, options, pageProxy));
+				}
+			} else {
+				for (var i = current - windows; i <= current + windows; i++) {
+					pageProxy = new PageProxy(options, i);
+					htmlArr.push(View.page(this, options, pageProxy));
+				}
+				//添加分割'...'
+				htmlArr.push(View.gap(this, options));
+
+				pageProxy = new PageProxy(options, total);
+				htmlArr.push(View.page(this, options, pageProxy));
+
+				//添加分割'...'
+				htmlArr.unshift(View.gap(this, options));
+				pageProxy = new PageProxy(options, 1);
+				htmlArr.unshift(View.page(this, options, pageProxy));
+			}
+		}
+		htmlArr.unshift(View.prevPage(this, options, currentPageProxy));
+		htmlArr.push(View.nextPage(this, options, currentPageProxy));
+
+		if (options.totalCount === undefined || options.totalCount <= 0) {
+			options.totalCount = 0;
+		}
+		if (options.showState) {
+			// 处理pageOption字符串
+			var pageOption = '';
+			options.pageList.forEach(function (item) {
+				if (options.pageSize - 0 == item) {
+					pageOption += '<option selected>' + item + '</option>';
+				} else {
+					pageOption += '<option>' + item + '</option>';
+				}
+			});
+			var htmlTmp = '';
+			//分别得到分页条后“共xxx条”、“显示xx条”、“到xx页 确定”三个html片段
+			if (options.showTotal) {
+				htmlTmp += '<div class="pagination-state">' + options.totalText + '&nbsp;' + options.totalCount + '&nbsp;条</div>';
+			}
+			if (options.showColumn) {
+				htmlTmp += '<div class="pagination-state">显示<select  class="page_z">' + pageOption + '</select>条</div>';
+			}
+			if (options.showJump) {
+				htmlTmp += '<div class="pagination-state">到<input class="page_j" value=' + options.currentPage + '>页<input class="pagination-jump" type="button" value="确定"/></div>';
+			}
+
+			htmlArr.push(htmlTmp);
+		}
+
+		//在将htmlArr插入到页面之前，对htmlArr进行处理
+		this.$ul.innerHTML = "";
+		this.$ul.insertAdjacentHTML('beforeEnd', htmlArr.join(''));
+
+		var me = this;
+		(0, _event.on)(this.$ul.querySelector(".pagination-jump"), "click", function () {
+			var jp, pz;
+			jp = me.$ul.querySelector(".page_j").value || options.currentPage;
+			pz = me.$ul.querySelector(".page_z").value || options.pageSize;
+
+			//if (pz != options.pageSize){
+			//	me.$element.trigger('sizeChange', [pz, jp - 1])
+			//}else{
+			//	me.$element.trigger('pageChange', jp - 1)
+			//}
+			me.page(jp, options.totalPages, pz);
+			//me.$element.trigger('pageChange', jp - 1)
+			//me.$element.trigger('sizeChange', pz)
+			return false;
+		});
+
+		(0, _event.on)(this.$ul.querySelector('[role="first"] a'), 'click', function () {
+			if (options.currentPage <= 1) return;
+			me.firstPage();
+			//me.$element.trigger('pageChange', 0)
+			return false;
+		});
+		(0, _event.on)(this.$ul.querySelector('[role="prev"] a'), 'click', function () {
+			if (options.currentPage <= 1) return;
+			me.prevPage();
+			//me.$element.trigger('pageChange', options.currentPage - 1)
+			return false;
+		});
+		(0, _event.on)(this.$ul.querySelector('[role="next"] a'), 'click', function () {
+			if (parseInt(options.currentPage) + 1 > options.totalPages) return;
+			me.nextPage();
+			//me.$element.trigger('pageChange', parseInt(options.currentPage) + 1)
+			return false;
+		});
+		(0, _event.on)(this.$ul.querySelector('[role="last"] a'), 'click', function () {
+			if (options.currentPage == options.totalPages) return;
+			me.lastPage();
+			//me.$element.trigger('pageChange', options.totalPages - 1)
+			return false;
+		});
+		(0, _util.each)(this.$ul.querySelectorAll('[role="page"] a'), function (i, node) {
+			(0, _event.on)(node, 'click', function () {
+				var pz = me.$element.querySelector(".page_z") && me.$element.querySelector(".page_z").value || options.pageSize;
+				me.page(parseInt(this.innerHTML), options.totalPages, pz);
+				//me.$element.trigger('pageChange', parseInt($(this).html()) - 1)
+
+				return false;
+			});
+		});
+		(0, _event.on)(this.$ul.querySelector('.page_z'), 'change', function () {
+			var pz = me.$element.querySelector(".page_z") && me.$element.querySelector(".page_z").value || options.pageSize;
+			me.trigger('sizeChange', pz);
+		});
+	};
+
+	pagination.prototype.page = function (pageIndex, totalPages, pageSize) {
+
+		var options = this.options;
+
+		if (totalPages === undefined) {
+			totalPages = options.totalPages;
+		}
+		if (pageSize === undefined) {
+			pageSize = options.pageSize;
+		}
+		var oldPageSize = options.pageSize;
+		// if (pageIndex > 0 && pageIndex <= totalPages) {
+		// 	if (options.page(pageIndex)) {
+
+		// 		this.$ul.innerHTML="";
+		// 		options.pageSize = pageSize;
+		// 		options.currentPage = pageIndex;
+		// 		options.totalPages = totalPages;
+		// 		this.render();
+
+		// 	}
+		// }else{
+		// 	return false;
+		// }
+
+		if (options.page(pageIndex)) {
+			if (pageIndex < 0) {
+				pageIndex = 0;
+			}
+
+			if (pageIndex > totalPages) {
+				pageIndex = totalPages;
+			}
+			this.$ul.innerHTML = "";
+			options.pageSize = pageSize;
+			options.currentPage = pageIndex;
+			options.totalPages = totalPages;
+			this.render();
+		}
+		if (pageSize != oldPageSize) {
+			this.trigger('sizeChange', [pageSize, pageIndex - 1]);
+		} else {
+			this.trigger('pageChange', pageIndex - 1);
+		}
+
+		//this.$element.trigger('pageChange', pageIndex)
+
+		return false;
+	};
+
+	pagination.prototype.firstPage = function () {
+		return this.page(1);
+	};
+
+	pagination.prototype.lastPage = function () {
+		return this.page(this.options.totalPages);
+	};
+
+	pagination.prototype.nextPage = function () {
+		return this.page(parseInt(this.options.currentPage) + 1);
+	};
+
+	pagination.prototype.prevPage = function () {
+		return this.page(this.options.currentPage - 1);
+	};
+
+	pagination.prototype.disableChangeSize = function () {
+		this.$element.querySelector('.page_z').setAttribute('readonly', true);
+	};
+
+	pagination.prototype.enableChangeSize = function () {
+		this.$element.querySelector('.page_z').removeAttribute('readonly');
+	};
+
+	function Plugin(option) {
+		return this.each(function () {
+			var $this = $(this);
+			var data = $this.data('u.pagination');
+			var options = (typeof option === 'undefined' ? 'undefined' : _typeof(option)) == 'object' && option;
+
+			if (!data) $this.data('u.pagination', data = new Pagination(this, options));else data.update(options);
+		});
+	}
+
+	// var old = $.fn.pagination;
+
+	// $.fn.pagination = Plugin
+	// $.fn.pagination.Constructor = Pagination
+
+	if (_compMgr.compMgr) _compMgr.compMgr.regComp({
+		comp: pagination,
+		compAsString: 'u.pagination',
+		css: 'u-pagination'
+=======
+	var Progress = _BaseComponent.BaseComponent.extend({
+		_Constant: {},
+		_CssClasses: {
+			INDETERMINATE_CLASS: 'u-progress__indeterminate'
+		},
+		setProgress: function setProgress(p) {
+
+			if ((0, _dom.hasClass)(this.element, this._CssClasses.INDETERMINATE_CLASS)) {
+				return;
+			}
+
+			this.progressbar_.style.width = p + '%';
+			return this;
+		},
+		/**
+	  * 设置竖向进度条的进度
+	  * @param p 要设置的进度
+	  * @returns {u.Progress}
+	     */
+		setProgressHeight: function setProgressHeight(p) {
+
+			if ((0, _dom.hasClass)(this.element, this._CssClasses.INDETERMINATE_CLASS)) {
+				return;
+			}
+
+			this.progressbar_.style.height = p + '%';
+			this.progressbar_.style.width = '100%';
+			return this;
+		},
+		/**
+	  * 设置进度条中的html内容
+	  * @param p 要设置的html内容
+	  * @returns {u.Progress}
+	  */
+		setProgressHTML: function setProgressHTML(html) {
+
+			if ((0, _dom.hasClass)(this.element, this._CssClasses.INDETERMINATE_CLASS)) {
+				return;
+			}
+
+			this.progressbar_.innerHTML = html;
+			return this;
+		},
+		setBuffer: function setBuffer(p) {
+			this.bufferbar_.style.width = p + '%';
+			this.auxbar_.style.width = 100 - p + '%';
+			return this;
+		},
+
+		init: function init() {
+			var el = document.createElement('div');
+			el.className = 'progressbar bar bar1';
+			this.element.appendChild(el);
+			this.progressbar_ = el;
+
+			el = document.createElement('div');
+			el.className = 'bufferbar bar bar2';
+			this.element.appendChild(el);
+			this.bufferbar_ = el;
+
+			el = document.createElement('div');
+			el.className = 'auxbar bar bar3';
+			this.element.appendChild(el);
+			this.auxbar_ = el;
+
+			this.progressbar_.style.width = '0%';
+			this.bufferbar_.style.width = '100%';
+			this.auxbar_.style.width = '0%';
+
+			(0, _dom.addClass)(this.element, 'is-upgraded');
+
+			if (_env.env.isIE8 || _env.env.isIE9) {
+
+				if ((0, _dom.hasClass)(this.element, this._CssClasses.INDETERMINATE_CLASS)) {
+					var p = 0;
+					var oThis = this;
+					setInterval(function () {
+						p += 5;
+						p = p % 100;
+						oThis.progressbar_.style.width = p + '%';
+					}, 100);
+				}
+			}
+		}
+
+	}); /**
+	     * Module : neoui-progress
+	     * Author : Kvkens(yueming@yonyou.com)
+	     * Date	  : 2016-08-03 10:46:37
+	     */
+
+	_compMgr.compMgr.regComp({
+		comp: Progress,
+		compAsString: 'u.Progress',
+		css: 'u-progress'
+	});
+	if (document.readyState && document.readyState === 'complete') {
+		_compMgr.compMgr.updateComp();
+	} else {
+		(0, _event.on)(window, 'load', function () {
+			//扫描并生成控件
+			_compMgr.compMgr.updateComp();
+		});
+	}
+	exports.Progress = Progress;
+
+/***/ },
+/* 114 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.SwitchAdapter = undefined;
+
+	var _baseAdapter = __webpack_require__(76);
+
+	var _neouiSwitch = __webpack_require__(115);
+
+	var _compMgr = __webpack_require__(4);
+
+	var SwitchAdapter = _baseAdapter.BaseAdapter.extend({
+	    initialize: function initialize(options) {
+	        var self = this;
+	        SwitchAdapter.superclass.initialize.apply(this, arguments);
+
+	        this.comp = new _neouiSwitch.Switch(this.element);
+	        this.element['u.Switch'] = this.comp;
+	        this.checkedValue = this.options['checkedValue'] || this.comp._inputElement.value;
+	        this.unCheckedValue = this.options["unCheckedValue"];
+	        this.comp.on('change', function (event) {
+	            if (self.slice) return;
+	            if (self.comp._inputElement.checked) {
+	                self.dataModel.setValue(self.field, self.checkedValue);
+	            } else {
+	                self.dataModel.setValue(self.field, self.unCheckedValue);
+	            }
+	        });
+
+	        this.dataModel.ref(this.field).subscribe(function (value) {
+	            self.modelValueChange(value);
+	        });
+	    },
+
+	    modelValueChange: function modelValueChange(val) {
+	        if (this.slice) return;
+	        if (this.comp._inputElement.checked != (val === this.checkedValue)) {
+	            this.slice = true;
+	            this.comp.toggle();
+	            this.slice = false;
+	        }
+	    },
+	    setEnable: function setEnable(enable) {
+	        if (enable === true || enable === 'true') {
+	            this.enable = true;
+	        } else if (enable === false || enable === 'false') {
+	            this.enable = false;
+	        }
+	    }
+	}); /**
+	     * Module : Kero switch adapter
+	     * Author : Kvkens(yueming@yonyou.com)
+	     * Date	  : 2016-08-10 10:42:15
+	     */
+
+	_compMgr.compMgr.addDataAdapter({
+	    adapter: SwitchAdapter,
+	    name: 'u-switch'
+	});
+
+	exports.SwitchAdapter = SwitchAdapter;
+
+/***/ },
+/* 115 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.Switch = undefined;
+
+	var _BaseComponent = __webpack_require__(83);
+
+	var _dom = __webpack_require__(5);
+
+	var _event = __webpack_require__(6);
+
+	var _ripple = __webpack_require__(87);
+
+	var _compMgr = __webpack_require__(4);
+
+	var Switch = _BaseComponent.BaseComponent.extend({
+		_Constant: {
+			TINY_TIMEOUT: 0.001
+		},
+
+		_CssClasses: {
+			INPUT: 'u-switch-input',
+			TRACK: 'u-switch-track',
+			THUMB: 'u-switch-thumb',
+			FOCUS_HELPER: 'u-switch-focus-helper',
+			IS_FOCUSED: 'is-focused',
+			IS_DISABLED: 'is-disabled',
+			IS_CHECKED: 'is-checked'
+		},
+
+		init: function init() {
+			this._inputElement = this.element.querySelector('.' + this._CssClasses.INPUT);
+
+			var track = document.createElement('div');
+			(0, _dom.addClass)(track, this._CssClasses.TRACK);
+
+			var thumb = document.createElement('div');
+			(0, _dom.addClass)(thumb, this._CssClasses.THUMB);
+
+			var focusHelper = document.createElement('span');
+			(0, _dom.addClass)(focusHelper, this._CssClasses.FOCUS_HELPER);
+
+			thumb.appendChild(focusHelper);
+
+			this.element.appendChild(track);
+			this.element.appendChild(thumb);
+
+			this.boundMouseUpHandler = this._onMouseUp.bind(this);
+
+			//if (this.element.classList.contains(this._CssClasses.RIPPLE_EFFECT)) {
+			//  addClass(this.element,this._CssClasses.RIPPLE_IGNORE_EVENTS);
+			this._rippleContainerElement = document.createElement('span');
+			//this._rippleContainerElement.classList.add(this._CssClasses.RIPPLE_CONTAINER);
+			//this._rippleContainerElement.classList.add(this._CssClasses.RIPPLE_EFFECT);
+			//this._rippleContainerElement.classList.add(this._CssClasses.RIPPLE_CENTER);
+			this._rippleContainerElement.addEventListener('mouseup', this.boundMouseUpHandler);
+
+			//var ripple = document.createElement('span');
+			//ripple.classList.add(this._CssClasses.RIPPLE);
+
+			//this._rippleContainerElement.appendChild(ripple);
+			this.element.appendChild(this._rippleContainerElement);
+			new _ripple.URipple(this._rippleContainerElement);
+			//}
+
+			this.boundChangeHandler = this._onChange.bind(this);
+			this.boundFocusHandler = this._onFocus.bind(this);
+			this.boundBlurHandler = this._onBlur.bind(this);
+
+			this._inputElement.addEventListener('change', this.boundChangeHandler);
+			this._inputElement.addEventListener('focus', this.boundFocusHandler);
+			this._inputElement.addEventListener('blur', this.boundBlurHandler);
+			this.element.addEventListener('mouseup', this.boundMouseUpHandler);
+
+			this._updateClasses();
+			(0, _dom.addClass)(this.element, 'is-upgraded');
+		},
+
+		_onChange: function _onChange(event) {
+			this._updateClasses();
+			this.trigger('change', {
+				isChecked: this._inputElement.checked
+			});
+		},
+
+		_onFocus: function _onFocus(event) {
+			(0, _dom.addClass)(this.element, this._CssClasses.IS_FOCUSED);
+		},
+
+		_onBlur: function _onBlur(event) {
+			(0, _dom.removeClass)(this.element, this._CssClasses.IS_FOCUSED);
+		},
+
+		_onMouseUp: function _onMouseUp(event) {
+			this._blur();
+		},
+
+		_updateClasses: function _updateClasses() {
+			this.checkDisabled();
+			this.checkToggleState();
+		},
+
+		_blur: function _blur() {
+			// TODO: figure out why there's a focus event being fired after our blur,
+			// so that we can avoid this hack.
+			window.setTimeout(function () {
+				this._inputElement.blur();
+			}.bind(this), /** @type {number} */this._Constant.TINY_TIMEOUT);
+		},
+
+		// Public methods.
+
+		checkDisabled: function checkDisabled() {
+			if (this._inputElement.disabled) {
+				(0, _dom.addClass)(this.element, this._CssClasses.IS_DISABLED);
+			} else {
+				(0, _dom.removeClass)(this.element, this._CssClasses.IS_DISABLED);
+			}
+		},
+
+		checkToggleState: function checkToggleState() {
+			if (this._inputElement.checked) {
+				(0, _dom.addClass)(this.element, this._CssClasses.IS_CHECKED);
+			} else {
+				(0, _dom.removeClass)(this.element, this._CssClasses.IS_CHECKED);
+			}
+		},
+
+		isChecked: function isChecked() {
+			//return hasClass(this.element,this._CssClasses.IS_CHECKED);
+			return this._inputElement.checked;
+		},
+
+		toggle: function toggle() {
+			//return;
+			if (this.isChecked()) {
+				this.uncheck();
+			} else {
+				this.check();
+			}
+		},
+
+		disable: function disable() {
+			this._inputElement.disabled = true;
+			this._updateClasses();
+		},
+
+		enable: function enable() {
+			this._inputElement.disabled = false;
+			this._updateClasses();
+		},
+
+		check: function check() {
+			this._inputElement.checked = true;
+			this._updateClasses();
+		},
+
+		uncheck: function uncheck() {
+			this._inputElement.checked = false;
+			this._updateClasses();
+		}
+
+	}); /**
+	     * Module : neoui-switch
+	     * Author : Kvkens(yueming@yonyou.com)
+	     * Date	  : 2016-08-03 13:39:55
+	     */
+
+	_compMgr.compMgr.regComp({
+		comp: Switch,
+		compAsString: 'u.Switch',
+		css: 'u-switch'
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
+	});
+
+	if (document.readyState && document.readyState === 'complete') {
+		_compMgr.compMgr.updateComp();
+	} else {
+		(0, _event.on)(window, 'load', function () {
+			//扫描并生成控件
+			_compMgr.compMgr.updateComp();
+		});
+	}
+
+<<<<<<< HEAD
+	exports.pagination = pagination;
+
+/***/ },
+/* 118 */
+=======
+	exports.Switch = Switch;
+
+/***/ },
+/* 116 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+<<<<<<< HEAD
 	exports.ProgressAdapter = undefined;
 
 	var _baseAdapter = __webpack_require__(76);
@@ -16503,11 +18488,145 @@
 
 /***/ },
 /* 119 */
+=======
+	exports.TextAreaAdapter = undefined;
+
+	var _baseAdapter = __webpack_require__(76);
+
+	var _valueMixin = __webpack_require__(78);
+
+	var _enableMixin = __webpack_require__(79);
+
+	var _requiredMixin = __webpack_require__(80);
+
+	var _validateMixin = __webpack_require__(81);
+
+	var _event = __webpack_require__(6);
+
+	var _compMgr = __webpack_require__(4);
+
+	var TextAreaAdapter = _baseAdapter.BaseAdapter.extend({
+	    mixins: [_valueMixin.ValueMixin, _enableMixin.EnableMixin, _requiredMixin.RequiredMixin, _validateMixin.ValidateMixin],
+	    init: function init() {
+	        var self = this;
+	        this.element = this.element.nodeName === 'TEXTAREA' ? this.element : this.element.querySelector('textarea');
+	        if (!this.element) {
+	            throw new Error('not found TEXTAREA element, u-meta:' + JSON.stringify(this.options));
+	        };
+
+	        (0, _event.on)(this.element, 'focus', function () {
+	            self.setShowValue(self.getValue());
+	        });
+	        (0, _event.on)(this.element, 'blur', function () {
+	            self.setValue(self.element.value);
+	        });
+	    }
+	}); /**
+	     * Module : Kero textarea adapter
+	     * Author : Kvkens(yueming@yonyou.com)
+	     * Date	  : 2016-08-10 12:40:46
+	     */
+
+	_compMgr.compMgr.addDataAdapter({
+	    adapter: TextAreaAdapter,
+	    name: 'textarea'
+	});
+
+	exports.TextAreaAdapter = TextAreaAdapter;
+
+/***/ },
+/* 117 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.TextFieldAdapter = undefined;
+
+	var _baseAdapter = __webpack_require__(76);
+
+	var _extend = __webpack_require__(8);
+
+	var _neouiTextfield = __webpack_require__(91);
+
+	var _keroaFloat = __webpack_require__(94);
+
+	var _keroaString = __webpack_require__(100);
+
+	var _keroaInteger = __webpack_require__(101);
+
+	var _compMgr = __webpack_require__(4);
+
+	var TextFieldAdapter = _baseAdapter.BaseAdapter.extend({
+	    /**
+	     *
+	     * @param comp
+	     * @param options ：
+	     *      el: '#content',  对应的dom元素
+	     *      options: {},     配置
+	     *      model:{}        模型，包括数据和事件
+	     */
+	    initialize: function initialize(options) {
+	        TextFieldAdapter.superclass.initialize.apply(this, arguments);
+	        //this.comp = comp;
+	        //this.element = options['el'];
+	        //this.options = options['options'];
+	        //this.viewModel = options['model'];
+	        var dataType = this.dataModel.getMeta(this.field, 'type') || 'string';
+	        //var dataType = this.options['dataType'] || 'string';
+
+	        this.comp = new _neouiTextfield.Text(this.element);
+	        this.element['u.Text'] = this.comp;
+
+	        if (dataType === 'float') {
+	            this.trueAdpt = new _keroaFloat.FloatAdapter(options);
+	        } else if (dataType === 'string') {
+	            this.trueAdpt = new _keroaString.StringAdapter(options);
+	        } else if (dataType === 'integer') {
+	            this.trueAdpt = new _keroaInteger.IntegerAdapter(options);
+	        } else {
+	            throw new Error("'u-text' only support 'float' or 'string' or 'integer' field type, not support type: '" + dataType + "', field: '" + this.field + "'");
+	        }
+	        (0, _extend.extend)(this, this.trueAdpt);
+
+	        this.trueAdpt.comp = this.comp;
+	        this.trueAdpt.setShowValue = function (showValue) {
+	            this.showValue = showValue;
+	            //if (this.comp.compType === 'text')
+	            this.comp.change(showValue);
+	            this.element.title = showValue;
+	        };
+	        // 解决初始设置值后，没有走这个setShowValue方法问题
+	        if (this.trueAdpt.enable) {
+	            this.trueAdpt.setShowValue(this.trueAdpt.getValue());
+	        }
+	        return this.trueAdpt;
+	    }
+	}); /**
+	     * Module : Kero textfield adapter
+	     * Author : Kvkens(yueming@yonyou.com)
+	     * Date	  : 2016-08-10 13:00:27
+	     */
+
+	_compMgr.compMgr.addDataAdapter({
+	    adapter: TextFieldAdapter,
+	    name: 'u-text'
+	    //dataType: 'float'
+	});
+
+	exports.TextFieldAdapter = TextFieldAdapter;
+
+/***/ },
+/* 118 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+<<<<<<< HEAD
 		value: true
 	});
 	exports.Progress = undefined;
@@ -16630,11 +18749,120 @@
 
 /***/ },
 /* 120 */
+=======
+	    value: true
+	});
+	exports.TimeAdapter = undefined;
+
+	var _baseAdapter = __webpack_require__(76);
+
+	var _valueMixin = __webpack_require__(78);
+
+	var _enableMixin = __webpack_require__(79);
+
+	var _requiredMixin = __webpack_require__(80);
+
+	var _validateMixin = __webpack_require__(81);
+
+	var _event = __webpack_require__(6);
+
+	var _core = __webpack_require__(71);
+
+	var _env = __webpack_require__(7);
+
+	var _dateUtils = __webpack_require__(70);
+
+	var _neouiClockpicker = __webpack_require__(119);
+
+	var _neouiTime = __webpack_require__(120);
+
+	var _compMgr = __webpack_require__(4);
+
+	/**
+	 * Module : Kero time adapter
+	 * Author : Kvkens(yueming@yonyou.com)
+	 * Date	  : 2016-08-10 12:40:46
+	 */
+
+	var TimeAdapter = _baseAdapter.BaseAdapter.extend({
+	    initialize: function initialize(options) {
+	        var self = this;
+	        TimeAdapter.superclass.initialize.apply(this, arguments);
+	        this.validType = 'time';
+
+	        this.maskerMeta = _core.core.getMaskerMeta('time') || {};
+	        this.maskerMeta.format = this.dataModel.getMeta(this.field, "format") || this.maskerMeta.format;
+
+	        if (this.options.type == 'u-clockpicker' && !_env.env.isIE8) this.comp = new _neouiClockpicker.ClockPicker(this.element);else this.comp = new _neouiTime.Time(this.element);
+	        var dataType = this.dataModel.getMeta(this.field, 'type');
+	        this.dataType = dataType || 'string';
+
+	        this.comp.on('valueChange', function (event) {
+	            self.slice = true;
+	            if (event.value == '') {
+	                self.dataModel.setValue(self.field, '');
+	            } else {
+	                var _date = self.dataModel.getValue(self.field);
+	                if (self.dataType === 'datetime') {
+	                    var valueArr = event.value.split(':');
+	                    _date = _dateUtils.date.getDateObj(_date);
+	                    if (!_date) {
+	                        self.dataModel.setValue(self.field, '');
+	                    } else {
+	                        if (event.value == _date.getHours() + ':' + _date.getMinutes() + ':' + _date.getSeconds()) return;
+	                        _date.setHours(valueArr[0]);
+	                        _date.setMinutes(valueArr[1]);
+	                        _date.setSeconds(valueArr[2]);
+	                        self.dataModel.setValue(self.field, u.date.format(_date, 'YYYY-MM-DD HH:mm:ss'));
+	                    }
+	                } else {
+	                    if (event.value == _date) return;
+	                    self.dataModel.setValue(self.field, event.value);
+	                }
+	            }
+
+	            self.slice = false;
+	            //self.setValue(event.value);
+	        });
+	        this.dataModel.ref(this.field).subscribe(function (value) {
+	            self.modelValueChange(value);
+	        });
+	    },
+	    modelValueChange: function modelValueChange(value) {
+	        if (this.slice) return;
+	        var compValue = '';
+	        if (this.dataType === 'datetime') {
+	            var _date = _dateUtils.date.getDateObj(value);
+	            if (!_date) compValue = '';else compValue = _date.getHours() + ':' + _date.getMinutes() + ':' + _date.getSeconds();
+	        } else {
+	            compValue = value;
+	        }
+	        this.comp.setValue(compValue);
+	    },
+	    setEnable: function setEnable(enable) {}
+	});
+
+	_compMgr.compMgr.addDataAdapter({
+	    adapter: TimeAdapter,
+	    name: 'u-time'
+	});
+
+	_compMgr.compMgr.addDataAdapter({
+	    adapter: TimeAdapter,
+	    name: 'u-clockpicker'
+	});
+
+	exports.TimeAdapter = TimeAdapter;
+
+/***/ },
+/* 119 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
+<<<<<<< HEAD
 	    value: true
 	});
 	exports.SwitchAdapter = undefined;
@@ -16875,273 +19103,7 @@
 		css: 'u-switch'
 	});
 
-	if (document.readyState && document.readyState === 'complete') {
-		_compMgr.compMgr.updateComp();
-	} else {
-		(0, _event.on)(window, 'load', function () {
-			//扫描并生成控件
-			_compMgr.compMgr.updateComp();
-		});
-	}
-
-	exports.Switch = Switch;
-
-/***/ },
-/* 122 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.TextAreaAdapter = undefined;
-
-	var _baseAdapter = __webpack_require__(76);
-
-	var _valueMixin = __webpack_require__(78);
-
-	var _enableMixin = __webpack_require__(79);
-
-	var _requiredMixin = __webpack_require__(80);
-
-	var _validateMixin = __webpack_require__(81);
-
-	var _event = __webpack_require__(6);
-
-	var _compMgr = __webpack_require__(4);
-
-	var TextAreaAdapter = _baseAdapter.BaseAdapter.extend({
-	    mixins: [_valueMixin.ValueMixin, _enableMixin.EnableMixin, _requiredMixin.RequiredMixin, _validateMixin.ValidateMixin],
-	    init: function init() {
-	        var self = this;
-	        this.element = this.element.nodeName === 'TEXTAREA' ? this.element : this.element.querySelector('textarea');
-	        if (!this.element) {
-	            throw new Error('not found TEXTAREA element, u-meta:' + JSON.stringify(this.options));
-	        };
-
-	        (0, _event.on)(this.element, 'focus', function () {
-	            self.setShowValue(self.getValue());
-	        });
-	        (0, _event.on)(this.element, 'blur', function () {
-	            self.setValue(self.element.value);
-	        });
-	    }
-	}); /**
-	     * Module : Kero textarea adapter
-	     * Author : Kvkens(yueming@yonyou.com)
-	     * Date	  : 2016-08-10 12:40:46
-	     */
-
-	_compMgr.compMgr.addDataAdapter({
-	    adapter: TextAreaAdapter,
-	    name: 'textarea'
-	});
-
-	exports.TextAreaAdapter = TextAreaAdapter;
-
-/***/ },
-/* 123 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.TextFieldAdapter = undefined;
-
-	var _baseAdapter = __webpack_require__(76);
-
-	var _extend = __webpack_require__(8);
-
-	var _neouiTextfield = __webpack_require__(91);
-
-	var _float = __webpack_require__(94);
-
-	var _string = __webpack_require__(100);
-
-	var _integer = __webpack_require__(101);
-
-	var _compMgr = __webpack_require__(4);
-
-	var TextFieldAdapter = _baseAdapter.BaseAdapter.extend({
-	    /**
-	     *
-	     * @param comp
-	     * @param options ：
-	     *      el: '#content',  对应的dom元素
-	     *      options: {},     配置
-	     *      model:{}        模型，包括数据和事件
-	     */
-	    initialize: function initialize(options) {
-	        TextFieldAdapter.superclass.initialize.apply(this, arguments);
-	        //this.comp = comp;
-	        //this.element = options['el'];
-	        //this.options = options['options'];
-	        //this.viewModel = options['model'];
-	        var dataType = this.dataModel.getMeta(this.field, 'type') || 'string';
-	        //var dataType = this.options['dataType'] || 'string';
-
-	        this.comp = new _neouiTextfield.Text(this.element);
-	        this.element['u.Text'] = this.comp;
-
-	        if (dataType === 'float') {
-	            this.trueAdpt = new _float.FloatAdapter(options);
-	        } else if (dataType === 'string') {
-	            this.trueAdpt = new _string.StringAdapter(options);
-	        } else if (dataType === 'integer') {
-	            this.trueAdpt = new _integer.IntegerAdapter(options);
-	        } else {
-	            throw new Error("'u-text' only support 'float' or 'string' or 'integer' field type, not support type: '" + dataType + "', field: '" + this.field + "'");
-	        }
-	        (0, _extend.extend)(this, this.trueAdpt);
-
-	        this.trueAdpt.comp = this.comp;
-	        this.trueAdpt.setShowValue = function (showValue) {
-	            this.showValue = showValue;
-	            //if (this.comp.compType === 'text')
-	            this.comp.change(showValue);
-	            this.element.title = showValue;
-	        };
-	        // 解决初始设置值后，没有走这个setShowValue方法问题
-	        if (this.trueAdpt.enable) {
-	            this.trueAdpt.setShowValue(this.trueAdpt.getValue());
-	        }
-	        return this.trueAdpt;
-	    }
-	}); /**
-	     * Module : Kero textfield adapter
-	     * Author : Kvkens(yueming@yonyou.com)
-	     * Date	  : 2016-08-10 13:00:27
-	     */
-
-	_compMgr.compMgr.addDataAdapter({
-	    adapter: TextFieldAdapter,
-	    name: 'u-text'
-	    //dataType: 'float'
-	});
-
-	exports.TextFieldAdapter = TextFieldAdapter;
-
-/***/ },
-/* 124 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.TimeAdapter = undefined;
-
-	var _baseAdapter = __webpack_require__(76);
-
-	var _valueMixin = __webpack_require__(78);
-
-	var _enableMixin = __webpack_require__(79);
-
-	var _requiredMixin = __webpack_require__(80);
-
-	var _validateMixin = __webpack_require__(81);
-
-	var _event = __webpack_require__(6);
-
-	var _core = __webpack_require__(71);
-
-	var _env = __webpack_require__(7);
-
-	var _dateUtils = __webpack_require__(70);
-
-	var _neouiClockpicker = __webpack_require__(125);
-
-	var _neouiTime = __webpack_require__(126);
-
-	var _compMgr = __webpack_require__(4);
-
-	/**
-	 * Module : Kero time adapter
-	 * Author : Kvkens(yueming@yonyou.com)
-	 * Date	  : 2016-08-10 12:40:46
-	 */
-
-	var TimeAdapter = _baseAdapter.BaseAdapter.extend({
-	    initialize: function initialize(options) {
-	        var self = this;
-	        TimeAdapter.superclass.initialize.apply(this, arguments);
-	        this.validType = 'time';
-
-	        this.maskerMeta = _core.core.getMaskerMeta('time') || {};
-	        this.maskerMeta.format = this.dataModel.getMeta(this.field, "format") || this.maskerMeta.format;
-
-	        if (this.options.type == 'u-clockpicker' && !_env.env.isIE8) this.comp = new _neouiClockpicker.ClockPicker(this.element);else this.comp = new _neouiTime.Time(this.element);
-	        var dataType = this.dataModel.getMeta(this.field, 'type');
-	        this.dataType = dataType || 'string';
-
-	        this.comp.on('valueChange', function (event) {
-	            self.slice = true;
-	            if (event.value == '') {
-	                self.dataModel.setValue(self.field, '');
-	            } else {
-	                var _date = self.dataModel.getValue(self.field);
-	                if (self.dataType === 'datetime') {
-	                    var valueArr = event.value.split(':');
-	                    _date = _dateUtils.date.getDateObj(_date);
-	                    if (!_date) {
-	                        self.dataModel.setValue(self.field, '');
-	                    } else {
-	                        if (event.value == _date.getHours() + ':' + _date.getMinutes() + ':' + _date.getSeconds()) return;
-	                        _date.setHours(valueArr[0]);
-	                        _date.setMinutes(valueArr[1]);
-	                        _date.setSeconds(valueArr[2]);
-	                        self.dataModel.setValue(self.field, u.date.format(_date, 'YYYY-MM-DD HH:mm:ss'));
-	                    }
-	                } else {
-	                    if (event.value == _date) return;
-	                    self.dataModel.setValue(self.field, event.value);
-	                }
-	            }
-
-	            self.slice = false;
-	            //self.setValue(event.value);
-	        });
-	        this.dataModel.ref(this.field).subscribe(function (value) {
-	            self.modelValueChange(value);
-	        });
-	    },
-	    modelValueChange: function modelValueChange(value) {
-	        if (this.slice) return;
-	        var compValue = '';
-	        if (this.dataType === 'datetime') {
-	            var _date = _dateUtils.date.getDateObj(value);
-	            if (!_date) compValue = '';else compValue = _date.getHours() + ':' + _date.getMinutes() + ':' + _date.getSeconds();
-	        } else {
-	            compValue = value;
-	        }
-	        this.comp.setValue(compValue);
-	    },
-	    setEnable: function setEnable(enable) {}
-	});
-
-	_compMgr.compMgr.addDataAdapter({
-	    adapter: TimeAdapter,
-	    name: 'u-time'
-	});
-
-	_compMgr.compMgr.addDataAdapter({
-	    adapter: TimeAdapter,
-	    name: 'u-clockpicker'
-	});
-
-	exports.TimeAdapter = TimeAdapter;
-
-/***/ },
-/* 125 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
+=======
 		value: true
 	});
 	exports.ClockPicker = undefined;
@@ -17591,6 +19553,7 @@
 		compAsString: 'u.ClockPicker',
 		css: 'u-clockpicker'
 	});
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	if (document.readyState && document.readyState === 'complete') {
 		_compMgr.compMgr.updateComp();
 	} else {
@@ -17599,15 +19562,158 @@
 			_compMgr.compMgr.updateComp();
 		});
 	}
+<<<<<<< HEAD
+
+	exports.Switch = Switch;
+
+/***/ },
+/* 122 */
+=======
 	exports.ClockPicker = ClockPicker;
 
 /***/ },
-/* 126 */
+/* 120 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
+<<<<<<< HEAD
+	    value: true
+	});
+	exports.TextAreaAdapter = undefined;
+
+	var _baseAdapter = __webpack_require__(76);
+
+	var _valueMixin = __webpack_require__(78);
+
+	var _enableMixin = __webpack_require__(79);
+
+	var _requiredMixin = __webpack_require__(80);
+
+	var _validateMixin = __webpack_require__(81);
+
+	var _event = __webpack_require__(6);
+
+	var _compMgr = __webpack_require__(4);
+
+	var TextAreaAdapter = _baseAdapter.BaseAdapter.extend({
+	    mixins: [_valueMixin.ValueMixin, _enableMixin.EnableMixin, _requiredMixin.RequiredMixin, _validateMixin.ValidateMixin],
+	    init: function init() {
+	        var self = this;
+	        this.element = this.element.nodeName === 'TEXTAREA' ? this.element : this.element.querySelector('textarea');
+	        if (!this.element) {
+	            throw new Error('not found TEXTAREA element, u-meta:' + JSON.stringify(this.options));
+	        };
+
+	        (0, _event.on)(this.element, 'focus', function () {
+	            self.setShowValue(self.getValue());
+	        });
+	        (0, _event.on)(this.element, 'blur', function () {
+	            self.setValue(self.element.value);
+	        });
+	    }
+	}); /**
+	     * Module : Kero textarea adapter
+	     * Author : Kvkens(yueming@yonyou.com)
+	     * Date	  : 2016-08-10 12:40:46
+	     */
+
+	_compMgr.compMgr.addDataAdapter({
+	    adapter: TextAreaAdapter,
+	    name: 'textarea'
+	});
+
+	exports.TextAreaAdapter = TextAreaAdapter;
+
+/***/ },
+/* 123 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.TextFieldAdapter = undefined;
+
+	var _baseAdapter = __webpack_require__(76);
+
+	var _extend = __webpack_require__(8);
+
+	var _neouiTextfield = __webpack_require__(91);
+
+	var _float = __webpack_require__(94);
+
+	var _string = __webpack_require__(100);
+
+	var _integer = __webpack_require__(101);
+
+	var _compMgr = __webpack_require__(4);
+
+	var TextFieldAdapter = _baseAdapter.BaseAdapter.extend({
+	    /**
+	     *
+	     * @param comp
+	     * @param options ：
+	     *      el: '#content',  对应的dom元素
+	     *      options: {},     配置
+	     *      model:{}        模型，包括数据和事件
+	     */
+	    initialize: function initialize(options) {
+	        TextFieldAdapter.superclass.initialize.apply(this, arguments);
+	        //this.comp = comp;
+	        //this.element = options['el'];
+	        //this.options = options['options'];
+	        //this.viewModel = options['model'];
+	        var dataType = this.dataModel.getMeta(this.field, 'type') || 'string';
+	        //var dataType = this.options['dataType'] || 'string';
+
+	        this.comp = new _neouiTextfield.Text(this.element);
+	        this.element['u.Text'] = this.comp;
+
+	        if (dataType === 'float') {
+	            this.trueAdpt = new _float.FloatAdapter(options);
+	        } else if (dataType === 'string') {
+	            this.trueAdpt = new _string.StringAdapter(options);
+	        } else if (dataType === 'integer') {
+	            this.trueAdpt = new _integer.IntegerAdapter(options);
+	        } else {
+	            throw new Error("'u-text' only support 'float' or 'string' or 'integer' field type, not support type: '" + dataType + "', field: '" + this.field + "'");
+	        }
+	        (0, _extend.extend)(this, this.trueAdpt);
+
+	        this.trueAdpt.comp = this.comp;
+	        this.trueAdpt.setShowValue = function (showValue) {
+	            this.showValue = showValue;
+	            //if (this.comp.compType === 'text')
+	            this.comp.change(showValue);
+	            this.element.title = showValue;
+	        };
+	        // 解决初始设置值后，没有走这个setShowValue方法问题
+	        if (this.trueAdpt.enable) {
+	            this.trueAdpt.setShowValue(this.trueAdpt.getValue());
+	        }
+	        return this.trueAdpt;
+	    }
+	}); /**
+	     * Module : Kero textfield adapter
+	     * Author : Kvkens(yueming@yonyou.com)
+	     * Date	  : 2016-08-10 13:00:27
+	     */
+
+	_compMgr.compMgr.addDataAdapter({
+	    adapter: TextFieldAdapter,
+	    name: 'u-text'
+	    //dataType: 'float'
+	});
+
+	exports.TextFieldAdapter = TextFieldAdapter;
+
+/***/ },
+/* 124 */
+=======
 		value: true
 	});
 	exports.Time = undefined;
@@ -17844,7 +19950,1467 @@
 	exports.Time = Time;
 
 /***/ },
+/* 121 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+<<<<<<< HEAD
+	exports.TimeAdapter = undefined;
+
+	var _baseAdapter = __webpack_require__(76);
+
+	var _valueMixin = __webpack_require__(78);
+
+	var _enableMixin = __webpack_require__(79);
+
+	var _requiredMixin = __webpack_require__(80);
+
+	var _validateMixin = __webpack_require__(81);
+
+	var _event = __webpack_require__(6);
+
+	var _core = __webpack_require__(71);
+
+	var _env = __webpack_require__(7);
+
+	var _dateUtils = __webpack_require__(70);
+
+	var _neouiClockpicker = __webpack_require__(125);
+
+	var _neouiTime = __webpack_require__(126);
+
+	var _compMgr = __webpack_require__(4);
+
+	/**
+	 * Module : Kero time adapter
+	 * Author : Kvkens(yueming@yonyou.com)
+	 * Date	  : 2016-08-10 12:40:46
+	 */
+
+	var TimeAdapter = _baseAdapter.BaseAdapter.extend({
+	    initialize: function initialize(options) {
+	        var self = this;
+	        TimeAdapter.superclass.initialize.apply(this, arguments);
+	        this.validType = 'time';
+
+	        this.maskerMeta = _core.core.getMaskerMeta('time') || {};
+	        this.maskerMeta.format = this.dataModel.getMeta(this.field, "format") || this.maskerMeta.format;
+
+	        if (this.options.type == 'u-clockpicker' && !_env.env.isIE8) this.comp = new _neouiClockpicker.ClockPicker(this.element);else this.comp = new _neouiTime.Time(this.element);
+	        var dataType = this.dataModel.getMeta(this.field, 'type');
+	        this.dataType = dataType || 'string';
+
+	        this.comp.on('valueChange', function (event) {
+	            self.slice = true;
+	            if (event.value == '') {
+	                self.dataModel.setValue(self.field, '');
+	            } else {
+	                var _date = self.dataModel.getValue(self.field);
+	                if (self.dataType === 'datetime') {
+	                    var valueArr = event.value.split(':');
+	                    _date = _dateUtils.date.getDateObj(_date);
+	                    if (!_date) {
+	                        self.dataModel.setValue(self.field, '');
+	                    } else {
+	                        if (event.value == _date.getHours() + ':' + _date.getMinutes() + ':' + _date.getSeconds()) return;
+	                        _date.setHours(valueArr[0]);
+	                        _date.setMinutes(valueArr[1]);
+	                        _date.setSeconds(valueArr[2]);
+	                        self.dataModel.setValue(self.field, u.date.format(_date, 'YYYY-MM-DD HH:mm:ss'));
+	                    }
+	                } else {
+	                    if (event.value == _date) return;
+	                    self.dataModel.setValue(self.field, event.value);
+	                }
+	            }
+
+=======
+	exports.YearAdapter = undefined;
+
+	var _baseAdapter = __webpack_require__(76);
+
+	var _neouiYear = __webpack_require__(122);
+
+	var _compMgr = __webpack_require__(4);
+
+	var YearAdapter = _baseAdapter.BaseAdapter.extend({
+	    initialize: function initialize(comp, options) {
+	        var self = this;
+	        YearAdapter.superclass.initialize.apply(this, arguments);
+	        this.validType = 'year';
+
+	        this.comp = new _neouiYear.Year(this.element);
+
+	        this.comp.on('valueChange', function (event) {
+	            self.slice = true;
+	            self.dataModel.setValue(self.field, event.value);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
+	            self.slice = false;
+	            //self.setValue(event.value);
+	        });
+	        this.dataModel.ref(this.field).subscribe(function (value) {
+	            self.modelValueChange(value);
+	        });
+	    },
+	    modelValueChange: function modelValueChange(value) {
+	        if (this.slice) return;
+<<<<<<< HEAD
+	        var compValue = '';
+	        if (this.dataType === 'datetime') {
+	            var _date = _dateUtils.date.getDateObj(value);
+	            if (!_date) compValue = '';else compValue = _date.getHours() + ':' + _date.getMinutes() + ':' + _date.getSeconds();
+	        } else {
+	            compValue = value;
+	        }
+	        this.comp.setValue(compValue);
+	    },
+	    setEnable: function setEnable(enable) {}
+	});
+
+	_compMgr.compMgr.addDataAdapter({
+	    adapter: TimeAdapter,
+	    name: 'u-time'
+	});
+
+	_compMgr.compMgr.addDataAdapter({
+	    adapter: TimeAdapter,
+	    name: 'u-clockpicker'
+	});
+
+	exports.TimeAdapter = TimeAdapter;
+
+/***/ },
+/* 125 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.ClockPicker = undefined;
+
+	var _BaseComponent = __webpack_require__(83);
+
+	var _dom = __webpack_require__(5);
+
+	var _event = __webpack_require__(6);
+
+	var _compMgr = __webpack_require__(4);
+
+	var _env = __webpack_require__(7);
+
+	var _extend = __webpack_require__(8);
+
+	var _core = __webpack_require__(71);
+
+	var _dateUtils = __webpack_require__(70);
+
+	/**
+	 * Module : neoui-clockpicker
+	 * Author : liuyk(liuyk@yonyou.com)
+	 * Date	  : 2016-08-11 15:17:07
+	 */
+
+	var ClockPicker = _BaseComponent.BaseComponent.extend({
+		DEFAULTS: {},
+		init: function init() {
+			var self = this;
+			var element = this.element;
+			this.options = (0, _extend.extend)({}, this.DEFAULTS, this.options);
+			this.format = this.options['format'] || _core.core.getMaskerMeta('time').format;
+			this.panelDiv = null;
+			this.input = this.element.querySelector("input");
+			if (_env.isMobile) {
+				this.input.setAttribute('readonly', 'readonly');
+			}
+			(0, _dom.addClass)(this.element, 'u-text');
+
+			this.template = '<div class="u-clock-ul popover clockpicker-popover" style="padding:0px;">';
+			this.template += '<div class="popover-title"><button class="u-button u-date-clean u-clock-clean" >清空</button><span class="clockpicker-span-hours">02</span> : <span class="clockpicker-span-minutes text-primary">01</span><span class="clockpicker-span-am-pm"></span></div>';
+			this.template += '<div class="popover-content">';
+			this.template += '	<div class="clockpicker-plate">';
+			this.template += '		<div class="clockpicker-canvas">';
+			this.template += '			<svg class="clockpicker-svg">';
+			this.template += '				<g transform="translate(100,100)">';
+			this.template += '					<circle class="clockpicker-canvas-bg clockpicker-canvas-bg-trans" r="13" cx="8.362277061412277" cy="-79.56175162946187"></circle>';
+			this.template += '					<circle class="clockpicker-canvas-fg" r="3.5" cx="8.362277061412277" cy="-79.56175162946187"></circle>';
+			this.template += '					<line x1="0" y1="0" x2="8.362277061412277" y2="-79.56175162946187"></line>';
+			this.template += '					<circle class="clockpicker-canvas-bearing" cx="0" cy="0" r="2"></circle>';
+			this.template += '				</g>';
+			this.template += '			</svg>';
+			this.template += '		</div>';
+			this.template += '		<div class="clockpicker-dial clockpicker-hours" style="visibility: visible;">';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-1" >00</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-2" >1</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-3" >2</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-4" >3</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-5" >4</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-6" >5</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-7" >6</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-8" >7</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-9" >8</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-10" >9</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-11" >10</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-12" >11</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-13" >12</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-14" >13</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-15" >14</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-16" >15</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-17" >16</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-18" >17</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-19" >18</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-20" >19</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-21" >20</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-22" >21</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-23" >22</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-24" >23</div>';
+			this.template += '		</div>';
+			this.template += '		<div class="clockpicker-dial clockpicker-minutes" style="visibility: hidden;">';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-25" >00</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-26" >05</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-27" >10</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-28" >15</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-29" >20</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-30" >25</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-31" >30</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-32" >35</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-33" >40</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-34" >45</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-35" >50</div>';
+			this.template += '			<div class="clockpicker-tick clockpicker-tick-36" >55</div>';
+			this.template += '		</div>';
+			this.template += '	</div><span class="clockpicker-am-pm-block"></span></div>';
+			this.template += '	</div>';
+			(0, _event.on)(this.input, 'blur', function (e) {
+				self._inputFocus = false;
+				this.setValue(this.input.value);
+			}.bind(this));
+
+			var d = new Date();
+			this.defaultHour = d.getHours() > 9 ? '' + d.getHours() : '0' + d.getHours();
+			this.defaultMin = d.getMinutes() > 9 ? '' + d.getMinutes() : '0' + d.getMinutes();
+			this.defaultSec = d.getSeconds() > 9 ? '' + d.getSeconds() : '0' + d.getSeconds();
+
+			this.hours = this.defaultHour;
+			this.min = this.defaultMin;
+			this.sec = this.defaultSec;
+			// 添加focus事件
+			this.focusEvent();
+			// 添加右侧图标click事件
+			this.clickEvent();
+		},
+
+		_zoomIn: function _zoomIn(newPage) {
+
+			(0, _dom.addClass)(newPage, 'zoom-in');
+
+			var cleanup = function () {
+				(0, _event.off)(newPage, 'transitionend', cleanup);
+				(0, _event.off)(newPage, 'webkitTransitionEnd', cleanup);
+				// this.panelContentDiv.removeChild(this.contentPage);
+				this.contentPage = newPage;
+			}.bind(this);
+			if (this.contentPage) {
+				(0, _event.on)(newPage, 'transitionend', cleanup);
+				(0, _event.on)(newPage, 'webkitTransitionEnd', cleanup);
+			}
+			setTimeout(function () {
+				newPage.style.visibility = 'visible';
+				(0, _dom.removeClass)(newPage, 'zoom-in');
+			}, 150);
+		},
+
+		createPanel: function createPanel() {
+			if (this.panelDiv) return;
+			var oThis = this;
+			this.panelDiv = (0, _dom.makeDOM)(this.template);
+
+			this.hand = this.panelDiv.querySelector('line');
+			this.bg = this.panelDiv.querySelector('.clockpicker-canvas-bg');
+			this.fg = this.panelDiv.querySelector('.clockpicker-canvas-fg');
+			this.titleHourSpan = this.panelDiv.querySelector('.clockpicker-span-hours');
+			this.titleMinSpan = this.panelDiv.querySelector('.clockpicker-span-minutes');
+			this.hourDiv = this.panelDiv.querySelector('.clockpicker-hours');
+			this.minDiv = this.panelDiv.querySelector('.clockpicker-minutes');
+			this.btnClean = this.panelDiv.querySelector('.u-date-clean');
+			if (!_env.isMobile) this.btnClean.style.display = 'none';
+			this.currentView = 'hours';
+			(0, _event.on)(this.hourDiv, 'click', function (e) {
+				var target = e.target;
+				if ((0, _dom.hasClass)(target, 'clockpicker-tick')) {
+					this.hours = target.innerHTML;
+					this.hours = this.hours > 9 || this.hours == 0 ? '' + this.hours : '0' + this.hours;
+					this.titleHourSpan.innerHTML = this.hours;
+					this.hourDiv.style.visibility = 'hidden';
+					// this.minDiv.style.visibility = 'visible';
+					this._zoomIn(this.minDiv);
+					this.currentView = 'min';
+					this.setHand();
+				}
+			}.bind(this));
+
+			(0, _event.on)(this.minDiv, 'click', function (e) {
+				var target = e.target;
+				if ((0, _dom.hasClass)(target, 'clockpicker-tick')) {
+					this.min = target.innerHTML;
+					// this.min = this.min > 9 || this.min == 00? '' + this.min:'0' + this.min;
+					this.titleMinSpan.innerHTML = this.min;
+					this.minDiv.style.visibility = 'hidden';
+					this.hourDiv.style.visibility = 'visible';
+					this.currentView = 'hours';
+					var v = this.hours + ':' + this.min + ':' + this.sec;
+					this.setValue(v);
+					this.hide();
+				}
+			}.bind(this));
+
+			(0, _event.on)(this.btnClean, 'click', function (e) {
+				this.setValue("");
+				this.hide();
+			}.bind(this));
+		},
+
+		setHand: function setHand() {
+			var dialRadius = 100,
+			    innerRadius = 54,
+			    outerRadius = 80;
+			var view = this.currentView,
+			    value = this[view],
+			    isHours = view === 'hours',
+			    unit = Math.PI / (isHours ? 6 : 30),
+			    radian = value * unit,
+			    radius = isHours && value > 0 && value < 13 ? innerRadius : outerRadius,
+			    x = Math.sin(radian) * radius,
+			    y = -Math.cos(radian) * radius;
+			this.setHandFun(x, y);
+		},
+
+		setHandFun: function setHandFun(x, y, roundBy5, dragging) {
+			var dialRadius = 100,
+			    innerRadius = 54,
+			    outerRadius = 80;
+
+			var radian = Math.atan2(x, -y),
+			    isHours = this.currentView === 'hours',
+			    unit = Math.PI / (isHours ? 6 : 30),
+			    z = Math.sqrt(x * x + y * y),
+			    options = this.options,
+			    inner = isHours && z < (outerRadius + innerRadius) / 2,
+			    radius = inner ? innerRadius : outerRadius,
+			    value;
+
+			if (this.twelvehour) {
+				radius = outerRadius;
+			}
+
+			// Radian should in range [0, 2PI]
+			if (radian < 0) {
+				radian = Math.PI * 2 + radian;
+			}
+
+			// Get the round value
+			value = Math.round(radian / unit);
+
+			// Get the round radian
+			radian = value * unit;
+
+			// Correct the hours or minutes
+			if (options.twelvehour) {
+				if (isHours) {
+					if (value === 0) {
+						value = 12;
+					}
+				} else {
+					if (roundBy5) {
+						value *= 5;
+					}
+					if (value === 60) {
+						value = 0;
+					}
+				}
+			} else {
+				if (isHours) {
+					if (value === 12) {
+						value = 0;
+					}
+					value = inner ? value === 0 ? 12 : value : value === 0 ? 0 : value + 12;
+				} else {
+					if (roundBy5) {
+						value *= 5;
+					}
+					if (value === 60) {
+						value = 0;
+					}
+				}
+			}
+
+			// Set clock hand and others' position
+			var w = this.panelDiv.querySelector('.clockpicker-plate').offsetWidth;
+			var u = w / 200;
+			var cx = Math.sin(radian) * radius * u,
+			    cy = -Math.cos(radian) * radius * u;
+			var iu = 100 * u;
+			this.panelDiv.querySelector('g').setAttribute('transform', 'translate(' + iu + ',' + iu + ')');
+
+			this.hand.setAttribute('x2', cx);
+			this.hand.setAttribute('y2', cy);
+			this.bg.setAttribute('cx', cx);
+			this.bg.setAttribute('cy', cy);
+			this.fg.setAttribute('cx', cx);
+			this.fg.setAttribute('cy', cy);
+		},
+
+		setValue: function setValue(value) {
+			value = value ? value : '';
+
+			if (value == '') {
+				this.input.value = '';
+
+				this.trigger('valueChange', { value: '' });
+				return;
+			}
+
+			if (value && value.indexOf(':') > -1) {
+				var vA = value.split(":");
+				var hour = vA[0];
+				hour = hour % 24;
+				this.hours = hour > 9 ? '' + hour : '0' + hour;
+				var min = vA[1];
+				min = min % 60;
+				this.min = min > 9 ? '' + min : '0' + min;
+				var sec = vA[2] || 0;
+				sec = sec % 60;
+				this.sec = sec > 9 ? '' + sec : '0' + sec;
+
+				value = this.hours + ':' + this.min + ':' + this.sec;
+			} else {
+				this.hours = this.defaultHour;
+				this.min = this.defaultMin;
+				this.sec = this.defaultSec;
+			}
+			var _date = new Date();
+			_date.setHours(this.hours);
+			_date.setMinutes(this.min);
+			_date.setSeconds(this.sec);
+			var showValue = _dateUtils.date.format(_date, this.format);
+			this.input.value = showValue;
+
+=======
+	        this.comp.setValue(value);
+	    },
+	    setEnable: function setEnable(enable) {}
+	}); /**
+	     * Module : Kero year adapter
+	     * Author : Kvkens(yueming@yonyou.com)
+	     * Date	  : 2016-08-10 12:40:46
+	     */
+
+
+	_compMgr.compMgr.addDataAdapter({
+	    adapter: YearAdapter,
+	    name: 'u-year'
+	});
+
+	exports.YearAdapter = YearAdapter;
+
+/***/ },
+/* 122 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.Year = undefined;
+
+	var _BaseComponent = __webpack_require__(83);
+
+	var _event = __webpack_require__(6);
+
+	var _dom = __webpack_require__(5);
+
+	var _extend = __webpack_require__(8);
+
+	var _compMgr = __webpack_require__(4);
+
+	var _ripple = __webpack_require__(87);
+
+	/**
+	 * Module : neoui-year
+	 * Author : liuyk(liuyk@yonyou.com)
+	 * Date	  : 2016-08-11 15:17:07
+	 */
+
+	var Year = _BaseComponent.BaseComponent.extend({
+		DEFAULTS: {},
+		init: function init() {
+			var self = this;
+			var element = this.element;
+			this.options = (0, _extend.extend)({}, this.DEFAULTS, this.options);
+			this.panelDiv = null;
+			this.input = this.element.querySelector("input");
+
+			var d = new Date();
+			this.year = d.getFullYear();
+			this.defaultYear = this.year;
+			this.startYear = this.year - this.year % 10 - 1;
+
+			(0, _event.on)(this.input, 'blur', function (e) {
+				self._inputFocus = false;
+				self.setValue(self.input.value);
+			});
+
+			// 添加focus事件
+			this.focusEvent();
+			// 添加右侧图标click事件
+			this.clickEvent();
+			// 添加keydown事件
+			this.keydownEvent();
+		},
+
+		createPanel: function createPanel() {
+			if (this.panelDiv) {
+				this._fillYear();
+				return;
+			}
+			var oThis = this;
+			this.panelDiv = (0, _dom.makeDOM)('<div class="u-date-panel" style="margin:0px;"></div>');
+			this.panelContentDiv = (0, _dom.makeDOM)('<div class="u-date-content"></div>');
+			this.panelDiv.appendChild(this.panelContentDiv);
+
+			this.preBtn = (0, _dom.makeDOM)('<button class="u-date-pre-button u-button mini">&lt;</button>');
+			this.nextBtn = (0, _dom.makeDOM)('<button class="u-date-next-button u-button mini">&gt;</button>');
+
+			(0, _event.on)(this.preBtn, 'click', function (e) {
+				oThis.startYear -= 10;
+				oThis._fillYear();
+			});
+			(0, _event.on)(this.nextBtn, 'click', function (e) {
+				oThis.startYear += 10;
+				oThis._fillYear();
+			});
+			this.panelContentDiv.appendChild(this.preBtn);
+			this.panelContentDiv.appendChild(this.nextBtn);
+			this._fillYear();
+		},
+
+		/**
+	  *填充年份选择面板
+	  * @private
+	  */
+		_fillYear: function _fillYear(type) {
+			var oldPanel, year, template, yearPage, titleDiv, yearDiv, i, cell;
+			oldPanel = this.panelContentDiv.querySelector('.u-date-content-page');
+			if (oldPanel) this.panelContentDiv.removeChild(oldPanel);
+			template = ['<div class="u-date-content-page">', '<div class="u-date-content-title"></div>', '<div class="u-date-content-panel"></div>', '</div>'].join("");
+			yearPage = (0, _dom.makeDOM)(template);
+			titleDiv = yearPage.querySelector('.u-date-content-title');
+			titleDiv.innerHTML = this.startYear + '-' + (this.startYear + 11);
+			yearDiv = yearPage.querySelector('.u-date-content-panel');
+			for (i = 0; i < 12; i++) {
+				cell = (0, _dom.makeDOM)('<div class="u-date-content-year-cell">' + (this.startYear + i) + '</div>');
+				new _ripple.URipple(cell);
+				if (this.startYear + i == this.year) {
+					(0, _dom.addClass)(cell, 'current');
+				}
+				cell._value = this.startYear + i;
+				yearDiv.appendChild(cell);
+			}
+			(0, _event.on)(yearDiv, 'click', function (e) {
+				var _y = e.target._value;
+				this.year = _y;
+				this.setValue(_y);
+				this.hide();
+				(0, _event.stopEvent)(e);
+			}.bind(this));
+
+			this.preBtn.style.display = 'block';
+			this.nextBtn.style.display = 'block';
+			this.panelContentDiv.appendChild(yearPage);
+
+			this.currentPanel = 'year';
+		},
+
+		setValue: function setValue(value) {
+			value = value ? value : '';
+			this.value = value;
+			if (value) {
+				this.year = value;
+			} else {
+				this.year = this.defaultYear;
+			}
+			this.startYear = this.year - this.year % 10 - 1;
+			this.input.value = value;
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
+			this.trigger('valueChange', { value: value });
+		},
+
+		focusEvent: function focusEvent() {
+			var self = this;
+			(0, _event.on)(this.input, 'focus', function (e) {
+				self._inputFocus = true;
+				self.show(e);
+<<<<<<< HEAD
+				if (e.stopPropagation) {
+					e.stopPropagation();
+				} else {
+					e.cancelBubble = true;
+				}
+			});
+		},
+
+=======
+				(0, _event.stopEvent)(e);
+			});
+		},
+		keydownEvent: function keydownEvent() {
+			var self = this;
+			(0, _event.on)(self.input, "keydown", function (e) {
+				var code = e.keyCode ? e.keyCode : e.which ? e.which : e.charCode;
+				if (!(code >= 48 && code <= 57 || code == 37 || code == 39 || code == 8 || code == 46)) {
+					//阻止默认浏览器动作(W3C)
+					if (e && e.preventDefault) e.preventDefault();
+					//IE中阻止函数器默认动作的方式
+					else window.event.returnValue = false;
+					return false;
+				}
+			});
+		},
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
+		//下拉图标的点击事件
+		clickEvent: function clickEvent() {
+			var self = this;
+			var caret = this.element.nextSibling;
+			(0, _event.on)(caret, 'click', function (e) {
+<<<<<<< HEAD
+				self._inputFocus = true;
+				self.show(e);
+				if (e.stopPropagation) {
+					e.stopPropagation();
+				} else {
+					e.cancelBubble = true;
+				}
+=======
+				self.input.focus();
+				(0, _event.stopEvent)(e);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
+			});
+		},
+
+		show: function show(evt) {
+<<<<<<< HEAD
+
+			var inputValue = this.input.value;
+			this.setValue(inputValue);
+
+			var self = this;
+			this.createPanel();
+			this.minDiv.style.visibility = 'hidden';
+			this.hourDiv.style.visibility = 'visible';
+			this.currentView = 'hours';
+			this.titleHourSpan.innerHTML = this.hours;
+			this.titleMinSpan.innerHTML = this.min;
+
+			/*因为元素可能变化位置，所以显示的时候需要重新计算*/
+			if (_env.isMobile) {
+				this.panelDiv.style.position = 'fixed';
+				this.panelDiv.style.top = '20%';
+				var screenW = document.body.clientWidth;
+				var l = (screenW - 226) / 2;
+				this.panelDiv.style.left = l + 'px';
+				this.overlayDiv = (0, _dom.makeModal)(this.panelDiv);
+				(0, _event.on)(this.overlayDiv, 'click', function () {
+					self.hide();
+				});
+			} else {
+				if (this.options.showFix) {
+					document.body.appendChild(this.panelDiv);
+					this.panelDiv.style.position = 'fixed';
+					(0, _dom.showPanelByEle)({
+						ele: this.input,
+						panel: this.panelDiv,
+						position: "bottomLeft"
+					});
+				} else {
+
+					var bodyWidth = document.body.clientWidth,
+					    bodyHeight = document.body.clientHeight,
+					    panelWidth = this.panelDiv.offsetWidth,
+					    panelHeight = this.panelDiv.offsetHeight;
+
+					this.element.appendChild(this.panelDiv);
+					this.element.style.position = 'relative';
+					this.left = this.input.offsetLeft;
+					var inputHeight = this.input.offsetHeight;
+					this.top = this.input.offsetTop + inputHeight;
+
+					if (this.left + panelWidth > bodyWidth) {
+						this.left = bodyWidth - panelWidth;
+					}
+
+					if (this.top + panelHeight > bodyHeight) {
+						this.top = bodyHeight - panelHeight;
+					}
+
+					this.panelDiv.style.left = this.left + 'px';
+					this.panelDiv.style.top = this.top + 'px';
+				}
+			}
+
+			this.panelDiv.style.zIndex = (0, _dom.getZIndex)();
+			(0, _dom.addClass)(this.panelDiv, 'is-visible');
+
+			this.setHand();
+
+			var callback = function (e) {
+				if (e !== evt && e.target !== this.input && !self.clickPanel(e.target) && self._inputFocus != true) {
+					(0, _event.off)(document, 'click', callback);
+=======
+			var oThis = this;
+			this.createPanel();
+
+			this.width = this.element.offsetWidth;
+			if (this.width < 300) this.width = 300;
+
+			this.panelDiv.style.width = 152 + 'px';
+			if (this.options.showFix) {
+				document.body.appendChild(this.panelDiv);
+				this.panelDiv.style.position = 'fixed';
+				(0, _dom.showPanelByEle)({
+					ele: this.input,
+					panel: this.panelDiv,
+					position: "bottomLeft"
+				});
+			} else {
+				var bodyWidth = document.body.clientWidth,
+				    bodyHeight = document.body.clientHeight,
+				    panelWidth = this.panelDiv.offsetWidth,
+				    panelHeight = this.panelDiv.offsetHeight;
+
+				this.element.appendChild(this.panelDiv);
+				this.element.style.position = 'relative';
+				this.left = this.input.offsetLeft;
+				var inputHeight = this.input.offsetHeight;
+				this.top = this.input.offsetTop + inputHeight;
+
+				if (this.left + panelWidth > bodyWidth) {
+					this.left = bodyWidth - panelWidth;
+				}
+
+				if (this.top + panelHeight > bodyHeight) {
+					this.top = bodyHeight - panelHeight;
+				}
+
+				this.panelDiv.style.left = this.left + 'px';
+				this.panelDiv.style.top = this.top + 'px';
+			}
+			this.panelDiv.style.zIndex = (0, _dom.getZIndex)();
+			(0, _dom.addClass)(this.panelDiv, 'is-visible');
+
+			var callback = function (e) {
+				if (e !== evt && e.target !== this.input && !oThis.clickPanel(e.target) && self._inputFocus != true) {
+					(0, _event.off)(document, 'click', callback);
+					// document.removeEventListener('click', callback);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
+					this.hide();
+				}
+			}.bind(this);
+			(0, _event.on)(document, 'click', callback);
+<<<<<<< HEAD
+
+			//tab事件
+			(0, _event.on)(self.input, 'keydown', function (e) {
+				var keyCode = e.keyCode;
+				if (keyCode == 9) {
+					self.hide();
+				}
+			});
+=======
+			// document.addEventListener('click', callback);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
+		},
+
+		clickPanel: function clickPanel(dom) {
+			while (dom) {
+				if (dom == this.panelDiv) {
+					return true;
+				} else {
+					dom = dom.parentNode;
+				}
+			}
+			return false;
+		},
+<<<<<<< HEAD
+
+		hide: function hide() {
+			(0, _dom.removeClass)(this.panelDiv, 'is-visible');
+			this.panelDiv.style.zIndex = -1;
+			if (this.overlayDiv) {
+				try {
+					document.body.removeChild(this.overlayDiv);
+				} catch (e) {}
+			}
+=======
+		hide: function hide() {
+			(0, _dom.removeClass)(this.panelDiv, 'is-visible');
+			this.panelDiv.style.zIndex = -1;
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
+		}
+	});
+
+	_compMgr.compMgr.regComp({
+<<<<<<< HEAD
+		comp: ClockPicker,
+		compAsString: 'u.ClockPicker',
+		css: 'u-clockpicker'
+=======
+		comp: Year,
+		compAsString: 'u.Year',
+		css: 'u-year'
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
+	});
+	if (document.readyState && document.readyState === 'complete') {
+		_compMgr.compMgr.updateComp();
+	} else {
+		(0, _event.on)(window, 'load', function () {
+			//扫描并生成控件
+			_compMgr.compMgr.updateComp();
+		});
+	}
+<<<<<<< HEAD
+	exports.ClockPicker = ClockPicker;
+
+/***/ },
+/* 126 */
+=======
+	exports.Year = Year;
+
+/***/ },
+/* 123 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+<<<<<<< HEAD
+		value: true
+	});
+	exports.Time = undefined;
+
+	var _extend = __webpack_require__(8);
+
+	var _BaseComponent = __webpack_require__(83);
+
+	var _env = __webpack_require__(7);
+=======
+	    value: true
+	});
+	exports.YearMonthAdapter = undefined;
+
+	var _baseAdapter = __webpack_require__(76);
+
+	var _neouiYearmonth = __webpack_require__(124);
+
+	var _compMgr = __webpack_require__(4);
+
+	var YearMonthAdapter = _baseAdapter.BaseAdapter.extend({
+	    initialize: function initialize(comp, options) {
+	        var self = this;
+	        YearMonthAdapter.superclass.initialize.apply(this, arguments);
+	        this.validType = 'yearmonth';
+
+	        this.comp = new _neouiYearmonth.YearMonth(this.element);
+
+	        this.comp.on('valueChange', function (event) {
+	            self.slice = true;
+	            self.dataModel.setValue(self.field, event.value);
+	            self.slice = false;
+	            //self.setValue(event.value);
+	        });
+	        this.dataModel.ref(this.field).subscribe(function (value) {
+	            self.modelValueChange(value);
+	        });
+	    },
+	    modelValueChange: function modelValueChange(value) {
+	        if (this.slice) return;
+	        this.comp.setValue(value);
+	    },
+	    setEnable: function setEnable(enable) {}
+	}); /**
+	     * Module : Kero yearmonth adapter
+	     * Author : Kvkens(yueming@yonyou.com)
+	     * Date	  : 2016-08-10 14:11:50
+	     */
+
+
+	_compMgr.compMgr.addDataAdapter({
+	    adapter: YearMonthAdapter,
+	    name: 'u-yearmonth'
+	});
+
+	exports.YearMonthAdapter = YearMonthAdapter;
+
+/***/ },
+/* 124 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.YearMonth = undefined;
+
+	var _BaseComponent = __webpack_require__(83);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
+
+	var _event = __webpack_require__(6);
+
+	var _dom = __webpack_require__(5);
+
+<<<<<<< HEAD
+	var _compMgr = __webpack_require__(4);
+
+	var Time = _BaseComponent.BaseComponent.extend({
+		DEFAULTS: {},
+		init: function init() {
+			var self = this;
+			var element = this.element;
+			this.options = (0, _extend.extend)({}, this.DEFAULTS, this.options);
+			this.panelDiv = null;
+			this.input = this.element.querySelector("input");
+			(0, _dom.addClass)(this.element, 'u-text');
+
+			(0, _event.on)(this.input, 'blur', function (e) {
+				self._inputFocus = false;
+				this.setValue(this.input.value);
+			}.bind(this));
+
+			// 添加focus事件
+			this.focusEvent();
+			// 添加右侧图标click事件
+			this.clickEvent();
+		}
+	});
+
+	Time.fn = Time.prototype;
+
+	Time.fn.createPanel = function () {
+		if (this.panelDiv) return;
+		var oThis = this;
+		this.panelDiv = (0, _dom.makeDOM)('<div class="u-date-panel" style="padding:0px;"></div>');
+		this.panelContentDiv = (0, _dom.makeDOM)('<div class="u-time-content"></div>');
+		this.panelDiv.appendChild(this.panelContentDiv);
+		this.panelHourDiv = (0, _dom.makeDOM)('<div class="u-time-cell"></div>');
+		this.panelContentDiv.appendChild(this.panelHourDiv);
+		this.panelHourInput = (0, _dom.makeDOM)('<input class="u-time-input">');
+		this.panelHourDiv.appendChild(this.panelHourInput);
+		this.panelMinDiv = (0, _dom.makeDOM)('<div class="u-time-cell"></div>');
+		this.panelContentDiv.appendChild(this.panelMinDiv);
+		this.panelMinInput = (0, _dom.makeDOM)('<input class="u-time-input">');
+		this.panelMinDiv.appendChild(this.panelMinInput);
+		this.panelSecDiv = (0, _dom.makeDOM)('<div class="u-time-cell"></div>');
+		this.panelContentDiv.appendChild(this.panelSecDiv);
+		this.panelSecInput = (0, _dom.makeDOM)('<input class="u-time-input">');
+		this.panelSecDiv.appendChild(this.panelSecInput);
+		this.panelNavDiv = (0, _dom.makeDOM)('<div class="u-time-nav"></div>');
+		this.panelDiv.appendChild(this.panelNavDiv);
+		this.panelOKButton = (0, _dom.makeDOM)('<button class="u-button" style="float:right;">OK</button>');
+		this.panelNavDiv.appendChild(this.panelOKButton);
+		(0, _event.on)(this.panelOKButton, 'click', function () {
+			var v = oThis.panelHourInput.value + ':' + oThis.panelMinInput.value + ':' + oThis.panelSecInput.value;
+			oThis.setValue(v);
+			oThis.hide();
+		});
+		this.panelCancelButton = (0, _dom.makeDOM)('<button class="u-button" style="float:right;">Cancel</button>');
+		this.panelNavDiv.appendChild(this.panelCancelButton);
+		(0, _event.on)(this.panelCancelButton, 'click', function () {
+			oThis.hide();
+		});
+
+		var d = new Date();
+		this.panelHourInput.value = d.getHours() > 9 ? '' + d.getHours() : '0' + d.getHours();
+		this.panelMinInput.value = d.getMinutes() > 9 ? '' + d.getMinutes() : '0' + d.getMinutes();
+		this.panelSecInput.value = d.getSeconds() > 9 ? '' + d.getSeconds() : '0' + d.getSeconds();
+	};
+
+	Time.fn.setValue = function (value) {
+		var hour = '',
+		    min = '',
+		    sec = '';
+		value = value ? value : '';
+		if (value == this.input.value) return;
+		if (value && value.indexOf(':') > -1) {
+			var vA = value.split(":");
+			var hour = vA[0];
+			hour = hour % 24;
+			hour = hour > 9 ? '' + hour : '0' + hour;
+			var min = vA[1];
+			min = min % 60;
+			min = min > 9 ? '' + min : '0' + min;
+			var sec = vA[2];
+			sec = sec % 60;
+			sec = sec > 9 ? '' + sec : '0' + sec;
+
+			value = hour + ':' + min + ':' + sec;
+		}
+		this.input.value = value;
+		this.createPanel();
+
+		this.panelHourInput.value = hour;
+		this.panelMinInput.value = min;
+		this.panelSecInput.value = sec;
+		this.trigger('valueChange', { value: value });
+	};
+
+	Time.fn.focusEvent = function () {
+		var self = this;
+		(0, _event.on)(this.input, 'focus', function (e) {
+			self._inputFocus = true;
+			self.show(e);
+			(0, _event.stopEvent)(e);
+		});
+	};
+
+	//下拉图标的点击事件
+	Time.fn.clickEvent = function () {
+		var self = this;
+		var caret = this.element.nextSibling;
+		(0, _event.on)(caret, 'click', function (e) {
+			self.input.focus();
+			(0, _event.stopEvent)(e);
+		});
+	};
+
+	Time.fn.show = function (evt) {
+
+		var inputValue = this.input.value;
+		this.setValue(inputValue);
+
+		var oThis = this;
+		this.createPanel();
+
+		/*因为元素可能变化位置，所以显示的时候需要重新计算*/
+		this.width = this.element.offsetWidth;
+		if (this.width < 300) this.width = 300;
+
+		this.panelDiv.style.width = this.width + 'px';
+		this.panelDiv.style.maxWidth = this.width + 'px';
+		if (this.options.showFix) {
+			document.body.appendChild(this.panelDiv);
+			this.panelDiv.style.position = 'fixed';
+			(0, _dom.showPanelByEle)({
+				ele: this.input,
+				panel: this.panelDiv,
+				position: "bottomLeft"
+			});
+		} else {
+			// this.element.parentNode.appendChild(this.panelDiv);
+			// //调整left和top
+			// this.left = this.element.offsetLeft;
+			// var inputHeight = this.element.offsetHeight;
+			// this.top = this.element.offsetTop + inputHeight;
+			// this.panelDiv.style.left = this.left + 'px';
+			// this.panelDiv.style.top = this.top + 'px';
+
+			var bodyWidth = document.body.clientWidth,
+			    bodyHeight = document.body.clientHeight,
+			    panelWidth = this.panelDiv.offsetWidth,
+			    panelHeight = this.panelDiv.offsetHeight;
+
+			this.element.appendChild(this.panelDiv);
+			this.element.style.position = 'relative';
+			this.left = this.input.offsetLeft;
+			var inputHeight = this.input.offsetHeight;
+			this.top = this.input.offsetTop + inputHeight;
+
+			if (this.left + panelWidth > bodyWidth) {
+				this.left = bodyWidth - panelWidth;
+			}
+
+			if (this.top + panelHeight > bodyHeight) {
+				this.top = bodyHeight - panelHeight;
+			}
+
+			this.panelDiv.style.left = this.left + 'px';
+			this.panelDiv.style.top = this.top + 'px';
+		}
+
+		this.panelDiv.style.zIndex = (0, _dom.getZIndex)();
+		(0, _dom.addClass)(this.panelDiv, 'is-visible');
+
+		var callback = function (e) {
+			if (e !== evt && e.target !== this.input && !oThis.clickPanel(e.target) && self._inputFocus != true) {
+				(0, _event.off)(document, 'click', callback);
+				// document.removeEventListener('click', callback);
+				this.hide();
+			}
+		}.bind(this);
+		(0, _event.on)(document, 'click', callback);
+		// document.addEventListener('click', callback);
+	};
+
+	Time.fn.clickPanel = function (dom) {
+		while (dom) {
+			if (dom == this.panelDiv) {
+				return true;
+			} else {
+				dom = dom.parentNode;
+			}
+		}
+		return false;
+	};
+
+	Time.fn.hide = function () {
+		(0, _dom.removeClass)(this.panelDiv, 'is-visible');
+		this.panelDiv.style.zIndex = -1;
+	};
+
+	_compMgr.compMgr.regComp({
+		comp: Time,
+		compAsString: 'u.Time',
+		css: 'u-time'
+	});
+	if (_env.env.isIE8) {
+		_compMgr.compMgr.regComp({
+			comp: Time,
+			compAsString: 'u.ClockPicker',
+			css: 'u-clockpicker'
+		});
+	}
+
+	if (document.readyState && document.readyState === 'complete') {
+		_compMgr.compMgr.updateComp();
+	} else {
+		(0, _event.on)(window, 'load', function () {
+			//扫描并生成控件
+			_compMgr.compMgr.updateComp();
+		});
+	}
+
+	exports.Time = Time;
+
+/***/ },
 /* 127 */
+=======
+	var _extend = __webpack_require__(8);
+
+	var _env = __webpack_require__(7);
+
+	var _compMgr = __webpack_require__(4);
+
+	var _ripple = __webpack_require__(87);
+
+	var YearMonth = _BaseComponent.BaseComponent.extend({
+	    DEFAULTS: {},
+	    init: function init() {
+	        var self = this;
+	        var element = this.element;
+	        this.options = (0, _extend.extend)({}, this.DEFAULTS, this.options);
+	        this.panelDiv = null;
+	        this.input = this.element.querySelector("input");
+
+	        var d = new Date();
+	        this.year = d.getFullYear();
+	        this.startYear = this.year - this.year % 10 - 1;
+	        this.month = d.getMonth() + 1;
+
+	        (0, _event.on)(this.input, 'blur', function (e) {
+	            self._inputFocus = false;
+	            self.setValue(self.input.value);
+	        });
+
+	        // 添加focus事件
+	        this.focusEvent();
+	        // 添加右侧图标click事件
+	        this.clickEvent();
+	    },
+
+	    createPanel: function createPanel() {
+	        if (this.panelDiv) {
+	            this._fillYear();
+	            return;
+	        }
+	        var oThis = this;
+	        this.panelDiv = (0, _dom.makeDOM)('<div class="u-date-panel" style="margin:0px;"></div>');
+	        this.panelContentDiv = (0, _dom.makeDOM)('<div class="u-date-content"></div>');
+	        this.panelDiv.appendChild(this.panelContentDiv);
+
+	        // this.preBtn = makeDOM('<button class="u-date-pre-button u-button flat floating mini" style="display:none;">&lt;</button>');
+	        // this.nextBtn = makeDOM('<button class="u-date-next-button u-button flat floating mini" style="display:none;">&gt;</button>');
+	        this.preBtn = (0, _dom.makeDOM)('<button class="u-date-pre-button u-button mini">&lt;</button>');
+	        this.nextBtn = (0, _dom.makeDOM)('<button class="u-date-next-button u-button mini">&gt;</button>');
+
+	        (0, _event.on)(this.preBtn, 'click', function (e) {
+	            oThis.startYear -= 10;
+	            oThis._fillYear();
+	        });
+	        (0, _event.on)(this.nextBtn, 'click', function (e) {
+	            oThis.startYear += 10;
+	            oThis._fillYear();
+	        });
+	        this.panelContentDiv.appendChild(this.preBtn);
+	        this.panelContentDiv.appendChild(this.nextBtn);
+	        this._fillYear();
+	    },
+
+	    /**
+	     *填充年份选择面板
+	     * @private
+	     */
+	    _fillYear: function _fillYear(type) {
+	        var oldPanel, year, template, yearPage, titleDiv, yearDiv, i, cell;
+	        oldPanel = this.panelContentDiv.querySelector('.u-date-content-page');
+	        if (oldPanel) this.panelContentDiv.removeChild(oldPanel);
+	        template = ['<div class="u-date-content-page">', '<div class="u-date-content-title"></div>', '<div class="u-date-content-panel"></div>', '</div>'].join("");
+	        yearPage = (0, _dom.makeDOM)(template);
+	        titleDiv = yearPage.querySelector('.u-date-content-title');
+	        titleDiv.innerHTML = this.startYear + '-' + (this.startYear + 11);
+	        yearDiv = yearPage.querySelector('.u-date-content-panel');
+	        for (i = 0; i < 12; i++) {
+	            cell = (0, _dom.makeDOM)('<div class="u-date-content-year-cell">' + (this.startYear + i) + '</div>');
+	            new _ripple.URipple(cell);
+	            if (this.startYear + i == this.year) {
+	                (0, _dom.addClass)(cell, 'current');
+	            }
+	            cell._value = this.startYear + i;
+	            yearDiv.appendChild(cell);
+	        }
+	        var oThis = this;
+	        (0, _event.on)(yearDiv, 'click', function (e) {
+	            var _y = e.target._value;
+	            oThis.year = _y;
+	            oThis._fillMonth();
+	            (0, _event.stopEvent)(e);
+	        });
+
+	        this.preBtn.style.display = 'block';
+	        this.nextBtn.style.display = 'block';
+	        // this._zoomIn(yearPage);
+	        this.panelContentDiv.appendChild(yearPage);
+	        this.contentPage = yearPage;
+	        this.currentPanel = 'year';
+	    },
+
+	    /**
+	     * 填充月份选择面板
+	     * @private
+	     */
+	    _fillMonth: function _fillMonth() {
+	        var oldPanel, template, monthPage, _month, cells, i;
+	        oldPanel = this.panelContentDiv.querySelector('.u-date-content-page');
+	        if (oldPanel) this.panelContentDiv.removeChild(oldPanel);
+	        _month = this.month;
+	        template = ['<div class="u-date-content-page">', '<div class="u-date-content-title">' + _month + '月</div>', '<div class="u-date-content-panel">', '<div class="u-date-content-year-cell">1月</div>', '<div class="u-date-content-year-cell">2月</div>', '<div class="u-date-content-year-cell">3月</div>', '<div class="u-date-content-year-cell">4月</div>', '<div class="u-date-content-year-cell">5月</div>', '<div class="u-date-content-year-cell">6月</div>', '<div class="u-date-content-year-cell">7月</div>', '<div class="u-date-content-year-cell">8月</div>', '<div class="u-date-content-year-cell">9月</div>', '<div class="u-date-content-year-cell">10月</div>', '<div class="u-date-content-year-cell">11月</div>', '<div class="u-date-content-year-cell">12月</div>', '</div>', '</div>'].join("");
+
+	        monthPage = (0, _dom.makeDOM)(template);
+	        cells = monthPage.querySelectorAll('.u-date-content-year-cell');
+	        for (i = 0; i < cells.length; i++) {
+	            if (_month == i + 1) {
+	                (0, _dom.addClass)(cells[i], 'current');
+	            }
+	            cells[i]._value = i + 1;
+	            new _ripple.URipple(cells[i]);
+	        }
+	        var oThis = this;
+	        (0, _event.on)(monthPage, 'click', function (e) {
+	            var _m = e.target._value;
+	            oThis.month = _m;
+	            monthPage.querySelector('.u-date-content-title').innerHTML = _m + '月';
+	            oThis.setValue(oThis.year + '-' + oThis.month);
+	            oThis.hide();
+	        });
+
+	        this.preBtn.style.display = 'none';
+	        this.nextBtn.style.display = 'none';
+	        this._zoomIn(monthPage);
+	        this.currentPanel = 'month';
+	    },
+
+	    /**
+	     * 淡入动画效果
+	     * @private
+	     */
+	    _zoomIn: function _zoomIn(newPage) {
+	        if (!this.contentPage) {
+	            this.panelContentDiv.appendChild(newPage);
+	            this.contentPage = newPage;
+	            return;
+	        }
+	        (0, _dom.addClass)(newPage, 'zoom-in');
+	        this.panelContentDiv.appendChild(newPage);
+	        if (_env.isIE8) {
+	            this.contentPage = newPage;
+	        } else {
+	            var cleanup = function () {
+	                newPage.removeEventListener('transitionend', cleanup);
+	                newPage.removeEventListener('webkitTransitionEnd', cleanup);
+	                // this.panelContentDiv.removeChild(this.contentPage);
+	                this.contentPage = newPage;
+	            }.bind(this);
+	            if (this.contentPage) {
+	                newPage.addEventListener('transitionend', cleanup);
+	                newPage.addEventListener('webkitTransitionEnd', cleanup);
+	            }
+	            window.requestAnimationFrame(function () {
+	                (0, _dom.addClass)(this.contentPage, 'is-hidden');
+	                (0, _dom.removeClass)(newPage, 'zoom-in');
+	            }.bind(this));
+	        }
+	    },
+
+	    setValue: function setValue(value) {
+	        value = value ? value : '';
+	        if (value && value.indexOf('-') > -1) {
+	            var vA = value.split("-");
+	            this.year = vA[0];
+	            var month = vA[1];
+	            this.month = month % 12;
+	            if (this.month == 0) this.month = 12;
+
+	            value = this.year + '-' + this.month;
+	        }
+	        this.value = value;
+	        this.input.value = value;
+	        this.trigger('valueChange', { value: value });
+	    },
+
+	    focusEvent: function focusEvent() {
+	        var self = this;
+	        (0, _event.on)(this.input, 'focus', function (e) {
+	            self._inputFocus = true;
+	            self.show(e);
+	            (0, _event.stopEvent)(e);
+	        });
+	    },
+
+	    //下拉图标的点击事件
+	    clickEvent: function clickEvent() {
+	        var self = this;
+	        var caret = this.element.nextSibling;
+	        (0, _event.on)(caret, 'click', function (e) {
+	            self.input.focus();
+	            (0, _event.stopEvent)(e);
+	        });
+	    },
+
+	    show: function show(evt) {
+	        var oThis = this;
+	        if (this.value && this.value.indexOf('-') > -1) {
+	            var vA = this.value.split("-");
+	            this.year = vA[0];
+	            var month = vA[1];
+	            this.month = month % 12;
+	            if (this.month == 0) this.month = 12;
+	        }
+	        this.createPanel();
+	        /*因为元素可能变化位置，所以显示的时候需要重新计算*/
+	        this.width = this.element.offsetWidth;
+	        if (this.width < 300) this.width = 300;
+
+	        this.panelDiv.style.width = this.width + 'px';
+
+	        if (this.options.showFix) {
+	            document.body.appendChild(this.panelDiv);
+	            this.panelDiv.style.position = 'fixed';
+	            (0, _dom.showPanelByEle)({
+	                ele: this.input,
+	                panel: this.panelDiv,
+	                position: "bottomLeft"
+	            });
+	        } else {
+	            //    this.element.parentNode.appendChild(this.panelDiv);
+	            // //调整left和top
+	            //    this.left = this.element.offsetLeft;
+	            //    var inputHeight = this.element.offsetHeight;
+	            //    this.top = this.element.offsetTop + inputHeight;
+	            //    this.panelDiv.style.left = this.left + 'px';
+	            //    this.panelDiv.style.top = this.top + 'px';
+
+	            var bodyWidth = document.body.clientWidth,
+	                bodyHeight = document.body.clientHeight,
+	                panelWidth = this.panelDiv.offsetWidth,
+	                panelHeight = this.panelDiv.offsetHeight;
+
+	            this.element.appendChild(this.panelDiv);
+	            this.element.style.position = 'relative';
+	            this.left = this.input.offsetLeft;
+	            var inputHeight = this.input.offsetHeight;
+	            this.top = this.input.offsetTop + inputHeight;
+
+	            if (this.left + panelWidth > bodyWidth) {
+	                this.left = bodyWidth - panelWidth;
+	            }
+
+	            if (this.top + panelHeight > bodyHeight) {
+	                this.top = bodyHeight - panelHeight;
+	            }
+
+	            this.panelDiv.style.left = this.left + 'px';
+	            this.panelDiv.style.top = this.top + 'px';
+	        }
+
+	        this.panelDiv.style.zIndex = (0, _dom.getZIndex)();
+	        (0, _dom.addClass)(this.panelDiv, 'is-visible');
+	        var oThis = this;
+	        var callback = function callback(e) {
+	            if (e !== evt && e.target !== oThis.input && !oThis.clickPanel(e.target) && self._inputFocus != true) {
+	                // document.removeEventListener('click', callback);
+	                (0, _event.off)(document, 'click', callback);
+	                oThis.hide();
+	            }
+	        };
+	        (0, _event.on)(document, 'click', callback);
+	        // document.addEventListener('click', callback);
+	    },
+
+	    clickPanel: function clickPanel(dom) {
+	        while (dom) {
+	            if (dom == this.panelDiv) {
+	                return true;
+	            } else {
+	                dom = dom.parentNode;
+	            }
+	        }
+	        return false;
+	    },
+
+	    hide: function hide() {
+	        (0, _dom.removeClass)(this.panelDiv, 'is-visible');
+	        this.panelDiv.style.zIndex = -1;
+	    }
+	}); /**
+	     * Module : neoui-year
+	     * Author : liuyk(liuyk@yonyou.com)
+	     * Date   : 2016-08-11 15:17:07
+	     */
+
+	_compMgr.compMgr.regComp({
+	    comp: YearMonth,
+	    compAsString: 'u.YearMonth',
+	    css: 'u-yearmonth'
+	});
+	if (document.readyState && document.readyState === 'complete') {
+	    _compMgr.compMgr.updateComp();
+	} else {
+	    (0, _event.on)(window, 'load', function () {
+	        //扫描并生成控件
+	        _compMgr.compMgr.updateComp();
+	    });
+	}
+	exports.YearMonth = YearMonth;
+
+/***/ },
+/* 125 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17856,7 +21422,11 @@
 
 	var _baseAdapter = __webpack_require__(76);
 
+<<<<<<< HEAD
 	var _neouiYear = __webpack_require__(105);
+=======
+	var _neouiYear = __webpack_require__(122);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 
 	var _util = __webpack_require__(10);
 
@@ -18234,7 +21804,11 @@
 	exports.TreeAdapter = TreeAdapter;
 
 /***/ },
+<<<<<<< HEAD
 /* 128 */
+=======
+/* 126 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18278,7 +21852,11 @@
 
 	var _ripple = __webpack_require__(87);
 
+<<<<<<< HEAD
 	var _rsautils = __webpack_require__(129);
+=======
+	var _rsautils = __webpack_require__(127);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 
 	var _i18n = __webpack_require__(85);
 
@@ -18359,6 +21937,7 @@
 	}
 	// export api;
 	//export default api;
+<<<<<<< HEAD
 	(0, _extend.extend)(api, window.u || {});
 
 	window.u = api;
@@ -18366,6 +21945,12 @@
 
 /***/ },
 /* 129 */
+=======
+	exports.u = api;
+
+/***/ },
+/* 127 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports) {
 
 	'use strict';
@@ -19071,7 +22656,11 @@
 	exports.twoDigit = twoDigit;
 
 /***/ },
+<<<<<<< HEAD
 /* 130 */
+=======
+/* 128 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19081,16 +22670,25 @@
 	});
 	exports.u = undefined;
 
+<<<<<<< HEAD
 	var _extend = __webpack_require__(131);
 
 	var _neouiAutocomplete = __webpack_require__(133);
 
 	var _neouiButton = __webpack_require__(134);
+=======
+	var _extend = __webpack_require__(129);
+
+	var _neouiAutocomplete = __webpack_require__(131);
+
+	var _neouiButton = __webpack_require__(132);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 
 	var _neouiCheckbox = __webpack_require__(86);
 
 	var _neouiCombo = __webpack_require__(90);
 
+<<<<<<< HEAD
 	var _neouiCombobox = __webpack_require__(135);
 
 	var _neouiDataTable = __webpack_require__(136);
@@ -19126,6 +22724,43 @@
 	var _neouiSwitch = __webpack_require__(121);
 
 	var _neouiTabs = __webpack_require__(147);
+=======
+	var _neouiCombobox = __webpack_require__(133);
+
+	var _neouiDataTable = __webpack_require__(134);
+
+	var _neouiDialog = __webpack_require__(135);
+
+	var _neouiLayout = __webpack_require__(136);
+
+	var _neouiLayout2 = __webpack_require__(137);
+
+	var _neouiLoader = __webpack_require__(138);
+
+	var _neouiLoading = __webpack_require__(139);
+
+	var _neouiMenu = __webpack_require__(140);
+
+	var _neouiMessage = __webpack_require__(107);
+
+	var _neouiMultilang = __webpack_require__(141);
+
+	var _neouiNavmenu = __webpack_require__(142);
+
+	var _neouiPagination = __webpack_require__(111);
+
+	var _neouiProgress = __webpack_require__(113);
+
+	var _neouiRadio = __webpack_require__(103);
+
+	var _neouiRefer = __webpack_require__(143);
+
+	var _neouiSlidePanel = __webpack_require__(144);
+
+	var _neouiSwitch = __webpack_require__(115);
+
+	var _neouiTabs = __webpack_require__(145);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 
 	var _neouiTextfield = __webpack_require__(91);
 
@@ -19135,6 +22770,7 @@
 
 	var _neouiDatetimepicker = __webpack_require__(97);
 
+<<<<<<< HEAD
 	var _neouiTime = __webpack_require__(126);
 
 	var _neouiClockpicker = __webpack_require__(125);
@@ -19144,6 +22780,17 @@
 	var _neouiYear = __webpack_require__(105);
 
 	var _neouiYearmonth = __webpack_require__(109);
+=======
+	var _neouiTime = __webpack_require__(120);
+
+	var _neouiClockpicker = __webpack_require__(119);
+
+	var _neouiMonth = __webpack_require__(109);
+
+	var _neouiYear = __webpack_require__(122);
+
+	var _neouiYearmonth = __webpack_require__(124);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 
 	/**
 	 * Module : Neoui webpack entry index
@@ -19282,11 +22929,19 @@
 
 	//Neoui import
 	(0, _extend.extend)(ex, window.u || {});
+<<<<<<< HEAD
 	window.u = ex;
 	exports.u = ex;
 
 /***/ },
 /* 131 */
+=======
+
+	exports.u = ex;
+
+/***/ },
+/* 129 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19308,7 +22963,11 @@
 	    * Date	  : 2016-07-27 21:46:50
 	    */
 
+<<<<<<< HEAD
 	var _enumerables = __webpack_require__(132);
+=======
+	var _enumerables = __webpack_require__(130);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 
 	/**
 	 * 复制对象属性
@@ -19344,7 +23003,11 @@
 	exports.extend = extend;
 
 /***/ },
+<<<<<<< HEAD
 /* 132 */
+=======
+/* 130 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports) {
 
 	"use strict";
@@ -19382,7 +23045,11 @@
 	exports.U_USERCODE = U_USERCODE;
 
 /***/ },
+<<<<<<< HEAD
 /* 133 */
+=======
+/* 131 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19984,7 +23651,11 @@
 	exports.Autocomplete = Autocomplete;
 
 /***/ },
+<<<<<<< HEAD
 /* 134 */
+=======
+/* 132 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20046,7 +23717,11 @@
 	exports.Button = Button;
 
 /***/ },
+<<<<<<< HEAD
 /* 135 */
+=======
+/* 133 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20305,7 +23980,11 @@
 		});
 	};
 
+<<<<<<< HEAD
 	//tab键切换 下拉隐藏
+=======
+	//tab键切换 下拉隐藏	
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	Combobox.fn.blurEvent = function () {
 		var self = this;
 
@@ -20475,7 +24154,11 @@
 		var self = this;
 		(0, _event.on)(self.element, "click", function () {
 			// $(this.$element).on('click',function(){
+<<<<<<< HEAD
 			// $(self.oDiv).find('.select-search input').val('')
+=======
+			// $(self.oDiv).find('.select-search input').val('')  	
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 			self.oDiv.querySelector('.select-search input').value = "";
 			var oLis = this.oDiv.querySelector("ul").childNodes;
 			if (self.options.single == "true" || self.options.single == true) {
@@ -20530,7 +24213,11 @@
 
 	// for(var k=data.length;k<Olis.length;k++){
 	// $(Olis[k]).remove();
+<<<<<<< HEAD
 	// }
+=======
+	// }		
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 
 	// }else if(data.length > Olis.length){
 	// var liTemplate = Olis[0]
@@ -20573,7 +24260,11 @@
 	exports.Combobox = Combobox;
 
 /***/ },
+<<<<<<< HEAD
 /* 136 */
+=======
+/* 134 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20687,7 +24378,11 @@
 	exports.Table = Table;
 
 /***/ },
+<<<<<<< HEAD
 /* 137 */
+=======
+/* 135 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20705,7 +24400,11 @@
 
 	var _extend = __webpack_require__(8);
 
+<<<<<<< HEAD
 	var _neouiButton = __webpack_require__(134);
+=======
+	var _neouiButton = __webpack_require__(132);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 
 	var _compMgr = __webpack_require__(4);
 
@@ -20947,7 +24646,11 @@
 	dialogMode.prototype.close = function () {
 		if (this.contentDom) {
 			this.contentDom.style.display = 'none';
+<<<<<<< HEAD
 			this.contentDomParent && this.contentDomParent.appendChild(this.contentDom);
+=======
+			this.contentDomParent.appendChild(this.contentDom);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 		}
 		document.body.removeChild(this.templateDom);
 		document.body.removeChild(this.overlayDiv);
@@ -21004,7 +24707,11 @@
 	exports.dialogWizard = dialogWizard;
 
 /***/ },
+<<<<<<< HEAD
 /* 138 */
+=======
+/* 136 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21024,7 +24731,11 @@
 
 	var _env = __webpack_require__(7);
 
+<<<<<<< HEAD
 	var _neouiButton = __webpack_require__(134);
+=======
+	var _neouiButton = __webpack_require__(132);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 
 	var _compMgr = __webpack_require__(4);
 
@@ -21240,7 +24951,11 @@
 	exports.MDLayout = MDLayout;
 
 /***/ },
+<<<<<<< HEAD
 /* 139 */
+=======
+/* 137 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21746,7 +25461,11 @@
 	exports.NavLayoutTab = NavLayoutTab;
 
 /***/ },
+<<<<<<< HEAD
 /* 140 */
+=======
+/* 138 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -21763,7 +25482,11 @@
 	 */
 	var loadTemplate = "<div class='u-loader-container'><div class='u-loader'>{centerContent}</div>{loadDesc}</div>"; //{centerContent}为加载条中间内容
 	/**
+<<<<<<< HEAD
 	 * @param  {Object} options
+=======
+	 * @param  {Object} options 
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 	 * @return {[type]}
 	 */
 	/**
@@ -21804,7 +25527,11 @@
 	exports.hideLoader = hideLoader;
 
 /***/ },
+<<<<<<< HEAD
 /* 141 */
+=======
+/* 139 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21935,7 +25662,11 @@
 	exports.removeWaiting = removeWaiting;
 
 /***/ },
+<<<<<<< HEAD
 /* 142 */
+=======
+/* 140 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22002,6 +25733,7 @@
 				forEl = document.getElementById(forElId);
 				if (forEl) {
 					this.for_element = forEl;
+<<<<<<< HEAD
 					var El = this.element;
 					console.log(this.for_element.getAttribute('data-event'));
 					if (this.for_element.getAttribute('data-event') == 'hover') {
@@ -22013,6 +25745,9 @@
 						(0, _event.on)(forEl, 'click', this._handleForClick.bind(this));
 					}
 
+=======
+					(0, _event.on)(forEl, 'click', this._handleForClick.bind(this));
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 					(0, _event.on)(forEl, 'keydown', this._handleForKeyboardEvent.bind(this));
 				}
 			}
@@ -22058,6 +25793,7 @@
 
 			(0, _dom.addClass)(container, 'is-upgraded');
 		},
+<<<<<<< HEAD
 		_handleForElHover: function _handleForElHover(evt) {
 			this.hoverFlag = false;
 		},
@@ -22112,6 +25848,8 @@
 			this.toggle(evt, 'over');
 		},
 
+=======
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 		_handleForClick: function _handleForClick(evt) {
 			if (this.element && this.for_element) {
 				var rect = this.for_element.getBoundingClientRect();
@@ -22122,8 +25860,12 @@
 					// manually specify position.
 				} else if ((0, _dom.hasClass)(this.element, 'u-menu-bottom-right')) {
 					// Position below the "for" element, aligned to its right.
+<<<<<<< HEAD
 					this._container.style.left = this.for_element.offsetLeft + this.for_element.offsetWidth - this.element.offsetWidth + 'px';
 					// this._container.style.right = (forRect.right - rect.right) + 'px';
+=======
+					this._container.style.right = forRect.right - rect.right + 'px';
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 					this._container.style.top = this.for_element.offsetTop + this.for_element.offsetHeight + 'px';
 				} else if ((0, _dom.hasClass)(this.element, 'u-menu-top-left')) {
 					// Position above the "for" element, aligned to its left.
@@ -22408,6 +26150,7 @@
 	  *
 	  * @public
 	  */
+<<<<<<< HEAD
 		toggle: function toggle(evt, tab) {
 
 			if (typeof tab == 'undefined') {
@@ -22420,6 +26163,13 @@
 				} else {
 					this.hide();
 				}
+=======
+		toggle: function toggle(evt) {
+			if ((0, _dom.hasClass)(this._container, 'is-visible')) {
+				this.hide();
+			} else {
+				this.show(evt);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 			}
 		}
 	});
@@ -22441,7 +26191,11 @@
 	exports.Menu = Menu;
 
 /***/ },
+<<<<<<< HEAD
 /* 143 */
+=======
+/* 141 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22611,7 +26365,11 @@
 	exports.Multilang = Multilang;
 
 /***/ },
+<<<<<<< HEAD
 /* 144 */
+=======
+/* 142 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22719,7 +26477,11 @@
 	exports.NavMenu = NavMenu;
 
 /***/ },
+<<<<<<< HEAD
 /* 145 */
+=======
+/* 143 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22739,7 +26501,11 @@
 
 	var _util = __webpack_require__(10);
 
+<<<<<<< HEAD
 	var _neouiDialog = __webpack_require__(137);
+=======
+	var _neouiDialog = __webpack_require__(135);
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 
 	/**
 	 * Module : neoui-refer
@@ -22911,7 +26677,11 @@
 	exports.refer = refer;
 
 /***/ },
+<<<<<<< HEAD
 /* 146 */
+=======
+/* 144 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22988,7 +26758,11 @@
 	exports.slidePanel = slidePanel;
 
 /***/ },
+<<<<<<< HEAD
 /* 147 */
+=======
+/* 145 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23136,7 +26910,11 @@
 	exports.Tabs = Tabs;
 
 /***/ },
+<<<<<<< HEAD
 /* 148 */
+=======
+/* 146 */
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23182,4 +26960,10 @@
 	exports.DataTable = _indexDataTable.DataTable;
 
 /***/ }
+<<<<<<< HEAD
 /******/ ]);
+=======
+/******/ ])
+});
+;
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c

@@ -1,0 +1,279 @@
+{
+	"stylePlugin": {
+		"neoui-avatar":"头像",
+		"neoui-badge":"徽章",
+		"neoui-breadcrumbs":"面包屑",
+		"neoui-card":"卡片",
+		"neoui-counter":"数据统计",
+		"neoui-dropdown":"下拉菜单",
+		"neoui-forms":"表单",
+		"neoui-img":"图片",
+		"neoui-layout.grid":"表格布局",
+		"neoui-layout.slidepanel":"面板布局",
+		"neoui-list-group":"列表",
+		"neoui-nav":"导航",
+		"neoui-panel":"面板",
+		"neoui-pearls":"步骤",
+		"neoui-rating":"评分",
+		"neoui-ribbon":"色带",
+		"neoui-tags":"标签",
+		"neoui-weather":"天气",
+		"neoui-widget":"挂件"
+	},
+	"jsPlugin": {
+		"neoui-autocomplete":"自动完成",
+		"neoui-button":"按钮",
+		"neoui-checkbox":"checkbox框",
+		"neoui-clockpicker":"表盘选择器",
+		"neoui-combo":"combo",
+		"neoui-combobox":"combobox",
+		"neoui-data-table":"数据表",
+		"neoui-datetimepicker":"日期选择器",
+		"neoui-dialog":"对话框",
+		"neoui-layout.md":"md布局",
+		"neoui-layout.nav":"nav布局",
+		"neoui-loader":"进度loader",
+		"neoui-loading":"进度loading",
+		"neoui-menu":"菜单",
+		"neoui-message":"消息框",
+		"neoui-month":"月份",
+		"neoui-multilang":"多语言",
+		"neoui-navmenu":"导航菜单",
+		"neoui-pagination":"分页",
+		"neoui-progress":"进度条",
+		"neoui-radio":"单选框",
+		"neoui-refer":"refer",
+		"neoui-slidePanel":"slidePanel",
+		"neoui-switch":"开关",
+		"neoui-tabs":"标签组",
+		"neoui-textfield":"文本框",
+		"neoui-time":"时间",
+		"neoui-tooltip":"提示tip",
+		"neoui-validate":"验证",
+		"neoui-year":"年份",
+		"neoui-yearmonth":"年月"
+	},
+	"theme": [
+		{"class":"bg-red","color":"244,67,54"},
+		{"class":"bg-pink","color":"233,30,99"},
+		{"class":"bg-purple","color":"156,39,176"},
+		{"class":"bg-deep-purple","color":"103,58,183"},
+		{"class":"bg-indigo","color":"63,81,181"},
+		{"class":"bg-blue","color":"33,150,243"},
+		{"class":"bg-light-blue","color":"3,169,244"},
+		{"class":"bg-cyan","color":"0,188,212"},
+		{"class":"bg-teal","color":"0,150,136"},
+		{"class":"bg-green","color":"76,175,80"},
+		{"class":"bg-light-green","color":"139,195,74"},
+		{"class":"bg-lime","color":"205,220,57"},
+		{"class":"bg-yellow","color":"255,235,59"},
+		{"class":"bg-amber","color":"255,193,7"},
+		{"class":"bg-orange","color":"255,152,0"},
+		{"class":"bg-deep-orange","color":"255,87,34"},
+		{"class":"bg-brown","color":"121,85,72"},
+		{"class":"bg-grey","color":"158,158,158"},
+		{"class":"bg-blue-grey","color":"96,125,139"},
+		{"class":"bg-black","color":"0,0,0"}
+	],
+	"test": {
+		"bg-red":"rgb(244,67,54)",
+		"bg-pink":"rgb(233,30,99)",
+		"bg-purple":"rgb(156,39,176)",
+		"bg-deep-purple":"rgb(103,58,183)",
+		"bg-indigo":"rgb(63,81,181)",
+		"bg-blue":"rgb(33,150,243)",
+		"bg-light-blue":"rgb(3,169,244)",
+		"bg-cyan":"rgb(0,188,212)",
+		"bg-teal":"rgb(0,150,136)",
+		"bg-green":"rgb(76,175,80)",
+		"bg-light-green":"rgb(139,195,74)",
+		"bg-lime":"rgb(205,220,57)",
+		"bg-yellow":"rgb(255,235,59)",
+		"bg-amber":"rgb(255,193,7)",
+		"bg-orange":"rgb(255,152,0)",
+		"bg-deep-orange":"rgb(255,87,34)",
+		"bg-brown":"rgb(121,85,72)",
+		"bg-grey":"rgb(158,158,158)",
+		"bg-blue-grey":"rgb(96,125,139)",
+		"bg-black":"rgb(0,0,0)"
+	},
+	"es6":{
+		"neoui-autocomplete": {
+			"Autocomplete": "import {Autocomplete} from 'neoui/js/neoui-autocomplete';"
+		},
+		"neoui-button": {
+			"Button": "import {Button} from 'neoui/js/neoui-button';"
+		},
+		"neoui-checkbox": {
+			"Checkbox": "import {Checkbox} from 'neoui/js/neoui-checkbox';"
+		},
+		"neoui-combo": {
+			"Combo": "import {Combo} from 'neoui/js/neoui-combo';"
+		},
+		"neoui-combobox": {
+			"Combobox": "import {Combobox} from 'neoui/js/neoui-combobox';"
+		},
+		"neoui-data-table": {
+			"Table": "import {Table} from 'neoui/js/neoui-data-table';"
+		},
+		"neoui-dialog": {
+			"messageDialog": "import {messageDialog} from 'neoui/js/neoui-dialog';",
+			"confirmDialog": "import {confirmDialog} from 'neoui/js/neoui-dialog';",
+			"dialogMode": "import {dialogMode} from 'neoui/js/neoui-dialog';",
+			"dialog": "import {dialog} from 'neoui/js/neoui-dialog';",
+			"dialogWizard": "import {dialogWizard} from 'neoui/js/neoui-dialog';"
+		},
+		"neoui-layout.md": {
+			"MDLayout": "import {MDLayout} from 'neoui/js/neoui-layout.md';"
+		},
+		"neoui-layout.nav": {
+			"NavLayout": "import {NavLayout} from 'neoui/js/neoui-layout.nav';",
+			"NavLayoutTab": "import {NavLayoutTab} from 'neoui/js/neoui-layout.nav';"
+		},
+		"neoui-loader": {
+			"showLoader": "import {showLoader} from 'neoui/js/neoui-loader';",
+			"hideLoader": "import {hideLoader} from 'neoui/js/neoui-loader';"
+		},
+		"neoui-loading": {
+			"Loading": "import {Loading} from 'neoui/js/neoui-loading';",
+			"showLoading": "import {showLoading} from 'neoui/js/neoui-loading';",
+			"hideLoading": "import {hideLoading} from 'neoui/js/neoui-loading';",
+			"showWaiting": "import {showWaiting} from 'neoui/js/neoui-loading';",
+			"removeWaiting": "import {removeWaiting} from 'neoui/js/neoui-loading';"
+		},
+		"neoui-menu": {
+			"Menu": "import {Menu} from 'neoui/js/neoui-menu';"
+		},
+		"neoui-message": {
+			"showMessageDialog": "import {showMessageDialog} from 'neoui/js/neoui-message';",
+			"showMessage": "import {showMessage} from 'neoui/js/neoui-message';"
+		},
+		"neoui-multilang": {
+			"Multilang": "import {Multilang} from 'neoui/js/neoui-multilang';"
+		},
+		"neoui-navmenu": {
+			"NavMenu": "import {NavMenu} from 'neoui/js/neoui-navmenu';"
+		},
+		"neoui-pagination": {
+			"pagination": "import {pagination} from 'neoui/js/neoui-pagination';"
+		},
+		"neoui-progress": {
+			"Progress": "import {Progress} from 'neoui/js/neoui-progress';"
+		},
+		"neoui-radio": {
+			"Radio": "import {Radio} from 'neoui/js/neoui-radio';"
+		},
+		"neoui-refer": {
+			"refer": "import {refer} from 'neoui/js/neoui-refer';"
+		},
+		"neoui-slidePanel": {
+			"slidePanel": "import {slidePanel} from 'neoui/js/neoui-slidePanel';"
+		},
+		"neoui-switch": {
+			"Switch": "import {Switch} from 'neoui/js/neoui-switch';"
+		},
+		"neoui-tabs": {
+			"Tabs": "import {Tabs} from 'neoui/js/neoui-tabs';"
+		},
+		"neoui-textfield": {
+			"Text": "import {Text} from 'neoui/js/neoui-textfield';"
+		},
+		"neoui-tooltip": {
+			"Tooltip": "import {Tooltip} from 'neoui/js/neoui-tooltip';"
+		},
+		"neoui-validate": {
+			"Validate": "import {Validate} from 'neoui/js/neoui-validate';",
+			"validate": "import {validate} from 'neoui/js/neoui-validate';",
+			"doValidate": "import {doValidate} from 'neoui/js/neoui-validate';"
+		},
+		"neoui-datetimepicker": {
+			"DateTimePicker": "import {DateTimePicker} from 'neoui/js/neoui-datetimepicker';"
+		},
+		"neoui-time": {
+			"Time": "import {Time} from 'neoui/js/neoui-time';"
+		},
+		"neoui-clockpicker": {
+			"ClockPicker": "import {ClockPicker} from 'neoui/js/neoui-clockpicker';"
+		},
+		"neoui-month": {
+			"Month": "import {Month} from 'neoui/js/neoui-month';"
+		},
+		"neoui-year": {
+			"Year": "import {Year} from 'neoui/js/neoui-year';"
+		},
+		"neoui-yearmonth": {
+			"YearMonth": "import {YearMonth} from 'neoui/js/neoui-yearmonth';"
+		}
+	},
+	"ko":{
+		"keroa-checkbox":{
+			"CheckboxAdapter":"import {CheckboxAdapter} from 'kero-adapter/js/component/keroa-checkbox';"
+		},
+		"keroa-ckeditor":{
+			"CkEditorAdapter":"import {CkEditorAdapter} from 'kero-adapter/js/component/keroa-ckeditor';"
+		},
+		"keroa-combo":{
+			"ComboboxAdapter":"import {ComboboxAdapter} from 'kero-adapter/js/component/keroa-combo';"
+		},
+		"keroa-currency":{
+			"CurrencyAdapter":"import {CurrencyAdapter} from 'kero-adapter/js/component/keroa-currency';"
+		},
+		"keroa-datetimepicker":{
+			"DateTimeAdapter":"import {DateTimeAdapter} from 'kero-adapter/js/component/keroa-datetimepicker';"
+		},
+		"keroa-float":{
+			"FloatAdapter":"import {FloatAdapter} from 'kero-adapter/js/component/keroa-float';"
+		},
+		"keroa-grid":{
+			"GridAdapter":"import {GridAdapter} from 'kero-adapter/js/component/keroa-grid';"
+		},
+		"keroa-integer":{
+			"IntegerAdapter":"import {IntegerAdapter} from 'kero-adapter/js/component/keroa-integer';"
+		},
+		"keroa-month":{
+			"MonthAdapter":"import {MonthAdapter} from 'kero-adapter/js/component/keroa-month';"
+		},
+		"keroa-pagination":{
+			"PaginationAdapter":"import {PaginationAdapter} from 'kero-adapter/js/component/keroa-pagination';"
+		},
+		"keroa-password":{
+			"PassWordAdapter":"import {PassWordAdapter} from 'kero-adapter/js/component/keroa-password';"
+		},
+		"keroa-percent":{
+			"PercentAdapter":"import {PercentAdapter} from 'kero-adapter/js/component/keroa-percent';"
+		},
+		"keroa-progress":{
+			"ProgressAdapter":"import {ProgressAdapter} from 'kero-adapter/js/component/keroa-progress';"
+		},
+		"keroa-radio":{
+			"RadioAdapter":"import {RadioAdapter} from 'kero-adapter/js/component/keroa-radio';"
+		},
+		"keroa-string":{
+			"StringAdapter":"import {StringAdapter} from 'kero-adapter/js/component/keroa-string';"
+		},
+		"keroa-switch":{
+			"SwitchAdapter":"import {SwitchAdapter} from 'kero-adapter/js/component/keroa-switch';"
+		},
+		"keroa-textarea":{
+			"TextAreaAdapter":"import {TextAreaAdapter} from 'kero-adapter/js/component/keroa-textarea';"
+		},
+		"keroa-textfield":{
+			"TextFieldAdapter":"import {TextFieldAdapter} from 'kero-adapter/js/component/keroa-textfield';"
+		},
+		"keroa-time":{
+			"TimeAdapter":"import {TimeAdapter} from 'kero-adapter/js/component/keroa-time';"
+		},
+		"keroa-tree":{
+			"TreeAdapter":"import {TreeAdapter} from 'kero-adapter/js/component/keroa-tree';"
+		},
+		"keroa-url":{
+			"UrlAdapter":"import {UrlAdapter} from 'kero-adapter/js/component/keroa-url';"
+		},
+		"keroa-year":{
+			"YearAdapter":"import {YearAdapter} from 'kero-adapter/js/component/keroa-year';"
+		},
+		"keroa-yearmonth":{
+			"YearMonthAdapter":"import {YearMonthAdapter} from 'kero-adapter/js/component/keroa-yearmonth';"
+		}
+	}
+}

@@ -1,0 +1,10 @@
+#paginationColor > .active > a, #paginationColor > .active > span, #paginationColor > .active > a:hover, #paginationColor > .active > span:hover, #paginationColor > .active > a:focus, #paginationColor > .active > span:focus {
+    color: #fff;
+    background-color: #00bcd4;
+    border-color: #00bcd4;
+}
+
+.u-widget-body .desc{
+    margin-top: -10px;
+    margin-bottom: 30px;
+}

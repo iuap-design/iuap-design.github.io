@@ -6,6 +6,8 @@ var template = require( 'art-template' );
 var zip = require('gulp-zip');
 var flatmap = require('gulp-flatmap');
 var git = require('gulp-git');
+var webpack = require('gulp-webpack');
+var path = require('path');
 
 var fileDir = fs.readdirSync('./');
 var uuiDir = fileDir.indexOf('generate-uui');
@@ -130,9 +132,41 @@ gulp.task('clone', function() {
     }
 });
 
+gulp.task('watcher', function() {
+    gulp.watch('./src/**/*.html',['del']);
+});
+
+
 
 gulp.task('newpack', ['clone']);
 gulp.task('default', ['del']);
 
+
+/**
+ * 此部分作为测试webpack
+ */
+gulp.task('webpack', function() {
+    return gulp.src(path.resolve(__dirname, './entry.js'))
+        .pipe(webpack({
+            module:{
+                loaders:[
+                    {
+                        test: /(\.jsx|\.js)$/,
+                        loader: 'babel',
+                        exclude: /(bower_components)/ 
+                    }
+                ]               
+            },
+            output:{
+                filename:'u.js',
+                libraryTarget:'umd',
+                umdNamedDefine: true
+            },
+            resolve:{
+                extensions: ['','.js','.jsx']
+            }
+        }))
+        .pipe(gulp.dest(path.resolve(__dirname,'./download')));
+});
 
 
