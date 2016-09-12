@@ -6,6 +6,8 @@ var template = require( 'art-template' );
 var zip = require('gulp-zip');
 var flatmap = require('gulp-flatmap');
 var git = require('gulp-git');
+var webpack = require('gulp-webpack');
+var path = require('path');
 
 var fileDir = fs.readdirSync('./');
 var uuiDir = fileDir.indexOf('generate-uui');
