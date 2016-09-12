@@ -10,38 +10,8 @@
 <link rel="stylesheet" type="text/css" href="http://design.yyuap.com/static/uui-original/stable/css/tree.css">
 <link rel="stylesheet" type="text/css" href="http://design.yyuap.com/static/uui-original/stable/css/grid.css">
 <style id="demo-style" media="screen">
-.example{
-    padding-top: 5px;
-    padding-left: 5px;
-    padding-bottom: 5px;
-    height: 30px;
-}
-.example>.tooltip{
-    opacity: 1;
-    position: absolute;
-}
-.tooltip-rotate{
-    filter: alpha(opacity=0);
-    opacity: 0!important;
-    -webkit-transition: all 1s linear;
-    -moz-transition: all 1s linear;
-    -ms-transition: all 1s linear;
-    -o-transition: all 1s linear;
-    transition: all 1s linear;
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-}
-.rotate{
-    filter: alpha(opacity=100);
-    opacity: 1!important;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
+.u-widget {
+    padding: 20px;
 }
 </style>
 </head>
@@ -50,160 +20,26 @@
     <div class="u-row">
         <div class="u-col-md-12">
             <div class="u-widget  u-widget-right">
-                <div class="u-widget-heading">
-                    <h3 class="u-widget-title">基础工具提示</h3>
-                </div>
-                <div class="u-widget-body">
-                    <div class="u-row">
-                        <div class="u-col-3">
-                            <div class="example">
-                                <div class="tooltip bottom" role="tooltip">
-                                    <div class="tooltip-arrow"></div>
-                                    <div class="tooltip-inner">
-                                        Bottom Tooltip
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="u-col-3">
-                            <div class="example">
-                                <div class="tooltip top" role="tooltip">
-                                    <div class="tooltip-arrow"></div>
-                                    <div class="tooltip-inner">
-                                        Top Tooltip
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="u-col-3">
-                            <div class="example">
-                                <div class="tooltip left" role="tooltip">
-                                    <div class="tooltip-arrow"></div>
-                                    <div class="tooltip-inner">
-                                        Left Tooltip
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="u-col-3">
-                            <div class="example">
-                                <div class="tooltip right" role="tooltip">
-                                    <div class="tooltip-arrow"></div>
-                                    <div class="tooltip-inner">
-                                        Right Tooltip
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="u-col-md-12">
-            <div class="u-widget  u-widget-right">
-                <div class="u-widget-heading">
-                    <h3 class="u-widget-title">不同颜色的工具提示</h3>
-                </div>
-                <div class="u-widget-body">
-                    <div class="u-row">
-                        <div class="u-col-3">
-                            <div class="example">
-                                <div class="tooltip top tooltip-primary" role="tooltip">
-                                    <div class="tooltip-arrow"></div>
-                                    <div class="tooltip-inner">
-                                        Primary
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="u-col-3">
-                            <div class="example">
-                                <div class="tooltip top tooltip-success" role="tooltip">
-                                    <div class="tooltip-arrow"></div>
-                                    <div class="tooltip-inner">
-                                        Success
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="u-col-3">
-                            <div class="example">
-                                <div class="tooltip top tooltip-info" role="tooltip">
-                                    <div class="tooltip-arrow"></div>
-                                    <div class="tooltip-inner">
-                                        Info
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="u-col-3">
-                            <div class="example">
-                                <div class="tooltip top tooltip-warning" role="tooltip">
-                                    <div class="tooltip-arrow"></div>
-                                    <div class="tooltip-inner">
-                                        Warning
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <br><br><br>
-                        <div class="u-col-3">
-                            <div class="example">
-                                <div class="tooltip top tooltip-danger" role="tooltip">
-                                    <div class="tooltip-arrow"></div>
-                                    <div class="tooltip-inner">
-                                        Danger
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="u-col-3">
-                            <div class="example">
-                                <div class="tooltip top tooltip-dark" role="tooltip">
-                                    <div class="tooltip-arrow"></div>
-                                    <div class="tooltip-inner">
-                                        Dark
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="u-col-md-12">
-            <div class="u-widget  u-widget-right">
-                <div class="u-widget-heading">
-                    <h3 class="u-widget-title">触发工具提示</h3>
-                </div>
-                <div class="u-widget-body">
-                    <div class="u-row">
-                        <div class="u-col-4">
-                            <div class="example">
-                                <button type="button" class="u-button u-button-info u-button-tooltip-left" >Click to tooltip</button>
-                                <div class="tooltip right" style="display: none">
-                                    <div class="tooltip-arrow" style="top: 50%;"></div>
-                                    <div class="tooltip-inner">Click to tooltip</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="u-col-4">
-                            <div class="example">
-                                <button type="button" class="u-button u-button-info u-button-tooltip-rotate" >Rotate</button>
-                                <div class="tooltip right tooltip-rotate">
-                                    <div class="tooltip-arrow" style="top: 50%;"></div>
-                                    <div class="tooltip-inner">Click to tooltip</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+				<!-- 
+					HTML
+					u-meta:框架特有标记，框架通过识别此标记创建对应UI组件，以及进行数据绑定 
+					id,type.data,field为必选项
+					id:创建组件唯一标识
+					type:创建组件对应的类型,单选框对应的type为u-radio
+					data:指定数据模型中的数据集
+					field:绑定数据集中对应的字段
+					datasource:绑定数据
+				-->
+				<div u-meta='{"id":"r1","type":"u-radio","data":"dt1","field":"f1","datasource":"radiodata"}'>
+				    <label  class="u-radio" >
+				        <input type="radio" class="u-radio-button" name="options">
+				        <span class="u-radio-label"></span>
+				    </label>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-
 <script src="http://design.yyuap.com/static/jquery/jquery-1.11.2.js"></script>
 <script src="http://design.yyuap.com/static/uploader/js/webuploader.js"></script>
 <script src="http://design.yyuap.com/static/knockout/knockout-3.2.0.debug.js"></script>
@@ -213,38 +49,41 @@
 <script src="http://design.yyuap.com/static/uui-original/stable/js/u-grid.js"></script>
 <script src="http://design.yyuap.com/static/requirejs/require.debug.js"></script>
 <script>
-$('.u-button-tooltip-left').on('click',function () {
-    var left=$(this).get(0).offsetLeft+$(this).get(0).clientWidth;
-    var top=$(this).get(0).offsetTop;
-    var $tooltip=$(this).next();
-    $tooltip.css('left',left+10);
-    $tooltip.css('top',top);
-    if($tooltip.is(':hidden')){
-        $tooltip.show();
-    }else{
-        $tooltip.hide()
-    }
+
+// JS
+
+/**
+ * viewModel 创建数据模型
+ * dt1 创建的数据集
+ * f1 创建数据集中的字段
+ * type:指定数据对应的类型
+ * radiodata:自定义单选框数据，用于绑定数据
+ */
+var app,viewModel;
+viewModel = {
+    dt1: new u.DataTable({
+        meta:{
+        f1:{},
+        f2:{}
+        }
+     }),
+    radiodata:[{value:'01',name:'男'},{value:'02',name:'女'}]
+};
+
+/**
+ * app 创建框架服务
+ * el 指定服务对应的顶层DOM
+ * model 指定服务对应的数据模型
+ */
+app = u.createApp({
+    el:'body',
+    model:viewModel
 });
-$('.tooltip-rotate').each(function () {
-    var $btn=$(this).prev();
-    $(this).css('left',$btn.get(0).clientWidth+$btn.get(0).offsetLeft+10);
-    $(this).css('top',$btn.get(0).offsetTop);
-});
-$('.u-button-tooltip-rotate').hover(function () {
-    var left=$(this).get(0).clientWidth;
-    var top=$(this).get(0).offsetTop;
-    var $tooltip=$(this).next();
-    $tooltip.css('left',left+40);
-    $tooltip.css('top',top);
-    $tooltip.addClass('rotate');
-},function () {
-    var left=$(this).get(0).clientWidth;
-    var top=$(this).get(0).offsetTop;
-    var $tooltip=$(this).next();
-    $tooltip.css('left',left+40);
-    $tooltip.css('top',top);
-    $tooltip.removeClass('rotate');
-});
+
+// 创建空行,绑定默认值
+var r = viewModel.dt1.createEmptyRow();
+r.setValue('f1',"01");
+viewModel.dt1.setRowSelect(0);
 </script>
 </body>
 </html>
