@@ -140,4 +140,31 @@ gulp.task('newpack', ['clone']);
 gulp.task('default', ['del']);
 
 
+/**
+ * 此部分作为测试webpack
+ */
+gulp.task('webpack', function() {
+    return gulp.src(path.resolve(__dirname, './entry.js'))
+        .pipe(webpack({
+            module:{
+                loaders:[
+                    {
+                        test: /(\.jsx|\.js)$/,
+                        loader: 'babel',
+                        exclude: /(bower_components)/ 
+                    }
+                ]               
+            },
+            output:{
+                filename:'u.js',
+                libraryTarget:'umd',
+                umdNamedDefine: true
+            },
+            resolve:{
+                extensions: ['','.js','.jsx']
+            }
+        }))
+        .pipe(gulp.dest(path.resolve(__dirname,'./download')));
+});
+
 
