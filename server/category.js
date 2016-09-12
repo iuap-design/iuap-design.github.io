@@ -223,8 +223,9 @@ fs.readdir(scssPath, function(err, scssFiles) {
 
 		// 写入文件
 		var packDir = path.resolve(__dirname, '../src/data/package');
-		var packDirExist = fs.statSync(packDir).isDirectory();
-		if(!packDirExist){
+		try{
+			fs.statSync(packDir).isDirectory();
+		}catch(err){
 			fs.mkdirSync(packDir);
 		}
 
