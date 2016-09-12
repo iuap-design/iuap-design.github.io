@@ -1,4 +1,4 @@
-# combobox插件
+# 下拉框
 
 combobox组合框是由一个文本输入控件和一个下拉菜单组成的，类似于select元素。用户可以从一个预先定义的列表里选择一个或者多个选项。
 
@@ -80,4 +80,8 @@ document.getElementById('domId')['u.Combo'].setComboData(dataArray);
 
 ```
 
+相关内容：
 
+[单选框在kero中使用](http://design.yyuap.com/dist/pages/kero/combobox_ex.html)    
+
+[单选框在grid中使用](http://design.yyuap.com/dist/pages/webIDE/index.html#/demos/grids/edit)
