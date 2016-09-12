@@ -14,7 +14,6 @@ stylePlugin = [];
 styleAry = [];
 jsAry = [];
 
-
 fs.readdir(scssPath, function(err, scssFiles) {
 	scssFiles.forEach(function(scssFile){
 		var fileName = scssFile.replace(/\.scss/,'');
@@ -25,7 +24,7 @@ fs.readdir(scssPath, function(err, scssFiles) {
 		jsFiles.forEach(function(jsFile){
 			var fileName = jsFile.replace(/\.js/,'');
 			jsAry.push(fileName);
-			
+
 		});
 
 		// css插件集合: stylePlugin
@@ -112,7 +111,7 @@ fs.readdir(scssPath, function(err, scssFiles) {
 			'                    "file": "test4.js"',
 			'                }',
 			'            ]',
-			'        }',			
+			'        }',
 			'    }',
 			'}'].join("\n");
 
@@ -211,7 +210,7 @@ fs.readdir(scssPath, function(err, scssFiles) {
 			'            ]',
 			'        }'
 		];
-		
+
 		var checkEnd = ['    }'];
 		var panelCheck = checkHead.concat(polyDataAry, styleDataConcat, jsDataConcat, adapterDataAry, checkEnd);
 
@@ -227,5 +226,3 @@ fs.readdir(scssPath, function(err, scssFiles) {
 
 	});
 });
-
-

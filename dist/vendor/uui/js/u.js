@@ -138,7 +138,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  this.dataTables = {};
 	  // adjustMetaFunc
 	  this.adjustMetaFunc = _adjustMetaFunc.adjustMetaFunc;
-	  // dataTable 
+	  // dataTable
 	  this.addDataTable = _dataTable.addDataTable;
 	  this.getDataTable = _dataTable.getDataTable;
 	  this.getDataTables = _dataTable.getDataTables;
@@ -2603,7 +2603,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.compression = true;
 	    }
 
-	    // dataTable 
+	    // dataTable
 	    this.addDataTable = _serverDataTable.addDataTable;
 	    this.addDataTables = _serverDataTable.addDataTables;
 	    this.addAllDataTables = _serverDataTable.addAllDataTables;
@@ -3324,7 +3324,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	/**
 	 * 解绑事件
-	 * 
+	 *
 	**/
 	var off = function off(name, callback) {
 	    if (Object.prototype.toString.call(name) == '[object Array]') {
@@ -3356,7 +3356,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 	/**
-	 * 
+	 *
 	**/
 	var one = function one(name, callback) {
 	    this.on(name, callback, 1);
@@ -3435,7 +3435,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * Date	  : 2016-07-30 14:34:01
 	 */
 
-	/** 
+	/**
 	 *设置数据
 	 *
 	 */
@@ -3475,12 +3475,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	        } else {
 	            select = this.getPage(newIndex).selectedIndices;
 	            focus = this.getPage(newIndex).focus;
-	            this.setRows(this.getPage(newIndex).rows);
+				console.log('setDATA', options);
+	            this.setRows(this.getPage(newIndex).rows, options);
 	        }
 	    } else {
 	        select = data.select || (!unSelect ? [0] : []);
 	        focus = data.focus !== undefined ? data.focus : data.current;
-	        this.setRows(data.rows);
+	        this.setRows(data.rows, options);
 	    }
 	    this.pageIndex(newIndex);
 	    this.pageSize(newSize);
@@ -4669,7 +4670,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * 设置行数据
 	 * @param {Object} rows
 	 */
-	var setRows = function setRows(rows) {
+	var setRows = function setRows(rows,options) {
 	    var insertRows = [],
 	        _id;
 	    for (var i = 0; i < rows.length; i++) {
@@ -4700,7 +4701,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                }
 	            } else {
 	                row = new Row({ parent: this, id: _id });
-	                row.setData(rows[i]);
+					console.log('setRow', options)
+	                row.setData(rows[i], null, options);
 	                insertRows.push(row);
 	            }
 	        }
@@ -5707,18 +5709,26 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	/**
 	 * [_setData description]
-	 * @param {[type]} sourceData 
-	 * @param {[type]} targetData 
-	 * @param {[type]} subscribe  
+	 * @param {[type]} sourceData
+	 * @param {[type]} targetData
+	 * @param {[type]} subscribe
 	 * @param {[type]} parentKey  [父项key，数据项为数组时获取meta值用]
 	 */
-	var _setData = function _setData(rowObj, sourceData, targetData, subscribe, parentKey) {
+	var _setData = function _setData(rowObj, sourceData, targetData, subscribe, parentKey,options) {
 	    for (var key in sourceData) {
 	        var _parentKey = parentKey || null;
 	        //if (targetData[key]) {
 	        targetData[key] = targetData[key] || {};
 	        var valueObj = sourceData[key];
-	        if ((typeof valueObj === 'undefined' ? 'undefined' : _typeof(valueObj)) != 'object') rowObj.parent.createField(key);
+			console.log(valueObj, options)
+	        if ((typeof valueObj === 'undefined' ? 'undefined' : _typeof(valueObj)) != 'object'){
+				if(options){
+					if(options.fieldFlag){
+						console.log('end',options);
+						rowObj.parent.createField(key);
+					}
+				}
+			}
 	        //if (typeof this.parent.meta[key] === 'undefined') continue;
 	        if (valueObj == null || (typeof valueObj === 'undefined' ? 'undefined' : _typeof(valueObj)) != 'object') {
 	            targetData[key]['value'] = rowObj.formatValue(key, valueObj);
@@ -5749,7 +5759,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                }
 	            } else {
 	                _parentKey = _parentKey == null ? key : _parentKey + '.' + key;
-	                _setData(rowObj, valueObj, targetData[key], null, _parentKey);
+	                _setData(rowObj, valueObj, targetData[key], null, _parentKey, options);
 	            }
 	        }
 	        //}
@@ -5758,14 +5768,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	/**
 	 *设置Row数据
-	 *@subscribe 是否触发监听  
+	 *@subscribe 是否触发监听
 	 */
-	var setData = function setData(data, subscribe) {
+	var setData = function setData(data, subscribe,options) {
 	    this.status = data.status;
 	    var sourceData = data.data,
 	        targetData = this.data;
 	    if (this.parent.root.strict != true) {
-	        _setData(this, sourceData, targetData, subscribe);
+			console.log(222);
+	        _setData(this, sourceData, targetData, subscribe,null,options);
 	        return;
 	    }
 
@@ -7213,7 +7224,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    mixins: [_valueMixin.ValueMixin, _enableMixin.EnableMixin, _requiredMixin.RequiredMixin, _validateMixin.ValidateMixin],
 	    init: function init(options) {
 	        var self = this;
-	        // CheckboxAdapter.superclass.initialize.apply(this, arguments); 
+	        // CheckboxAdapter.superclass.initialize.apply(this, arguments);
 	        this.isGroup = this.options['isGroup'] === true || this.options['isGroup'] === 'true';
 	        this.otherValue = this.options['otherValue'] || 'ovOV~!';
 	        if (this.options['datasource'] || this.options['hasOther']) {
@@ -7792,7 +7803,7 @@ return /******/ (function(modules) { // webpackBootstrap
 					this.$element.parentNode.appendChild(this.successId);
 				}
 			}
-			//不是默认的tip提示方式并且tipId没有定义时创建默认tipid	
+			//不是默认的tip提示方式并且tipId没有定义时创建默认tipid
 			if (this.notipFlag && !this.tipId) {
 				this.tipId = (0, _dom.makeDOM)('<span class="u-form-control-info uf uf-exclamationsign "></span>');
 				this.$element.parentNode.appendChild(this.tipId);
@@ -11388,7 +11399,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      on(this._headerMonth, 'click', function(e){
 	        self._fillMonth();
 	        stopEvent(e)
-	    });    
+	    });
 	      on(this._headerTime, 'click', function(e){
 	        self._fillTime();
 	        stopEvent(e)
@@ -11477,7 +11488,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      on(this._headerMonth, 'click', function(e){
 	        self._fillMonth();
 	        stopEvent(e)
-	    });    
+	    });
 	      on(this._headerTime, 'click', function(e){
 	        self._fillTime();
 	        stopEvent(e)
@@ -12757,13 +12768,13 @@ return /******/ (function(modules) { // webpackBootstrap
 								row.setValue(field, val);
 							});
 						});
-						//					var comp = new $.compManager.plugs.radio(compDiv[0],eOptions,viewModel);					
+						//					var comp = new $.compManager.plugs.radio(compDiv[0],eOptions,viewModel);
 						//					for( var i=0,length=rdo.length; i<length; i++){
 						//					   if(rdo[i].pk==value){
 						//					   	 obj.element.innerHTML = '<input type="radio" checked><i data-role="name">'+rdo[i].name+'</i>';
 						//					   	 break;
 						//					   }
-						//					}				
+						//					}
 						// 根据惊道需求增加renderType之后的处理,此处只针对grid.js中的默认render进行处理，非默认通过renderType进行处理
 						if (typeof afterRType == 'function') {
 							afterRType.call(this, obj);
@@ -12861,7 +12872,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 			/*
 	   * 处理viewModel与grid之间的绑定
-	   * 
+	   *
 	   */
 			var onRowSelectedFun = this.gridOptions.onRowSelected;
 			// 选中
@@ -12981,7 +12992,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			});
 
 			// 增行,只考虑viewModel传入grid
-			//		var onRowInsertFun = this.gridOptions.onRowInsert; 
+			//		var onRowInsertFun = this.gridOptions.onRowInsert;
 			//		this.gridOptions.onRowInsert = function(obj){
 			//			dataTable.insertRow(obj.index,obj.row);
 			//			if(onRowSelectedFun){
@@ -19907,7 +19918,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		});
 	};
 
-	//tab键切换 下拉隐藏	
+	//tab键切换 下拉隐藏
 	Combobox.fn.blurEvent = function () {
 		var self = this;
 
@@ -20077,7 +20088,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		var self = this;
 		(0, _event.on)(self.element, "click", function () {
 			// $(this.$element).on('click',function(){
-			// $(self.oDiv).find('.select-search input').val('')  	
+			// $(self.oDiv).find('.select-search input').val('')
 			self.oDiv.querySelector('.select-search input').value = "";
 			var oLis = this.oDiv.querySelector("ul").childNodes;
 			if (self.options.single == "true" || self.options.single == true) {
@@ -20132,7 +20143,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	// for(var k=data.length;k<Olis.length;k++){
 	// $(Olis[k]).remove();
-	// }		
+	// }
 
 	// }else if(data.length > Olis.length){
 	// var liTemplate = Olis[0]
@@ -21365,7 +21376,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 	var loadTemplate = "<div class='u-loader-container'><div class='u-loader'>{centerContent}</div>{loadDesc}</div>"; //{centerContent}为加载条中间内容
 	/**
-	 * @param  {Object} options 
+	 * @param  {Object} options
 	 * @return {[type]}
 	 */
 	/**

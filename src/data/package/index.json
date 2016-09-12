@@ -50,10 +50,11 @@
                 {"name":"面板布局","file":"neoui-layout.slidepanel"},
                 {"name":"列表","file":"neoui-list-group"},
                 {"name":"导航","file":"neoui-nav"},
+                {"name":"undefined","file":"neoui-navbar"},
                 {"name":"面板","file":"neoui-panel"},
-                {"name":"步骤","file":"neoui-pearls"},
                 {"name":"评分","file":"neoui-rating"},
                 {"name":"色带","file":"neoui-ribbon"},
+                {"name":"undefined","file":"neoui-steps"},
                 {"name":"标签","file":"neoui-tags"},
                 {"name":"天气","file":"neoui-weather"},
                 {"name":"挂件","file":"neoui-widget"}
