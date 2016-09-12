@@ -7,14 +7,31 @@
                     <h3 class="u-widget-title">编辑</h3>
                 </div>
                 <div class="u-widget-body">
-					<div id="gridTest" u-meta='{"id":"grid","type":"grid","data":"dataTable","columnMenu":false,"canDrag":false,"sortable":false,"canSwap":false,"editable":true,"editType":"default"}'>
+					<!-- <div id="gridTest" u-meta='{"id":"grid","type":"grid","data":"dataTable","columnMenu":false,"canDrag":false,"sortable":false,"canSwap":false,"editable":true,"editType":"default"}'>
 						<div options='{"field":"name","dataType":"String","title":"姓名","editType":"string"}'></div>
 						<div options='{"field":"time","dataType":"time","title":"日期","editType":"eidtTypeFun"}'></div>
 						<div options='{"field":"distance","dataType":"String","title":"距离","editType":"float"}'></div>
 						<div options='{"field":"currency","dataType":"String","title":"金额","editType":"float"}'></div>
 						<div options='{"field":"comboField","dataType":"String","title":"下拉","editType":"combo","editOptions":{"id":"combobox1","type":"combo","datasource":"comItems"},"renderType":"comboRender"}'></div>
-					</div>
-
+					</div> -->
+                    <div id="gridTest2" u-meta='{"id":"grid2","multiSelect":true,"editType":"default","type":"grid","field":"","autoExpand":false,"data":"dataTable","showNumCol":true,"showTree":false,"keyField":"id","parentKeyField":"pid","editable":true,"onBeforeRowSelected":"onBeforeRowSelected1","onRowSelected":"onRowSelected1","onBeforeRowUnSelected":"onBeforeRowUnSelected1","onRowUnSelected":"onRowUnSelected1","onBeforeAllRowSelected":"onBeforeAllRowSelected1","columnMenu":true}'>
+                    	<div options='{"field":"name","dataType":"String","title":"字符串","editOptions":{"id":"stringname","type":"string","maxLength":6},"editType":"string"}'></div>
+                        <!-- <div options='{"field":"pass","dataType":"String","title":"复选","editOptions":{"id":"radio", "type":"radio","datasource":"radiodata"},"editType":"checkbox","renderType":"radioRender"}'></div> -->
+                        <div options='{"field":"checkbox","dataType":"checkbox","title":"复选","renderType":"booleanRender","required":true}'></div>
+                        <div options='{"field":"num","dataType":"integer","title":"数字","editType":"integer"}'></div>
+                        <div options='{"field":"date","dataType":"date","title":"年月日","editType":"date"}'></div>
+                        <div options='{"field":"year","dataType":"year","title":"年","editType":"year"}'></div>
+                        <div options='{"field":"month","dataType":"month","title":"月","editType":"month"}'></div>
+                        <div options='{"field":"yearmonth","dataType":"yearmonth","title":"年月","editType":"yearmonth"}'></div>
+                        <div options='{"field":"datetime","dataType":"String","title":"时分秒","editType":"datetime"}'></div>
+                        <div options='{"field":"url","dataType":"String","title":"链接","editType":"url"}'></div>
+                        <div options='{"field":"password","dataType":"String","title":"密码","editType":"password"}'></div>
+                        <div options='{"field":"percent","dataType":"String","title":"百分比","editType":"percent"}'></div>
+                    	<div options='{"field":"currency","dataType":"String","title":"浮点数","editType":"float","editOptions":{"id":"currency1","type":"float","precision":"3","max":10000}}'></div>
+                    	<div options='{"field":"pass","dataType":"String","title":"单选","editOptions":{"id":"radio", "type":"radio","datasource":"radiodata"},"editType":"radio","renderType":"radioRender"}'></div>
+                    	<div options='{"field":"combobox","dataType":"string","title":"下拉","editOptions":{"id":"combobox1","type":"combo","datasource":"comItems"},"editType":"combo","renderType":"comboRender"}'></div>
+                        <div options='{"field":"combobox2","dataType":"string","title":"combo2","editOptions":{"id":"combobox2","type":"combo","single":false,"mutil":true,"datasource":"comItems2"},"editType":"combo","renderType":"comboRender"}'></div>
+                    </div>
                 </div>
             </div>
         </div>
