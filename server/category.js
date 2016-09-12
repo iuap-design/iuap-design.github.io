@@ -221,8 +221,15 @@ fs.readdir(scssPath, function(err, scssFiles) {
 		var totalConcat = dataHeadAry.concat(panelTheme, panelCheck, dataEndAry).join('\n');
 
 		// 写入文件
+		var packDir = path.resolve(__dirname, '../src/data/package');
+		try{
+			fs.statSync(packDir).isDirectory();
+		}catch(err){
+			fs.mkdirSync(packDir);
+		}
+
 		var indexPath = path.resolve(__dirname,'../src/data/package/index.json')
-		fs.writeFile(indexPath, totalConcat);
+		fs.writeFileSync(indexPath, totalConcat, 'utf-8');
 
 	});
 });

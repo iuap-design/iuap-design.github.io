@@ -1,10 +1,19 @@
+<<<<<<< HEAD
+/**
+ * tree v3.0.6
+=======
 /** 
  * neoui-tree v1.0.5
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
  * tree
  * author : yonyou FED
  * homepage : https://github.com/iuap-design/tree#readme
  * bugs : https://github.com/iuap-design/tree/issues
+<<<<<<< HEAD
+ **/
+=======
  **/ 
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 /*-------------------------------------
 zTree Style
 
@@ -14,10 +23,17 @@ email:      hunter.z@263.net
 website:    http://code.google.com/p/jquerytree/
 
 -------------------------------------*/
+<<<<<<< HEAD
+.ztree * {
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+=======
 .ztree * {.ztree li span.button.switch.noline_open:after
   padding: 0;
   margin: 0;
   font-size: 14px;
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
   font-family: Verdana, Arial, Helvetica, AppleGothic, sans-serif;
 }
 .ztree {
@@ -57,7 +73,11 @@ website:    http://code.google.com/p/jquerytree/
   padding: 6px 10px;
   box-sizing: border-box;
 }
+<<<<<<< HEAD
+.ztree li a:not(.focusNode):hover {
+=======
 .ztree li a:hover {
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
     color:#3949AB !important;
     background-color: #eee !important;
 }
@@ -71,6 +91,14 @@ website:    http://code.google.com/p/jquerytree/
     background-color: rgb(63,81,181);
     color: #FFFFFF;
 }
+<<<<<<< HEAD
+.ztree li.focusNode>span {
+    // background-color: #C0EBF4;
+    background-color: rgb(63,81,181);
+    color: #FFFFFF;
+}
+=======
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 
 .ztree li a.curSelectedNode span:first-child + span{
   /*color:#3881D8;*/
@@ -464,7 +492,11 @@ ul.ztree.zTreeDragUL {
     /*color: #3881D8;*/
        position: absolute;
     top: 10px;
+<<<<<<< HEAD
+    font-size: 14px;
+=======
     font-size: 12px;
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
 }
 
 .ztree li span.button.switch.noline_open:after {
@@ -485,7 +517,11 @@ ul.ztree.zTreeDragUL {
     /*color: #3881D8;*/
        position: absolute;
     top: 10px;
+<<<<<<< HEAD
+    font-size: 14px;
+=======
     font-size: 12px;
+>>>>>>> b4d4f2e0af7d88f6312457de4208e2942db0347c
     left:5px;
 }
 .basic li span.button.switch.noline_open:after  {

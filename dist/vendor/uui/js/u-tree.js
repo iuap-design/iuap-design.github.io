@@ -1,5 +1,5 @@
 /** 
- * neoui-tree v1.0.6
+ * tree v3.0.6
  * tree
  * author : yonyou FED
  * homepage : https://github.com/iuap-design/tree#readme
@@ -3548,6 +3548,10 @@
 
 	var _selectNode = view.selectNode;
 	view.selectNode = function(setting, node, addFlag) {
+
+		$('#'+setting.treeId+' a').removeClass('focusNode');
+		$('#'+node.tId+'_a').addClass('focusNode');
+
 		var root = data.getRoot(setting);
 		if (data.isSelectedNode(setting, node) && root.curEditNode == node && node.editNameFlag) {
 			return false;

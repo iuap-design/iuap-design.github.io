@@ -51,13 +51,13 @@
 	});
 	exports.DataTable = exports.u = undefined;
 
-	var _index = __webpack_require__(126);
+	var _index = __webpack_require__(128);
 
-	var _index2 = __webpack_require__(128);
+	var _index2 = __webpack_require__(130);
 
 	var neoui = _interopRequireWildcard(_index2);
 
-	var _index3 = __webpack_require__(146);
+	var _index3 = __webpack_require__(148);
 
 	var _index4 = __webpack_require__(75);
 
@@ -3300,7 +3300,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 	exports.Events = undefined;
 
@@ -3316,7 +3316,17 @@
 
 
 	var Events = function Events() {
+<<<<<<< HEAD
 	  _classCallCheck(this, Events);
+=======
+	    _classCallCheck(this, Events);
+
+	    this.on = _events.on;
+	    this.off = _events.off;
+	    this.one = _events.one;
+	    this.trigger = _events.trigger;
+	    this.getEvent = _events.getEvent;
+>>>>>>> 86783c3b659c223c48fcaf2c88de67905c1da979
 	};
 
 	Events.prototype.on = _events.on;
@@ -7076,51 +7086,55 @@
 
 	var _baseAdapter = __webpack_require__(76);
 
-	var _keroaCheckbox = __webpack_require__(77);
+	var _checkbox = __webpack_require__(77);
 
-	var _keroaCkeditor = __webpack_require__(88);
+	var _ckeditor = __webpack_require__(88);
 
-	var _keroaCombo = __webpack_require__(89);
+	var _combobox = __webpack_require__(89);
 
-	var _keroaCurrency = __webpack_require__(92);
+	var _currency = __webpack_require__(92);
 
-	var _keroaDatetimepicker = __webpack_require__(96);
+	var _datetime = __webpack_require__(96);
 
-	var _keroaFloat = __webpack_require__(94);
+	var _float = __webpack_require__(94);
 
-	var _keroaGrid = __webpack_require__(98);
+	var _grid = __webpack_require__(98);
 
-	var _keroaInteger = __webpack_require__(101);
+	var _integer = __webpack_require__(101);
 
-	var _keroaMonth = __webpack_require__(108);
+	var _month = __webpack_require__(108);
 
-	var _keroaPagination = __webpack_require__(110);
+	var _nativeCheckbox = __webpack_require__(110);
 
-	var _keroaPassword = __webpack_require__(105);
+	var _nativeRadio = __webpack_require__(111);
 
-	var _keroaPercent = __webpack_require__(106);
+	var _pagination = __webpack_require__(112);
 
-	var _keroaString = __webpack_require__(100);
+	var _password = __webpack_require__(105);
 
-	var _keroaProgress = __webpack_require__(112);
+	var _percent = __webpack_require__(106);
 
-	var _keroaRadio = __webpack_require__(102);
+	var _string = __webpack_require__(100);
 
-	var _keroaSwitch = __webpack_require__(114);
+	var _progress = __webpack_require__(114);
 
-	var _keroaTextarea = __webpack_require__(116);
+	var _radio = __webpack_require__(102);
 
-	var _keroaTextfield = __webpack_require__(117);
+	var _switch = __webpack_require__(116);
 
-	var _keroaTime = __webpack_require__(118);
+	var _textarea = __webpack_require__(118);
 
-	var _keroaUrl = __webpack_require__(104);
+	var _textfield = __webpack_require__(119);
 
-	var _keroaYear = __webpack_require__(121);
+	var _time = __webpack_require__(120);
 
-	var _keroaYearmonth = __webpack_require__(123);
+	var _url = __webpack_require__(104);
 
-	var _keroaTree = __webpack_require__(125);
+	var _year = __webpack_require__(123);
+
+	var _yearmonth = __webpack_require__(125);
+
+	var _tree = __webpack_require__(127);
 
 	var _enableMixin = __webpack_require__(79);
 
@@ -7134,27 +7148,29 @@
 
 	var ex = {
 		BaseAdapter: _baseAdapter.BaseAdapter,
-		CheckboxAdapter: _keroaCheckbox.CheckboxAdapter,
-		CkEditorAdapter: _keroaCkeditor.CkEditorAdapter,
-		ComboboxAdapter: _keroaCombo.ComboboxAdapter,
-		CurrencyAdapter: _keroaCurrency.CurrencyAdapter,
-		DateTimeAdapter: _keroaDatetimepicker.DateTimeAdapter,
-		FloatAdapter: _keroaFloat.FloatAdapter,
-		IntegerAdapter: _keroaInteger.IntegerAdapter,
-		MonthAdapter: _keroaMonth.MonthAdapter,
-		PaginationAdapter: _keroaPagination.PaginationAdapter,
-		PassWordAdapter: _keroaPassword.PassWordAdapter,
-		PercentAdapter: _keroaPercent.PercentAdapter,
-		StringAdapter: _keroaString.StringAdapter,
-		ProgressAdapter: _keroaProgress.ProgressAdapter,
-		RadioAdapter: _keroaRadio.RadioAdapter,
-		SwitchAdapter: _keroaSwitch.SwitchAdapter,
-		TextAreaAdapter: _keroaTextarea.TextAreaAdapter,
-		TextFieldAdapter: _keroaTextfield.TextFieldAdapter,
-		TimeAdapter: _keroaTime.TimeAdapter,
-		UrlAdapter: _keroaUrl.UrlAdapter,
-		YearAdapter: _keroaYear.YearAdapter,
-		YearMonthAdapter: _keroaYearmonth.YearMonthAdapter,
+		CheckboxAdapter: _checkbox.CheckboxAdapter,
+		CkEditorAdapter: _ckeditor.CkEditorAdapter,
+		ComboboxAdapter: _combobox.ComboboxAdapter,
+		CurrencyAdapter: _currency.CurrencyAdapter,
+		DateTimeAdapter: _datetime.DateTimeAdapter,
+		FloatAdapter: _float.FloatAdapter,
+		IntegerAdapter: _integer.IntegerAdapter,
+		MonthAdapter: _month.MonthAdapter,
+		NativeCheckAdapter: _nativeCheckbox.NativeCheckAdapter,
+		NativeRadioAdapter: _nativeRadio.NativeRadioAdapter,
+		PaginationAdapter: _pagination.PaginationAdapter,
+		PassWordAdapter: _password.PassWordAdapter,
+		PercentAdapter: _percent.PercentAdapter,
+		StringAdapter: _string.StringAdapter,
+		ProgressAdapter: _progress.ProgressAdapter,
+		RadioAdapter: _radio.RadioAdapter,
+		SwitchAdapter: _switch.SwitchAdapter,
+		TextAreaAdapter: _textarea.TextAreaAdapter,
+		TextFieldAdapter: _textfield.TextFieldAdapter,
+		TimeAdapter: _time.TimeAdapter,
+		UrlAdapter: _url.UrlAdapter,
+		YearAdapter: _year.YearAdapter,
+		YearMonthAdapter: _yearmonth.YearMonthAdapter,
 		EnableMixin: _enableMixin.EnableMixin,
 		RequiredMixin: _requiredMixin.RequiredMixin,
 		ValidateMixin: _validateMixin.ValidateMixin,
@@ -7167,7 +7183,7 @@
 
 
 	(0, _extend.extend)(ex, window.u || {});
-	window.u = ex;
+
 	exports.u = ex;
 
 /***/ },
@@ -7297,7 +7313,6 @@
 	        var self = this;
 	        // CheckboxAdapter.superclass.initialize.apply(this, arguments);
 	        this.isGroup = this.options['isGroup'] === true || this.options['isGroup'] === 'true';
-	        this.otherValue = this.options['otherValue'] || 'ovOV~!';
 	        if (this.options['datasource'] || this.options['hasOther']) {
 	            // 存在datasource或者有其他选项，将当前dom元素保存，以后用于复制新的dom元素
 	            this.checkboxTemplateArray = [];
@@ -7378,31 +7393,21 @@
 	                modelValue = modelValue ? modelValue : '';
 	                var valueArr = modelValue == '' ? [] : modelValue.split(',');
 	                if (comp._inputElement.checked) {
-	                    var oldIndex = valueArr.indexOf(self.otherInput.oldValue);
+	                    var oldIndex = valueArr.indexOf(comp._inputElement.oldValue);
 	                    if (oldIndex > -1) {
 	                        valueArr.splice(oldIndex, 1);
 	                    }
-	                    if (self.otherInput.value) {
-	                        valueArr.push(self.otherInput.value);
+	                    if (comp._inputElement.value) {
+	                        valueArr.push(comp._inputElement.value);
 	                    }
-	                    var otherValueIndex = valueArr.indexOf(self.otherValue);
-	                    if (otherValueIndex < 0) {
-	                        valueArr.push(self.otherValue);
-	                    }
-
 	                    // 选中后可编辑
 	                    comp.element.querySelectorAll('input[type="text"]').forEach(function (ele) {
 	                        ele.removeAttribute('disabled');
 	                    });
 	                } else {
-	                    var index = valueArr.indexOf(self.otherInput.value);
+	                    var index = valueArr.indexOf(comp._inputElement.value);
 	                    if (index > -1) {
 	                        valueArr.splice(index, 1);
-	                    }
-
-	                    var otherValueIndex = valueArr.indexOf(self.otherValue);
-	                    if (otherValueIndex > -1) {
-	                        valueArr.splice(otherValueIndex, 1);
 	                    }
 
 	                    // 未选中则不可编辑
@@ -7416,12 +7421,12 @@
 	            });
 
 	            (0, _event.on)(self.otherInput, 'blur', function (e) {
+	                self.lastCheck.oldValue = self.lastCheck.value;
 	                self.lastCheck.value = this.value;
 	                self.otherComp.trigger('change');
-	                this.oldValue = this.value;
 	            });
 	            (0, _event.on)(self.otherInput, 'click', function (e) {
-	                (0, _event.stopEvent)(e);
+	                stopEvent(e);
 	            });
 	        }
 
@@ -7495,15 +7500,10 @@
 	                }
 	            });
 	            if (this.options.hasOther) {
-	                if (otherVal.indexOf(this.otherValue + ',') > -1) {
-	                    self.lastCheck.value = this.otherValue;
-	                    otherVal = otherVal.replace(this.otherValue + ',', '');
-	                }
 	                otherVal = otherVal.replace(/\,/g, '');
 	                if (otherVal) {
-	                    self.otherInput.oldValue = otherVal;
+	                    self.lastCheck.value = otherVal;
 	                    self.otherInput.value = otherVal;
-	                    self.otherInput.removeAttribute('disabled');
 	                }
 	            }
 	        } else {
@@ -9511,7 +9511,7 @@
 	            this.enable = false;
 	            this.element.setAttribute('readonly', 'readonly');
 	            this.comp._input.setAttribute('readonly', 'readonly');
-	            (0, _dom.addClass)(this.element.parentNode, 'disablecover');
+	            addClass(this.element.parentNode, 'disablecover');
 	            (0, _event.off)(this.comp._input, 'focus');
 	            if (this.comp.iconBtn) {
 	                (0, _event.off)(this.comp.iconBtn, 'click');
@@ -10227,7 +10227,7 @@
 
 	var _formater = __webpack_require__(93);
 
-	var _keroaFloat = __webpack_require__(94);
+	var _float = __webpack_require__(94);
 
 	var _compMgr = __webpack_require__(4);
 
@@ -10244,7 +10244,7 @@
 	 * Date	  : 2016-08-09 13:42:14
 	 */
 
-	var CurrencyAdapter = _keroaFloat.FloatAdapter.extend({
+	var CurrencyAdapter = _float.FloatAdapter.extend({
 	    init: function init() {
 	        var self = this;
 	        CurrencyAdapter.superclass.init.apply(this);
@@ -11515,11 +11515,16 @@
 	        self._fillYear();
 	        stopEvent(e)
 	    });
-	      on(this._headerMonth, 'click', function(e){
+	     on(this._headerMonth, 'click', function(e){
 	        self._fillMonth();
 	        stopEvent(e)
+<<<<<<< HEAD
 	    });
 	      on(this._headerTime, 'click', function(e){
+=======
+	    });    
+	     on(this._headerTime, 'click', function(e){
+>>>>>>> 86783c3b659c223c48fcaf2c88de67905c1da979
 	        self._fillTime();
 	        stopEvent(e)
 	    });*/
@@ -11604,11 +11609,16 @@
 	        self._fillYear();
 	        stopEvent(e)
 	    });
-	      on(this._headerMonth, 'click', function(e){
+	     on(this._headerMonth, 'click', function(e){
 	        self._fillMonth();
 	        stopEvent(e)
+<<<<<<< HEAD
 	    });
 	      on(this._headerTime, 'click', function(e){
+=======
+	    });    
+	     on(this._headerTime, 'click', function(e){
+>>>>>>> 86783c3b659c223c48fcaf2c88de67905c1da979
 	        self._fillTime();
 	        stopEvent(e)
 	    });*/
@@ -12530,27 +12540,27 @@
 
 	var _event = __webpack_require__(6);
 
-	var _keroaString = __webpack_require__(100);
+	var _string = __webpack_require__(100);
 
-	var _keroaInteger = __webpack_require__(101);
+	var _integer = __webpack_require__(101);
 
-	var _keroaCheckbox = __webpack_require__(77);
+	var _checkbox = __webpack_require__(77);
 
-	var _keroaCombo = __webpack_require__(89);
+	var _combobox = __webpack_require__(89);
 
-	var _keroaRadio = __webpack_require__(102);
+	var _radio = __webpack_require__(102);
 
-	var _keroaFloat = __webpack_require__(94);
+	var _float = __webpack_require__(94);
 
-	var _keroaCurrency = __webpack_require__(92);
+	var _currency = __webpack_require__(92);
 
-	var _keroaDatetimepicker = __webpack_require__(96);
+	var _datetime = __webpack_require__(96);
 
-	var _keroaUrl = __webpack_require__(104);
+	var _url = __webpack_require__(104);
 
-	var _keroaPassword = __webpack_require__(105);
+	var _password = __webpack_require__(105);
 
-	var _keroaPercent = __webpack_require__(106);
+	var _percent = __webpack_require__(106);
 
 	var _neouiValidate = __webpack_require__(82);
 
@@ -12561,14 +12571,6 @@
 	var _i18n = __webpack_require__(85);
 
 	var _core = __webpack_require__(71);
-
-	var _dom = __webpack_require__(5);
-
-	/**
-	 * Module : Kero Grid Adapter
-	 * Author : Kvkens(yueming@yonyou.com)
-	 * Date	  : 2016-08-09 16:17:17
-	 */
 
 	var GridAdapter = _baseAdapter.BaseAdapter.extend({
 		initialize: function initialize(options) {
@@ -13324,7 +13326,11 @@
 					compDiv.addClass("eType-input");
 				}
 				eOptions.dataType = 'string';
+<<<<<<< HEAD
 				comp = new u.TextFieldAdapter({
+=======
+				comp = new _string.StringAdapter({
+>>>>>>> 86783c3b659c223c48fcaf2c88de67905c1da979
 					el: compDiv[0],
 					options: eOptions,
 					model: viewModel
@@ -13336,7 +13342,7 @@
 					compDiv.addClass("eType-input");
 				}
 				eOptions.dataType = 'integer';
-				comp = new _keroaInteger.IntegerAdapter({
+				comp = new _integer.IntegerAdapter({
 					el: compDiv[0],
 					options: eOptions,
 					model: viewModel
@@ -13350,7 +13356,7 @@
 				if ($.CheckboxComp) {
 					comp = new $.CheckboxComp(compDiv.find("input")[0], eOptions, viewModel);
 				} else {
-					comp = new _keroaCheckbox.CheckboxAdapter({
+					comp = new _checkbox.CheckboxAdapter({
 						el: compDiv[0],
 						options: eOptions,
 						model: viewModel
@@ -13372,7 +13378,7 @@
 					compDiv = $('<div class="input-group  form_date u-grid-edit-item-comb"><div  type="text" class="form-control grid-combox"></div><i class="input-group-addon" ><i class="uf uf-anglearrowdown"></i></i></div>');
 					comp = new $.Combobox(compDiv[0], eOptions, viewModel);
 				} else {
-					comp = new _keroaCombo.ComboboxAdapter({
+					comp = new _combobox.ComboboxAdapter({
 						el: compDiv[0],
 						options: eOptions,
 						model: viewModel
@@ -13392,7 +13398,7 @@
 				} else {
 					compDiv = $('<div class="u-grid-edit-item-radio"><input type="radio" name="identity" /><i data-role="name"></i></div>');
 					//comp = new $.compManager.plugs.radio(compDiv[0],eOptions,viewModel);
-					comp = new _keroaRadio.RadioAdapter({
+					comp = new _radio.RadioAdapter({
 						el: compDiv[0],
 						options: eOptions,
 						model: viewModel
@@ -13405,7 +13411,7 @@
 				}
 				//comp = new $.compManager.plugs.float(compDiv.find("input")[0],eOptions,viewModel);
 				eOptions.dataType = 'float';
-				comp = new _keroaFloat.FloatAdapter({
+				comp = new _float.FloatAdapter({
 					el: compDiv[0],
 					options: eOptions,
 					model: viewModel
@@ -13417,7 +13423,7 @@
 				}
 				//comp = new $.compManager.plugs.currency(compDiv.find("input")[0],eOptions,viewModel);
 				eOptions.dataType = 'currency';
-				comp = new _keroaCurrency.CurrencyAdapter({
+				comp = new _currency.CurrencyAdapter({
 					el: compDiv[0],
 					options: eOptions,
 					model: viewModel
@@ -13429,7 +13435,7 @@
 				if ($.DateTime) {
 					comp = new $.DateTime(compDiv[0], eOptions, viewModel);
 				} else {
-					comp = new _keroaDatetimepicker.DateTimeAdapter({
+					comp = new _datetime.DateTimeAdapter({
 						el: compDiv[0],
 						options: eOptions,
 						model: viewModel
@@ -13450,7 +13456,7 @@
 					comp = new $.DateComp(compDiv[0], eOptions, viewModel);
 				} else {
 					eOptions.type = 'u-date';
-					comp = new _keroaDatetimepicker.DateTimeAdapter({
+					comp = new _datetime.DateTimeAdapter({
 						el: compDiv[0],
 						options: eOptions,
 						model: viewModel
@@ -13469,7 +13475,7 @@
 					compDiv.addClass("eType-input");
 				}
 				eOptions.dataType = 'url';
-				comp = new _keroaUrl.UrlAdapter({
+				comp = new _url.UrlAdapter({
 					el: compDiv[0],
 					options: eOptions,
 					model: viewModel
@@ -13481,7 +13487,7 @@
 					compDiv.addClass("eType-input");
 				}
 				eOptions.dataType = 'password';
-				comp = new _keroaPassword.PassWordAdapter({
+				comp = new _password.PassWordAdapter({
 					el: compDiv[0],
 					options: eOptions,
 					model: viewModel
@@ -13495,13 +13501,25 @@
 				}
 				//comp = new $.compManager.plugs.float(compDiv.find("input")[0],eOptions,viewModel);
 				eOptions.dataType = 'precent';
-				comp = new _keroaPercent.PercentAdapter({
+				comp = new _percent.PercentAdapter({
 					el: compDiv[0],
 					options: eOptions,
 					model: viewModel
 				});
 			}
-
+			// input输入blur时显示下一个编辑控件
+			$('input', $(compDiv)).on('keydown', function (e) {
+				var keyCode = e.keyCode;
+				if (e.keyCode == 13 || e.keyCode == 9) {
+					// 回车
+					this.blur(); //首先触发blur来将修改值反应到datatable中
+					// IE11会导致先触发nextEditShow后触发blur的处理
+					setTimeout(function () {
+						oThis.grid.nextEditShow();
+					}, 100);
+					(0, _event.stopEvent)(e);
+				}
+			});
 			if (comp && comp.dataAdapter) {
 				comp = comp.dataAdapter;
 			}
@@ -13551,8 +13569,8 @@
 			    evalStr = '',
 			    rowMsg = '',
 			    wholeMsg = '',
-			    columnShowMsg = '',
-			    hasErrow = false;
+			    columnShowMsg = '';
+			hasErrow = false;
 
 			// 遍历所有列
 			for (var j = 0; j < gridColumnArr.length; j++) {
@@ -13606,8 +13624,7 @@
 					min: min,
 					maxNotEq: maxNotEq,
 					minNotEq: minNotEq,
-					reg: reg,
-					showFix: true
+					reg: reg
 				});
 				for (var i = 0; i < rows.length; i++) {
 					var value = rows[i].value[field];
@@ -13624,10 +13641,12 @@
 						var row = contentDiv.querySelectorAll('tr')[i];
 						var td = row.querySelectorAll('td')[index];
 						var div = td.querySelector('div');
-						(0, _dom.addClass)(td, 'u-grid-err-td');
-						(0, _dom.addClass)(div, 'u-grid-err-td');
+						addClass(td, 'u-grid-err-td');
+						addClass(div, 'u-grid-err-td');
+						evalStr = 'if(typeof obj' + i + ' == \'undefined\'){var obj' + i + '= {}; MsgArr.push(obj' + i + ');obj' + i + '.rowNum = ' + i + '; obj' + i + '.arr = new Array();}';
+						eval(evalStr);
 						var msg = '(' + title + ')' + result.Msg + ';';
-						evalStr = 'if(typeof obj' + i + ' == \'undefined\'){var obj' + i + '= {}; MsgArr.push(obj' + i + ');obj' + i + '.rowNum = ' + i + '; obj' + i + '.arr = new Array();}obj' + i + '.arr.push(msg)';
+						evalStr = 'obj' + i + '.arr.push(msg)';
 						eval(evalStr);
 					}
 				}
@@ -13670,6 +13689,12 @@
 
 	//if ($.compManager)
 	//	$.compManager.addPlug(Grid)
+
+	/**
+	 * Module : Kero Grid Adapter
+	 * Author : Kvkens(yueming@yonyou.com)
+	 * Date	  : 2016-08-09 16:17:17
+	 */
 
 	_compMgr.compMgr.addDataAdapter({
 		adapter: GridAdapter,
@@ -13979,7 +14004,6 @@
 	        var self = this;
 	        //RadioAdapter.superclass.initialize.apply(this, arguments);
 	        this.dynamic = false;
-	        this.otherValue = this.options['otherValue'] || 'ovOV~!';
 	        if (this.options['datasource'] || this.options['hasOther']) {
 	            // 存在datasource或者有其他选项，将当前dom元素保存，以后用于复制新的dom元素
 	            this.radioTemplateArray = [];
@@ -14033,11 +14057,7 @@
 	            self.otherComp = comp;
 	            comp.on('change', function () {
 	                if (comp._btnElement.checked) {
-	                    if (self.otherInput.value) {
-	                        self.dataModel.setValue(self.field, self.otherInput.value);
-	                    } else {
-	                        self.dataModel.setValue(self.field, self.otherValue);
-	                    }
+	                    self.dataModel.setValue(self.field, comp._btnElement.value);
 	                    // 选中后可编辑
 	                    comp.element.querySelectorAll('input[type="text"]').forEach(function (ele) {
 	                        ele.removeAttribute('disabled');
@@ -14050,6 +14070,8 @@
 	            });
 
 	            (0, _event.on)(self.otherInput, 'blur', function (e) {
+	                self.lastRadio.oldValue = self.lastRadio.value;
+	                self.lastRadio.value = this.value;
 	                self.otherComp.trigger('change');
 	            });
 	            (0, _event.on)(self.otherInput, 'click', function (e) {
@@ -14137,11 +14159,7 @@
 	            }
 	            u.addClass(this.lastLabel, 'is-checked');
 	            this.lastRadio.checked = true;
-	            if (value != this.otherValue) {
-	                this.otherInput.value = value;
-	            }
-	            this.lastRadio.removeAttribute('disabled');
-	            this.otherInput.removeAttribute('disabled');
+	            this.otherInput.value = value;
 	            if (!this.enable) {
 	                this.lastRadio.setAttribute('disabled', true);
 	            }
@@ -14430,13 +14448,13 @@
 	});
 	exports.UrlAdapter = undefined;
 
-	var _keroaString = __webpack_require__(100);
+	var _string = __webpack_require__(100);
 
 	var _dom = __webpack_require__(5);
 
 	var _compMgr = __webpack_require__(4);
 
-	var UrlAdapter = _keroaString.StringAdapter.extend({
+	var UrlAdapter = _string.StringAdapter.extend({
 	    init: function init() {
 	        UrlAdapter.superclass.init.apply(this);
 	        this.validType = 'url';
@@ -14499,7 +14517,7 @@
 	});
 	exports.PassWordAdapter = undefined;
 
-	var _keroaString = __webpack_require__(100);
+	var _string = __webpack_require__(100);
 
 	var _util = __webpack_require__(10);
 
@@ -14512,7 +14530,7 @@
 	/**
 	 * 密码控件
 	 */
-	var PassWordAdapter = _keroaString.StringAdapter.extend({
+	var PassWordAdapter = _string.StringAdapter.extend({
 	    init: function init() {
 	        PassWordAdapter.superclass.init.apply(this);
 	        var oThis = this;
@@ -14573,7 +14591,7 @@
 	});
 	exports.PercentAdapter = undefined;
 
-	var _keroaFloat = __webpack_require__(94);
+	var _float = __webpack_require__(94);
 
 	var _formater = __webpack_require__(93);
 
@@ -14586,7 +14604,7 @@
 	/**
 	 * 百分比控件
 	 */
-	var PercentAdapter = _keroaFloat.FloatAdapter.extend({
+	var PercentAdapter = _float.FloatAdapter.extend({
 	  init: function init() {
 	    PercentAdapter.superclass.init.apply(this);
 	    this.validType = 'float';
@@ -15004,13 +15022,255 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	exports.NativeCheckAdapter = undefined;
+
+	var _baseAdapter = __webpack_require__(76);
+
+	var _valueMixin = __webpack_require__(78);
+
+	var _enableMixin = __webpack_require__(79);
+
+	var _util = __webpack_require__(10);
+
+	var _event = __webpack_require__(6);
+
+	var _compMgr = __webpack_require__(4);
+
+	/**
+	 * Module : Kero native-checkbox
+	 * Author : Kvkens(yueming@yonyou.com)
+	 * Date	  : 2016-08-09 18:55:51
+	 */
+
+	var NativeCheckAdapter = _baseAdapter.BaseAdapter.extend({
+	    mixins: [_valueMixin.ValueMixin, _enableMixin.EnableMixin],
+	    init: function init() {
+	        var self = this;
+	        this.isGroup = false;
+	        //如果存在datasource，动态创建checkbox
+	        if (this.options['datasource']) {
+	            this.isGroup = true;
+	            var datasource = (0, _util.getJSObject)(this.viewModel, this.options['datasource']);
+
+	            this.checkboxTemplateArray = [];
+	            for (var i = 0, count = this.element.childNodes.length; i < count; i++) {
+	                this.checkboxTemplateArray.push(this.element.childNodes[i]);
+	            }
+	            this.setComboData(datasource);
+	        } else {
+	            this.checkedValue = this.options['checkedValue'] || 'Y';
+	            this.unCheckedValue = this.options["unCheckedValue"] || 'N';
+	            (0, _event.on)(this.element, 'click', function () {
+	                if (this.checked) {
+	                    self.dataModel.setValue(self.field, self.checkedValue);
+	                } else {
+	                    self.dataModel.setValue(self.field, self.unCheckedValue);
+	                }
+	            });
+	        }
+	    },
+	    setComboData: function setComboData(comboData) {
+	        var self = this;
+	        this.element.innerHTML = '';
+	        for (var i = 0, len = comboData.length; i < len; i++) {
+	            for (var j = 0; j < this.checkboxTemplateArray.length; j++) {
+	                try {
+	                    this.element.appendChild(this.checkboxTemplateArray[j].cloneNode());
+	                } catch (e) {}
+	            }
+	            //this.radioTemplate.clone().appendTo(this.element)
+	        }
+
+	        var allCheck = this.element.querySelectorAll('[type=checkbox]');
+	        var allName = this.element.querySelectorAll('[data-role=name]');
+	        for (var k = 0; k < allCheck.length; k++) {
+	            allCheck[k].value = comboData[k].pk || comboData[k].value;
+	            allName[k].innerHTML = comboData[k].name;
+	        }
+
+	        this.element.querySelectorAll('[type=checkbox]').forEach(function (ele) {
+	            (0, _event.on)(ele, 'click', function () {
+	                var modelValue = self.dataModel.getValue(self.field);
+
+	                var valueArr = modelValue == '' ? [] : modelValue.split(',');
+
+	                if (this.checked) {
+	                    valueArr.push(this.value);
+	                } else {
+	                    var index = valueArr.indexOf(this.value);
+	                    valueArr.splice(index, 1);
+	                }
+	                self.slice = true;
+	                self.dataModel.setValue(self.field, valueArr.join(','));
+	                self.slice = false;
+	            });
+	        });
+	    },
+	    modelValueChange: function modelValueChange(val) {
+	        var self = this;
+	        if (this.slice) return;
+	        if (this.isGroup) {
+	            this.element.querySelectorAll('[type=checkbox]').forEach(function (ele) {
+	                if (ele.checked != (val + ',').indexOf(ele.value) > -1) {
+	                    self.slice = true;
+	                    ele.checked = !ele.checked;
+	                    self.slice = false;
+	                }
+	            });
+	        } else {
+	            if (this.element.checked != (val === this.checkedValue)) {
+	                this.slice = true;
+	                this.element.checked = !this.element.checked;
+	                this.slice = false;
+	            }
+	        }
+	    },
+	    setValue: function setValue(value) {
+	        this.trueValue = value;
+	        this.element.querySelectorAll('[type=checkbox]').forEach(function (ele) {
+	            if (ele.value == value) {
+	                ele.checked = true;
+	            } else {
+	                ele.checked = false;
+	            }
+	        });
+	        this.slice = true;
+	        this.dataModel.setValue(this.field, this.trueValue);
+	        this.slice = false;
+	    },
+	    getValue: function getValue() {
+	        return this.trueValue;
+	    }
+
+	});
+
+	_compMgr.compMgr.addDataAdapter({
+	    adapter: NativeCheckAdapter,
+	    name: 'checkbox'
+	});
+	exports.NativeCheckAdapter = NativeCheckAdapter;
+
+/***/ },
+/* 111 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.NativeRadioAdapter = undefined;
+
+	var _baseAdapter = __webpack_require__(76);
+
+	var _valueMixin = __webpack_require__(78);
+
+	var _enableMixin = __webpack_require__(79);
+
+	var _util = __webpack_require__(10);
+
+	var _event = __webpack_require__(6);
+
+	var _compMgr = __webpack_require__(4);
+
+	/**
+	 * Module : Kero native-radio
+	 * Author : Kvkens(yueming@yonyou.com)
+	 * Date	  : 2016-08-09 19:03:30
+	 */
+
+	var NativeRadioAdapter = _baseAdapter.BaseAdapter.extend({
+	    mixins: [_valueMixin.ValueMixin, _enableMixin.EnableMixin],
+	    init: function init() {
+	        this.isDynamic = false;
+	        //如果存在datasource，动态创建radio
+	        if (this.options['datasource']) {
+	            this.isDynamic = true;
+	            var datasource = (0, _util.getJSObject)(this.viewModel, this.options['datasource']);
+	            //if(!u.isArray(datasource)) return;
+
+	            this.radioTemplateArray = [];
+	            for (var i = 0, count = this.element.childNodes.length; i < count; i++) {
+	                this.radioTemplateArray.push(this.element.childNodes[i]);
+	            }
+	            this.setComboData(datasource);
+	        } else {}
+	    },
+	    setComboData: function setComboData(comboData) {
+	        var self = this;
+	        //if(!this.radioTemplate.is(":radio")) return;
+	        this.element.innerHTML = '';
+	        for (var i = 0, len = comboData.length; i < len; i++) {
+	            for (var j = 0; j < this.radioTemplateArray.length; j++) {
+	                try {
+	                    this.element.appendChild(this.radioTemplateArray[j].cloneNode(true));
+	                } catch (e) {}
+	            }
+	            //this.radioTemplate.clone().appendTo(this.element)
+	        }
+
+	        var allRadio = this.element.querySelectorAll('[type=radio]');
+	        var allName = this.element.querySelectorAll('[data-role=name]');
+	        for (var k = 0; k < allRadio.length; k++) {
+	            allRadio[k].value = comboData[k].pk || comboData[k].value;
+	            allName[k].innerHTML = comboData[k].name;
+	        }
+
+	        this.radioInputName = allRadio[0].name;
+
+	        this.element.querySelectorAll('[type=radio][name="' + this.radioInputName + '"]').forEach(function (ele) {
+	            (0, _event.on)(ele, 'click', function () {
+	                if (this.checked) {
+	                    self.setValue(this.value);
+	                }
+	            });
+	        });
+	    },
+	    modelValueChange: function modelValueChange(value) {
+	        if (this.slice) return;
+	        this.setValue(value);
+	    },
+	    setValue: function setValue(value) {
+	        this.trueValue = value;
+	        this.element.querySelectorAll('[type=radio][name="' + this.radioInputName + '"]').forEach(function (ele) {
+	            if (ele.value == value) {
+	                ele.checked = true;
+	            } else {
+	                ele.checked = false;
+	            }
+	        });
+	        this.slice = true;
+	        this.dataModel.setValue(this.field, this.trueValue);
+	        this.slice = false;
+	    },
+	    getValue: function getValue() {
+	        return this.trueValue;
+	    }
+
+	});
+
+	_compMgr.compMgr.addDataAdapter({
+	    adapter: NativeRadioAdapter,
+	    name: 'radio'
+	});
+	exports.NativeRadioAdapter = NativeRadioAdapter;
+
+/***/ },
+/* 112 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 	exports.PaginationAdapter = undefined;
 
 	var _baseAdapter = __webpack_require__(76);
 
 	var _extend = __webpack_require__(8);
 
-	var _neouiPagination = __webpack_require__(111);
+	var _neouiPagination = __webpack_require__(113);
 
 	var _util = __webpack_require__(10);
 
@@ -15027,7 +15287,7 @@
 	        this.options.pageSize = this.dataModel.pageSize() || this.options.pageSize;
 	        //this.$element.pagination(options);
 	        //this.comp = this.$element.data('u.pagination');
-	        var options = (0, _extend.extend)({}, { el: this.element }, this.options);
+	        var options = (0, _extend.extend)({}, { el: this.element, jumppage: true }, this.options);
 	        this.comp = new _neouiPagination.pagination(options);
 	        this.element['u.pagination'] = this.comp;
 	        this.comp.dataModel = this.dataModel;
@@ -15112,7 +15372,7 @@
 	exports.PaginationAdapter = PaginationAdapter;
 
 /***/ },
-/* 111 */
+/* 113 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15518,7 +15778,7 @@
 	exports.pagination = pagination;
 
 /***/ },
-/* 112 */
+/* 114 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15530,7 +15790,7 @@
 
 	var _baseAdapter = __webpack_require__(76);
 
-	var _neouiProgress = __webpack_require__(113);
+	var _neouiProgress = __webpack_require__(115);
 
 	var _compMgr = __webpack_require__(4);
 
@@ -15564,7 +15824,7 @@
 	exports.ProgressAdapter = ProgressAdapter;
 
 /***/ },
-/* 113 */
+/* 115 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15691,7 +15951,7 @@
 	exports.Progress = Progress;
 
 /***/ },
-/* 114 */
+/* 116 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15703,7 +15963,7 @@
 
 	var _baseAdapter = __webpack_require__(76);
 
-	var _neouiSwitch = __webpack_require__(115);
+	var _neouiSwitch = __webpack_require__(117);
 
 	var _compMgr = __webpack_require__(4);
 
@@ -15759,7 +16019,7 @@
 	exports.SwitchAdapter = SwitchAdapter;
 
 /***/ },
-/* 115 */
+/* 117 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15949,7 +16209,7 @@
 	exports.Switch = Switch;
 
 /***/ },
-/* 116 */
+/* 118 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16003,7 +16263,7 @@
 	exports.TextAreaAdapter = TextAreaAdapter;
 
 /***/ },
-/* 117 */
+/* 119 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16019,11 +16279,11 @@
 
 	var _neouiTextfield = __webpack_require__(91);
 
-	var _keroaFloat = __webpack_require__(94);
+	var _float = __webpack_require__(94);
 
-	var _keroaString = __webpack_require__(100);
+	var _string = __webpack_require__(100);
 
-	var _keroaInteger = __webpack_require__(101);
+	var _integer = __webpack_require__(101);
 
 	var _compMgr = __webpack_require__(4);
 
@@ -16049,11 +16309,11 @@
 	        this.element['u.Text'] = this.comp;
 
 	        if (dataType === 'float') {
-	            this.trueAdpt = new _keroaFloat.FloatAdapter(options);
+	            this.trueAdpt = new _float.FloatAdapter(options);
 	        } else if (dataType === 'string') {
-	            this.trueAdpt = new _keroaString.StringAdapter(options);
+	            this.trueAdpt = new _string.StringAdapter(options);
 	        } else if (dataType === 'integer') {
-	            this.trueAdpt = new _keroaInteger.IntegerAdapter(options);
+	            this.trueAdpt = new _integer.IntegerAdapter(options);
 	        } else {
 	            throw new Error("'u-text' only support 'float' or 'string' or 'integer' field type, not support type: '" + dataType + "', field: '" + this.field + "'");
 	        }
@@ -16087,7 +16347,7 @@
 	exports.TextFieldAdapter = TextFieldAdapter;
 
 /***/ },
-/* 118 */
+/* 120 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16115,9 +16375,9 @@
 
 	var _dateUtils = __webpack_require__(70);
 
-	var _neouiClockpicker = __webpack_require__(119);
+	var _neouiClockpicker = __webpack_require__(121);
 
-	var _neouiTime = __webpack_require__(120);
+	var _neouiTime = __webpack_require__(122);
 
 	var _compMgr = __webpack_require__(4);
 
@@ -16198,7 +16458,7 @@
 	exports.TimeAdapter = TimeAdapter;
 
 /***/ },
-/* 119 */
+/* 121 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16664,7 +16924,7 @@
 	exports.ClockPicker = ClockPicker;
 
 /***/ },
-/* 120 */
+/* 122 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16906,7 +17166,7 @@
 	exports.Time = Time;
 
 /***/ },
-/* 121 */
+/* 123 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16918,7 +17178,7 @@
 
 	var _baseAdapter = __webpack_require__(76);
 
-	var _neouiYear = __webpack_require__(122);
+	var _neouiYear = __webpack_require__(124);
 
 	var _compMgr = __webpack_require__(4);
 
@@ -16960,7 +17220,7 @@
 	exports.YearAdapter = YearAdapter;
 
 /***/ },
-/* 122 */
+/* 124 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17207,7 +17467,7 @@
 	exports.Year = Year;
 
 /***/ },
-/* 123 */
+/* 125 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17219,7 +17479,7 @@
 
 	var _baseAdapter = __webpack_require__(76);
 
-	var _neouiYearmonth = __webpack_require__(124);
+	var _neouiYearmonth = __webpack_require__(126);
 
 	var _compMgr = __webpack_require__(4);
 
@@ -17261,7 +17521,7 @@
 	exports.YearMonthAdapter = YearMonthAdapter;
 
 /***/ },
-/* 124 */
+/* 126 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17585,7 +17845,7 @@
 	exports.YearMonth = YearMonth;
 
 /***/ },
-/* 125 */
+/* 127 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17597,7 +17857,7 @@
 
 	var _baseAdapter = __webpack_require__(76);
 
-	var _neouiYear = __webpack_require__(122);
+	var _neouiYear = __webpack_require__(124);
 
 	var _util = __webpack_require__(10);
 
@@ -17975,7 +18235,7 @@
 	exports.TreeAdapter = TreeAdapter;
 
 /***/ },
-/* 126 */
+/* 128 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18019,7 +18279,7 @@
 
 	var _ripple = __webpack_require__(87);
 
-	var _rsautils = __webpack_require__(127);
+	var _rsautils = __webpack_require__(129);
 
 	var _i18n = __webpack_require__(85);
 
@@ -18106,7 +18366,7 @@
 	exports.u = api;
 
 /***/ },
-/* 127 */
+/* 129 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -18812,7 +19072,7 @@
 	exports.twoDigit = twoDigit;
 
 /***/ },
-/* 128 */
+/* 130 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18822,51 +19082,51 @@
 	});
 	exports.u = undefined;
 
-	var _extend = __webpack_require__(129);
+	var _extend = __webpack_require__(131);
 
-	var _neouiAutocomplete = __webpack_require__(131);
+	var _neouiAutocomplete = __webpack_require__(133);
 
-	var _neouiButton = __webpack_require__(132);
+	var _neouiButton = __webpack_require__(134);
 
 	var _neouiCheckbox = __webpack_require__(86);
 
 	var _neouiCombo = __webpack_require__(90);
 
-	var _neouiCombobox = __webpack_require__(133);
+	var _neouiCombobox = __webpack_require__(135);
 
-	var _neouiDataTable = __webpack_require__(134);
+	var _neouiDataTable = __webpack_require__(136);
 
-	var _neouiDialog = __webpack_require__(135);
+	var _neouiDialog = __webpack_require__(137);
 
-	var _neouiLayout = __webpack_require__(136);
+	var _neouiLayout = __webpack_require__(138);
 
-	var _neouiLayout2 = __webpack_require__(137);
+	var _neouiLayout2 = __webpack_require__(139);
 
-	var _neouiLoader = __webpack_require__(138);
+	var _neouiLoader = __webpack_require__(140);
 
-	var _neouiLoading = __webpack_require__(139);
+	var _neouiLoading = __webpack_require__(141);
 
-	var _neouiMenu = __webpack_require__(140);
+	var _neouiMenu = __webpack_require__(142);
 
 	var _neouiMessage = __webpack_require__(107);
 
-	var _neouiMultilang = __webpack_require__(141);
+	var _neouiMultilang = __webpack_require__(143);
 
-	var _neouiNavmenu = __webpack_require__(142);
+	var _neouiNavmenu = __webpack_require__(144);
 
-	var _neouiPagination = __webpack_require__(111);
+	var _neouiPagination = __webpack_require__(113);
 
-	var _neouiProgress = __webpack_require__(113);
+	var _neouiProgress = __webpack_require__(115);
 
 	var _neouiRadio = __webpack_require__(103);
 
-	var _neouiRefer = __webpack_require__(143);
+	var _neouiRefer = __webpack_require__(145);
 
-	var _neouiSlidePanel = __webpack_require__(144);
+	var _neouiSlidePanel = __webpack_require__(146);
 
-	var _neouiSwitch = __webpack_require__(115);
+	var _neouiSwitch = __webpack_require__(117);
 
-	var _neouiTabs = __webpack_require__(145);
+	var _neouiTabs = __webpack_require__(147);
 
 	var _neouiTextfield = __webpack_require__(91);
 
@@ -18876,15 +19136,15 @@
 
 	var _neouiDatetimepicker = __webpack_require__(97);
 
-	var _neouiTime = __webpack_require__(120);
+	var _neouiTime = __webpack_require__(122);
 
-	var _neouiClockpicker = __webpack_require__(119);
+	var _neouiClockpicker = __webpack_require__(121);
 
 	var _neouiMonth = __webpack_require__(109);
 
-	var _neouiYear = __webpack_require__(122);
+	var _neouiYear = __webpack_require__(124);
 
-	var _neouiYearmonth = __webpack_require__(124);
+	var _neouiYearmonth = __webpack_require__(126);
 
 	/**
 	 * Module : Neoui webpack entry index
@@ -19028,7 +19288,7 @@
 	exports.u = ex;
 
 /***/ },
-/* 129 */
+/* 131 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19050,7 +19310,7 @@
 	    * Date	  : 2016-07-27 21:46:50
 	    */
 
-	var _enumerables = __webpack_require__(130);
+	var _enumerables = __webpack_require__(132);
 
 	/**
 	 * 复制对象属性
@@ -19086,7 +19346,7 @@
 	exports.extend = extend;
 
 /***/ },
-/* 130 */
+/* 132 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -19124,7 +19384,7 @@
 	exports.U_USERCODE = U_USERCODE;
 
 /***/ },
-/* 131 */
+/* 133 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19726,7 +19986,7 @@
 	exports.Autocomplete = Autocomplete;
 
 /***/ },
-/* 132 */
+/* 134 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19788,7 +20048,7 @@
 	exports.Button = Button;
 
 /***/ },
-/* 133 */
+/* 135 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20315,7 +20575,7 @@
 	exports.Combobox = Combobox;
 
 /***/ },
-/* 134 */
+/* 136 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20429,7 +20689,7 @@
 	exports.Table = Table;
 
 /***/ },
-/* 135 */
+/* 137 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20447,7 +20707,7 @@
 
 	var _extend = __webpack_require__(8);
 
-	var _neouiButton = __webpack_require__(132);
+	var _neouiButton = __webpack_require__(134);
 
 	var _compMgr = __webpack_require__(4);
 
@@ -20938,7 +21198,7 @@
 	exports.iframeDialog = iframeDialog;
 
 /***/ },
-/* 136 */
+/* 138 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20958,7 +21218,7 @@
 
 	var _env = __webpack_require__(7);
 
-	var _neouiButton = __webpack_require__(132);
+	var _neouiButton = __webpack_require__(134);
 
 	var _compMgr = __webpack_require__(4);
 
@@ -21178,7 +21438,7 @@
 	exports.MDLayout = MDLayout;
 
 /***/ },
-/* 137 */
+/* 139 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21684,7 +21944,7 @@
 	exports.NavLayoutTab = NavLayoutTab;
 
 /***/ },
-/* 138 */
+/* 140 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -21742,7 +22002,7 @@
 	exports.hideLoader = hideLoader;
 
 /***/ },
-/* 139 */
+/* 141 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21873,7 +22133,7 @@
 	exports.removeWaiting = removeWaiting;
 
 /***/ },
-/* 140 */
+/* 142 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22379,7 +22639,7 @@
 	exports.Menu = Menu;
 
 /***/ },
-/* 141 */
+/* 143 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22549,7 +22809,7 @@
 	exports.Multilang = Multilang;
 
 /***/ },
-/* 142 */
+/* 144 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22657,7 +22917,7 @@
 	exports.NavMenu = NavMenu;
 
 /***/ },
-/* 143 */
+/* 145 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22677,7 +22937,7 @@
 
 	var _util = __webpack_require__(10);
 
-	var _neouiDialog = __webpack_require__(135);
+	var _neouiDialog = __webpack_require__(137);
 
 	/**
 	 * Module : neoui-refer
@@ -22849,7 +23109,7 @@
 	exports.refer = refer;
 
 /***/ },
-/* 144 */
+/* 146 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22926,7 +23186,7 @@
 	exports.slidePanel = slidePanel;
 
 /***/ },
-/* 145 */
+/* 147 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23074,7 +23334,7 @@
 	exports.Tabs = Tabs;
 
 /***/ },
-/* 146 */
+/* 148 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
