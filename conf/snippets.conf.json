@@ -34,6 +34,9 @@
         "name": "面包屑",
         "url": "demos/ui/breadcrumbs"
     }, {
+        "name": "复选框",
+        "url": "demos/ui/checkbox"
+    }, {
         "name": "页签",
         "url": "demos/ui/tabs"
     }, {

@@ -207,4 +207,4 @@
 
 
 
-[试一试]('\demos\ui\checkbox')
+[试一试](../webIDE/index.html#/demos/ui/step)
