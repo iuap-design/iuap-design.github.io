@@ -196,7 +196,7 @@ module.exports = function(data, self, cb){
 			.pipe(clean());
 	})
 
-	gulp.start('webpack', function(){
+	gulp.start('clean', function(){
 		zipPath = '/download/down.zip';
 		console.log(zipPath);
 		self.body = zipPath;
