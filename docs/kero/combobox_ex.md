@@ -137,7 +137,7 @@ viewModel.dt1.setRowSelect(0);
 </div>
 
 
-[试一试](http://design.yyuap.com/dist/pages/webIDE/index.html#/demos/ui/combobox)
+[试一试](http://design.yyuap.com/dist/pages/webIDE/index.html#/demos/kero/combobox)
 
 相关内容：
 
