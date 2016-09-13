@@ -96,6 +96,9 @@
     }, {
         "name": "下拉列表",
         "url": "demos/kero/combobox"
+    }, {
+        "name": "复选框",
+        "url": "demos/kero/checkbox"
     }]
 }, {
     "name": "表单",
