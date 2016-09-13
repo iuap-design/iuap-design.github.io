@@ -177,6 +177,9 @@ module.exports = function(data, self, cb){
 				},
 				resolve:{
 					extensions: ['','.js','.jsx']
+				},
+				resolveLoader: {
+					root: path.join(__dirname, "../node_modules") 
 				}
 			}))
 			.pipe(gulp.dest(path.resolve(__dirname,'../download')));
