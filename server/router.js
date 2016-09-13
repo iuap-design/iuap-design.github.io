@@ -24,7 +24,7 @@ module.exports = {
     var getTpl = function(styles,htmls,scripts){
 
       var ctxPath='http://design.yyuap.com/static/uui-original/stable';
-      // var ctxPath='/dist/vendor/uui';
+    //    var ctxPath='/dist/vendor/uui';
       var tpl = [
         '<!DOCTYPE html>',
         '<html lang="en">',
@@ -65,12 +65,12 @@ module.exports = {
       var url = this.request.body.wUrl;
       var datas = {}
       var _html  = _css = _script = '';
-      
+
       // 相对于当前执行文件的目录
       var widgetPath = path.resolve(__dirname, '../dist/pages/webIDE/' + url + '/widget.html');
       var cssPath = path.resolve(__dirname, '../dist/pages/webIDE/' + url + '/widget.css');
       var scriptPath = path.resolve(__dirname, '../dist/pages/webIDE/' + url + '/widget.js');
-      
+
       if (fs.existsSync( widgetPath ))
         _html = fs.readFileSync( widgetPath );
       if (fs.existsSync( cssPath ))
@@ -123,7 +123,7 @@ module.exports = {
         var styles = this.request.body.cssCode;
         var htmls = this.request.body.htmlCode;
         var scripts = this.request.body.jsCode;
-       
+
          var tpl = getTpl(styles,htmls,scripts);
         viewCode = tpl.join('\r\n');
         var fs = require("fs");
@@ -153,7 +153,7 @@ module.exports = {
         gulp.run('downzip');
 
         this.body = downPath+"/"+zipName;
-              
+
     });
 
     router.get('/down', function *(next) {

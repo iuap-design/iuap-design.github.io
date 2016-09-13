@@ -12,9 +12,9 @@
 
 
 
-<div class="example-content"><!-- 
+<div class="example-content"><!--
 	HTML
-	u-meta:框架特有标记，框架通过识别此标记创建对应UI组件，以及进行数据绑定 
+	u-meta:框架特有标记，框架通过识别此标记创建对应UI组件，以及进行数据绑定
 	id,type.data,field为必选项
 	id:创建组件唯一标识
 	type:创建组件对应的类型
@@ -88,9 +88,9 @@ getDtValue();
 
 
 </script></div>
-<div class="examples-code"><pre><code>&lt;!-- 
+<div class="examples-code"><pre><code>&lt;!--
 	HTML
-	u-meta:框架特有标记，框架通过识别此标记创建对应UI组件，以及进行数据绑定 
+	u-meta:框架特有标记，框架通过识别此标记创建对应UI组件，以及进行数据绑定
 	id,type.data,field为必选项
 	id:创建组件唯一标识
 	type:创建组件对应的类型
@@ -165,3 +165,20 @@ getDtValue();
 
 </code></pre>
 </div>
+
+
+[试一试](http://design.yyuap.com/dist/pages/webIDE/index.html#/demos/kero/checkbox)
+
+注意：
+
+1、datasource对应的对象需要在数据模型viewModel中定义。
+
+2、checkout选中的真实值会绑定到dataTable对应的字段上
+
+
+
+相关内容：
+
+[复选框](http://design.yyuap.com/dist/pages/global-style/checkbox.html)    
+
+[复选框在grid中使用](http://design.yyuap.com/dist/pages/webIDE/index.html#/demos/grids/edit)

@@ -15,7 +15,7 @@
 		"-livereload",
 		"-fontsettings",
 		"-sharing",
-		"search-pro",
+		"-search-pro",
 		"iuap-design"
 	],
 	"pluginsConfig": {

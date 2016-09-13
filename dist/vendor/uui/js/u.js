@@ -1,14 +1,4 @@
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
-	else if(typeof define === 'function' && define.amd)
-		define([], factory);
-	else {
-		var a = factory();
-		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
-	}
-})(this, function() {
-return /******/ (function(modules) { // webpackBootstrap
+/******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 
@@ -136,43 +126,46 @@ return /******/ (function(modules) { // webpackBootstrap
 	  // init
 	  this.init = _init.init;
 	  this.dataTables = {};
-	  // adjustMetaFunc
-	  this.adjustMetaFunc = _adjustMetaFunc.adjustMetaFunc;
-	  // dataTable 
-	  this.addDataTable = _dataTable.addDataTable;
-	  this.getDataTable = _dataTable.getDataTable;
-	  this.getDataTables = _dataTable.getDataTables;
-	  // comp
-	  this.createComp = _comp.createComp;
-	  this.getComp = _comp.getComp;
-	  this.getCompsByDataTable = _comp.getCompsByDataTable;
-	  this.getCompsByType = _comp.getCompsByType;
-	  this.getComps = _comp.getComps;
-	  this.showComp = _comp.showComp;
-	  // validate
-	  this.compsValidate = _validate.compsValidate;
-	  this.compsValidateMultiParam = _validate.compsValidateMultiParam;
-	  // cache
-	  this.setUserCache = _cache.setUserCache;
-	  this.getUserCache = _cache.getUserCache;
-	  this.removeUserCache = _cache.removeUserCache;
-	  this.setCache = _cache.setCache;
-	  this.getCache = _cache.getCache;
-	  this.removeCache = _cache.removeCache;
-	  this.setSessionCache = _cache.setSessionCache;
-	  this.getSessionCache = _cache.getSessionCache;
-	  this.removeSessionCache = _cache.removeSessionCache;
-	  // iwebCode
-	  this.getEnvironment = _iwebCore.getEnvironment;
-	  this.setClientAttribute = _iwebCore.setClientAttribute;
-	  this.getClientAttribute = _iwebCore.getClientAttribute;
-	  // ajax
-	  this.ajax = _ajax.ajax;
-	  // serverEvent
-	  this.serverEvent = _serverEvent.serverEvent;
-	  // util
-	  this.setEnable = _util.setEnable;
 	};
+
+	// adjustMetaFunc
+
+
+	App.prototype.adjustMetaFunc = _adjustMetaFunc.adjustMetaFunc;
+	// dataTable
+	App.prototype.addDataTable = _dataTable.addDataTable;
+	App.prototype.getDataTable = _dataTable.getDataTable;
+	App.prototype.getDataTables = _dataTable.getDataTables;
+	// comp
+	App.prototype.createComp = _comp.createComp;
+	App.prototype.getComp = _comp.getComp;
+	App.prototype.getCompsByDataTable = _comp.getCompsByDataTable;
+	App.prototype.getCompsByType = _comp.getCompsByType;
+	App.prototype.getComps = _comp.getComps;
+	App.prototype.showComp = _comp.showComp;
+	// validate
+	App.prototype.compsValidate = _validate.compsValidate;
+	App.prototype.compsValidateMultiParam = _validate.compsValidateMultiParam;
+	// cache
+	App.prototype.setUserCache = _cache.setUserCache;
+	App.prototype.getUserCache = _cache.getUserCache;
+	App.prototype.removeUserCache = _cache.removeUserCache;
+	App.prototype.setCache = _cache.setCache;
+	App.prototype.getCache = _cache.getCache;
+	App.prototype.removeCache = _cache.removeCache;
+	App.prototype.setSessionCache = _cache.setSessionCache;
+	App.prototype.getSessionCache = _cache.getSessionCache;
+	App.prototype.removeSessionCache = _cache.removeSessionCache;
+	// iwebCode
+	App.prototype.getEnvironment = _iwebCore.getEnvironment;
+	App.prototype.setClientAttribute = _iwebCore.setClientAttribute;
+	App.prototype.getClientAttribute = _iwebCore.getClientAttribute;
+	// ajax
+	App.prototype.ajax = _ajax.ajax;
+	// serverEvent
+	App.prototype.serverEvent = _serverEvent.serverEvent;
+	// util
+	App.prototype.setEnable = _util.setEnable;
 
 	var createApp = function createApp() {
 	  var app = new App();
@@ -448,7 +441,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	            classConstructor: config.comp,
 	            className: config.compAsString || config['compAsString'],
 	            cssClass: config.css || config['css'],
-	            callbacks: []
+	            callbacks: [],
+	            dependencies: config.dependencies || []
 	        };
 	        config.comp.prototype.compType = config.compAsString;
 	        for (var i = 0; i < this.registeredControls.length; i++) {
@@ -463,9 +457,36 @@ return /******/ (function(modules) { // webpackBootstrap
 	        };
 	        this.registeredControls.push(newConfig);
 	    },
+
 	    updateComp: function updateComp(ele) {
+	        this._reorderComps();
 	        for (var n = 0; n < this.registeredControls.length; n++) {
 	            _upgradeDomInternal(this.registeredControls[n].className, null, ele);
+	        }
+	    },
+	    // 后续遍历registeredControls，重新排列
+	    _reorderComps: function _reorderComps() {
+	        var tmpArray = [];
+	        var dictory = {};
+
+	        for (var n = 0; n < this.registeredControls.length; n++) {
+	            dictory[this.registeredControls[n].className] = this.registeredControls[n];
+	        }
+	        for (var n = 0; n < this.registeredControls.length; n++) {
+	            traverse(this.registeredControls[n]);
+	        }
+
+	        this.registeredControls = tmpArray;
+
+	        function traverse(control) {
+	            if (u.inArray(control, tmpArray)) return;
+	            if (control.dependencies.length > 0) {
+	                for (var i = 0, len = control.dependencies.length; i < len; i++) {
+	                    var childControl = dictory[control.dependencies[i]];
+	                    traverse(childControl);
+	                }
+	            }
+	            tmpArray.push(control);
 	        }
 	    }
 	};
@@ -496,7 +517,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
-	exports.showPanelByEle = exports.getScroll = exports.getOffset = exports.makeModal = exports.makeDOM = exports.getZIndex = exports.getStyle = exports.wrap = exports.css = exports.closest = exports.toggleClass = exports.hasClass = exports.removeClass = exports.addClass = undefined;
+	exports.getElementTop = exports.getElementLeft = exports.showPanelByEle = exports.getScroll = exports.getOffset = exports.makeModal = exports.makeDOM = exports.getZIndex = exports.getStyle = exports.wrap = exports.css = exports.closest = exports.toggleClass = exports.hasClass = exports.removeClass = exports.addClass = undefined;
 
 	var _event = __webpack_require__(6);
 
@@ -740,6 +761,34 @@ return /******/ (function(modules) { // webpackBootstrap
 		panel.style.top = top + 'px';
 	};
 
+	var getElementLeft = function getElementLeft(element) {
+		var actualLeft = element.offsetLeft;
+		var current = element.offsetParent;
+		while (current !== null) {
+			actualLeft += current.offsetLeft;
+			current = current.offsetParent;
+		}
+		if (document.compatMode == "BackCompat") {
+			var elementScrollLeft = document.body.scrollLeft;
+		} else {
+			var elementScrollLeft = document.documentElement.scrollLeft;
+		}
+		return actualLeft - elementScrollLeft;
+	};
+	var getElementTop = function getElementTop(element) {
+		var actualTop = element.offsetTop;
+		var current = element.offsetParent;
+		while (current !== null) {
+			actualTop += current.offsetTop;
+			current = current.offsetParent;
+		}
+		if (document.compatMode == "BackCompat") {
+			var elementScrollTop = document.body.scrollTop;
+		} else {
+			var elementScrollTop = document.documentElement.scrollTop;
+		}
+		return actualTop - elementScrollTop;
+	};
 	exports.addClass = addClass;
 	exports.removeClass = removeClass;
 	exports.hasClass = hasClass;
@@ -754,6 +803,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.getOffset = getOffset;
 	exports.getScroll = getScroll;
 	exports.showPanelByEle = showPanelByEle;
+	exports.getElementLeft = getElementLeft;
+	exports.getElementTop = getElementTop;
 
 /***/ },
 /* 6 */
@@ -2166,7 +2217,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        notPassedArr = new Array();
 	    for (var i = 0; i < comps.length; i++) {
 	        if (comps[i].doValidate) {
-	            result = comps[i].doValidate({ trueValue: true, showMsg: showMsg });
+	            var result = comps[i].doValidate({ trueValue: true, showMsg: showMsg });
 	            // 如果passed为true,result.passed为false说明第一次出现错误校验
 	            if (passed && !result.passed) {
 	                var off = (0, _dom.getOffset)(comps[i].element);
@@ -2273,15 +2324,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 
 	var getEnvironment = function getEnvironment() {
-	    return window.iweb.Core.collectEnvironment();
+	    return u.core.collectEnvironment();
 	};
 
 	var setClientAttribute = function setClientAttribute(k, v) {
-	    window.iweb.Core.setClientAttribute(k, v);
+	    u.core.setClientAttribute(k, v);
 	};
 
 	var getClientAttribute = function getClientAttribute(k) {
-	    return window.iweb.Core.getClientAttributes()[k];
+	    return u.core.getClientAttributes()[k];
 	};
 
 	exports.getEnvironment = getEnvironment;
@@ -2339,7 +2390,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            deferred.reject();
 	        }
 	    };
-	    if (params.data) params.data.environment = ko.utils.stringifyJson(window.iweb.Core.collectEnvironment());else params.data = { environment: ko.utils.stringifyJson(window.iweb.Core.collectEnvironment()) };
+	    if (params.data) params.data.environment = ko.utils.stringifyJson(u.core.collectEnvironment());else params.data = { environment: ko.utils.stringifyJson(u.core.collectEnvironment()) };
 	    return params;
 	};
 
@@ -2597,32 +2648,35 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.datas = {};
 	    this.params = {};
 	    this.event = null;
-	    this.ent = window.iweb.Core.collectEnvironment();
-	    if (!iweb.debugMode) {
+	    this.ent = u.core.collectEnvironment();
+	    if (!u.debugMode) {
 	        //此处需要修改
 	        this.compression = true;
 	    }
-
-	    // dataTable 
-	    this.addDataTable = _serverDataTable.addDataTable;
-	    this.addDataTables = _serverDataTable.addDataTables;
-	    this.addAllDataTables = _serverDataTable.addAllDataTables;
-	    this.updateDataTables = _serverDataTable.updateDataTables;
-
-	    // fire
-	    this.fire = _serverFire.fire;
-	    this.setSuccessFunc = _serverFire.setSuccessFunc;
-
-	    // processXHRError
-	    this.processXHRError = _serverProcessXHRError.processXHRError;
-
-	    //util
-	    this.setCompression = _serverUtil.setCompression;
-	    this.addParameter = _serverUtil.addParameter;
-	    this.setEvent = _serverUtil.setEvent;
-	    this.getData = _serverUtil.getData;
-	    this.updateDom = _serverUtil.updateDom;
 	};
+
+	// dataTable
+
+
+	ServerEvent.prototype.addDataTable = _serverDataTable.addDataTable;
+	ServerEvent.prototype.addDataTables = _serverDataTable.addDataTables;
+	ServerEvent.prototype.addAllDataTables = _serverDataTable.addAllDataTables;
+	ServerEvent.prototype.updateDataTables = _serverDataTable.updateDataTables;
+
+	// fire
+	ServerEvent.prototype.fire = _serverFire.fire;
+	ServerEvent.prototype.setSuccessFunc = _serverFire.setSuccessFunc;
+	ServerEvent.prototype._successFunc = _serverFire._successFunc;
+
+	// processXHRError
+	ServerEvent.prototype.processXHRError = _serverProcessXHRError.processXHRError;
+
+	//util
+	ServerEvent.prototype.setCompression = _serverUtil.setCompression;
+	ServerEvent.prototype.addParameter = _serverUtil.addParameter;
+	ServerEvent.prototype.setEvent = _serverUtil.setEvent;
+	ServerEvent.prototype.getData = _serverUtil.getData;
+	ServerEvent.prototype.updateDom = _serverUtil.updateDom;
 
 	ServerEvent.DEFAULT = {
 	    async: true,
@@ -2676,7 +2730,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        for (var i = 0; i < dataTables.length; i++) {
 	            var dt = dataTables[i];
 	            if (typeof dt == 'string') this.addDataTable(dt);else {
-	                for (key in dt) {
+	                for (var key in dt) {
 	                    this.addDataTable(key, dt[key]);
 	                }
 	            }
@@ -2717,7 +2771,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.setSuccessFunc = exports.fire = undefined;
+	exports.setSuccessFunc = exports._successFunc = exports.fire = undefined;
 
 	var _extend = __webpack_require__(8);
 
@@ -2792,6 +2846,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 	exports.fire = fire;
+	exports._successFunc = _successFunc;
 	exports.setSuccessFunc = setSuccessFunc;
 
 /***/ },
@@ -2840,14 +2895,16 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _event = __webpack_require__(6);
 
-	/**
-	 * Module : kero app serverEvent util
-	 * Author : liuyk(liuyk@yonyou.com)
-	 * Date   : 2016-07-29 09:34:01
-	 */
+	var _env = __webpack_require__(7);
+
 	var setCompression = function setCompression(compression) {
-	    if (!iweb.browser.isIE8 && !window.pako && compression == true) iweb.log.error("can't compression, please include  pako!");else this.compression = compression;
-	};
+	    if (!_env.env.isIE8 && !window.pako && compression == true) alert("can't compression, please include  pako!");else this.compression = compression;
+	}; /**
+	    * Module : kero app serverEvent util
+	    * Author : liuyk(liuyk@yonyou.com)
+	    * Date   : 2016-07-29 09:34:01
+	    */
+
 
 	var addParameter = function addParameter(key, value) {
 	    this.params[key] = value;
@@ -2877,7 +2934,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        datasJson = window.trimServerEventData(datasJson);
 	    }
 	    if (this.compression) {
-	        if (!iweb.browser.isIE8 && window.pako) {
+	        if (!_env.env.isIE8 && window.pako) {
 	            envJson = encodeBase64(window.pako.gzip(envJson));
 	            datasJson = encodeBase64(window.pako.gzip(datasJson));
 	            compression = true;
@@ -2940,6 +2997,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	exports.DataTable = undefined;
 
+	var _extend = __webpack_require__(8);
+
 	var _indexEvents = __webpack_require__(30);
 
 	var _copyRow = __webpack_require__(32);
@@ -2988,190 +3047,191 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _util = __webpack_require__(48);
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	var _events = __webpack_require__(31);
 
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } } /**
+	                                                                                                                                                          * Module : Kero webpack entry dataTable index
+	                                                                                                                                                          * Author : liuyk(liuyuekai@yonyou.com)
+	                                                                                                                                                          * Date   : 2016-08-09 15:24:46
+	                                                                                                                                                          */
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Module : Kero webpack entry dataTable index
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Author : liuyk(liuyuekai@yonyou.com)
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Date   : 2016-08-09 15:24:46
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+	var DataTable =
+	// class DataTable extends Events{
+	function DataTable(options) {
+	    _classCallCheck(this, DataTable);
 
-	var DataTable = function (_Events) {
-	    _inherits(DataTable, _Events);
+	    // IE9下转化之后的代码有问题，无法获得superClass方法
+	    // super();
+	    this.on = _events.on;
+	    this.off = _events.off;
+	    this.one = _events.one;
+	    this.trigger = _events.trigger;
+	    this.getEvent = _events.getEvent;
 
-	    function DataTable(options) {
-	        _classCallCheck(this, DataTable);
-
-	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(DataTable).call(this));
-
-	        options = options || {};
-	        _this.id = options['id'];
-	        _this.strict = options['strict'] || false;
-	        _this.meta = DataTable.createMetaItems(options['meta']);
-	        _this.enable = options['enable'] || DataTable.DEFAULTS.enable;
-	        _this.pageSize = ko.observable(options['pageSize'] || DataTable.DEFAULTS.pageSize);
-	        _this.pageIndex = ko.observable(options['pageIndex'] || DataTable.DEFAULTS.pageIndex);
-	        _this.totalPages = ko.observable(options['totalPages'] || DataTable.DEFAULTS.totalPages);
-	        _this.totalRow = ko.observable();
-	        _this.pageCache = options['pageCache'] === undefined ? DataTable.DEFAULTS.pageCache : options['pageCache'];
-	        _this.rows = ko.observableArray([]);
-	        _this.selectedIndices = ko.observableArray([]);
-	        _this._oldCurrentIndex = -1;
-	        _this.focusIndex = ko.observable(-1);
-	        _this.cachedPages = [];
-	        _this.metaChange = {};
-	        _this.valueChange = {}; //ko.observable(1);
-	        _this.currentRowChange = ko.observable(1);
-	        _this.enableChange = ko.observable(1);
-	        _this.params = options['params'] || {};
-	        _this.master = options['master'] || '';
-	        _this.allSelected = ko.observable(false);
-	        if (options['root']) {
-	            _this.root = options['root'];
-	        } else {
-	            _this.root = _this;
-	        }
-	        if (options['ns']) {
-	            _this.ns = options['ns'];
-	        } else {
-	            _this.ns = '';
-	        }
-
-	        //copyRow
-	        _this.copyRow = _copyRow.copyRow;
-	        _this.copyRows = _copyRow.copyRows;
-
-	        //data
-	        _this.setData = _data.setData;
-	        _this.setValue = _data.setValue;
-
-	        //enable
-	        _this.isEnable = _enable.isEnable;
-	        _this.setEnable = _enable.setEnable;
-
-	        //getData
-	        _this.getData = _getData.getData;
-	        _this.getDataByRule = _getData.getDataByRule;
-	        _this.getRow = _getData.getRow;
-	        _this.getRowByRowId = _getData.getRowByRowId;
-	        _this.getRowIndex = _getData.getRowIndex;
-	        _this.getRowsByField = _getData.getRowsByField;
-	        _this.getRowByField = _getData.getRowByField;
-	        _this.getAllRows = _getData.getAllRows;
-	        _this.getAllPageRows = _getData.getAllPageRows;
-	        _this.getChangedDatas = _getData.getChangedDatas;
-	        _this.getChangedRows = _getData.getChangedRows;
-	        _this.getValue = _getData.getValue;
-	        _this.getIndexByRowId = _getData.getIndexByRowId;
-	        _this.getAllDatas = _getData.getAllDatas;
-	        _this.getRowIdsByIndices = _getData.getRowIdsByIndices;
-
-	        //getCurrent
-	        _this.getCurrentRow = _getCurrent.getCurrentRow;
-	        _this.getCurrentIndex = _getCurrent.getCurrentIndex;
-
-	        //getFocus
-	        _this.getFocusRow = _getFocus.getFocusRow;
-	        _this.getFocusIndex = _getFocus.getFocusIndex;
-
-	        //getMeta
-	        _this.getMeta = _getMeta.getMeta;
-	        _this.getRowMeta = _getMeta.getRowMeta;
-
-	        //getPage
-	        _this.getPage = _getPage.getPage;
-	        _this.getPages = _getPage.getPages;
-
-	        //getParam
-	        _this.getParam = _getParam.getParam;
-
-	        //getSelect
-	        _this.getSelectedIndex = _getSelect.getSelectedIndex;
-	        _this.getSelectedIndices = _getSelect.getSelectedIndices;
-	        _this.getSelectedIndexs = _getSelect.getSelectedIndexs;
-	        _this.getSelectedDatas = _getSelect.getSelectedDatas;
-	        _this.getSelectedRows = _getSelect.getSelectedRows;
-
-	        //getSimpleData
-	        _this.getSimpleData = _getSimpleData.getSimpleData;
-
-	        //meta
-	        _this.setMeta = _meta.setMeta;
-	        _this.updateMeta = _meta.updateMeta;
-	        _this.createField = _meta.createField;
-
-	        //page
-	        _this.setCurrentPage = _page.setCurrentPage;
-	        _this.updatePages = _page.updatePages;
-	        _this.setPages = _page.setPages;
-	        _this.hasPage = _page.hasPage;
-	        _this.clearCache = _page.clearCache;
-	        _this.cacheCurrentPage = _page.cacheCurrentPage;
-
-	        //param
-	        _this.addParam = _param.addParam;
-	        _this.addParams = _param.addParams;
-
-	        //ref
-	        _this.refSelectedRows = _ref.refSelectedRows;
-	        _this.ref = _ref.ref;
-	        _this.refMeta = _ref.refMeta;
-	        _this.refRowMeta = _ref.refRowMeta;
-	        _this.refEnable = _ref.refEnable;
-
-	        //row
-	        _this.setRows = _row.setRows;
-	        _this.addRow = _row.addRow;
-	        _this.addRows = _row.addRows;
-	        _this.insertRow = _row.insertRow;
-	        _this.insertRows = _row.insertRows;
-	        _this.createEmptyRow = _row.createEmptyRow;
-
-	        //removeRow
-	        _this.removeRowByRowId = _removeRow.removeRowByRowId;
-	        _this.removeRow = _removeRow.removeRow;
-	        _this.removeAllRows = _removeRow.removeAllRows;
-	        _this.removeRows = _removeRow.removeRows;
-	        _this.clear = _removeRow.clear;
-
-	        //rowCurrent
-	        _this.updateCurrIndex = _rowCurrent.updateCurrIndex;
-
-	        //rowDelete
-	        _this.setRowDelete = _rowDelete.setRowDelete;
-	        _this.setAllRowsDelete = _rowDelete.setAllRowsDelete;
-	        _this.setRowsDelete = _rowDelete.setRowsDelete;
-
-	        //rowFocus
-	        _this.setRowFocus = _rowFocus.setRowFocus;
-	        _this.setRowUnFocus = _rowFocus.setRowUnFocus;
-	        _this.updateFocusIndex = _rowFocus.updateFocusIndex;
-
-	        //rowSelect
-	        _this.setAllRowsSelect = _rowSelect.setAllRowsSelect;
-	        _this.setRowSelect = _rowSelect.setRowSelect;
-	        _this.setRowsSelect = _rowSelect.setRowsSelect;
-	        _this.addRowSelect = _rowSelect.addRowSelect;
-	        _this.addRowsSelect = _rowSelect.addRowsSelect;
-	        _this.setAllRowsUnSelect = _rowSelect.setAllRowsUnSelect;
-	        _this.setRowUnSelect = _rowSelect.setRowUnSelect;
-	        _this.setRowsUnSelect = _rowSelect.setRowsUnSelect;
-	        _this.toggleAllSelect = _rowSelect.toggleAllSelect;
-	        _this.updateSelectedIndices = _rowSelect.updateSelectedIndices;
-
-	        //simpleData
-	        _this.setSimpleData = _simpleData.setSimpleData;
-	        _this.addSimpleData = _simpleData.addSimpleData;
-
-	        //util
-	        _this.isChanged = _util.isChanged;
-	        return _this;
+	    options = options || {};
+	    this.id = options['id'];
+	    this.strict = options['strict'] || false;
+	    this.meta = DataTable.createMetaItems(options['meta']);
+	    this.enable = options['enable'] || DataTable.DEFAULTS.enable;
+	    this.pageSize = ko.observable(options['pageSize'] || DataTable.DEFAULTS.pageSize);
+	    this.pageIndex = ko.observable(options['pageIndex'] || DataTable.DEFAULTS.pageIndex);
+	    this.totalPages = ko.observable(options['totalPages'] || DataTable.DEFAULTS.totalPages);
+	    this.totalRow = ko.observable();
+	    this.pageCache = options['pageCache'] === undefined ? DataTable.DEFAULTS.pageCache : options['pageCache'];
+	    this.rows = ko.observableArray([]);
+	    this.selectedIndices = ko.observableArray([]);
+	    this._oldCurrentIndex = -1;
+	    this.focusIndex = ko.observable(-1);
+	    this.cachedPages = [];
+	    this.metaChange = {};
+	    this.valueChange = {}; //ko.observable(1);
+	    this.currentRowChange = ko.observable(1);
+	    this.enableChange = ko.observable(1);
+	    this.params = options['params'] || {};
+	    this.master = options['master'] || '';
+	    this.allSelected = ko.observable(false);
+	    if (options['root']) {
+	        this.root = options['root'];
+	    } else {
+	        this.root = this;
 	    }
+	    if (options['ns']) {
+	        this.ns = options['ns'];
+	    } else {
+	        this.ns = '';
+	    }
+	};
 
-	    return DataTable;
-	}(_indexEvents.Events);
+	//copyRow
+
+
+	DataTable.prototype.copyRow = _copyRow.copyRow;
+	DataTable.prototype.copyRows = _copyRow.copyRows;
+
+	//data
+	DataTable.prototype.setData = _data.setData;
+	DataTable.prototype.setValue = _data.setValue;
+
+	//enable
+	DataTable.prototype.isEnable = _enable.isEnable;
+	DataTable.prototype.setEnable = _enable.setEnable;
+
+	//getData
+	DataTable.prototype.getData = _getData.getData;
+	DataTable.prototype.getDataByRule = _getData.getDataByRule;
+	DataTable.prototype.getRow = _getData.getRow;
+	DataTable.prototype.getRowByRowId = _getData.getRowByRowId;
+	DataTable.prototype.getRowIndex = _getData.getRowIndex;
+	DataTable.prototype.getRowsByField = _getData.getRowsByField;
+	DataTable.prototype.getRowByField = _getData.getRowByField;
+	DataTable.prototype.getAllRows = _getData.getAllRows;
+	DataTable.prototype.getAllPageRows = _getData.getAllPageRows;
+	DataTable.prototype.getChangedDatas = _getData.getChangedDatas;
+	DataTable.prototype.getChangedRows = _getData.getChangedRows;
+	DataTable.prototype.getValue = _getData.getValue;
+	DataTable.prototype.getIndexByRowId = _getData.getIndexByRowId;
+	DataTable.prototype.getAllDatas = _getData.getAllDatas;
+	DataTable.prototype.getRowIdsByIndices = _getData.getRowIdsByIndices;
+
+	//getCurrent
+	DataTable.prototype.getCurrentRow = _getCurrent.getCurrentRow;
+	DataTable.prototype.getCurrentIndex = _getCurrent.getCurrentIndex;
+
+	//getFocus
+	DataTable.prototype.getFocusRow = _getFocus.getFocusRow;
+	DataTable.prototype.getFocusIndex = _getFocus.getFocusIndex;
+
+	//getMeta
+	DataTable.prototype.getMeta = _getMeta.getMeta;
+	DataTable.prototype.getRowMeta = _getMeta.getRowMeta;
+
+	//getPage
+	DataTable.prototype.getPage = _getPage.getPage;
+	DataTable.prototype.getPages = _getPage.getPages;
+
+	//getParam
+	DataTable.prototype.getParam = _getParam.getParam;
+
+	//getSelect
+	DataTable.prototype.getSelectedIndex = _getSelect.getSelectedIndex;
+	DataTable.prototype.getSelectedIndices = _getSelect.getSelectedIndices;
+	DataTable.prototype.getSelectedIndexs = _getSelect.getSelectedIndexs;
+	DataTable.prototype.getSelectedDatas = _getSelect.getSelectedDatas;
+	DataTable.prototype.getSelectedRows = _getSelect.getSelectedRows;
+
+	//getSimpleData
+	DataTable.prototype.getSimpleData = _getSimpleData.getSimpleData;
+
+	//meta
+	DataTable.prototype.setMeta = _meta.setMeta;
+	DataTable.prototype.updateMeta = _meta.updateMeta;
+	DataTable.prototype.createField = _meta.createField;
+
+	//page
+	DataTable.prototype.setCurrentPage = _page.setCurrentPage;
+	DataTable.prototype.updatePages = _page.updatePages;
+	DataTable.prototype.setPages = _page.setPages;
+	DataTable.prototype.hasPage = _page.hasPage;
+	DataTable.prototype.clearCache = _page.clearCache;
+	DataTable.prototype.cacheCurrentPage = _page.cacheCurrentPage;
+
+	//param
+	DataTable.prototype.addParam = _param.addParam;
+	DataTable.prototype.addParams = _param.addParams;
+
+	//ref
+	DataTable.prototype.refSelectedRows = _ref.refSelectedRows;
+	DataTable.prototype.ref = _ref.ref;
+	DataTable.prototype.refMeta = _ref.refMeta;
+	DataTable.prototype.refRowMeta = _ref.refRowMeta;
+	DataTable.prototype.refEnable = _ref.refEnable;
+
+	//row
+	DataTable.prototype.setRows = _row.setRows;
+	DataTable.prototype.addRow = _row.addRow;
+	DataTable.prototype.addRows = _row.addRows;
+	DataTable.prototype.insertRow = _row.insertRow;
+	DataTable.prototype.insertRows = _row.insertRows;
+	DataTable.prototype.createEmptyRow = _row.createEmptyRow;
+
+	//removeRow
+	DataTable.prototype.removeRowByRowId = _removeRow.removeRowByRowId;
+	DataTable.prototype.removeRow = _removeRow.removeRow;
+	DataTable.prototype.removeAllRows = _removeRow.removeAllRows;
+	DataTable.prototype.removeRows = _removeRow.removeRows;
+	DataTable.prototype.clear = _removeRow.clear;
+
+	//rowCurrent
+	DataTable.prototype.updateCurrIndex = _rowCurrent.updateCurrIndex;
+
+	//rowDelete
+	DataTable.prototype.setRowDelete = _rowDelete.setRowDelete;
+	DataTable.prototype.setAllRowsDelete = _rowDelete.setAllRowsDelete;
+	DataTable.prototype.setRowsDelete = _rowDelete.setRowsDelete;
+
+	//rowFocus
+	DataTable.prototype.setRowFocus = _rowFocus.setRowFocus;
+	DataTable.prototype.setRowUnFocus = _rowFocus.setRowUnFocus;
+	DataTable.prototype.updateFocusIndex = _rowFocus.updateFocusIndex;
+
+	//rowSelect
+	DataTable.prototype.setAllRowsSelect = _rowSelect.setAllRowsSelect;
+	DataTable.prototype.setRowSelect = _rowSelect.setRowSelect;
+	DataTable.prototype.setRowsSelect = _rowSelect.setRowsSelect;
+	DataTable.prototype.addRowSelect = _rowSelect.addRowSelect;
+	DataTable.prototype.addRowsSelect = _rowSelect.addRowsSelect;
+	DataTable.prototype.setAllRowsUnSelect = _rowSelect.setAllRowsUnSelect;
+	DataTable.prototype.setRowUnSelect = _rowSelect.setRowUnSelect;
+	DataTable.prototype.setRowsUnSelect = _rowSelect.setRowsUnSelect;
+	DataTable.prototype.toggleAllSelect = _rowSelect.toggleAllSelect;
+	DataTable.prototype.updateSelectedIndices = _rowSelect.updateSelectedIndices;
+
+	//simpleData
+	DataTable.prototype.setSimpleData = _simpleData.setSimpleData;
+	DataTable.prototype.addSimpleData = _simpleData.addSimpleData;
+
+	//util
+	DataTable.prototype.isChanged = _util.isChanged;
 
 	DataTable.DEFAULTS = {
 	    pageSize: 20,
@@ -3226,7 +3286,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    for (var key in metas) {
 	        var meta = metas[key];
 	        if (typeof meta == 'string') meta = {};
-	        newMetas[key] = u.extend({}, DataTable.META_DEFAULTS, meta);
+	        newMetas[key] = (0, _extend.extend)({}, DataTable.META_DEFAULTS, meta);
 	    }
 	    return newMetas;
 	};
@@ -3256,6 +3316,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	var Events = function Events() {
+<<<<<<< HEAD
+	  _classCallCheck(this, Events);
+=======
 	    _classCallCheck(this, Events);
 
 	    this.on = _events.on;
@@ -3263,7 +3326,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.one = _events.one;
 	    this.trigger = _events.trigger;
 	    this.getEvent = _events.getEvent;
+>>>>>>> 86783c3b659c223c48fcaf2c88de67905c1da979
 	};
+
+	Events.prototype.on = _events.on;
+	Events.prototype.off = _events.off;
+	Events.prototype.one = _events.one;
+	Events.prototype.trigger = _events.trigger;
+	Events.prototype.getEvent = _events.getEvent;
 
 	exports.Events = Events;
 
@@ -3324,7 +3394,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	/**
 	 * 解绑事件
-	 * 
+	 *
 	**/
 	var off = function off(name, callback) {
 	    if (Object.prototype.toString.call(name) == '[object Array]') {
@@ -3356,7 +3426,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 	/**
-	 * 
+	 *
 	**/
 	var one = function one(name, callback) {
 	    this.on(name, callback, 1);
@@ -3435,7 +3505,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * Date	  : 2016-07-30 14:34:01
 	 */
 
-	/** 
+	/**
 	 *设置数据
 	 *
 	 */
@@ -4846,22 +4916,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 	var setRowsDelete = function setRowsDelete(indices) {
 	    indices = (0, _util._formatToIndicesArray)(this, indices);
-	    for (var i = 0; i < indices.length; i++) {
-	        var row = this.getRow(indices[i]);
-	        if (row.status == Row.STATUS.NEW) {
-	            this.rows(this.rows().splice(indices[i], 1));
-	            this.updateSelectedIndices(indices[i], '-');
-	            this.updateFocusIndex(index, '-');
-	        } else {
-	            row.status = Row.STATUS.FALSE_DELETE;
-	        }
-	    }
 	    var rowIds = this.getRowIdsByIndices(indices);
-	    this.trigger(DataTable.ON_ROW_DELETE, {
+	    this.trigger(DataTable.ON_DELETE, {
 	        falseDelete: true,
 	        indices: indices,
 	        rowIds: rowIds
 	    });
+	    for (var i = 0; i < indices.length; i++) {
+	        var row = this.getRow(indices[i]);
+	        if (row.status == Row.STATUS.NEW) {
+	            this.rows().splice(indices[i], 1);
+	            this.updateSelectedIndices(indices[i], '-');
+	            this.updateFocusIndex(index, '-');
+	        } else {
+	            row.status = Row.STATUS.FALSE_DELETE;
+	            var temprows = this.rows().splice(indices[i], 1);
+	            this.rows().push(temprows[0]);
+	        }
+	    }
 	};
 
 	exports.setRowDelete = setRowDelete;
@@ -4921,6 +4993,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	        // 避免与控件循环触发
 	        return;
 	    }
+
+	    if (u.isArray(indices)) {
+	        var rowNum = this.rows().length;
+	        for (var i = 0; i < indices.length; i++) {
+	            if (indices[i] < 0 || indices[i] >= rowNum) indices.splice(i, 1);
+	        }
+	    }
+
 	    this.setAllRowsUnSelect({ quiet: true });
 	    try {
 	        this.selectedIndices(indices);
@@ -5252,27 +5332,29 @@ return /******/ (function(modules) { // webpackBootstrap
 		this.selectedIndices = options['selectedIndices'] || null;
 		this.rows = options['rows'] || [];
 		this.parent = options['parent'] || null;
-
-		//data
-		this.setRowValue = _pageData.setRowValue;
-		this.updateRow = _pageData.updateRow;
-
-		//getData
-		this.getData = _pageGetData.getData;
-		this.getSelectDatas = _pageGetData.getSelectDatas;
-		this.getSelectRows = _pageGetData.getSelectRows;
-		this.getRowByRowId = _pageGetData.getRowByRowId;
-		this.getRowValue = _pageGetData.getRowValue;
-
-		//getMeta
-		this.getRowMeta = _pageGetMeta.getRowMeta;
-
-		//meta
-		this.setRowMeta = _pageMeta.setRowMeta;
-
-		//removeRow
-		this.removeRowByRowId = _pageRemoveRow.removeRowByRowId;
 	};
+
+	//data
+
+
+	Page.prototype.setRowValue = _pageData.setRowValue;
+	Page.prototype.updateRow = _pageData.updateRow;
+
+	//getData
+	Page.prototype.getData = _pageGetData.getData;
+	Page.prototype.getSelectDatas = _pageGetData.getSelectDatas;
+	Page.prototype.getSelectRows = _pageGetData.getSelectRows;
+	Page.prototype.getRowByRowId = _pageGetData.getRowByRowId;
+	Page.prototype.getRowValue = _pageGetData.getRowValue;
+
+	//getMeta
+	Page.prototype.getRowMeta = _pageGetMeta.getRowMeta;
+
+	//meta
+	Page.prototype.setRowMeta = _pageMeta.setRowMeta;
+
+	//removeRow
+	Page.prototype.removeRowByRowId = _pageRemoveRow.removeRowByRowId;
 
 	exports.Page = Page;
 
@@ -5524,7 +5606,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    function Row(options) {
 	        _classCallCheck(this, Row);
 
-	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Row).call(this));
+	        var _this = _possibleConstructorReturn(this, (Row.__proto__ || Object.getPrototypeOf(Row)).call(this));
 
 	        var self = _this;
 	        _this.rowId = options['id'] || Row.getRandomRowId();
@@ -5554,55 +5636,57 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        });
 
-	        //data
-	        _this.setValue = _rowData.setValue;
-	        _this.setChildValue = _rowData.setChildValue;
-	        _this.setChildSimpleDataByRowId = _rowData.setChildSimpleDataByRowId;
-	        _this.setData = _rowData.setData;
-	        _this.updateRow = _rowData.updateRow;
-
-	        //getData
-	        _this.getValue = _rowGetData.getValue;
-	        _this.getChildValue = _rowGetData.getChildValue;
-	        _this.getData = _rowGetData.getData;
-	        _this.getEmptyData = _rowGetData.getEmptyData;
-
-	        //getMeta
-	        _this.getMeta = _rowGetMeta.getMeta;
-
-	        //getSimpleData
-	        _this.getSimpleData = _rowGetSimpleData.getSimpleData;
-
-	        //init
-	        _this.init = _rowInit.init;
-
-	        //meta
-	        _this.setMeta = _rowMeta.setMeta;
-
-	        //ref
-	        _this.ref = _rowRef.ref;
-	        _this.refMeta = _rowRef.refMeta;
-	        _this.refCombo = _rowRef.refCombo;
-	        _this.refDate = _rowRef.refDate;
-	        _this.refEnum = _rowRef.refEnum;
-
-	        //rowSelect
-	        _this.toggleSelect = _rowRowSelect.toggleSelect;
-	        _this.singleSelect = _rowRowSelect.singleSelect;
-	        _this.multiSelect = _rowRowSelect.multiSelect;
-
-	        //simpleData
-	        _this.setSimpleData = _rowSimpleData.setSimpleData;
-
-	        //util
-	        _this.formatValue = _rowUtil.formatValue;
-
 	        _this.init();
 	        return _this;
 	    }
 
 	    return Row;
 	}(_indexEvents.Events);
+
+	//data
+
+
+	Row.prototype.setValue = _rowData.setValue;
+	Row.prototype.setChildValue = _rowData.setChildValue;
+	Row.prototype.setChildSimpleDataByRowId = _rowData.setChildSimpleDataByRowId;
+	Row.prototype.setData = _rowData.setData;
+	Row.prototype.updateRow = _rowData.updateRow;
+
+	//getData
+	Row.prototype.getValue = _rowGetData.getValue;
+	Row.prototype.getChildValue = _rowGetData.getChildValue;
+	Row.prototype.getData = _rowGetData.getData;
+	Row.prototype.getEmptyData = _rowGetData.getEmptyData;
+
+	//getMeta
+	Row.prototype.getMeta = _rowGetMeta.getMeta;
+
+	//getSimpleData
+	Row.prototype.getSimpleData = _rowGetSimpleData.getSimpleData;
+
+	//init
+	Row.prototype.init = _rowInit.init;
+
+	//meta
+	Row.prototype.setMeta = _rowMeta.setMeta;
+
+	//ref
+	Row.prototype.ref = _rowRef.ref;
+	Row.prototype.refMeta = _rowRef.refMeta;
+	Row.prototype.refCombo = _rowRef.refCombo;
+	Row.prototype.refDate = _rowRef.refDate;
+	Row.prototype.refEnum = _rowRef.refEnum;
+
+	//rowSelect
+	Row.prototype.toggleSelect = _rowRowSelect.toggleSelect;
+	Row.prototype.singleSelect = _rowRowSelect.singleSelect;
+	Row.prototype.multiSelect = _rowRowSelect.multiSelect;
+
+	//simpleData
+	Row.prototype.setSimpleData = _rowSimpleData.setSimpleData;
+
+	//util
+	Row.prototype.formatValue = _rowUtil.formatValue;
 
 	Row.STATUS = {
 	    NORMAL: 'nrm',
@@ -5707,9 +5791,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	/**
 	 * [_setData description]
-	 * @param {[type]} sourceData 
-	 * @param {[type]} targetData 
-	 * @param {[type]} subscribe  
+	 * @param {[type]} sourceData
+	 * @param {[type]} targetData
+	 * @param {[type]} subscribe
 	 * @param {[type]} parentKey  [父项key，数据项为数组时获取meta值用]
 	 */
 	var _setData = function _setData(rowObj, sourceData, targetData, subscribe, parentKey) {
@@ -5721,7 +5805,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        if ((typeof valueObj === 'undefined' ? 'undefined' : _typeof(valueObj)) != 'object') rowObj.parent.createField(key);
 	        //if (typeof this.parent.meta[key] === 'undefined') continue;
 	        if (valueObj == null || (typeof valueObj === 'undefined' ? 'undefined' : _typeof(valueObj)) != 'object') {
-	            targetData[key]['value'] = rowObj.formatValue(key, valueObj);
+	            // 子表的话只有valueObj为datatable的时候才赋值
+	            if (!targetData[key].isChild) {
+	                targetData[key]['value'] = rowObj.formatValue(key, valueObj);
+	            }
 	            if (subscribe === true && oldValue !== targetData[key]['value']) {
 	                (0, _rowUtil._triggerChange)(rowObj, key, oldValue);
 	            }
@@ -5758,7 +5845,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	/**
 	 *设置Row数据
-	 *@subscribe 是否触发监听  
+	 *@subscribe 是否触发监听
 	 */
 	var setData = function setData(data, subscribe) {
 	    this.status = data.status;
@@ -6135,10 +6222,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _data[key] = data[key].value;
 	            }
 	            if (meta[key] && meta[key].type) {
-	                if (meta[key].type == 'date' || meta[key].type == 'datetime') {
 
-	                    _data[key] = (0, _rowUtil._dateToUTCString)(data[key].value);
-	                }
+	                _data[type] = fun(meta[key].type, data[key].value);
 	            }
 	        } else {
 	            _data[key] = _getSimpleData(rowObj, data[key]);
@@ -6147,6 +6232,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return _data;
 	};
 
+	var fun = function fun() {
+	    if (meta[key].type == 'date' || meta[key].type == 'datetime') {
+
+	        return (0, _rowUtil._dateToUTCString)(data[key].value);
+	    }
+	    return data[key].value;
+	};
 	var getSimpleData = function getSimpleData(options) {
 	    options = options || {};
 	    var fields = options['fields'] || null;
@@ -7219,7 +7311,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    mixins: [_valueMixin.ValueMixin, _enableMixin.EnableMixin, _requiredMixin.RequiredMixin, _validateMixin.ValidateMixin],
 	    init: function init(options) {
 	        var self = this;
-	        // CheckboxAdapter.superclass.initialize.apply(this, arguments); 
+	        // CheckboxAdapter.superclass.initialize.apply(this, arguments);
 	        this.isGroup = this.options['isGroup'] === true || this.options['isGroup'] === 'true';
 	        if (this.options['datasource'] || this.options['hasOther']) {
 	            // 存在datasource或者有其他选项，将当前dom元素保存，以后用于复制新的dom元素
@@ -7642,6 +7734,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.successId = this.getOption('successId');
 	        this.hasSuccess = this.getOption('hasSuccess');
 	        this.notipFlag = this.getOption('notipFlag');
+	        this.showFix = this.getOption('showFix');
 
 	        // if (this.validType) {
 	        this.validate = new _neouiValidate.Validate({
@@ -7762,7 +7855,7 @@ return /******/ (function(modules) { // webpackBootstrap
 				if (typeof this.regExp == 'string') this.regExp = eval(this.regExp);
 			} catch (e) {}
 
-			this.notipFlag = this.options['notipFlag']; // 错误信息提示方式是否为tip，默认为true
+			this.notipFlag = this.options['notipFlag']; // 错误信息提示方式是否为tip，默认为false
 			this.hasSuccess = this.options['hasSuccess']; //是否含有正确提示
 
 			this.showFix = this.options['showFix'];
@@ -7782,7 +7875,7 @@ return /******/ (function(modules) { // webpackBootstrap
 					this.$element.parentNode.appendChild(this.successId);
 				}
 			}
-			//不是默认的tip提示方式并且tipId没有定义时创建默认tipid	
+			//不是默认的tip提示方式并且tipId没有定义时创建默认tipid
 			if (this.notipFlag && !this.tipId) {
 				this.tipId = (0, _dom.makeDOM)('<span class="u-form-control-info uf uf-exclamationsign "></span>');
 				this.$element.parentNode.appendChild(this.tipId);
@@ -7846,7 +7939,8 @@ return /******/ (function(modules) { // webpackBootstrap
 		"integer": /^-?\d+$/,
 		"float": /^-?\d+(\.\d+)?$/,
 		"zipCode": /^[0-9]{6}$/,
-		"phone": /^13[0-9]{9}$|14[0-9]{9}|15[0-9]{9}$|18[0-9]{9}$/,
+		// "phone": /^13[0-9]{9}$|14[0-9]{9}|15[0-9]{9}$|18[0-9]{9}$/,
+		"phone": /^1[3|4|5|7|8]\d{9}$/,
 		"landline": /^(0[0-9]{2,3}\-)?([2-9][0-9]{6,7})+(\-[0-9]{1,4})?$/,
 		"email": /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/,
 		"url": /^(\w+:\/\/)?\w+(\.\w+)+.*$/,
@@ -8759,7 +8853,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        (0, _dom.addClass)(tickOutline, this._CssClasses.TICK_OUTLINE);
 
 	        boxOutline.appendChild(tickOutline);
-
 	        this.element.appendChild(tickContainer);
 	        this.element.appendChild(boxOutline);
 
@@ -8790,9 +8883,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        //this.element.addEventListener('mouseup', this.boundElementMouseUp);
 	        if (!(0, _dom.hasClass)(this.element, 'only-style')) {
 	            (0, _event.on)(this.element, 'click', function (e) {
-	                if (!this._inputElement.disabled) {
-	                    this.toggle();
-	                    (0, _event.stopEvent)(e);
+	                if (e.target.nodeName != 'INPUT') {
+	                    if (!this._inputElement.disabled) {
+	                        this.toggle();
+	                        (0, _event.stopEvent)(e);
+	                    }
 	                }
 	            }.bind(this));
 	        }
@@ -9333,13 +9428,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.showFix = this.options.showFix || false;
 	        this.validType = 'combobox';
 	        this.isAutoTip = this.options.isAutoTip || false;
-	        this.comp = new _neouiCombo.Combo({ el: this.element, mutilSelect: this.mutil, onlySelect: this.onlySelect, showFix: this.showFix, isAutoTip: this.isAutoTip });
-	        this.element['u.Combo'] = this.comp;
-	        if (this.datasource) {
-	            this.comp.setComboData(this.datasource);
+
+	        if (!this.element['u.Combo']) {
+	            this.comp = new u.Combo({ el: this.element, mutilSelect: this.mutil, onlySelect: this.onlySelect });
+	            this.element['u.Combo'] = this.comp;
 	        } else {
-	            if (_env.env.isIE8 || _env.env.isIE9) alert("IE8/IE9必须设置datasource");
+	            this.comp = this.element['u.Combo'];
 	        }
+
+	        var isDsObservable = ko.isObservable(this.datasource);
+	        if (this.datasource) {
+	            this.comp.setComboData(isDsObservable ? ko.toJS(this.datasource) : this.datasource);
+	        } else {
+	            if (u.isIE8 || u.isIE9) alert("IE8/IE9必须设置datasource");
+	        }
+	        if (isDsObservable) {
+	            // datasource 发生变化时改变控件
+	            this.datasource.subscribe(function (value) {
+	                self.comp.setComboData(value);
+	            });
+	        }
+
 	        ////TODO 后续支持多选
 	        //if (this.mutil) {
 	        //    //$(this.comboEle).on("mutilSelect", function (event, value) {
@@ -9471,8 +9580,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	            datas.push({ value: option.value, name: option.text });
 	        }
 
-	        this.setComboData(datas);
 	        this._input = this.element.querySelector("input");
+	        this.setComboData(datas);
+
+	        if (this.mutilSelect) {
+	            this.nowWidth = 0;
+	            this.fullWidth = this._input.offsetWidth;
+	        }
+
 	        if (this.onlySelect || _env.env.isMobile) {
 	            setTimeout(function () {
 	                self._input.setAttribute('readonly', 'readonly');
@@ -9480,6 +9595,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        } else {
 	            (0, _event.on)(this._input, 'blur', function (e) {
 	                var v = this.value;
+	                if (!v) return;
 	                /*校验数值是否存在于datasource的name中*/
 	                for (var i = 0; i < self.comboDatas.length; i++) {
 	                    if (v == self.comboDatas[i].name) {
@@ -9644,6 +9760,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	            this.initialComboData = this.comboDatas;
 	        }
 
+	        this.value = '';
+	        this._input.value = '';
+
 	        //若没有下拉的ul,新生成一个ul结构.
 	        if (!this._ul) {
 	            this._ul = (0, _dom.makeDOM)('<ul class="u-combo-ul"></ul>');
@@ -9688,7 +9807,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	            if (flag == '+') {
 	                var nameDiv = (0, _dom.makeDOM)('<div class="u-combo-name" key="' + val + '">' + name + /*<a href="javascript:void(0)" class="remove">x</a>*/'</div>');
-	                var parNameDiv = (0, _dom.makeDOM)('<div class="u-combo-name-par" style="position:absolute"></div>');
+	                var parNameDiv = (0, _dom.makeDOM)('<div class="u-combo-name-par" style="position:absolute;width:' + this.fullWidth + 'px;"></div>');
 	                /*var _a = nameDiv.querySelector('a');
 	                on(_a, 'click', function(){
 	                    var values = self.value.split(',');
@@ -9703,10 +9822,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    this._combo_name_par = parNameDiv;
 	                }
 	                this._combo_name_par.appendChild(nameDiv);
+	                var nWidth = nameDiv.offsetWidth + 20;
+	                this.nowWidth += nWidth;
+	                if (this.nowWidth > this.fullWidth) {
+	                    this.nowWidth -= nWidth;
+	                    this._combo_name_par.removeChild(nameDiv);
+	                    (0, _dom.addClass)(this._combo_name_par, 'u-combo-overwidth');
+	                }
 	            } else {
 	                if (this._combo_name_par) {
 	                    var comboDiv = this._combo_name_par.querySelector('[key="' + val + '"]');
-	                    if (comboDiv) this._combo_name_par.removeChild(comboDiv);
+	                    if (comboDiv) {
+	                        var nWidth = comboDiv.offsetWidth + 20;
+	                        this._combo_name_par.removeChild(comboDiv);
+	                        this.nowWidth -= nWidth;
+	                        (0, _dom.removeClass)(this._combo_name_par, 'u-combo-overwidth');
+	                    }
 	                }
 	            }
 
@@ -9733,9 +9864,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                }
 	            }
 	            /*根据多选区域div的高度调整input的高度*/
-	            var h = this._combo_name_par.offsetHeight;
-	            if (h < 25) h = 25;
-	            this._input.style.height = h + 'px';
+	            /*实际上input的高度并不需要调整*/
+	            /*var h = this._combo_name_par.offsetHeight;
+	            if(h < 25){
+	                h = 25;
+	                this._input.style.height = h + 'px';
+	            }*/
 	        } else {
 	            for (var i = 0; i < lis.length; i++) {
 	                if (this.value == this.comboDatas[i].value) {
@@ -9786,6 +9920,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	    },
 
+	    emptyValue: function emptyValue() {
+	        this.value = '';
+	        this._input.value = '';
+	    },
 	    /**
 	     * 设置显示名
 	     * @param name
@@ -9940,6 +10078,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	    _blur: function _blur(event) {
 	        (0, _dom.removeClass)(this.element, this._CssClasses.IS_FOCUSED);
+	        this.trigger('u.text.blur');
 	    },
 	    /**
 	     * Handle reset event from out side.
@@ -11172,11 +11311,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    //new UText(this._element);
 	    this._input = this._element.querySelector("input");
 
-	    if (_env.env.isMobile) {
-	        // setTimeout(function(){
-	        //     self._input.setAttribute('readonly','readonly');
-	        // },1000);
-	    }
+	    // if(env.isMobile){
+	    //     // setTimeout(function(){
+	    //     //     self._input.setAttribute('readonly','readonly');
+	    //     // },1000);
+	    // }
 
 	    setTimeout(function () {
 	        self._input.setAttribute('readonly', 'readonly');
@@ -11184,7 +11323,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    (0, _event.on)(this._input, 'focus', function (e) {
 	        // 用来关闭键盘
-	        if (_env.env.isMobile) this.blur();
+	        /*if(env.isMobile)
+	            this.blur();*/
 	        self._inputFocus = true;
 	        if (self.isShow !== true) {
 	            self.show(e);
@@ -11232,7 +11372,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (_env.env.isIE8 || _env.env.isIE9 || _env.env.isFF) {
 	        // this._dateContent.removeChild(this.contentPage);
 	        var pages = this._dateContent.querySelectorAll('.u-date-content-page');
-	        for (i = 0; i < pages.length; i++) {
+	        for (var i = 0; i < pages.length; i++) {
 	            this._dateContent.removeChild(pages[i]);
 	        }
 	        this.contentPage = newPage;
@@ -11249,7 +11389,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            newPage.removeEventListener('webkitTransitionEnd', cleanup);
 	            // this._dateContent.removeChild(this.contentPage);
 	            var pages = this._dateContent.querySelectorAll('.u-date-content-page');
-	            for (i = 0; i < pages.length; i++) {
+	            for (var i = 0; i < pages.length; i++) {
 	                this._dateContent.removeChild(pages[i]);
 	            }
 	            this.contentPage = newPage;
@@ -11284,7 +11424,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this._dateContent.appendChild(newPage);
 	    if (_env.env.isIE8 || _env.env.isIE9 || _env.env.isFF) {
 	        var pages = this._dateContent.querySelectorAll('.u-date-content-page');
-	        for (i = 0; i < pages.length; i++) {
+	        for (var i = 0; i < pages.length; i++) {
 	            this._dateContent.removeChild(pages[i]);
 	        }
 	        // this._dateContent.removeChild(this.contentPage);
@@ -11297,7 +11437,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            newPage.removeEventListener('webkitTransitionEnd', cleanup);
 	            // this._dateContent.removeChild(this.contentPage);
 	            var pages = this._dateContent.querySelectorAll('.u-date-content-page');
-	            for (i = 0; i < pages.length; i++) {
+	            for (var i = 0; i < pages.length; i++) {
 	                this._dateContent.removeChild(pages[i]);
 	            }
 	            this.contentPage = newPage;
@@ -11378,14 +11518,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	     on(this._headerMonth, 'click', function(e){
 	        self._fillMonth();
 	        stopEvent(e)
+<<<<<<< HEAD
+	    });
+	      on(this._headerTime, 'click', function(e){
+=======
 	    });    
 	     on(this._headerTime, 'click', function(e){
+>>>>>>> 86783c3b659c223c48fcaf2c88de67905c1da979
 	        self._fillTime();
 	        stopEvent(e)
 	    });*/
 
 	    yearDiv = yearPage.querySelector('.u-date-content-panel');
-	    for (i = 0; i < 12; i++) {
+	    for (var i = 0; i < 12; i++) {
 
 	        cell = (0, _dom.makeDOM)('<div class="u-date-content-year-cell">' + (this.startYear + i) + '</div>');
 	        new _ripple.URipple(cell);
@@ -11467,14 +11612,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	     on(this._headerMonth, 'click', function(e){
 	        self._fillMonth();
 	        stopEvent(e)
+<<<<<<< HEAD
+	    });
+	      on(this._headerTime, 'click', function(e){
+=======
 	    });    
 	     on(this._headerTime, 'click', function(e){
+>>>>>>> 86783c3b659c223c48fcaf2c88de67905c1da979
 	        self._fillTime();
 	        stopEvent(e)
 	    });*/
 
 	    cells = monthPage.querySelectorAll('.u-date-content-year-cell');
-	    for (i = 0; i < cells.length; i++) {
+	    for (var i = 0; i < cells.length; i++) {
 	        if (_month - 1 == i) {
 	            (0, _dom.addClass)(cells[i], 'current');
 	        }
@@ -11589,7 +11739,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    weekSpans = datePage.querySelectorAll('.u-date-week span');
 
-	    for (i = 0; i < 7; i++) {
+	    for (var i = 0; i < 7; i++) {
 	        weekSpans[i].innerHTML = _dateUtils.date._dateLocale[language].weekdaysMin[i];
 	    }
 	    dateDiv = datePage.querySelector('.u-date-content-panel');
@@ -12124,14 +12274,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var self = this;
 	    if (!this._panel) {
 	        this._panel = (0, _dom.makeDOM)(dateTimePickerTemplateArr.join(""));
-	        if (_env.env.isMobile) {
-	            (0, _dom.removeClass)(this._panel, 'u-date-panel');
-	            (0, _dom.addClass)(this._panel, 'u-date-panel-mobile');
-	        }
+	        /*if(env.isMobile){
+	            removeClass(this._panel,'u-date-panel')
+	            addClass(this._panel,'u-date-panel-mobile');
+	        }*/
 	        this._dateNav = this._panel.querySelector('.u-date-nav');
-	        if (this.type === 'date' && !_env.env.isMobile) {
-	            this._dateNav.style.display = 'none';
-	        }
+	        // if (this.type === 'date' && !env.isMobile){
+	        //    this._dateNav.style.display = 'none';
+	        // }
 	        this._dateContent = this._panel.querySelector('.u-date-content');
 	        if (this.type == 'datetime') {
 	            /*if(env.isMobile){
@@ -12205,12 +12355,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    (0, _event.on)(window, 'resize', function () {
 	        self._response();
 	    });
-	    if (_env.env.isMobile) {
-	        this.overlayDiv = (0, _dom.makeModal)(this._panel);
-	        (0, _event.on)(this.overlayDiv, 'click', function () {
+	    /*if(env.isMobile){
+	        this.overlayDiv = makeModal(this._panel);
+	        on(this.overlayDiv, 'click', function(){
 	            self.onCancel();
-	        });
-	    }
+	        })
+	    }*/
 	    (0, _dom.addClass)(this._panel, 'is-visible');
 	    if (!_env.env.isMobile) {
 	        if (this.options.showFix) {
@@ -12231,17 +12381,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	            this._element.appendChild(this._panel);
 	            this._element.style.position = 'relative';
 	            // this.left = this.element.offsetLeft;
+	            //
 	            this.left = this._input.offsetLeft;
 	            var inputHeight = this._input.offsetHeight;
 	            // this.top = this.element.offsetTop + inputHeight;
 	            this.top = this._input.offsetTop + inputHeight;
 
-	            if (this.left + panelWidth > bodyWidth) {
-	                this.left = bodyWidth - panelWidth;
+	            this.abLeft = (0, _dom.getElementLeft)(this._input);
+	            this.abTop = (0, _dom.getElementLeft)(this._input);
+                console.log(this._input);
+				console.log(this.abLeft);
+				console.log(this.abTop);
+	            if (this.abLeft + panelWidth > bodyWidth) {
+	                this.left = bodyWidth - panelWidth - this.abLeft;
 	            }
 
-	            if (this.top + panelHeight > bodyHeight) {
-	                this.top = bodyHeight - panelHeight;
+	            if (this.abTop + panelHeight > bodyHeight) {
+	                this.top = bodyHeight - panelHeight - this.abTop;
 	            }
 
 	            this._panel.style.left = this.left + 'px';
@@ -12739,13 +12895,13 @@ return /******/ (function(modules) { // webpackBootstrap
 								row.setValue(field, val);
 							});
 						});
-						//					var comp = new $.compManager.plugs.radio(compDiv[0],eOptions,viewModel);					
+						//					var comp = new $.compManager.plugs.radio(compDiv[0],eOptions,viewModel);
 						//					for( var i=0,length=rdo.length; i<length; i++){
 						//					   if(rdo[i].pk==value){
 						//					   	 obj.element.innerHTML = '<input type="radio" checked><i data-role="name">'+rdo[i].name+'</i>';
 						//					   	 break;
 						//					   }
-						//					}				
+						//					}
 						// 根据惊道需求增加renderType之后的处理,此处只针对grid.js中的默认render进行处理，非默认通过renderType进行处理
 						if (typeof afterRType == 'function') {
 							afterRType.call(this, obj);
@@ -12843,7 +12999,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 			/*
 	   * 处理viewModel与grid之间的绑定
-	   * 
+	   *
 	   */
 			var onRowSelectedFun = this.gridOptions.onRowSelected;
 			// 选中
@@ -12963,7 +13119,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			});
 
 			// 增行,只考虑viewModel传入grid
-			//		var onRowInsertFun = this.gridOptions.onRowInsert; 
+			//		var onRowInsertFun = this.gridOptions.onRowInsert;
 			//		this.gridOptions.onRowInsert = function(obj){
 			//			dataTable.insertRow(obj.index,obj.row);
 			//			if(onRowSelectedFun){
@@ -13165,16 +13321,21 @@ return /******/ (function(modules) { // webpackBootstrap
 			eOptions.showFix = true;
 			var compDiv, comp;
 			if (eType == 'string') {
-				compDiv = $('<div><input type="text" class="u-grid-edit-item-string"></div>');
+				compDiv = $('<div class="u-text"><input type="text" class="u-input"><label class="u-label"></label></div>');
 				if (!options.editType || options.editType == "default") {
 					compDiv.addClass("eType-input");
 				}
 				eOptions.dataType = 'string';
+<<<<<<< HEAD
+				comp = new u.TextFieldAdapter({
+=======
 				comp = new _string.StringAdapter({
+>>>>>>> 86783c3b659c223c48fcaf2c88de67905c1da979
 					el: compDiv[0],
 					options: eOptions,
 					model: viewModel
 				});
+				//$.compManager.plugs.string(compDiv.find("input")[0],eOptions,viewModel);
 			} else if (eType == 'integer') {
 				compDiv = $('<div><input type="text" class="u-grid-edit-item-integer"></div>');
 				if (!options.editType || options.editType == "default") {
@@ -14525,14 +14686,14 @@ return /******/ (function(modules) { // webpackBootstrap
 		var closeBtn = msgDom.querySelector('.u-msg-close');
 		//new Button({el:closeBtn});
 		var closeFun = function closeFun() {
-			u.removeClass(msgDom, "active");
+			(0, _dom.removeClass)(msgDom, "active");
 			setTimeout(function () {
 				try {
 					document.body.removeChild(msgDom);
 				} catch (e) {}
 			}, 500);
 		};
-		u.on(closeBtn, 'click', closeFun);
+		(0, _event.on)(closeBtn, 'click', closeFun);
 		document.body.appendChild(msgDom);
 
 		if (showSeconds > 0) {
@@ -15901,11 +16062,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 			var thumb = document.createElement('div');
 			(0, _dom.addClass)(thumb, this._CssClasses.THUMB);
-
-			var focusHelper = document.createElement('span');
-			(0, _dom.addClass)(focusHelper, this._CssClasses.FOCUS_HELPER);
-
-			thumb.appendChild(focusHelper);
+			/*swith按钮点击时，会闪一下，注释以下代码，取消此效果*/
+			/*var focusHelper = document.createElement('span');
+	  addClass(focusHelper, this._CssClasses.FOCUS_HELPER);
+	  		thumb.appendChild(focusHelper);*/
 
 			this.element.appendChild(track);
 			this.element.appendChild(thumb);
@@ -18200,6 +18360,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	// export api;
 	//export default api;
+	(0, _extend.extend)(api, window.u || {});
+
+	window.u = api;
 	exports.u = api;
 
 /***/ },
@@ -19002,6 +19165,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		dialogMode: _neouiDialog.dialogMode,
 		dialog: _neouiDialog.dialog,
 		dialogWizard: _neouiDialog.dialogWizard,
+		iframeDialog: _neouiDialog.iframeDialog,
 		Loading: _neouiLoading.Loading,
 		showLoading: _neouiLoading.showLoading,
 		hideLoading: _neouiLoading.hideLoading,
@@ -19120,7 +19284,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	//Neoui import
 	(0, _extend.extend)(ex, window.u || {});
-
+	window.u = ex;
 	exports.u = ex;
 
 /***/ },
@@ -20143,7 +20307,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		});
 	};
 
-	//tab键切换 下拉隐藏	
+	//tab键切换 下拉隐藏
 	Combobox.fn.blurEvent = function () {
 		var self = this;
 
@@ -20313,7 +20477,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		var self = this;
 		(0, _event.on)(self.element, "click", function () {
 			// $(this.$element).on('click',function(){
-			// $(self.oDiv).find('.select-search input').val('')  	
+			// $(self.oDiv).find('.select-search input').val('')
 			self.oDiv.querySelector('.select-search input').value = "";
 			var oLis = this.oDiv.querySelector("ul").childNodes;
 			if (self.options.single == "true" || self.options.single == true) {
@@ -20368,7 +20532,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	// for(var k=data.length;k<Olis.length;k++){
 	// $(Olis[k]).remove();
-	// }		
+	// }
 
 	// }else if(data.length > Olis.length){
 	// var liTemplate = Olis[0]
@@ -20533,7 +20697,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
-	exports.dialogWizard = exports.dialog = exports.dialogMode = exports.confirmDialog = exports.messageDialog = undefined;
+	exports.iframeDialog = exports.dialogWizard = exports.dialog = exports.dialogMode = exports.confirmDialog = exports.messageDialog = undefined;
 
 	var _BaseComponent = __webpack_require__(83);
 
@@ -20591,10 +20755,11 @@ return /******/ (function(modules) { // webpackBootstrap
 		(0, _event.on)(closeBtn, 'click', function () {
 			document.body.removeChild(msgDom);
 			document.body.removeChild(overlayDiv);
+			enable_mouseWheel();
 		});
 		var overlayDiv = (0, _dom.makeModal)(msgDom);
 		document.body.appendChild(msgDom);
-
+		disable_mouseWheel();
 		this.resizeFun = function () {
 			var cDom = msgDom.querySelector('.u-msg-content');
 			if (!cDom) return;
@@ -20643,16 +20808,19 @@ return /******/ (function(modules) { // webpackBootstrap
 			if (onOk() !== false) {
 				document.body.removeChild(msgDom);
 				document.body.removeChild(overlayDiv);
+				enable_mouseWheel();
 			}
 		});
 		(0, _event.on)(cancelBtn, 'click', function () {
 			if (onCancel() !== false) {
 				document.body.removeChild(msgDom);
 				document.body.removeChild(overlayDiv);
+				enable_mouseWheel();
 			}
 		});
 		var overlayDiv = (0, _dom.makeModal)(msgDom);
 		document.body.appendChild(msgDom);
+		disable_mouseWheel();
 
 		this.resizeFun = function () {
 			var cDom = msgDom.querySelector('.u-msg-content');
@@ -20675,6 +20843,45 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * 三按钮确认框（是 否  取消）
 	 */
 	var threeBtnDialog = function threeBtnDialog() {};
+	/**
+	 * 禁用鼠标滚轮事件
+	 * @return {[type]} [description]
+	 */
+	var disable_mouseWheel = function disable_mouseWheel() {
+		if (document.addEventListener) {
+			document.addEventListener('DOMMouseScroll', scrollFunc, false);
+		}
+		window.onmousewheel = document.onmousewheel = scrollFunc;
+	};
+	/**
+	 * 事件禁用
+	 * @param  {[type]} evt [description]
+	 * @return {[type]}     [description]
+	 */
+	var scrollFunc = function scrollFunc(evt) {
+		evt = evt || window.event;
+		if (evt.preventDefault) {
+			// Firefox
+			evt.preventDefault();
+			evt.stopPropagation();
+		} else {
+			// IE
+			evt.cancelBubble = true;
+			evt.returnValue = false;
+		}
+		return false;
+	};
+
+	/**
+	 * 开启鼠标滚轮事件
+	 * @return {[type]} [description]
+	 */
+	var enable_mouseWheel = function enable_mouseWheel() {
+		if (document.removeEventListener) {
+			document.removeEventListener('DOMMouseScroll', scrollFunc, false);
+		}
+		window.onmousewheel = document.onmousewheel = null;
+	};
 
 	/**
 	 * dialog.js
@@ -20705,6 +20912,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		this.width = options['width'];
 		this.height = options['height'];
 		this.lazyShow = options['lazyShow'];
+		this.closeFun = options['closeFun'];
 		this.create();
 
 		this.resizeFun = function () {
@@ -20766,6 +20974,7 @@ return /******/ (function(modules) { // webpackBootstrap
 			this.overlayDiv.style.display = 'none';
 		}
 		document.body.appendChild(this.templateDom);
+		disable_mouseWheel();
 		this.isClosed = false;
 	};
 
@@ -20775,22 +20984,28 @@ return /******/ (function(modules) { // webpackBootstrap
 		}
 		this.templateDom.style.display = 'block';
 		this.overlayDiv.style.display = 'block';
+		disable_mouseWheel();
 	};
 
 	dialogMode.prototype.hide = function () {
 		this.templateDom.style.display = 'none';
 		this.overlayDiv.style.display = 'none';
+		enable_mouseWheel();
 	};
 
 	dialogMode.prototype.close = function () {
+		this.closeFun && this.closeFun.call(this);
 		if (this.contentDom) {
 			this.contentDom.style.display = 'none';
-			this.contentDomParent.appendChild(this.contentDom);
+			this.contentDomParent && this.contentDomParent.appendChild(this.contentDom);
 		}
 		document.body.removeChild(this.templateDom);
 		document.body.removeChild(this.overlayDiv);
 		this.isClosed = true;
+		enable_mouseWheel();
 	};
+
+	u.dialogMode = dialogMode;
 
 	var dialog = function dialog(options) {
 		return new dialogMode(options);
@@ -20818,6 +21033,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		var wizard = function wizard() {};
 		wizard.prototype.show = function () {
 			dialogs[curIndex].show();
+			disable_mouseWheel();
 		};
 		wizard.prototype.next = function () {
 			dialogs[curIndex].hide();
@@ -20831,8 +21047,147 @@ return /******/ (function(modules) { // webpackBootstrap
 			for (var i = 0; i < len; i++) {
 				dialogs[i].close();
 			}
+			enable_mouseWheel();
 		};
 		return new wizard();
+	};
+
+	/**
+	 * Module : iframeDialog
+	 * Author : wh(wanghaoo@yonyou.com)
+	 * Date	  : 2016-09-8 9:33
+	 */
+	var iframeDialogTemplate = '<div class="u-msg-dialog u-iframe-dialog" style="{width}{height}{top}">' + '{close}' + '<div class="u-msg-title">' + '<h4>{title}</h4>' + '</div>' + '<div class="u-msg-content">' + '<iframe src="{url}" width = "99%" height ="100%"></iframe>' + '</div>' + '{footer}';
+
+	// '<div class="u-msg-title">' +
+	// '<h4>{title}</h4>' +
+	// '</div>' +
+	// '<div class="u-msg-content">' +
+
+	// '</div>' +
+	// '<div class="u-msg-footer"><button class="u-msg-ok u-button primary raised">{okText}</button><button class="u-msg-cancel u-button">{cancelText}</button></div>' +
+	// '</div>';
+
+	var iframeDialogF = function iframeDialogF(options) {
+
+		var defaultOptions = {
+			hasCloseMenu: true,
+			hasFooter: false,
+			url: '',
+			width: '',
+			height: '',
+			title: '标题',
+			top: '10%',
+			onClose: function onClose() {},
+			onCancel: function onCancel() {},
+			onOk: function onOk() {}
+		};
+
+		options = (0, _extend.extend)(defaultOptions, options);
+		this.id = options['id'];
+		this.template = iframeDialogTemplate;
+		this.hasCloseMenu = options['hasCloseMenu'];
+		this.hasFooter = options['hasFooter'];
+		this.url = options['url'];
+		this.top = options['top'];
+		this.title = options['title'];
+		this.width = options['width'];
+		this.height = options['height'];
+		this.onClose = options['onClose'];
+		this.onOk = options['onOk'];
+		this.onCancel = options['onCancel'];
+		//是否有url，没有url直接跳出
+		if (!this.url) {
+			return;
+		}
+
+		this.create();
+
+		this.resizeFun = function () {
+			// var cDom = this.contentDom.querySelector('.u-msg-content');
+			// cDom.style.height = '';
+			// var wholeHeight = this.templateDom.offsetHeight;
+			// var contentHeight = this.contentDom.offsetHeight;
+			// if(contentHeight > wholeHeight && cDom)
+			// 	cDom.style.height = wholeHeight - (56 + 46) + 'px';
+
+			var wholeHeight = this.templateDom.offsetHeight;
+			var cDom = this.templateDom.querySelector('.u-msg-content');
+			if (this.hasFooter) {
+				cDom.style.height = wholeHeight - (56 + 52) + 'px';
+			} else {
+				cDom.style.height = wholeHeight - 52 + 'px';
+			}
+		}.bind(this);
+
+		this.resizeFun();
+		(0, _event.on)(window, 'resize', this.resizeFun);
+	};
+
+	iframeDialogF.prototype.create = function () {
+		var closeStr = '',
+		    footerStr = '';
+		var oThis = this;
+		if (this.hasCloseMenu) {
+			var closeStr = '<div class="u-msg-close"> <span aria-hidden="true">&times;</span></div>';
+		}
+		if (this.hasFooter) {
+			var footerStr = '<div class="u-msg-footer"><button class="u-msg-ok u-button primary raised">确定</button><button class="u-msg-cancel u-button">取消</button></div>' + '</div>';
+		}
+		var templateStr = this.template.replace('{close}', closeStr);
+		templateStr = templateStr.replace('{url}', this.url);
+		templateStr = templateStr.replace('{title}', this.title);
+		templateStr = templateStr.replace('{footer}', footerStr);
+		templateStr = templateStr.replace('{width}', this.width ? 'width:' + this.width + ';' : '');
+		templateStr = templateStr.replace('{height}', this.height ? 'height:' + this.height + ';' : '');
+		templateStr = templateStr.replace('{top}', this.top ? 'top:' + this.top + ';' : '');
+
+		this.templateDom = (0, _dom.makeDOM)(templateStr);
+		this.overlayDiv = (0, _dom.makeModal)(this.templateDom);
+
+		if (this.hasCloseMenu) {
+			this.closeDiv = this.templateDom.querySelector('.u-msg-close');
+			(0, _event.on)(this.closeDiv, 'click', function () {
+				if (oThis.onClose() !== false) {
+					oThis.close();
+				}
+			});
+		}
+
+		if (this.hasFooter) {
+			var okBtn = this.templateDom.querySelector('.u-msg-ok');
+			var cancelBtn = this.templateDom.querySelector('.u-msg-cancel');
+			var closeBtn = new _neouiButton.Button({
+				el: okBtn
+			});
+			new _neouiButton.Button({
+				el: cancelBtn
+			});
+			(0, _event.on)(okBtn, 'click', function () {
+				if (oThis.onOk() !== false) {
+					oThis.close();
+				}
+			});
+			(0, _event.on)(cancelBtn, 'click', function () {
+				if (oThis.onCancel() !== false) {
+					oThis.close();
+				}
+			});
+		}
+
+		document.body.appendChild(this.templateDom);
+		this.isClosed = false;
+	};
+
+	iframeDialogF.prototype.close = function () {
+
+		document.body.removeChild(this.templateDom);
+		document.body.removeChild(this.overlayDiv);
+		this.isClosed = true;
+	};
+
+	var iframeDialog = function iframeDialog(options) {
+		return new iframeDialogF(options);
 	};
 
 	exports.messageDialog = messageDialog;
@@ -20840,6 +21195,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.dialogMode = dialogMode;
 	exports.dialog = dialog;
 	exports.dialogWizard = dialogWizard;
+	exports.iframeDialog = iframeDialog;
 
 /***/ },
 /* 138 */
@@ -20899,9 +21255,13 @@ return /******/ (function(modules) { // webpackBootstrap
 			this.dHistory = [];
 			this.isNarrow = null;
 			this.response();
-			(0, _event.on)(window, 'resize', function () {
+			// on(window, 'resize', function(){
+			// 	me.response();
+			// })
+
+			setInterval(function () {
 				me.response();
-			});
+			}, 100);
 		},
 
 		initPages: function initPages(pages, type) {
@@ -21601,7 +21961,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 	var loadTemplate = "<div class='u-loader-container'><div class='u-loader'>{centerContent}</div>{loadDesc}</div>"; //{centerContent}为加载条中间内容
 	/**
-	 * @param  {Object} options 
+	 * @param  {Object} options
 	 * @return {[type]}
 	 */
 	/**
@@ -21840,7 +22200,17 @@ return /******/ (function(modules) { // webpackBootstrap
 				forEl = document.getElementById(forElId);
 				if (forEl) {
 					this.for_element = forEl;
-					(0, _event.on)(forEl, 'click', this._handleForClick.bind(this));
+					var El = this.element;
+					console.log(this.for_element.getAttribute('data-event'));
+					if (this.for_element.getAttribute('data-event') == 'hover') {
+						(0, _event.on)(forEl, 'mouseover', this._handleForHover.bind(this));
+						(0, _event.on)(El, 'mouseover', this._handleForElHover.bind(this));
+						(0, _event.on)(forEl.parentElement, 'mouseout', this._handleForMouseout.bind(this));
+						(0, _event.on)(El, 'mouseout', this._handleForElMouseout.bind(this));
+					} else {
+						(0, _event.on)(forEl, 'click', this._handleForClick.bind(this));
+					}
+
 					(0, _event.on)(forEl, 'keydown', this._handleForKeyboardEvent.bind(this));
 				}
 			}
@@ -21886,6 +22256,60 @@ return /******/ (function(modules) { // webpackBootstrap
 
 			(0, _dom.addClass)(container, 'is-upgraded');
 		},
+		_handleForElHover: function _handleForElHover(evt) {
+			this.hoverFlag = false;
+		},
+		_handleForElMouseout: function _handleForElMouseout(evt) {
+			var self = this;
+			this.hoverFlag = true;
+			window.setTimeout(function () {
+				if (self.hoverFlag) {
+					self.toggle(evt, 'out');
+				}
+			}, 100);
+		},
+		_handleForMouseout: function _handleForMouseout(evt) {
+			var self = this;
+			this.hoverFlag = true;
+			window.setTimeout(function () {
+				if (self.hoverFlag) {
+					self.toggle(evt, 'out');
+				}
+			}, 100);
+		},
+		_handleForHover: function _handleForHover(evt) {
+
+			if (this.element && this.for_element) {
+				this.hoverFlag = false;
+				var rect = this.for_element.getBoundingClientRect();
+				var forRect = this.for_element.parentElement.getBoundingClientRect();
+
+				if ((0, _dom.hasClass)(this.element, 'u-menu-unaligned')) {
+					// Do not position the menu automatically. Requires the developer to
+					// manually specify position.
+				} else if ((0, _dom.hasClass)(this.element, 'u-menu-bottom-right')) {
+					// Position below the "for" element, aligned to its right.
+					this._container.style.left = this.for_element.offsetLeft + this.for_element.offsetWidth - this.element.offsetWidth + 'px';
+					// this._container.style.right = (forRect.right - rect.right) + 'px';
+					this._container.style.top = this.for_element.offsetTop + this.for_element.offsetHeight + 'px';
+				} else if ((0, _dom.hasClass)(this.element, 'u-menu-top-left')) {
+					// Position above the "for" element, aligned to its left.
+					this._container.style.left = this.for_element.offsetLeft + 'px';
+					this._container.style.bottom = forRect.bottom - rect.top + 'px';
+				} else if ((0, _dom.hasClass)(this.element, 'u-menu-top-right')) {
+					// Position above the "for" element, aligned to its right.
+					this._container.style.right = forRect.right - rect.right + 'px';
+					this._container.style.bottom = forRect.bottom - rect.top + 'px';
+				} else {
+					// Default: position below the "for" element, aligned to its left.
+					this._container.style.left = this.for_element.offsetLeft + 'px';
+					this._container.style.top = this.for_element.offsetTop + this.for_element.offsetHeight + 'px';
+				}
+			}
+
+			this.toggle(evt, 'over');
+		},
+
 		_handleForClick: function _handleForClick(evt) {
 			if (this.element && this.for_element) {
 				var rect = this.for_element.getBoundingClientRect();
@@ -21896,7 +22320,8 @@ return /******/ (function(modules) { // webpackBootstrap
 					// manually specify position.
 				} else if ((0, _dom.hasClass)(this.element, 'u-menu-bottom-right')) {
 					// Position below the "for" element, aligned to its right.
-					this._container.style.right = forRect.right - rect.right + 'px';
+					this._container.style.left = this.for_element.offsetLeft + this.for_element.offsetWidth - this.element.offsetWidth + 'px';
+					// this._container.style.right = (forRect.right - rect.right) + 'px';
 					this._container.style.top = this.for_element.offsetTop + this.for_element.offsetHeight + 'px';
 				} else if ((0, _dom.hasClass)(this.element, 'u-menu-top-left')) {
 					// Position above the "for" element, aligned to its left.
@@ -22181,11 +22606,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	  *
 	  * @public
 	  */
-		toggle: function toggle(evt) {
-			if ((0, _dom.hasClass)(this._container, 'is-visible')) {
-				this.hide();
+		toggle: function toggle(evt, tab) {
+
+			if (typeof tab == 'undefined') {
+				if ((0, _dom.hasClass)(this._container, 'is-visible')) {} else {
+					this.show(evt);
+				}
 			} else {
-				this.show(evt);
+				if (tab == 'over') {
+					this.show(evt);
+				} else {
+					this.hide();
+				}
 			}
 		}
 	});
@@ -22948,6 +23380,4 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.DataTable = _indexDataTable.DataTable;
 
 /***/ }
-/******/ ])
-});
-;
+/******/ ]);
