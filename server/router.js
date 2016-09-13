@@ -118,13 +118,13 @@ module.exports = {
       // this.body = pack(data);
     });
 
-    router.post('/downloadDemo',function *(next) {
+    router.post('/downloadDemo',function (next) {
         var viewCode = "",zipName='';
         var styles = this.request.body.cssCode;
         var htmls = this.request.body.htmlCode;
         var scripts = this.request.body.jsCode;
 
-         var tpl = getTpl(styles,htmls,scripts);
+        var tpl = getTpl(styles,htmls,scripts);
         viewCode = tpl.join('\r\n');
         var fs = require("fs");
         var downPath = '../dist/pages/webIDE/temp';
@@ -135,25 +135,23 @@ module.exports = {
           }
         });
 
-        fs.writeFile(downPath+'/download.html', viewCode ,  function(err) {
-           if (err) {
-               return console.error(err);
-           }
-        });
+        fs.writeFileSync(downPath+'/download.html', viewCode );
 
-        // zipName = 'download'+new Date().getTime()+'.zip';
-        zipName = 'download.zip';
+        
         // 生成zip
         gulp.task('downzip',function(){
-          return  gulp.src(downPath+'/download.html')
+          
+          gulp.src(downPath+'/download.html')
                 .pipe(zip(zipName))
                 .pipe(gulp.dest(downPath))
+          console.log('1111'+new Date());
+           return ;
         });
 
+        zipName = 'download.zip';
         gulp.run('downzip');
-
+        console.log('2222'+new Date());
         this.body = downPath+"/"+zipName;
-
     });
 
     router.get('/down', function *(next) {

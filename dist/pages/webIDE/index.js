@@ -58,9 +58,10 @@ var viewModel = {
 				url:'/downloadDemo',
 				data:{cssCode:cssEditor.getValue(),jsCode:scriptEditor.getValue(),htmlCode:htmlEditor.getValue()},
 				success:function(data){
-					console.log('----'+data);
-
-					location.href = "../../"+data+'?tmp='+Date.parse(new Date());
+					console.log('----'+data+'new Date()=='+new Date());
+					setTimeout(function(){
+						location.href = "../../"+data+'?tmp='+Date.parse(new Date());
+						}(),2000);
 				}
 
 			})
