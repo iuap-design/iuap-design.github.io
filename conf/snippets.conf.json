@@ -93,6 +93,9 @@
     "sub": [{
         "name": "单选框",
         "url": "demos/kero/radio"
+    }, {
+        "name": "下拉列表",
+        "url": "demos/kero/combobox"
     }]
 }, {
     "name": "表单",
