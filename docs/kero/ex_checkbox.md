@@ -181,4 +181,4 @@ getDtValue();
 
 [复选框](http://design.yyuap.com/dist/pages/global-style/checkbox.html)    
 
-[复选框在grid中使用]()
+[复选框在grid中使用](http://design.yyuap.com/dist/pages/webIDE/index.html#/demos/grids/edit)
