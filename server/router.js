@@ -23,7 +23,7 @@ module.exports = {
 
     var getTpl = function(styles,htmls,scripts){
 
-      var ctxPath='http://design.yyuap.com/static/uui-original/stable';
+      var ctxPath='http://design.yyuap.com/static/uui/latest';
     //    var ctxPath='/dist/vendor/uui';
       var tpl = [
         '<!DOCTYPE html>',
