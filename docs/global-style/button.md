@@ -1,8 +1,16 @@
-# button 按钮控件
+# 按钮
 
 为button元素添加`.u-button`即可实现一个按钮。其他效果的按钮实现只需添加相应的样式。
 
 
+## 块级按钮
+
+如果想按钮充满，添加样式 `.u-button-block`。
+
+<div class="example-content"><button class="u-button u-button-block u-button-primary">块级按钮</button>   
+<button class="u-button u-button-block u-button-accent">块级按钮</button>   </div>
+<div class="examples-code"><pre><code>&lt;button class="u-button u-button-block u-button-primary">块级按钮&lt;/button>   </code></pre>
+</div>
 
 ## 多色彩按钮
 
@@ -36,15 +44,6 @@
 <div class="examples-code"><pre><code>&lt;button class="u-button u-button-primary u-button-xg">特大尺寸&lt;/button></code></pre>
 </div>
 
-## 块级按钮
-
-如果想按钮充满，添加样式 `.u-button-block`。
-
-<div class="example-content"><button class="u-button u-button-block u-button-primary">块级按钮</button>   
-<button class="u-button u-button-block u-button-accent">块级按钮</button>   </div>
-<div class="examples-code"><pre><code>&lt;button class="u-button u-button-block u-button-primary">块级按钮&lt;/button>   </code></pre>
-</div>
-
 ## 圆角按钮
 
 * `.u-button-round` - 椭圆按钮
@@ -62,3 +61,7 @@
 <button class="u-button u-button-primary u-button-round u-button-pill-right">右半圆按钮</button></div>
 <div class="examples-code"><pre><code>&lt;button class="u-button u-button-primary u-button-round">椭圆按钮&lt;/button></code></pre>
 </div>
+
+
+
+[试一试](http://design.yyuap.com/dist/pages/webIDE/index.html#/demos/ui/button)
