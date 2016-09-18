@@ -119,7 +119,7 @@ module.exports = {
     });
 
     router.post('/downloadDemo',function (next) {
-        var viewCode = "",zipName='';
+        var viewCode = "", zipName = 'download.zip',self = this;
         var styles = this.request.body.cssCode;
         var htmls = this.request.body.htmlCode;
         var scripts = this.request.body.jsCode;
@@ -138,19 +138,17 @@ module.exports = {
         fs.writeFileSync(downPath+'/download.html', viewCode );
 
         
+        
+        gulp.task('downzip',['createZip']);
         // 生成zip
-        gulp.task('downzip',function(){
-          
-          gulp.src(downPath+'/download.html')
+        gulp.task('createZip',function(){
+            return gulp.src(downPath+'/download.html')
                 .pipe(zip(zipName))
                 .pipe(gulp.dest(downPath))
-          console.log('1111'+new Date());
-           return ;
-        });
 
-        zipName = 'download.zip';
+        });
+       
         gulp.run('downzip');
-        console.log('2222'+new Date());
         this.body = downPath+"/"+zipName;
     });
 
