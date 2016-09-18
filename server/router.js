@@ -122,7 +122,6 @@ module.exports = {
     router.post('/downloadDemo',function *(next) {
       var self = this;
       var data = this.request.body;
-      var downLoad = require('./downLoad.js');
 
       var viewCode = "", zipName = 'download.zip';
       var styles = data.cssCode;
@@ -131,7 +130,7 @@ module.exports = {
 
       var tpl = getTpl(styles,htmls,scripts);
       viewCode = tpl.join('\r\n');
-      
+
       yield function(cb) {
         downLoad(viewCode,self,cb);
       };
