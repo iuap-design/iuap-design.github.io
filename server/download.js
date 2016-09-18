@@ -25,7 +25,7 @@ module.exports = function(viewCode, self, cb){
       
         return gulp.src(path.resolve(__dirname, downPath+'/download.html'))
             .pipe(zip(zipName))
-            .pipe(gulp.dest(downPath))
+            .pipe(gulp.dest(path.resolve(__dirname,downPath)))
 
     });
    
