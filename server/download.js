@@ -7,13 +7,6 @@ var path = require('path');
 module.exports = function(viewCode, self, cb){
 
 	var zipName = 'download.zip';
-	// var viewCode = "", zipName = 'download.zip';
- //    var styles = data.cssCode;
- //    var htmls = data.htmlCode;
- //    var scripts = data.jsCode;
-
- //    var tpl = getTpl(styles,htmls,scripts);
- //    viewCode = tpl.join('\r\n');
     var downPath = '../dist/pages/webIDE/temp';
     var tempDir = path.resolve(__dirname, downPath);
     fs.exists( tempDir, function(exist) {
@@ -22,7 +15,7 @@ module.exports = function(viewCode, self, cb){
       }
     });
 
-    fs.writeFileSync(downPath+'/download.html', viewCode );
+    fs.writeFileSync(path.resolve(__dirname, downPath+'/download.html'), viewCode );
 
     
     
@@ -30,14 +23,14 @@ module.exports = function(viewCode, self, cb){
     // 生成zip
     gulp.task('createZip',['removeZip'],function(){
       
-        return gulp.src(downPath+'/download.html')
+        return gulp.src(path.resolve(__dirname, downPath+'/download.html'))
             .pipe(zip(zipName))
             .pipe(gulp.dest(downPath))
 
     });
    
     gulp.task('removeZip',function(){
-        fs.unlink(downPath+'/'+zipName, function(err) {
+        fs.unlink(path.resolve(__dirname, downPath+'/'+zipName), function(err) {
            if (err) {
                return console.error(err);
            }
