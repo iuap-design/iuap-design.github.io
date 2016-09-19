@@ -5,7 +5,7 @@
 * [面包屑 breadcrumb](breadcrumb.md)
 * [面板 panel](panel.md)
 * [下拉 dropdown](dropdown.md)
-* [按钮组 buttongroup](buttongroup.md)
+* [按钮组 ](buttongroup.md)
 * [输入框组 inputgroup](inputgroup.md)
 * [导航条 navbar](navbar.md)
 * [缩略图 thumbnail](thumbnail.md)
