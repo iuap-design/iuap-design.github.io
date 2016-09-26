@@ -1,5 +1,4 @@
 var path = require('path');
-var zip = require("node-native-zip");
 
 var gulp = require('gulp');
 var zip = require('gulp-zip');

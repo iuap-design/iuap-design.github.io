@@ -23,6 +23,9 @@
         "url": "demos/ui/menu"
     }, {
         "name": "按钮",
+        "url": "demos/ui/buttongroup"
+    }, {
+        "name": "按钮组",
         "url": "demos/ui/button"
     }, {
         "name": "徽章标签",
