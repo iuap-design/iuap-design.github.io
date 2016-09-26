@@ -54,11 +54,15 @@
                         添加.center-block来居中代码
                     </p>
                     <div class="example example-box">
-                        <div class="h-64 w-64 bg-red">
-                            参照内容
+                        <div class="u-col-lg-12 bg-f5">
+                            <div class="h-64 w-64 bg-red">
+                                参照内容
+                            </div>
                         </div>
-                        <div class="h-64 w-64 bg-blue center-block ">
-                            居中内容
+                        <div class="u-col-lg-12 bg-f5">
+                            <div class="h-64 w-64 bg-blue center-block ">
+                                居中内容
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -75,12 +79,12 @@
                     </p>
                     <div class="example example-box">
                         <button type="button" class="u-button  u-button-success ">Left</button>
-                        <button type="button" class="u-button  u-button-success " >right</button>
+                        <button type="button" class="u-button  u-button-success " >Left</button>
                     </div>
                     <br/>
                     <br/>
                     <div class="example example-box">
-                      <button type="button" class="u-button  u-button-success pull-left">Left</button>
+                      <button type="button" class="u-button  u-button-success pull-right">Pull right</button>
                       <button type="button" class="u-button  u-button-success  pull-right" >Pull right</button>
                     </div>
                     <br/>
@@ -99,12 +103,12 @@
                     </p>
                 <div class="u-row">
                     <div class="u-col-6">
-                        <div class="vertical-align h bg-grey" >
+                        <div class="vertical-align h bg-f5" >
                             <button type="button" class="vertical-align-middle u-button  u-button-success ">垂直居中</button>
                         </div>
                     </div>
                     <div class="u-col-6">
-                        <div class="vertical-align h  bg-grey" >
+                        <div class="vertical-align h  bg-f5" >
                             <button type="button" class="vertical-align-bottom u-button  u-button-success ">垂直向下</button>
                         </div>
                     </div>
@@ -162,15 +166,15 @@
                         添加.text-top .text-middle .text-bottom类实现文本垂直对齐改变，<br> 添加.text-left .text-right .text-center .text-justify类实现文本水平对齐方式的改变
                     </p>
                     <div class="row">
-                        <div class="col-md-4 m-b-sm bg-grey h-64">
+                        <div class="col-md-4 m-b-sm bg-f5 h-64">
                             <img src="/dist/static/img/logo-middle.png" height="64" width="64" style="vertical-align:top">
                            <span class="text-top">将文本对齐到顶部</span>
                         </div>
-                        <div class="col-md-4  m-b-sm bg-grey h-64" >
+                        <div class="col-md-4  m-b-sm bg-f5 h-64" >
                         <img src="/dist/static/img/logo-middle.png" height="64" width="64" style="vertical-align:middle">
                            <span class="text-middle">将文本对齐到中间</span>
                         </div>
-                        <div class="col-md-4  m-b-sm bg-grey h-64" >
+                        <div class="col-md-4  m-b-sm bg-f5 h-64" >
                           <img src="/dist/static/img/logo-middle.png" height="64" width="64" style="vertical-align:bottom">
                             <span class="text-bottom">将文本对齐到底部</span>
                         </div>
@@ -193,29 +197,27 @@
                         <p>
                             添加.text-hide类隐藏文字，添加.text-truncate类实现文字省略，添加.text-break类实现文本换行，添加.text-nowrap类实现文本不换行。
                         </p>
-                        <div class="text-hide height-50" style="border:1px solid #e6e8ea;">
-                            我被隐藏了
-                        </div>
                     <div class="u-row">
                         <div class="u-col-md-3 text-center">CLASS</div>
                         <div class="u-col-md-9 height-50 text-center">Description</div>
                     </div>
                     <div class="u-row">
                         <div class="u-col-md-3"><span class="u-tag u-tag-primary u-tag-outline">.text-hide</span></div>
-                        <div class="u-col-md-9 height-80">用背景图像替换元素的文本内容。Replace an element's text content with a
-                            backgroundimage.</div>
+                        <div class="text-hide height-30" style="border:1px solid #e6e8ea;">
+                            我被隐藏了
+                        </div>
                     </div>
                     <div class="u-row">
                         <div class="u-col-md-3"><span class="u-tag u-tag-primary u-tag-outline">.text-truncate</span></div>
-                        <div class="u-col-md-9 height-50 text-truncate">防止文本过长，斩断Prevents text from wrapping intomultiplelines,truncating it instead.</div>
+                        <div class="u-col-md-9 height-50 text-truncate">防止文本过长，斩断。这是一段相当长长长长长长长长长长长长长长长长长长长长长长长长长长长的文本。</div>
                     </div>
                     <div class="u-row">
                         <div class="u-col-md-3"><span class="u-tag u-tag-primary u-tag-outline">.text-break</span></div>
-                        <div class="u-col-md-9 height-50 text-break">自动回行 Breads strings if their length exceeds thewidthof their container.</div>
+                        <div class="u-col-md-9 height-50 text-break">自动回行。这是一段相当长长长长长长长长长长长长长长长长长长长长长长长长长长长的文本。</div>
                     </div>
                     <div class="u-row">
                         <div class="u-col-md-3"><span class="u-tag u-tag-primary u-tag-outline">.text-nowrap</span></div>
-                        <div class="u-col-md-9 height-50 text-nowrap" style="overflow: hidden">避免折行Prevents text from wrapping into  multiple lines</div>
+                        <div class="u-col-md-9 height-50 text-nowrap" style="overflow: hidden">避免折行。这是一段相当长长长长长长长长长长长长长长长长长长长长长长长长长长长的文本。</div>
                     </div>
                 </div>
 

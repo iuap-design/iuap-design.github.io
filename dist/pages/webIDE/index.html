@@ -33,13 +33,13 @@
             padding: 0px 5px 0px 5px;
         }
     }*/
-   
+
     </style>
 </head>
 
 <body id="webIDE">
     <div class="u-navlayout  u-navlayout-fixed-drawer u-navlayout-fixed-header">
-       
+
         <!-- 左侧导航 -->
         <div id="menubar" class=" u-menubar-open demo-drawer demo-folded u-navlayout-drawer u-navlayout-fixed-header u-navlayout-drawer-pc ">
             <header class="u-navlayout-header">
@@ -55,7 +55,7 @@
                             <!-- url 为空 ，存在子菜单 -->
                             <!-- ko if:  !row.ref('url')() -->
                             <a class="u-nav-link" data-bind="css:{'u-nav-link-open': row.selected()}">
-                                
+
                                 <span class="demo-hidden-folded" data-bind="text:row.ref('name')"></span>
                                 <span class="pull-right">
 							          <i class="fa fa-chevron-right"></i>
@@ -64,9 +64,9 @@
                             <!-- /ko -->
                             <!-- ko if:  row.ref('url')() -->
                             <a class="u-nav-link" data-bind="css:{'u-nav-link-open': row.selected()},attr:{href:'#/' + row.ref('url')()}">
-                                
+
                                 <span class="demo-hidden-folded" data-bind="text:row.ref('name')"></span>
-                                
+
                             </a>
                             <!-- /ko -->
                             <ul class="u-nav-sub" data-bind="foreach:{data: row.ref('sub'), as :'srow'}">
@@ -74,7 +74,7 @@
                                     <!-- url 为空 ，存在三级菜单 -->
                                     <!-- ko if:  !srow.ref('url')() -->
                                     <a class="u-nav-link" data-bind="css:{'u-nav-link-open': srow.selected()}">
-                                        
+
                                         <span class="demo-hidden-folded " data-bind="text:srow.ref('name')"></span>
 
                                         <span class="pull-right">
@@ -121,7 +121,7 @@
                     <a href="#tab-panel-2" class="u-tabs__tab">CSS</a>
                     <a href="#tab-panel-3" class="u-tabs__tab">JavaScript</a>
                     <a href="#tab-panel-4" class="u-tabs__tab">View</a>
-                    <button type="button" data-bind="click:run" class="u-button raised primary" style="position:absolute;right:0px;top:8px;margin-right:100px;"><i class="fa fa-play-circle" style="font-size:18px;padding-right:5px;"></i>运行</button>
+                    <button type="button" id='viewRun' data-bind="click:run" class="u-button raised primary" style="position:absolute;right:0px;top:8px;margin-right:100px; display:none"><i class="fa fa-play-circle" style="font-size:18px;padding-right:5px;"></i>运行</button>
                     <button type="button" data-bind="click:download" class="u-button raised primary" style="position:absolute;right:5px;top:8px;">下载demo</button>
                 </div>
                 <!-- <div class="bread-info u-tabs_header">

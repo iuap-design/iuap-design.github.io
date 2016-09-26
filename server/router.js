@@ -24,8 +24,8 @@ module.exports = {
 
     var getTpl = function(styles,htmls,scripts){
 
-      var ctxPath='http://design.yyuap.com/static/uui/latest';
-    //    var ctxPath='/dist/vendor/uui';
+     //var ctxPath='http://design.yyuap.com/static/uui/latest';
+       var ctxPath='/dist/vendor/uui';
       var tpl = [
         '<!DOCTYPE html>',
         '<html lang="en">',
@@ -134,7 +134,7 @@ module.exports = {
       yield function(cb) {
         downLoad(viewCode,self,cb);
       };
-                
+
     });
 
     router.get('/down', function *(next) {

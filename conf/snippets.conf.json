@@ -25,9 +25,6 @@
         "name": "按钮",
         "url": "demos/ui/button"
     }, {
-        "name": "下拉框",
-        "url": "demos/ui/combobox"
-    }, {
         "name": "徽章标签",
         "url": "demos/ui/badge"
     }, {
