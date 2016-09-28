@@ -51,16 +51,17 @@ var viewModel = {
 		}
 	},
 	download: function(){
-	
+
 		//将对应的css、js、html代码传给后端，并将后端返回的zip地址进行下载
 		$.ajax({
 				type:'post',
 				url:'/downloadDemo',
 				data:{cssCode:cssEditor.getValue(),jsCode:scriptEditor.getValue(),htmlCode:htmlEditor.getValue()},
 				success:function(data){
-					console.log('----'+data);
-
-					location.href = "../../"+data+'?tmp='+Date.parse(new Date());
+					console.log('----'+data+'new Date()=='+new Date());
+					setTimeout(function(){
+						location.href = "../../"+data+'?tmp='+Date.parse(new Date());
+						}(),2000);
 				}
 
 			})
@@ -135,7 +136,7 @@ var routerFunc = function(row, subRow, ssRow, url){
 					viewModel.title(row.getValue('name'));
 					viewModel.currentRow = row;
 				}
-				
+
 			}
 			viewModel.currentUrl = url;
 			$.ajax({
@@ -220,7 +221,7 @@ $(function(){
 					if(parurl){
 						router.on(parurl, routerFunc(row, null,null, parurl));
 					}
-					
+
 				}
 			}
 			router.init();
@@ -231,4 +232,20 @@ $(function(){
 		}
 	})
 
+})
+
+
+$('.u-tabs__tab').each(function () {
+	$(this).bind('click', function () {
+		console.log(111);
+		if($(this).attr('href') !== '#tab-panel-4') {
+			$('#viewRun').show();
+		} else {
+			$('#viewRun').hide();
+		}
+	})
+});
+
+$('#viewRun').bind('click', function () {
+	$(this).hide();
 })

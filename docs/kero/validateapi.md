@@ -1,5 +1,5 @@
 
-# 校验设置Validate
+# 验证设置Validate
 
 创建dataTable,field字段中验证字段，基本设置如下：
 
@@ -54,9 +54,11 @@
 ***
 
 
-## nullMsg/errorMag
+## nullMsg/errorMsg
 
 `nullMsg`:输入为空时的提示信息
+
+`errorMsg`:输入错误时的提示信息
 
 | Key      | Value              | 说明         |
 | -------- | ------------------ | ---------- |
@@ -79,18 +81,18 @@
 ---
 ## notipFlag
 
-`notipFlag`:错误信息提示方式是否为tip,默认为`true`
+`notipFlag`:错误信息提示方式是否为`tooltip`,默认为`false`
 
 | Key       | Value | 说明                 |
 | --------- | ----- | ------------------ |
-| notipFlag | true  | 错误信息提示为tips形式      |
-| notipFlag | false | 错误信息提示自定义，不为tips形式 |
+| notipFlag | false| 错误信息提示为tips形式      |
+| notipFlag | true| 错误信息提示自定义，不为tips形式 |
 
 
 
 ---
 ## tipId
-`tipId`:错误或空提示是否选用默认的tip。默认为空，使用默认的`tooltip`
+`tipId`: 指定`tooltip`显示位置，其值为显示dom元素的id，默认为空，使用默认的`tooltip`
 
 | Key   | Value | 说明                |
 | ----- | ----- | ----------------- |
@@ -112,11 +114,11 @@
 
 ---
 ## successId
-`successId`:错误或空提示是否选用默认的tip。默认为空，使用默认的`tooltip`
+`successId`:指定正确提示信息的位置，其值为正确dom元素的id，默认在输入框的后面显示
 
 | Key       | Value | 说明              |
 | --------- | ----- | --------------- |
-| successId | 'id'  | 使用自定义的id元素显示tip |
+| successId | 'id'  | 使用自定义的id元素显示正确提示信息 |
 
 `successId`能正常显示的前提是`hasSuccess:true`
 
@@ -134,9 +136,6 @@
 | placement | bottom | 底部显示 |
 | placement | left   | 左边显示 |
 | placement | right  | 右边显示 |
-
-`successId`能正常显示的前提是`hasSuccess:true`
-
 
 
 ---
@@ -169,35 +168,6 @@
 
 ---
 
-校验还可以使用控件校验，方式如下
-
-## 控件校验
-
-API同上，实现方式：
-
-* Step1:`html`内容添加`uvalidate`标签，传入验证字段
-
-```html
-<!--HTML-->
-<div class="u-form-group" >
-	<label for="float1">String:</label>
-	<div class="err-info">
-		<input type="text" class="u-form-control" id="float1" placeholder="字符串长度大于3小于8"  uvalidate='{"required":true,"maxLength":8,"minLength":3,"hasSuccess": true,"notipFlag": true}'>	</div>
-</div>
-```
-
-* Step2:`js`内容绑定验证
-
-```javascript
-// JS
-u.on(window, 'load', function() {
-	u.validate('body');
-});
-```
-
-
-
-
 ## 基本示例
 
 
@@ -221,7 +191,7 @@ u.on(window, 'load', function() {
 -->
 <div class="u-form-group">
     <label>验证测试用例</label>
-    <div class="u-input-group u-has-feedback" u-meta='{"type":"integer","data":"dt1","field":"base"}'>
+    <div class="u-input-group u-has-feedback" u-meta='{"style":"integer","data":"dt1","field":"base"}'>
         <div class="u-input-group-before" style="color: red;">*</div>
         <input type="text" class="u-form-control">
     </div>
@@ -271,7 +241,7 @@ u.on(window, 'load', function() {
 -->
 &lt;div class="u-form-group">
     &lt;label>验证测试用例&lt;/label>
-    &lt;div class="u-input-group u-has-feedback" u-meta='{"type":"integer","data":"dt1","field":"base"}'>
+    &lt;div class="u-input-group u-has-feedback" u-meta='{"style":"integer","data":"dt1","field":"base"}'>
         &lt;div class="u-input-group-before" style="color: red;">*&lt;/div>
         &lt;input type="text" class="u-form-control">
     &lt;/div>
@@ -305,68 +275,6 @@ u.on(window, 'load', function() {
         });
     var r = viewModel.dt1.createEmptyRow();
     viewModel.dt1.setRowSelect(0);
-
-
-
-</code></pre>
-</div>
-
-##UIValidate
-
-本例实现如下效果：
-
-* UI控件基本的validate API测试
-
-
-
-<div class="example-content"><!-- 
-	HTML
-	u-meta:框架特有标记，框架通过识别此标记创建对应UI组件，以及进行数据绑定 
-	id,type.data,field为必选项
-	id:创建组件唯一标识
-	type:创建组件对应的类型
-	data:指定数据模型中的数据集
-	field:绑定数据集中对应的字段
--->
-<!--HTML-->
-<div class="u-form-group" >
-	<label for="float1">String:</label>
-	<div class="err-info">
-		<input type="text" class="u-form-control" id="float1" placeholder="字符串长度大于3小于8"  uvalidate='{"required":true,"maxLength":8,"minLength":3,"hasSuccess": true,"notipFlag": true}'>	</div>
-</div>
-</div>
-<div class="example-content ex-hide"><script>// JS
-// 
-u.on(window, 'load', function() {
-    u.validate('body');
-});
-
-
-
-
-</script></div>
-<div class="examples-code"><pre><code>&lt;!-- 
-	HTML
-	u-meta:框架特有标记，框架通过识别此标记创建对应UI组件，以及进行数据绑定 
-	id,type.data,field为必选项
-	id:创建组件唯一标识
-	type:创建组件对应的类型
-	data:指定数据模型中的数据集
-	field:绑定数据集中对应的字段
--->
-&lt;!--HTML-->
-&lt;div class="u-form-group" >
-	&lt;label for="float1">String:&lt;/label>
-	&lt;div class="err-info">
-		&lt;input type="text" class="u-form-control" id="float1" placeholder="字符串长度大于3小于8"  uvalidate='{"required":true,"maxLength":8,"minLength":3,"hasSuccess": true,"notipFlag": true}'>	&lt;/div>
-&lt;/div>
-</code></pre>
-</div>
-<div class="examples-code"><pre><code>// JS
-// 
-u.on(window, 'load', function() {
-    u.validate('body');
-});
 
 
 

@@ -1,16 +1,16 @@
 .u-widget-body.height div{
 	width: 50px;
 	margin:0px 15px;
-    border:solid 1px red;
-    background:#EF0;
+    border:solid 1px #afa7a7;
+    background:#ccceb9;
     display:inline-block;
 }
 
 .u-widget-body.width div{
 	height:50px;
 	margin:0px 15px;
-    border:solid 1px red;
-    background:#EF0;
+    border:solid 1px #afa7a7;
+    background:#ccceb9;
     display:inline-block;
 }
 
@@ -24,4 +24,7 @@
     bottom:0px;
     font-size:12px;
 
+}
+.bg-f5{
+	background-color: #f5f5f5;
 }

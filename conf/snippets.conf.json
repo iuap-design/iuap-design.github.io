@@ -23,10 +23,10 @@
         "url": "demos/ui/menu"
     }, {
         "name": "按钮",
-        "url": "demos/ui/button"
+        "url": "demos/ui/buttongroup"
     }, {
-        "name": "下拉框",
-        "url": "demos/ui/combobox"
+        "name": "按钮组",
+        "url": "demos/ui/button"
     }, {
         "name": "徽章标签",
         "url": "demos/ui/badge"
@@ -96,6 +96,9 @@
     }, {
         "name": "下拉列表",
         "url": "demos/kero/combobox"
+    }, {
+        "name": "复选框",
+        "url": "demos/kero/checkbox"
     }]
 }, {
     "name": "表单",

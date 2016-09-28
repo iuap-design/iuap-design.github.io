@@ -5,7 +5,7 @@
   "main": "server/app.js",
   "scripts": {
     "dev": "node server/app.js",
-    "cate":"node server/category",
+    "cate": "node server/category",
     "build": "gulp",
     "gitbook": "sh bin/gitbook-build.sh",
     "deploy": "npm run cate && npm run build && npm run gitbook"
@@ -25,7 +25,10 @@
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",
     "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-es3-member-expression-literals": "^6.8.0",
+    "babel-plugin-transform-es3-property-literals": "^6.8.0",
     "babel-preset-es2015": "^6.14.0",
+    "babel-preset-es2015-loose": "^8.0.0",
     "babel-preset-stage-0": "^6.5.0",
     "copy-dir": "^0.3.0",
     "cz-conventional-changelog": "^1.2.0",

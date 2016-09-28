@@ -1,5 +1,4 @@
 var path = require('path');
-var zip = require("node-native-zip");
 
 var gulp = require('gulp');
 var zip = require('gulp-zip');
@@ -7,6 +6,7 @@ var zip = require('gulp-zip');
 var customized = require("./customized");
 var down = require("./down");
 
+var downLoad = require('./download.js');
 // 新定制
 var concat = require('gulp-concat');
 var fs = require('fs');
@@ -23,8 +23,8 @@ module.exports = {
 
     var getTpl = function(styles,htmls,scripts){
 
-      var ctxPath='http://design.yyuap.com/static/uui-original/stable';
-    //    var ctxPath='/dist/vendor/uui';
+     //var ctxPath='http://design.yyuap.com/static/uui/latest';
+       var ctxPath='/dist/vendor/uui';
       var tpl = [
         '<!DOCTYPE html>',
         '<html lang="en">',
@@ -119,40 +119,20 @@ module.exports = {
     });
 
     router.post('/downloadDemo',function *(next) {
-        var viewCode = "",zipName='';
-        var styles = this.request.body.cssCode;
-        var htmls = this.request.body.htmlCode;
-        var scripts = this.request.body.jsCode;
+      var self = this;
+      var data = this.request.body;
 
-         var tpl = getTpl(styles,htmls,scripts);
-        viewCode = tpl.join('\r\n');
-        var fs = require("fs");
-        var downPath = '../dist/pages/webIDE/temp';
-        var tempDir = path.resolve(__dirname, downPath);
-        fs.exists( tempDir, function(exist) {
-          if(!exist){
-            fs.mkdirSync(tempDir);
-          }
-        });
+      var viewCode = "", zipName = 'download.zip';
+      var styles = data.cssCode;
+      var htmls = data.htmlCode;
+      var scripts = data.jsCode;
 
-        fs.writeFile(downPath+'/download.html', viewCode ,  function(err) {
-           if (err) {
-               return console.error(err);
-           }
-        });
+      var tpl = getTpl(styles,htmls,scripts);
+      viewCode = tpl.join('\r\n');
 
-        // zipName = 'download'+new Date().getTime()+'.zip';
-        zipName = 'download.zip';
-        // 生成zip
-        gulp.task('downzip',function(){
-          return  gulp.src(downPath+'/download.html')
-                .pipe(zip(zipName))
-                .pipe(gulp.dest(downPath))
-        });
-
-        gulp.run('downzip');
-
-        this.body = downPath+"/"+zipName;
+      yield function(cb) {
+        downLoad(viewCode,self,cb);
+      };
 
     });
 
