@@ -297,5 +297,6 @@ viewModel = {
           }
       ]
   }
+  u.compMgr.updateComp();
   viewModel.dataTable.removeAllRows();
   viewModel.dataTable.setData(data);
