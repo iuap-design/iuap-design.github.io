@@ -86,7 +86,7 @@ document.getElementById('domId')['u.Combo'].setComboData(dataArray);
 * 类型： `Function`
 * 说明：设置选中下拉框的某条数据
 * 参数：
-	* `{Integer} index`
+	* `{Integer} index`：要选中的某行，从0开始
 * 用法：
 
 ```
