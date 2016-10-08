@@ -34,11 +34,11 @@
                         </div>
                         <div class="u-transfer-list u-transfer-list-right">
                             <div class="u-transfer-list-header">
-                                <label class="u-checkbox">
+                                <label class="u-checkbox" data-bind="click: rightSelAll, css:{'is-checked': destListData.allSelected()">
                                     <input type="checkbox" class="u-checkbox-input">
                                 </label>
                                 <span data-bind="visible: destListData.selectedIndices().length>0"><span class="" data-bind="text: destListData.selectedIndices().length"></span>/</span><span class="" data-bind="text: destListData.rows().length"></span>条
-                                <span class="u-transfer-list-header-title">源列表</span>
+                                <span class="u-transfer-list-header-title">目标列表</span>
                             </div>
                             <div class="u-transfer-list-body">
                                 <ul data-bind="foreach: {data:destListData.rows(), as: 'row', afterAdd: afterAdd}">
