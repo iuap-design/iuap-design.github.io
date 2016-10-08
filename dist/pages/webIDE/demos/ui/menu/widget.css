@@ -62,9 +62,26 @@
 	    white-space: nowrap;
 	    text-decoration: none;
 	}
+    .u-dropdown-menu>li.u-button-level-hover>a:after{
+        position: absolute;
+        right: 10px;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-top: 6px;
+        vertical-align: middle;
+        content: '';
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        border-left: 4px dashed;
+    }
 	.u-dropdown-menu>li>a:focus, .u-dropdown-menu>li>a:hover {
 	    color: #757575;
 	    text-decoration: none;
 	    background-color: #eee;
 	}
 /*下拉菜单样式结束*/
+
+.font10{
+    font-size: 10px;
+}
