@@ -2,6 +2,8 @@
 
 combobox组合框是由一个文本输入控件和一个下拉菜单组成的，类似于select元素。用户可以从一个预先定义的列表里选择一个或者多个选项。
 
+* `.u-combo` - 单选下拉框
+* `.u-combo .mutil-select` - 多选下拉框
 
 
 ## 默认单选下拉框
@@ -80,10 +82,22 @@ document.getElementById('domId')['u.Combo'].setComboData(dataArray);
 
 ```
 
+## \# selectItem 选中某行
+* 类型： `Function`
+* 说明：设置选中下拉框的某条数据
+* 参数：
+	* `{Integer} index`
+* 用法：
 
+```
+
+document.getElementById('domId')['u.Combo'].selectItem(index);
+
+```
 
 相关内容：
 
 [下拉框在kero中使用](http://design.yyuap.com/dist/pages/kero/combobox_ex.html)    
 
 [下拉框在grid中使用](http://design.yyuap.com/dist/pages/webIDE/index.html#/demos/grids/edit)
+
