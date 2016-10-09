@@ -49,3 +49,10 @@
 .seached a{
 	color:blue !important;
 }
+.ztree li a.focusNode{
+	background-color: rgb(63,81,181)!important;
+	color: #FFFFFF!important;
+}
+.ztree li.focusNode>span{
+	color: white;
+}
