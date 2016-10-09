@@ -66,6 +66,7 @@ var comboObject = document.getElementById('domId')['u.Combo'];
 
 ```
 
+**注：** 如果获取的下拉对象为空，原因为下拉框没有初始化成功，可以先调用`u.compMgr.updateComp();`来初始化页面中的控件。然后再获取下拉对象。
 ## \# setComboData 设置数据源
 
 * 类型： `Function`

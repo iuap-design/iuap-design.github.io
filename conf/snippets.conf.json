@@ -13,6 +13,12 @@
         "name": "单选框",
         "url": "demos/ui/radio"
     }, {
+        "name": "复选框",
+        "url": "demos/ui/checkbox"
+    },{
+        "name": "开关",
+        "url": "demos/ui/switch"
+    }, {
         "name": "加载进度条",
         "url": "demos/ui/progress"
     }, {
@@ -36,9 +42,6 @@
     }, {
         "name": "面包屑",
         "url": "demos/ui/breadcrumbs"
-    }, {
-        "name": "复选框",
-        "url": "demos/ui/checkbox"
     }, {
         "name": "页签",
         "url": "demos/ui/tabs"
@@ -99,6 +102,9 @@
     }, {
         "name": "复选框",
         "url": "demos/kero/checkbox"
+    }, {
+        "name": "开关",
+        "url": "demos/kero/switch"
     }]
 }, {
     "name": "表单",

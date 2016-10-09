@@ -5,7 +5,11 @@ checkbox提供了基础复选框、不同色彩复选框、图片复选框、个
 
 
 ##基础checkbox
-在复选框中input元素添加`checked`、`disabled`来实现选中和不可用效果
+在复选框中input元素添加如下属性来实现多种效果
+
+- `checked` 选中
+- `disabled` 不可用
+
 <div class="example-content">
 <label  class="u-checkbox">
     <input type="checkbox" class="u-checkbox-input" checked>
@@ -31,7 +35,14 @@ checkbox提供了基础复选框、不同色彩复选框、图片复选框、个
 </div>
 
 ##不同颜色的checkbox
-在复选框中label里面添加`u-checkbox-success`、`u-checkbox-info`、`u-checkbox-warning`、`u-checkbox-danger`、`u-checkbox-dark`样式来实现不同色彩的复选框
+在复选框中label里面添加如下样式来实现不同色彩的复选框
+
+- `u-checkbox-success` 绿色
+- `u-checkbox-info` 蓝色
+- `u-checkbox-warning` 黄色
+- `u-checkbox-danger` 红色
+- `u-checkbox-dark` 灰色
+
 <div class="example-content"><label  class="u-checkbox u-checkbox-success w-xs">
     <input type="checkbox" class="u-checkbox-input"  checked>
     <span class="u-checkbox-label">green</span>
@@ -70,10 +81,11 @@ checkbox提供了基础复选框、不同色彩复选框、图片复选框、个
 ## \# checkbox对象
 
 * 类型：`Object`
-* 说明： 获取radio对象
+* 说明： 获取checkbox对象
 * 用法：
 
-获取方式：1、获取绑定radio的dom元素 ； 2、读取dom元素上的属性'u.Radio'
+获取方式：1、获取绑定checkbox的dom元素 ； 2、读取dom元素上的属性'u.Checkbox'
+
 
 ```
 
@@ -136,9 +148,8 @@ checkboxObject.enable();
 
 ```
 
-radioObject.toggle();
+checkboxObject.toggle();
 
-```
 
 相关内容：
 
