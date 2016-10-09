@@ -8,3 +8,12 @@
     margin-top: -10px;
     margin-bottom: 30px;
 }
+.u-widget-body.pagination-center{
+    text-align: center;
+}
+.u-widget-body.pagination-right{
+    text-align: right;
+}
+.u-pagination.pagination-center,.u-pagination.pagination-right{
+    display: inline-block!important;
+}
