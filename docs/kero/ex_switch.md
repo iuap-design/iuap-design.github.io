@@ -110,3 +110,4 @@ r.setValue('f1', '男');</code></pre>
 相关内容：
 
 [基础开关](http://design.yyuap.com/dist/pages/plugins/jsswitch.html)    
+[开关在grid中使用](http://design.yyuap.com/dist/pages/webIDE/index.html#/demos/grids/edit)

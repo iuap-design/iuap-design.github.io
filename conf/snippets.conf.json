@@ -18,6 +18,9 @@
     },{
         "name": "开关",
         "url": "demos/ui/switch"
+    },{
+        "name": "日期",
+        "url": "demos/ui/datetime"
     }, {
         "name": "加载进度条",
         "url": "demos/ui/progress"
@@ -105,6 +108,9 @@
     }, {
         "name": "开关",
         "url": "demos/kero/switch"
+    }, {
+        "name": "日期",
+        "url": "demos/kero/datetime"
     }]
 }, {
     "name": "表单",
