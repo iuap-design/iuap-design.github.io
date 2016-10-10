@@ -31,7 +31,7 @@ module.exports = function(data, self, cb){
 	/**
 	 * polyfill定制部分
 	 */
-	var polyBasePath = path.resolve(__dirname, basePath + 'neoui-polyfill');
+	var polyBasePath = path.resolve(__dirname, basePath + 'tinper-neoui-polyfill');
 	var polyJs = [];
 
 	if(dataJson.polyselect) {
