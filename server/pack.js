@@ -94,7 +94,7 @@ module.exports = function(data, self, cb){
 
 	// js内容
 	var entryPath = path.resolve(__dirname,'../entry.js');
-	var dataNeo = ["import {extend} from \'tinper-neoui-sparrow/js/extend\';"];
+	var dataNeo = ["import {extend} from \'tinper-sparrow/js/extend\';"];
 	var ex = {};
 
 	var entryFun = function() {
