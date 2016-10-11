@@ -62,8 +62,8 @@
     "koa-gzip": "^0.1.0",
     "koa-router": "^5.4.0",
     "koa-static": "^2.0.0",
-    "tinper-neoui": "^0.0.2",
-    "tinper-neoui-polyfill": "^0.0.1"
+    "tinper-neoui": "^0.1.0",
+    "tinper-neoui-polyfill": "^0.1.0"
   },
   "config": {
     "commitizen": {
