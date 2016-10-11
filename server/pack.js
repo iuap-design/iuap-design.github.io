@@ -15,6 +15,8 @@ var koModule = neojson.ko;
 
 var zipPath;
 
+var tinperPoly = 'tinper-neoui-polyfill';
+var tinperNeoui = 'tinper-neoui';
 
 module.exports = function(data, self, cb){
 
@@ -31,7 +33,7 @@ module.exports = function(data, self, cb){
 	/**
 	 * polyfill定制部分
 	 */
-	var polyBasePath = path.resolve(__dirname, basePath + 'tinper-neoui-polyfill');
+	var polyBasePath = path.resolve(__dirname, basePath + tinperPoly);
 	var polyJs = [];
 
 	if(dataJson.polyselect) {
@@ -61,7 +63,7 @@ module.exports = function(data, self, cb){
 	 * 模板颜色定制部分
 	 */
 	var dataColor = dataJson.themeColor;
-	var corPath = path.resolve(__dirname, basePath + 'neoui/scss/core/minxin-themeColors.scss');
+	var corPath = path.resolve(__dirname, basePath + tinperNeoui +'/scss/core/minxin-themeColors.scss');
 	var corData = fs.readFileSync(corPath, 'utf-8');
 	var corNewData = corData.replace(/(\$color-primary: ).*(;)/g,`$1"${dataColor}"$2`);
 	fs.writeFileSync(corPath,corNewData, 'utf-8');
@@ -70,7 +72,7 @@ module.exports = function(data, self, cb){
 	 * neoui定制部分
 	 */
 	// 数组填充
-	var neouiBasePath = path.resolve(__dirname,basePath + 'neoui');
+	var neouiBasePath = path.resolve(__dirname,basePath + tinperNeoui);
 	var neouiCss =[];
 	var neouiJs =[];
 	if(dataJson.cssselect) {
@@ -92,7 +94,7 @@ module.exports = function(data, self, cb){
 
 	// js内容
 	var entryPath = path.resolve(__dirname,'../entry.js');
-	var dataNeo = ["import {extend} from \'neoui-sparrow/js/extend\';"];
+	var dataNeo = ["import {extend} from \'tinper-neoui-sparrow/js/extend\';"];
 	var ex = {};
 
 	var entryFun = function() {

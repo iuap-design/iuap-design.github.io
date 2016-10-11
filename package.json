@@ -8,7 +8,7 @@
     "cate": "node server/category",
     "build": "gulp",
     "gitbook": "sh bin/gitbook-build.sh",
-    "deploy": "npm run cate && npm run build && npm run gitbook"
+    "deploy": "npm run gitbook && npm run cate && npm run build"
   },
   "repository": {
     "type": "git",
@@ -62,10 +62,8 @@
     "koa-gzip": "^0.1.0",
     "koa-router": "^5.4.0",
     "koa-static": "^2.0.0",
-    "neoui-grid": "^1.0.4",
-    "neoui-sparrow": "^1.4.7",
-    "neoui-tree": "^1.0.4",
-    "tinper-neoui-polyfill": "0.0.1"
+    "tinper-neoui": "^0.0.2",
+    "tinper-neoui-polyfill": "^0.0.1"
   },
   "config": {
     "commitizen": {

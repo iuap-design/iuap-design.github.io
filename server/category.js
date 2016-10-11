@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
-const scssPath = path.resolve(__dirname,'../node_modules/neoui/scss/ui');
-const jsPath = path.resolve(__dirname, '../node_modules/neoui/js');
+const scssPath = path.resolve(__dirname,'../node_modules/tinper-neoui/scss/ui');
+const jsPath = path.resolve(__dirname, '../node_modules/tinper-neoui/js');
 
 // 获取插件中文名
 const neouiJson = require('./neoui.json');
