@@ -62,7 +62,6 @@
     "koa-gzip": "^0.1.0",
     "koa-router": "^5.4.0",
     "koa-static": "^2.0.0",
-    "neoui": "^4.1.6",
     "neoui-grid": "^1.0.4",
     "neoui-sparrow": "^1.4.7",
     "neoui-tree": "^1.0.4",

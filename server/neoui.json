@@ -99,110 +99,110 @@
 	},
 	"es6":{
 		"neoui-autocomplete": {
-			"Autocomplete": "import {Autocomplete} from 'neoui/js/neoui-autocomplete';"
+			"Autocomplete": "import {Autocomplete} from 'tinper-neoui/js/neoui-autocomplete';"
 		},
 		"neoui-button": {
-			"Button": "import {Button} from 'neoui/js/neoui-button';"
+			"Button": "import {Button} from 'tinper-neoui/js/neoui-button';"
 		},
 		"neoui-checkbox": {
-			"Checkbox": "import {Checkbox} from 'neoui/js/neoui-checkbox';"
+			"Checkbox": "import {Checkbox} from 'tinper-neoui/js/neoui-checkbox';"
 		},
 		"neoui-combo": {
-			"Combo": "import {Combo} from 'neoui/js/neoui-combo';"
+			"Combo": "import {Combo} from 'tinper-neoui/js/neoui-combo';"
 		},
 		"neoui-combobox": {
-			"Combobox": "import {Combobox} from 'neoui/js/neoui-combobox';"
+			"Combobox": "import {Combobox} from 'tinper-neoui/js/neoui-combobox';"
 		},
 		"neoui-data-table": {
-			"Table": "import {Table} from 'neoui/js/neoui-data-table';"
+			"Table": "import {Table} from 'tinper-neoui/js/neoui-data-table';"
 		},
 		"neoui-dialog": {
-			"messageDialog": "import {messageDialog} from 'neoui/js/neoui-dialog';",
-			"confirmDialog": "import {confirmDialog} from 'neoui/js/neoui-dialog';",
-			"dialogMode": "import {dialogMode} from 'neoui/js/neoui-dialog';",
-			"dialog": "import {dialog} from 'neoui/js/neoui-dialog';",
-			"dialogWizard": "import {dialogWizard} from 'neoui/js/neoui-dialog';"
+			"messageDialog": "import {messageDialog} from 'tinper-neoui/js/neoui-dialog';",
+			"confirmDialog": "import {confirmDialog} from 'tinper-neoui/js/neoui-dialog';",
+			"dialogMode": "import {dialogMode} from 'tinper-neoui/js/neoui-dialog';",
+			"dialog": "import {dialog} from 'tinper-neoui/js/neoui-dialog';",
+			"dialogWizard": "import {dialogWizard} from 'tinper-neoui/js/neoui-dialog';"
 		},
 		"neoui-layout.md": {
-			"MDLayout": "import {MDLayout} from 'neoui/js/neoui-layout.md';"
+			"MDLayout": "import {MDLayout} from 'tinper-neoui/js/neoui-layout.md';"
 		},
 		"neoui-layout.nav": {
-			"NavLayout": "import {NavLayout} from 'neoui/js/neoui-layout.nav';",
-			"NavLayoutTab": "import {NavLayoutTab} from 'neoui/js/neoui-layout.nav';"
+			"NavLayout": "import {NavLayout} from 'tinper-neoui/js/neoui-layout.nav';",
+			"NavLayoutTab": "import {NavLayoutTab} from 'tinper-neoui/js/neoui-layout.nav';"
 		},
 		"neoui-loader": {
-			"showLoader": "import {showLoader} from 'neoui/js/neoui-loader';",
-			"hideLoader": "import {hideLoader} from 'neoui/js/neoui-loader';"
+			"showLoader": "import {showLoader} from 'tinper-neoui/js/neoui-loader';",
+			"hideLoader": "import {hideLoader} from 'tinper-neoui/js/neoui-loader';"
 		},
 		"neoui-loading": {
-			"Loading": "import {Loading} from 'neoui/js/neoui-loading';",
-			"showLoading": "import {showLoading} from 'neoui/js/neoui-loading';",
-			"hideLoading": "import {hideLoading} from 'neoui/js/neoui-loading';",
-			"showWaiting": "import {showWaiting} from 'neoui/js/neoui-loading';",
-			"removeWaiting": "import {removeWaiting} from 'neoui/js/neoui-loading';"
+			"Loading": "import {Loading} from 'tinper-neoui/js/neoui-loading';",
+			"showLoading": "import {showLoading} from 'tinper-neoui/js/neoui-loading';",
+			"hideLoading": "import {hideLoading} from 'tinper-neoui/js/neoui-loading';",
+			"showWaiting": "import {showWaiting} from 'tinper-neoui/js/neoui-loading';",
+			"removeWaiting": "import {removeWaiting} from 'tinper-neoui/js/neoui-loading';"
 		},
 		"neoui-menu": {
-			"Menu": "import {Menu} from 'neoui/js/neoui-menu';"
+			"Menu": "import {Menu} from 'tinper-neoui/js/neoui-menu';"
 		},
 		"neoui-message": {
-			"showMessageDialog": "import {showMessageDialog} from 'neoui/js/neoui-message';",
-			"showMessage": "import {showMessage} from 'neoui/js/neoui-message';"
+			"showMessageDialog": "import {showMessageDialog} from 'tinper-neoui/js/neoui-message';",
+			"showMessage": "import {showMessage} from 'tinper-neoui/js/neoui-message';"
 		},
 		"neoui-multilang": {
-			"Multilang": "import {Multilang} from 'neoui/js/neoui-multilang';"
+			"Multilang": "import {Multilang} from 'tinper-neoui/js/neoui-multilang';"
 		},
 		"neoui-navmenu": {
-			"NavMenu": "import {NavMenu} from 'neoui/js/neoui-navmenu';"
+			"NavMenu": "import {NavMenu} from 'tinper-neoui/js/neoui-navmenu';"
 		},
 		"neoui-pagination": {
-			"pagination": "import {pagination} from 'neoui/js/neoui-pagination';"
+			"pagination": "import {pagination} from 'tinper-neoui/js/neoui-pagination';"
 		},
 		"neoui-progress": {
-			"Progress": "import {Progress} from 'neoui/js/neoui-progress';"
+			"Progress": "import {Progress} from 'tinper-neoui/js/neoui-progress';"
 		},
 		"neoui-radio": {
-			"Radio": "import {Radio} from 'neoui/js/neoui-radio';"
+			"Radio": "import {Radio} from 'tinper-neoui/js/neoui-radio';"
 		},
 		"neoui-refer": {
-			"refer": "import {refer} from 'neoui/js/neoui-refer';"
+			"refer": "import {refer} from 'tinper-neoui/js/neoui-refer';"
 		},
 		"neoui-slidePanel": {
-			"slidePanel": "import {slidePanel} from 'neoui/js/neoui-slidePanel';"
+			"slidePanel": "import {slidePanel} from 'tinper-neoui/js/neoui-slidePanel';"
 		},
 		"neoui-switch": {
-			"Switch": "import {Switch} from 'neoui/js/neoui-switch';"
+			"Switch": "import {Switch} from 'tinper-neoui/js/neoui-switch';"
 		},
 		"neoui-tabs": {
-			"Tabs": "import {Tabs} from 'neoui/js/neoui-tabs';"
+			"Tabs": "import {Tabs} from 'tinper-neoui/js/neoui-tabs';"
 		},
 		"neoui-textfield": {
-			"Text": "import {Text} from 'neoui/js/neoui-textfield';"
+			"Text": "import {Text} from 'tinper-neoui/js/neoui-textfield';"
 		},
 		"neoui-tooltip": {
-			"Tooltip": "import {Tooltip} from 'neoui/js/neoui-tooltip';"
+			"Tooltip": "import {Tooltip} from 'tinper-neoui/js/neoui-tooltip';"
 		},
 		"neoui-validate": {
-			"Validate": "import {Validate} from 'neoui/js/neoui-validate';",
-			"validate": "import {validate} from 'neoui/js/neoui-validate';",
-			"doValidate": "import {doValidate} from 'neoui/js/neoui-validate';"
+			"Validate": "import {Validate} from 'tinper-neoui/js/neoui-validate';",
+			"validate": "import {validate} from 'tinper-neoui/js/neoui-validate';",
+			"doValidate": "import {doValidate} from 'tinper-neoui/js/neoui-validate';"
 		},
 		"neoui-datetimepicker": {
-			"DateTimePicker": "import {DateTimePicker} from 'neoui/js/neoui-datetimepicker';"
+			"DateTimePicker": "import {DateTimePicker} from 'tinper-neoui/js/neoui-datetimepicker';"
 		},
 		"neoui-time": {
-			"Time": "import {Time} from 'neoui/js/neoui-time';"
+			"Time": "import {Time} from 'tinper-neoui/js/neoui-time';"
 		},
 		"neoui-clockpicker": {
-			"ClockPicker": "import {ClockPicker} from 'neoui/js/neoui-clockpicker';"
+			"ClockPicker": "import {ClockPicker} from 'tinper-neoui/js/neoui-clockpicker';"
 		},
 		"neoui-month": {
-			"Month": "import {Month} from 'neoui/js/neoui-month';"
+			"Month": "import {Month} from 'tinper-neoui/js/neoui-month';"
 		},
 		"neoui-year": {
-			"Year": "import {Year} from 'neoui/js/neoui-year';"
+			"Year": "import {Year} from 'tinper-neoui/js/neoui-year';"
 		},
 		"neoui-yearmonth": {
-			"YearMonth": "import {YearMonth} from 'neoui/js/neoui-yearmonth';"
+			"YearMonth": "import {YearMonth} from 'tinper-neoui/js/neoui-yearmonth';"
 		}
 	},
 	"ko":{

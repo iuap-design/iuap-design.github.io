@@ -27,6 +27,7 @@ modulePre="$cdir/node_modules/"
 moduleName=(
   "kero-adapter"
   "tinper-neoui-polyfill"
+  "tinper-neoui"
   )
 
 if [ -d "$modulePre" ]
