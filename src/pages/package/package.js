@@ -26,7 +26,7 @@ window.onload = function() {
             document.addEventListener('click',function(event){
                 var eleid = event.target.id;
                 var isColorWrap = eleid != 'color0' || eleid != 'colorGroup';
-                console.log(isColorWrap);
+                // console.log(isColorWrap);
                 eleid != 'color0' && eleid != 'colorGroup' ? colorGroup.style.display = 'none' : '';
             },false);
         },
