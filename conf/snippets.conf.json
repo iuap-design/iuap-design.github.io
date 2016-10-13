@@ -21,6 +21,12 @@
     },{
         "name": "日期",
         "url": "demos/ui/datetime"
+    },{
+        "name": "年月",
+        "url": "demos/ui/yearmonth"
+    },{
+        "name": "月份",
+        "url": "demos/ui/month"
     }, {
         "name": "加载进度条",
         "url": "demos/ui/progress"
@@ -111,6 +117,15 @@
     }, {
         "name": "日期",
         "url": "demos/kero/datetime"
+    }, {
+        "name": "年月",
+        "url": "demos/kero/yearmonth"
+    }, {
+        "name": "月份",
+        "url": "demos/kero/month"
+    }, {
+        "name": "校验",
+        "url": "demos/kero/validate"
     }]
 }, {
     "name": "表单",

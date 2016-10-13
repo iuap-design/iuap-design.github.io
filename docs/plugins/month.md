@@ -1,66 +1,61 @@
-# month插件
+# 月份
 
-只选择月
-
-# 插件依赖
-
-http://design.yyuap.com/static/uui/latest/js/u.js
-
-http://design.yyuap.com/static/uui/latest/css/u.css
-
-# 用法
-
-##引入文件
-在header中引入u.css
-```
-<link rel="stylesheet" type="text/css" href='http://design.yyuap.com/static/uui/latest/css/u.css'>
-```
-在文件尾部加入u.js
- 
-```
-<script type="text/javascript" src='http://design.yyuap.com/static/uui/latest/js/u.js'></script>
-
-```
-
-##代码
-
-定义样式为`u-month`的div父元素，包裹类`u-input`的input
-
-```
-<div class='u-month'>
-    <input class="u-input" type="text">
-</div>
-
-```
-
-js会根据`u-month`来定位dom，然后绑定事件。
+用户可以通过此插件进行月份的选择。
 
 
-# 示例
-
-
-
-<div class="example-content ex-hide"><style>.example .u-input{
-	border: 1px solid rgba(0,0,0, 0.12);
-	width: 250px;
-}
-</style></div>
+定义样式为`u-month`的div父元素，包裹样式为`u-input`的input元素。
 <div class="example-content"><div class="example">
 	<div class='u-month'>
 	    <input class="u-input" type="text">
 	</div>
 </div></div>
-<div class="examples-code"><pre><code>.example .u-input{
-	border: 1px solid rgba(0,0,0, 0.12);
-	width: 250px;
-}</code></pre>
+<div class="examples-code"><pre><code>&lt;div class='u-month'>
+    &lt;input class="u-input" type="text">
+&lt;/div>
+</code></pre>
 </div>
-<div class="examples-code"><pre><code>&lt;div class="example">
-	&lt;div class='u-month'>
-	    &lt;input class="u-input" type="text">
-	&lt;/div>
-&lt;/div></code></pre>
-</div>
+
+
+
+[试一试](http://design.yyuap.com/dist/pages/webIDE/index.html#/demos/ui/month)
+
+
+# API
+
+## \# Month 对象
+
+* 类型：`Object`
+* 说明： Month表示一个月对象
+* 用法：
+
+获取方式：1、获取绑定月的dom元素 ； 2、读取dom元素上的属性'u.Month'
+
+```
+
+var monthObject = document.getElementById('domId')['u.Month'];
+
+```
+
+
+## \# setValue 
+* 类型： `Function`
+* 说明：设置具体的月份
+* 参数：
+	* `{String} value` value的范围为1~12，不在这个范围会按当前月份处理
+* 用法：
+
+```
+monthObject.setValue(2);
+
+```
+
+
+相关内容：
+
+[月份在kero中使用](http://design.yyuap.com/dist/pages/kero/ex_month.html)    
+
+[月份在grid中使用](http://design.yyuap.com/dist/pages/webIDE/index.html#/demos/grids/edit)
+
 
 
 
