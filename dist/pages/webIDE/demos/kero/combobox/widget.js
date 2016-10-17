@@ -40,5 +40,4 @@ combo1Obj.setComboData(combo1Data);
 
 // 创建空行，设置默认值
 var r = viewModel.dt1.createEmptyRow();
-r.setValue('f1', "test1");
 viewModel.dt1.setRowSelect(0);

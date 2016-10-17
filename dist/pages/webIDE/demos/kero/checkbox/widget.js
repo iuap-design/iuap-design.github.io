@@ -11,7 +11,9 @@ var app, viewModel;
 viewModel = {
     dt1: new u.DataTable({
         meta: {
-            f1: {}
+            f1:{},
+            f2:{},
+            f3:{}
         }
     }),
     checkboxData: [{value: 'test1', name: '产品一'}, {value: 'test2', name: '产品二'}]
@@ -29,7 +31,8 @@ app = u.createApp({
 
 // 创建空行,绑定默认值
 var r = viewModel.dt1.createEmptyRow();
-r.setValue('f1', "test1");
+r.setValue('f1', 'test1');
+r.setValue('f3','Y');
 viewModel.dt1.setRowSelect(0);
 
 /**

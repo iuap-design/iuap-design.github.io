@@ -19,6 +19,9 @@
         "name": "开关",
         "url": "demos/ui/switch"
     },{
+        "name": "下拉框",
+        "url": "demos/ui/combobox"
+    },{
         "name": "日期",
         "url": "demos/ui/datetime"
     },{
@@ -106,7 +109,7 @@
         "name": "单选框",
         "url": "demos/kero/radio"
     }, {
-        "name": "下拉列表",
+        "name": "下拉框",
         "url": "demos/kero/combobox"
     }, {
         "name": "复选框",
