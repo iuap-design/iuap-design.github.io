@@ -111,6 +111,7 @@ r.setValue('f1', "11");
 [试一试](http://design.yyuap.com/dist/pages/webIDE/index.html#/demos/kero/month)
 
 
+**注**：设置月份时，通过dataTable中的对应行row调用setValue设置字段值即可。eg：`row.setValue("f1", "11")`
 
 
 # API
