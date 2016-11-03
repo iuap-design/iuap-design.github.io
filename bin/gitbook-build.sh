@@ -40,7 +40,7 @@ then
       echo "卸载旧版$name"
       npm uninstall $name
       echo "安装新版$name"
-      npm install $name
+      npm install $name@latest
       echo "已安装成功新版$name"
     else
       echo "安装新版$name"
